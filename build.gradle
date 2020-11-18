@@ -1,6 +1,9 @@
 apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+
 
 group = 'org.openapitools'
 version = '5.0'
@@ -94,6 +97,14 @@ if(hasProperty('target') && target == 'android') {
     task execute(type:JavaExec) {
        main = System.getProperty('mainClass')
        classpath = sourceSets.main.runtimeClasspath
+    }
+}
+
+publishing {
+    publications {
+        jar(MavenPublication) {
+            from components.java
+        }
     }
 }
 

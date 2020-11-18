@@ -32,7 +32,7 @@ import org.openapitools.client.model.KubernetesNodePoolLan;
 /**
  * KubernetesNodePoolPropertiesForPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-16T16:56:05.401268+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-18T13:59:16.181671+02:00[Europe/Bucharest]")
 public class KubernetesNodePoolPropertiesForPut {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
