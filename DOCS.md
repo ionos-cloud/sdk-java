@@ -2,7 +2,7 @@
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2020-11-18T13:59:16.181671+02:00[Europe/Bucharest]
+  - Build date: 2020-11-18T18:41:07.637425+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -122,182 +122,14913 @@ public class Example {
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-Class | Method | HTTP request | Description
------------- | ------------- | ------------- | -------------
-*BackupUnitApi* | [**backupunitsDelete**](docs/BackupUnitApi.md#backupunitsDelete) | **DELETE** /backupunits/{backupunitId} | Delete a Backup Unit
-*BackupUnitApi* | [**backupunitsFindById**](docs/BackupUnitApi.md#backupunitsFindById) | **GET** /backupunits/{backupunitId} | Returns the specified backup Unit
-*BackupUnitApi* | [**backupunitsGet**](docs/BackupUnitApi.md#backupunitsGet) | **GET** /backupunits | List Backup Units 
-*BackupUnitApi* | [**backupunitsPatch**](docs/BackupUnitApi.md#backupunitsPatch) | **PATCH** /backupunits/{backupunitId} | Partially modify a Backup Unit
-*BackupUnitApi* | [**backupunitsPost**](docs/BackupUnitApi.md#backupunitsPost) | **POST** /backupunits | Create a Backup Unit
-*BackupUnitApi* | [**backupunitsPut**](docs/BackupUnitApi.md#backupunitsPut) | **PUT** /backupunits/{backupunitId} | Modify a Backup Unit
-*BackupUnitApi* | [**backupunitsSsourlGet**](docs/BackupUnitApi.md#backupunitsSsourlGet) | **GET** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified backup Unit.
-*ContractApi* | [**contractsGet**](docs/ContractApi.md#contractsGet) | **GET** /contracts | Retrieve a Contract
-*DataCenterApi* | [**datacentersDelete**](docs/DataCenterApi.md#datacentersDelete) | **DELETE** /datacenters/{datacenterId} | Delete a Data Center
-*DataCenterApi* | [**datacentersFindById**](docs/DataCenterApi.md#datacentersFindById) | **GET** /datacenters/{datacenterId} | Retrieve a Data Center
-*DataCenterApi* | [**datacentersGet**](docs/DataCenterApi.md#datacentersGet) | **GET** /datacenters | List Data Centers under your account
-*DataCenterApi* | [**datacentersPatch**](docs/DataCenterApi.md#datacentersPatch) | **PATCH** /datacenters/{datacenterId} | Partially modify a Data Center
-*DataCenterApi* | [**datacentersPost**](docs/DataCenterApi.md#datacentersPost) | **POST** /datacenters | Create a Data Center
-*DataCenterApi* | [**datacentersPut**](docs/DataCenterApi.md#datacentersPut) | **PUT** /datacenters/{datacenterId} | Modify a Data Center
-*ImageApi* | [**imagesDelete**](docs/ImageApi.md#imagesDelete) | **DELETE** /images/{imageId} | Delete an Image
-*ImageApi* | [**imagesFindById**](docs/ImageApi.md#imagesFindById) | **GET** /images/{imageId} | Retrieve an Image
-*ImageApi* | [**imagesGet**](docs/ImageApi.md#imagesGet) | **GET** /images | List Images 
-*ImageApi* | [**imagesPatch**](docs/ImageApi.md#imagesPatch) | **PATCH** /images/{imageId} | Partially modify an Image
-*ImageApi* | [**imagesPut**](docs/ImageApi.md#imagesPut) | **PUT** /images/{imageId} | Modify an Image
-*IpBlocksApi* | [**ipblocksDelete**](docs/IpBlocksApi.md#ipblocksDelete) | **DELETE** /ipblocks/{ipblockId} | Delete IP Block
-*IpBlocksApi* | [**ipblocksFindById**](docs/IpBlocksApi.md#ipblocksFindById) | **GET** /ipblocks/{ipblockId} | Retrieve an IP Block
-*IpBlocksApi* | [**ipblocksGet**](docs/IpBlocksApi.md#ipblocksGet) | **GET** /ipblocks | List IP Blocks 
-*IpBlocksApi* | [**ipblocksPatch**](docs/IpBlocksApi.md#ipblocksPatch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP Block
-*IpBlocksApi* | [**ipblocksPost**](docs/IpBlocksApi.md#ipblocksPost) | **POST** /ipblocks | Reserve IP Block
-*IpBlocksApi* | [**ipblocksPut**](docs/IpBlocksApi.md#ipblocksPut) | **PUT** /ipblocks/{ipblockId} | Modify IP Block
-*KubernetesApi* | [**k8sDelete**](docs/KubernetesApi.md#k8sDelete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes Cluster
-*KubernetesApi* | [**k8sFindByClusterid**](docs/KubernetesApi.md#k8sFindByClusterid) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
-*KubernetesApi* | [**k8sGet**](docs/KubernetesApi.md#k8sGet) | **GET** /k8s | List Kubernetes Clusters
-*KubernetesApi* | [**k8sKubeconfigGet**](docs/KubernetesApi.md#k8sKubeconfigGet) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File
-*KubernetesApi* | [**k8sNodepoolsDelete**](docs/KubernetesApi.md#k8sNodepoolsDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool
-*KubernetesApi* | [**k8sNodepoolsFindById**](docs/KubernetesApi.md#k8sNodepoolsFindById) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes Node Pool
-*KubernetesApi* | [**k8sNodepoolsGet**](docs/KubernetesApi.md#k8sNodepoolsGet) | **GET** /k8s/{k8sClusterId}/nodepools | List Kubernetes Node Pools
-*KubernetesApi* | [**k8sNodepoolsNodesDelete**](docs/KubernetesApi.md#k8sNodepoolsNodesDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes node
-*KubernetesApi* | [**k8sNodepoolsNodesFindById**](docs/KubernetesApi.md#k8sNodepoolsNodesFindById) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes node
-*KubernetesApi* | [**k8sNodepoolsNodesGet**](docs/KubernetesApi.md#k8sNodepoolsNodesGet) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Retrieve Kubernetes nodes.
-*KubernetesApi* | [**k8sNodepoolsNodesReplacePost**](docs/KubernetesApi.md#k8sNodepoolsNodesReplacePost) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate the Kubernetes node
-*KubernetesApi* | [**k8sNodepoolsPost**](docs/KubernetesApi.md#k8sNodepoolsPost) | **POST** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool
-*KubernetesApi* | [**k8sNodepoolsPut**](docs/KubernetesApi.md#k8sNodepoolsPut) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool
-*KubernetesApi* | [**k8sPost**](docs/KubernetesApi.md#k8sPost) | **POST** /k8s | Create Kubernetes Cluster
-*KubernetesApi* | [**k8sPut**](docs/KubernetesApi.md#k8sPut) | **PUT** /k8s/{k8sClusterId} | Modify Kubernetes Cluster
-*KubernetesApi* | [**k8sVersionsCompatibilitiesGet**](docs/KubernetesApi.md#k8sVersionsCompatibilitiesGet) | **GET** /k8s/versions/{clusterVersion}/compatibilities | Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
-*KubernetesApi* | [**k8sVersionsDefaultGet**](docs/KubernetesApi.md#k8sVersionsDefaultGet) | **GET** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools.
-*KubernetesApi* | [**k8sVersionsGet**](docs/KubernetesApi.md#k8sVersionsGet) | **GET** /k8s/versions | Retrieve available Kubernetes versions
-*LabelApi* | [**datacentersLabelsDelete**](docs/LabelApi.md#datacentersLabelsDelete) | **DELETE** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center
-*LabelApi* | [**datacentersLabelsFindByKey**](docs/LabelApi.md#datacentersLabelsFindByKey) | **GET** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center
-*LabelApi* | [**datacentersLabelsGet**](docs/LabelApi.md#datacentersLabelsGet) | **GET** /datacenters/{datacenterId}/labels | List all Data Center Labels
-*LabelApi* | [**datacentersLabelsPost**](docs/LabelApi.md#datacentersLabelsPost) | **POST** /datacenters/{datacenterId}/labels | Add a Label to Data Center
-*LabelApi* | [**datacentersLabelsPut**](docs/LabelApi.md#datacentersLabelsPut) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center
-*LabelApi* | [**datacentersServersLabelsDelete**](docs/LabelApi.md#datacentersServersLabelsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server
-*LabelApi* | [**datacentersServersLabelsFindByKey**](docs/LabelApi.md#datacentersServersLabelsFindByKey) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server
-*LabelApi* | [**datacentersServersLabelsGet**](docs/LabelApi.md#datacentersServersLabelsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels
-*LabelApi* | [**datacentersServersLabelsPost**](docs/LabelApi.md#datacentersServersLabelsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server
-*LabelApi* | [**datacentersServersLabelsPut**](docs/LabelApi.md#datacentersServersLabelsPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server
-*LabelApi* | [**datacentersVolumesLabelsDelete**](docs/LabelApi.md#datacentersVolumesLabelsDelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume
-*LabelApi* | [**datacentersVolumesLabelsFindByKey**](docs/LabelApi.md#datacentersVolumesLabelsFindByKey) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume
-*LabelApi* | [**datacentersVolumesLabelsGet**](docs/LabelApi.md#datacentersVolumesLabelsGet) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels
-*LabelApi* | [**datacentersVolumesLabelsPost**](docs/LabelApi.md#datacentersVolumesLabelsPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume
-*LabelApi* | [**datacentersVolumesLabelsPut**](docs/LabelApi.md#datacentersVolumesLabelsPut) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume
-*LabelApi* | [**ipblocksLabelsDelete**](docs/LabelApi.md#ipblocksLabelsDelete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block
-*LabelApi* | [**ipblocksLabelsFindByKey**](docs/LabelApi.md#ipblocksLabelsFindByKey) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block
-*LabelApi* | [**ipblocksLabelsGet**](docs/LabelApi.md#ipblocksLabelsGet) | **GET** /ipblocks/{ipblockId}/labels | List all Ip Block Labels
-*LabelApi* | [**ipblocksLabelsPost**](docs/LabelApi.md#ipblocksLabelsPost) | **POST** /ipblocks/{ipblockId}/labels | Add a Label to IP Block
-*LabelApi* | [**ipblocksLabelsPut**](docs/LabelApi.md#ipblocksLabelsPut) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block
-*LabelApi* | [**labelsFindByLabelurn**](docs/LabelApi.md#labelsFindByLabelurn) | **GET** /labels/{labelurn} | Returns the label by its URN.
-*LabelApi* | [**labelsGet**](docs/LabelApi.md#labelsGet) | **GET** /labels | List Labels 
-*LabelApi* | [**snapshotsLabelsDelete**](docs/LabelApi.md#snapshotsLabelsDelete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot
-*LabelApi* | [**snapshotsLabelsFindByKey**](docs/LabelApi.md#snapshotsLabelsFindByKey) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot
-*LabelApi* | [**snapshotsLabelsGet**](docs/LabelApi.md#snapshotsLabelsGet) | **GET** /snapshots/{snapshotId}/labels | List all Snapshot Labels
-*LabelApi* | [**snapshotsLabelsPost**](docs/LabelApi.md#snapshotsLabelsPost) | **POST** /snapshots/{snapshotId}/labels | Add a Label to Snapshot
-*LabelApi* | [**snapshotsLabelsPut**](docs/LabelApi.md#snapshotsLabelsPut) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot
-*LanApi* | [**datacentersLansDelete**](docs/LanApi.md#datacentersLansDelete) | **DELETE** /datacenters/{datacenterId}/lans/{lanId} | Delete a Lan.
-*LanApi* | [**datacentersLansFindById**](docs/LanApi.md#datacentersLansFindById) | **GET** /datacenters/{datacenterId}/lans/{lanId} | Retrieve a Lan
-*LanApi* | [**datacentersLansGet**](docs/LanApi.md#datacentersLansGet) | **GET** /datacenters/{datacenterId}/lans | List Lans
-*LanApi* | [**datacentersLansNicsFindById**](docs/LanApi.md#datacentersLansNicsFindById) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve a nic attached to lan
-*LanApi* | [**datacentersLansNicsGet**](docs/LanApi.md#datacentersLansNicsGet) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics | List Lan Members 
-*LanApi* | [**datacentersLansNicsPost**](docs/LanApi.md#datacentersLansNicsPost) | **POST** /datacenters/{datacenterId}/lans/{lanId}/nics | Attach a nic
-*LanApi* | [**datacentersLansPatch**](docs/LanApi.md#datacentersLansPatch) | **PATCH** /datacenters/{datacenterId}/lans/{lanId} | Partially modify a Lan
-*LanApi* | [**datacentersLansPost**](docs/LanApi.md#datacentersLansPost) | **POST** /datacenters/{datacenterId}/lans | Create a Lan
-*LanApi* | [**datacentersLansPut**](docs/LanApi.md#datacentersLansPut) | **PUT** /datacenters/{datacenterId}/lans/{lanId} | Modify a Lan
-*LoadBalancerApi* | [**datacentersLoadbalancersBalancednicsDelete**](docs/LoadBalancerApi.md#datacentersLoadbalancersBalancednicsDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer
-*LoadBalancerApi* | [**datacentersLoadbalancersBalancednicsFindByNic**](docs/LoadBalancerApi.md#datacentersLoadbalancersBalancednicsFindByNic) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer
-*LoadBalancerApi* | [**datacentersLoadbalancersBalancednicsGet**](docs/LoadBalancerApi.md#datacentersLoadbalancersBalancednicsGet) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer Members 
-*LoadBalancerApi* | [**datacentersLoadbalancersBalancednicsPost**](docs/LoadBalancerApi.md#datacentersLoadbalancersBalancednicsPost) | **POST** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer
-*LoadBalancerApi* | [**datacentersLoadbalancersDelete**](docs/LoadBalancerApi.md#datacentersLoadbalancersDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer.
-*LoadBalancerApi* | [**datacentersLoadbalancersFindById**](docs/LoadBalancerApi.md#datacentersLoadbalancersFindById) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve a loadbalancer
-*LoadBalancerApi* | [**datacentersLoadbalancersGet**](docs/LoadBalancerApi.md#datacentersLoadbalancersGet) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers
-*LoadBalancerApi* | [**datacentersLoadbalancersPatch**](docs/LoadBalancerApi.md#datacentersLoadbalancersPatch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify a Loadbalancer
-*LoadBalancerApi* | [**datacentersLoadbalancersPost**](docs/LoadBalancerApi.md#datacentersLoadbalancersPost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer
-*LoadBalancerApi* | [**datacentersLoadbalancersPut**](docs/LoadBalancerApi.md#datacentersLoadbalancersPut) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer
-*LocationApi* | [**locationsFindByRegion**](docs/LocationApi.md#locationsFindByRegion) | **GET** /locations/{regionId} | List Locations within a region
-*LocationApi* | [**locationsFindByRegionAndId**](docs/LocationApi.md#locationsFindByRegionAndId) | **GET** /locations/{regionId}/{locationId} | Retrieve a Location
-*LocationApi* | [**locationsGet**](docs/LocationApi.md#locationsGet) | **GET** /locations | List Locations
-*NicApi* | [**datacentersServersNicsDelete**](docs/NicApi.md#datacentersServersNicsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Nic
-*NicApi* | [**datacentersServersNicsFindById**](docs/NicApi.md#datacentersServersNicsFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Nic
-*NicApi* | [**datacentersServersNicsFirewallrulesDelete**](docs/NicApi.md#datacentersServersNicsFirewallrulesDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete a Firewall Rule
-*NicApi* | [**datacentersServersNicsFirewallrulesFindById**](docs/NicApi.md#datacentersServersNicsFirewallrulesFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve a Firewall Rule
-*NicApi* | [**datacentersServersNicsFirewallrulesGet**](docs/NicApi.md#datacentersServersNicsFirewallrulesGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List Firewall Rules 
-*NicApi* | [**datacentersServersNicsFirewallrulesPatch**](docs/NicApi.md#datacentersServersNicsFirewallrulesPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify a Firewall Rule
-*NicApi* | [**datacentersServersNicsFirewallrulesPost**](docs/NicApi.md#datacentersServersNicsFirewallrulesPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule
-*NicApi* | [**datacentersServersNicsFirewallrulesPut**](docs/NicApi.md#datacentersServersNicsFirewallrulesPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule
-*NicApi* | [**datacentersServersNicsGet**](docs/NicApi.md#datacentersServersNicsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics | List Nics 
-*NicApi* | [**datacentersServersNicsPatch**](docs/NicApi.md#datacentersServersNicsPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify a Nic
-*NicApi* | [**datacentersServersNicsPost**](docs/NicApi.md#datacentersServersNicsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a Nic
-*NicApi* | [**datacentersServersNicsPut**](docs/NicApi.md#datacentersServersNicsPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify a Nic
-*PrivateCrossConnectApi* | [**pccsDelete**](docs/PrivateCrossConnectApi.md#pccsDelete) | **DELETE** /pccs/{pccId} | Delete a Private Cross-Connect
-*PrivateCrossConnectApi* | [**pccsFindById**](docs/PrivateCrossConnectApi.md#pccsFindById) | **GET** /pccs/{pccId} | Retrieve a Private Cross-Connect
-*PrivateCrossConnectApi* | [**pccsGet**](docs/PrivateCrossConnectApi.md#pccsGet) | **GET** /pccs | List Private Cross-Connects 
-*PrivateCrossConnectApi* | [**pccsPatch**](docs/PrivateCrossConnectApi.md#pccsPatch) | **PATCH** /pccs/{pccId} | Partially modify a private cross-connect
-*PrivateCrossConnectApi* | [**pccsPost**](docs/PrivateCrossConnectApi.md#pccsPost) | **POST** /pccs | Create a Private Cross-Connect
-*RequestApi* | [**requestsFindById**](docs/RequestApi.md#requestsFindById) | **GET** /requests/{requestId} | Retrieve a Request
-*RequestApi* | [**requestsGet**](docs/RequestApi.md#requestsGet) | **GET** /requests | List Requests
-*RequestApi* | [**requestsStatusGet**](docs/RequestApi.md#requestsStatusGet) | **GET** /requests/{requestId}/status | Retrieve Request Status
-*ServerApi* | [**datacentersServersCdromsDelete**](docs/ServerApi.md#datacentersServersCdromsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach a CD-ROM
-*ServerApi* | [**datacentersServersCdromsFindById**](docs/ServerApi.md#datacentersServersCdromsFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve an attached CD-ROM
-*ServerApi* | [**datacentersServersCdromsGet**](docs/ServerApi.md#datacentersServersCdromsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms | List attached CD-ROMs 
-*ServerApi* | [**datacentersServersCdromsPost**](docs/ServerApi.md#datacentersServersCdromsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach a CD-ROM
-*ServerApi* | [**datacentersServersDelete**](docs/ServerApi.md#datacentersServersDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId} | Delete a Server
-*ServerApi* | [**datacentersServersFindById**](docs/ServerApi.md#datacentersServersFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId} | Retrieve a Server
-*ServerApi* | [**datacentersServersGet**](docs/ServerApi.md#datacentersServersGet) | **GET** /datacenters/{datacenterId}/servers | List Servers 
-*ServerApi* | [**datacentersServersPatch**](docs/ServerApi.md#datacentersServersPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId} | Partially modify a Server
-*ServerApi* | [**datacentersServersPost**](docs/ServerApi.md#datacentersServersPost) | **POST** /datacenters/{datacenterId}/servers | Create a Server
-*ServerApi* | [**datacentersServersPut**](docs/ServerApi.md#datacentersServersPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId} | Modify a Server
-*ServerApi* | [**datacentersServersRebootPost**](docs/ServerApi.md#datacentersServersRebootPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/reboot | Reboot a Server
-*ServerApi* | [**datacentersServersStartPost**](docs/ServerApi.md#datacentersServersStartPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/start | Start a Server
-*ServerApi* | [**datacentersServersStopPost**](docs/ServerApi.md#datacentersServersStopPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop a Server
-*ServerApi* | [**datacentersServersUpgradePost**](docs/ServerApi.md#datacentersServersUpgradePost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server
-*ServerApi* | [**datacentersServersVolumesDelete**](docs/ServerApi.md#datacentersServersVolumesDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a volume
-*ServerApi* | [**datacentersServersVolumesFindById**](docs/ServerApi.md#datacentersServersVolumesFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Retrieve an attached volume
-*ServerApi* | [**datacentersServersVolumesGet**](docs/ServerApi.md#datacentersServersVolumesGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes | List Attached Volumes
-*ServerApi* | [**datacentersServersVolumesPost**](docs/ServerApi.md#datacentersServersVolumesPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach a volume
-*SnapshotApi* | [**snapshotsDelete**](docs/SnapshotApi.md#snapshotsDelete) | **DELETE** /snapshots/{snapshotId} | Delete a Snapshot
-*SnapshotApi* | [**snapshotsFindById**](docs/SnapshotApi.md#snapshotsFindById) | **GET** /snapshots/{snapshotId} | Retrieve a Snapshot by its uuid.
-*SnapshotApi* | [**snapshotsGet**](docs/SnapshotApi.md#snapshotsGet) | **GET** /snapshots | List Snapshots 
-*SnapshotApi* | [**snapshotsPatch**](docs/SnapshotApi.md#snapshotsPatch) | **PATCH** /snapshots/{snapshotId} | Partially modify a Snapshot
-*SnapshotApi* | [**snapshotsPut**](docs/SnapshotApi.md#snapshotsPut) | **PUT** /snapshots/{snapshotId} | Modify a Snapshot
-*UserManagementApi* | [**umGroupsDelete**](docs/UserManagementApi.md#umGroupsDelete) | **DELETE** /um/groups/{groupId} | Delete a Group
-*UserManagementApi* | [**umGroupsFindById**](docs/UserManagementApi.md#umGroupsFindById) | **GET** /um/groups/{groupId} | Retrieve a Group
-*UserManagementApi* | [**umGroupsGet**](docs/UserManagementApi.md#umGroupsGet) | **GET** /um/groups | List All Groups.
-*UserManagementApi* | [**umGroupsPost**](docs/UserManagementApi.md#umGroupsPost) | **POST** /um/groups | Create a Group
-*UserManagementApi* | [**umGroupsPut**](docs/UserManagementApi.md#umGroupsPut) | **PUT** /um/groups/{groupId} | Modify a group
-*UserManagementApi* | [**umGroupsResourcesGet**](docs/UserManagementApi.md#umGroupsResourcesGet) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group
-*UserManagementApi* | [**umGroupsSharesDelete**](docs/UserManagementApi.md#umGroupsSharesDelete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group
-*UserManagementApi* | [**umGroupsSharesFindByResource**](docs/UserManagementApi.md#umGroupsSharesFindByResource) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share
-*UserManagementApi* | [**umGroupsSharesGet**](docs/UserManagementApi.md#umGroupsSharesGet) | **GET** /um/groups/{groupId}/shares | List Group Shares 
-*UserManagementApi* | [**umGroupsSharesPost**](docs/UserManagementApi.md#umGroupsSharesPost) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group
-*UserManagementApi* | [**umGroupsSharesPut**](docs/UserManagementApi.md#umGroupsSharesPut) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group
-*UserManagementApi* | [**umGroupsUsersDelete**](docs/UserManagementApi.md#umGroupsUsersDelete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove a user from a group
-*UserManagementApi* | [**umGroupsUsersGet**](docs/UserManagementApi.md#umGroupsUsersGet) | **GET** /um/groups/{groupId}/users | List Group Members 
-*UserManagementApi* | [**umGroupsUsersPost**](docs/UserManagementApi.md#umGroupsUsersPost) | **POST** /um/groups/{groupId}/users | Add a user to a group
-*UserManagementApi* | [**umResourcesFindByType**](docs/UserManagementApi.md#umResourcesFindByType) | **GET** /um/resources/{resourceType} | Retrieve a list of Resources by type.
-*UserManagementApi* | [**umResourcesFindByTypeAndId**](docs/UserManagementApi.md#umResourcesFindByTypeAndId) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type.
-*UserManagementApi* | [**umResourcesGet**](docs/UserManagementApi.md#umResourcesGet) | **GET** /um/resources | List All Resources.
-*UserManagementApi* | [**umUsersDelete**](docs/UserManagementApi.md#umUsersDelete) | **DELETE** /um/users/{userId} | Delete a User
-*UserManagementApi* | [**umUsersFindById**](docs/UserManagementApi.md#umUsersFindById) | **GET** /um/users/{userId} | Retrieve a User
-*UserManagementApi* | [**umUsersGet**](docs/UserManagementApi.md#umUsersGet) | **GET** /um/users | List all Users 
-*UserManagementApi* | [**umUsersGroupsGet**](docs/UserManagementApi.md#umUsersGroupsGet) | **GET** /um/users/{userId}/groups | Retrieve a User&#39;s group resources
-*UserManagementApi* | [**umUsersOwnsGet**](docs/UserManagementApi.md#umUsersOwnsGet) | **GET** /um/users/{userId}/owns | Retrieve a User&#39;s own resources
-*UserManagementApi* | [**umUsersPost**](docs/UserManagementApi.md#umUsersPost) | **POST** /um/users | Create a user
-*UserManagementApi* | [**umUsersPut**](docs/UserManagementApi.md#umUsersPut) | **PUT** /um/users/{userId} | Modify a user
-*UserManagementApi* | [**umUsersS3keysDelete**](docs/UserManagementApi.md#umUsersS3keysDelete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key
-*UserManagementApi* | [**umUsersS3keysFindByKey**](docs/UserManagementApi.md#umUsersS3keysFindByKey) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User
-*UserManagementApi* | [**umUsersS3keysGet**](docs/UserManagementApi.md#umUsersS3keysGet) | **GET** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys
-*UserManagementApi* | [**umUsersS3keysPost**](docs/UserManagementApi.md#umUsersS3keysPost) | **POST** /um/users/{userId}/s3keys | Create a S3 key for the given user
-*UserManagementApi* | [**umUsersS3keysPut**](docs/UserManagementApi.md#umUsersS3keysPut) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id
-*UserManagementApi* | [**umUsersS3ssourlGet**](docs/UserManagementApi.md#umUsersS3ssourlGet) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user
-*VolumeApi* | [**datacentersVolumesCreateSnapshotPost**](docs/VolumeApi.md#datacentersVolumesCreateSnapshotPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/create-snapshot | Create Volume Snapshot
-*VolumeApi* | [**datacentersVolumesDelete**](docs/VolumeApi.md#datacentersVolumesDelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId} | Delete a Volume
-*VolumeApi* | [**datacentersVolumesFindById**](docs/VolumeApi.md#datacentersVolumesFindById) | **GET** /datacenters/{datacenterId}/volumes/{volumeId} | Retrieve a Volume
-*VolumeApi* | [**datacentersVolumesGet**](docs/VolumeApi.md#datacentersVolumesGet) | **GET** /datacenters/{datacenterId}/volumes | List Volumes 
-*VolumeApi* | [**datacentersVolumesPatch**](docs/VolumeApi.md#datacentersVolumesPatch) | **PATCH** /datacenters/{datacenterId}/volumes/{volumeId} | Partially modify a Volume
-*VolumeApi* | [**datacentersVolumesPost**](docs/VolumeApi.md#datacentersVolumesPost) | **POST** /datacenters/{datacenterId}/volumes | Create a Volume
-*VolumeApi* | [**datacentersVolumesPut**](docs/VolumeApi.md#datacentersVolumesPut) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId} | Modify a Volume
-*VolumeApi* | [**datacentersVolumesRestoreSnapshotPost**](docs/VolumeApi.md#datacentersVolumesRestoreSnapshotPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot | Restore Volume Snapshot
 
+#### BackupUnitApi
+
+- [Delete a Backup Unit](#backupunitsdelete)
+- [Returns the specified backup Unit](#backupunitsfindbyid)
+- [List Backup Units ](#backupunitsget)
+- [Partially modify a Backup Unit](#backupunitspatch)
+- [Create a Backup Unit](#backupunitspost)
+- [Modify a Backup Unit](#backupunitsput)
+- [Returns a single signon URL for the specified backup Unit.](#backupunitsssourlget)
+
+#### ContractApi
+
+- [Retrieve a Contract](#contractsget)
+
+#### DataCenterApi
+
+- [Delete a Data Center](#datacentersdelete)
+- [Retrieve a Data Center](#datacentersfindbyid)
+- [List Data Centers under your account](#datacentersget)
+- [Partially modify a Data Center](#datacenterspatch)
+- [Create a Data Center](#datacenterspost)
+- [Modify a Data Center](#datacentersput)
+
+#### ImageApi
+
+- [Delete an Image](#imagesdelete)
+- [Retrieve an Image](#imagesfindbyid)
+- [List Images ](#imagesget)
+- [Partially modify an Image](#imagespatch)
+- [Modify an Image](#imagesput)
+
+#### IpBlocksApi
+
+- [Delete IP Block](#ipblocksdelete)
+- [Retrieve an IP Block](#ipblocksfindbyid)
+- [List IP Blocks ](#ipblocksget)
+- [Partially modify IP Block](#ipblockspatch)
+- [Reserve IP Block](#ipblockspost)
+- [Modify IP Block](#ipblocksput)
+
+#### KubernetesApi
+
+- [Delete Kubernetes Cluster](#k8sdelete)
+- [Retrieve Kubernetes Cluster](#k8sfindbyclusterid)
+- [List Kubernetes Clusters](#k8sget)
+- [Retrieve Kubernetes Configuration File](#k8skubeconfigget)
+- [Delete Kubernetes Node Pool](#k8snodepoolsdelete)
+- [Retrieve Kubernetes Node Pool](#k8snodepoolsfindbyid)
+- [List Kubernetes Node Pools](#k8snodepoolsget)
+- [Delete Kubernetes node](#k8snodepoolsnodesdelete)
+- [Retrieve Kubernetes node](#k8snodepoolsnodesfindbyid)
+- [Retrieve Kubernetes nodes.](#k8snodepoolsnodesget)
+- [Recreate the Kubernetes node](#k8snodepoolsnodesreplacepost)
+- [Create a Kubernetes Node Pool](#k8snodepoolspost)
+- [Modify Kubernetes Node Pool](#k8snodepoolsput)
+- [Create Kubernetes Cluster](#k8spost)
+- [Modify Kubernetes Cluster](#k8sput)
+- [Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.](#k8sversionscompatibilitiesget)
+- [Retrieve the current default kubernetes version for clusters and nodepools.](#k8sversionsdefaultget)
+- [Retrieve available Kubernetes versions](#k8sversionsget)
+
+#### LabelApi
+
+- [Delete a Label from Data Center](#datacenterslabelsdelete)
+- [Retrieve a Label of Data Center](#datacenterslabelsfindbykey)
+- [List all Data Center Labels](#datacenterslabelsget)
+- [Add a Label to Data Center](#datacenterslabelspost)
+- [Modify a Label of Data Center](#datacenterslabelsput)
+- [Delete a Label from Server](#datacentersserverslabelsdelete)
+- [Retrieve a Label of Server](#datacentersserverslabelsfindbykey)
+- [List all Server Labels](#datacentersserverslabelsget)
+- [Add a Label to Server](#datacentersserverslabelspost)
+- [Modify a Label of Server](#datacentersserverslabelsput)
+- [Delete a Label from Volume](#datacentersvolumeslabelsdelete)
+- [Retrieve a Label of Volume](#datacentersvolumeslabelsfindbykey)
+- [List all Volume Labels](#datacentersvolumeslabelsget)
+- [Add a Label to Volume](#datacentersvolumeslabelspost)
+- [Modify a Label of Volume](#datacentersvolumeslabelsput)
+- [Delete a Label from IP Block](#ipblockslabelsdelete)
+- [Retrieve a Label of IP Block](#ipblockslabelsfindbykey)
+- [List all Ip Block Labels](#ipblockslabelsget)
+- [Add a Label to IP Block](#ipblockslabelspost)
+- [Modify a Label of IP Block](#ipblockslabelsput)
+- [Returns the label by its URN.](#labelsfindbylabelurn)
+- [List Labels ](#labelsget)
+- [Delete a Label from Snapshot](#snapshotslabelsdelete)
+- [Retrieve a Label of Snapshot](#snapshotslabelsfindbykey)
+- [List all Snapshot Labels](#snapshotslabelsget)
+- [Add a Label to Snapshot](#snapshotslabelspost)
+- [Modify a Label of Snapshot](#snapshotslabelsput)
+
+#### LanApi
+
+- [Delete a Lan.](#datacenterslansdelete)
+- [Retrieve a Lan](#datacenterslansfindbyid)
+- [List Lans](#datacenterslansget)
+- [Retrieve a nic attached to lan](#datacenterslansnicsfindbyid)
+- [List Lan Members ](#datacenterslansnicsget)
+- [Attach a nic](#datacenterslansnicspost)
+- [Partially modify a Lan](#datacenterslanspatch)
+- [Create a Lan](#datacenterslanspost)
+- [Modify a Lan](#datacenterslansput)
+
+#### LoadBalancerApi
+
+- [Detach a nic from loadbalancer](#datacentersloadbalancersbalancednicsdelete)
+- [Retrieve a nic attached to Load Balancer](#datacentersloadbalancersbalancednicsfindbynic)
+- [List Load Balancer Members ](#datacentersloadbalancersbalancednicsget)
+- [Attach a nic to Load Balancer](#datacentersloadbalancersbalancednicspost)
+- [Delete a Loadbalancer.](#datacentersloadbalancersdelete)
+- [Retrieve a loadbalancer](#datacentersloadbalancersfindbyid)
+- [List Load Balancers](#datacentersloadbalancersget)
+- [Partially modify a Loadbalancer](#datacentersloadbalancerspatch)
+- [Create a Load Balancer](#datacentersloadbalancerspost)
+- [Modify a Load Balancer](#datacentersloadbalancersput)
+
+#### LocationApi
+
+- [List Locations within a region](#locationsfindbyregion)
+- [Retrieve a Location](#locationsfindbyregionandid)
+- [List Locations](#locationsget)
+
+#### NicApi
+
+- [Delete a Nic](#datacentersserversnicsdelete)
+- [Retrieve a Nic](#datacentersserversnicsfindbyid)
+- [Delete a Firewall Rule](#datacentersserversnicsfirewallrulesdelete)
+- [Retrieve a Firewall Rule](#datacentersserversnicsfirewallrulesfindbyid)
+- [List Firewall Rules ](#datacentersserversnicsfirewallrulesget)
+- [Partially modify a Firewall Rule](#datacentersserversnicsfirewallrulespatch)
+- [Create a Firewall Rule](#datacentersserversnicsfirewallrulespost)
+- [Modify a Firewall Rule](#datacentersserversnicsfirewallrulesput)
+- [List Nics ](#datacentersserversnicsget)
+- [Partially modify a Nic](#datacentersserversnicspatch)
+- [Create a Nic](#datacentersserversnicspost)
+- [Modify a Nic](#datacentersserversnicsput)
+
+#### PrivateCrossConnectApi
+
+- [Delete a Private Cross-Connect](#pccsdelete)
+- [Retrieve a Private Cross-Connect](#pccsfindbyid)
+- [List Private Cross-Connects ](#pccsget)
+- [Partially modify a private cross-connect](#pccspatch)
+- [Create a Private Cross-Connect](#pccspost)
+
+#### RequestApi
+
+- [Retrieve a Request](#requestsfindbyid)
+- [List Requests](#requestsget)
+- [Retrieve Request Status](#requestsstatusget)
+
+#### ServerApi
+
+- [Detach a CD-ROM](#datacentersserverscdromsdelete)
+- [Retrieve an attached CD-ROM](#datacentersserverscdromsfindbyid)
+- [List attached CD-ROMs ](#datacentersserverscdromsget)
+- [Attach a CD-ROM](#datacentersserverscdromspost)
+- [Delete a Server](#datacentersserversdelete)
+- [Retrieve a Server](#datacentersserversfindbyid)
+- [List Servers ](#datacentersserversget)
+- [Partially modify a Server](#datacentersserverspatch)
+- [Create a Server](#datacentersserverspost)
+- [Modify a Server](#datacentersserversput)
+- [Reboot a Server](#datacentersserversrebootpost)
+- [Start a Server](#datacentersserversstartpost)
+- [Stop a Server](#datacentersserversstoppost)
+- [Upgrade a Server](#datacentersserversupgradepost)
+- [Detach a volume](#datacentersserversvolumesdelete)
+- [Retrieve an attached volume](#datacentersserversvolumesfindbyid)
+- [List Attached Volumes](#datacentersserversvolumesget)
+- [Attach a volume](#datacentersserversvolumespost)
+
+#### SnapshotApi
+
+- [Delete a Snapshot](#snapshotsdelete)
+- [Retrieve a Snapshot by its uuid.](#snapshotsfindbyid)
+- [List Snapshots ](#snapshotsget)
+- [Partially modify a Snapshot](#snapshotspatch)
+- [Modify a Snapshot](#snapshotsput)
+
+#### UserManagementApi
+
+- [Delete a Group](#umgroupsdelete)
+- [Retrieve a Group](#umgroupsfindbyid)
+- [List All Groups.](#umgroupsget)
+- [Create a Group](#umgroupspost)
+- [Modify a group](#umgroupsput)
+- [Retrieve resources assigned to a group](#umgroupsresourcesget)
+- [Remove a resource from a group](#umgroupssharesdelete)
+- [Retrieve a group share](#umgroupssharesfindbyresource)
+- [List Group Shares ](#umgroupssharesget)
+- [Add a resource to a group](#umgroupssharespost)
+- [Modify resource permissions of a group](#umgroupssharesput)
+- [Remove a user from a group](#umgroupsusersdelete)
+- [List Group Members ](#umgroupsusersget)
+- [Add a user to a group](#umgroupsuserspost)
+- [Retrieve a list of Resources by type.](#umresourcesfindbytype)
+- [Retrieve a Resource by type.](#umresourcesfindbytypeandid)
+- [List All Resources.](#umresourcesget)
+- [Delete a User](#umusersdelete)
+- [Retrieve a User](#umusersfindbyid)
+- [List all Users ](#umusersget)
+- [Retrieve a User&#39;s group resources](#umusersgroupsget)
+- [Retrieve a User&#39;s own resources](#umusersownsget)
+- [Create a user](#umuserspost)
+- [Modify a user](#umusersput)
+- [Delete a S3 key](#umuserss3keysdelete)
+- [Retrieve given S3 key belonging to the given User](#umuserss3keysfindbykey)
+- [Retrieve a User&#39;s S3 keys](#umuserss3keysget)
+- [Create a S3 key for the given user](#umuserss3keyspost)
+- [Modify a S3 key having the given key id](#umuserss3keysput)
+- [Retrieve S3 object storage single signon URL for the given user](#umuserss3ssourlget)
+
+#### VolumeApi
+
+- [Create Volume Snapshot](#datacentersvolumescreatesnapshotpost)
+- [Delete a Volume](#datacentersvolumesdelete)
+- [Retrieve a Volume](#datacentersvolumesfindbyid)
+- [List Volumes ](#datacentersvolumesget)
+- [Partially modify a Volume](#datacentersvolumespatch)
+- [Create a Volume](#datacentersvolumespost)
+- [Modify a Volume](#datacentersvolumesput)
+- [Restore Volume Snapshot](#datacentersvolumesrestoresnapshotpost)
+
+---
+
+
+### BackupUnitApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**backupunitsDelete**](BackupUnitApi.md#backupunitsDelete) | **DELETE** /backupunits/{backupunitId} | Delete a Backup Unit
+[**backupunitsFindById**](BackupUnitApi.md#backupunitsFindById) | **GET** /backupunits/{backupunitId} | Returns the specified backup Unit
+[**backupunitsGet**](BackupUnitApi.md#backupunitsGet) | **GET** /backupunits | List Backup Units 
+[**backupunitsPatch**](BackupUnitApi.md#backupunitsPatch) | **PATCH** /backupunits/{backupunitId} | Partially modify a Backup Unit
+[**backupunitsPost**](BackupUnitApi.md#backupunitsPost) | **POST** /backupunits | Create a Backup Unit
+[**backupunitsPut**](BackupUnitApi.md#backupunitsPut) | **PUT** /backupunits/{backupunitId} | Modify a Backup Unit
+[**backupunitsSsourlGet**](BackupUnitApi.md#backupunitsSsourlGet) | **GET** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified backup Unit.
+
+
+<a name="backupunitsDelete"></a>
+# **backupunitsDelete**
+> Object backupunitsDelete(backupunitId, pretty, depth, xContractNumber)
+
+Delete a Backup Unit
+
+NOTE: Running through the deletion process will delete: - the backup plans inside the Backup Unit. - all backups associated with the Backup Unit. - the backup user and finally also the unit
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.BackupUnitApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    BackupUnitApi apiInstance = new BackupUnitApi(defaultClient);
+    String backupunitId = "backupunitId_example"; // String | The unique ID of the backup Unit
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.backupunitsDelete(backupunitId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling BackupUnitApi#backupunitsDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **backupunitId** | **String**| The unique ID of the backup Unit |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="backupunitsFindById"></a>
+# **backupunitsFindById**
+> BackupUnit backupunitsFindById(backupunitId, pretty, depth, xContractNumber)
+
+Returns the specified backup Unit
+
+You can retrieve the details of an specific backup unit.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.BackupUnitApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    BackupUnitApi apiInstance = new BackupUnitApi(defaultClient);
+    String backupunitId = "backupunitId_example"; // String | The unique ID of the backup unit
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      BackupUnit result = apiInstance.backupunitsFindById(backupunitId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling BackupUnitApi#backupunitsFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **backupunitId** | **String**| The unique ID of the backup unit |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**BackupUnit**](BackupUnit.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="backupunitsGet"></a>
+# **backupunitsGet**
+> BackupUnits backupunitsGet(pretty, depth, xContractNumber)
+
+List Backup Units 
+
+You can retrieve a complete list of backup Units that you have access to.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.BackupUnitApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    BackupUnitApi apiInstance = new BackupUnitApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      BackupUnits result = apiInstance.backupunitsGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling BackupUnitApi#backupunitsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**BackupUnits**](BackupUnits.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="backupunitsPatch"></a>
+# **backupunitsPatch**
+> BackupUnit backupunitsPatch(backupunitId, backupUnitProperties, pretty, depth, xContractNumber)
+
+Partially modify a Backup Unit
+
+You can use update a backup Unit properties
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.BackupUnitApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    BackupUnitApi apiInstance = new BackupUnitApi(defaultClient);
+    String backupunitId = "backupunitId_example"; // String | The unique ID of the backup unit
+    BackupUnitProperties backupUnitProperties = new BackupUnitProperties(); // BackupUnitProperties | Modified backup Unit properties
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      BackupUnit result = apiInstance.backupunitsPatch(backupunitId, backupUnitProperties, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling BackupUnitApi#backupunitsPatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **backupunitId** | **String**| The unique ID of the backup unit |
+ **backupUnitProperties** | [**BackupUnitProperties**](BackupUnitProperties.md)| Modified backup Unit properties |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**BackupUnit**](BackupUnit.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="backupunitsPost"></a>
+# **backupunitsPost**
+> BackupUnit backupunitsPost(backupUnit, pretty, depth, xContractNumber)
+
+Create a Backup Unit
+
+Create a Backup Unit. A Backup Unit is considered a resource like a virtual datacenter, IP Block, snapshot, etc. It shall be shareable via groups inside our User Management Feature 
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.BackupUnitApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    BackupUnitApi apiInstance = new BackupUnitApi(defaultClient);
+    BackupUnit backupUnit = new BackupUnit(); // BackupUnit | Payload containing data to create a new Backup Unit
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      BackupUnit result = apiInstance.backupunitsPost(backupUnit, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling BackupUnitApi#backupunitsPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **backupUnit** | [**BackupUnit**](BackupUnit.md)| Payload containing data to create a new Backup Unit |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**BackupUnit**](BackupUnit.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="backupunitsPut"></a>
+# **backupunitsPut**
+> BackupUnit backupunitsPut(backupunitId, backupUnit, pretty, depth, xContractNumber)
+
+Modify a Backup Unit
+
+You can use update a backup Unit properties
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.BackupUnitApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    BackupUnitApi apiInstance = new BackupUnitApi(defaultClient);
+    String backupunitId = "backupunitId_example"; // String | The unique ID of the backup unit
+    BackupUnit backupUnit = new BackupUnit(); // BackupUnit | Modified backup Unit
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      BackupUnit result = apiInstance.backupunitsPut(backupunitId, backupUnit, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling BackupUnitApi#backupunitsPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **backupunitId** | **String**| The unique ID of the backup unit |
+ **backupUnit** | [**BackupUnit**](BackupUnit.md)| Modified backup Unit |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**BackupUnit**](BackupUnit.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="backupunitsSsourlGet"></a>
+# **backupunitsSsourlGet**
+> BackupUnitSSO backupunitsSsourlGet(backupunitId, pretty, xContractNumber)
+
+Returns a single signon URL for the specified backup Unit.
+
+Returns a single signon URL for the specified backup Unit.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.BackupUnitApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    BackupUnitApi apiInstance = new BackupUnitApi(defaultClient);
+    String backupunitId = "backupunitId_example"; // String | The unique UUID of the backup unit
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      BackupUnitSSO result = apiInstance.backupunitsSsourlGet(backupunitId, pretty, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling BackupUnitApi#backupunitsSsourlGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **backupunitId** | **String**| The unique UUID of the backup unit |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**BackupUnitSSO**](BackupUnitSSO.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### ContractApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**contractsGet**](ContractApi.md#contractsGet) | **GET** /contracts | Retrieve a Contract
+
+
+<a name="contractsGet"></a>
+# **contractsGet**
+> Contract contractsGet(pretty, depth, xContractNumber)
+
+Retrieve a Contract
+
+Retrieves the attributes of user&#39;s contract.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ContractApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ContractApi apiInstance = new ContractApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Contract result = apiInstance.contractsGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ContractApi#contractsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Contract**](Contract.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### DataCenterApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**datacentersDelete**](DataCenterApi.md#datacentersDelete) | **DELETE** /datacenters/{datacenterId} | Delete a Data Center
+[**datacentersFindById**](DataCenterApi.md#datacentersFindById) | **GET** /datacenters/{datacenterId} | Retrieve a Data Center
+[**datacentersGet**](DataCenterApi.md#datacentersGet) | **GET** /datacenters | List Data Centers under your account
+[**datacentersPatch**](DataCenterApi.md#datacentersPatch) | **PATCH** /datacenters/{datacenterId} | Partially modify a Data Center
+[**datacentersPost**](DataCenterApi.md#datacentersPost) | **POST** /datacenters | Create a Data Center
+[**datacentersPut**](DataCenterApi.md#datacentersPut) | **PUT** /datacenters/{datacenterId} | Modify a Data Center
+
+
+<a name="datacentersDelete"></a>
+# **datacentersDelete**
+> Object datacentersDelete(datacenterId, pretty, depth, xContractNumber)
+
+Delete a Data Center
+
+Will remove all objects within the datacenter and remove the datacenter object itself, too. This is a highly destructive method which should be used with caution
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.DataCenterApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    DataCenterApi apiInstance = new DataCenterApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersDelete(datacenterId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataCenterApi#datacentersDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersFindById"></a>
+# **datacentersFindById**
+> Datacenter datacentersFindById(datacenterId, pretty, depth, xContractNumber)
+
+Retrieve a Data Center
+
+You can retrieve a data center by using the resource&#39;s ID. This value can be found in the response body when a datacenter is created or when you GET a list of datacenters.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.DataCenterApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    DataCenterApi apiInstance = new DataCenterApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Datacenter result = apiInstance.datacentersFindById(datacenterId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataCenterApi#datacentersFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Datacenter**](Datacenter.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersGet"></a>
+# **datacentersGet**
+> Datacenters datacentersGet(pretty, depth, xContractNumber)
+
+List Data Centers under your account
+
+You can retrieve a complete list of data centers provisioned under your account
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.DataCenterApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    DataCenterApi apiInstance = new DataCenterApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Datacenters result = apiInstance.datacentersGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataCenterApi#datacentersGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Datacenters**](Datacenters.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersPatch"></a>
+# **datacentersPatch**
+> Datacenter datacentersPatch(datacenterId, datacenter, pretty, depth, xContractNumber)
+
+Partially modify a Data Center
+
+You can use update datacenter to re-name the datacenter or update its description
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.DataCenterApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    DataCenterApi apiInstance = new DataCenterApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    DatacenterProperties datacenter = new DatacenterProperties(); // DatacenterProperties | Modified properties of Data Center
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Datacenter result = apiInstance.datacentersPatch(datacenterId, datacenter, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataCenterApi#datacentersPatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **datacenter** | [**DatacenterProperties**](DatacenterProperties.md)| Modified properties of Data Center |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Datacenter**](Datacenter.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersPost"></a>
+# **datacentersPost**
+> Datacenter datacentersPost(datacenter, pretty, depth, xContractNumber)
+
+Create a Data Center
+
+Virtual data centers are the foundation of the platform. They act as logical containers for all other objects you will be creating, e.g. servers. You can provision as many data centers as you want. Datacenters have their own private network and are logically segmented from each other to create isolation. You can use this POST method to create a simple datacenter or to create a datacenter with multiple objects under it such as servers and storage volumes.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.DataCenterApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    DataCenterApi apiInstance = new DataCenterApi(defaultClient);
+    Datacenter datacenter = new Datacenter(); // Datacenter | Datacenter to be created
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Datacenter result = apiInstance.datacentersPost(datacenter, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataCenterApi#datacentersPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenter** | [**Datacenter**](Datacenter.md)| Datacenter to be created |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Datacenter**](Datacenter.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersPut"></a>
+# **datacentersPut**
+> Datacenter datacentersPut(datacenterId, datacenter, pretty, depth, xContractNumber)
+
+Modify a Data Center
+
+You can use update datacenter to re-name the datacenter or update its description
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.DataCenterApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    DataCenterApi apiInstance = new DataCenterApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    Datacenter datacenter = new Datacenter(); // Datacenter | Modified Data Center
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Datacenter result = apiInstance.datacentersPut(datacenterId, datacenter, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DataCenterApi#datacentersPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **datacenter** | [**Datacenter**](Datacenter.md)| Modified Data Center |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Datacenter**](Datacenter.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### ImageApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**imagesDelete**](ImageApi.md#imagesDelete) | **DELETE** /images/{imageId} | Delete an Image
+[**imagesFindById**](ImageApi.md#imagesFindById) | **GET** /images/{imageId} | Retrieve an Image
+[**imagesGet**](ImageApi.md#imagesGet) | **GET** /images | List Images 
+[**imagesPatch**](ImageApi.md#imagesPatch) | **PATCH** /images/{imageId} | Partially modify an Image
+[**imagesPut**](ImageApi.md#imagesPut) | **PUT** /images/{imageId} | Modify an Image
+
+
+<a name="imagesDelete"></a>
+# **imagesDelete**
+> Object imagesDelete(imageId, pretty, depth, xContractNumber)
+
+Delete an Image
+
+Deletes the specified image. This operation is permitted on private image only.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ImageApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ImageApi apiInstance = new ImageApi(defaultClient);
+    String imageId = "imageId_example"; // String | 
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.imagesDelete(imageId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ImageApi#imagesDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **imageId** | **String**|  |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="imagesFindById"></a>
+# **imagesFindById**
+> Image imagesFindById(imageId, pretty, depth, xContractNumber)
+
+Retrieve an Image
+
+Retrieves the attributes of a given image.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ImageApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ImageApi apiInstance = new ImageApi(defaultClient);
+    String imageId = "imageId_example"; // String | 
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Image result = apiInstance.imagesFindById(imageId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ImageApi#imagesFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **imageId** | **String**|  |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Image**](Image.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="imagesGet"></a>
+# **imagesGet**
+> Images imagesGet(pretty, depth, xContractNumber)
+
+List Images 
+
+Retrieve a list of images within the datacenter
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ImageApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ImageApi apiInstance = new ImageApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Images result = apiInstance.imagesGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ImageApi#imagesGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Images**](Images.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="imagesPatch"></a>
+# **imagesPatch**
+> Image imagesPatch(imageId, image, pretty, depth, xContractNumber)
+
+Partially modify an Image
+
+You can use update attributes of a resource
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ImageApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ImageApi apiInstance = new ImageApi(defaultClient);
+    String imageId = "imageId_example"; // String | 
+    ImageProperties image = new ImageProperties(); // ImageProperties | Modified Image
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Image result = apiInstance.imagesPatch(imageId, image, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ImageApi#imagesPatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **imageId** | **String**|  |
+ **image** | [**ImageProperties**](ImageProperties.md)| Modified Image |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Image**](Image.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="imagesPut"></a>
+# **imagesPut**
+> Image imagesPut(imageId, image, pretty, depth, xContractNumber)
+
+Modify an Image
+
+You can use update attributes of a resource
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ImageApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ImageApi apiInstance = new ImageApi(defaultClient);
+    String imageId = "imageId_example"; // String | 
+    Image image = new Image(); // Image | Modified Image
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Image result = apiInstance.imagesPut(imageId, image, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ImageApi#imagesPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **imageId** | **String**|  |
+ **image** | [**Image**](Image.md)| Modified Image |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Image**](Image.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### IpBlocksApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**ipblocksDelete**](IpBlocksApi.md#ipblocksDelete) | **DELETE** /ipblocks/{ipblockId} | Delete IP Block
+[**ipblocksFindById**](IpBlocksApi.md#ipblocksFindById) | **GET** /ipblocks/{ipblockId} | Retrieve an IP Block
+[**ipblocksGet**](IpBlocksApi.md#ipblocksGet) | **GET** /ipblocks | List IP Blocks 
+[**ipblocksPatch**](IpBlocksApi.md#ipblocksPatch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP Block
+[**ipblocksPost**](IpBlocksApi.md#ipblocksPost) | **POST** /ipblocks | Reserve IP Block
+[**ipblocksPut**](IpBlocksApi.md#ipblocksPut) | **PUT** /ipblocks/{ipblockId} | Modify IP Block
+
+
+<a name="ipblocksDelete"></a>
+# **ipblocksDelete**
+> Object ipblocksDelete(ipblockId, pretty, depth, xContractNumber)
+
+Delete IP Block
+
+Removes the specific IP Block
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.IpBlocksApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    IpBlocksApi apiInstance = new IpBlocksApi(defaultClient);
+    String ipblockId = "ipblockId_example"; // String | 
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.ipblocksDelete(ipblockId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling IpBlocksApi#ipblocksDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ipblockId** | **String**|  |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="ipblocksFindById"></a>
+# **ipblocksFindById**
+> IpBlock ipblocksFindById(ipblockId, pretty, depth, xContractNumber)
+
+Retrieve an IP Block
+
+Retrieves the attributes of a given IP Block.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.IpBlocksApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    IpBlocksApi apiInstance = new IpBlocksApi(defaultClient);
+    String ipblockId = "ipblockId_example"; // String | 
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      IpBlock result = apiInstance.ipblocksFindById(ipblockId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling IpBlocksApi#ipblocksFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ipblockId** | **String**|  |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**IpBlock**](IpBlock.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="ipblocksGet"></a>
+# **ipblocksGet**
+> IpBlocks ipblocksGet(pretty, depth, xContractNumber)
+
+List IP Blocks 
+
+Retrieve a list of all reserved IP Blocks
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.IpBlocksApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    IpBlocksApi apiInstance = new IpBlocksApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      IpBlocks result = apiInstance.ipblocksGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling IpBlocksApi#ipblocksGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**IpBlocks**](IpBlocks.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="ipblocksPatch"></a>
+# **ipblocksPatch**
+> IpBlock ipblocksPatch(ipblockId, ipblock, pretty, depth, xContractNumber)
+
+Partially modify IP Block
+
+You can use update attributes of a resource
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.IpBlocksApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    IpBlocksApi apiInstance = new IpBlocksApi(defaultClient);
+    String ipblockId = "ipblockId_example"; // String | 
+    IpBlockProperties ipblock = new IpBlockProperties(); // IpBlockProperties | IP Block to be modified
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      IpBlock result = apiInstance.ipblocksPatch(ipblockId, ipblock, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling IpBlocksApi#ipblocksPatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ipblockId** | **String**|  |
+ **ipblock** | [**IpBlockProperties**](IpBlockProperties.md)| IP Block to be modified |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**IpBlock**](IpBlock.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="ipblocksPost"></a>
+# **ipblocksPost**
+> IpBlock ipblocksPost(ipblock, pretty, depth, xContractNumber)
+
+Reserve IP Block
+
+This will reserve a new IP Block
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.IpBlocksApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    IpBlocksApi apiInstance = new IpBlocksApi(defaultClient);
+    IpBlock ipblock = new IpBlock(); // IpBlock | IP Block to be reserved
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      IpBlock result = apiInstance.ipblocksPost(ipblock, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling IpBlocksApi#ipblocksPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ipblock** | [**IpBlock**](IpBlock.md)| IP Block to be reserved |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**IpBlock**](IpBlock.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="ipblocksPut"></a>
+# **ipblocksPut**
+> IpBlock ipblocksPut(ipblockId, ipblock, pretty, depth, xContractNumber)
+
+Modify IP Block
+
+You can use update attributes of a resource
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.IpBlocksApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    IpBlocksApi apiInstance = new IpBlocksApi(defaultClient);
+    String ipblockId = "ipblockId_example"; // String | 
+    IpBlock ipblock = new IpBlock(); // IpBlock | IP Block to be modified
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      IpBlock result = apiInstance.ipblocksPut(ipblockId, ipblock, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling IpBlocksApi#ipblocksPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ipblockId** | **String**|  |
+ **ipblock** | [**IpBlock**](IpBlock.md)| IP Block to be modified |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**IpBlock**](IpBlock.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### KubernetesApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**k8sDelete**](KubernetesApi.md#k8sDelete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes Cluster
+[**k8sFindByClusterid**](KubernetesApi.md#k8sFindByClusterid) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
+[**k8sGet**](KubernetesApi.md#k8sGet) | **GET** /k8s | List Kubernetes Clusters
+[**k8sKubeconfigGet**](KubernetesApi.md#k8sKubeconfigGet) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File
+[**k8sNodepoolsDelete**](KubernetesApi.md#k8sNodepoolsDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool
+[**k8sNodepoolsFindById**](KubernetesApi.md#k8sNodepoolsFindById) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes Node Pool
+[**k8sNodepoolsGet**](KubernetesApi.md#k8sNodepoolsGet) | **GET** /k8s/{k8sClusterId}/nodepools | List Kubernetes Node Pools
+[**k8sNodepoolsNodesDelete**](KubernetesApi.md#k8sNodepoolsNodesDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes node
+[**k8sNodepoolsNodesFindById**](KubernetesApi.md#k8sNodepoolsNodesFindById) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes node
+[**k8sNodepoolsNodesGet**](KubernetesApi.md#k8sNodepoolsNodesGet) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Retrieve Kubernetes nodes.
+[**k8sNodepoolsNodesReplacePost**](KubernetesApi.md#k8sNodepoolsNodesReplacePost) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate the Kubernetes node
+[**k8sNodepoolsPost**](KubernetesApi.md#k8sNodepoolsPost) | **POST** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool
+[**k8sNodepoolsPut**](KubernetesApi.md#k8sNodepoolsPut) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool
+[**k8sPost**](KubernetesApi.md#k8sPost) | **POST** /k8s | Create Kubernetes Cluster
+[**k8sPut**](KubernetesApi.md#k8sPut) | **PUT** /k8s/{k8sClusterId} | Modify Kubernetes Cluster
+[**k8sVersionsCompatibilitiesGet**](KubernetesApi.md#k8sVersionsCompatibilitiesGet) | **GET** /k8s/versions/{clusterVersion}/compatibilities | Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
+[**k8sVersionsDefaultGet**](KubernetesApi.md#k8sVersionsDefaultGet) | **GET** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools.
+[**k8sVersionsGet**](KubernetesApi.md#k8sVersionsGet) | **GET** /k8s/versions | Retrieve available Kubernetes versions
+
+
+<a name="k8sDelete"></a>
+# **k8sDelete**
+> Object k8sDelete(k8sClusterId, pretty, depth, xContractNumber)
+
+Delete Kubernetes Cluster
+
+This will remove a Kubernetes Cluster.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.k8sDelete(k8sClusterId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sFindByClusterid"></a>
+# **k8sFindByClusterid**
+> KubernetesCluster k8sFindByClusterid(k8sClusterId, pretty, depth, xContractNumber)
+
+Retrieve Kubernetes Cluster
+
+This will retrieve a single Kubernetes Cluster.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      KubernetesCluster result = apiInstance.k8sFindByClusterid(k8sClusterId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sFindByClusterid");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**KubernetesCluster**](KubernetesCluster.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sGet"></a>
+# **k8sGet**
+> KubernetesClusters k8sGet(pretty, depth, xContractNumber)
+
+List Kubernetes Clusters
+
+You can retrieve a list of all kubernetes clusters associated with a contract
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      KubernetesClusters result = apiInstance.k8sGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**KubernetesClusters**](KubernetesClusters.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sKubeconfigGet"></a>
+# **k8sKubeconfigGet**
+> KubernetesConfig k8sKubeconfigGet(k8sClusterId, pretty, depth, xContractNumber)
+
+Retrieve Kubernetes Configuration File
+
+You can retrieve kubernetes configuration file for the kubernetes cluster.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      KubernetesConfig result = apiInstance.k8sKubeconfigGet(k8sClusterId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sKubeconfigGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**KubernetesConfig**](KubernetesConfig.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sNodepoolsDelete"></a>
+# **k8sNodepoolsDelete**
+> Object k8sNodepoolsDelete(k8sClusterId, nodepoolId, pretty, depth, xContractNumber)
+
+Delete Kubernetes Node Pool
+
+This will remove a Kubernetes Node Pool.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
+    String nodepoolId = "nodepoolId_example"; // String | The unique ID of the Kubernetes Node Pool
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.k8sNodepoolsDelete(k8sClusterId, nodepoolId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sNodepoolsDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
+ **nodepoolId** | **String**| The unique ID of the Kubernetes Node Pool |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sNodepoolsFindById"></a>
+# **k8sNodepoolsFindById**
+> KubernetesNodePool k8sNodepoolsFindById(k8sClusterId, nodepoolId, pretty, depth, xContractNumber)
+
+Retrieve Kubernetes Node Pool
+
+You can retrieve a single Kubernetes Node Pool.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
+    String nodepoolId = "nodepoolId_example"; // String | The unique ID of the Kubernetes Node Pool
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      KubernetesNodePool result = apiInstance.k8sNodepoolsFindById(k8sClusterId, nodepoolId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sNodepoolsFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
+ **nodepoolId** | **String**| The unique ID of the Kubernetes Node Pool |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**KubernetesNodePool**](KubernetesNodePool.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sNodepoolsGet"></a>
+# **k8sNodepoolsGet**
+> KubernetesNodePools k8sNodepoolsGet(k8sClusterId, pretty, depth, xContractNumber)
+
+List Kubernetes Node Pools
+
+You can retrieve a list of all kubernetes node pools part of kubernetes cluster
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      KubernetesNodePools result = apiInstance.k8sNodepoolsGet(k8sClusterId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sNodepoolsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**KubernetesNodePools**](KubernetesNodePools.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sNodepoolsNodesDelete"></a>
+# **k8sNodepoolsNodesDelete**
+> Object k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber)
+
+Delete Kubernetes node
+
+This will remove a Kubernetes node.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
+    String nodepoolId = "nodepoolId_example"; // String | The unique ID of the Kubernetes Node Pool
+    String nodeId = "nodeId_example"; // String | The unique ID of the Kubernetes node
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sNodepoolsNodesDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
+ **nodepoolId** | **String**| The unique ID of the Kubernetes Node Pool |
+ **nodeId** | **String**| The unique ID of the Kubernetes node |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sNodepoolsNodesFindById"></a>
+# **k8sNodepoolsNodesFindById**
+> KubernetesNode k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber)
+
+Retrieve Kubernetes node
+
+You can retrieve a single Kubernetes Node.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
+    String nodepoolId = "nodepoolId_example"; // String | The unique ID of the Kubernetes Node Pool
+    String nodeId = "nodeId_example"; // String | The unique ID of the Kubernetes Node.
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      KubernetesNode result = apiInstance.k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sNodepoolsNodesFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
+ **nodepoolId** | **String**| The unique ID of the Kubernetes Node Pool |
+ **nodeId** | **String**| The unique ID of the Kubernetes Node. |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**KubernetesNode**](KubernetesNode.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sNodepoolsNodesGet"></a>
+# **k8sNodepoolsNodesGet**
+> KubernetesNodes k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, pretty, depth, xContractNumber)
+
+Retrieve Kubernetes nodes.
+
+You can retrieve all nodes of Kubernetes Node Pool.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
+    String nodepoolId = "nodepoolId_example"; // String | The unique ID of the Kubernetes Node Pool
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      KubernetesNodes result = apiInstance.k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sNodepoolsNodesGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
+ **nodepoolId** | **String**| The unique ID of the Kubernetes Node Pool |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**KubernetesNodes**](KubernetesNodes.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sNodepoolsNodesReplacePost"></a>
+# **k8sNodepoolsNodesReplacePost**
+> Object k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber)
+
+Recreate the Kubernetes node
+
+You can recreate a single Kubernetes Node.  Managed Kubernetes starts a process which based on the nodepool&#39;s template creates &amp; configures a new node, waits for status \&quot;ACTIVE\&quot;, and migrates all the pods from the faulty node, deleting it once empty. While this operation occurs, the nodepool will have an extra billable \&quot;ACTIVE\&quot; node.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
+    String nodepoolId = "nodepoolId_example"; // String | The unique ID of the Kubernetes Node Pool
+    String nodeId = "nodeId_example"; // String | The unique ID of the Kubernetes Node.
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sNodepoolsNodesReplacePost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
+ **nodepoolId** | **String**| The unique ID of the Kubernetes Node Pool |
+ **nodeId** | **String**| The unique ID of the Kubernetes Node. |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sNodepoolsPost"></a>
+# **k8sNodepoolsPost**
+> KubernetesNodePool k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, pretty, depth, xContractNumber)
+
+Create a Kubernetes Node Pool
+
+This will create a new Kubernetes Node Pool inside a Kubernetes Cluster.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
+    KubernetesNodePool kubernetesNodePool = new KubernetesNodePool(); // KubernetesNodePool | Details of Kubernetes Node Pool
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      KubernetesNodePool result = apiInstance.k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sNodepoolsPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
+ **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md)| Details of Kubernetes Node Pool |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**KubernetesNodePool**](KubernetesNodePool.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sNodepoolsPut"></a>
+# **k8sNodepoolsPut**
+> KubernetesNodePoolForPut k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePoolProperties, pretty, depth, xContractNumber)
+
+Modify Kubernetes Node Pool
+
+This will modify the Kubernetes Node Pool.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
+    String nodepoolId = "nodepoolId_example"; // String | The unique ID of the Kubernetes Node Pool
+    KubernetesNodePoolPropertiesForPut kubernetesNodePoolProperties = new KubernetesNodePoolPropertiesForPut(); // KubernetesNodePoolPropertiesForPut | Details of the Kubernetes Node Pool
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      KubernetesNodePoolForPut result = apiInstance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePoolProperties, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sNodepoolsPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
+ **nodepoolId** | **String**| The unique ID of the Kubernetes Node Pool |
+ **kubernetesNodePoolProperties** | [**KubernetesNodePoolPropertiesForPut**](KubernetesNodePoolPropertiesForPut.md)| Details of the Kubernetes Node Pool |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**KubernetesNodePoolForPut**](KubernetesNodePoolForPut.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sPost"></a>
+# **k8sPost**
+> KubernetesCluster k8sPost(kubernetesCluster, pretty, depth, xContractNumber)
+
+Create Kubernetes Cluster
+
+This will create a new Kubernetes Cluster.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    KubernetesCluster kubernetesCluster = new KubernetesCluster(); // KubernetesCluster | Properties of the Kubernetes Cluster
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      KubernetesCluster result = apiInstance.k8sPost(kubernetesCluster, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **kubernetesCluster** | [**KubernetesCluster**](KubernetesCluster.md)| Properties of the Kubernetes Cluster |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**KubernetesCluster**](KubernetesCluster.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sPut"></a>
+# **k8sPut**
+> KubernetesCluster k8sPut(k8sClusterId, kubernetescluster, pretty, depth, xContractNumber)
+
+Modify Kubernetes Cluster
+
+This will modify the Kubernetes Cluster.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
+    KubernetesCluster kubernetescluster = new KubernetesCluster(); // KubernetesCluster | Details of of the Kubernetes Cluster
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      KubernetesCluster result = apiInstance.k8sPut(k8sClusterId, kubernetescluster, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
+ **kubernetescluster** | [**KubernetesCluster**](KubernetesCluster.md)| Details of of the Kubernetes Cluster |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**KubernetesCluster**](KubernetesCluster.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sVersionsCompatibilitiesGet"></a>
+# **k8sVersionsCompatibilitiesGet**
+> List&lt;String&gt; k8sVersionsCompatibilitiesGet(clusterVersion)
+
+Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
+
+You can retrieve a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    String clusterVersion = "clusterVersion_example"; // String | 
+    try {
+      List<String> result = apiInstance.k8sVersionsCompatibilitiesGet(clusterVersion);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sVersionsCompatibilitiesGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **clusterVersion** | **String**|  |
+
+### Return type
+
+**List&lt;String&gt;**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sVersionsDefaultGet"></a>
+# **k8sVersionsDefaultGet**
+> String k8sVersionsDefaultGet()
+
+Retrieve the current default kubernetes version for clusters and nodepools.
+
+You can retrieve the current default kubernetes version for clusters and nodepools.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    try {
+      String result = apiInstance.k8sVersionsDefaultGet();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sVersionsDefaultGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**String**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="k8sVersionsGet"></a>
+# **k8sVersionsGet**
+> List&lt;String&gt; k8sVersionsGet()
+
+Retrieve available Kubernetes versions
+
+You can retrieve a list of available kubernetes versions
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.KubernetesApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    KubernetesApi apiInstance = new KubernetesApi(defaultClient);
+    try {
+      List<String> result = apiInstance.k8sVersionsGet();
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling KubernetesApi#k8sVersionsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**List&lt;String&gt;**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### LabelApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**datacentersLabelsDelete**](LabelApi.md#datacentersLabelsDelete) | **DELETE** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center
+[**datacentersLabelsFindByKey**](LabelApi.md#datacentersLabelsFindByKey) | **GET** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center
+[**datacentersLabelsGet**](LabelApi.md#datacentersLabelsGet) | **GET** /datacenters/{datacenterId}/labels | List all Data Center Labels
+[**datacentersLabelsPost**](LabelApi.md#datacentersLabelsPost) | **POST** /datacenters/{datacenterId}/labels | Add a Label to Data Center
+[**datacentersLabelsPut**](LabelApi.md#datacentersLabelsPut) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center
+[**datacentersServersLabelsDelete**](LabelApi.md#datacentersServersLabelsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server
+[**datacentersServersLabelsFindByKey**](LabelApi.md#datacentersServersLabelsFindByKey) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server
+[**datacentersServersLabelsGet**](LabelApi.md#datacentersServersLabelsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels
+[**datacentersServersLabelsPost**](LabelApi.md#datacentersServersLabelsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server
+[**datacentersServersLabelsPut**](LabelApi.md#datacentersServersLabelsPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server
+[**datacentersVolumesLabelsDelete**](LabelApi.md#datacentersVolumesLabelsDelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume
+[**datacentersVolumesLabelsFindByKey**](LabelApi.md#datacentersVolumesLabelsFindByKey) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume
+[**datacentersVolumesLabelsGet**](LabelApi.md#datacentersVolumesLabelsGet) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels
+[**datacentersVolumesLabelsPost**](LabelApi.md#datacentersVolumesLabelsPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume
+[**datacentersVolumesLabelsPut**](LabelApi.md#datacentersVolumesLabelsPut) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume
+[**ipblocksLabelsDelete**](LabelApi.md#ipblocksLabelsDelete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block
+[**ipblocksLabelsFindByKey**](LabelApi.md#ipblocksLabelsFindByKey) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block
+[**ipblocksLabelsGet**](LabelApi.md#ipblocksLabelsGet) | **GET** /ipblocks/{ipblockId}/labels | List all Ip Block Labels
+[**ipblocksLabelsPost**](LabelApi.md#ipblocksLabelsPost) | **POST** /ipblocks/{ipblockId}/labels | Add a Label to IP Block
+[**ipblocksLabelsPut**](LabelApi.md#ipblocksLabelsPut) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block
+[**labelsFindByLabelurn**](LabelApi.md#labelsFindByLabelurn) | **GET** /labels/{labelurn} | Returns the label by its URN.
+[**labelsGet**](LabelApi.md#labelsGet) | **GET** /labels | List Labels 
+[**snapshotsLabelsDelete**](LabelApi.md#snapshotsLabelsDelete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot
+[**snapshotsLabelsFindByKey**](LabelApi.md#snapshotsLabelsFindByKey) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot
+[**snapshotsLabelsGet**](LabelApi.md#snapshotsLabelsGet) | **GET** /snapshots/{snapshotId}/labels | List all Snapshot Labels
+[**snapshotsLabelsPost**](LabelApi.md#snapshotsLabelsPost) | **POST** /snapshots/{snapshotId}/labels | Add a Label to Snapshot
+[**snapshotsLabelsPut**](LabelApi.md#snapshotsLabelsPut) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot
+
+
+<a name="datacentersLabelsDelete"></a>
+# **datacentersLabelsDelete**
+> Object datacentersLabelsDelete(datacenterId, key, pretty, depth, xContractNumber)
+
+Delete a Label from Data Center
+
+This will remove a label from the data center.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Data Center
+    String key = "key_example"; // String | The key of the Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersLabelsDelete(datacenterId, key, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersLabelsDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Data Center |
+ **key** | **String**| The key of the Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLabelsFindByKey"></a>
+# **datacentersLabelsFindByKey**
+> LabelResource datacentersLabelsFindByKey(datacenterId, key, pretty, depth, xContractNumber)
+
+Retrieve a Label of Data Center
+
+This will retrieve the properties of a associated label to a data center.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Data Center
+    String key = "key_example"; // String | The key of the Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.datacentersLabelsFindByKey(datacenterId, key, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersLabelsFindByKey");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Data Center |
+ **key** | **String**| The key of the Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLabelsGet"></a>
+# **datacentersLabelsGet**
+> LabelResources datacentersLabelsGet(datacenterId, pretty, depth, xContractNumber)
+
+List all Data Center Labels
+
+You can retrieve a list of all labels associated with a data center
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Data Center
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResources result = apiInstance.datacentersLabelsGet(datacenterId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersLabelsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Data Center |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResources**](LabelResources.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLabelsPost"></a>
+# **datacentersLabelsPost**
+> LabelResource datacentersLabelsPost(datacenterId, label, pretty, depth, xContractNumber)
+
+Add a Label to Data Center
+
+This will add a label to the data center.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Data Center
+    LabelResource label = new LabelResource(); // LabelResource | Label to be added
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.datacentersLabelsPost(datacenterId, label, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersLabelsPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Data Center |
+ **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLabelsPut"></a>
+# **datacentersLabelsPut**
+> LabelResource datacentersLabelsPut(datacenterId, key, label, pretty, depth, xContractNumber)
+
+Modify a Label of Data Center
+
+This will modify the value of the label on a data center.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Data Center
+    String key = "key_example"; // String | The key of the Label
+    LabelResource label = new LabelResource(); // LabelResource | Modified Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.datacentersLabelsPut(datacenterId, key, label, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersLabelsPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Data Center |
+ **key** | **String**| The key of the Label |
+ **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersLabelsDelete"></a>
+# **datacentersServersLabelsDelete**
+> Object datacentersServersLabelsDelete(datacenterId, serverId, key, pretty, depth, xContractNumber)
+
+Delete a Label from Server
+
+This will remove a label from the server.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String key = "key_example"; // String | The key of the Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersServersLabelsDelete(datacenterId, serverId, key, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersServersLabelsDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **key** | **String**| The key of the Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersLabelsFindByKey"></a>
+# **datacentersServersLabelsFindByKey**
+> LabelResource datacentersServersLabelsFindByKey(datacenterId, serverId, key, pretty, depth, xContractNumber)
+
+Retrieve a Label of Server
+
+This will retrieve the properties of a associated label to a server.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String key = "key_example"; // String | The key of the Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.datacentersServersLabelsFindByKey(datacenterId, serverId, key, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersServersLabelsFindByKey");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **key** | **String**| The key of the Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersLabelsGet"></a>
+# **datacentersServersLabelsGet**
+> LabelResources datacentersServersLabelsGet(datacenterId, serverId, pretty, depth, xContractNumber)
+
+List all Server Labels
+
+You can retrieve a list of all labels associated with a server
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResources result = apiInstance.datacentersServersLabelsGet(datacenterId, serverId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersServersLabelsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResources**](LabelResources.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersLabelsPost"></a>
+# **datacentersServersLabelsPost**
+> LabelResource datacentersServersLabelsPost(datacenterId, serverId, label, pretty, depth, xContractNumber)
+
+Add a Label to Server
+
+This will add a label to the server.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    LabelResource label = new LabelResource(); // LabelResource | Label to be added
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.datacentersServersLabelsPost(datacenterId, serverId, label, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersServersLabelsPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersLabelsPut"></a>
+# **datacentersServersLabelsPut**
+> LabelResource datacentersServersLabelsPut(datacenterId, serverId, key, label, pretty, depth, xContractNumber)
+
+Modify a Label of Server
+
+This will modify the value of the label on a server.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String key = "key_example"; // String | The key of the Label
+    LabelResource label = new LabelResource(); // LabelResource | Modified Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.datacentersServersLabelsPut(datacenterId, serverId, key, label, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersServersLabelsPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **key** | **String**| The key of the Label |
+ **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersVolumesLabelsDelete"></a>
+# **datacentersVolumesLabelsDelete**
+> Object datacentersVolumesLabelsDelete(datacenterId, volumeId, key, pretty, depth, xContractNumber)
+
+Delete a Label from Volume
+
+This will remove a label from the volume.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String volumeId = "volumeId_example"; // String | The unique ID of the Volume
+    String key = "key_example"; // String | The key of the Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersVolumesLabelsDelete(datacenterId, volumeId, key, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersVolumesLabelsDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **volumeId** | **String**| The unique ID of the Volume |
+ **key** | **String**| The key of the Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersVolumesLabelsFindByKey"></a>
+# **datacentersVolumesLabelsFindByKey**
+> LabelResource datacentersVolumesLabelsFindByKey(datacenterId, volumeId, key, pretty, depth, xContractNumber)
+
+Retrieve a Label of Volume
+
+This will retrieve the properties of a associated label to a volume.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String volumeId = "volumeId_example"; // String | The unique ID of the Volume
+    String key = "key_example"; // String | The key of the Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.datacentersVolumesLabelsFindByKey(datacenterId, volumeId, key, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersVolumesLabelsFindByKey");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **volumeId** | **String**| The unique ID of the Volume |
+ **key** | **String**| The key of the Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersVolumesLabelsGet"></a>
+# **datacentersVolumesLabelsGet**
+> LabelResources datacentersVolumesLabelsGet(datacenterId, volumeId, pretty, depth, xContractNumber)
+
+List all Volume Labels
+
+You can retrieve a list of all labels associated with a volume
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String volumeId = "volumeId_example"; // String | The unique ID of the Volume
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResources result = apiInstance.datacentersVolumesLabelsGet(datacenterId, volumeId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersVolumesLabelsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **volumeId** | **String**| The unique ID of the Volume |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResources**](LabelResources.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersVolumesLabelsPost"></a>
+# **datacentersVolumesLabelsPost**
+> LabelResource datacentersVolumesLabelsPost(datacenterId, volumeId, label, pretty, depth, xContractNumber)
+
+Add a Label to Volume
+
+This will add a label to the volume.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String volumeId = "volumeId_example"; // String | The unique ID of the Volume
+    LabelResource label = new LabelResource(); // LabelResource | Label to be added
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.datacentersVolumesLabelsPost(datacenterId, volumeId, label, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersVolumesLabelsPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **volumeId** | **String**| The unique ID of the Volume |
+ **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersVolumesLabelsPut"></a>
+# **datacentersVolumesLabelsPut**
+> LabelResource datacentersVolumesLabelsPut(datacenterId, volumeId, key, label, pretty, depth, xContractNumber)
+
+Modify a Label of Volume
+
+This will modify the value of the label on a volume.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String volumeId = "volumeId_example"; // String | The unique ID of the Volume
+    String key = "key_example"; // String | The key of the Label
+    LabelResource label = new LabelResource(); // LabelResource | Modified Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.datacentersVolumesLabelsPut(datacenterId, volumeId, key, label, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#datacentersVolumesLabelsPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **volumeId** | **String**| The unique ID of the Volume |
+ **key** | **String**| The key of the Label |
+ **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="ipblocksLabelsDelete"></a>
+# **ipblocksLabelsDelete**
+> Object ipblocksLabelsDelete(ipblockId, key, pretty, depth, xContractNumber)
+
+Delete a Label from IP Block
+
+This will remove a label from the Ip Block.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String ipblockId = "ipblockId_example"; // String | The unique ID of the Ip Block
+    String key = "key_example"; // String | The key of the Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.ipblocksLabelsDelete(ipblockId, key, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#ipblocksLabelsDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ipblockId** | **String**| The unique ID of the Ip Block |
+ **key** | **String**| The key of the Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="ipblocksLabelsFindByKey"></a>
+# **ipblocksLabelsFindByKey**
+> LabelResource ipblocksLabelsFindByKey(ipblockId, key, pretty, depth, xContractNumber)
+
+Retrieve a Label of IP Block
+
+This will retrieve the properties of a associated label to a Ip Block.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String ipblockId = "ipblockId_example"; // String | The unique ID of the Ip Block
+    String key = "key_example"; // String | The key of the Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.ipblocksLabelsFindByKey(ipblockId, key, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#ipblocksLabelsFindByKey");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ipblockId** | **String**| The unique ID of the Ip Block |
+ **key** | **String**| The key of the Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="ipblocksLabelsGet"></a>
+# **ipblocksLabelsGet**
+> LabelResources ipblocksLabelsGet(ipblockId, pretty, depth, xContractNumber)
+
+List all Ip Block Labels
+
+You can retrieve a list of all labels associated with a IP Block
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String ipblockId = "ipblockId_example"; // String | The unique ID of the Ip Block
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResources result = apiInstance.ipblocksLabelsGet(ipblockId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#ipblocksLabelsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ipblockId** | **String**| The unique ID of the Ip Block |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResources**](LabelResources.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="ipblocksLabelsPost"></a>
+# **ipblocksLabelsPost**
+> LabelResource ipblocksLabelsPost(ipblockId, label, pretty, depth, xContractNumber)
+
+Add a Label to IP Block
+
+This will add a label to the Ip Block.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String ipblockId = "ipblockId_example"; // String | The unique ID of the Ip Block
+    LabelResource label = new LabelResource(); // LabelResource | Label to be added
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.ipblocksLabelsPost(ipblockId, label, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#ipblocksLabelsPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ipblockId** | **String**| The unique ID of the Ip Block |
+ **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="ipblocksLabelsPut"></a>
+# **ipblocksLabelsPut**
+> LabelResource ipblocksLabelsPut(ipblockId, key, label, pretty, depth, xContractNumber)
+
+Modify a Label of IP Block
+
+This will modify the value of the label on a Ip Block.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String ipblockId = "ipblockId_example"; // String | The unique ID of the Ip Block
+    String key = "key_example"; // String | The key of the Label
+    LabelResource label = new LabelResource(); // LabelResource | Modified Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.ipblocksLabelsPut(ipblockId, key, label, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#ipblocksLabelsPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ipblockId** | **String**| The unique ID of the Ip Block |
+ **key** | **String**| The key of the Label |
+ **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="labelsFindByLabelurn"></a>
+# **labelsFindByLabelurn**
+> Label labelsFindByLabelurn(labelurn, pretty, depth, xContractNumber)
+
+Returns the label by its URN.
+
+You can retrieve the details of a specific label using its URN. A URN is for uniqueness of a Label and composed using urn:label:&lt;resource_type&gt;:&lt;resource_uuid&gt;:&lt;key&gt;
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String labelurn = "labelurn_example"; // String | The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key>
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Label result = apiInstance.labelsFindByLabelurn(labelurn, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#labelsFindByLabelurn");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **labelurn** | **String**| The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:&lt;resource_type&gt;:&lt;resource_uuid&gt;:&lt;key&gt; |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Label**](Label.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="labelsGet"></a>
+# **labelsGet**
+> Labels labelsGet(pretty, depth, xContractNumber)
+
+List Labels 
+
+You can retrieve a complete list of labels that you have access to.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Labels result = apiInstance.labelsGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#labelsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Labels**](Labels.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="snapshotsLabelsDelete"></a>
+# **snapshotsLabelsDelete**
+> Object snapshotsLabelsDelete(snapshotId, key, pretty, depth, xContractNumber)
+
+Delete a Label from Snapshot
+
+This will remove a label from the snapshot.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String snapshotId = "snapshotId_example"; // String | The unique ID of the Snapshot
+    String key = "key_example"; // String | The key of the Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.snapshotsLabelsDelete(snapshotId, key, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#snapshotsLabelsDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **snapshotId** | **String**| The unique ID of the Snapshot |
+ **key** | **String**| The key of the Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="snapshotsLabelsFindByKey"></a>
+# **snapshotsLabelsFindByKey**
+> LabelResource snapshotsLabelsFindByKey(snapshotId, key, pretty, depth, xContractNumber)
+
+Retrieve a Label of Snapshot
+
+This will retrieve the properties of a associated label to a snapshot.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String snapshotId = "snapshotId_example"; // String | The unique ID of the Snapshot
+    String key = "key_example"; // String | The key of the Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.snapshotsLabelsFindByKey(snapshotId, key, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#snapshotsLabelsFindByKey");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **snapshotId** | **String**| The unique ID of the Snapshot |
+ **key** | **String**| The key of the Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="snapshotsLabelsGet"></a>
+# **snapshotsLabelsGet**
+> LabelResources snapshotsLabelsGet(snapshotId, pretty, depth, xContractNumber)
+
+List all Snapshot Labels
+
+You can retrieve a list of all labels associated with a snapshot
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String snapshotId = "snapshotId_example"; // String | The unique ID of the Snapshot
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResources result = apiInstance.snapshotsLabelsGet(snapshotId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#snapshotsLabelsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **snapshotId** | **String**| The unique ID of the Snapshot |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResources**](LabelResources.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="snapshotsLabelsPost"></a>
+# **snapshotsLabelsPost**
+> LabelResource snapshotsLabelsPost(snapshotId, label, pretty, depth, xContractNumber)
+
+Add a Label to Snapshot
+
+This will add a label to the snapshot.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String snapshotId = "snapshotId_example"; // String | The unique ID of the Snapshot
+    LabelResource label = new LabelResource(); // LabelResource | Label to be added
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.snapshotsLabelsPost(snapshotId, label, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#snapshotsLabelsPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **snapshotId** | **String**| The unique ID of the Snapshot |
+ **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="snapshotsLabelsPut"></a>
+# **snapshotsLabelsPut**
+> LabelResource snapshotsLabelsPut(snapshotId, key, label, pretty, depth, xContractNumber)
+
+Modify a Label of Snapshot
+
+This will modify the value of the label on a snapshot.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LabelApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LabelApi apiInstance = new LabelApi(defaultClient);
+    String snapshotId = "snapshotId_example"; // String | The unique ID of the Snapshot
+    String key = "key_example"; // String | The key of the Label
+    LabelResource label = new LabelResource(); // LabelResource | Modified Label
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LabelResource result = apiInstance.snapshotsLabelsPut(snapshotId, key, label, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LabelApi#snapshotsLabelsPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **snapshotId** | **String**| The unique ID of the Snapshot |
+ **key** | **String**| The key of the Label |
+ **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LabelResource**](LabelResource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### LanApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**datacentersLansDelete**](LanApi.md#datacentersLansDelete) | **DELETE** /datacenters/{datacenterId}/lans/{lanId} | Delete a Lan.
+[**datacentersLansFindById**](LanApi.md#datacentersLansFindById) | **GET** /datacenters/{datacenterId}/lans/{lanId} | Retrieve a Lan
+[**datacentersLansGet**](LanApi.md#datacentersLansGet) | **GET** /datacenters/{datacenterId}/lans | List Lans
+[**datacentersLansNicsFindById**](LanApi.md#datacentersLansNicsFindById) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve a nic attached to lan
+[**datacentersLansNicsGet**](LanApi.md#datacentersLansNicsGet) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics | List Lan Members 
+[**datacentersLansNicsPost**](LanApi.md#datacentersLansNicsPost) | **POST** /datacenters/{datacenterId}/lans/{lanId}/nics | Attach a nic
+[**datacentersLansPatch**](LanApi.md#datacentersLansPatch) | **PATCH** /datacenters/{datacenterId}/lans/{lanId} | Partially modify a Lan
+[**datacentersLansPost**](LanApi.md#datacentersLansPost) | **POST** /datacenters/{datacenterId}/lans | Create a Lan
+[**datacentersLansPut**](LanApi.md#datacentersLansPut) | **PUT** /datacenters/{datacenterId}/lans/{lanId} | Modify a Lan
+
+
+<a name="datacentersLansDelete"></a>
+# **datacentersLansDelete**
+> Object datacentersLansDelete(datacenterId, lanId, pretty, depth, xContractNumber)
+
+Delete a Lan.
+
+Removes the specific Lan
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LanApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LanApi apiInstance = new LanApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String lanId = "lanId_example"; // String | The unique ID of the LAN
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersLansDelete(datacenterId, lanId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LanApi#datacentersLansDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **lanId** | **String**| The unique ID of the LAN |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLansFindById"></a>
+# **datacentersLansFindById**
+> Lan datacentersLansFindById(datacenterId, lanId, pretty, depth, xContractNumber)
+
+Retrieve a Lan
+
+Retrieves the attributes of a given LAN
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LanApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LanApi apiInstance = new LanApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String lanId = "lanId_example"; // String | The unique ID of the LAN
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Lan result = apiInstance.datacentersLansFindById(datacenterId, lanId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LanApi#datacentersLansFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **lanId** | **String**| The unique ID of the LAN |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Lan**](Lan.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLansGet"></a>
+# **datacentersLansGet**
+> Lans datacentersLansGet(datacenterId, pretty, depth, xContractNumber)
+
+List Lans
+
+Retrieve a list of LANs within the datacenter
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LanApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LanApi apiInstance = new LanApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Lans result = apiInstance.datacentersLansGet(datacenterId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LanApi#datacentersLansGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Lans**](Lans.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLansNicsFindById"></a>
+# **datacentersLansNicsFindById**
+> Nic datacentersLansNicsFindById(datacenterId, lanId, nicId, pretty, depth, xContractNumber)
+
+Retrieve a nic attached to lan
+
+This will retrieve the properties of an attached nic.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LanApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LanApi apiInstance = new LanApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String lanId = "lanId_example"; // String | The unique ID of the LAN
+    String nicId = "nicId_example"; // String | The unique ID of the NIC
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Nic result = apiInstance.datacentersLansNicsFindById(datacenterId, lanId, nicId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LanApi#datacentersLansNicsFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **lanId** | **String**| The unique ID of the LAN |
+ **nicId** | **String**| The unique ID of the NIC |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Nic**](Nic.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLansNicsGet"></a>
+# **datacentersLansNicsGet**
+> LanNics datacentersLansNicsGet(datacenterId, lanId, pretty, depth, xContractNumber)
+
+List Lan Members 
+
+You can retrieve a list of nics attached to a lan
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LanApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LanApi apiInstance = new LanApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String lanId = "lanId_example"; // String | The unique ID of the LAN
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LanNics result = apiInstance.datacentersLansNicsGet(datacenterId, lanId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LanApi#datacentersLansNicsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **lanId** | **String**| The unique ID of the LAN |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LanNics**](LanNics.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLansNicsPost"></a>
+# **datacentersLansNicsPost**
+> Nic datacentersLansNicsPost(datacenterId, lanId, nic, pretty, depth, xContractNumber)
+
+Attach a nic
+
+This will attach a pre-existing nic to a lan. 
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LanApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LanApi apiInstance = new LanApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String lanId = "lanId_example"; // String | The unique ID of the LAN
+    Nic nic = new Nic(); // Nic | Nic to be attached
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Nic result = apiInstance.datacentersLansNicsPost(datacenterId, lanId, nic, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LanApi#datacentersLansNicsPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **lanId** | **String**| The unique ID of the LAN |
+ **nic** | [**Nic**](Nic.md)| Nic to be attached |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Nic**](Nic.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLansPatch"></a>
+# **datacentersLansPatch**
+> Lan datacentersLansPatch(datacenterId, lanId, lan, pretty, depth, xContractNumber)
+
+Partially modify a Lan
+
+You can use update attributes of a resource
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LanApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LanApi apiInstance = new LanApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String lanId = "lanId_example"; // String | The unique ID of the LAN
+    LanProperties lan = new LanProperties(); // LanProperties | Modified Lan
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Lan result = apiInstance.datacentersLansPatch(datacenterId, lanId, lan, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LanApi#datacentersLansPatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **lanId** | **String**| The unique ID of the LAN |
+ **lan** | [**LanProperties**](LanProperties.md)| Modified Lan |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Lan**](Lan.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLansPost"></a>
+# **datacentersLansPost**
+> LanPost datacentersLansPost(datacenterId, lan, pretty, depth, xContractNumber)
+
+Create a Lan
+
+Creates a LAN within the datacenter
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LanApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LanApi apiInstance = new LanApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    LanPost lan = new LanPost(); // LanPost | Lan to be created
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      LanPost result = apiInstance.datacentersLansPost(datacenterId, lan, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LanApi#datacentersLansPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **lan** | [**LanPost**](LanPost.md)| Lan to be created |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**LanPost**](LanPost.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLansPut"></a>
+# **datacentersLansPut**
+> Lan datacentersLansPut(datacenterId, lanId, lan, pretty, depth, xContractNumber)
+
+Modify a Lan
+
+You can use update attributes of a resource
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LanApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LanApi apiInstance = new LanApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String lanId = "lanId_example"; // String | The unique ID of the LAN
+    Lan lan = new Lan(); // Lan | Modified Lan
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Lan result = apiInstance.datacentersLansPut(datacenterId, lanId, lan, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LanApi#datacentersLansPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **lanId** | **String**| The unique ID of the LAN |
+ **lan** | [**Lan**](Lan.md)| Modified Lan |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Lan**](Lan.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### LoadBalancerApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**datacentersLoadbalancersBalancednicsDelete**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer
+[**datacentersLoadbalancersBalancednicsFindByNic**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsFindByNic) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer
+[**datacentersLoadbalancersBalancednicsGet**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsGet) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer Members 
+[**datacentersLoadbalancersBalancednicsPost**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsPost) | **POST** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer
+[**datacentersLoadbalancersDelete**](LoadBalancerApi.md#datacentersLoadbalancersDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer.
+[**datacentersLoadbalancersFindById**](LoadBalancerApi.md#datacentersLoadbalancersFindById) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve a loadbalancer
+[**datacentersLoadbalancersGet**](LoadBalancerApi.md#datacentersLoadbalancersGet) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers
+[**datacentersLoadbalancersPatch**](LoadBalancerApi.md#datacentersLoadbalancersPatch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify a Loadbalancer
+[**datacentersLoadbalancersPost**](LoadBalancerApi.md#datacentersLoadbalancersPost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer
+[**datacentersLoadbalancersPut**](LoadBalancerApi.md#datacentersLoadbalancersPut) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer
+
+
+<a name="datacentersLoadbalancersBalancednicsDelete"></a>
+# **datacentersLoadbalancersBalancednicsDelete**
+> Object datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber)
+
+Detach a nic from loadbalancer
+
+This will remove a nic from Load Balancer
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LoadBalancerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String loadbalancerId = "loadbalancerId_example"; // String | The unique ID of the Load Balancer
+    String nicId = "nicId_example"; // String | The unique ID of the NIC
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **loadbalancerId** | **String**| The unique ID of the Load Balancer |
+ **nicId** | **String**| The unique ID of the NIC |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLoadbalancersBalancednicsFindByNic"></a>
+# **datacentersLoadbalancersBalancednicsFindByNic**
+> Nic datacentersLoadbalancersBalancednicsFindByNic(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber)
+
+Retrieve a nic attached to Load Balancer
+
+This will retrieve the properties of an attached nic.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LoadBalancerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String loadbalancerId = "loadbalancerId_example"; // String | The unique ID of the Load Balancer
+    String nicId = "nicId_example"; // String | The unique ID of the NIC
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Nic result = apiInstance.datacentersLoadbalancersBalancednicsFindByNic(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsFindByNic");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **loadbalancerId** | **String**| The unique ID of the Load Balancer |
+ **nicId** | **String**| The unique ID of the NIC |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Nic**](Nic.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLoadbalancersBalancednicsGet"></a>
+# **datacentersLoadbalancersBalancednicsGet**
+> BalancedNics datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, pretty, depth, xContractNumber)
+
+List Load Balancer Members 
+
+You can retrieve a list of nics attached to a Load Balancer
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LoadBalancerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String loadbalancerId = "loadbalancerId_example"; // String | The unique ID of the Load Balancer
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      BalancedNics result = apiInstance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **loadbalancerId** | **String**| The unique ID of the Load Balancer |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**BalancedNics**](BalancedNics.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLoadbalancersBalancednicsPost"></a>
+# **datacentersLoadbalancersBalancednicsPost**
+> Nic datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancerId, nic, pretty, depth, xContractNumber)
+
+Attach a nic to Load Balancer
+
+This will attach a pre-existing nic to a Load Balancer. 
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LoadBalancerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String loadbalancerId = "loadbalancerId_example"; // String | The unique ID of the Load Balancer
+    Nic nic = new Nic(); // Nic | Nic id to be attached
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Nic result = apiInstance.datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancerId, nic, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **loadbalancerId** | **String**| The unique ID of the Load Balancer |
+ **nic** | [**Nic**](Nic.md)| Nic id to be attached |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Nic**](Nic.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLoadbalancersDelete"></a>
+# **datacentersLoadbalancersDelete**
+> Object datacentersLoadbalancersDelete(datacenterId, loadbalancerId, pretty, depth, xContractNumber)
+
+Delete a Loadbalancer.
+
+Removes the specific Loadbalancer
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LoadBalancerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String loadbalancerId = "loadbalancerId_example"; // String | The unique ID of the Load Balancer
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersLoadbalancersDelete(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **loadbalancerId** | **String**| The unique ID of the Load Balancer |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLoadbalancersFindById"></a>
+# **datacentersLoadbalancersFindById**
+> Loadbalancer datacentersLoadbalancersFindById(datacenterId, loadbalancerId, pretty, depth, xContractNumber)
+
+Retrieve a loadbalancer
+
+Retrieves the attributes of a given Loadbalancer
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LoadBalancerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String loadbalancerId = "loadbalancerId_example"; // String | The unique ID of the Load Balancer
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Loadbalancer result = apiInstance.datacentersLoadbalancersFindById(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **loadbalancerId** | **String**| The unique ID of the Load Balancer |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Loadbalancer**](Loadbalancer.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLoadbalancersGet"></a>
+# **datacentersLoadbalancersGet**
+> Loadbalancers datacentersLoadbalancersGet(datacenterId, pretty, depth, xContractNumber)
+
+List Load Balancers
+
+Retrieve a list of Load Balancers within the datacenter
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LoadBalancerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Loadbalancers result = apiInstance.datacentersLoadbalancersGet(datacenterId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Loadbalancers**](Loadbalancers.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLoadbalancersPatch"></a>
+# **datacentersLoadbalancersPatch**
+> Loadbalancer datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber)
+
+Partially modify a Loadbalancer
+
+You can use update attributes of a resource
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LoadBalancerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String loadbalancerId = "loadbalancerId_example"; // String | The unique ID of the Load Balancer
+    LoadbalancerProperties loadbalancer = new LoadbalancerProperties(); // LoadbalancerProperties | Modified Loadbalancer
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Loadbalancer result = apiInstance.datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersPatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **loadbalancerId** | **String**| The unique ID of the Load Balancer |
+ **loadbalancer** | [**LoadbalancerProperties**](LoadbalancerProperties.md)| Modified Loadbalancer |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Loadbalancer**](Loadbalancer.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLoadbalancersPost"></a>
+# **datacentersLoadbalancersPost**
+> Loadbalancer datacentersLoadbalancersPost(datacenterId, loadbalancer, pretty, depth, xContractNumber)
+
+Create a Load Balancer
+
+Creates a Loadbalancer within the datacenter
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LoadBalancerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    Loadbalancer loadbalancer = new Loadbalancer(); // Loadbalancer | Loadbalancer to be created
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Loadbalancer result = apiInstance.datacentersLoadbalancersPost(datacenterId, loadbalancer, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **loadbalancer** | [**Loadbalancer**](Loadbalancer.md)| Loadbalancer to be created |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Loadbalancer**](Loadbalancer.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersLoadbalancersPut"></a>
+# **datacentersLoadbalancersPut**
+> Loadbalancer datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber)
+
+Modify a Load Balancer
+
+You can use update attributes of a resource
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LoadBalancerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String loadbalancerId = "loadbalancerId_example"; // String | The unique ID of the Load Balancer
+    Loadbalancer loadbalancer = new Loadbalancer(); // Loadbalancer | Modified Loadbalancer
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Loadbalancer result = apiInstance.datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **loadbalancerId** | **String**| The unique ID of the Load Balancer |
+ **loadbalancer** | [**Loadbalancer**](Loadbalancer.md)| Modified Loadbalancer |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Loadbalancer**](Loadbalancer.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### LocationApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**locationsFindByRegion**](LocationApi.md#locationsFindByRegion) | **GET** /locations/{regionId} | List Locations within a region
+[**locationsFindByRegionAndId**](LocationApi.md#locationsFindByRegionAndId) | **GET** /locations/{regionId}/{locationId} | Retrieve a Location
+[**locationsGet**](LocationApi.md#locationsGet) | **GET** /locations | List Locations
+
+
+<a name="locationsFindByRegion"></a>
+# **locationsFindByRegion**
+> Locations locationsFindByRegion(regionId, pretty, depth, xContractNumber)
+
+List Locations within a region
+
+Retrieve a list of Locations within a world&#39;s region
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LocationApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LocationApi apiInstance = new LocationApi(defaultClient);
+    String regionId = "regionId_example"; // String | 
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Locations result = apiInstance.locationsFindByRegion(regionId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LocationApi#locationsFindByRegion");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **regionId** | **String**|  |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Locations**](Locations.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="locationsFindByRegionAndId"></a>
+# **locationsFindByRegionAndId**
+> Location locationsFindByRegionAndId(regionId, locationId, pretty, depth, xContractNumber)
+
+Retrieve a Location
+
+Retrieves the attributes of a given location
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LocationApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LocationApi apiInstance = new LocationApi(defaultClient);
+    String regionId = "regionId_example"; // String | 
+    String locationId = "locationId_example"; // String | 
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Location result = apiInstance.locationsFindByRegionAndId(regionId, locationId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LocationApi#locationsFindByRegionAndId");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **regionId** | **String**|  |
+ **locationId** | **String**|  |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Location**](Location.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="locationsGet"></a>
+# **locationsGet**
+> Locations locationsGet(pretty, depth, xContractNumber)
+
+List Locations
+
+Retrieve a list of Locations. This list represents where you can provision your virtual data centers
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.LocationApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    LocationApi apiInstance = new LocationApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Locations result = apiInstance.locationsGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling LocationApi#locationsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Locations**](Locations.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### NicApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**datacentersServersNicsDelete**](NicApi.md#datacentersServersNicsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Nic
+[**datacentersServersNicsFindById**](NicApi.md#datacentersServersNicsFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Nic
+[**datacentersServersNicsFirewallrulesDelete**](NicApi.md#datacentersServersNicsFirewallrulesDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete a Firewall Rule
+[**datacentersServersNicsFirewallrulesFindById**](NicApi.md#datacentersServersNicsFirewallrulesFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve a Firewall Rule
+[**datacentersServersNicsFirewallrulesGet**](NicApi.md#datacentersServersNicsFirewallrulesGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List Firewall Rules 
+[**datacentersServersNicsFirewallrulesPatch**](NicApi.md#datacentersServersNicsFirewallrulesPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify a Firewall Rule
+[**datacentersServersNicsFirewallrulesPost**](NicApi.md#datacentersServersNicsFirewallrulesPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule
+[**datacentersServersNicsFirewallrulesPut**](NicApi.md#datacentersServersNicsFirewallrulesPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule
+[**datacentersServersNicsGet**](NicApi.md#datacentersServersNicsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics | List Nics 
+[**datacentersServersNicsPatch**](NicApi.md#datacentersServersNicsPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify a Nic
+[**datacentersServersNicsPost**](NicApi.md#datacentersServersNicsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a Nic
+[**datacentersServersNicsPut**](NicApi.md#datacentersServersNicsPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify a Nic
+
+
+<a name="datacentersServersNicsDelete"></a>
+# **datacentersServersNicsDelete**
+> Object datacentersServersNicsDelete(datacenterId, serverId, nicId, pretty, depth, xContractNumber)
+
+Delete a Nic
+
+Deletes the specified NIC.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.NicApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    NicApi apiInstance = new NicApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String nicId = "nicId_example"; // String | The unique ID of the NIC
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersServersNicsDelete(datacenterId, serverId, nicId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NicApi#datacentersServersNicsDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **nicId** | **String**| The unique ID of the NIC |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersNicsFindById"></a>
+# **datacentersServersNicsFindById**
+> Nic datacentersServersNicsFindById(datacenterId, serverId, nicId, pretty, depth, xContractNumber)
+
+Retrieve a Nic
+
+Retrieves the attributes of a given NIC
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.NicApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    NicApi apiInstance = new NicApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String nicId = "nicId_example"; // String | The unique ID of the NIC
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Nic result = apiInstance.datacentersServersNicsFindById(datacenterId, serverId, nicId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NicApi#datacentersServersNicsFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **nicId** | **String**| The unique ID of the NIC |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Nic**](Nic.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersNicsFirewallrulesDelete"></a>
+# **datacentersServersNicsFirewallrulesDelete**
+> Object datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber)
+
+Delete a Firewall Rule
+
+Removes the specific Firewall Rule
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.NicApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    NicApi apiInstance = new NicApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String nicId = "nicId_example"; // String | The unique ID of the NIC
+    String firewallruleId = "firewallruleId_example"; // String | The unique ID of the Firewall Rule
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **nicId** | **String**| The unique ID of the NIC |
+ **firewallruleId** | **String**| The unique ID of the Firewall Rule |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersNicsFirewallrulesFindById"></a>
+# **datacentersServersNicsFirewallrulesFindById**
+> FirewallRule datacentersServersNicsFirewallrulesFindById(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber)
+
+Retrieve a Firewall Rule
+
+Retrieves the attributes of a given Firewall Rule.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.NicApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    NicApi apiInstance = new NicApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String nicId = "nicId_example"; // String | The unique ID of the NIC
+    String firewallruleId = "firewallruleId_example"; // String | The unique ID of the Firewall Rule
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesFindById(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **nicId** | **String**| The unique ID of the NIC |
+ **firewallruleId** | **String**| The unique ID of the Firewall Rule |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**FirewallRule**](FirewallRule.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersNicsFirewallrulesGet"></a>
+# **datacentersServersNicsFirewallrulesGet**
+> FirewallRules datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber)
+
+List Firewall Rules 
+
+Retrieves a list of firewall rules associated with a particular NIC
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.NicApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    NicApi apiInstance = new NicApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String nicId = "nicId_example"; // String | The unique ID of the NIC
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      FirewallRules result = apiInstance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **nicId** | **String**| The unique ID of the NIC |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**FirewallRules**](FirewallRules.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersNicsFirewallrulesPatch"></a>
+# **datacentersServersNicsFirewallrulesPatch**
+> FirewallRule datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber)
+
+Partially modify a Firewall Rule
+
+You can use update attributes of a resource
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.NicApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    NicApi apiInstance = new NicApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String nicId = "nicId_example"; // String | The unique ID of the NIC
+    String firewallruleId = "firewallruleId_example"; // String | The unique ID of the Firewall Rule
+    FirewallruleProperties firewallrule = new FirewallruleProperties(); // FirewallruleProperties | Modified Firewall Rule
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesPatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **nicId** | **String**| The unique ID of the NIC |
+ **firewallruleId** | **String**| The unique ID of the Firewall Rule |
+ **firewallrule** | [**FirewallruleProperties**](FirewallruleProperties.md)| Modified Firewall Rule |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**FirewallRule**](FirewallRule.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersNicsFirewallrulesPost"></a>
+# **datacentersServersNicsFirewallrulesPost**
+> FirewallRule datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber)
+
+Create a Firewall Rule
+
+This will add a Firewall Rule to the NIC
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.NicApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    NicApi apiInstance = new NicApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the server
+    String nicId = "nicId_example"; // String | The unique ID of the NIC
+    FirewallRule firewallrule = new FirewallRule(); // FirewallRule | Firewall Rule to be created
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the server |
+ **nicId** | **String**| The unique ID of the NIC |
+ **firewallrule** | [**FirewallRule**](FirewallRule.md)| Firewall Rule to be created |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**FirewallRule**](FirewallRule.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersNicsFirewallrulesPut"></a>
+# **datacentersServersNicsFirewallrulesPut**
+> FirewallRule datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber)
+
+Modify a Firewall Rule
+
+You can use update attributes of a resource
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.NicApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    NicApi apiInstance = new NicApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String nicId = "nicId_example"; // String | The unique ID of the NIC
+    String firewallruleId = "firewallruleId_example"; // String | The unique ID of the Firewall Rule
+    FirewallRule firewallrule = new FirewallRule(); // FirewallRule | Modified Firewall Rule
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **nicId** | **String**| The unique ID of the NIC |
+ **firewallruleId** | **String**| The unique ID of the Firewall Rule |
+ **firewallrule** | [**FirewallRule**](FirewallRule.md)| Modified Firewall Rule |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**FirewallRule**](FirewallRule.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersNicsGet"></a>
+# **datacentersServersNicsGet**
+> Nics datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber)
+
+List Nics 
+
+Retrieves a list of NICs.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.NicApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    NicApi apiInstance = new NicApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Nics result = apiInstance.datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NicApi#datacentersServersNicsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Nics**](Nics.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersNicsPatch"></a>
+# **datacentersServersNicsPatch**
+> Nic datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber)
+
+Partially modify a Nic
+
+You can use update attributes of a Nic
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.NicApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    NicApi apiInstance = new NicApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String nicId = "nicId_example"; // String | The unique ID of the NIC
+    NicProperties nic = new NicProperties(); // NicProperties | Modified properties of Nic
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Nic result = apiInstance.datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NicApi#datacentersServersNicsPatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **nicId** | **String**| The unique ID of the NIC |
+ **nic** | [**NicProperties**](NicProperties.md)| Modified properties of Nic |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Nic**](Nic.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersNicsPost"></a>
+# **datacentersServersNicsPost**
+> Nic datacentersServersNicsPost(datacenterId, serverId, nic, pretty, depth, xContractNumber)
+
+Create a Nic
+
+Adds a NIC to the target server. Combine count of Nics and volumes attached to the server should not exceed size 24.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.NicApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    NicApi apiInstance = new NicApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    Nic nic = new Nic(); // Nic | Nic to be created
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Nic result = apiInstance.datacentersServersNicsPost(datacenterId, serverId, nic, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NicApi#datacentersServersNicsPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **nic** | [**Nic**](Nic.md)| Nic to be created |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Nic**](Nic.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersNicsPut"></a>
+# **datacentersServersNicsPut**
+> Nic datacentersServersNicsPut(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber)
+
+Modify a Nic
+
+You can use update attributes of a Nic
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.NicApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    NicApi apiInstance = new NicApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String nicId = "nicId_example"; // String | The unique ID of the NIC
+    Nic nic = new Nic(); // Nic | Modified Nic
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Nic result = apiInstance.datacentersServersNicsPut(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling NicApi#datacentersServersNicsPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **nicId** | **String**| The unique ID of the NIC |
+ **nic** | [**Nic**](Nic.md)| Modified Nic |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Nic**](Nic.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### PrivateCrossConnectApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**pccsDelete**](PrivateCrossConnectApi.md#pccsDelete) | **DELETE** /pccs/{pccId} | Delete a Private Cross-Connect
+[**pccsFindById**](PrivateCrossConnectApi.md#pccsFindById) | **GET** /pccs/{pccId} | Retrieve a Private Cross-Connect
+[**pccsGet**](PrivateCrossConnectApi.md#pccsGet) | **GET** /pccs | List Private Cross-Connects 
+[**pccsPatch**](PrivateCrossConnectApi.md#pccsPatch) | **PATCH** /pccs/{pccId} | Partially modify a private cross-connect
+[**pccsPost**](PrivateCrossConnectApi.md#pccsPost) | **POST** /pccs | Create a Private Cross-Connect
+
+
+<a name="pccsDelete"></a>
+# **pccsDelete**
+> Object pccsDelete(pccId, pretty, depth, xContractNumber)
+
+Delete a Private Cross-Connect
+
+Delete a private cross-connect if no datacenters are joined to the given PCC
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.PrivateCrossConnectApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    PrivateCrossConnectApi apiInstance = new PrivateCrossConnectApi(defaultClient);
+    String pccId = "pccId_example"; // String | The unique ID of the private cross-connect
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.pccsDelete(pccId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling PrivateCrossConnectApi#pccsDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pccId** | **String**| The unique ID of the private cross-connect |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="pccsFindById"></a>
+# **pccsFindById**
+> PrivateCrossConnect pccsFindById(pccId, pretty, depth, xContractNumber)
+
+Retrieve a Private Cross-Connect
+
+You can retrieve a private cross-connect by using the resource&#39;s ID. This value can be found in the response body when a private cross-connect is created or when you GET a list of private cross-connects.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.PrivateCrossConnectApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    PrivateCrossConnectApi apiInstance = new PrivateCrossConnectApi(defaultClient);
+    String pccId = "pccId_example"; // String | The unique ID of the private cross-connect
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      PrivateCrossConnect result = apiInstance.pccsFindById(pccId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling PrivateCrossConnectApi#pccsFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pccId** | **String**| The unique ID of the private cross-connect |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**PrivateCrossConnect**](PrivateCrossConnect.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="pccsGet"></a>
+# **pccsGet**
+> PrivateCrossConnects pccsGet(pretty, depth, xContractNumber)
+
+List Private Cross-Connects 
+
+You can retrieve a complete list of private cross-connects provisioned under your account
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.PrivateCrossConnectApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    PrivateCrossConnectApi apiInstance = new PrivateCrossConnectApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      PrivateCrossConnects result = apiInstance.pccsGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling PrivateCrossConnectApi#pccsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**PrivateCrossConnects**](PrivateCrossConnects.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="pccsPatch"></a>
+# **pccsPatch**
+> PrivateCrossConnect pccsPatch(pccId, pcc, pretty, depth, xContractNumber)
+
+Partially modify a private cross-connect
+
+You can use update private cross-connect to re-name or update its description
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.PrivateCrossConnectApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    PrivateCrossConnectApi apiInstance = new PrivateCrossConnectApi(defaultClient);
+    String pccId = "pccId_example"; // String | The unique ID of the private cross-connect
+    PrivateCrossConnectProperties pcc = new PrivateCrossConnectProperties(); // PrivateCrossConnectProperties | Modified properties of private cross-connect
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      PrivateCrossConnect result = apiInstance.pccsPatch(pccId, pcc, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling PrivateCrossConnectApi#pccsPatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pccId** | **String**| The unique ID of the private cross-connect |
+ **pcc** | [**PrivateCrossConnectProperties**](PrivateCrossConnectProperties.md)| Modified properties of private cross-connect |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**PrivateCrossConnect**](PrivateCrossConnect.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="pccsPost"></a>
+# **pccsPost**
+> PrivateCrossConnect pccsPost(pcc, pretty, depth, xContractNumber)
+
+Create a Private Cross-Connect
+
+You can use this POST method to create a private cross-connect
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.PrivateCrossConnectApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    PrivateCrossConnectApi apiInstance = new PrivateCrossConnectApi(defaultClient);
+    PrivateCrossConnect pcc = new PrivateCrossConnect(); // PrivateCrossConnect | Private Cross-Connect to be created
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      PrivateCrossConnect result = apiInstance.pccsPost(pcc, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling PrivateCrossConnectApi#pccsPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pcc** | [**PrivateCrossConnect**](PrivateCrossConnect.md)| Private Cross-Connect to be created |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**PrivateCrossConnect**](PrivateCrossConnect.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### RequestApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**requestsFindById**](RequestApi.md#requestsFindById) | **GET** /requests/{requestId} | Retrieve a Request
+[**requestsGet**](RequestApi.md#requestsGet) | **GET** /requests | List Requests
+[**requestsStatusGet**](RequestApi.md#requestsStatusGet) | **GET** /requests/{requestId}/status | Retrieve Request Status
+
+
+<a name="requestsFindById"></a>
+# **requestsFindById**
+> Request requestsFindById(requestId, pretty, depth, xContractNumber)
+
+Retrieve a Request
+
+Retrieves the attributes of a given request.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.RequestApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    RequestApi apiInstance = new RequestApi(defaultClient);
+    String requestId = "requestId_example"; // String | 
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Request result = apiInstance.requestsFindById(requestId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RequestApi#requestsFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestId** | **String**|  |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Request**](Request.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="requestsGet"></a>
+# **requestsGet**
+> Requests requestsGet(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody)
+
+List Requests
+
+Retrieve a list of API requests.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.RequestApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    RequestApi apiInstance = new RequestApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    String filterStatus = "filterStatus_example"; // String | Request status filter to fetch all the request based on a particular status [QUEUED, RUNNING, DONE, FAILED]
+    String filterCreatedAfter = "filterCreatedAfter_example"; // String | Filter all the requests after the created date
+    String filterCreatedBefore = "filterCreatedBefore_example"; // String | Filter all the requests before the created date
+    String filterUrl = "filterUrl_example"; // String | Url filter
+    String filterCreatedDate = "filterCreatedDate_example"; // String | Created date filter
+    String filterMethod = "filterMethod_example"; // String | Method filter
+    String filterBody = "filterBody_example"; // String | Url filter
+    try {
+      Requests result = apiInstance.requestsGet(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RequestApi#requestsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **filterStatus** | **String**| Request status filter to fetch all the request based on a particular status [QUEUED, RUNNING, DONE, FAILED] | [optional]
+ **filterCreatedAfter** | **String**| Filter all the requests after the created date | [optional]
+ **filterCreatedBefore** | **String**| Filter all the requests before the created date | [optional]
+ **filterUrl** | **String**| Url filter | [optional]
+ **filterCreatedDate** | **String**| Created date filter | [optional]
+ **filterMethod** | **String**| Method filter | [optional]
+ **filterBody** | **String**| Url filter | [optional]
+
+### Return type
+
+[**Requests**](Requests.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="requestsStatusGet"></a>
+# **requestsStatusGet**
+> RequestStatus requestsStatusGet(requestId, pretty, depth, xContractNumber)
+
+Retrieve Request Status
+
+Retrieves the status of a given request.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.RequestApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    RequestApi apiInstance = new RequestApi(defaultClient);
+    String requestId = "requestId_example"; // String | 
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      RequestStatus result = apiInstance.requestsStatusGet(requestId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling RequestApi#requestsStatusGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **requestId** | **String**|  |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**RequestStatus**](RequestStatus.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### ServerApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**datacentersServersCdromsDelete**](ServerApi.md#datacentersServersCdromsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach a CD-ROM
+[**datacentersServersCdromsFindById**](ServerApi.md#datacentersServersCdromsFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve an attached CD-ROM
+[**datacentersServersCdromsGet**](ServerApi.md#datacentersServersCdromsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms | List attached CD-ROMs 
+[**datacentersServersCdromsPost**](ServerApi.md#datacentersServersCdromsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach a CD-ROM
+[**datacentersServersDelete**](ServerApi.md#datacentersServersDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId} | Delete a Server
+[**datacentersServersFindById**](ServerApi.md#datacentersServersFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId} | Retrieve a Server
+[**datacentersServersGet**](ServerApi.md#datacentersServersGet) | **GET** /datacenters/{datacenterId}/servers | List Servers 
+[**datacentersServersPatch**](ServerApi.md#datacentersServersPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId} | Partially modify a Server
+[**datacentersServersPost**](ServerApi.md#datacentersServersPost) | **POST** /datacenters/{datacenterId}/servers | Create a Server
+[**datacentersServersPut**](ServerApi.md#datacentersServersPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId} | Modify a Server
+[**datacentersServersRebootPost**](ServerApi.md#datacentersServersRebootPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/reboot | Reboot a Server
+[**datacentersServersStartPost**](ServerApi.md#datacentersServersStartPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/start | Start a Server
+[**datacentersServersStopPost**](ServerApi.md#datacentersServersStopPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop a Server
+[**datacentersServersUpgradePost**](ServerApi.md#datacentersServersUpgradePost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server
+[**datacentersServersVolumesDelete**](ServerApi.md#datacentersServersVolumesDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a volume
+[**datacentersServersVolumesFindById**](ServerApi.md#datacentersServersVolumesFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Retrieve an attached volume
+[**datacentersServersVolumesGet**](ServerApi.md#datacentersServersVolumesGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes | List Attached Volumes
+[**datacentersServersVolumesPost**](ServerApi.md#datacentersServersVolumesPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach a volume
+
+
+<a name="datacentersServersCdromsDelete"></a>
+# **datacentersServersCdromsDelete**
+> Object datacentersServersCdromsDelete(datacenterId, serverId, cdromId, pretty, depth, xContractNumber)
+
+Detach a CD-ROM
+
+This will detach a CD-ROM from the server
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String cdromId = "cdromId_example"; // String | The unique ID of the CD-ROM
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersServersCdromsDelete(datacenterId, serverId, cdromId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersCdromsDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **cdromId** | **String**| The unique ID of the CD-ROM |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersCdromsFindById"></a>
+# **datacentersServersCdromsFindById**
+> Image datacentersServersCdromsFindById(datacenterId, serverId, cdromId, pretty, depth, xContractNumber)
+
+Retrieve an attached CD-ROM
+
+You can retrieve a specific CD-ROM attached to the server
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String cdromId = "cdromId_example"; // String | The unique ID of the CD-ROM
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Image result = apiInstance.datacentersServersCdromsFindById(datacenterId, serverId, cdromId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersCdromsFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **cdromId** | **String**| The unique ID of the CD-ROM |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Image**](Image.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersCdromsGet"></a>
+# **datacentersServersCdromsGet**
+> Cdroms datacentersServersCdromsGet(datacenterId, serverId, pretty, depth, xContractNumber)
+
+List attached CD-ROMs 
+
+You can retrieve a list of CD-ROMs attached to the server.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Cdroms result = apiInstance.datacentersServersCdromsGet(datacenterId, serverId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersCdromsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Cdroms**](Cdroms.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersCdromsPost"></a>
+# **datacentersServersCdromsPost**
+> Image datacentersServersCdromsPost(datacenterId, serverId, cdrom, pretty, depth, xContractNumber)
+
+Attach a CD-ROM
+
+You can attach a CD-ROM to an existing server. You can attach up to 2 CD-ROMs to one server. 
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    Image cdrom = new Image(); // Image | CD-ROM to be attached
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Image result = apiInstance.datacentersServersCdromsPost(datacenterId, serverId, cdrom, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersCdromsPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **cdrom** | [**Image**](Image.md)| CD-ROM to be attached |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Image**](Image.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersDelete"></a>
+# **datacentersServersDelete**
+> Object datacentersServersDelete(datacenterId, serverId, pretty, depth, xContractNumber)
+
+Delete a Server
+
+This will remove a server from your datacenter; however, it will not remove the storage volumes attached to the server. You will need to make a separate API call to perform that action
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersServersDelete(datacenterId, serverId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersFindById"></a>
+# **datacentersServersFindById**
+> Server datacentersServersFindById(datacenterId, serverId, pretty, depth, xContractNumber)
+
+Retrieve a Server
+
+Returns information about a server such as its configuration, provisioning status, etc.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Server result = apiInstance.datacentersServersFindById(datacenterId, serverId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Server**](Server.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersGet"></a>
+# **datacentersServersGet**
+> Servers datacentersServersGet(datacenterId, pretty, depth, upgradeNeeded, xContractNumber)
+
+List Servers 
+
+You can retrieve a list of servers within a datacenter
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Boolean upgradeNeeded = true; // Boolean | It can be used to filter which servers can be upgraded which can not be upgraded.
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Servers result = apiInstance.datacentersServersGet(datacenterId, pretty, depth, upgradeNeeded, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **upgradeNeeded** | **Boolean**| It can be used to filter which servers can be upgraded which can not be upgraded. | [optional]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Servers**](Servers.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersPatch"></a>
+# **datacentersServersPatch**
+> Server datacentersServersPatch(datacenterId, serverId, server, pretty, depth, xContractNumber)
+
+Partially modify a Server
+
+You can use update attributes of a server
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the server
+    ServerProperties server = new ServerProperties(); // ServerProperties | Modified properties of Server
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Server result = apiInstance.datacentersServersPatch(datacenterId, serverId, server, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersPatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the server |
+ **server** | [**ServerProperties**](ServerProperties.md)| Modified properties of Server |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Server**](Server.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersPost"></a>
+# **datacentersServersPost**
+> Server datacentersServersPost(datacenterId, server, pretty, depth, xContractNumber)
+
+Create a Server
+
+Creates a server within an existing datacenter. You can configure the boot volume and connect the server to an existing LAN.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    Server server = new Server(); // Server | Server to be created
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Server result = apiInstance.datacentersServersPost(datacenterId, server, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **server** | [**Server**](Server.md)| Server to be created |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Server**](Server.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersPut"></a>
+# **datacentersServersPut**
+> Server datacentersServersPut(datacenterId, serverId, server, pretty, depth, xContractNumber)
+
+Modify a Server
+
+Allows to modify the attributes of a Server. From v5 onwards &#39;allowReboot&#39; attribute will no longer be available. For certain server property change it was earlier forced to be provided. Now this behaviour is implicit and backend will do this automatically e.g. in earlier versions, when CPU family changes, the &#39;allowReboot&#39; property was required to be set to true which will no longer be the case and the server will be rebooted automatically
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the server
+    Server server = new Server(); // Server | Modified Server
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Server result = apiInstance.datacentersServersPut(datacenterId, serverId, server, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the server |
+ **server** | [**Server**](Server.md)| Modified Server |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Server**](Server.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersRebootPost"></a>
+# **datacentersServersRebootPost**
+> Object datacentersServersRebootPost(datacenterId, serverId, pretty, depth, xContractNumber)
+
+Reboot a Server
+
+This will force a hard reboot of the server. Do not use this method if you want to gracefully reboot the machine. This is the equivalent of powering off the machine and turning it back on.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersServersRebootPost(datacenterId, serverId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersRebootPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersStartPost"></a>
+# **datacentersServersStartPost**
+> Object datacentersServersStartPost(datacenterId, serverId, pretty, depth, xContractNumber)
+
+Start a Server
+
+This will start a server. If the server&#39;s public IP was deallocated then a new IP will be assigned
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersServersStartPost(datacenterId, serverId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersStartPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersStopPost"></a>
+# **datacentersServersStopPost**
+> Object datacentersServersStopPost(datacenterId, serverId, pretty, depth, xContractNumber)
+
+Stop a Server
+
+This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for CoreVPS servers.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersServersStopPost(datacenterId, serverId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersStopPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersUpgradePost"></a>
+# **datacentersServersUpgradePost**
+> Object datacentersServersUpgradePost(datacenterId, serverId, pretty, depth, xContractNumber)
+
+Upgrade a Server
+
+This will upgrade the version of the server, if needed. To verify if there is an upgrade available for a server, call &#39;/datacenters/{datacenterId}/servers?upgradeNeeded&#x3D;true&#39;
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersServersUpgradePost(datacenterId, serverId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersUpgradePost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersVolumesDelete"></a>
+# **datacentersServersVolumesDelete**
+> Object datacentersServersVolumesDelete(datacenterId, serverId, volumeId, pretty, depth, xContractNumber)
+
+Detach a volume
+
+This will detach the volume from the server. This will not delete the volume from your datacenter. You will need to make a separate request to perform a deletion
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String volumeId = "volumeId_example"; // String | The unique ID of the Volume
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersServersVolumesDelete(datacenterId, serverId, volumeId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersVolumesDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **volumeId** | **String**| The unique ID of the Volume |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersVolumesFindById"></a>
+# **datacentersServersVolumesFindById**
+> Volume datacentersServersVolumesFindById(datacenterId, serverId, volumeId, pretty, depth, xContractNumber)
+
+Retrieve an attached volume
+
+This will retrieve the properties of an attached volume.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    String volumeId = "volumeId_example"; // String | The unique ID of the Volume
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Volume result = apiInstance.datacentersServersVolumesFindById(datacenterId, serverId, volumeId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersVolumesFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **volumeId** | **String**| The unique ID of the Volume |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Volume**](Volume.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersVolumesGet"></a>
+# **datacentersServersVolumesGet**
+> AttachedVolumes datacentersServersVolumesGet(datacenterId, serverId, pretty, depth, xContractNumber)
+
+List Attached Volumes
+
+You can retrieve a list of volumes attached to the server
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      AttachedVolumes result = apiInstance.datacentersServersVolumesGet(datacenterId, serverId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersVolumesGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**AttachedVolumes**](AttachedVolumes.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersServersVolumesPost"></a>
+# **datacentersServersVolumesPost**
+> Volume datacentersServersVolumesPost(datacenterId, serverId, volume, pretty, depth, xContractNumber)
+
+Attach a volume
+
+This will attach a pre-existing storage volume to the server. It is also possible to create and attach a volume in one step just by providing a new volume description as payload. Combine count of Nics and volumes attached to the server should not exceed size 24.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.ServerApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    ServerApi apiInstance = new ServerApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the Datacenter
+    String serverId = "serverId_example"; // String | The unique ID of the Server
+    Volume volume = new Volume(); // Volume | Volume to be attached (created and attached)
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Volume result = apiInstance.datacentersServersVolumesPost(datacenterId, serverId, volume, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ServerApi#datacentersServersVolumesPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the Datacenter |
+ **serverId** | **String**| The unique ID of the Server |
+ **volume** | [**Volume**](Volume.md)| Volume to be attached (created and attached) |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Volume**](Volume.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### SnapshotApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**snapshotsDelete**](SnapshotApi.md#snapshotsDelete) | **DELETE** /snapshots/{snapshotId} | Delete a Snapshot
+[**snapshotsFindById**](SnapshotApi.md#snapshotsFindById) | **GET** /snapshots/{snapshotId} | Retrieve a Snapshot by its uuid.
+[**snapshotsGet**](SnapshotApi.md#snapshotsGet) | **GET** /snapshots | List Snapshots 
+[**snapshotsPatch**](SnapshotApi.md#snapshotsPatch) | **PATCH** /snapshots/{snapshotId} | Partially modify a Snapshot
+[**snapshotsPut**](SnapshotApi.md#snapshotsPut) | **PUT** /snapshots/{snapshotId} | Modify a Snapshot
+
+
+<a name="snapshotsDelete"></a>
+# **snapshotsDelete**
+> Object snapshotsDelete(snapshotId, pretty, depth, xContractNumber)
+
+Delete a Snapshot
+
+Deletes the specified Snapshot.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SnapshotApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    SnapshotApi apiInstance = new SnapshotApi(defaultClient);
+    String snapshotId = "snapshotId_example"; // String | The unique ID of the Snapshot
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.snapshotsDelete(snapshotId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SnapshotApi#snapshotsDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **snapshotId** | **String**| The unique ID of the Snapshot |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="snapshotsFindById"></a>
+# **snapshotsFindById**
+> Snapshot snapshotsFindById(snapshotId, pretty, depth, xContractNumber)
+
+Retrieve a Snapshot by its uuid.
+
+Retrieves the attributes of a given Snapshot.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SnapshotApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    SnapshotApi apiInstance = new SnapshotApi(defaultClient);
+    String snapshotId = "snapshotId_example"; // String | The unique ID of the Snapshot
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Snapshot result = apiInstance.snapshotsFindById(snapshotId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SnapshotApi#snapshotsFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **snapshotId** | **String**| The unique ID of the Snapshot |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Snapshot**](Snapshot.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="snapshotsGet"></a>
+# **snapshotsGet**
+> Snapshots snapshotsGet(pretty, depth, xContractNumber)
+
+List Snapshots 
+
+Retrieve a list of available snapshots.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SnapshotApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    SnapshotApi apiInstance = new SnapshotApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Snapshots result = apiInstance.snapshotsGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SnapshotApi#snapshotsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Snapshots**](Snapshots.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="snapshotsPatch"></a>
+# **snapshotsPatch**
+> Snapshot snapshotsPatch(snapshotId, snapshot, pretty, depth, xContractNumber)
+
+Partially modify a Snapshot
+
+You can use this method to update attributes of a Snapshot.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SnapshotApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    SnapshotApi apiInstance = new SnapshotApi(defaultClient);
+    String snapshotId = "snapshotId_example"; // String | The unique ID of the Snapshot
+    SnapshotProperties snapshot = new SnapshotProperties(); // SnapshotProperties | Modified Snapshot
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Snapshot result = apiInstance.snapshotsPatch(snapshotId, snapshot, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SnapshotApi#snapshotsPatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **snapshotId** | **String**| The unique ID of the Snapshot |
+ **snapshot** | [**SnapshotProperties**](SnapshotProperties.md)| Modified Snapshot |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Snapshot**](Snapshot.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="snapshotsPut"></a>
+# **snapshotsPut**
+> Snapshot snapshotsPut(snapshotId, snapshot, pretty, depth, xContractNumber)
+
+Modify a Snapshot
+
+You can use update attributes of a resource
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.SnapshotApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    SnapshotApi apiInstance = new SnapshotApi(defaultClient);
+    String snapshotId = "snapshotId_example"; // String | The unique ID of the Snapshot
+    Snapshot snapshot = new Snapshot(); // Snapshot | Modified Snapshot
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Snapshot result = apiInstance.snapshotsPut(snapshotId, snapshot, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling SnapshotApi#snapshotsPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **snapshotId** | **String**| The unique ID of the Snapshot |
+ **snapshot** | [**Snapshot**](Snapshot.md)| Modified Snapshot |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Snapshot**](Snapshot.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### UserManagementApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**umGroupsDelete**](UserManagementApi.md#umGroupsDelete) | **DELETE** /um/groups/{groupId} | Delete a Group
+[**umGroupsFindById**](UserManagementApi.md#umGroupsFindById) | **GET** /um/groups/{groupId} | Retrieve a Group
+[**umGroupsGet**](UserManagementApi.md#umGroupsGet) | **GET** /um/groups | List All Groups.
+[**umGroupsPost**](UserManagementApi.md#umGroupsPost) | **POST** /um/groups | Create a Group
+[**umGroupsPut**](UserManagementApi.md#umGroupsPut) | **PUT** /um/groups/{groupId} | Modify a group
+[**umGroupsResourcesGet**](UserManagementApi.md#umGroupsResourcesGet) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group
+[**umGroupsSharesDelete**](UserManagementApi.md#umGroupsSharesDelete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group
+[**umGroupsSharesFindByResource**](UserManagementApi.md#umGroupsSharesFindByResource) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share
+[**umGroupsSharesGet**](UserManagementApi.md#umGroupsSharesGet) | **GET** /um/groups/{groupId}/shares | List Group Shares 
+[**umGroupsSharesPost**](UserManagementApi.md#umGroupsSharesPost) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group
+[**umGroupsSharesPut**](UserManagementApi.md#umGroupsSharesPut) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group
+[**umGroupsUsersDelete**](UserManagementApi.md#umGroupsUsersDelete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove a user from a group
+[**umGroupsUsersGet**](UserManagementApi.md#umGroupsUsersGet) | **GET** /um/groups/{groupId}/users | List Group Members 
+[**umGroupsUsersPost**](UserManagementApi.md#umGroupsUsersPost) | **POST** /um/groups/{groupId}/users | Add a user to a group
+[**umResourcesFindByType**](UserManagementApi.md#umResourcesFindByType) | **GET** /um/resources/{resourceType} | Retrieve a list of Resources by type.
+[**umResourcesFindByTypeAndId**](UserManagementApi.md#umResourcesFindByTypeAndId) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type.
+[**umResourcesGet**](UserManagementApi.md#umResourcesGet) | **GET** /um/resources | List All Resources.
+[**umUsersDelete**](UserManagementApi.md#umUsersDelete) | **DELETE** /um/users/{userId} | Delete a User
+[**umUsersFindById**](UserManagementApi.md#umUsersFindById) | **GET** /um/users/{userId} | Retrieve a User
+[**umUsersGet**](UserManagementApi.md#umUsersGet) | **GET** /um/users | List all Users 
+[**umUsersGroupsGet**](UserManagementApi.md#umUsersGroupsGet) | **GET** /um/users/{userId}/groups | Retrieve a User&#39;s group resources
+[**umUsersOwnsGet**](UserManagementApi.md#umUsersOwnsGet) | **GET** /um/users/{userId}/owns | Retrieve a User&#39;s own resources
+[**umUsersPost**](UserManagementApi.md#umUsersPost) | **POST** /um/users | Create a user
+[**umUsersPut**](UserManagementApi.md#umUsersPut) | **PUT** /um/users/{userId} | Modify a user
+[**umUsersS3keysDelete**](UserManagementApi.md#umUsersS3keysDelete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key
+[**umUsersS3keysFindByKey**](UserManagementApi.md#umUsersS3keysFindByKey) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User
+[**umUsersS3keysGet**](UserManagementApi.md#umUsersS3keysGet) | **GET** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys
+[**umUsersS3keysPost**](UserManagementApi.md#umUsersS3keysPost) | **POST** /um/users/{userId}/s3keys | Create a S3 key for the given user
+[**umUsersS3keysPut**](UserManagementApi.md#umUsersS3keysPut) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id
+[**umUsersS3ssourlGet**](UserManagementApi.md#umUsersS3ssourlGet) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user
+
+
+<a name="umGroupsDelete"></a>
+# **umGroupsDelete**
+> Object umGroupsDelete(groupId, pretty, depth, xContractNumber)
+
+Delete a Group
+
+Delete a group
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String groupId = "groupId_example"; // String | The unique ID of the group
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.umGroupsDelete(groupId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupId** | **String**| The unique ID of the group |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umGroupsFindById"></a>
+# **umGroupsFindById**
+> Group umGroupsFindById(groupId, pretty, depth, xContractNumber)
+
+Retrieve a Group
+
+You can retrieve a group by using the group ID. This value can be found in the response body when a group is created or when you GET a list of groups.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String groupId = "groupId_example"; // String | The unique ID of the group
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Group result = apiInstance.umGroupsFindById(groupId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupId** | **String**| The unique ID of the group |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Group**](Group.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umGroupsGet"></a>
+# **umGroupsGet**
+> Groups umGroupsGet(pretty, depth, xContractNumber)
+
+List All Groups.
+
+You can retrieve a complete list of all groups that you have access to
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Groups result = apiInstance.umGroupsGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Groups**](Groups.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umGroupsPost"></a>
+# **umGroupsPost**
+> Group umGroupsPost(group, pretty, depth, xContractNumber)
+
+Create a Group
+
+You can use this POST method to create a group
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    Group group = new Group(); // Group | Group to be created
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Group result = apiInstance.umGroupsPost(group, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **group** | [**Group**](Group.md)| Group to be created |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Group**](Group.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umGroupsPut"></a>
+# **umGroupsPut**
+> Group umGroupsPut(groupId, group, pretty, depth, xContractNumber)
+
+Modify a group
+
+You can use this method to update properties of the group.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String groupId = "groupId_example"; // String | The unique ID of the group
+    Group group = new Group(); // Group | Modified properties of the Group
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Group result = apiInstance.umGroupsPut(groupId, group, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupId** | **String**| The unique ID of the group |
+ **group** | [**Group**](Group.md)| Modified properties of the Group |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Group**](Group.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umGroupsResourcesGet"></a>
+# **umGroupsResourcesGet**
+> ResourceGroups umGroupsResourcesGet(groupId, pretty, depth, xContractNumber)
+
+Retrieve resources assigned to a group
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String groupId = "groupId_example"; // String | The unique ID of the group
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      ResourceGroups result = apiInstance.umGroupsResourcesGet(groupId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsResourcesGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupId** | **String**| The unique ID of the group |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**ResourceGroups**](ResourceGroups.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umGroupsSharesDelete"></a>
+# **umGroupsSharesDelete**
+> Object umGroupsSharesDelete(groupId, resourceId, pretty, depth, xContractNumber)
+
+Remove a resource from a group
+
+This will remove a resource from a group
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String groupId = "groupId_example"; // String | 
+    String resourceId = "resourceId_example"; // String | 
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.umGroupsSharesDelete(groupId, resourceId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsSharesDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupId** | **String**|  |
+ **resourceId** | **String**|  |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umGroupsSharesFindByResource"></a>
+# **umGroupsSharesFindByResource**
+> GroupShare umGroupsSharesFindByResource(groupId, resourceId, pretty, depth, xContractNumber)
+
+Retrieve a group share
+
+This will retrieve the properties of a group share.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String groupId = "groupId_example"; // String | 
+    String resourceId = "resourceId_example"; // String | 
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      GroupShare result = apiInstance.umGroupsSharesFindByResource(groupId, resourceId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsSharesFindByResource");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupId** | **String**|  |
+ **resourceId** | **String**|  |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**GroupShare**](GroupShare.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umGroupsSharesGet"></a>
+# **umGroupsSharesGet**
+> GroupShares umGroupsSharesGet(groupId, pretty, depth, xContractNumber)
+
+List Group Shares 
+
+You can retrieve a list of all resources along with their permissions of the group
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String groupId = "groupId_example"; // String | 
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      GroupShares result = apiInstance.umGroupsSharesGet(groupId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsSharesGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupId** | **String**|  |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**GroupShares**](GroupShares.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umGroupsSharesPost"></a>
+# **umGroupsSharesPost**
+> GroupShare umGroupsSharesPost(groupId, resourceId, resource, pretty, depth, xContractNumber)
+
+Add a resource to a group
+
+This will add a resource to the group. 
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String groupId = "groupId_example"; // String | 
+    String resourceId = "resourceId_example"; // String | 
+    GroupShare resource = new GroupShare(); // GroupShare | Resource to be added
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      GroupShare result = apiInstance.umGroupsSharesPost(groupId, resourceId, resource, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsSharesPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupId** | **String**|  |
+ **resourceId** | **String**|  |
+ **resource** | [**GroupShare**](GroupShare.md)| Resource to be added |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**GroupShare**](GroupShare.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umGroupsSharesPut"></a>
+# **umGroupsSharesPut**
+> GroupShare umGroupsSharesPut(groupId, resourceId, resource, pretty, depth, xContractNumber)
+
+Modify resource permissions of a group
+
+You can use update resource permissions of a group. If empty body will be provided, no updates will happen, instead you will be returned the current permissions of resource in a group. In this case response code will be 200
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String groupId = "groupId_example"; // String | 
+    String resourceId = "resourceId_example"; // String | 
+    GroupShare resource = new GroupShare(); // GroupShare | Modified Resource
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      GroupShare result = apiInstance.umGroupsSharesPut(groupId, resourceId, resource, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsSharesPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupId** | **String**|  |
+ **resourceId** | **String**|  |
+ **resource** | [**GroupShare**](GroupShare.md)| Modified Resource |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**GroupShare**](GroupShare.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umGroupsUsersDelete"></a>
+# **umGroupsUsersDelete**
+> Object umGroupsUsersDelete(groupId, userId, pretty, depth, xContractNumber)
+
+Remove a user from a group
+
+This will remove a user from a group
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String groupId = "groupId_example"; // String | 
+    String userId = "userId_example"; // String | 
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.umGroupsUsersDelete(groupId, userId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsUsersDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupId** | **String**|  |
+ **userId** | **String**|  |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umGroupsUsersGet"></a>
+# **umGroupsUsersGet**
+> GroupMembers umGroupsUsersGet(groupId, pretty, depth, xContractNumber)
+
+List Group Members 
+
+You can retrieve a list of users who are members of the group
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String groupId = "groupId_example"; // String | 
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      GroupMembers result = apiInstance.umGroupsUsersGet(groupId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsUsersGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupId** | **String**|  |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**GroupMembers**](GroupMembers.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umGroupsUsersPost"></a>
+# **umGroupsUsersPost**
+> User umGroupsUsersPost(groupId, user, pretty, depth, xContractNumber)
+
+Add a user to a group
+
+This will attach a pre-existing user to a group. 
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String groupId = "groupId_example"; // String | 
+    User user = new User(); // User | User to be added
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      User result = apiInstance.umGroupsUsersPost(groupId, user, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umGroupsUsersPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **groupId** | **String**|  |
+ **user** | [**User**](User.md)| User to be added |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umResourcesFindByType"></a>
+# **umResourcesFindByType**
+> Resources umResourcesFindByType(resourceType, pretty, depth, xContractNumber)
+
+Retrieve a list of Resources by type.
+
+You can retrieve a list of resources by using the type. Allowed values are { datacenter, snapshot, image, ipblock, pcc, backupunit, k8s }. This value of resource type also be found in the response body when you GET a list of all resources.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String resourceType = "resourceType_example"; // String | The resource Type
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Resources result = apiInstance.umResourcesFindByType(resourceType, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umResourcesFindByType");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourceType** | **String**| The resource Type |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Resources**](Resources.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umResourcesFindByTypeAndId"></a>
+# **umResourcesFindByTypeAndId**
+> Resource umResourcesFindByTypeAndId(resourceType, resourceId, pretty, depth, xContractNumber)
+
+Retrieve a Resource by type.
+
+You can retrieve a resource by using the type and its uuid. Allowed values for types are { datacenter, snapshot, image, ipblock, pcc, backupunit, k8s }. The value of resource type can also be found in the response body when you GET a list of all resources.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String resourceType = "resourceType_example"; // String | The resource Type
+    String resourceId = "resourceId_example"; // String | The resource Uuid
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Resource result = apiInstance.umResourcesFindByTypeAndId(resourceType, resourceId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umResourcesFindByTypeAndId");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **resourceType** | **String**| The resource Type |
+ **resourceId** | **String**| The resource Uuid |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Resource**](Resource.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umResourcesGet"></a>
+# **umResourcesGet**
+> Resources umResourcesGet(pretty, depth, xContractNumber)
+
+List All Resources.
+
+You can retrieve a complete list of all resources that you have access to
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Resources result = apiInstance.umResourcesGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umResourcesGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Resources**](Resources.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umUsersDelete"></a>
+# **umUsersDelete**
+> Object umUsersDelete(userId, pretty, depth, xContractNumber)
+
+Delete a User
+
+Delete a user
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String userId = "userId_example"; // String | The unique ID of the user
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.umUsersDelete(userId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umUsersDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| The unique ID of the user |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umUsersFindById"></a>
+# **umUsersFindById**
+> User umUsersFindById(userId, pretty, depth, xContractNumber)
+
+Retrieve a User
+
+You can retrieve user details by using the users ID. This value can be found in the response body when a user is created or when you GET a list of users.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String userId = "userId_example"; // String | The unique ID of the user
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      User result = apiInstance.umUsersFindById(userId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umUsersFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| The unique ID of the user |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umUsersGet"></a>
+# **umUsersGet**
+> Users umUsersGet(pretty, depth, xContractNumber)
+
+List all Users 
+
+You can retrieve a complete list of users under your account
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Users result = apiInstance.umUsersGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umUsersGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Users**](Users.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umUsersGroupsGet"></a>
+# **umUsersGroupsGet**
+> ResourceGroups umUsersGroupsGet(userId, pretty, depth, xContractNumber)
+
+Retrieve a User&#39;s group resources
+
+You can retrieve group resources of user by using the users ID. This value can be found in the response body when a user is created or when you GET a list of users.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String userId = "userId_example"; // String | The unique ID of the user
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      ResourceGroups result = apiInstance.umUsersGroupsGet(userId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umUsersGroupsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| The unique ID of the user |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**ResourceGroups**](ResourceGroups.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umUsersOwnsGet"></a>
+# **umUsersOwnsGet**
+> ResourcesUsers umUsersOwnsGet(userId, pretty, depth, xContractNumber)
+
+Retrieve a User&#39;s own resources
+
+You can retrieve resources owned by using the users ID. This value can be found in the response body when a user is created or when you GET a list of users.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String userId = "userId_example"; // String | The unique ID of the user
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      ResourcesUsers result = apiInstance.umUsersOwnsGet(userId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umUsersOwnsGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| The unique ID of the user |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**ResourcesUsers**](ResourcesUsers.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umUsersPost"></a>
+# **umUsersPost**
+> User umUsersPost(user, pretty, depth, xContractNumber)
+
+Create a user
+
+You can use this POST method to create a user
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    User user = new User(); // User | User to be created
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      User result = apiInstance.umUsersPost(user, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umUsersPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user** | [**User**](User.md)| User to be created |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umUsersPut"></a>
+# **umUsersPut**
+> User umUsersPut(userId, user, pretty, depth, xContractNumber)
+
+Modify a user
+
+You can use update attributes of a User
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String userId = "userId_example"; // String | 
+    User user = new User(); // User | Modified user
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      User result = apiInstance.umUsersPut(userId, user, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umUsersPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**|  |
+ **user** | [**User**](User.md)| Modified user |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umUsersS3keysDelete"></a>
+# **umUsersS3keysDelete**
+> Object umUsersS3keysDelete(userId, keyId, pretty, depth, xContractNumber)
+
+Delete a S3 key
+
+Delete a S3 key
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String userId = "userId_example"; // String | The unique ID of the user
+    String keyId = "keyId_example"; // String | The unique access key ID of the S3 key
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.umUsersS3keysDelete(userId, keyId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umUsersS3keysDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| The unique ID of the user |
+ **keyId** | **String**| The unique access key ID of the S3 key |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umUsersS3keysFindByKey"></a>
+# **umUsersS3keysFindByKey**
+> S3Key umUsersS3keysFindByKey(userId, keyId, pretty, depth, xContractNumber)
+
+Retrieve given S3 key belonging to the given User
+
+You can retrieve S3 key belonging to the given User. This user Id can be found in the response body when a user is created or when you GET a list of users. The key Id can be found in the response body when a S3 key is created or when you GET a list of all S3 keys of a user
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String userId = "userId_example"; // String | The unique ID of the user
+    String keyId = "keyId_example"; // String | The unique access key ID of the S3 key
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      S3Key result = apiInstance.umUsersS3keysFindByKey(userId, keyId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umUsersS3keysFindByKey");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| The unique ID of the user |
+ **keyId** | **String**| The unique access key ID of the S3 key |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**S3Key**](S3Key.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umUsersS3keysGet"></a>
+# **umUsersS3keysGet**
+> S3Keys umUsersS3keysGet(userId, pretty, depth, xContractNumber)
+
+Retrieve a User&#39;s S3 keys
+
+You can retrieve S3 keys owned by a user by using the users ID. This user Id can be found in the response body when a user is created or when you GET a list of users.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String userId = "userId_example"; // String | The unique ID of the user
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      S3Keys result = apiInstance.umUsersS3keysGet(userId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umUsersS3keysGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| The unique ID of the user |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**S3Keys**](S3Keys.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umUsersS3keysPost"></a>
+# **umUsersS3keysPost**
+> S3Key umUsersS3keysPost(userId, pretty, depth, xContractNumber)
+
+Create a S3 key for the given user
+
+Creates a S3 key for the given user. This user Id can be found in the response body when a user is created or when you GET a list of users. Maximum of 5 keys can be generated for a given user
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String userId = "userId_example"; // String | The unique ID of the user
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      S3Key result = apiInstance.umUsersS3keysPost(userId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umUsersS3keysPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| The unique ID of the user |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**S3Key**](S3Key.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umUsersS3keysPut"></a>
+# **umUsersS3keysPut**
+> S3Key umUsersS3keysPut(userId, keyId, s3Key, pretty, depth, xContractNumber)
+
+Modify a S3 key having the given key id
+
+You can enable or disable a given S3 key
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String userId = "userId_example"; // String | 
+    String keyId = "keyId_example"; // String | The unique access key ID of the S3 key
+    S3Key s3Key = new S3Key(); // S3Key | Modified S3Key
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      S3Key result = apiInstance.umUsersS3keysPut(userId, keyId, s3Key, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umUsersS3keysPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**|  |
+ **keyId** | **String**| The unique access key ID of the S3 key |
+ **s3Key** | [**S3Key**](S3Key.md)| Modified S3Key |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**S3Key**](S3Key.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="umUsersS3ssourlGet"></a>
+# **umUsersS3ssourlGet**
+> S3ObjectStorageSSO umUsersS3ssourlGet(userId, pretty, xContractNumber)
+
+Retrieve S3 object storage single signon URL for the given user
+
+You can retrieve S3 object storage single signon URL for the given user. This user Id can be found in the response body when a user is created or when you GET a list of users.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.UserManagementApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    UserManagementApi apiInstance = new UserManagementApi(defaultClient);
+    String userId = "userId_example"; // String | The unique ID of the user
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      S3ObjectStorageSSO result = apiInstance.umUsersS3ssourlGet(userId, pretty, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling UserManagementApi#umUsersS3ssourlGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **userId** | **String**| The unique ID of the user |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**S3ObjectStorageSSO**](S3ObjectStorageSSO.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+### VolumeApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**datacentersVolumesCreateSnapshotPost**](VolumeApi.md#datacentersVolumesCreateSnapshotPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/create-snapshot | Create Volume Snapshot
+[**datacentersVolumesDelete**](VolumeApi.md#datacentersVolumesDelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId} | Delete a Volume
+[**datacentersVolumesFindById**](VolumeApi.md#datacentersVolumesFindById) | **GET** /datacenters/{datacenterId}/volumes/{volumeId} | Retrieve a Volume
+[**datacentersVolumesGet**](VolumeApi.md#datacentersVolumesGet) | **GET** /datacenters/{datacenterId}/volumes | List Volumes 
+[**datacentersVolumesPatch**](VolumeApi.md#datacentersVolumesPatch) | **PATCH** /datacenters/{datacenterId}/volumes/{volumeId} | Partially modify a Volume
+[**datacentersVolumesPost**](VolumeApi.md#datacentersVolumesPost) | **POST** /datacenters/{datacenterId}/volumes | Create a Volume
+[**datacentersVolumesPut**](VolumeApi.md#datacentersVolumesPut) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId} | Modify a Volume
+[**datacentersVolumesRestoreSnapshotPost**](VolumeApi.md#datacentersVolumesRestoreSnapshotPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot | Restore Volume Snapshot
+
+
+<a name="datacentersVolumesCreateSnapshotPost"></a>
+# **datacentersVolumesCreateSnapshotPost**
+> Snapshot datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, name, description, secAuthProtection, licenceType)
+
+Create Volume Snapshot
+
+Creates a snapshot of a volume within the datacenter. You can use a snapshot to create a new storage volume or to restore a storage volume.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.VolumeApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    VolumeApi apiInstance = new VolumeApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String volumeId = "volumeId_example"; // String | The unique ID of the Volume
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    String name = "name_example"; // String | The name of the snapshot
+    String description = "description_example"; // String | The description of the snapshot
+    Boolean secAuthProtection = true; // Boolean | Flag representing if extra protection is enabled on snapshot e.g. Two Factor protection etc.
+    String licenceType = "licenceType_example"; // String | The OS type of this Snapshot
+    try {
+      Snapshot result = apiInstance.datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, name, description, secAuthProtection, licenceType);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling VolumeApi#datacentersVolumesCreateSnapshotPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **volumeId** | **String**| The unique ID of the Volume |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **name** | **String**| The name of the snapshot | [optional]
+ **description** | **String**| The description of the snapshot | [optional]
+ **secAuthProtection** | **Boolean**| Flag representing if extra protection is enabled on snapshot e.g. Two Factor protection etc. | [optional]
+ **licenceType** | **String**| The OS type of this Snapshot | [optional] [enum: UNKNOWN, WINDOWS, WINDOWS2016, LINUX, OTHER]
+
+### Return type
+
+[**Snapshot**](Snapshot.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersVolumesDelete"></a>
+# **datacentersVolumesDelete**
+> Object datacentersVolumesDelete(datacenterId, volumeId, pretty, depth, xContractNumber)
+
+Delete a Volume
+
+Deletes the specified volume. This will result in the volume being removed from your datacenter. Use this with caution.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.VolumeApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    VolumeApi apiInstance = new VolumeApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String volumeId = "volumeId_example"; // String | The unique ID of the Volume
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Object result = apiInstance.datacentersVolumesDelete(datacenterId, volumeId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling VolumeApi#datacentersVolumesDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **volumeId** | **String**| The unique ID of the Volume |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersVolumesFindById"></a>
+# **datacentersVolumesFindById**
+> Volume datacentersVolumesFindById(datacenterId, volumeId, pretty, depth, xContractNumber)
+
+Retrieve a Volume
+
+Retrieves the attributes of a given Volume
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.VolumeApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    VolumeApi apiInstance = new VolumeApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String volumeId = "volumeId_example"; // String | The unique ID of the Volume
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Volume result = apiInstance.datacentersVolumesFindById(datacenterId, volumeId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling VolumeApi#datacentersVolumesFindById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **volumeId** | **String**| The unique ID of the Volume |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Volume**](Volume.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersVolumesGet"></a>
+# **datacentersVolumesGet**
+> Volumes datacentersVolumesGet(datacenterId, pretty, depth, xContractNumber)
+
+List Volumes 
+
+Retrieves a list of Volumes.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.VolumeApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    VolumeApi apiInstance = new VolumeApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Volumes result = apiInstance.datacentersVolumesGet(datacenterId, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling VolumeApi#datacentersVolumesGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Volumes**](Volumes.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersVolumesPatch"></a>
+# **datacentersVolumesPatch**
+> Volume datacentersVolumesPatch(datacenterId, volumeId, volume, pretty, depth, xContractNumber)
+
+Partially modify a Volume
+
+You can use update attributes of a Volume
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.VolumeApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    VolumeApi apiInstance = new VolumeApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String volumeId = "volumeId_example"; // String | The unique ID of the Volume
+    VolumeProperties volume = new VolumeProperties(); // VolumeProperties | Modified properties of Volume
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Volume result = apiInstance.datacentersVolumesPatch(datacenterId, volumeId, volume, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling VolumeApi#datacentersVolumesPatch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **volumeId** | **String**| The unique ID of the Volume |
+ **volume** | [**VolumeProperties**](VolumeProperties.md)| Modified properties of Volume |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Volume**](Volume.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersVolumesPost"></a>
+# **datacentersVolumesPost**
+> Volume datacentersVolumesPost(datacenterId, volume, pretty, depth, xContractNumber)
+
+Create a Volume
+
+Creates a volume within the datacenter. This will not attach the volume to a server. Please see the Servers section for details on how to attach storage volumes
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.VolumeApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    VolumeApi apiInstance = new VolumeApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    Volume volume = new Volume(); // Volume | Volume to be created
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Volume result = apiInstance.datacentersVolumesPost(datacenterId, volume, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling VolumeApi#datacentersVolumesPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **volume** | [**Volume**](Volume.md)| Volume to be created |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Volume**](Volume.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersVolumesPut"></a>
+# **datacentersVolumesPut**
+> Volume datacentersVolumesPut(datacenterId, volumeId, volume, pretty, depth, xContractNumber)
+
+Modify a Volume
+
+You can use update attributes of a Volume
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.VolumeApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    VolumeApi apiInstance = new VolumeApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String volumeId = "volumeId_example"; // String | The unique ID of the Volume
+    Volume volume = new Volume(); // Volume | Modified Volume
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Volume result = apiInstance.datacentersVolumesPut(datacenterId, volumeId, volume, pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling VolumeApi#datacentersVolumesPut");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **volumeId** | **String**| The unique ID of the Volume |
+ **volume** | [**Volume**](Volume.md)| Modified Volume |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Volume**](Volume.md)
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+<a name="datacentersVolumesRestoreSnapshotPost"></a>
+# **datacentersVolumesRestoreSnapshotPost**
+> Object datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, snapshotId)
+
+Restore Volume Snapshot
+
+This will restore a snapshot onto a volume. A snapshot is created as just another image that can be used to create subsequent volumes if you want or to restore an existing volume.
+
+### Example
+```java
+// Import classes:
+import org.openapitools.client.ApiClient;
+import org.openapitools.client.ApiException;
+import org.openapitools.client.Configuration;
+import org.openapitools.client.auth.*;
+import org.openapitools.client.models.*;
+import org.openapitools.client.api.VolumeApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+    
+    // Configure HTTP basic authorization: Basic Authentication
+    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    Basic Authentication.setUsername("YOUR USERNAME");
+    Basic Authentication.setPassword("YOUR PASSWORD");
+
+    // Configure API key authorization: Token Authentication
+    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
+    Token Authentication.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Token Authentication.setApiKeyPrefix("Token");
+
+    VolumeApi apiInstance = new VolumeApi(defaultClient);
+    String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
+    String volumeId = "volumeId_example"; // String | The unique ID of the Volume
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    String snapshotId = "snapshotId_example"; // String | This is the ID of the snapshot
+    try {
+      Object result = apiInstance.datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, snapshotId);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling VolumeApi#datacentersVolumesRestoreSnapshotPost");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **datacenterId** | **String**| The unique ID of the datacenter |
+ **volumeId** | **String**| The unique ID of the Volume |
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **snapshotId** | **String**| This is the ID of the snapshot | [optional]
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
+
+
+---
 
 ## Documentation for Models
 

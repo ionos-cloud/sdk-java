@@ -29,7 +29,7 @@ import org.openapitools.client.model.ResourcesUsers;
 /**
  * UsersEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-18T13:59:16.181671+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-18T18:41:07.637425+02:00[Europe/Bucharest]")
 public class UsersEntities {
   public static final String SERIALIZED_NAME_OWNS = "owns";
   @SerializedName(SERIALIZED_NAME_OWNS)

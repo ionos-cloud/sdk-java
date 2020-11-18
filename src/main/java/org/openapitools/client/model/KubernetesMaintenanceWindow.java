@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * KubernetesMaintenanceWindow
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-18T13:59:16.181671+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-18T18:41:07.637425+02:00[Europe/Bucharest]")
 public class KubernetesMaintenanceWindow {
   /**
    * The day of the week for a maintenance window.
