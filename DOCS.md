@@ -5,7 +5,7 @@
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2020-11-19T13:06:24.019174+02:00[Europe/Bucharest]
+  - Build date: 2020-11-19T13:10:10.814289+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -438,7 +438,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -519,7 +519,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -598,7 +598,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -681,7 +681,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -762,7 +762,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -845,7 +845,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -924,7 +924,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1016,7 +1016,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1115,7 +1115,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1196,7 +1196,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1275,7 +1275,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1358,7 +1358,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1439,7 +1439,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1522,7 +1522,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1620,7 +1620,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1701,7 +1701,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1780,7 +1780,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1863,7 +1863,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1946,7 +1946,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2045,7 +2045,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2126,7 +2126,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2205,7 +2205,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2288,7 +2288,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2369,7 +2369,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2452,7 +2452,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2563,7 +2563,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2644,7 +2644,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2723,7 +2723,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2804,7 +2804,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2887,7 +2887,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2970,7 +2970,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -3051,7 +3051,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -3136,7 +3136,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -3221,7 +3221,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -3304,7 +3304,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -3389,7 +3389,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -3472,7 +3472,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -3557,7 +3557,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -3638,7 +3638,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -3721,7 +3721,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -3796,7 +3796,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -3867,7 +3867,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -3938,7 +3938,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -4060,7 +4060,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -4143,7 +4143,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -4224,7 +4224,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -4307,7 +4307,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -4392,7 +4392,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -4477,7 +4477,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -4562,7 +4562,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -4645,7 +4645,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -4730,7 +4730,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -4817,7 +4817,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -4902,7 +4902,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -4987,7 +4987,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -5070,7 +5070,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -5155,7 +5155,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -5242,7 +5242,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -5325,7 +5325,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -5408,7 +5408,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -5489,7 +5489,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -5572,7 +5572,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -5657,7 +5657,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -5738,7 +5738,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -5817,7 +5817,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -5900,7 +5900,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -5983,7 +5983,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -6064,7 +6064,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -6147,7 +6147,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -6232,7 +6232,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -6336,7 +6336,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -6419,7 +6419,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -6500,7 +6500,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -6585,7 +6585,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -6668,7 +6668,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -6753,7 +6753,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -6838,7 +6838,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -6921,7 +6921,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -7006,7 +7006,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -7113,7 +7113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -7198,7 +7198,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -7281,7 +7281,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -7366,7 +7366,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -7449,7 +7449,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -7532,7 +7532,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -7613,7 +7613,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -7698,7 +7698,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -7781,7 +7781,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -7866,7 +7866,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -7962,7 +7962,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -8045,7 +8045,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -8124,7 +8124,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -8233,7 +8233,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -8318,7 +8318,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -8405,7 +8405,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -8492,7 +8492,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -8577,7 +8577,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -8666,7 +8666,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -8753,7 +8753,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -8842,7 +8842,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -8925,7 +8925,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -9012,7 +9012,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -9097,7 +9097,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -9184,7 +9184,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -9282,7 +9282,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -9363,7 +9363,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -9442,7 +9442,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -9525,7 +9525,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -9606,7 +9606,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -9702,7 +9702,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -9795,7 +9795,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -9876,7 +9876,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -9991,7 +9991,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -10076,7 +10076,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -10159,7 +10159,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -10244,7 +10244,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -10327,7 +10327,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -10410,7 +10410,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -10493,7 +10493,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -10578,7 +10578,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -10661,7 +10661,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -10746,7 +10746,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -10829,7 +10829,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -10912,7 +10912,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -10995,7 +10995,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -11078,7 +11078,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -11163,7 +11163,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -11248,7 +11248,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -11325,7 +11325,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication)
 
 ### HTTP request headers
 
@@ -11404,7 +11404,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication)
 
 ### HTTP request headers
 
@@ -11502,7 +11502,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -11583,7 +11583,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -11662,7 +11662,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -11745,7 +11745,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -11828,7 +11828,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -11951,7 +11951,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -12032,7 +12032,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -12111,7 +12111,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -12192,7 +12192,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -12275,7 +12275,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -12354,7 +12354,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -12437,7 +12437,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -12520,7 +12520,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -12601,7 +12601,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -12686,7 +12686,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -12771,7 +12771,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -12854,7 +12854,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -12935,7 +12935,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -13018,7 +13018,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -13099,7 +13099,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -13182,7 +13182,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -13261,7 +13261,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -13342,7 +13342,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -13423,7 +13423,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -13502,7 +13502,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -13583,7 +13583,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -13664,7 +13664,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -13745,7 +13745,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -13828,7 +13828,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -13911,7 +13911,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -13994,7 +13994,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -14075,7 +14075,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -14156,7 +14156,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -14241,7 +14241,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -14320,7 +14320,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -14431,7 +14431,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -14514,7 +14514,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -14597,7 +14597,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -14678,7 +14678,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -14763,7 +14763,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -14846,7 +14846,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -14931,7 +14931,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -15016,7 +15016,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
+[Basic Authentication](../DOCS.md#Basic Authentication), [Token Authentication](../DOCS.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -15170,9 +15170,9 @@ Name | Type | Description  | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Volume&gt;**](Volume.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Volume&gt;**](DOCS.md#Volume) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15185,9 +15185,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of object that has been created |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**BackupUnitProperties**](BackupUnitProperties.md) |  | 
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**BackupUnitProperties**](DOCS.md#BackupUnitProperties) |  | 
 
 
 
@@ -15232,8 +15232,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of object that has been created |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;BackupUnit&gt;**](BackupUnit.md) | Array of items in that collection |  [optional] [readonly]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;BackupUnit&gt;**](DOCS.md#BackupUnit) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15253,9 +15253,9 @@ BACKUPUNIT | &quot;backupunit&quot;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Nic&gt;**](Nic.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Nic&gt;**](DOCS.md#Nic) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15267,9 +15267,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Image&gt;**](Image.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Image&gt;**](DOCS.md#Image) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15293,8 +15293,8 @@ Name | Type | Description | Notes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | [**Type**](Type.md) | The type of the resource |  [optional]
-**properties** | [**ContractProperties**](ContractProperties.md) |  | 
+**type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
+**properties** | [**ContractProperties**](DOCS.md#ContractProperties) |  | 
 
 
 
@@ -15309,7 +15309,7 @@ Name | Type | Description | Notes
 **owner** | **String** | owner of the contract |  [optional] [readonly]
 **status** | **String** | status of the contract |  [optional] [readonly]
 **regDomain** | **String** | Registration domain of the contract |  [optional] [readonly]
-**resourceLimits** | [**ResourceLimits**](ResourceLimits.md) |  |  [optional]
+**resourceLimits** | [**ResourceLimits**](DOCS.md#ResourceLimits) |  |  [optional]
 
 
 
@@ -15321,11 +15321,11 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**DatacenterProperties**](DatacenterProperties.md) |  | 
-**entities** | [**DatacenterEntities**](DatacenterEntities.md) |  |  [optional]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**DatacenterProperties**](DOCS.md#DatacenterProperties) |  | 
+**entities** | [**DatacenterEntities**](DOCS.md#DatacenterEntities) |  |  [optional]
 
 
 
@@ -15337,10 +15337,10 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
-**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource was created |  [optional] [readonly]
+**createdDate** | [**OffsetDateTime**](DOCS.md#OffsetDateTime) | The last time the resource was created |  [optional] [readonly]
 **createdBy** | **String** | The user who created the resource. |  [optional] [readonly]
 **createdByUserId** | **String** | The user id of the user who has created the resource. |  [optional] [readonly]
-**lastModifiedDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource has been modified |  [optional] [readonly]
+**lastModifiedDate** | [**OffsetDateTime**](DOCS.md#OffsetDateTime) | The last time the resource has been modified |  [optional] [readonly]
 **lastModifiedBy** | **String** | The user who last modified the resource. |  [optional] [readonly]
 **lastModifiedByUserId** | **String** | The user id of the user who has last modified the resource. |  [optional] [readonly]
 **state** | [**StateEnum**](#StateEnum) | State of the resource. *AVAILABLE* There are no pending modification requests for this item; *BUSY* There is at least one modification request pending and all following requests will be queued; *INACTIVE* Resource has been de-provisioned; *DEPLOYING* Resource state DEPLOYING - relevant for Kubernetes cluster/nodepool; *ACTIVE* Resource state ACTIVE - relevant for Kubernetes cluster/nodepool; *FAILED* Resource state FAILED - relevant for Kubernetes cluster/nodepool; *SUSPENDED* Resource state SUSPENDED - relevant for Kubernetes cluster/nodepool; *FAILED_SUSPENDED* Resource state FAILED_SUSPENDED - relevant for Kubernetes cluster; *UPDATING* Resource state UPDATING - relevant for Kubernetes cluster/nodepool; *FAILED_UPDATING* Resource state FAILED_UPDATING - relevant for Kubernetes cluster/nodepool; *DESTROYING* Resource state DESTROYING - relevant for Kubernetes cluster; *FAILED_DESTROYING* Resource state FAILED_DESTROYING - relevant for Kubernetes cluster/nodepool; *TERMINATED* Resource state TERMINATED - relevant for Kubernetes cluster/nodepool |  [optional] [readonly]
@@ -15374,10 +15374,10 @@ TERMINATED | &quot;TERMINATED&quot;
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**servers** | [**Servers**](Servers.md) |  |  [optional]
-**volumes** | [**Volumes**](Volumes.md) |  |  [optional]
-**loadbalancers** | [**Loadbalancers**](Loadbalancers.md) |  |  [optional]
-**lans** | [**Lans**](Lans.md) |  |  [optional]
+**servers** | [**Servers**](DOCS.md#Servers) |  |  [optional]
+**volumes** | [**Volumes**](DOCS.md#Volumes) |  |  [optional]
+**loadbalancers** | [**Loadbalancers**](DOCS.md#Loadbalancers) |  |  [optional]
+**lans** | [**Lans**](DOCS.md#Lans) |  |  [optional]
 
 
 
@@ -15414,9 +15414,9 @@ SSD_STORAGE_ZONING | &quot;SSD_STORAGE_ZONING&quot;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Datacenter&gt;**](Datacenter.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Datacenter&gt;**](DOCS.md#Datacenter) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15428,7 +15428,7 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **httpStatus** | **Integer** | HTTP status code of the operation |  [optional] [readonly]
-**messages** | [**List&lt;ErrorMessage&gt;**](ErrorMessage.md) |  |  [optional]
+**messages** | [**List&lt;ErrorMessage&gt;**](DOCS.md#ErrorMessage) |  |  [optional]
 
 
 
@@ -15452,10 +15452,10 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**FirewallruleProperties**](FirewallruleProperties.md) |  | 
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**FirewallruleProperties**](DOCS.md#FirewallruleProperties) |  | 
 
 
 
@@ -15467,9 +15467,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;FirewallRule&gt;**](FirewallRule.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;FirewallRule&gt;**](DOCS.md#FirewallRule) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15538,10 +15538,10 @@ NULL | &quot;null&quot;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of the resource |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**properties** | [**GroupProperties**](GroupProperties.md) |  | 
-**entities** | [**GroupEntities**](GroupEntities.md) |  |  [optional]
+**type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**properties** | [**GroupProperties**](DOCS.md#GroupProperties) |  | 
+**entities** | [**GroupEntities**](DOCS.md#GroupEntities) |  |  [optional]
 
 
 
@@ -15552,8 +15552,8 @@ Name | Type | Description | Notes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**users** | [**GroupMembers**](GroupMembers.md) |  |  [optional]
-**resources** | [**ResourceGroups**](ResourceGroups.md) |  |  [optional]
+**users** | [**GroupMembers**](DOCS.md#GroupMembers) |  |  [optional]
+**resources** | [**ResourceGroups**](DOCS.md#ResourceGroups) |  |  [optional]
 
 
 
@@ -15565,9 +15565,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;User&gt;**](User.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;User&gt;**](DOCS.md#User) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15599,9 +15599,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | resource as generic type |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**properties** | [**GroupShareProperties**](GroupShareProperties.md) |  | 
+**type** | [**Type**](DOCS.md#Type) | resource as generic type |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**properties** | [**GroupShareProperties**](DOCS.md#GroupShareProperties) |  | 
 
 
 
@@ -15625,9 +15625,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | Share representing groups and resource relationship |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;GroupShare&gt;**](GroupShare.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | Share representing groups and resource relationship |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;GroupShare&gt;**](DOCS.md#GroupShare) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15640,9 +15640,9 @@ collection of groups a user is member of
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of the resource |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Group&gt;**](Group.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Group&gt;**](DOCS.md#Group) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15654,9 +15654,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of the resource |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Group&gt;**](Group.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Group&gt;**](DOCS.md#Group) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15680,10 +15680,10 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**ImageProperties**](ImageProperties.md) |  | 
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**ImageProperties**](DOCS.md#ImageProperties) |  | 
 
 
 
@@ -15697,7 +15697,7 @@ Name | Type | Description | Notes
 **name** | **String** | A name of that resource |  [optional]
 **description** | **String** | Human readable description |  [optional]
 **location** | **String** | Location of that image/snapshot.  |  [optional] [readonly]
-**size** | [**BigDecimal**](BigDecimal.md) | The size of the image in GB |  [optional] [readonly]
+**size** | [**BigDecimal**](DOCS.md#BigDecimal) | The size of the image in GB |  [optional] [readonly]
 **cpuHotPlug** | **Boolean** | Is capable of CPU hot plug (no reboot required) |  [optional]
 **cpuHotUnplug** | **Boolean** | Is capable of CPU hot unplug (no reboot required) |  [optional]
 **ramHotPlug** | **Boolean** | Is capable of memory hot plug (no reboot required) |  [optional]
@@ -15743,9 +15743,9 @@ CDROM | &quot;CDROM&quot;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Image&gt;**](Image.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Image&gt;**](DOCS.md#Image) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15756,7 +15756,7 @@ Name | Type | Description | Notes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**href** | [**URI**](URI.md) | API entry point |  [optional] [readonly]
+**href** | [**URI**](DOCS.md#URI) | API entry point |  [optional] [readonly]
 **name** | **String** | Name of the API |  [optional] [readonly]
 **version** | **String** | Version of the API |  [optional] [readonly]
 
@@ -15770,10 +15770,10 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**IpBlockProperties**](IpBlockProperties.md) |  | 
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**IpBlockProperties**](DOCS.md#IpBlockProperties) |  | 
 
 
 
@@ -15788,7 +15788,7 @@ Name | Type | Description | Notes
 **location** | **String** | Location of that IP Block. Property cannot be modified after creation (disallowed in update requests) | 
 **size** | **Integer** | The size of the IP block | 
 **name** | **String** | A name of that resource |  [optional]
-**ipConsumers** | [**List&lt;IpConsumer&gt;**](IpConsumer.md) | Read-Only attribute. Lists consumption detail of an individual ip |  [optional] [readonly]
+**ipConsumers** | [**List&lt;IpConsumer&gt;**](DOCS.md#IpConsumer) | Read-Only attribute. Lists consumption detail of an individual ip |  [optional] [readonly]
 
 
 
@@ -15800,9 +15800,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;IpBlock&gt;**](IpBlock.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;IpBlock&gt;**](DOCS.md#IpBlock) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15844,10 +15844,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of object |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**KubernetesClusterProperties**](KubernetesClusterProperties.md) |  | 
-**entities** | [**KubernetesClusterEntities**](KubernetesClusterEntities.md) |  |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**KubernetesClusterProperties**](DOCS.md#KubernetesClusterProperties) |  | 
+**entities** | [**KubernetesClusterEntities**](DOCS.md#KubernetesClusterEntities) |  |  [optional]
 
 
 
@@ -15866,7 +15866,7 @@ K8S | &quot;k8s&quot;
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nodepools** | [**KubernetesNodePools**](KubernetesNodePools.md) |  |  [optional]
+**nodepools** | [**KubernetesNodePools**](DOCS.md#KubernetesNodePools) |  |  [optional]
 
 
 
@@ -15879,7 +15879,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | A Kubernetes Cluster Name. Valid Kubernetes Cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | 
 **k8sVersion** | **String** | The kubernetes version in which a cluster is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
-**maintenanceWindow** | [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  |  [optional]
+**maintenanceWindow** | [**KubernetesMaintenanceWindow**](DOCS.md#KubernetesMaintenanceWindow) |  |  [optional]
 
 
 
@@ -15892,8 +15892,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Unique representation for Kubernetes Cluster as a collection on a resource. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the collection representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;KubernetesCluster&gt;**](KubernetesCluster.md) | Array of items in that collection |  [optional] [readonly]
+**href** | [**URI**](DOCS.md#URI) | URL to the collection representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;KubernetesCluster&gt;**](DOCS.md#KubernetesCluster) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15914,8 +15914,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of object |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**properties** | [**KubernetesConfigProperties**](KubernetesConfigProperties.md) |  | 
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**properties** | [**KubernetesConfigProperties**](DOCS.md#KubernetesConfigProperties) |  | 
 
 
 
@@ -15973,9 +15973,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of object |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**KubernetesNodeMetadata**](KubernetesNodeMetadata.md) |  |  [optional]
-**properties** | [**KubernetesNodeProperties**](KubernetesNodeProperties.md) |  | 
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**KubernetesNodeMetadata**](DOCS.md#KubernetesNodeMetadata) |  |  [optional]
+**properties** | [**KubernetesNodeProperties**](DOCS.md#KubernetesNodeProperties) |  | 
 
 
 
@@ -15995,10 +15995,10 @@ NODEPOOL | &quot;nodepool&quot;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
-**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource was created |  [optional] [readonly]
-**lastModifiedDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource has been modified |  [optional] [readonly]
+**createdDate** | [**OffsetDateTime**](DOCS.md#OffsetDateTime) | The last time the resource was created |  [optional] [readonly]
+**lastModifiedDate** | [**OffsetDateTime**](DOCS.md#OffsetDateTime) | The last time the resource has been modified |  [optional] [readonly]
 **state** | [**StateEnum**](#StateEnum) | State of the resource. |  [optional] [readonly]
-**lastSoftwareUpdatedDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the software updated on node. |  [optional] [readonly]
+**lastSoftwareUpdatedDate** | [**OffsetDateTime**](DOCS.md#OffsetDateTime) | The last time the software updated on node. |  [optional] [readonly]
 
 
 
@@ -16024,9 +16024,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of object |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**KubernetesNodePoolProperties**](KubernetesNodePoolProperties.md) |  | 
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**KubernetesNodePoolProperties**](DOCS.md#KubernetesNodePoolProperties) |  | 
 
 
 
@@ -16060,9 +16060,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of object |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**KubernetesNodePoolPropertiesForPut**](KubernetesNodePoolPropertiesForPut.md) |  | 
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**KubernetesNodePoolPropertiesForPut**](DOCS.md#KubernetesNodePoolPropertiesForPut) |  | 
 
 
 
@@ -16115,11 +16115,11 @@ Name | Type | Description | Notes
 **storageType** | [**StorageTypeEnum**](#StorageTypeEnum) | Hardware type of the volume | 
 **storageSize** | **Integer** | The size of the volume in GB. The size should be greater than 10GB. | 
 **k8sVersion** | **String** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
-**maintenanceWindow** | [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  |  [optional]
-**autoScaling** | [**KubernetesAutoScaling**](KubernetesAutoScaling.md) |  |  [optional]
-**lans** | [**List&lt;KubernetesNodePoolLan&gt;**](KubernetesNodePoolLan.md) | array of additional LANs attached to worker nodes |  [optional]
-**labels** | [**KubernetesNodePoolLabel**](KubernetesNodePoolLabel.md) |  |  [optional]
-**annotations** | [**KubernetesNodePoolAnnotation**](KubernetesNodePoolAnnotation.md) |  |  [optional]
+**maintenanceWindow** | [**KubernetesMaintenanceWindow**](DOCS.md#KubernetesMaintenanceWindow) |  |  [optional]
+**autoScaling** | [**KubernetesAutoScaling**](DOCS.md#KubernetesAutoScaling) |  |  [optional]
+**lans** | [**List&lt;KubernetesNodePoolLan&gt;**](DOCS.md#KubernetesNodePoolLan) | array of additional LANs attached to worker nodes |  [optional]
+**labels** | [**KubernetesNodePoolLabel**](DOCS.md#KubernetesNodePoolLabel) |  |  [optional]
+**annotations** | [**KubernetesNodePoolAnnotation**](DOCS.md#KubernetesNodePoolAnnotation) |  |  [optional]
 
 
 
@@ -16159,9 +16159,9 @@ Name | Type | Description | Notes
 **storageType** | [**StorageTypeEnum**](#StorageTypeEnum) | Hardware type of the volume | 
 **storageSize** | **Integer** | The size of the volume in GB. The size should be greater than 10GB. | 
 **k8sVersion** | **String** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
-**maintenanceWindow** | [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  |  [optional]
-**autoScaling** | [**KubernetesAutoScaling**](KubernetesAutoScaling.md) |  |  [optional]
-**lans** | [**List&lt;KubernetesNodePoolLan&gt;**](KubernetesNodePoolLan.md) | array of additional LANs attached to worker nodes |  [optional]
+**maintenanceWindow** | [**KubernetesMaintenanceWindow**](DOCS.md#KubernetesMaintenanceWindow) |  |  [optional]
+**autoScaling** | [**KubernetesAutoScaling**](DOCS.md#KubernetesAutoScaling) |  |  [optional]
+**lans** | [**List&lt;KubernetesNodePoolLan&gt;**](DOCS.md#KubernetesNodePoolLan) | array of additional LANs attached to worker nodes |  [optional]
 
 
 
@@ -16193,8 +16193,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Unique representation for Kubernetes Node Pool as a collection on a resource. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the collection representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;KubernetesNodePool&gt;**](KubernetesNodePool.md) | Array of items in that collection |  [optional] [readonly]
+**href** | [**URI**](DOCS.md#URI) | URL to the collection representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;KubernetesNodePool&gt;**](DOCS.md#KubernetesNodePool) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16228,8 +16228,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Unique representation for Kubernetes Node Pool as a collection on a resource. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the collection representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;KubernetesNode&gt;**](KubernetesNode.md) | Array of items in that collection |  [optional] [readonly]
+**href** | [**URI**](DOCS.md#URI) | URL to the collection representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;KubernetesNode&gt;**](DOCS.md#KubernetesNode) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16250,9 +16250,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Label is identified using standard URN. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of object that has been created |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**NoStateMetaData**](NoStateMetaData.md) |  |  [optional]
-**properties** | [**LabelProperties**](LabelProperties.md) |  | 
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**NoStateMetaData**](DOCS.md#NoStateMetaData) |  |  [optional]
+**properties** | [**LabelProperties**](DOCS.md#LabelProperties) |  | 
 
 
 
@@ -16288,9 +16288,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Label on a resource is identified using label key. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of object that has been created |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**NoStateMetaData**](NoStateMetaData.md) |  |  [optional]
-**properties** | [**LabelResourceProperties**](LabelResourceProperties.md) |  | 
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**NoStateMetaData**](DOCS.md#NoStateMetaData) |  |  [optional]
+**properties** | [**LabelResourceProperties**](DOCS.md#LabelResourceProperties) |  | 
 
 
 
@@ -16323,8 +16323,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Unique representation for Label as a collection on a resource. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the collection representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;LabelResource&gt;**](LabelResource.md) | Array of items in that collection |  [optional] [readonly]
+**href** | [**URI**](DOCS.md#URI) | URL to the collection representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;LabelResource&gt;**](DOCS.md#LabelResource) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16345,8 +16345,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Unique representation for Label as a collection of resource. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
-**href** | [**URI**](URI.md) | URL to the collection representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Label&gt;**](Label.md) | Array of items in that collection |  [optional] [readonly]
+**href** | [**URI**](DOCS.md#URI) | URL to the collection representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Label&gt;**](DOCS.md#Label) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16366,11 +16366,11 @@ LABEL | &quot;label&quot;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**LanProperties**](LanProperties.md) |  | 
-**entities** | [**LanEntities**](LanEntities.md) |  |  [optional]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**LanProperties**](DOCS.md#LanProperties) |  | 
+**entities** | [**LanEntities**](DOCS.md#LanEntities) |  |  [optional]
 
 
 
@@ -16381,7 +16381,7 @@ Name | Type | Description | Notes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**nics** | [**LanNics**](LanNics.md) |  |  [optional]
+**nics** | [**LanNics**](DOCS.md#LanNics) |  |  [optional]
 
 
 
@@ -16393,9 +16393,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Nic&gt;**](Nic.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Nic&gt;**](DOCS.md#Nic) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16407,11 +16407,11 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**entities** | [**LanEntities**](LanEntities.md) |  |  [optional]
-**properties** | [**LanPropertiesPost**](LanPropertiesPost.md) |  | 
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**entities** | [**LanEntities**](DOCS.md#LanEntities) |  |  [optional]
+**properties** | [**LanPropertiesPost**](DOCS.md#LanPropertiesPost) |  | 
 
 
 
@@ -16423,7 +16423,7 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | A name of that resource |  [optional]
-**ipFailover** | [**List&lt;IPFailover&gt;**](IPFailover.md) | IP failover configurations for lan |  [optional]
+**ipFailover** | [**List&lt;IPFailover&gt;**](DOCS.md#IPFailover) | IP failover configurations for lan |  [optional]
 **pcc** | **String** | Unique identifier of the private cross connect the given LAN is connected to if any |  [optional]
 **_public** | **Boolean** | Does this LAN faces the public Internet or not |  [optional]
 
@@ -16449,9 +16449,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Lan&gt;**](Lan.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Lan&gt;**](DOCS.md#Lan) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16463,11 +16463,11 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**LoadbalancerProperties**](LoadbalancerProperties.md) |  | 
-**entities** | [**LoadbalancerEntities**](LoadbalancerEntities.md) |  |  [optional]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**LoadbalancerProperties**](DOCS.md#LoadbalancerProperties) |  | 
+**entities** | [**LoadbalancerEntities**](DOCS.md#LoadbalancerEntities) |  |  [optional]
 
 
 
@@ -16478,7 +16478,7 @@ Name | Type | Description | Notes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**balancednics** | [**BalancedNics**](BalancedNics.md) |  |  [optional]
+**balancednics** | [**BalancedNics**](DOCS.md#BalancedNics) |  |  [optional]
 
 
 
@@ -16512,9 +16512,9 @@ NULL | &quot;null&quot;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Loadbalancer&gt;**](Loadbalancer.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Loadbalancer&gt;**](DOCS.md#Loadbalancer) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16526,10 +16526,10 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**LocationProperties**](LocationProperties.md) |  | 
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**LocationProperties**](DOCS.md#LocationProperties) |  | 
 
 
 
@@ -16563,9 +16563,9 @@ SSD_STORAGE_ZONING | &quot;SSD_STORAGE_ZONING&quot;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Location&gt;**](Location.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Location&gt;**](DOCS.md#Location) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16577,11 +16577,11 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**NicProperties**](NicProperties.md) |  | 
-**entities** | [**NicEntities**](NicEntities.md) |  |  [optional]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**NicProperties**](DOCS.md#NicProperties) |  | 
+**entities** | [**NicEntities**](DOCS.md#NicEntities) |  |  [optional]
 
 
 
@@ -16592,7 +16592,7 @@ Name | Type | Description | Notes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**firewallrules** | [**FirewallRules**](FirewallRules.md) |  |  [optional]
+**firewallrules** | [**FirewallRules**](DOCS.md#FirewallRules) |  |  [optional]
 
 
 
@@ -16621,9 +16621,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Nic&gt;**](Nic.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Nic&gt;**](DOCS.md#Nic) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16635,10 +16635,10 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
-**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | The time the Resource was created |  [optional] [readonly]
+**createdDate** | [**OffsetDateTime**](DOCS.md#OffsetDateTime) | The time the Resource was created |  [optional] [readonly]
 **createdBy** | **String** | The user who has created the resource. |  [optional] [readonly]
 **createdByUserId** | **String** | The user id of the user who has created the resource. |  [optional] [readonly]
-**lastModifiedDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource has been modified |  [optional] [readonly]
+**lastModifiedDate** | [**OffsetDateTime**](DOCS.md#OffsetDateTime) | The last time the resource has been modified |  [optional] [readonly]
 **lastModifiedBy** | **String** | The user who last modified the resource. |  [optional] [readonly]
 **lastModifiedByUserId** | **String** | The user id of the user who has last modified the resource. |  [optional] [readonly]
 
@@ -16667,10 +16667,10 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**PrivateCrossConnectProperties**](PrivateCrossConnectProperties.md) |  | 
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**PrivateCrossConnectProperties**](DOCS.md#PrivateCrossConnectProperties) |  | 
 
 
 
@@ -16683,8 +16683,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | A name of that resource |  [optional]
 **description** | **String** | Human readable description |  [optional]
-**peers** | [**List&lt;Peer&gt;**](Peer.md) | Read-Only attribute. Lists LAN&#39;s joined to this private cross connect |  [optional] [readonly]
-**connectableDatacenters** | [**List&lt;ConnectableDatacenter&gt;**](ConnectableDatacenter.md) | Read-Only attribute. Lists datacenters that can be joined to this private cross connect |  [optional] [readonly]
+**peers** | [**List&lt;Peer&gt;**](DOCS.md#Peer) | Read-Only attribute. Lists LAN&#39;s joined to this private cross connect |  [optional] [readonly]
+**connectableDatacenters** | [**List&lt;ConnectableDatacenter&gt;**](DOCS.md#ConnectableDatacenter) | Read-Only attribute. Lists datacenters that can be joined to this private cross connect |  [optional] [readonly]
 
 
 
@@ -16696,9 +16696,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;PrivateCrossConnect&gt;**](PrivateCrossConnect.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;PrivateCrossConnect&gt;**](DOCS.md#PrivateCrossConnect) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16710,10 +16710,10 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**RequestMetadata**](RequestMetadata.md) |  |  [optional]
-**properties** | [**RequestProperties**](RequestProperties.md) |  | 
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**RequestMetadata**](DOCS.md#RequestMetadata) |  |  [optional]
+**properties** | [**RequestProperties**](DOCS.md#RequestProperties) |  | 
 
 
 
@@ -16724,10 +16724,10 @@ Name | Type | Description | Notes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource was created |  [optional] [readonly]
+**createdDate** | [**OffsetDateTime**](DOCS.md#OffsetDateTime) | The last time the resource was created |  [optional] [readonly]
 **createdBy** | **String** | The user who created the resource. |  [optional] [readonly]
 **etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
-**requestStatus** | [**RequestStatus**](RequestStatus.md) |  |  [optional]
+**requestStatus** | [**RequestStatus**](DOCS.md#RequestStatus) |  |  [optional]
 
 
 
@@ -16753,9 +16753,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**RequestStatusMetadata**](RequestStatusMetadata.md) |  |  [optional]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**RequestStatusMetadata**](DOCS.md#RequestStatusMetadata) |  |  [optional]
 
 
 
@@ -16769,7 +16769,7 @@ Name | Type | Description | Notes
 **status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
 **message** | **String** |  |  [optional]
 **etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
-**targets** | [**List&lt;RequestTarget&gt;**](RequestTarget.md) |  |  [optional]
+**targets** | [**List&lt;RequestTarget&gt;**](DOCS.md#RequestTarget) |  |  [optional]
 
 
 
@@ -16791,7 +16791,7 @@ FAILED | &quot;FAILED&quot;
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**target** | [**ResourceReference**](ResourceReference.md) |  |  [optional]
+**target** | [**ResourceReference**](DOCS.md#ResourceReference) |  |  [optional]
 **status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
 
 
@@ -16815,9 +16815,9 @@ FAILED | &quot;FAILED&quot;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Request&gt;**](Request.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Request&gt;**](DOCS.md#Request) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16830,11 +16830,11 @@ datacenter resource representation
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of the resource |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**ResourceProperties**](ResourceProperties.md) |  |  [optional]
-**entities** | [**ResourceEntities**](ResourceEntities.md) |  |  [optional]
+**type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**ResourceProperties**](DOCS.md#ResourceProperties) |  |  [optional]
+**entities** | [**ResourceEntities**](DOCS.md#ResourceEntities) |  |  [optional]
 
 
 
@@ -16845,7 +16845,7 @@ Name | Type | Description | Notes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**groups** | [**ResourceGroups**](ResourceGroups.md) |  |  [optional]
+**groups** | [**ResourceGroups**](DOCS.md#ResourceGroups) |  |  [optional]
 
 
 
@@ -16858,9 +16858,9 @@ Resources assigned to this group.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of the resource |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Resource&gt;**](Resource.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Resource&gt;**](DOCS.md#Resource) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16911,8 +16911,8 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier | 
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
 
 
 
@@ -16925,9 +16925,9 @@ Collection to represent the resource
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of the resource |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Resource&gt;**](Resource.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Resource&gt;**](DOCS.md#Resource) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16940,9 +16940,9 @@ Resources owned by a user.
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of the resource |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Resource&gt;**](Resource.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Resource&gt;**](DOCS.md#Resource) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16954,10 +16954,10 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of the resource |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**S3KeyMetadata**](S3KeyMetadata.md) |  |  [optional]
-**properties** | [**S3KeyProperties**](S3KeyProperties.md) |  | 
+**type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**S3KeyMetadata**](DOCS.md#S3KeyMetadata) |  |  [optional]
+**properties** | [**S3KeyProperties**](DOCS.md#S3KeyProperties) |  | 
 
 
 
@@ -16969,7 +16969,7 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
-**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | The time the S3 key was created |  [optional] [readonly]
+**createdDate** | [**OffsetDateTime**](DOCS.md#OffsetDateTime) | The time the S3 key was created |  [optional] [readonly]
 
 
 
@@ -16993,9 +16993,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of the resource |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;S3Key&gt;**](S3Key.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;S3Key&gt;**](DOCS.md#S3Key) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -17018,11 +17018,11 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**ServerProperties**](ServerProperties.md) |  | 
-**entities** | [**ServerEntities**](ServerEntities.md) |  |  [optional]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**ServerProperties**](DOCS.md#ServerProperties) |  | 
+**entities** | [**ServerEntities**](DOCS.md#ServerEntities) |  |  [optional]
 
 
 
@@ -17033,9 +17033,9 @@ Name | Type | Description | Notes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**cdroms** | [**Cdroms**](Cdroms.md) |  |  [optional]
-**volumes** | [**AttachedVolumes**](AttachedVolumes.md) |  |  [optional]
-**nics** | [**Nics**](Nics.md) |  |  [optional]
+**cdroms** | [**Cdroms**](DOCS.md#Cdroms) |  |  [optional]
+**volumes** | [**AttachedVolumes**](DOCS.md#AttachedVolumes) |  |  [optional]
+**nics** | [**Nics**](DOCS.md#Nics) |  |  [optional]
 
 
 
@@ -17051,8 +17051,8 @@ Name | Type | Description | Notes
 **ram** | **Integer** | The amount of memory for the server in MB, e.g. 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB. | 
 **availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the server should exist |  [optional]
 **vmState** | [**VmStateEnum**](#VmStateEnum) | Status of the virtual Machine |  [optional] [readonly]
-**bootCdrom** | [**ResourceReference**](ResourceReference.md) |  |  [optional]
-**bootVolume** | [**ResourceReference**](ResourceReference.md) |  |  [optional]
+**bootCdrom** | [**ResourceReference**](DOCS.md#ResourceReference) |  |  [optional]
+**bootVolume** | [**ResourceReference**](DOCS.md#ResourceReference) |  |  [optional]
 **cpuFamily** | **String** | Cpu family of pserver |  [optional]
 
 
@@ -17089,9 +17089,9 @@ CRASHED | &quot;CRASHED&quot;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Server&gt;**](Server.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Server&gt;**](DOCS.md#Server) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -17103,10 +17103,10 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**SnapshotProperties**](SnapshotProperties.md) |  | 
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**SnapshotProperties**](DOCS.md#SnapshotProperties) |  | 
 
 
 
@@ -17120,7 +17120,7 @@ Name | Type | Description | Notes
 **name** | **String** | A name of that resource |  [optional]
 **description** | **String** | Human readable description |  [optional]
 **location** | **String** | Location of that image/snapshot.  |  [optional] [readonly]
-**size** | [**BigDecimal**](BigDecimal.md) | The size of the image in GB |  [optional] [readonly]
+**size** | [**BigDecimal**](DOCS.md#BigDecimal) | The size of the image in GB |  [optional] [readonly]
 **secAuthProtection** | **Boolean** | Boolean value representing if the snapshot requires extra protection e.g. two factor protection |  [optional]
 **cpuHotPlug** | **Boolean** | Is capable of CPU hot plug (no reboot required) |  [optional]
 **cpuHotUnplug** | **Boolean** | Is capable of CPU hot unplug (no reboot required) |  [optional]
@@ -17156,9 +17156,9 @@ OTHER | &quot;OTHER&quot;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Snapshot&gt;**](Snapshot.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Snapshot&gt;**](DOCS.md#Snapshot) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -17180,11 +17180,11 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**UserMetadata**](UserMetadata.md) |  |  [optional]
-**properties** | [**UserProperties**](UserProperties.md) |  | 
-**entities** | [**UsersEntities**](UsersEntities.md) |  |  [optional]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**UserMetadata**](DOCS.md#UserMetadata) |  |  [optional]
+**properties** | [**UserProperties**](DOCS.md#UserProperties) |  | 
+**entities** | [**UsersEntities**](DOCS.md#UsersEntities) |  |  [optional]
 
 
 
@@ -17196,8 +17196,8 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
-**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | time of creation of the user |  [optional] [readonly]
-**lastLogin** | [**OffsetDateTime**](OffsetDateTime.md) | time of last login by the user |  [optional] [readonly]
+**createdDate** | [**OffsetDateTime**](DOCS.md#OffsetDateTime) | time of creation of the user |  [optional] [readonly]
+**lastLogin** | [**OffsetDateTime**](DOCS.md#OffsetDateTime) | time of last login by the user |  [optional] [readonly]
 
 
 
@@ -17227,9 +17227,9 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;User&gt;**](User.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;User&gt;**](DOCS.md#User) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -17240,8 +17240,8 @@ Name | Type | Description | Notes
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**owns** | [**ResourcesUsers**](ResourcesUsers.md) |  |  [optional]
-**groups** | [**GroupUsers**](GroupUsers.md) |  |  [optional]
+**owns** | [**ResourcesUsers**](DOCS.md#ResourcesUsers) |  |  [optional]
+**groups** | [**GroupUsers**](DOCS.md#GroupUsers) |  |  [optional]
 
 
 
@@ -17253,10 +17253,10 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
-**properties** | [**VolumeProperties**](VolumeProperties.md) |  | 
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
+**properties** | [**VolumeProperties**](DOCS.md#VolumeProperties) |  | 
 
 
 
@@ -17269,7 +17269,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | A name of that resource |  [optional]
 **type** | [**TypeEnum**](#TypeEnum) | Hardware type of the volume. |  [optional]
-**size** | [**BigDecimal**](BigDecimal.md) | The size of the volume in GB | 
+**size** | [**BigDecimal**](DOCS.md#BigDecimal) | The size of the volume in GB | 
 **availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront |  [optional]
 **image** | **String** | Image or snapshot ID to be used as template for this volume |  [optional]
 **imageAlias** | **String** |  |  [optional]
@@ -17339,9 +17339,9 @@ OTHER | &quot;OTHER&quot;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
-**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
-**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Volume&gt;**](Volume.md) | Array of items in that collection |  [optional] [readonly]
+**type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
+**href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Volume&gt;**](DOCS.md#Volume) | Array of items in that collection |  [optional] [readonly]
 
 
 

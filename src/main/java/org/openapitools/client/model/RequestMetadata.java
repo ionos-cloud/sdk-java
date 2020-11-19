@@ -29,7 +29,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * RequestMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T13:06:24.019174+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T13:10:10.814289+02:00[Europe/Bucharest]")
 public class RequestMetadata {
   public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
   @SerializedName(SERIALIZED_NAME_CREATED_DATE)
