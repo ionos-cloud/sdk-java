@@ -5,7 +5,7 @@
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2020-11-19T13:29:06.684132+02:00[Europe/Bucharest]
+  - Build date: 2020-11-19T13:36:53.491818+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -515,7 +515,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](DOCS.md#BackupUnit)
 
 ### Authorization
 
@@ -594,7 +594,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BackupUnits**](BackupUnits.md)
+[**BackupUnits**](DOCS.md#BackupUnits)
 
 ### Authorization
 
@@ -670,14 +670,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **backupunitId** | **String**| The unique ID of the backup unit |
- **backupUnitProperties** | [**BackupUnitProperties**](BackupUnitProperties.md)| Modified backup Unit properties |
+ **backupUnitProperties** | [**BackupUnitProperties**](DOCS.md#BackupUnitProperties)| Modified backup Unit properties |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](DOCS.md#BackupUnit)
 
 ### Authorization
 
@@ -751,14 +751,14 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **backupUnit** | [**BackupUnit**](BackupUnit.md)| Payload containing data to create a new Backup Unit |
+ **backupUnit** | [**BackupUnit**](DOCS.md#BackupUnit)| Payload containing data to create a new Backup Unit |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](DOCS.md#BackupUnit)
 
 ### Authorization
 
@@ -834,14 +834,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **backupunitId** | **String**| The unique ID of the backup unit |
- **backupUnit** | [**BackupUnit**](BackupUnit.md)| Modified backup Unit |
+ **backupUnit** | [**BackupUnit**](DOCS.md#BackupUnit)| Modified backup Unit |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](DOCS.md#BackupUnit)
 
 ### Authorization
 
@@ -920,7 +920,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BackupUnitSSO**](BackupUnitSSO.md)
+[**BackupUnitSSO**](DOCS.md#BackupUnitSSO)
 
 ### Authorization
 
@@ -1012,7 +1012,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Contract**](Contract.md)
+[**Contract**](DOCS.md#Contract)
 
 ### Authorization
 
@@ -1192,7 +1192,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](DOCS.md#Datacenter)
 
 ### Authorization
 
@@ -1271,7 +1271,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Datacenters**](Datacenters.md)
+[**Datacenters**](DOCS.md#Datacenters)
 
 ### Authorization
 
@@ -1347,14 +1347,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
- **datacenter** | [**DatacenterProperties**](DatacenterProperties.md)| Modified properties of Data Center |
+ **datacenter** | [**DatacenterProperties**](DOCS.md#DatacenterProperties)| Modified properties of Data Center |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](DOCS.md#Datacenter)
 
 ### Authorization
 
@@ -1428,14 +1428,14 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **datacenter** | [**Datacenter**](Datacenter.md)| Datacenter to be created |
+ **datacenter** | [**Datacenter**](DOCS.md#Datacenter)| Datacenter to be created |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](DOCS.md#Datacenter)
 
 ### Authorization
 
@@ -1511,14 +1511,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
- **datacenter** | [**Datacenter**](Datacenter.md)| Modified Data Center |
+ **datacenter** | [**Datacenter**](DOCS.md#Datacenter)| Modified Data Center |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](DOCS.md#Datacenter)
 
 ### Authorization
 
@@ -1697,7 +1697,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](DOCS.md#Image)
 
 ### Authorization
 
@@ -1776,7 +1776,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Images**](Images.md)
+[**Images**](DOCS.md#Images)
 
 ### Authorization
 
@@ -1852,14 +1852,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **imageId** | **String**|  |
- **image** | [**ImageProperties**](ImageProperties.md)| Modified Image |
+ **image** | [**ImageProperties**](DOCS.md#ImageProperties)| Modified Image |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](DOCS.md#Image)
 
 ### Authorization
 
@@ -1935,14 +1935,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **imageId** | **String**|  |
- **image** | [**Image**](Image.md)| Modified Image |
+ **image** | [**Image**](DOCS.md#Image)| Modified Image |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](DOCS.md#Image)
 
 ### Authorization
 
@@ -2122,7 +2122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](DOCS.md#IpBlock)
 
 ### Authorization
 
@@ -2201,7 +2201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IpBlocks**](IpBlocks.md)
+[**IpBlocks**](DOCS.md#IpBlocks)
 
 ### Authorization
 
@@ -2277,14 +2277,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ipblockId** | **String**|  |
- **ipblock** | [**IpBlockProperties**](IpBlockProperties.md)| IP Block to be modified |
+ **ipblock** | [**IpBlockProperties**](DOCS.md#IpBlockProperties)| IP Block to be modified |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](DOCS.md#IpBlock)
 
 ### Authorization
 
@@ -2358,14 +2358,14 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **ipblock** | [**IpBlock**](IpBlock.md)| IP Block to be reserved |
+ **ipblock** | [**IpBlock**](DOCS.md#IpBlock)| IP Block to be reserved |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](DOCS.md#IpBlock)
 
 ### Authorization
 
@@ -2441,14 +2441,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ipblockId** | **String**|  |
- **ipblock** | [**IpBlock**](IpBlock.md)| IP Block to be modified |
+ **ipblock** | [**IpBlock**](DOCS.md#IpBlock)| IP Block to be modified |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](DOCS.md#IpBlock)
 
 ### Authorization
 
@@ -2640,7 +2640,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**KubernetesCluster**](KubernetesCluster.md)
+[**KubernetesCluster**](DOCS.md#KubernetesCluster)
 
 ### Authorization
 
@@ -2719,7 +2719,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**KubernetesClusters**](KubernetesClusters.md)
+[**KubernetesClusters**](DOCS.md#KubernetesClusters)
 
 ### Authorization
 
@@ -2800,7 +2800,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**KubernetesConfig**](KubernetesConfig.md)
+[**KubernetesConfig**](DOCS.md#KubernetesConfig)
 
 ### Authorization
 
@@ -2966,7 +2966,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**KubernetesNodePool**](KubernetesNodePool.md)
+[**KubernetesNodePool**](DOCS.md#KubernetesNodePool)
 
 ### Authorization
 
@@ -3047,7 +3047,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**KubernetesNodePools**](KubernetesNodePools.md)
+[**KubernetesNodePools**](DOCS.md#KubernetesNodePools)
 
 ### Authorization
 
@@ -3217,7 +3217,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**KubernetesNode**](KubernetesNode.md)
+[**KubernetesNode**](DOCS.md#KubernetesNode)
 
 ### Authorization
 
@@ -3300,7 +3300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**KubernetesNodes**](KubernetesNodes.md)
+[**KubernetesNodes**](DOCS.md#KubernetesNodes)
 
 ### Authorization
 
@@ -3461,14 +3461,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
- **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md)| Details of Kubernetes Node Pool |
+ **kubernetesNodePool** | [**KubernetesNodePool**](DOCS.md#KubernetesNodePool)| Details of Kubernetes Node Pool |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**KubernetesNodePool**](KubernetesNodePool.md)
+[**KubernetesNodePool**](DOCS.md#KubernetesNodePool)
 
 ### Authorization
 
@@ -3546,14 +3546,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
  **nodepoolId** | **String**| The unique ID of the Kubernetes Node Pool |
- **kubernetesNodePoolProperties** | [**KubernetesNodePoolPropertiesForPut**](KubernetesNodePoolPropertiesForPut.md)| Details of the Kubernetes Node Pool |
+ **kubernetesNodePoolProperties** | [**KubernetesNodePoolPropertiesForPut**](DOCS.md#KubernetesNodePoolPropertiesForPut)| Details of the Kubernetes Node Pool |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**KubernetesNodePoolForPut**](KubernetesNodePoolForPut.md)
+[**KubernetesNodePoolForPut**](DOCS.md#KubernetesNodePoolForPut)
 
 ### Authorization
 
@@ -3627,14 +3627,14 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **kubernetesCluster** | [**KubernetesCluster**](KubernetesCluster.md)| Properties of the Kubernetes Cluster |
+ **kubernetesCluster** | [**KubernetesCluster**](DOCS.md#KubernetesCluster)| Properties of the Kubernetes Cluster |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**KubernetesCluster**](KubernetesCluster.md)
+[**KubernetesCluster**](DOCS.md#KubernetesCluster)
 
 ### Authorization
 
@@ -3710,14 +3710,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
- **kubernetescluster** | [**KubernetesCluster**](KubernetesCluster.md)| Details of of the Kubernetes Cluster |
+ **kubernetescluster** | [**KubernetesCluster**](DOCS.md#KubernetesCluster)| Details of of the Kubernetes Cluster |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**KubernetesCluster**](KubernetesCluster.md)
+[**KubernetesCluster**](DOCS.md#KubernetesCluster)
 
 ### Authorization
 
@@ -4139,7 +4139,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -4220,7 +4220,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](DOCS.md#LabelResources)
 
 ### Authorization
 
@@ -4296,14 +4296,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the Data Center |
- **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+ **label** | [**LabelResource**](DOCS.md#LabelResource)| Label to be added |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -4381,14 +4381,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the Data Center |
  **key** | **String**| The key of the Label |
- **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+ **label** | [**LabelResource**](DOCS.md#LabelResource)| Modified Label |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -4558,7 +4558,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -4641,7 +4641,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](DOCS.md#LabelResources)
 
 ### Authorization
 
@@ -4719,14 +4719,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the Datacenter |
  **serverId** | **String**| The unique ID of the Server |
- **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+ **label** | [**LabelResource**](DOCS.md#LabelResource)| Label to be added |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -4806,14 +4806,14 @@ Name | Type | Description  | Notes
  **datacenterId** | **String**| The unique ID of the Datacenter |
  **serverId** | **String**| The unique ID of the Server |
  **key** | **String**| The key of the Label |
- **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+ **label** | [**LabelResource**](DOCS.md#LabelResource)| Modified Label |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -4983,7 +4983,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -5066,7 +5066,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](DOCS.md#LabelResources)
 
 ### Authorization
 
@@ -5144,14 +5144,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the Datacenter |
  **volumeId** | **String**| The unique ID of the Volume |
- **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+ **label** | [**LabelResource**](DOCS.md#LabelResource)| Label to be added |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -5231,14 +5231,14 @@ Name | Type | Description  | Notes
  **datacenterId** | **String**| The unique ID of the Datacenter |
  **volumeId** | **String**| The unique ID of the Volume |
  **key** | **String**| The key of the Label |
- **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+ **label** | [**LabelResource**](DOCS.md#LabelResource)| Modified Label |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -5404,7 +5404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -5485,7 +5485,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](DOCS.md#LabelResources)
 
 ### Authorization
 
@@ -5561,14 +5561,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ipblockId** | **String**| The unique ID of the Ip Block |
- **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+ **label** | [**LabelResource**](DOCS.md#LabelResource)| Label to be added |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -5646,14 +5646,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ipblockId** | **String**| The unique ID of the Ip Block |
  **key** | **String**| The key of the Label |
- **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+ **label** | [**LabelResource**](DOCS.md#LabelResource)| Modified Label |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -5734,7 +5734,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Label**](Label.md)
+[**Label**](DOCS.md#Label)
 
 ### Authorization
 
@@ -5813,7 +5813,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Labels**](Labels.md)
+[**Labels**](DOCS.md#Labels)
 
 ### Authorization
 
@@ -5979,7 +5979,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -6060,7 +6060,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](DOCS.md#LabelResources)
 
 ### Authorization
 
@@ -6136,14 +6136,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **snapshotId** | **String**| The unique ID of the Snapshot |
- **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+ **label** | [**LabelResource**](DOCS.md#LabelResource)| Label to be added |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -6221,14 +6221,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **snapshotId** | **String**| The unique ID of the Snapshot |
  **key** | **String**| The key of the Label |
- **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+ **label** | [**LabelResource**](DOCS.md#LabelResource)| Modified Label |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](DOCS.md#LabelResource)
 
 ### Authorization
 
@@ -6415,7 +6415,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Lan**](Lan.md)
+[**Lan**](DOCS.md#Lan)
 
 ### Authorization
 
@@ -6496,7 +6496,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Lans**](Lans.md)
+[**Lans**](DOCS.md#Lans)
 
 ### Authorization
 
@@ -6581,7 +6581,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](DOCS.md#Nic)
 
 ### Authorization
 
@@ -6664,7 +6664,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**LanNics**](LanNics.md)
+[**LanNics**](DOCS.md#LanNics)
 
 ### Authorization
 
@@ -6742,14 +6742,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
  **lanId** | **String**| The unique ID of the LAN |
- **nic** | [**Nic**](Nic.md)| Nic to be attached |
+ **nic** | [**Nic**](DOCS.md#Nic)| Nic to be attached |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](DOCS.md#Nic)
 
 ### Authorization
 
@@ -6827,14 +6827,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
  **lanId** | **String**| The unique ID of the LAN |
- **lan** | [**LanProperties**](LanProperties.md)| Modified Lan |
+ **lan** | [**LanProperties**](DOCS.md#LanProperties)| Modified Lan |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Lan**](Lan.md)
+[**Lan**](DOCS.md#Lan)
 
 ### Authorization
 
@@ -6910,14 +6910,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
- **lan** | [**LanPost**](LanPost.md)| Lan to be created |
+ **lan** | [**LanPost**](DOCS.md#LanPost)| Lan to be created |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**LanPost**](LanPost.md)
+[**LanPost**](DOCS.md#LanPost)
 
 ### Authorization
 
@@ -6995,14 +6995,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
  **lanId** | **String**| The unique ID of the LAN |
- **lan** | [**Lan**](Lan.md)| Modified Lan |
+ **lan** | [**Lan**](DOCS.md#Lan)| Modified Lan |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Lan**](Lan.md)
+[**Lan**](DOCS.md#Lan)
 
 ### Authorization
 
@@ -7194,7 +7194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](DOCS.md#Nic)
 
 ### Authorization
 
@@ -7277,7 +7277,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BalancedNics**](BalancedNics.md)
+[**BalancedNics**](DOCS.md#BalancedNics)
 
 ### Authorization
 
@@ -7355,14 +7355,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
  **loadbalancerId** | **String**| The unique ID of the Load Balancer |
- **nic** | [**Nic**](Nic.md)| Nic id to be attached |
+ **nic** | [**Nic**](DOCS.md#Nic)| Nic id to be attached |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](DOCS.md#Nic)
 
 ### Authorization
 
@@ -7528,7 +7528,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](DOCS.md#Loadbalancer)
 
 ### Authorization
 
@@ -7609,7 +7609,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Loadbalancers**](Loadbalancers.md)
+[**Loadbalancers**](DOCS.md#Loadbalancers)
 
 ### Authorization
 
@@ -7687,14 +7687,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
  **loadbalancerId** | **String**| The unique ID of the Load Balancer |
- **loadbalancer** | [**LoadbalancerProperties**](LoadbalancerProperties.md)| Modified Loadbalancer |
+ **loadbalancer** | [**LoadbalancerProperties**](DOCS.md#LoadbalancerProperties)| Modified Loadbalancer |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](DOCS.md#Loadbalancer)
 
 ### Authorization
 
@@ -7770,14 +7770,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
- **loadbalancer** | [**Loadbalancer**](Loadbalancer.md)| Loadbalancer to be created |
+ **loadbalancer** | [**Loadbalancer**](DOCS.md#Loadbalancer)| Loadbalancer to be created |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](DOCS.md#Loadbalancer)
 
 ### Authorization
 
@@ -7855,14 +7855,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
  **loadbalancerId** | **String**| The unique ID of the Load Balancer |
- **loadbalancer** | [**Loadbalancer**](Loadbalancer.md)| Modified Loadbalancer |
+ **loadbalancer** | [**Loadbalancer**](DOCS.md#Loadbalancer)| Modified Loadbalancer |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](DOCS.md#Loadbalancer)
 
 ### Authorization
 
@@ -7958,7 +7958,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Locations**](Locations.md)
+[**Locations**](DOCS.md#Locations)
 
 ### Authorization
 
@@ -8041,7 +8041,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Location**](Location.md)
+[**Location**](DOCS.md#Location)
 
 ### Authorization
 
@@ -8120,7 +8120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Locations**](Locations.md)
+[**Locations**](DOCS.md#Locations)
 
 ### Authorization
 
@@ -8314,7 +8314,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](DOCS.md#Nic)
 
 ### Authorization
 
@@ -8488,7 +8488,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](DOCS.md#FirewallRule)
 
 ### Authorization
 
@@ -8573,7 +8573,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**FirewallRules**](FirewallRules.md)
+[**FirewallRules**](DOCS.md#FirewallRules)
 
 ### Authorization
 
@@ -8655,14 +8655,14 @@ Name | Type | Description  | Notes
  **serverId** | **String**| The unique ID of the Server |
  **nicId** | **String**| The unique ID of the NIC |
  **firewallruleId** | **String**| The unique ID of the Firewall Rule |
- **firewallrule** | [**FirewallruleProperties**](FirewallruleProperties.md)| Modified Firewall Rule |
+ **firewallrule** | [**FirewallruleProperties**](DOCS.md#FirewallruleProperties)| Modified Firewall Rule |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](DOCS.md#FirewallRule)
 
 ### Authorization
 
@@ -8742,14 +8742,14 @@ Name | Type | Description  | Notes
  **datacenterId** | **String**| The unique ID of the datacenter |
  **serverId** | **String**| The unique ID of the server |
  **nicId** | **String**| The unique ID of the NIC |
- **firewallrule** | [**FirewallRule**](FirewallRule.md)| Firewall Rule to be created |
+ **firewallrule** | [**FirewallRule**](DOCS.md#FirewallRule)| Firewall Rule to be created |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](DOCS.md#FirewallRule)
 
 ### Authorization
 
@@ -8831,14 +8831,14 @@ Name | Type | Description  | Notes
  **serverId** | **String**| The unique ID of the Server |
  **nicId** | **String**| The unique ID of the NIC |
  **firewallruleId** | **String**| The unique ID of the Firewall Rule |
- **firewallrule** | [**FirewallRule**](FirewallRule.md)| Modified Firewall Rule |
+ **firewallrule** | [**FirewallRule**](DOCS.md#FirewallRule)| Modified Firewall Rule |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](DOCS.md#FirewallRule)
 
 ### Authorization
 
@@ -8921,7 +8921,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Nics**](Nics.md)
+[**Nics**](DOCS.md#Nics)
 
 ### Authorization
 
@@ -9001,14 +9001,14 @@ Name | Type | Description  | Notes
  **datacenterId** | **String**| The unique ID of the datacenter |
  **serverId** | **String**| The unique ID of the Server |
  **nicId** | **String**| The unique ID of the NIC |
- **nic** | [**NicProperties**](NicProperties.md)| Modified properties of Nic |
+ **nic** | [**NicProperties**](DOCS.md#NicProperties)| Modified properties of Nic |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](DOCS.md#Nic)
 
 ### Authorization
 
@@ -9086,14 +9086,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
  **serverId** | **String**| The unique ID of the Server |
- **nic** | [**Nic**](Nic.md)| Nic to be created |
+ **nic** | [**Nic**](DOCS.md#Nic)| Nic to be created |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](DOCS.md#Nic)
 
 ### Authorization
 
@@ -9173,14 +9173,14 @@ Name | Type | Description  | Notes
  **datacenterId** | **String**| The unique ID of the datacenter |
  **serverId** | **String**| The unique ID of the Server |
  **nicId** | **String**| The unique ID of the NIC |
- **nic** | [**Nic**](Nic.md)| Modified Nic |
+ **nic** | [**Nic**](DOCS.md#Nic)| Modified Nic |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](DOCS.md#Nic)
 
 ### Authorization
 
@@ -9359,7 +9359,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**PrivateCrossConnect**](DOCS.md#PrivateCrossConnect)
 
 ### Authorization
 
@@ -9438,7 +9438,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PrivateCrossConnects**](PrivateCrossConnects.md)
+[**PrivateCrossConnects**](DOCS.md#PrivateCrossConnects)
 
 ### Authorization
 
@@ -9514,14 +9514,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **pccId** | **String**| The unique ID of the private cross-connect |
- **pcc** | [**PrivateCrossConnectProperties**](PrivateCrossConnectProperties.md)| Modified properties of private cross-connect |
+ **pcc** | [**PrivateCrossConnectProperties**](DOCS.md#PrivateCrossConnectProperties)| Modified properties of private cross-connect |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**PrivateCrossConnect**](DOCS.md#PrivateCrossConnect)
 
 ### Authorization
 
@@ -9595,14 +9595,14 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pcc** | [**PrivateCrossConnect**](PrivateCrossConnect.md)| Private Cross-Connect to be created |
+ **pcc** | [**PrivateCrossConnect**](DOCS.md#PrivateCrossConnect)| Private Cross-Connect to be created |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**PrivateCrossConnect**](DOCS.md#PrivateCrossConnect)
 
 ### Authorization
 
@@ -9698,7 +9698,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Request**](Request.md)
+[**Request**](DOCS.md#Request)
 
 ### Authorization
 
@@ -9791,7 +9791,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Requests**](Requests.md)
+[**Requests**](DOCS.md#Requests)
 
 ### Authorization
 
@@ -9872,7 +9872,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RequestStatus**](RequestStatus.md)
+[**RequestStatus**](DOCS.md#RequestStatus)
 
 ### Authorization
 
@@ -10072,7 +10072,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](DOCS.md#Image)
 
 ### Authorization
 
@@ -10155,7 +10155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Cdroms**](Cdroms.md)
+[**Cdroms**](DOCS.md#Cdroms)
 
 ### Authorization
 
@@ -10233,14 +10233,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the Datacenter |
  **serverId** | **String**| The unique ID of the Server |
- **cdrom** | [**Image**](Image.md)| CD-ROM to be attached |
+ **cdrom** | [**Image**](DOCS.md#Image)| CD-ROM to be attached |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](DOCS.md#Image)
 
 ### Authorization
 
@@ -10406,7 +10406,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](DOCS.md#Server)
 
 ### Authorization
 
@@ -10489,7 +10489,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Servers**](Servers.md)
+[**Servers**](DOCS.md#Servers)
 
 ### Authorization
 
@@ -10567,14 +10567,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
  **serverId** | **String**| The unique ID of the server |
- **server** | [**ServerProperties**](ServerProperties.md)| Modified properties of Server |
+ **server** | [**ServerProperties**](DOCS.md#ServerProperties)| Modified properties of Server |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](DOCS.md#Server)
 
 ### Authorization
 
@@ -10650,14 +10650,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
- **server** | [**Server**](Server.md)| Server to be created |
+ **server** | [**Server**](DOCS.md#Server)| Server to be created |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](DOCS.md#Server)
 
 ### Authorization
 
@@ -10735,14 +10735,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
  **serverId** | **String**| The unique ID of the server |
- **server** | [**Server**](Server.md)| Modified Server |
+ **server** | [**Server**](DOCS.md#Server)| Modified Server |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](DOCS.md#Server)
 
 ### Authorization
 
@@ -11244,7 +11244,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](DOCS.md#Volume)
 
 ### Authorization
 
@@ -11321,7 +11321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AttachedVolumes**](AttachedVolumes.md)
+[**AttachedVolumes**](DOCS.md#AttachedVolumes)
 
 ### Authorization
 
@@ -11393,14 +11393,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the Datacenter |
  **serverId** | **String**| The unique ID of the Server |
- **volume** | [**Volume**](Volume.md)| Volume to be attached (created and attached) |
+ **volume** | [**Volume**](DOCS.md#Volume)| Volume to be attached (created and attached) |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](DOCS.md#Volume)
 
 ### Authorization
 
@@ -11579,7 +11579,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](DOCS.md#Snapshot)
 
 ### Authorization
 
@@ -11658,7 +11658,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Snapshots**](Snapshots.md)
+[**Snapshots**](DOCS.md#Snapshots)
 
 ### Authorization
 
@@ -11734,14 +11734,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **snapshotId** | **String**| The unique ID of the Snapshot |
- **snapshot** | [**SnapshotProperties**](SnapshotProperties.md)| Modified Snapshot |
+ **snapshot** | [**SnapshotProperties**](DOCS.md#SnapshotProperties)| Modified Snapshot |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](DOCS.md#Snapshot)
 
 ### Authorization
 
@@ -11817,14 +11817,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **snapshotId** | **String**| The unique ID of the Snapshot |
- **snapshot** | [**Snapshot**](Snapshot.md)| Modified Snapshot |
+ **snapshot** | [**Snapshot**](DOCS.md#Snapshot)| Modified Snapshot |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](DOCS.md#Snapshot)
 
 ### Authorization
 
@@ -12028,7 +12028,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](DOCS.md#Group)
 
 ### Authorization
 
@@ -12107,7 +12107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Groups**](Groups.md)
+[**Groups**](DOCS.md#Groups)
 
 ### Authorization
 
@@ -12181,14 +12181,14 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **group** | [**Group**](Group.md)| Group to be created |
+ **group** | [**Group**](DOCS.md#Group)| Group to be created |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](DOCS.md#Group)
 
 ### Authorization
 
@@ -12264,14 +12264,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **String**| The unique ID of the group |
- **group** | [**Group**](Group.md)| Modified properties of the Group |
+ **group** | [**Group**](DOCS.md#Group)| Modified properties of the Group |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](DOCS.md#Group)
 
 ### Authorization
 
@@ -12350,7 +12350,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResourceGroups**](ResourceGroups.md)
+[**ResourceGroups**](DOCS.md#ResourceGroups)
 
 ### Authorization
 
@@ -12516,7 +12516,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GroupShare**](GroupShare.md)
+[**GroupShare**](DOCS.md#GroupShare)
 
 ### Authorization
 
@@ -12597,7 +12597,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GroupShares**](GroupShares.md)
+[**GroupShares**](DOCS.md#GroupShares)
 
 ### Authorization
 
@@ -12675,14 +12675,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **String**|  |
  **resourceId** | **String**|  |
- **resource** | [**GroupShare**](GroupShare.md)| Resource to be added |
+ **resource** | [**GroupShare**](DOCS.md#GroupShare)| Resource to be added |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**GroupShare**](GroupShare.md)
+[**GroupShare**](DOCS.md#GroupShare)
 
 ### Authorization
 
@@ -12760,14 +12760,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **String**|  |
  **resourceId** | **String**|  |
- **resource** | [**GroupShare**](GroupShare.md)| Modified Resource |
+ **resource** | [**GroupShare**](DOCS.md#GroupShare)| Modified Resource |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**GroupShare**](GroupShare.md)
+[**GroupShare**](DOCS.md#GroupShare)
 
 ### Authorization
 
@@ -12931,7 +12931,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GroupMembers**](GroupMembers.md)
+[**GroupMembers**](DOCS.md#GroupMembers)
 
 ### Authorization
 
@@ -13007,14 +13007,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **groupId** | **String**|  |
- **user** | [**User**](User.md)| User to be added |
+ **user** | [**User**](DOCS.md#User)| User to be added |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**User**](User.md)
+[**User**](DOCS.md#User)
 
 ### Authorization
 
@@ -13095,7 +13095,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Resources**](Resources.md)
+[**Resources**](DOCS.md#Resources)
 
 ### Authorization
 
@@ -13178,7 +13178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Resource**](Resource.md)
+[**Resource**](DOCS.md#Resource)
 
 ### Authorization
 
@@ -13257,7 +13257,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Resources**](Resources.md)
+[**Resources**](DOCS.md#Resources)
 
 ### Authorization
 
@@ -13419,7 +13419,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](User.md)
+[**User**](DOCS.md#User)
 
 ### Authorization
 
@@ -13498,7 +13498,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Users**](Users.md)
+[**Users**](DOCS.md#Users)
 
 ### Authorization
 
@@ -13579,7 +13579,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResourceGroups**](ResourceGroups.md)
+[**ResourceGroups**](DOCS.md#ResourceGroups)
 
 ### Authorization
 
@@ -13660,7 +13660,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ResourcesUsers**](ResourcesUsers.md)
+[**ResourcesUsers**](DOCS.md#ResourcesUsers)
 
 ### Authorization
 
@@ -13734,14 +13734,14 @@ public class Example {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user** | [**User**](User.md)| User to be created |
+ **user** | [**User**](DOCS.md#User)| User to be created |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**User**](User.md)
+[**User**](DOCS.md#User)
 
 ### Authorization
 
@@ -13817,14 +13817,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**|  |
- **user** | [**User**](User.md)| Modified user |
+ **user** | [**User**](DOCS.md#User)| Modified user |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**User**](User.md)
+[**User**](DOCS.md#User)
 
 ### Authorization
 
@@ -13990,7 +13990,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](DOCS.md#S3Key)
 
 ### Authorization
 
@@ -14071,7 +14071,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**S3Keys**](S3Keys.md)
+[**S3Keys**](DOCS.md#S3Keys)
 
 ### Authorization
 
@@ -14152,7 +14152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](DOCS.md#S3Key)
 
 ### Authorization
 
@@ -14230,14 +14230,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**|  |
  **keyId** | **String**| The unique access key ID of the S3 key |
- **s3Key** | [**S3Key**](S3Key.md)| Modified S3Key |
+ **s3Key** | [**S3Key**](DOCS.md#S3Key)| Modified S3Key |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](DOCS.md#S3Key)
 
 ### Authorization
 
@@ -14316,7 +14316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**S3ObjectStorageSSO**](S3ObjectStorageSSO.md)
+[**S3ObjectStorageSSO**](DOCS.md#S3ObjectStorageSSO)
 
 ### Authorization
 
@@ -14427,7 +14427,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](DOCS.md#Snapshot)
 
 ### Authorization
 
@@ -14593,7 +14593,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](DOCS.md#Volume)
 
 ### Authorization
 
@@ -14674,7 +14674,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Volumes**](Volumes.md)
+[**Volumes**](DOCS.md#Volumes)
 
 ### Authorization
 
@@ -14752,14 +14752,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
  **volumeId** | **String**| The unique ID of the Volume |
- **volume** | [**VolumeProperties**](VolumeProperties.md)| Modified properties of Volume |
+ **volume** | [**VolumeProperties**](DOCS.md#VolumeProperties)| Modified properties of Volume |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](DOCS.md#Volume)
 
 ### Authorization
 
@@ -14835,14 +14835,14 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
- **volume** | [**Volume**](Volume.md)| Volume to be created |
+ **volume** | [**Volume**](DOCS.md#Volume)| Volume to be created |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](DOCS.md#Volume)
 
 ### Authorization
 
@@ -14920,14 +14920,14 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datacenterId** | **String**| The unique ID of the datacenter |
  **volumeId** | **String**| The unique ID of the Volume |
- **volume** | [**Volume**](Volume.md)| Modified Volume |
+ **volume** | [**Volume**](DOCS.md#Volume)| Modified Volume |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](DOCS.md#Volume)
 
 ### Authorization
 

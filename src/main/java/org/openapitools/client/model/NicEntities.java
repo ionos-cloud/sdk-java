@@ -28,7 +28,7 @@ import org.openapitools.client.model.FirewallRules;
 /**
  * NicEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T13:29:06.684132+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T13:36:53.491818+02:00[Europe/Bucharest]")
 public class NicEntities {
   public static final String SERIALIZED_NAME_FIREWALLRULES = "firewallrules";
   @SerializedName(SERIALIZED_NAME_FIREWALLRULES)
