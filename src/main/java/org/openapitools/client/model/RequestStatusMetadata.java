@@ -30,7 +30,7 @@ import org.openapitools.client.model.RequestTarget;
 /**
  * RequestStatusMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T16:25:36.792145+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T16:32:21.136981+02:00[Europe/Bucharest]")
 public class RequestStatusMetadata {
   /**
    * Gets or Sets status

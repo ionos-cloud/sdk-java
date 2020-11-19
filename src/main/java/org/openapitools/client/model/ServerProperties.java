@@ -28,7 +28,7 @@ import org.openapitools.client.model.ResourceReference;
 /**
  * ServerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T16:25:36.792145+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T16:32:21.136981+02:00[Europe/Bucharest]")
 public class ServerProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
