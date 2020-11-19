@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8281c5-974f-4ba4-9b4f-1dfb1b2ed124" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DOCS.md" beforeDir="false" afterPath="$PROJECT_DIR$/DOCS.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/BackupUnitApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/BackupUnitApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ContractApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ContractApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/DataCenterApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/DataCenterApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ImageApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ImageApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/IpBlocksApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/IpBlocksApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/KubernetesApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/KubernetesApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/LabelApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LabelApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/LanApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LanApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/LoadBalancerApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LoadBalancerApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/LocationApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/LocationApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/NicApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/NicApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/PrivateCrossConnectApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/PrivateCrossConnectApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/RequestApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/RequestApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/ServerApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/ServerApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/SnapshotApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/SnapshotApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/UserManagementApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/UserManagementApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/VolumeApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/VolumeApi.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/ApiException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/Configuration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/Pair.java" afterDir="false" />

@@ -32,7 +32,7 @@ import org.openapitools.client.model.Type;
 /**
  * Snapshots
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T16:32:21.136981+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T16:41:06.426137+02:00[Europe/Bucharest]")
 public class Snapshots {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
