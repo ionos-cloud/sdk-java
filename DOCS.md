@@ -5,7 +5,7 @@
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2020-11-19T13:24:22.810981+02:00[Europe/Bucharest]
+  - Build date: 2020-11-19T13:29:06.684132+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -15172,7 +15172,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Volume&gt;**](DOCS.md#List&lt;Volume&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Volume&gt;**](DOCS.md#Volume) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15234,7 +15234,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of object that has been created |  [optional] [readonly]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;BackupUnit&gt;**](DOCS.md#List&lt;BackupUnit&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;BackupUnit&gt;**](DOCS.md#BackupUnit) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15257,7 +15257,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Nic&gt;**](DOCS.md#List&lt;Nic&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Nic&gt;**](DOCS.md#Nic) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15271,7 +15271,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Image&gt;**](DOCS.md#List&lt;Image&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Image&gt;**](DOCS.md#Image) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15420,7 +15420,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Datacenter&gt;**](DOCS.md#List&lt;Datacenter&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Datacenter&gt;**](DOCS.md#Datacenter) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15432,7 +15432,7 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **httpStatus** | **Integer** | HTTP status code of the operation |  [optional] [readonly]
-**messages** | [**List&lt;ErrorMessage&gt;**](DOCS.md#List&lt;ErrorMessage&gt;) |  |  [optional]
+**messages** | [**List&lt;ErrorMessage&gt;**](DOCS.md#ErrorMessage) |  |  [optional]
 
 
 
@@ -15473,7 +15473,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;FirewallRule&gt;**](DOCS.md#List&lt;FirewallRule&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;FirewallRule&gt;**](DOCS.md#FirewallRule) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15575,7 +15575,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;User&gt;**](DOCS.md#List&lt;User&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;User&gt;**](DOCS.md#User) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15635,7 +15635,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | Share representing groups and resource relationship |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;GroupShare&gt;**](DOCS.md#List&lt;GroupShare&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;GroupShare&gt;**](DOCS.md#GroupShare) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15650,7 +15650,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Group&gt;**](DOCS.md#List&lt;Group&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Group&gt;**](DOCS.md#Group) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15664,7 +15664,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Group&gt;**](DOCS.md#List&lt;Group&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Group&gt;**](DOCS.md#Group) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15755,7 +15755,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Image&gt;**](DOCS.md#List&lt;Image&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Image&gt;**](DOCS.md#Image) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15798,7 +15798,7 @@ Name | Type | Description | Notes
 **location** | **String** | Location of that IP Block. Property cannot be modified after creation (disallowed in update requests) | 
 **size** | **Integer** | The size of the IP block | 
 **name** | **String** | A name of that resource |  [optional]
-**ipConsumers** | [**List&lt;IpConsumer&gt;**](DOCS.md#List&lt;IpConsumer&gt;) | Read-Only attribute. Lists consumption detail of an individual ip |  [optional] [readonly]
+**ipConsumers** | [**List&lt;IpConsumer&gt;**](DOCS.md#IpConsumer) | Read-Only attribute. Lists consumption detail of an individual ip |  [optional] [readonly]
 
 
 
@@ -15812,7 +15812,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;IpBlock&gt;**](DOCS.md#List&lt;IpBlock&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;IpBlock&gt;**](DOCS.md#IpBlock) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -15904,7 +15904,7 @@ Name | Type | Description | Notes
 **id** | **String** | Unique representation for Kubernetes Cluster as a collection on a resource. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
 **href** | [**URI**](DOCS.md#URI) | URL to the collection representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;KubernetesCluster&gt;**](DOCS.md#List&lt;KubernetesCluster&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;KubernetesCluster&gt;**](DOCS.md#KubernetesCluster) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16135,7 +16135,7 @@ Name | Type | Description | Notes
 **k8sVersion** | **String** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
 **maintenanceWindow** | [**KubernetesMaintenanceWindow**](DOCS.md#KubernetesMaintenanceWindow) |  |  [optional]
 **autoScaling** | [**KubernetesAutoScaling**](DOCS.md#KubernetesAutoScaling) |  |  [optional]
-**lans** | [**List&lt;KubernetesNodePoolLan&gt;**](DOCS.md#List&lt;KubernetesNodePoolLan&gt;) | array of additional LANs attached to worker nodes |  [optional]
+**lans** | [**List&lt;KubernetesNodePoolLan&gt;**](DOCS.md#KubernetesNodePoolLan) | array of additional LANs attached to worker nodes |  [optional]
 **labels** | [**KubernetesNodePoolLabel**](DOCS.md#KubernetesNodePoolLabel) |  |  [optional]
 **annotations** | [**KubernetesNodePoolAnnotation**](DOCS.md#KubernetesNodePoolAnnotation) |  |  [optional]
 
@@ -16181,7 +16181,7 @@ Name | Type | Description | Notes
 **k8sVersion** | **String** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
 **maintenanceWindow** | [**KubernetesMaintenanceWindow**](DOCS.md#KubernetesMaintenanceWindow) |  |  [optional]
 **autoScaling** | [**KubernetesAutoScaling**](DOCS.md#KubernetesAutoScaling) |  |  [optional]
-**lans** | [**List&lt;KubernetesNodePoolLan&gt;**](DOCS.md#List&lt;KubernetesNodePoolLan&gt;) | array of additional LANs attached to worker nodes |  [optional]
+**lans** | [**List&lt;KubernetesNodePoolLan&gt;**](DOCS.md#KubernetesNodePoolLan) | array of additional LANs attached to worker nodes |  [optional]
 
 
 
@@ -16216,7 +16216,7 @@ Name | Type | Description | Notes
 **id** | **String** | Unique representation for Kubernetes Node Pool as a collection on a resource. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
 **href** | [**URI**](DOCS.md#URI) | URL to the collection representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;KubernetesNodePool&gt;**](DOCS.md#List&lt;KubernetesNodePool&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;KubernetesNodePool&gt;**](DOCS.md#KubernetesNodePool) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16252,7 +16252,7 @@ Name | Type | Description | Notes
 **id** | **String** | Unique representation for Kubernetes Node Pool as a collection on a resource. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
 **href** | [**URI**](DOCS.md#URI) | URL to the collection representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;KubernetesNode&gt;**](DOCS.md#List&lt;KubernetesNode&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;KubernetesNode&gt;**](DOCS.md#KubernetesNode) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16350,7 +16350,7 @@ Name | Type | Description | Notes
 **id** | **String** | Unique representation for Label as a collection on a resource. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
 **href** | [**URI**](DOCS.md#URI) | URL to the collection representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;LabelResource&gt;**](DOCS.md#List&lt;LabelResource&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;LabelResource&gt;**](DOCS.md#LabelResource) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16373,7 +16373,7 @@ Name | Type | Description | Notes
 **id** | **String** | Unique representation for Label as a collection of resource. |  [optional] [readonly]
 **type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
 **href** | [**URI**](DOCS.md#URI) | URL to the collection representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Label&gt;**](DOCS.md#List&lt;Label&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Label&gt;**](DOCS.md#Label) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16423,7 +16423,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Nic&gt;**](DOCS.md#List&lt;Nic&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Nic&gt;**](DOCS.md#Nic) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16451,7 +16451,7 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | A name of that resource |  [optional]
-**ipFailover** | [**List&lt;IPFailover&gt;**](DOCS.md#List&lt;IPFailover&gt;) | IP failover configurations for lan |  [optional]
+**ipFailover** | [**List&lt;IPFailover&gt;**](DOCS.md#IPFailover) | IP failover configurations for lan |  [optional]
 **pcc** | **String** | Unique identifier of the private cross connect the given LAN is connected to if any |  [optional]
 **_public** | **Boolean** | Does this LAN faces the public Internet or not |  [optional]
 
@@ -16479,7 +16479,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Lan&gt;**](DOCS.md#List&lt;Lan&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Lan&gt;**](DOCS.md#Lan) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16543,7 +16543,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Loadbalancer&gt;**](DOCS.md#List&lt;Loadbalancer&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Loadbalancer&gt;**](DOCS.md#Loadbalancer) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16595,7 +16595,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Location&gt;**](DOCS.md#List&lt;Location&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Location&gt;**](DOCS.md#Location) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16653,7 +16653,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Nic&gt;**](DOCS.md#List&lt;Nic&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Nic&gt;**](DOCS.md#Nic) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16713,8 +16713,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | A name of that resource |  [optional]
 **description** | **String** | Human readable description |  [optional]
-**peers** | [**List&lt;Peer&gt;**](DOCS.md#List&lt;Peer&gt;) | Read-Only attribute. Lists LAN&#39;s joined to this private cross connect |  [optional] [readonly]
-**connectableDatacenters** | [**List&lt;ConnectableDatacenter&gt;**](DOCS.md#List&lt;ConnectableDatacenter&gt;) | Read-Only attribute. Lists datacenters that can be joined to this private cross connect |  [optional] [readonly]
+**peers** | [**List&lt;Peer&gt;**](DOCS.md#Peer) | Read-Only attribute. Lists LAN&#39;s joined to this private cross connect |  [optional] [readonly]
+**connectableDatacenters** | [**List&lt;ConnectableDatacenter&gt;**](DOCS.md#ConnectableDatacenter) | Read-Only attribute. Lists datacenters that can be joined to this private cross connect |  [optional] [readonly]
 
 
 
@@ -16728,7 +16728,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;PrivateCrossConnect&gt;**](DOCS.md#List&lt;PrivateCrossConnect&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;PrivateCrossConnect&gt;**](DOCS.md#PrivateCrossConnect) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16799,7 +16799,7 @@ Name | Type | Description | Notes
 **status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
 **message** | **String** |  |  [optional]
 **etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
-**targets** | [**List&lt;RequestTarget&gt;**](DOCS.md#List&lt;RequestTarget&gt;) |  |  [optional]
+**targets** | [**List&lt;RequestTarget&gt;**](DOCS.md#RequestTarget) |  |  [optional]
 
 
 
@@ -16849,7 +16849,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Request&gt;**](DOCS.md#List&lt;Request&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Request&gt;**](DOCS.md#Request) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16892,7 +16892,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Resource&gt;**](DOCS.md#List&lt;Resource&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Resource&gt;**](DOCS.md#Resource) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16959,7 +16959,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Resource&gt;**](DOCS.md#List&lt;Resource&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Resource&gt;**](DOCS.md#Resource) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -16974,7 +16974,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Resource&gt;**](DOCS.md#List&lt;Resource&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Resource&gt;**](DOCS.md#Resource) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -17027,7 +17027,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of the resource |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;S3Key&gt;**](DOCS.md#List&lt;S3Key&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;S3Key&gt;**](DOCS.md#S3Key) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -17125,7 +17125,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Server&gt;**](DOCS.md#List&lt;Server&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Server&gt;**](DOCS.md#Server) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -17193,7 +17193,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Snapshot&gt;**](DOCS.md#List&lt;Snapshot&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Snapshot&gt;**](DOCS.md#Snapshot) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -17264,7 +17264,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;User&gt;**](DOCS.md#List&lt;User&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;User&gt;**](DOCS.md#User) | Array of items in that collection |  [optional] [readonly]
 
 
 
@@ -17380,7 +17380,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Volume&gt;**](DOCS.md#List&lt;Volume&gt;) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Volume&gt;**](DOCS.md#Volume) | Array of items in that collection |  [optional] [readonly]
 
 
 

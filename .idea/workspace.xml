@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf8281c5-974f-4ba4-9b4f-1dfb1b2ed124" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DOCS.md" beforeDir="false" afterPath="$PROJECT_DIR$/DOCS.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/openapitools/client/ApiException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/openapitools/client/ApiException.java" afterDir="false" />
