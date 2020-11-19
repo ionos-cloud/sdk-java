@@ -30,7 +30,7 @@ import org.openapitools.client.model.IpConsumer;
 /**
  * IpBlockProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-18T18:41:07.637425+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T11:26:15.195533+02:00[Europe/Bucharest]")
 public class IpBlockProperties {
   public static final String SERIALIZED_NAME_IPS = "ips";
   @SerializedName(SERIALIZED_NAME_IPS)
