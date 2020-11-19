@@ -31,7 +31,7 @@ import org.openapitools.client.model.Volumes;
 /**
  * DatacenterEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T13:36:53.491818+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T16:25:36.792145+02:00[Europe/Bucharest]")
 public class DatacenterEntities {
   public static final String SERIALIZED_NAME_SERVERS = "servers";
   @SerializedName(SERIALIZED_NAME_SERVERS)
