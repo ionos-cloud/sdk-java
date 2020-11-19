@@ -33,7 +33,7 @@ import org.openapitools.client.model.Type;
  * Collection to represent the resource
  */
 @ApiModel(description = "Collection to represent the resource")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T13:10:10.814289+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-19T13:15:19.502219+02:00[Europe/Bucharest]")
 public class Resources {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
