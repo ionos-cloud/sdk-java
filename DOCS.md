@@ -5,7 +5,7 @@
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2020-11-19T13:19:01.198837+02:00[Europe/Bucharest]
+  - Build date: 2020-11-19T13:24:22.810981+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -15191,7 +15191,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -15237,7 +15238,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -15347,7 +15349,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: StateEnum
+## Enum:
+## StateEnum
 
 Name | Value
 ---- | -----
@@ -15397,7 +15400,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: List&lt;FeaturesEnum&gt;
+## Enum:
+## List&lt;FeaturesEnum&gt;
 
 Name | Value
 ---- | -----
@@ -15492,7 +15496,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: ProtocolEnum
+## Enum:
+## ProtocolEnum
 
 Name | Value
 ---- | -----
@@ -15503,7 +15508,8 @@ ANY | &quot;ANY&quot;
 
 
 
-## Enum: SourceMacEnum
+## Enum:
+## SourceMacEnum
 
 Name | Value
 ---- | -----
@@ -15512,7 +15518,8 @@ NULL | &quot;null&quot;
 
 
 
-## Enum: SourceIpEnum
+## Enum:
+## SourceIpEnum
 
 Name | Value
 ---- | -----
@@ -15521,7 +15528,8 @@ NULL | &quot;null&quot;
 
 
 
-## Enum: TargetIpEnum
+## Enum:
+## TargetIpEnum
 
 Name | Value
 ---- | -----
@@ -15714,7 +15722,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: LicenceTypeEnum
+## Enum:
+## LicenceTypeEnum
 
 Name | Value
 ---- | -----
@@ -15726,7 +15735,8 @@ OTHER | &quot;OTHER&quot;
 
 
 
-## Enum: ImageTypeEnum
+## Enum:
+## ImageTypeEnum
 
 Name | Value
 ---- | -----
@@ -15851,7 +15861,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -15897,7 +15908,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -15919,7 +15931,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -15950,7 +15963,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: DayOfTheWeekEnum
+## Enum:
+## DayOfTheWeekEnum
 
 Name | Value
 ---- | -----
@@ -15979,7 +15993,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -16002,7 +16017,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: StateEnum
+## Enum:
+## StateEnum
 
 Name | Value
 ---- | -----
@@ -16030,7 +16046,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -16066,7 +16083,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -16123,7 +16141,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: AvailabilityZoneEnum
+## Enum:
+## AvailabilityZoneEnum
 
 Name | Value
 ---- | -----
@@ -16133,7 +16152,8 @@ ZONE_2 | &quot;ZONE_2&quot;
 
 
 
-## Enum: StorageTypeEnum
+## Enum:
+## StorageTypeEnum
 
 Name | Value
 ---- | -----
@@ -16165,7 +16185,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: AvailabilityZoneEnum
+## Enum:
+## AvailabilityZoneEnum
 
 Name | Value
 ---- | -----
@@ -16175,7 +16196,8 @@ ZONE_2 | &quot;ZONE_2&quot;
 
 
 
-## Enum: StorageTypeEnum
+## Enum:
+## StorageTypeEnum
 
 Name | Value
 ---- | -----
@@ -16198,7 +16220,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -16233,7 +16256,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -16256,7 +16280,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -16294,7 +16319,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -16328,7 +16354,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -16350,7 +16377,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -16495,7 +16523,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: IpEnum
+## Enum:
+## IpEnum
 
 Name | Value
 ---- | -----
@@ -16546,7 +16575,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: List&lt;FeaturesEnum&gt;
+## Enum:
+## List&lt;FeaturesEnum&gt;
 
 Name | Value
 ---- | -----
@@ -16773,7 +16803,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: StatusEnum
+## Enum:
+## StatusEnum
 
 Name | Value
 ---- | -----
@@ -16796,7 +16827,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: StatusEnum
+## Enum:
+## StatusEnum
 
 Name | Value
 ---- | -----
@@ -17057,7 +17089,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: AvailabilityZoneEnum
+## Enum:
+## AvailabilityZoneEnum
 
 Name | Value
 ---- | -----
@@ -17067,7 +17100,8 @@ ZONE_2 | &quot;ZONE_2&quot;
 
 
 
-## Enum: VmStateEnum
+## Enum:
+## VmStateEnum
 
 Name | Value
 ---- | -----
@@ -17136,7 +17170,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: LicenceTypeEnum
+## Enum:
+## LicenceTypeEnum
 
 Name | Value
 ---- | -----
@@ -17288,7 +17323,8 @@ Name | Type | Description | Notes
 
 
 
-## Enum: TypeEnum
+## Enum:
+## TypeEnum
 
 Name | Value
 ---- | -----
@@ -17299,7 +17335,8 @@ SSD_PREMIUM | &quot;SSD Premium&quot;
 
 
 
-## Enum: AvailabilityZoneEnum
+## Enum:
+## AvailabilityZoneEnum
 
 Name | Value
 ---- | -----
@@ -17310,7 +17347,8 @@ ZONE_3 | &quot;ZONE_3&quot;
 
 
 
-## Enum: BusEnum
+## Enum:
+## BusEnum
 
 Name | Value
 ---- | -----
@@ -17319,7 +17357,8 @@ IDE | &quot;IDE&quot;
 
 
 
-## Enum: LicenceTypeEnum
+## Enum:
+## LicenceTypeEnum
 
 Name | Value
 ---- | -----

@@ -5,7 +5,7 @@
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2020-11-19T13:19:01.198837+02:00[Europe/Bucharest]
+  - Build date: 2020-11-19T13:24:22.810981+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
