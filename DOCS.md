@@ -2,11 +2,10 @@
 [![PyPI](https://img.shields.io/pypi/v/ionos-cloud-sdk)](https://pypi.org/project/ionossdk/)
 
 # IONOS Cloud SDK for Java
-# openapi-java-client
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2020-11-19T11:26:15.195533+02:00[Europe/Bucharest]
+  - Build date: 2020-11-19T12:50:39.821708+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -15036,130 +15035,2440 @@ Name | Type | Description  | Notes
 
 ## Documentation for Models
 
- - [AttachedVolumes](docs/AttachedVolumes.md)
- - [BackupUnit](docs/BackupUnit.md)
- - [BackupUnitProperties](docs/BackupUnitProperties.md)
- - [BackupUnitSSO](docs/BackupUnitSSO.md)
- - [BackupUnits](docs/BackupUnits.md)
- - [BalancedNics](docs/BalancedNics.md)
- - [Cdroms](docs/Cdroms.md)
- - [ConnectableDatacenter](docs/ConnectableDatacenter.md)
- - [Contract](docs/Contract.md)
- - [ContractProperties](docs/ContractProperties.md)
- - [Datacenter](docs/Datacenter.md)
- - [DatacenterElementMetadata](docs/DatacenterElementMetadata.md)
- - [DatacenterEntities](docs/DatacenterEntities.md)
- - [DatacenterProperties](docs/DatacenterProperties.md)
- - [Datacenters](docs/Datacenters.md)
- - [Error](docs/Error.md)
- - [ErrorMessage](docs/ErrorMessage.md)
- - [FirewallRule](docs/FirewallRule.md)
- - [FirewallRules](docs/FirewallRules.md)
- - [FirewallruleProperties](docs/FirewallruleProperties.md)
- - [Group](docs/Group.md)
- - [GroupEntities](docs/GroupEntities.md)
- - [GroupMembers](docs/GroupMembers.md)
- - [GroupProperties](docs/GroupProperties.md)
- - [GroupShare](docs/GroupShare.md)
- - [GroupShareProperties](docs/GroupShareProperties.md)
- - [GroupShares](docs/GroupShares.md)
- - [GroupUsers](docs/GroupUsers.md)
- - [Groups](docs/Groups.md)
- - [IPFailover](docs/IPFailover.md)
- - [Image](docs/Image.md)
- - [ImageProperties](docs/ImageProperties.md)
- - [Images](docs/Images.md)
- - [Info](docs/Info.md)
- - [IpBlock](docs/IpBlock.md)
- - [IpBlockProperties](docs/IpBlockProperties.md)
- - [IpBlocks](docs/IpBlocks.md)
- - [IpConsumer](docs/IpConsumer.md)
- - [KubernetesAutoScaling](docs/KubernetesAutoScaling.md)
- - [KubernetesCluster](docs/KubernetesCluster.md)
- - [KubernetesClusterEntities](docs/KubernetesClusterEntities.md)
- - [KubernetesClusterProperties](docs/KubernetesClusterProperties.md)
- - [KubernetesClusters](docs/KubernetesClusters.md)
- - [KubernetesConfig](docs/KubernetesConfig.md)
- - [KubernetesConfigProperties](docs/KubernetesConfigProperties.md)
- - [KubernetesMaintenanceWindow](docs/KubernetesMaintenanceWindow.md)
- - [KubernetesNode](docs/KubernetesNode.md)
- - [KubernetesNodeMetadata](docs/KubernetesNodeMetadata.md)
- - [KubernetesNodePool](docs/KubernetesNodePool.md)
- - [KubernetesNodePoolAnnotation](docs/KubernetesNodePoolAnnotation.md)
- - [KubernetesNodePoolForPut](docs/KubernetesNodePoolForPut.md)
- - [KubernetesNodePoolLabel](docs/KubernetesNodePoolLabel.md)
- - [KubernetesNodePoolLan](docs/KubernetesNodePoolLan.md)
- - [KubernetesNodePoolProperties](docs/KubernetesNodePoolProperties.md)
- - [KubernetesNodePoolPropertiesForPut](docs/KubernetesNodePoolPropertiesForPut.md)
- - [KubernetesNodePools](docs/KubernetesNodePools.md)
- - [KubernetesNodeProperties](docs/KubernetesNodeProperties.md)
- - [KubernetesNodes](docs/KubernetesNodes.md)
- - [Label](docs/Label.md)
- - [LabelProperties](docs/LabelProperties.md)
- - [LabelResource](docs/LabelResource.md)
- - [LabelResourceProperties](docs/LabelResourceProperties.md)
- - [LabelResources](docs/LabelResources.md)
- - [Labels](docs/Labels.md)
- - [Lan](docs/Lan.md)
- - [LanEntities](docs/LanEntities.md)
- - [LanNics](docs/LanNics.md)
- - [LanPost](docs/LanPost.md)
- - [LanProperties](docs/LanProperties.md)
- - [LanPropertiesPost](docs/LanPropertiesPost.md)
- - [Lans](docs/Lans.md)
- - [Loadbalancer](docs/Loadbalancer.md)
- - [LoadbalancerEntities](docs/LoadbalancerEntities.md)
- - [LoadbalancerProperties](docs/LoadbalancerProperties.md)
- - [Loadbalancers](docs/Loadbalancers.md)
- - [Location](docs/Location.md)
- - [LocationProperties](docs/LocationProperties.md)
- - [Locations](docs/Locations.md)
- - [Nic](docs/Nic.md)
- - [NicEntities](docs/NicEntities.md)
- - [NicProperties](docs/NicProperties.md)
- - [Nics](docs/Nics.md)
- - [NoStateMetaData](docs/NoStateMetaData.md)
- - [Peer](docs/Peer.md)
- - [PrivateCrossConnect](docs/PrivateCrossConnect.md)
- - [PrivateCrossConnectProperties](docs/PrivateCrossConnectProperties.md)
- - [PrivateCrossConnects](docs/PrivateCrossConnects.md)
- - [Request](docs/Request.md)
- - [RequestMetadata](docs/RequestMetadata.md)
- - [RequestProperties](docs/RequestProperties.md)
- - [RequestStatus](docs/RequestStatus.md)
- - [RequestStatusMetadata](docs/RequestStatusMetadata.md)
- - [RequestTarget](docs/RequestTarget.md)
- - [Requests](docs/Requests.md)
- - [Resource](docs/Resource.md)
- - [ResourceEntities](docs/ResourceEntities.md)
- - [ResourceGroups](docs/ResourceGroups.md)
- - [ResourceLimits](docs/ResourceLimits.md)
- - [ResourceProperties](docs/ResourceProperties.md)
- - [ResourceReference](docs/ResourceReference.md)
- - [Resources](docs/Resources.md)
- - [ResourcesUsers](docs/ResourcesUsers.md)
- - [S3Key](docs/S3Key.md)
- - [S3KeyMetadata](docs/S3KeyMetadata.md)
- - [S3KeyProperties](docs/S3KeyProperties.md)
- - [S3Keys](docs/S3Keys.md)
- - [S3ObjectStorageSSO](docs/S3ObjectStorageSSO.md)
- - [Server](docs/Server.md)
- - [ServerEntities](docs/ServerEntities.md)
- - [ServerProperties](docs/ServerProperties.md)
- - [Servers](docs/Servers.md)
- - [Snapshot](docs/Snapshot.md)
- - [SnapshotProperties](docs/SnapshotProperties.md)
- - [Snapshots](docs/Snapshots.md)
- - [Type](docs/Type.md)
- - [User](docs/User.md)
- - [UserMetadata](docs/UserMetadata.md)
- - [UserProperties](docs/UserProperties.md)
- - [Users](docs/Users.md)
- - [UsersEntities](docs/UsersEntities.md)
- - [Volume](docs/Volume.md)
- - [VolumeProperties](docs/VolumeProperties.md)
- - [Volumes](docs/Volumes.md)
+ - [AttachedVolumes](#AttachedVolumes)
+ - [BackupUnit](#BackupUnit)
+ - [BackupUnitProperties](#BackupUnitProperties)
+ - [BackupUnitSSO](#BackupUnitSSO)
+ - [BackupUnits](#BackupUnits)
+ - [BalancedNics](#BalancedNics)
+ - [Cdroms](#Cdroms)
+ - [ConnectableDatacenter](#ConnectableDatacenter)
+ - [Contract](#Contract)
+ - [ContractProperties](#ContractProperties)
+ - [Datacenter](#Datacenter)
+ - [DatacenterElementMetadata](#DatacenterElementMetadata)
+ - [DatacenterEntities](#DatacenterEntities)
+ - [DatacenterProperties](#DatacenterProperties)
+ - [Datacenters](#Datacenters)
+ - [Error](#Error)
+ - [ErrorMessage](#ErrorMessage)
+ - [FirewallRule](#FirewallRule)
+ - [FirewallRules](#FirewallRules)
+ - [FirewallruleProperties](#FirewallruleProperties)
+ - [Group](#Group)
+ - [GroupEntities](#GroupEntities)
+ - [GroupMembers](#GroupMembers)
+ - [GroupProperties](#GroupProperties)
+ - [GroupShare](#GroupShare)
+ - [GroupShareProperties](#GroupShareProperties)
+ - [GroupShares](#GroupShares)
+ - [GroupUsers](#GroupUsers)
+ - [Groups](#Groups)
+ - [IPFailover](#IPFailover)
+ - [Image](#Image)
+ - [ImageProperties](#ImageProperties)
+ - [Images](#Images)
+ - [Info](#Info)
+ - [IpBlock](#IpBlock)
+ - [IpBlockProperties](#IpBlockProperties)
+ - [IpBlocks](#IpBlocks)
+ - [IpConsumer](#IpConsumer)
+ - [KubernetesAutoScaling](#KubernetesAutoScaling)
+ - [KubernetesCluster](#KubernetesCluster)
+ - [KubernetesClusterEntities](#KubernetesClusterEntities)
+ - [KubernetesClusterProperties](#KubernetesClusterProperties)
+ - [KubernetesClusters](#KubernetesClusters)
+ - [KubernetesConfig](#KubernetesConfig)
+ - [KubernetesConfigProperties](#KubernetesConfigProperties)
+ - [KubernetesMaintenanceWindow](#KubernetesMaintenanceWindow)
+ - [KubernetesNode](#KubernetesNode)
+ - [KubernetesNodeMetadata](#KubernetesNodeMetadata)
+ - [KubernetesNodePool](#KubernetesNodePool)
+ - [KubernetesNodePoolAnnotation](#KubernetesNodePoolAnnotation)
+ - [KubernetesNodePoolForPut](#KubernetesNodePoolForPut)
+ - [KubernetesNodePoolLabel](#KubernetesNodePoolLabel)
+ - [KubernetesNodePoolLan](#KubernetesNodePoolLan)
+ - [KubernetesNodePoolProperties](#KubernetesNodePoolProperties)
+ - [KubernetesNodePoolPropertiesForPut](#KubernetesNodePoolPropertiesForPut)
+ - [KubernetesNodePools](#KubernetesNodePools)
+ - [KubernetesNodeProperties](#KubernetesNodeProperties)
+ - [KubernetesNodes](#KubernetesNodes)
+ - [Label](#Label)
+ - [LabelProperties](#LabelProperties)
+ - [LabelResource](#LabelResource)
+ - [LabelResourceProperties](#LabelResourceProperties)
+ - [LabelResources](#LabelResources)
+ - [Labels](#Labels)
+ - [Lan](#Lan)
+ - [LanEntities](#LanEntities)
+ - [LanNics](#LanNics)
+ - [LanPost](#LanPost)
+ - [LanProperties](#LanProperties)
+ - [LanPropertiesPost](#LanPropertiesPost)
+ - [Lans](#Lans)
+ - [Loadbalancer](#Loadbalancer)
+ - [LoadbalancerEntities](#LoadbalancerEntities)
+ - [LoadbalancerProperties](#LoadbalancerProperties)
+ - [Loadbalancers](#Loadbalancers)
+ - [Location](#Location)
+ - [LocationProperties](#LocationProperties)
+ - [Locations](#Locations)
+ - [Nic](#Nic)
+ - [NicEntities](#NicEntities)
+ - [NicProperties](#NicProperties)
+ - [Nics](#Nics)
+ - [NoStateMetaData](#NoStateMetaData)
+ - [Peer](#Peer)
+ - [PrivateCrossConnect](#PrivateCrossConnect)
+ - [PrivateCrossConnectProperties](#PrivateCrossConnectProperties)
+ - [PrivateCrossConnects](#PrivateCrossConnects)
+ - [Request](#Request)
+ - [RequestMetadata](#RequestMetadata)
+ - [RequestProperties](#RequestProperties)
+ - [RequestStatus](#RequestStatus)
+ - [RequestStatusMetadata](#RequestStatusMetadata)
+ - [RequestTarget](#RequestTarget)
+ - [Requests](#Requests)
+ - [Resource](#Resource)
+ - [ResourceEntities](#ResourceEntities)
+ - [ResourceGroups](#ResourceGroups)
+ - [ResourceLimits](#ResourceLimits)
+ - [ResourceProperties](#ResourceProperties)
+ - [ResourceReference](#ResourceReference)
+ - [Resources](#Resources)
+ - [ResourcesUsers](#ResourcesUsers)
+ - [S3Key](#S3Key)
+ - [S3KeyMetadata](#S3KeyMetadata)
+ - [S3KeyProperties](#S3KeyProperties)
+ - [S3Keys](#S3Keys)
+ - [S3ObjectStorageSSO](#S3ObjectStorageSSO)
+ - [Server](#Server)
+ - [ServerEntities](#ServerEntities)
+ - [ServerProperties](#ServerProperties)
+ - [Servers](#Servers)
+ - [Snapshot](#Snapshot)
+ - [SnapshotProperties](#SnapshotProperties)
+ - [Snapshots](#Snapshots)
+ - [Type](#Type)
+ - [User](#User)
+ - [UserMetadata](#UserMetadata)
+ - [UserProperties](#UserProperties)
+ - [Users](#Users)
+ - [UsersEntities](#UsersEntities)
+ - [Volume](#Volume)
+ - [VolumeProperties](#VolumeProperties)
+ - [Volumes](#Volumes)
 
+
+---
+
+# AttachedVolumes
+
+# AttachedVolumes
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Volume&gt;**](Volume.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# BackupUnit
+
+# BackupUnit
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of object that has been created |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**BackupUnitProperties**](BackupUnitProperties.md) |  | 
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+BACKUPUNIT | &quot;backupunit&quot;
+
+
+
+# BackupUnitProperties
+
+# BackupUnitProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource (only alphanumeric characters are acceptable) | 
+**password** | **String** | the password associated to that resource |  [optional]
+**email** | **String** | The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user. |  [optional]
+
+
+
+# BackupUnitSSO
+
+# BackupUnitSSO
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ssoUrl** | **String** | The backup unit single sign on url |  [optional] [readonly]
+
+
+
+# BackupUnits
+
+# BackupUnits
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of object that has been created |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;BackupUnit&gt;**](BackupUnit.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+BACKUPUNIT | &quot;backupunit&quot;
+
+
+
+# BalancedNics
+
+# BalancedNics
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Nic&gt;**](Nic.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# Cdroms
+
+# Cdroms
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Image&gt;**](Image.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# ConnectableDatacenter
+
+# ConnectableDatacenter
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  |  [optional]
+**name** | **String** |  |  [optional]
+**location** | **String** |  |  [optional]
+
+
+
+# Contract
+
+# Contract
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**type** | [**Type**](Type.md) | The type of the resource |  [optional]
+**properties** | [**ContractProperties**](ContractProperties.md) |  | 
+
+
+
+# ContractProperties
+
+# ContractProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**contractNumber** | **Long** | contract number |  [optional] [readonly]
+**owner** | **String** | owner of the contract |  [optional] [readonly]
+**status** | **String** | status of the contract |  [optional] [readonly]
+**regDomain** | **String** | Registration domain of the contract |  [optional] [readonly]
+**resourceLimits** | [**ResourceLimits**](ResourceLimits.md) |  |  [optional]
+
+
+
+# Datacenter
+
+# Datacenter
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**DatacenterProperties**](DatacenterProperties.md) |  | 
+**entities** | [**DatacenterEntities**](DatacenterEntities.md) |  |  [optional]
+
+
+
+# DatacenterElementMetadata
+
+# DatacenterElementMetadata
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
+**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource was created |  [optional] [readonly]
+**createdBy** | **String** | The user who created the resource. |  [optional] [readonly]
+**createdByUserId** | **String** | The user id of the user who has created the resource. |  [optional] [readonly]
+**lastModifiedDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource has been modified |  [optional] [readonly]
+**lastModifiedBy** | **String** | The user who last modified the resource. |  [optional] [readonly]
+**lastModifiedByUserId** | **String** | The user id of the user who has last modified the resource. |  [optional] [readonly]
+**state** | [**StateEnum**](#StateEnum) | State of the resource. *AVAILABLE* There are no pending modification requests for this item; *BUSY* There is at least one modification request pending and all following requests will be queued; *INACTIVE* Resource has been de-provisioned; *DEPLOYING* Resource state DEPLOYING - relevant for Kubernetes cluster/nodepool; *ACTIVE* Resource state ACTIVE - relevant for Kubernetes cluster/nodepool; *FAILED* Resource state FAILED - relevant for Kubernetes cluster/nodepool; *SUSPENDED* Resource state SUSPENDED - relevant for Kubernetes cluster/nodepool; *FAILED_SUSPENDED* Resource state FAILED_SUSPENDED - relevant for Kubernetes cluster; *UPDATING* Resource state UPDATING - relevant for Kubernetes cluster/nodepool; *FAILED_UPDATING* Resource state FAILED_UPDATING - relevant for Kubernetes cluster/nodepool; *DESTROYING* Resource state DESTROYING - relevant for Kubernetes cluster; *FAILED_DESTROYING* Resource state FAILED_DESTROYING - relevant for Kubernetes cluster/nodepool; *TERMINATED* Resource state TERMINATED - relevant for Kubernetes cluster/nodepool |  [optional] [readonly]
+
+
+
+## Enum: StateEnum
+
+Name | Value
+---- | -----
+AVAILABLE | &quot;AVAILABLE&quot;
+INACTIVE | &quot;INACTIVE&quot;
+BUSY | &quot;BUSY&quot;
+DEPLOYING | &quot;DEPLOYING&quot;
+ACTIVE | &quot;ACTIVE&quot;
+FAILED | &quot;FAILED&quot;
+SUSPENDED | &quot;SUSPENDED&quot;
+FAILED_SUSPENDED | &quot;FAILED_SUSPENDED&quot;
+UPDATING | &quot;UPDATING&quot;
+FAILED_UPDATING | &quot;FAILED_UPDATING&quot;
+DESTROYING | &quot;DESTROYING&quot;
+FAILED_DESTROYING | &quot;FAILED_DESTROYING&quot;
+TERMINATED | &quot;TERMINATED&quot;
+
+
+
+# DatacenterEntities
+
+# DatacenterEntities
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**servers** | [**Servers**](Servers.md) |  |  [optional]
+**volumes** | [**Volumes**](Volumes.md) |  |  [optional]
+**loadbalancers** | [**Loadbalancers**](Loadbalancers.md) |  |  [optional]
+**lans** | [**Lans**](Lans.md) |  |  [optional]
+
+
+
+# DatacenterProperties
+
+# DatacenterProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource |  [optional]
+**description** | **String** | A description for the datacenter, e.g. staging, production |  [optional]
+**location** | **String** | The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests) | 
+**version** | **Integer** | The version of that Data Center. Gets incremented with every change |  [optional]
+**features** | [**List&lt;FeaturesEnum&gt;**](#List&lt;FeaturesEnum&gt;) | List of features supported by the location this data center is part of |  [optional] [readonly]
+**secAuthProtection** | **Boolean** | Boolean value representing if the data center requires extra protection e.g. two factor protection |  [optional]
+
+
+
+## Enum: List&lt;FeaturesEnum&gt;
+
+Name | Value
+---- | -----
+SSD | &quot;SSD&quot;
+SSD_STORAGE_ZONING | &quot;SSD_STORAGE_ZONING&quot;
+
+
+
+# Datacenters
+
+# Datacenters
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Datacenter&gt;**](Datacenter.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# Error
+
+# Error
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**httpStatus** | **Integer** | HTTP status code of the operation |  [optional] [readonly]
+**messages** | [**List&lt;ErrorMessage&gt;**](ErrorMessage.md) |  |  [optional]
+
+
+
+# ErrorMessage
+
+# ErrorMessage
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**errorCode** | **String** | Application internal error code |  [optional] [readonly]
+**message** | **String** | Human readable message |  [optional] [readonly]
+
+
+
+# FirewallRule
+
+# FirewallRule
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**FirewallruleProperties**](FirewallruleProperties.md) |  | 
+
+
+
+# FirewallRules
+
+# FirewallRules
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;FirewallRule&gt;**](FirewallRule.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# FirewallruleProperties
+
+# FirewallruleProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource |  [optional]
+**protocol** | [**ProtocolEnum**](#ProtocolEnum) | The protocol for the rule. Property cannot be modified after creation (disallowed in update requests) | 
+**sourceMac** | [**SourceMacEnum**](#SourceMacEnum) | Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows all source MAC address |  [optional]
+**sourceIp** | [**SourceIpEnum**](#SourceIpEnum) | Only traffic originating from the respective IPv4 address is allowed. Value null allows all source IPs |  [optional]
+**targetIp** | [**TargetIpEnum**](#TargetIpEnum) | In case the target NIC has multiple IP addresses, only traffic directed to the respective IP address of the NIC is allowed. Value null allows all target IPs |  [optional]
+**icmpCode** | **Integer** | Defines the allowed code (from 0 to 254) if protocol ICMP is chosen. Value null allows all codes |  [optional]
+**icmpType** | **Integer** | Defines the allowed type (from 0 to 254) if the protocol ICMP is chosen. Value null allows all types |  [optional]
+**portRangeStart** | **Integer** | Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports |  [optional]
+**portRangeEnd** | **Integer** | Defines the end range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd null to allow all ports |  [optional]
+
+
+
+## Enum: ProtocolEnum
+
+Name | Value
+---- | -----
+TCP | &quot;TCP&quot;
+UDP | &quot;UDP&quot;
+ICMP | &quot;ICMP&quot;
+ANY | &quot;ANY&quot;
+
+
+
+## Enum: SourceMacEnum
+
+Name | Value
+---- | -----
+_VALID_MAC_ADDRESS_ | &quot;@Valid MAC address@&quot;
+NULL | &quot;null&quot;
+
+
+
+## Enum: SourceIpEnum
+
+Name | Value
+---- | -----
+_VALID_IP_ADDRESS_ | &quot;@Valid IP address@&quot;
+NULL | &quot;null&quot;
+
+
+
+## Enum: TargetIpEnum
+
+Name | Value
+---- | -----
+_VALID_IP_ADDRESS_ | &quot;@Valid IP address@&quot;
+NULL | &quot;null&quot;
+
+
+
+# Group
+
+# Group
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of the resource |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**properties** | [**GroupProperties**](GroupProperties.md) |  | 
+**entities** | [**GroupEntities**](GroupEntities.md) |  |  [optional]
+
+
+
+# GroupEntities
+
+# GroupEntities
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**users** | [**GroupMembers**](GroupMembers.md) |  |  [optional]
+**resources** | [**ResourceGroups**](ResourceGroups.md) |  |  [optional]
+
+
+
+# GroupMembers
+
+# GroupMembers
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;User&gt;**](User.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# GroupProperties
+
+# GroupProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource |  [optional]
+**createDataCenter** | **Boolean** | create data center privilege |  [optional]
+**createSnapshot** | **Boolean** | create snapshot privilege |  [optional]
+**reserveIp** | **Boolean** | reserve ip block privilege |  [optional]
+**accessActivityLog** | **Boolean** | activity log access privilege |  [optional]
+**createPcc** | **Boolean** | create pcc privilege |  [optional]
+**s3Privilege** | **Boolean** | S3 privilege |  [optional]
+**createBackupUnit** | **Boolean** | create backup unit privilege |  [optional]
+**createInternetAccess** | **Boolean** | create internet access privilege |  [optional]
+**createK8sCluster** | **Boolean** | create kubernetes cluster privilege |  [optional]
+
+
+
+# GroupShare
+
+# GroupShare
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | resource as generic type |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**properties** | [**GroupShareProperties**](GroupShareProperties.md) |  | 
+
+
+
+# GroupShareProperties
+
+# GroupShareProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**editPrivilege** | **Boolean** | edit privilege on a resource |  [optional]
+**sharePrivilege** | **Boolean** | share privilege on a resource |  [optional]
+
+
+
+# GroupShares
+
+# GroupShares
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | Share representing groups and resource relationship |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;GroupShare&gt;**](GroupShare.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# GroupUsers
+
+# GroupUsers
+
+collection of groups a user is member of
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of the resource |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Group&gt;**](Group.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# Groups
+
+# Groups
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of the resource |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Group&gt;**](Group.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# IPFailover
+
+# IPFailover
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ip** | **String** |  |  [optional]
+**nicUuid** | **String** |  |  [optional]
+
+
+
+# Image
+
+# Image
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**ImageProperties**](ImageProperties.md) |  | 
+
+
+
+# ImageProperties
+
+# ImageProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource |  [optional]
+**description** | **String** | Human readable description |  [optional]
+**location** | **String** | Location of that image/snapshot.  |  [optional] [readonly]
+**size** | [**BigDecimal**](BigDecimal.md) | The size of the image in GB |  [optional] [readonly]
+**cpuHotPlug** | **Boolean** | Is capable of CPU hot plug (no reboot required) |  [optional]
+**cpuHotUnplug** | **Boolean** | Is capable of CPU hot unplug (no reboot required) |  [optional]
+**ramHotPlug** | **Boolean** | Is capable of memory hot plug (no reboot required) |  [optional]
+**ramHotUnplug** | **Boolean** | Is capable of memory hot unplug (no reboot required) |  [optional]
+**nicHotPlug** | **Boolean** | Is capable of nic hot plug (no reboot required) |  [optional]
+**nicHotUnplug** | **Boolean** | Is capable of nic hot unplug (no reboot required) |  [optional]
+**discVirtioHotPlug** | **Boolean** | Is capable of Virt-IO drive hot plug (no reboot required) |  [optional]
+**discVirtioHotUnplug** | **Boolean** | Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. |  [optional]
+**discScsiHotPlug** | **Boolean** | Is capable of SCSI drive hot plug (no reboot required) |  [optional]
+**discScsiHotUnplug** | **Boolean** | Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. |  [optional]
+**licenceType** | [**LicenceTypeEnum**](#LicenceTypeEnum) | OS type of this Image | 
+**imageType** | [**ImageTypeEnum**](#ImageTypeEnum) | This indicates the type of image |  [optional] [readonly]
+**_public** | **Boolean** | Indicates if the image is part of the public repository or not |  [optional] [readonly]
+
+
+
+## Enum: LicenceTypeEnum
+
+Name | Value
+---- | -----
+UNKNOWN | &quot;UNKNOWN&quot;
+WINDOWS | &quot;WINDOWS&quot;
+WINDOWS2016 | &quot;WINDOWS2016&quot;
+LINUX | &quot;LINUX&quot;
+OTHER | &quot;OTHER&quot;
+
+
+
+## Enum: ImageTypeEnum
+
+Name | Value
+---- | -----
+HDD | &quot;HDD&quot;
+CDROM | &quot;CDROM&quot;
+
+
+
+# Images
+
+# Images
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Image&gt;**](Image.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# Info
+
+# Info
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**href** | [**URI**](URI.md) | API entry point |  [optional] [readonly]
+**name** | **String** | Name of the API |  [optional] [readonly]
+**version** | **String** | Version of the API |  [optional] [readonly]
+
+
+
+# IpBlock
+
+# IpBlock
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**IpBlockProperties**](IpBlockProperties.md) |  | 
+
+
+
+# IpBlockProperties
+
+# IpBlockProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ips** | **List&lt;String&gt;** | A collection of IPs associated with the IP Block |  [optional] [readonly]
+**location** | **String** | Location of that IP Block. Property cannot be modified after creation (disallowed in update requests) | 
+**size** | **Integer** | The size of the IP block | 
+**name** | **String** | A name of that resource |  [optional]
+**ipConsumers** | [**List&lt;IpConsumer&gt;**](IpConsumer.md) | Read-Only attribute. Lists consumption detail of an individual ip |  [optional] [readonly]
+
+
+
+# IpBlocks
+
+# IpBlocks
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;IpBlock&gt;**](IpBlock.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# IpConsumer
+
+# IpConsumer
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ip** | **String** |  |  [optional]
+**mac** | **String** |  |  [optional]
+**nicId** | **String** |  |  [optional]
+**serverId** | **String** |  |  [optional]
+**serverName** | **String** |  |  [optional]
+**datacenterId** | **String** |  |  [optional]
+**datacenterName** | **String** |  |  [optional]
+
+
+
+# KubernetesAutoScaling
+
+# KubernetesAutoScaling
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**minNodeCount** | **Integer** | The minimum number of worker nodes that the managed node group can scale in. Should be set together with &#39;maxNodeCount&#39;. Value for this attribute must be greater than equal to 1 and less than equal to maxNodeCount. |  [optional]
+**maxNodeCount** | **Integer** | The maximum number of worker nodes that the managed node pool can scale-out. Should be set together with &#39;minNodeCount&#39;. Value for this attribute must be greater than equal to 1 and minNodeCount. |  [optional]
+
+
+
+# KubernetesCluster
+
+# KubernetesCluster
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier. |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of object |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**KubernetesClusterProperties**](KubernetesClusterProperties.md) |  | 
+**entities** | [**KubernetesClusterEntities**](KubernetesClusterEntities.md) |  |  [optional]
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+K8S | &quot;k8s&quot;
+
+
+
+# KubernetesClusterEntities
+
+# KubernetesClusterEntities
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**nodepools** | [**KubernetesNodePools**](KubernetesNodePools.md) |  |  [optional]
+
+
+
+# KubernetesClusterProperties
+
+# KubernetesClusterProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A Kubernetes Cluster Name. Valid Kubernetes Cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | 
+**k8sVersion** | **String** | The kubernetes version in which a cluster is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
+**maintenanceWindow** | [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  |  [optional]
+
+
+
+# KubernetesClusters
+
+# KubernetesClusters
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | Unique representation for Kubernetes Cluster as a collection on a resource. |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the collection representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;KubernetesCluster&gt;**](KubernetesCluster.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+K8S | &quot;k8s&quot;
+
+
+
+# KubernetesConfig
+
+# KubernetesConfig
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier. |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of object |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**properties** | [**KubernetesConfigProperties**](KubernetesConfigProperties.md) |  | 
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+KUBECONFIG | &quot;kubeconfig&quot;
+
+
+
+# KubernetesConfigProperties
+
+# KubernetesConfigProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**kubeconfig** | **String** | A Kubernetes Config file data |  [optional]
+
+
+
+# KubernetesMaintenanceWindow
+
+# KubernetesMaintenanceWindow
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**dayOfTheWeek** | [**DayOfTheWeekEnum**](#DayOfTheWeekEnum) | The day of the week for a maintenance window. |  [optional]
+**time** | **String** | The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\&quot;Z\&quot;; HH:mm:ssZ. This time may varies by 15 minutes. |  [optional]
+
+
+
+## Enum: DayOfTheWeekEnum
+
+Name | Value
+---- | -----
+MONDAY | &quot;Monday&quot;
+TUESDAY | &quot;Tuesday&quot;
+WEDNESDAY | &quot;Wednesday&quot;
+THURSDAY | &quot;Thursday&quot;
+FRIDAY | &quot;Friday&quot;
+SATURDAY | &quot;Saturday&quot;
+SUNDAY | &quot;Sunday&quot;
+
+
+
+# KubernetesNode
+
+# KubernetesNode
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier. |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of object |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**KubernetesNodeMetadata**](KubernetesNodeMetadata.md) |  |  [optional]
+**properties** | [**KubernetesNodeProperties**](KubernetesNodeProperties.md) |  | 
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+NODEPOOL | &quot;nodepool&quot;
+
+
+
+# KubernetesNodeMetadata
+
+# KubernetesNodeMetadata
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
+**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource was created |  [optional] [readonly]
+**lastModifiedDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource has been modified |  [optional] [readonly]
+**state** | [**StateEnum**](#StateEnum) | State of the resource. |  [optional] [readonly]
+**lastSoftwareUpdatedDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the software updated on node. |  [optional] [readonly]
+
+
+
+## Enum: StateEnum
+
+Name | Value
+---- | -----
+PROVISIONING | &quot;PROVISIONING&quot;
+PROVISIONED | &quot;PROVISIONED&quot;
+READY | &quot;READY&quot;
+TERMINATING | &quot;TERMINATING&quot;
+REBUILDING | &quot;REBUILDING&quot;
+BUSY | &quot;BUSY&quot;
+
+
+
+# KubernetesNodePool
+
+# KubernetesNodePool
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier. |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of object |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**KubernetesNodePoolProperties**](KubernetesNodePoolProperties.md) |  | 
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+NODEPOOL | &quot;nodepool&quot;
+
+
+
+# KubernetesNodePoolAnnotation
+
+# KubernetesNodePoolAnnotation
+
+map of annotations attached to node pool
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**key** | **String** | Key of the annotation. String part must consist of alphanumeric characters, &#39;-&#39;, &#39;_&#39; or &#39;.&#39;, and must start and end with an alphanumeric character. |  [optional]
+**value** | **String** | Value of the annotation. |  [optional]
+
+
+
+# KubernetesNodePoolForPut
+
+# KubernetesNodePoolForPut
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier. |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of object |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**KubernetesNodePoolPropertiesForPut**](KubernetesNodePoolPropertiesForPut.md) |  | 
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+NODEPOOL | &quot;nodepool&quot;
+
+
+
+# KubernetesNodePoolLabel
+
+# KubernetesNodePoolLabel
+
+map of labels attached to node pool
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**key** | **String** | Key of the label. String part must consist of alphanumeric characters, &#39;-&#39;, &#39;_&#39; or &#39;.&#39;, and must start and end with an alphanumeric character. |  [optional]
+**value** | **String** | Value of the label. String part must consist of alphanumeric characters, &#39;-&#39;, &#39;_&#39; or &#39;.&#39;, and must start and end with an alphanumeric character. |  [optional]
+
+
+
+# KubernetesNodePoolLan
+
+# KubernetesNodePoolLan
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **Integer** | The LAN ID of an existing LAN at the related datacenter |  [optional]
+
+
+
+# KubernetesNodePoolProperties
+
+# KubernetesNodePoolProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | 
+**datacenterId** | **String** | A valid uuid of the datacenter on which user has access | 
+**nodeCount** | **Integer** | Number of nodes part of the Node Pool | 
+**cpuFamily** | **String** | A valid cpu family name | 
+**coresCount** | **Integer** | Number of cores for node | 
+**ramSize** | **Integer** | RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB. | 
+**availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the server should exist | 
+**storageType** | [**StorageTypeEnum**](#StorageTypeEnum) | Hardware type of the volume | 
+**storageSize** | **Integer** | The size of the volume in GB. The size should be greater than 10GB. | 
+**k8sVersion** | **String** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
+**maintenanceWindow** | [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  |  [optional]
+**autoScaling** | [**KubernetesAutoScaling**](KubernetesAutoScaling.md) |  |  [optional]
+**lans** | [**List&lt;KubernetesNodePoolLan&gt;**](KubernetesNodePoolLan.md) | array of additional LANs attached to worker nodes |  [optional]
+**labels** | [**KubernetesNodePoolLabel**](KubernetesNodePoolLabel.md) |  |  [optional]
+**annotations** | [**KubernetesNodePoolAnnotation**](KubernetesNodePoolAnnotation.md) |  |  [optional]
+
+
+
+## Enum: AvailabilityZoneEnum
+
+Name | Value
+---- | -----
+AUTO | &quot;AUTO&quot;
+ZONE_1 | &quot;ZONE_1&quot;
+ZONE_2 | &quot;ZONE_2&quot;
+
+
+
+## Enum: StorageTypeEnum
+
+Name | Value
+---- | -----
+HDD | &quot;HDD&quot;
+SSD | &quot;SSD&quot;
+
+
+
+# KubernetesNodePoolPropertiesForPut
+
+# KubernetesNodePoolPropertiesForPut
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | 
+**datacenterId** | **String** | A valid uuid of the datacenter on which user has access | 
+**nodeCount** | **Integer** | Number of nodes part of the Node Pool | 
+**cpuFamily** | **String** | A valid cpu family name | 
+**coresCount** | **Integer** | Number of cores for node | 
+**ramSize** | **Integer** | RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB. | 
+**availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the server should exist | 
+**storageType** | [**StorageTypeEnum**](#StorageTypeEnum) | Hardware type of the volume | 
+**storageSize** | **Integer** | The size of the volume in GB. The size should be greater than 10GB. | 
+**k8sVersion** | **String** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
+**maintenanceWindow** | [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  |  [optional]
+**autoScaling** | [**KubernetesAutoScaling**](KubernetesAutoScaling.md) |  |  [optional]
+**lans** | [**List&lt;KubernetesNodePoolLan&gt;**](KubernetesNodePoolLan.md) | array of additional LANs attached to worker nodes |  [optional]
+
+
+
+## Enum: AvailabilityZoneEnum
+
+Name | Value
+---- | -----
+AUTO | &quot;AUTO&quot;
+ZONE_1 | &quot;ZONE_1&quot;
+ZONE_2 | &quot;ZONE_2&quot;
+
+
+
+## Enum: StorageTypeEnum
+
+Name | Value
+---- | -----
+HDD | &quot;HDD&quot;
+SSD | &quot;SSD&quot;
+
+
+
+# KubernetesNodePools
+
+# KubernetesNodePools
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | Unique representation for Kubernetes Node Pool as a collection on a resource. |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the collection representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;KubernetesNodePool&gt;**](KubernetesNodePool.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+NODEPOOL | &quot;nodepool&quot;
+
+
+
+# KubernetesNodeProperties
+
+# KubernetesNodeProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A Kubernetes Node Name. | 
+**publicIP** | **String** | A valid public IP. | 
+**k8sVersion** | **String** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | 
+
+
+
+# KubernetesNodes
+
+# KubernetesNodes
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | Unique representation for Kubernetes Node Pool as a collection on a resource. |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the collection representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;KubernetesNode&gt;**](KubernetesNode.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+NODEPOOL | &quot;nodepool&quot;
+
+
+
+# Label
+
+# Label
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | Label is identified using standard URN. |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of object that has been created |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**NoStateMetaData**](NoStateMetaData.md) |  |  [optional]
+**properties** | [**LabelProperties**](LabelProperties.md) |  | 
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+LABEL | &quot;label&quot;
+
+
+
+# LabelProperties
+
+# LabelProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**key** | **String** | A Label Key |  [optional]
+**value** | **String** | A Label Value |  [optional]
+**resourceId** | **String** | The id of the resource |  [optional]
+**resourceType** | **String** | The type of the resource on which the label is applied. |  [optional]
+**resourceHref** | **String** | URL to the Resource (absolute path) on which the label is applied. |  [optional]
+
+
+
+# LabelResource
+
+# LabelResource
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | Label on a resource is identified using label key. |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of object that has been created |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**NoStateMetaData**](NoStateMetaData.md) |  |  [optional]
+**properties** | [**LabelResourceProperties**](LabelResourceProperties.md) |  | 
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+LABEL | &quot;label&quot;
+
+
+
+# LabelResourceProperties
+
+# LabelResourceProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**key** | **String** | A Label Key |  [optional]
+**value** | **String** | A Label Value |  [optional]
+
+
+
+# LabelResources
+
+# LabelResources
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | Unique representation for Label as a collection on a resource. |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the collection representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;LabelResource&gt;**](LabelResource.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+LABEL | &quot;label&quot;
+
+
+
+# Labels
+
+# Labels
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | Unique representation for Label as a collection of resource. |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
+**href** | [**URI**](URI.md) | URL to the collection representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Label&gt;**](Label.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+LABEL | &quot;label&quot;
+
+
+
+# Lan
+
+# Lan
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**LanProperties**](LanProperties.md) |  | 
+**entities** | [**LanEntities**](LanEntities.md) |  |  [optional]
+
+
+
+# LanEntities
+
+# LanEntities
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**nics** | [**LanNics**](LanNics.md) |  |  [optional]
+
+
+
+# LanNics
+
+# LanNics
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Nic&gt;**](Nic.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# LanPost
+
+# LanPost
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**entities** | [**LanEntities**](LanEntities.md) |  |  [optional]
+**properties** | [**LanPropertiesPost**](LanPropertiesPost.md) |  | 
+
+
+
+# LanProperties
+
+# LanProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource |  [optional]
+**ipFailover** | [**List&lt;IPFailover&gt;**](IPFailover.md) | IP failover configurations for lan |  [optional]
+**pcc** | **String** | Unique identifier of the private cross connect the given LAN is connected to if any |  [optional]
+**_public** | **Boolean** | Does this LAN faces the public Internet or not |  [optional]
+
+
+
+# LanPropertiesPost
+
+# LanPropertiesPost
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource |  [optional]
+**_public** | **Boolean** | Does this LAN faces the public Internet or not |  [optional]
+
+
+
+# Lans
+
+# Lans
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Lan&gt;**](Lan.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# Loadbalancer
+
+# Loadbalancer
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**LoadbalancerProperties**](LoadbalancerProperties.md) |  | 
+**entities** | [**LoadbalancerEntities**](LoadbalancerEntities.md) |  |  [optional]
+
+
+
+# LoadbalancerEntities
+
+# LoadbalancerEntities
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**balancednics** | [**BalancedNics**](BalancedNics.md) |  |  [optional]
+
+
+
+# LoadbalancerProperties
+
+# LoadbalancerProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource |  [optional]
+**ip** | [**IpEnum**](#IpEnum) | IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically |  [optional]
+**dhcp** | **Boolean** | Indicates if the loadbalancer will reserve an IP using DHCP |  [optional]
+
+
+
+## Enum: IpEnum
+
+Name | Value
+---- | -----
+_VALID_IP_ADDRESS_ | &quot;@Valid IP address@&quot;
+NULL | &quot;null&quot;
+
+
+
+# Loadbalancers
+
+# Loadbalancers
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Loadbalancer&gt;**](Loadbalancer.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# Location
+
+# Location
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**LocationProperties**](LocationProperties.md) |  | 
+
+
+
+# LocationProperties
+
+# LocationProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource |  [optional]
+**features** | [**List&lt;FeaturesEnum&gt;**](#List&lt;FeaturesEnum&gt;) | List of features supported by the location |  [optional] [readonly]
+**imageAliases** | **List&lt;String&gt;** | List of image aliases available for the location |  [optional] [readonly]
+
+
+
+## Enum: List&lt;FeaturesEnum&gt;
+
+Name | Value
+---- | -----
+SSD | &quot;SSD&quot;
+SSD_STORAGE_ZONING | &quot;SSD_STORAGE_ZONING&quot;
+
+
+
+# Locations
+
+# Locations
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Location&gt;**](Location.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# Nic
+
+# Nic
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**NicProperties**](NicProperties.md) |  | 
+**entities** | [**NicEntities**](NicEntities.md) |  |  [optional]
+
+
+
+# NicEntities
+
+# NicEntities
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**firewallrules** | [**FirewallRules**](FirewallRules.md) |  |  [optional]
+
+
+
+# NicProperties
+
+# NicProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource |  [optional]
+**mac** | **String** | The MAC address of the NIC |  [optional] [readonly]
+**ips** | **List&lt;String&gt;** | Collection of IP addresses assigned to a nic. Explicitly assigned public IPs need to come from reserved IP blocks, Passing value null or empty array will assign an IP address automatically. |  [optional]
+**dhcp** | **Boolean** | Indicates if the nic will reserve an IP using DHCP |  [optional]
+**lan** | **Integer** | The LAN ID the NIC will sit on. If the LAN ID does not exist it will be implicitly created | 
+**firewallActive** | **Boolean** | Activate or deactivate the firewall. By default an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, ip addresses and ports. |  [optional]
+**nat** | **Boolean** | Indicates if NAT is enabled on this NIC |  [optional]
+
+
+
+# Nics
+
+# Nics
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Nic&gt;**](Nic.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# NoStateMetaData
+
+# NoStateMetaData
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
+**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | The time the Resource was created |  [optional] [readonly]
+**createdBy** | **String** | The user who has created the resource. |  [optional] [readonly]
+**createdByUserId** | **String** | The user id of the user who has created the resource. |  [optional] [readonly]
+**lastModifiedDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource has been modified |  [optional] [readonly]
+**lastModifiedBy** | **String** | The user who last modified the resource. |  [optional] [readonly]
+**lastModifiedByUserId** | **String** | The user id of the user who has last modified the resource. |  [optional] [readonly]
+
+
+
+# Peer
+
+# Peer
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** |  |  [optional]
+**name** | **String** |  |  [optional]
+**datacenterId** | **String** |  |  [optional]
+**datacenterName** | **String** |  |  [optional]
+**location** | **String** |  |  [optional]
+
+
+
+# PrivateCrossConnect
+
+# PrivateCrossConnect
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**PrivateCrossConnectProperties**](PrivateCrossConnectProperties.md) |  | 
+
+
+
+# PrivateCrossConnectProperties
+
+# PrivateCrossConnectProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource |  [optional]
+**description** | **String** | Human readable description |  [optional]
+**peers** | [**List&lt;Peer&gt;**](Peer.md) | Read-Only attribute. Lists LAN&#39;s joined to this private cross connect |  [optional] [readonly]
+**connectableDatacenters** | [**List&lt;ConnectableDatacenter&gt;**](ConnectableDatacenter.md) | Read-Only attribute. Lists datacenters that can be joined to this private cross connect |  [optional] [readonly]
+
+
+
+# PrivateCrossConnects
+
+# PrivateCrossConnects
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;PrivateCrossConnect&gt;**](PrivateCrossConnect.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# Request
+
+# Request
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**RequestMetadata**](RequestMetadata.md) |  |  [optional]
+**properties** | [**RequestProperties**](RequestProperties.md) |  | 
+
+
+
+# RequestMetadata
+
+# RequestMetadata
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource was created |  [optional] [readonly]
+**createdBy** | **String** | The user who created the resource. |  [optional] [readonly]
+**etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
+**requestStatus** | [**RequestStatus**](RequestStatus.md) |  |  [optional]
+
+
+
+# RequestProperties
+
+# RequestProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**method** | **String** |  |  [optional]
+**headers** | **Map&lt;String, String&gt;** |  |  [optional]
+**body** | **String** |  |  [optional]
+**url** | **String** |  |  [optional]
+
+
+
+# RequestStatus
+
+# RequestStatus
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**RequestStatusMetadata**](RequestStatusMetadata.md) |  |  [optional]
+
+
+
+# RequestStatusMetadata
+
+# RequestStatusMetadata
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
+**message** | **String** |  |  [optional]
+**etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
+**targets** | [**List&lt;RequestTarget&gt;**](RequestTarget.md) |  |  [optional]
+
+
+
+## Enum: StatusEnum
+
+Name | Value
+---- | -----
+QUEUED | &quot;QUEUED&quot;
+RUNNING | &quot;RUNNING&quot;
+DONE | &quot;DONE&quot;
+FAILED | &quot;FAILED&quot;
+
+
+
+# RequestTarget
+
+# RequestTarget
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**target** | [**ResourceReference**](ResourceReference.md) |  |  [optional]
+**status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
+
+
+
+## Enum: StatusEnum
+
+Name | Value
+---- | -----
+QUEUED | &quot;QUEUED&quot;
+RUNNING | &quot;RUNNING&quot;
+DONE | &quot;DONE&quot;
+FAILED | &quot;FAILED&quot;
+
+
+
+# Requests
+
+# Requests
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Request&gt;**](Request.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# Resource
+
+# Resource
+
+datacenter resource representation
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of the resource |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**ResourceProperties**](ResourceProperties.md) |  |  [optional]
+**entities** | [**ResourceEntities**](ResourceEntities.md) |  |  [optional]
+
+
+
+# ResourceEntities
+
+# ResourceEntities
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**groups** | [**ResourceGroups**](ResourceGroups.md) |  |  [optional]
+
+
+
+# ResourceGroups
+
+# ResourceGroups
+
+Resources assigned to this group.
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of the resource |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Resource&gt;**](Resource.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# ResourceLimits
+
+# ResourceLimits
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**coresPerServer** | **Integer** | maximum number of cores per server | 
+**coresPerContract** | **Integer** | maximum cores per contract | 
+**coresProvisioned** | **Integer** | number of cores provisioned | 
+**ramPerServer** | **Integer** | maximum ram per server | 
+**ramPerContract** | **Integer** | maximum ram per contract | 
+**ramProvisioned** | **Integer** | ram provisioned | 
+**hddLimitPerVolume** | **Long** | hdd limit per volume | 
+**hddLimitPerContract** | **Long** | hdd limit per contract | 
+**hddVolumeProvisioned** | **Long** | hdd volume provisioned | 
+**ssdLimitPerVolume** | **Long** | ssd limit per volume | 
+**ssdLimitPerContract** | **Long** | ssd limit per contract | 
+**ssdVolumeProvisioned** | **Long** | ssd volume provisioned | 
+**reservableIps** | **Integer** | total reservable ip limit of the customer | 
+**reservedIpsOnContract** | **Integer** | reserved ips on a contract | 
+**reservedIpsInUse** | **Integer** | reserved ips in use | 
+**k8sClusterLimitTotal** | **Integer** | k8s clusters total limit | 
+**k8sClustersProvisioned** | **Integer** | k8s clusters provisioned | 
+
+
+
+# ResourceProperties
+
+# ResourceProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | name of the resource |  [optional]
+**secAuthProtection** | **Boolean** | Boolean value representing if the resource is multi factor protected or not e.g. using two factor protection. Currently only Data Centers and Snapshots are allowed to be multi factor protected, The value of attribute if null is intentional and it means that the resource doesn&#39;t support multi factor protection at all. |  [optional]
+
+
+
+# ResourceReference
+
+# ResourceReference
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier | 
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+
+
+
+# Resources
+
+# Resources
+
+Collection to represent the resource
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of the resource |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Resource&gt;**](Resource.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# ResourcesUsers
+
+# ResourcesUsers
+
+Resources owned by a user.
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of the resource |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Resource&gt;**](Resource.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# S3Key
+
+# S3Key
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of the resource |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**S3KeyMetadata**](S3KeyMetadata.md) |  |  [optional]
+**properties** | [**S3KeyProperties**](S3KeyProperties.md) |  | 
+
+
+
+# S3KeyMetadata
+
+# S3KeyMetadata
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
+**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | The time the S3 key was created |  [optional] [readonly]
+
+
+
+# S3KeyProperties
+
+# S3KeyProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**secretKey** | **String** | secret of the s3 key |  [optional] [readonly]
+**active** | **Boolean** | denotes if the s3 key is active or not |  [optional]
+
+
+
+# S3Keys
+
+# S3Keys
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of the resource |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;S3Key&gt;**](S3Key.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# S3ObjectStorageSSO
+
+# S3ObjectStorageSSO
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**ssoUrl** | **String** | The S3 object storage single sign on url |  [optional] [readonly]
+
+
+
+# Server
+
+# Server
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**ServerProperties**](ServerProperties.md) |  | 
+**entities** | [**ServerEntities**](ServerEntities.md) |  |  [optional]
+
+
+
+# ServerEntities
+
+# ServerEntities
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**cdroms** | [**Cdroms**](Cdroms.md) |  |  [optional]
+**volumes** | [**AttachedVolumes**](AttachedVolumes.md) |  |  [optional]
+**nics** | [**Nics**](Nics.md) |  |  [optional]
+
+
+
+# ServerProperties
+
+# ServerProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource |  [optional]
+**cores** | **Integer** | The total number of cores for the server | 
+**ram** | **Integer** | The amount of memory for the server in MB, e.g. 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB. | 
+**availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the server should exist |  [optional]
+**vmState** | [**VmStateEnum**](#VmStateEnum) | Status of the virtual Machine |  [optional] [readonly]
+**bootCdrom** | [**ResourceReference**](ResourceReference.md) |  |  [optional]
+**bootVolume** | [**ResourceReference**](ResourceReference.md) |  |  [optional]
+**cpuFamily** | **String** | Cpu family of pserver |  [optional]
+
+
+
+## Enum: AvailabilityZoneEnum
+
+Name | Value
+---- | -----
+AUTO | &quot;AUTO&quot;
+ZONE_1 | &quot;ZONE_1&quot;
+ZONE_2 | &quot;ZONE_2&quot;
+
+
+
+## Enum: VmStateEnum
+
+Name | Value
+---- | -----
+NOSTATE | &quot;NOSTATE&quot;
+RUNNING | &quot;RUNNING&quot;
+BLOCKED | &quot;BLOCKED&quot;
+PAUSED | &quot;PAUSED&quot;
+SHUTDOWN | &quot;SHUTDOWN&quot;
+SHUTOFF | &quot;SHUTOFF&quot;
+CRASHED | &quot;CRASHED&quot;
+
+
+
+# Servers
+
+# Servers
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Server&gt;**](Server.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# Snapshot
+
+# Snapshot
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**SnapshotProperties**](SnapshotProperties.md) |  | 
+
+
+
+# SnapshotProperties
+
+# SnapshotProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource |  [optional]
+**description** | **String** | Human readable description |  [optional]
+**location** | **String** | Location of that image/snapshot.  |  [optional] [readonly]
+**size** | [**BigDecimal**](BigDecimal.md) | The size of the image in GB |  [optional] [readonly]
+**secAuthProtection** | **Boolean** | Boolean value representing if the snapshot requires extra protection e.g. two factor protection |  [optional]
+**cpuHotPlug** | **Boolean** | Is capable of CPU hot plug (no reboot required) |  [optional]
+**cpuHotUnplug** | **Boolean** | Is capable of CPU hot unplug (no reboot required) |  [optional]
+**ramHotPlug** | **Boolean** | Is capable of memory hot plug (no reboot required) |  [optional]
+**ramHotUnplug** | **Boolean** | Is capable of memory hot unplug (no reboot required) |  [optional]
+**nicHotPlug** | **Boolean** | Is capable of nic hot plug (no reboot required) |  [optional]
+**nicHotUnplug** | **Boolean** | Is capable of nic hot unplug (no reboot required) |  [optional]
+**discVirtioHotPlug** | **Boolean** | Is capable of Virt-IO drive hot plug (no reboot required) |  [optional]
+**discVirtioHotUnplug** | **Boolean** | Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. |  [optional]
+**discScsiHotPlug** | **Boolean** | Is capable of SCSI drive hot plug (no reboot required) |  [optional]
+**discScsiHotUnplug** | **Boolean** | Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. |  [optional]
+**licenceType** | [**LicenceTypeEnum**](#LicenceTypeEnum) | OS type of this Snapshot |  [optional]
+
+
+
+## Enum: LicenceTypeEnum
+
+Name | Value
+---- | -----
+UNKNOWN | &quot;UNKNOWN&quot;
+WINDOWS | &quot;WINDOWS&quot;
+WINDOWS2016 | &quot;WINDOWS2016&quot;
+LINUX | &quot;LINUX&quot;
+OTHER | &quot;OTHER&quot;
+
+
+
+# Snapshots
+
+# Snapshots
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Snapshot&gt;**](Snapshot.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# Type
+
+# Type
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+
+
+
+# User
+
+# User
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**UserMetadata**](UserMetadata.md) |  |  [optional]
+**properties** | [**UserProperties**](UserProperties.md) |  | 
+**entities** | [**UsersEntities**](UsersEntities.md) |  |  [optional]
+
+
+
+# UserMetadata
+
+# UserMetadata
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly]
+**createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | time of creation of the user |  [optional] [readonly]
+**lastLogin** | [**OffsetDateTime**](OffsetDateTime.md) | time of last login by the user |  [optional] [readonly]
+
+
+
+# UserProperties
+
+# UserProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**firstname** | **String** | first name of the user |  [optional]
+**lastname** | **String** | last name of the user |  [optional]
+**email** | **String** | email address of the user |  [optional]
+**administrator** | **Boolean** | indicates if the user has admin rights or not |  [optional]
+**forceSecAuth** | **Boolean** | indicates if secure authentication should be forced on the user or not |  [optional]
+**secAuthActive** | **Boolean** | indicates if secure authentication is active for the user or not |  [optional]
+**s3CanonicalUserId** | **String** | Canonical (S3) id of the user for a given identity |  [optional]
+**password** | **String** | User password |  [optional]
+
+
+
+# Users
+
+# Users
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;User&gt;**](User.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+# UsersEntities
+
+# UsersEntities
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**owns** | [**ResourcesUsers**](ResourcesUsers.md) |  |  [optional]
+**groups** | [**GroupUsers**](GroupUsers.md) |  |  [optional]
+
+
+
+# Volume
+
+# Volume
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  |  [optional]
+**properties** | [**VolumeProperties**](VolumeProperties.md) |  | 
+
+
+
+# VolumeProperties
+
+# VolumeProperties
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A name of that resource |  [optional]
+**type** | [**TypeEnum**](#TypeEnum) | Hardware type of the volume. |  [optional]
+**size** | [**BigDecimal**](BigDecimal.md) | The size of the volume in GB | 
+**availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront |  [optional]
+**image** | **String** | Image or snapshot ID to be used as template for this volume |  [optional]
+**imageAlias** | **String** |  |  [optional]
+**imagePassword** | **String** | Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9 |  [optional]
+**sshKeys** | **List&lt;String&gt;** | Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation. |  [optional]
+**bus** | [**BusEnum**](#BusEnum) | The bus type of the volume. Default is VIRTIO |  [optional]
+**licenceType** | [**LicenceTypeEnum**](#LicenceTypeEnum) | OS type of this volume |  [optional] [readonly]
+**cpuHotPlug** | **Boolean** | Is capable of CPU hot plug (no reboot required) |  [optional]
+**ramHotPlug** | **Boolean** | Is capable of memory hot plug (no reboot required) |  [optional]
+**nicHotPlug** | **Boolean** | Is capable of nic hot plug (no reboot required) |  [optional]
+**nicHotUnplug** | **Boolean** | Is capable of nic hot unplug (no reboot required) |  [optional]
+**discVirtioHotPlug** | **Boolean** | Is capable of Virt-IO drive hot plug (no reboot required) |  [optional]
+**discVirtioHotUnplug** | **Boolean** | Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. |  [optional]
+**deviceNumber** | **Long** | The LUN ID of the storage volume. Null for volumes not mounted to any VM |  [optional] [readonly]
+**backupunitId** | **String** | The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provied either public image or imageAlias in conjunction with this property. |  [optional]
+
+
+
+## Enum: TypeEnum
+
+Name | Value
+---- | -----
+HDD | &quot;HDD&quot;
+SSD | &quot;SSD&quot;
+SSD_STANDARD | &quot;SSD Standard&quot;
+SSD_PREMIUM | &quot;SSD Premium&quot;
+
+
+
+## Enum: AvailabilityZoneEnum
+
+Name | Value
+---- | -----
+AUTO | &quot;AUTO&quot;
+ZONE_1 | &quot;ZONE_1&quot;
+ZONE_2 | &quot;ZONE_2&quot;
+ZONE_3 | &quot;ZONE_3&quot;
+
+
+
+## Enum: BusEnum
+
+Name | Value
+---- | -----
+VIRTIO | &quot;VIRTIO&quot;
+IDE | &quot;IDE&quot;
+
+
+
+## Enum: LicenceTypeEnum
+
+Name | Value
+---- | -----
+UNKNOWN | &quot;UNKNOWN&quot;
+WINDOWS | &quot;WINDOWS&quot;
+WINDOWS2016 | &quot;WINDOWS2016&quot;
+LINUX | &quot;LINUX&quot;
+OTHER | &quot;OTHER&quot;
+
+
+
+# Volumes
+
+# Volumes
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
+**type** | [**Type**](Type.md) | The type of object that has been created |  [optional]
+**href** | [**URI**](URI.md) | URL to the object representation (absolute path) |  [optional] [readonly]
+**items** | [**List&lt;Volume&gt;**](Volume.md) | Array of items in that collection |  [optional] [readonly]
+
+
+
+---
 
 ## Documentation for Authorization
 
@@ -15178,8 +17487,4 @@ Authentication schemes defined for the API:
 ## Recommendation
 
 It's recommended to create an instance of `ApiClient` per thread in a multithreaded environment to avoid any potential issues.
-
-## Author
-
-
 
