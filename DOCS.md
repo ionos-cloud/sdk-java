@@ -5,7 +5,7 @@
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2020-11-19T12:50:39.821708+02:00[Europe/Bucharest]
+  - Build date: 2020-11-19T13:06:24.019174+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -361,13 +361,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**backupunitsDelete**](BackupUnitApi.md#backupunitsDelete) | **DELETE** /backupunits/{backupunitId} | Delete a Backup Unit
-[**backupunitsFindById**](BackupUnitApi.md#backupunitsFindById) | **GET** /backupunits/{backupunitId} | Returns the specified backup Unit
-[**backupunitsGet**](BackupUnitApi.md#backupunitsGet) | **GET** /backupunits | List Backup Units 
-[**backupunitsPatch**](BackupUnitApi.md#backupunitsPatch) | **PATCH** /backupunits/{backupunitId} | Partially modify a Backup Unit
-[**backupunitsPost**](BackupUnitApi.md#backupunitsPost) | **POST** /backupunits | Create a Backup Unit
-[**backupunitsPut**](BackupUnitApi.md#backupunitsPut) | **PUT** /backupunits/{backupunitId} | Modify a Backup Unit
-[**backupunitsSsourlGet**](BackupUnitApi.md#backupunitsSsourlGet) | **GET** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified backup Unit.
+[**backupunitsDelete**](DOCS.md#backupunitsDelete) | **DELETE** /backupunits/{backupunitId} | Delete a Backup Unit
+[**backupunitsFindById**](DOCS.md#backupunitsFindById) | **GET** /backupunits/{backupunitId} | Returns the specified backup Unit
+[**backupunitsGet**](DOCS.md#backupunitsGet) | **GET** /backupunits | List Backup Units 
+[**backupunitsPatch**](DOCS.md#backupunitsPatch) | **PATCH** /backupunits/{backupunitId} | Partially modify a Backup Unit
+[**backupunitsPost**](DOCS.md#backupunitsPost) | **POST** /backupunits | Create a Backup Unit
+[**backupunitsPut**](DOCS.md#backupunitsPut) | **PUT** /backupunits/{backupunitId} | Modify a Backup Unit
+[**backupunitsSsourlGet**](DOCS.md#backupunitsSsourlGet) | **GET** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified backup Unit.
 
 
 <a name="backupunitsDelete"></a>
@@ -947,7 +947,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**contractsGet**](ContractApi.md#contractsGet) | **GET** /contracts | Retrieve a Contract
+[**contractsGet**](DOCS.md#contractsGet) | **GET** /contracts | Retrieve a Contract
 
 
 <a name="contractsGet"></a>
@@ -1039,12 +1039,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacentersDelete**](DataCenterApi.md#datacentersDelete) | **DELETE** /datacenters/{datacenterId} | Delete a Data Center
-[**datacentersFindById**](DataCenterApi.md#datacentersFindById) | **GET** /datacenters/{datacenterId} | Retrieve a Data Center
-[**datacentersGet**](DataCenterApi.md#datacentersGet) | **GET** /datacenters | List Data Centers under your account
-[**datacentersPatch**](DataCenterApi.md#datacentersPatch) | **PATCH** /datacenters/{datacenterId} | Partially modify a Data Center
-[**datacentersPost**](DataCenterApi.md#datacentersPost) | **POST** /datacenters | Create a Data Center
-[**datacentersPut**](DataCenterApi.md#datacentersPut) | **PUT** /datacenters/{datacenterId} | Modify a Data Center
+[**datacentersDelete**](DOCS.md#datacentersDelete) | **DELETE** /datacenters/{datacenterId} | Delete a Data Center
+[**datacentersFindById**](DOCS.md#datacentersFindById) | **GET** /datacenters/{datacenterId} | Retrieve a Data Center
+[**datacentersGet**](DOCS.md#datacentersGet) | **GET** /datacenters | List Data Centers under your account
+[**datacentersPatch**](DOCS.md#datacentersPatch) | **PATCH** /datacenters/{datacenterId} | Partially modify a Data Center
+[**datacentersPost**](DOCS.md#datacentersPost) | **POST** /datacenters | Create a Data Center
+[**datacentersPut**](DOCS.md#datacentersPut) | **PUT** /datacenters/{datacenterId} | Modify a Data Center
 
 
 <a name="datacentersDelete"></a>
@@ -1545,11 +1545,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**imagesDelete**](ImageApi.md#imagesDelete) | **DELETE** /images/{imageId} | Delete an Image
-[**imagesFindById**](ImageApi.md#imagesFindById) | **GET** /images/{imageId} | Retrieve an Image
-[**imagesGet**](ImageApi.md#imagesGet) | **GET** /images | List Images 
-[**imagesPatch**](ImageApi.md#imagesPatch) | **PATCH** /images/{imageId} | Partially modify an Image
-[**imagesPut**](ImageApi.md#imagesPut) | **PUT** /images/{imageId} | Modify an Image
+[**imagesDelete**](DOCS.md#imagesDelete) | **DELETE** /images/{imageId} | Delete an Image
+[**imagesFindById**](DOCS.md#imagesFindById) | **GET** /images/{imageId} | Retrieve an Image
+[**imagesGet**](DOCS.md#imagesGet) | **GET** /images | List Images 
+[**imagesPatch**](DOCS.md#imagesPatch) | **PATCH** /images/{imageId} | Partially modify an Image
+[**imagesPut**](DOCS.md#imagesPut) | **PUT** /images/{imageId} | Modify an Image
 
 
 <a name="imagesDelete"></a>
@@ -1969,12 +1969,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ipblocksDelete**](IpBlocksApi.md#ipblocksDelete) | **DELETE** /ipblocks/{ipblockId} | Delete IP Block
-[**ipblocksFindById**](IpBlocksApi.md#ipblocksFindById) | **GET** /ipblocks/{ipblockId} | Retrieve an IP Block
-[**ipblocksGet**](IpBlocksApi.md#ipblocksGet) | **GET** /ipblocks | List IP Blocks 
-[**ipblocksPatch**](IpBlocksApi.md#ipblocksPatch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP Block
-[**ipblocksPost**](IpBlocksApi.md#ipblocksPost) | **POST** /ipblocks | Reserve IP Block
-[**ipblocksPut**](IpBlocksApi.md#ipblocksPut) | **PUT** /ipblocks/{ipblockId} | Modify IP Block
+[**ipblocksDelete**](DOCS.md#ipblocksDelete) | **DELETE** /ipblocks/{ipblockId} | Delete IP Block
+[**ipblocksFindById**](DOCS.md#ipblocksFindById) | **GET** /ipblocks/{ipblockId} | Retrieve an IP Block
+[**ipblocksGet**](DOCS.md#ipblocksGet) | **GET** /ipblocks | List IP Blocks 
+[**ipblocksPatch**](DOCS.md#ipblocksPatch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP Block
+[**ipblocksPost**](DOCS.md#ipblocksPost) | **POST** /ipblocks | Reserve IP Block
+[**ipblocksPut**](DOCS.md#ipblocksPut) | **PUT** /ipblocks/{ipblockId} | Modify IP Block
 
 
 <a name="ipblocksDelete"></a>
@@ -2475,24 +2475,24 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**k8sDelete**](KubernetesApi.md#k8sDelete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes Cluster
-[**k8sFindByClusterid**](KubernetesApi.md#k8sFindByClusterid) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
-[**k8sGet**](KubernetesApi.md#k8sGet) | **GET** /k8s | List Kubernetes Clusters
-[**k8sKubeconfigGet**](KubernetesApi.md#k8sKubeconfigGet) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File
-[**k8sNodepoolsDelete**](KubernetesApi.md#k8sNodepoolsDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool
-[**k8sNodepoolsFindById**](KubernetesApi.md#k8sNodepoolsFindById) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes Node Pool
-[**k8sNodepoolsGet**](KubernetesApi.md#k8sNodepoolsGet) | **GET** /k8s/{k8sClusterId}/nodepools | List Kubernetes Node Pools
-[**k8sNodepoolsNodesDelete**](KubernetesApi.md#k8sNodepoolsNodesDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes node
-[**k8sNodepoolsNodesFindById**](KubernetesApi.md#k8sNodepoolsNodesFindById) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes node
-[**k8sNodepoolsNodesGet**](KubernetesApi.md#k8sNodepoolsNodesGet) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Retrieve Kubernetes nodes.
-[**k8sNodepoolsNodesReplacePost**](KubernetesApi.md#k8sNodepoolsNodesReplacePost) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate the Kubernetes node
-[**k8sNodepoolsPost**](KubernetesApi.md#k8sNodepoolsPost) | **POST** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool
-[**k8sNodepoolsPut**](KubernetesApi.md#k8sNodepoolsPut) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool
-[**k8sPost**](KubernetesApi.md#k8sPost) | **POST** /k8s | Create Kubernetes Cluster
-[**k8sPut**](KubernetesApi.md#k8sPut) | **PUT** /k8s/{k8sClusterId} | Modify Kubernetes Cluster
-[**k8sVersionsCompatibilitiesGet**](KubernetesApi.md#k8sVersionsCompatibilitiesGet) | **GET** /k8s/versions/{clusterVersion}/compatibilities | Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
-[**k8sVersionsDefaultGet**](KubernetesApi.md#k8sVersionsDefaultGet) | **GET** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools.
-[**k8sVersionsGet**](KubernetesApi.md#k8sVersionsGet) | **GET** /k8s/versions | Retrieve available Kubernetes versions
+[**k8sDelete**](DOCS.md#k8sDelete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes Cluster
+[**k8sFindByClusterid**](DOCS.md#k8sFindByClusterid) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
+[**k8sGet**](DOCS.md#k8sGet) | **GET** /k8s | List Kubernetes Clusters
+[**k8sKubeconfigGet**](DOCS.md#k8sKubeconfigGet) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File
+[**k8sNodepoolsDelete**](DOCS.md#k8sNodepoolsDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool
+[**k8sNodepoolsFindById**](DOCS.md#k8sNodepoolsFindById) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes Node Pool
+[**k8sNodepoolsGet**](DOCS.md#k8sNodepoolsGet) | **GET** /k8s/{k8sClusterId}/nodepools | List Kubernetes Node Pools
+[**k8sNodepoolsNodesDelete**](DOCS.md#k8sNodepoolsNodesDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes node
+[**k8sNodepoolsNodesFindById**](DOCS.md#k8sNodepoolsNodesFindById) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes node
+[**k8sNodepoolsNodesGet**](DOCS.md#k8sNodepoolsNodesGet) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Retrieve Kubernetes nodes.
+[**k8sNodepoolsNodesReplacePost**](DOCS.md#k8sNodepoolsNodesReplacePost) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate the Kubernetes node
+[**k8sNodepoolsPost**](DOCS.md#k8sNodepoolsPost) | **POST** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool
+[**k8sNodepoolsPut**](DOCS.md#k8sNodepoolsPut) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool
+[**k8sPost**](DOCS.md#k8sPost) | **POST** /k8s | Create Kubernetes Cluster
+[**k8sPut**](DOCS.md#k8sPut) | **PUT** /k8s/{k8sClusterId} | Modify Kubernetes Cluster
+[**k8sVersionsCompatibilitiesGet**](DOCS.md#k8sVersionsCompatibilitiesGet) | **GET** /k8s/versions/{clusterVersion}/compatibilities | Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
+[**k8sVersionsDefaultGet**](DOCS.md#k8sVersionsDefaultGet) | **GET** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools.
+[**k8sVersionsGet**](DOCS.md#k8sVersionsGet) | **GET** /k8s/versions | Retrieve available Kubernetes versions
 
 
 <a name="k8sDelete"></a>
@@ -3961,33 +3961,33 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacentersLabelsDelete**](LabelApi.md#datacentersLabelsDelete) | **DELETE** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center
-[**datacentersLabelsFindByKey**](LabelApi.md#datacentersLabelsFindByKey) | **GET** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center
-[**datacentersLabelsGet**](LabelApi.md#datacentersLabelsGet) | **GET** /datacenters/{datacenterId}/labels | List all Data Center Labels
-[**datacentersLabelsPost**](LabelApi.md#datacentersLabelsPost) | **POST** /datacenters/{datacenterId}/labels | Add a Label to Data Center
-[**datacentersLabelsPut**](LabelApi.md#datacentersLabelsPut) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center
-[**datacentersServersLabelsDelete**](LabelApi.md#datacentersServersLabelsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server
-[**datacentersServersLabelsFindByKey**](LabelApi.md#datacentersServersLabelsFindByKey) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server
-[**datacentersServersLabelsGet**](LabelApi.md#datacentersServersLabelsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels
-[**datacentersServersLabelsPost**](LabelApi.md#datacentersServersLabelsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server
-[**datacentersServersLabelsPut**](LabelApi.md#datacentersServersLabelsPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server
-[**datacentersVolumesLabelsDelete**](LabelApi.md#datacentersVolumesLabelsDelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume
-[**datacentersVolumesLabelsFindByKey**](LabelApi.md#datacentersVolumesLabelsFindByKey) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume
-[**datacentersVolumesLabelsGet**](LabelApi.md#datacentersVolumesLabelsGet) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels
-[**datacentersVolumesLabelsPost**](LabelApi.md#datacentersVolumesLabelsPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume
-[**datacentersVolumesLabelsPut**](LabelApi.md#datacentersVolumesLabelsPut) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume
-[**ipblocksLabelsDelete**](LabelApi.md#ipblocksLabelsDelete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block
-[**ipblocksLabelsFindByKey**](LabelApi.md#ipblocksLabelsFindByKey) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block
-[**ipblocksLabelsGet**](LabelApi.md#ipblocksLabelsGet) | **GET** /ipblocks/{ipblockId}/labels | List all Ip Block Labels
-[**ipblocksLabelsPost**](LabelApi.md#ipblocksLabelsPost) | **POST** /ipblocks/{ipblockId}/labels | Add a Label to IP Block
-[**ipblocksLabelsPut**](LabelApi.md#ipblocksLabelsPut) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block
-[**labelsFindByLabelurn**](LabelApi.md#labelsFindByLabelurn) | **GET** /labels/{labelurn} | Returns the label by its URN.
-[**labelsGet**](LabelApi.md#labelsGet) | **GET** /labels | List Labels 
-[**snapshotsLabelsDelete**](LabelApi.md#snapshotsLabelsDelete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot
-[**snapshotsLabelsFindByKey**](LabelApi.md#snapshotsLabelsFindByKey) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot
-[**snapshotsLabelsGet**](LabelApi.md#snapshotsLabelsGet) | **GET** /snapshots/{snapshotId}/labels | List all Snapshot Labels
-[**snapshotsLabelsPost**](LabelApi.md#snapshotsLabelsPost) | **POST** /snapshots/{snapshotId}/labels | Add a Label to Snapshot
-[**snapshotsLabelsPut**](LabelApi.md#snapshotsLabelsPut) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot
+[**datacentersLabelsDelete**](DOCS.md#datacentersLabelsDelete) | **DELETE** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center
+[**datacentersLabelsFindByKey**](DOCS.md#datacentersLabelsFindByKey) | **GET** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center
+[**datacentersLabelsGet**](DOCS.md#datacentersLabelsGet) | **GET** /datacenters/{datacenterId}/labels | List all Data Center Labels
+[**datacentersLabelsPost**](DOCS.md#datacentersLabelsPost) | **POST** /datacenters/{datacenterId}/labels | Add a Label to Data Center
+[**datacentersLabelsPut**](DOCS.md#datacentersLabelsPut) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center
+[**datacentersServersLabelsDelete**](DOCS.md#datacentersServersLabelsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server
+[**datacentersServersLabelsFindByKey**](DOCS.md#datacentersServersLabelsFindByKey) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server
+[**datacentersServersLabelsGet**](DOCS.md#datacentersServersLabelsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels
+[**datacentersServersLabelsPost**](DOCS.md#datacentersServersLabelsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server
+[**datacentersServersLabelsPut**](DOCS.md#datacentersServersLabelsPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server
+[**datacentersVolumesLabelsDelete**](DOCS.md#datacentersVolumesLabelsDelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume
+[**datacentersVolumesLabelsFindByKey**](DOCS.md#datacentersVolumesLabelsFindByKey) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume
+[**datacentersVolumesLabelsGet**](DOCS.md#datacentersVolumesLabelsGet) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels
+[**datacentersVolumesLabelsPost**](DOCS.md#datacentersVolumesLabelsPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume
+[**datacentersVolumesLabelsPut**](DOCS.md#datacentersVolumesLabelsPut) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume
+[**ipblocksLabelsDelete**](DOCS.md#ipblocksLabelsDelete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block
+[**ipblocksLabelsFindByKey**](DOCS.md#ipblocksLabelsFindByKey) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block
+[**ipblocksLabelsGet**](DOCS.md#ipblocksLabelsGet) | **GET** /ipblocks/{ipblockId}/labels | List all Ip Block Labels
+[**ipblocksLabelsPost**](DOCS.md#ipblocksLabelsPost) | **POST** /ipblocks/{ipblockId}/labels | Add a Label to IP Block
+[**ipblocksLabelsPut**](DOCS.md#ipblocksLabelsPut) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block
+[**labelsFindByLabelurn**](DOCS.md#labelsFindByLabelurn) | **GET** /labels/{labelurn} | Returns the label by its URN.
+[**labelsGet**](DOCS.md#labelsGet) | **GET** /labels | List Labels 
+[**snapshotsLabelsDelete**](DOCS.md#snapshotsLabelsDelete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot
+[**snapshotsLabelsFindByKey**](DOCS.md#snapshotsLabelsFindByKey) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot
+[**snapshotsLabelsGet**](DOCS.md#snapshotsLabelsGet) | **GET** /snapshots/{snapshotId}/labels | List all Snapshot Labels
+[**snapshotsLabelsPost**](DOCS.md#snapshotsLabelsPost) | **POST** /snapshots/{snapshotId}/labels | Add a Label to Snapshot
+[**snapshotsLabelsPut**](DOCS.md#snapshotsLabelsPut) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot
 
 
 <a name="datacentersLabelsDelete"></a>
@@ -6255,15 +6255,15 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacentersLansDelete**](LanApi.md#datacentersLansDelete) | **DELETE** /datacenters/{datacenterId}/lans/{lanId} | Delete a Lan.
-[**datacentersLansFindById**](LanApi.md#datacentersLansFindById) | **GET** /datacenters/{datacenterId}/lans/{lanId} | Retrieve a Lan
-[**datacentersLansGet**](LanApi.md#datacentersLansGet) | **GET** /datacenters/{datacenterId}/lans | List Lans
-[**datacentersLansNicsFindById**](LanApi.md#datacentersLansNicsFindById) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve a nic attached to lan
-[**datacentersLansNicsGet**](LanApi.md#datacentersLansNicsGet) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics | List Lan Members 
-[**datacentersLansNicsPost**](LanApi.md#datacentersLansNicsPost) | **POST** /datacenters/{datacenterId}/lans/{lanId}/nics | Attach a nic
-[**datacentersLansPatch**](LanApi.md#datacentersLansPatch) | **PATCH** /datacenters/{datacenterId}/lans/{lanId} | Partially modify a Lan
-[**datacentersLansPost**](LanApi.md#datacentersLansPost) | **POST** /datacenters/{datacenterId}/lans | Create a Lan
-[**datacentersLansPut**](LanApi.md#datacentersLansPut) | **PUT** /datacenters/{datacenterId}/lans/{lanId} | Modify a Lan
+[**datacentersLansDelete**](DOCS.md#datacentersLansDelete) | **DELETE** /datacenters/{datacenterId}/lans/{lanId} | Delete a Lan.
+[**datacentersLansFindById**](DOCS.md#datacentersLansFindById) | **GET** /datacenters/{datacenterId}/lans/{lanId} | Retrieve a Lan
+[**datacentersLansGet**](DOCS.md#datacentersLansGet) | **GET** /datacenters/{datacenterId}/lans | List Lans
+[**datacentersLansNicsFindById**](DOCS.md#datacentersLansNicsFindById) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve a nic attached to lan
+[**datacentersLansNicsGet**](DOCS.md#datacentersLansNicsGet) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics | List Lan Members 
+[**datacentersLansNicsPost**](DOCS.md#datacentersLansNicsPost) | **POST** /datacenters/{datacenterId}/lans/{lanId}/nics | Attach a nic
+[**datacentersLansPatch**](DOCS.md#datacentersLansPatch) | **PATCH** /datacenters/{datacenterId}/lans/{lanId} | Partially modify a Lan
+[**datacentersLansPost**](DOCS.md#datacentersLansPost) | **POST** /datacenters/{datacenterId}/lans | Create a Lan
+[**datacentersLansPut**](DOCS.md#datacentersLansPut) | **PUT** /datacenters/{datacenterId}/lans/{lanId} | Modify a Lan
 
 
 <a name="datacentersLansDelete"></a>
@@ -7029,16 +7029,16 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacentersLoadbalancersBalancednicsDelete**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer
-[**datacentersLoadbalancersBalancednicsFindByNic**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsFindByNic) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer
-[**datacentersLoadbalancersBalancednicsGet**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsGet) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer Members 
-[**datacentersLoadbalancersBalancednicsPost**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsPost) | **POST** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer
-[**datacentersLoadbalancersDelete**](LoadBalancerApi.md#datacentersLoadbalancersDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer.
-[**datacentersLoadbalancersFindById**](LoadBalancerApi.md#datacentersLoadbalancersFindById) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve a loadbalancer
-[**datacentersLoadbalancersGet**](LoadBalancerApi.md#datacentersLoadbalancersGet) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers
-[**datacentersLoadbalancersPatch**](LoadBalancerApi.md#datacentersLoadbalancersPatch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify a Loadbalancer
-[**datacentersLoadbalancersPost**](LoadBalancerApi.md#datacentersLoadbalancersPost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer
-[**datacentersLoadbalancersPut**](LoadBalancerApi.md#datacentersLoadbalancersPut) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer
+[**datacentersLoadbalancersBalancednicsDelete**](DOCS.md#datacentersLoadbalancersBalancednicsDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer
+[**datacentersLoadbalancersBalancednicsFindByNic**](DOCS.md#datacentersLoadbalancersBalancednicsFindByNic) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer
+[**datacentersLoadbalancersBalancednicsGet**](DOCS.md#datacentersLoadbalancersBalancednicsGet) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer Members 
+[**datacentersLoadbalancersBalancednicsPost**](DOCS.md#datacentersLoadbalancersBalancednicsPost) | **POST** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer
+[**datacentersLoadbalancersDelete**](DOCS.md#datacentersLoadbalancersDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer.
+[**datacentersLoadbalancersFindById**](DOCS.md#datacentersLoadbalancersFindById) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve a loadbalancer
+[**datacentersLoadbalancersGet**](DOCS.md#datacentersLoadbalancersGet) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers
+[**datacentersLoadbalancersPatch**](DOCS.md#datacentersLoadbalancersPatch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify a Loadbalancer
+[**datacentersLoadbalancersPost**](DOCS.md#datacentersLoadbalancersPost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer
+[**datacentersLoadbalancersPut**](DOCS.md#datacentersLoadbalancersPut) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer
 
 
 <a name="datacentersLoadbalancersBalancednicsDelete"></a>
@@ -7889,9 +7889,9 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**locationsFindByRegion**](LocationApi.md#locationsFindByRegion) | **GET** /locations/{regionId} | List Locations within a region
-[**locationsFindByRegionAndId**](LocationApi.md#locationsFindByRegionAndId) | **GET** /locations/{regionId}/{locationId} | Retrieve a Location
-[**locationsGet**](LocationApi.md#locationsGet) | **GET** /locations | List Locations
+[**locationsFindByRegion**](DOCS.md#locationsFindByRegion) | **GET** /locations/{regionId} | List Locations within a region
+[**locationsFindByRegionAndId**](DOCS.md#locationsFindByRegionAndId) | **GET** /locations/{regionId}/{locationId} | Retrieve a Location
+[**locationsGet**](DOCS.md#locationsGet) | **GET** /locations | List Locations
 
 
 <a name="locationsFindByRegion"></a>
@@ -8147,18 +8147,18 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacentersServersNicsDelete**](NicApi.md#datacentersServersNicsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Nic
-[**datacentersServersNicsFindById**](NicApi.md#datacentersServersNicsFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Nic
-[**datacentersServersNicsFirewallrulesDelete**](NicApi.md#datacentersServersNicsFirewallrulesDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete a Firewall Rule
-[**datacentersServersNicsFirewallrulesFindById**](NicApi.md#datacentersServersNicsFirewallrulesFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve a Firewall Rule
-[**datacentersServersNicsFirewallrulesGet**](NicApi.md#datacentersServersNicsFirewallrulesGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List Firewall Rules 
-[**datacentersServersNicsFirewallrulesPatch**](NicApi.md#datacentersServersNicsFirewallrulesPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify a Firewall Rule
-[**datacentersServersNicsFirewallrulesPost**](NicApi.md#datacentersServersNicsFirewallrulesPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule
-[**datacentersServersNicsFirewallrulesPut**](NicApi.md#datacentersServersNicsFirewallrulesPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule
-[**datacentersServersNicsGet**](NicApi.md#datacentersServersNicsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics | List Nics 
-[**datacentersServersNicsPatch**](NicApi.md#datacentersServersNicsPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify a Nic
-[**datacentersServersNicsPost**](NicApi.md#datacentersServersNicsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a Nic
-[**datacentersServersNicsPut**](NicApi.md#datacentersServersNicsPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify a Nic
+[**datacentersServersNicsDelete**](DOCS.md#datacentersServersNicsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Nic
+[**datacentersServersNicsFindById**](DOCS.md#datacentersServersNicsFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Nic
+[**datacentersServersNicsFirewallrulesDelete**](DOCS.md#datacentersServersNicsFirewallrulesDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete a Firewall Rule
+[**datacentersServersNicsFirewallrulesFindById**](DOCS.md#datacentersServersNicsFirewallrulesFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve a Firewall Rule
+[**datacentersServersNicsFirewallrulesGet**](DOCS.md#datacentersServersNicsFirewallrulesGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List Firewall Rules 
+[**datacentersServersNicsFirewallrulesPatch**](DOCS.md#datacentersServersNicsFirewallrulesPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify a Firewall Rule
+[**datacentersServersNicsFirewallrulesPost**](DOCS.md#datacentersServersNicsFirewallrulesPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule
+[**datacentersServersNicsFirewallrulesPut**](DOCS.md#datacentersServersNicsFirewallrulesPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule
+[**datacentersServersNicsGet**](DOCS.md#datacentersServersNicsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics | List Nics 
+[**datacentersServersNicsPatch**](DOCS.md#datacentersServersNicsPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify a Nic
+[**datacentersServersNicsPost**](DOCS.md#datacentersServersNicsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a Nic
+[**datacentersServersNicsPut**](DOCS.md#datacentersServersNicsPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify a Nic
 
 
 <a name="datacentersServersNicsDelete"></a>
@@ -9207,11 +9207,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**pccsDelete**](PrivateCrossConnectApi.md#pccsDelete) | **DELETE** /pccs/{pccId} | Delete a Private Cross-Connect
-[**pccsFindById**](PrivateCrossConnectApi.md#pccsFindById) | **GET** /pccs/{pccId} | Retrieve a Private Cross-Connect
-[**pccsGet**](PrivateCrossConnectApi.md#pccsGet) | **GET** /pccs | List Private Cross-Connects 
-[**pccsPatch**](PrivateCrossConnectApi.md#pccsPatch) | **PATCH** /pccs/{pccId} | Partially modify a private cross-connect
-[**pccsPost**](PrivateCrossConnectApi.md#pccsPost) | **POST** /pccs | Create a Private Cross-Connect
+[**pccsDelete**](DOCS.md#pccsDelete) | **DELETE** /pccs/{pccId} | Delete a Private Cross-Connect
+[**pccsFindById**](DOCS.md#pccsFindById) | **GET** /pccs/{pccId} | Retrieve a Private Cross-Connect
+[**pccsGet**](DOCS.md#pccsGet) | **GET** /pccs | List Private Cross-Connects 
+[**pccsPatch**](DOCS.md#pccsPatch) | **PATCH** /pccs/{pccId} | Partially modify a private cross-connect
+[**pccsPost**](DOCS.md#pccsPost) | **POST** /pccs | Create a Private Cross-Connect
 
 
 <a name="pccsDelete"></a>
@@ -9629,9 +9629,9 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**requestsFindById**](RequestApi.md#requestsFindById) | **GET** /requests/{requestId} | Retrieve a Request
-[**requestsGet**](RequestApi.md#requestsGet) | **GET** /requests | List Requests
-[**requestsStatusGet**](RequestApi.md#requestsStatusGet) | **GET** /requests/{requestId}/status | Retrieve Request Status
+[**requestsFindById**](DOCS.md#requestsFindById) | **GET** /requests/{requestId} | Retrieve a Request
+[**requestsGet**](DOCS.md#requestsGet) | **GET** /requests | List Requests
+[**requestsStatusGet**](DOCS.md#requestsStatusGet) | **GET** /requests/{requestId}/status | Retrieve Request Status
 
 
 <a name="requestsFindById"></a>
@@ -9899,24 +9899,24 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacentersServersCdromsDelete**](ServerApi.md#datacentersServersCdromsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach a CD-ROM
-[**datacentersServersCdromsFindById**](ServerApi.md#datacentersServersCdromsFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve an attached CD-ROM
-[**datacentersServersCdromsGet**](ServerApi.md#datacentersServersCdromsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms | List attached CD-ROMs 
-[**datacentersServersCdromsPost**](ServerApi.md#datacentersServersCdromsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach a CD-ROM
-[**datacentersServersDelete**](ServerApi.md#datacentersServersDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId} | Delete a Server
-[**datacentersServersFindById**](ServerApi.md#datacentersServersFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId} | Retrieve a Server
-[**datacentersServersGet**](ServerApi.md#datacentersServersGet) | **GET** /datacenters/{datacenterId}/servers | List Servers 
-[**datacentersServersPatch**](ServerApi.md#datacentersServersPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId} | Partially modify a Server
-[**datacentersServersPost**](ServerApi.md#datacentersServersPost) | **POST** /datacenters/{datacenterId}/servers | Create a Server
-[**datacentersServersPut**](ServerApi.md#datacentersServersPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId} | Modify a Server
-[**datacentersServersRebootPost**](ServerApi.md#datacentersServersRebootPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/reboot | Reboot a Server
-[**datacentersServersStartPost**](ServerApi.md#datacentersServersStartPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/start | Start a Server
-[**datacentersServersStopPost**](ServerApi.md#datacentersServersStopPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop a Server
-[**datacentersServersUpgradePost**](ServerApi.md#datacentersServersUpgradePost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server
-[**datacentersServersVolumesDelete**](ServerApi.md#datacentersServersVolumesDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a volume
-[**datacentersServersVolumesFindById**](ServerApi.md#datacentersServersVolumesFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Retrieve an attached volume
-[**datacentersServersVolumesGet**](ServerApi.md#datacentersServersVolumesGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes | List Attached Volumes
-[**datacentersServersVolumesPost**](ServerApi.md#datacentersServersVolumesPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach a volume
+[**datacentersServersCdromsDelete**](DOCS.md#datacentersServersCdromsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach a CD-ROM
+[**datacentersServersCdromsFindById**](DOCS.md#datacentersServersCdromsFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve an attached CD-ROM
+[**datacentersServersCdromsGet**](DOCS.md#datacentersServersCdromsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms | List attached CD-ROMs 
+[**datacentersServersCdromsPost**](DOCS.md#datacentersServersCdromsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach a CD-ROM
+[**datacentersServersDelete**](DOCS.md#datacentersServersDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId} | Delete a Server
+[**datacentersServersFindById**](DOCS.md#datacentersServersFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId} | Retrieve a Server
+[**datacentersServersGet**](DOCS.md#datacentersServersGet) | **GET** /datacenters/{datacenterId}/servers | List Servers 
+[**datacentersServersPatch**](DOCS.md#datacentersServersPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId} | Partially modify a Server
+[**datacentersServersPost**](DOCS.md#datacentersServersPost) | **POST** /datacenters/{datacenterId}/servers | Create a Server
+[**datacentersServersPut**](DOCS.md#datacentersServersPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId} | Modify a Server
+[**datacentersServersRebootPost**](DOCS.md#datacentersServersRebootPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/reboot | Reboot a Server
+[**datacentersServersStartPost**](DOCS.md#datacentersServersStartPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/start | Start a Server
+[**datacentersServersStopPost**](DOCS.md#datacentersServersStopPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop a Server
+[**datacentersServersUpgradePost**](DOCS.md#datacentersServersUpgradePost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server
+[**datacentersServersVolumesDelete**](DOCS.md#datacentersServersVolumesDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a volume
+[**datacentersServersVolumesFindById**](DOCS.md#datacentersServersVolumesFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Retrieve an attached volume
+[**datacentersServersVolumesGet**](DOCS.md#datacentersServersVolumesGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes | List Attached Volumes
+[**datacentersServersVolumesPost**](DOCS.md#datacentersServersVolumesPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach a volume
 
 
 <a name="datacentersServersCdromsDelete"></a>
@@ -11427,11 +11427,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**snapshotsDelete**](SnapshotApi.md#snapshotsDelete) | **DELETE** /snapshots/{snapshotId} | Delete a Snapshot
-[**snapshotsFindById**](SnapshotApi.md#snapshotsFindById) | **GET** /snapshots/{snapshotId} | Retrieve a Snapshot by its uuid.
-[**snapshotsGet**](SnapshotApi.md#snapshotsGet) | **GET** /snapshots | List Snapshots 
-[**snapshotsPatch**](SnapshotApi.md#snapshotsPatch) | **PATCH** /snapshots/{snapshotId} | Partially modify a Snapshot
-[**snapshotsPut**](SnapshotApi.md#snapshotsPut) | **PUT** /snapshots/{snapshotId} | Modify a Snapshot
+[**snapshotsDelete**](DOCS.md#snapshotsDelete) | **DELETE** /snapshots/{snapshotId} | Delete a Snapshot
+[**snapshotsFindById**](DOCS.md#snapshotsFindById) | **GET** /snapshots/{snapshotId} | Retrieve a Snapshot by its uuid.
+[**snapshotsGet**](DOCS.md#snapshotsGet) | **GET** /snapshots | List Snapshots 
+[**snapshotsPatch**](DOCS.md#snapshotsPatch) | **PATCH** /snapshots/{snapshotId} | Partially modify a Snapshot
+[**snapshotsPut**](DOCS.md#snapshotsPut) | **PUT** /snapshots/{snapshotId} | Modify a Snapshot
 
 
 <a name="snapshotsDelete"></a>
@@ -11851,36 +11851,36 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**umGroupsDelete**](UserManagementApi.md#umGroupsDelete) | **DELETE** /um/groups/{groupId} | Delete a Group
-[**umGroupsFindById**](UserManagementApi.md#umGroupsFindById) | **GET** /um/groups/{groupId} | Retrieve a Group
-[**umGroupsGet**](UserManagementApi.md#umGroupsGet) | **GET** /um/groups | List All Groups.
-[**umGroupsPost**](UserManagementApi.md#umGroupsPost) | **POST** /um/groups | Create a Group
-[**umGroupsPut**](UserManagementApi.md#umGroupsPut) | **PUT** /um/groups/{groupId} | Modify a group
-[**umGroupsResourcesGet**](UserManagementApi.md#umGroupsResourcesGet) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group
-[**umGroupsSharesDelete**](UserManagementApi.md#umGroupsSharesDelete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group
-[**umGroupsSharesFindByResource**](UserManagementApi.md#umGroupsSharesFindByResource) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share
-[**umGroupsSharesGet**](UserManagementApi.md#umGroupsSharesGet) | **GET** /um/groups/{groupId}/shares | List Group Shares 
-[**umGroupsSharesPost**](UserManagementApi.md#umGroupsSharesPost) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group
-[**umGroupsSharesPut**](UserManagementApi.md#umGroupsSharesPut) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group
-[**umGroupsUsersDelete**](UserManagementApi.md#umGroupsUsersDelete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove a user from a group
-[**umGroupsUsersGet**](UserManagementApi.md#umGroupsUsersGet) | **GET** /um/groups/{groupId}/users | List Group Members 
-[**umGroupsUsersPost**](UserManagementApi.md#umGroupsUsersPost) | **POST** /um/groups/{groupId}/users | Add a user to a group
-[**umResourcesFindByType**](UserManagementApi.md#umResourcesFindByType) | **GET** /um/resources/{resourceType} | Retrieve a list of Resources by type.
-[**umResourcesFindByTypeAndId**](UserManagementApi.md#umResourcesFindByTypeAndId) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type.
-[**umResourcesGet**](UserManagementApi.md#umResourcesGet) | **GET** /um/resources | List All Resources.
-[**umUsersDelete**](UserManagementApi.md#umUsersDelete) | **DELETE** /um/users/{userId} | Delete a User
-[**umUsersFindById**](UserManagementApi.md#umUsersFindById) | **GET** /um/users/{userId} | Retrieve a User
-[**umUsersGet**](UserManagementApi.md#umUsersGet) | **GET** /um/users | List all Users 
-[**umUsersGroupsGet**](UserManagementApi.md#umUsersGroupsGet) | **GET** /um/users/{userId}/groups | Retrieve a User&#39;s group resources
-[**umUsersOwnsGet**](UserManagementApi.md#umUsersOwnsGet) | **GET** /um/users/{userId}/owns | Retrieve a User&#39;s own resources
-[**umUsersPost**](UserManagementApi.md#umUsersPost) | **POST** /um/users | Create a user
-[**umUsersPut**](UserManagementApi.md#umUsersPut) | **PUT** /um/users/{userId} | Modify a user
-[**umUsersS3keysDelete**](UserManagementApi.md#umUsersS3keysDelete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key
-[**umUsersS3keysFindByKey**](UserManagementApi.md#umUsersS3keysFindByKey) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User
-[**umUsersS3keysGet**](UserManagementApi.md#umUsersS3keysGet) | **GET** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys
-[**umUsersS3keysPost**](UserManagementApi.md#umUsersS3keysPost) | **POST** /um/users/{userId}/s3keys | Create a S3 key for the given user
-[**umUsersS3keysPut**](UserManagementApi.md#umUsersS3keysPut) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id
-[**umUsersS3ssourlGet**](UserManagementApi.md#umUsersS3ssourlGet) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user
+[**umGroupsDelete**](DOCS.md#umGroupsDelete) | **DELETE** /um/groups/{groupId} | Delete a Group
+[**umGroupsFindById**](DOCS.md#umGroupsFindById) | **GET** /um/groups/{groupId} | Retrieve a Group
+[**umGroupsGet**](DOCS.md#umGroupsGet) | **GET** /um/groups | List All Groups.
+[**umGroupsPost**](DOCS.md#umGroupsPost) | **POST** /um/groups | Create a Group
+[**umGroupsPut**](DOCS.md#umGroupsPut) | **PUT** /um/groups/{groupId} | Modify a group
+[**umGroupsResourcesGet**](DOCS.md#umGroupsResourcesGet) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group
+[**umGroupsSharesDelete**](DOCS.md#umGroupsSharesDelete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group
+[**umGroupsSharesFindByResource**](DOCS.md#umGroupsSharesFindByResource) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share
+[**umGroupsSharesGet**](DOCS.md#umGroupsSharesGet) | **GET** /um/groups/{groupId}/shares | List Group Shares 
+[**umGroupsSharesPost**](DOCS.md#umGroupsSharesPost) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group
+[**umGroupsSharesPut**](DOCS.md#umGroupsSharesPut) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group
+[**umGroupsUsersDelete**](DOCS.md#umGroupsUsersDelete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove a user from a group
+[**umGroupsUsersGet**](DOCS.md#umGroupsUsersGet) | **GET** /um/groups/{groupId}/users | List Group Members 
+[**umGroupsUsersPost**](DOCS.md#umGroupsUsersPost) | **POST** /um/groups/{groupId}/users | Add a user to a group
+[**umResourcesFindByType**](DOCS.md#umResourcesFindByType) | **GET** /um/resources/{resourceType} | Retrieve a list of Resources by type.
+[**umResourcesFindByTypeAndId**](DOCS.md#umResourcesFindByTypeAndId) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type.
+[**umResourcesGet**](DOCS.md#umResourcesGet) | **GET** /um/resources | List All Resources.
+[**umUsersDelete**](DOCS.md#umUsersDelete) | **DELETE** /um/users/{userId} | Delete a User
+[**umUsersFindById**](DOCS.md#umUsersFindById) | **GET** /um/users/{userId} | Retrieve a User
+[**umUsersGet**](DOCS.md#umUsersGet) | **GET** /um/users | List all Users 
+[**umUsersGroupsGet**](DOCS.md#umUsersGroupsGet) | **GET** /um/users/{userId}/groups | Retrieve a User&#39;s group resources
+[**umUsersOwnsGet**](DOCS.md#umUsersOwnsGet) | **GET** /um/users/{userId}/owns | Retrieve a User&#39;s own resources
+[**umUsersPost**](DOCS.md#umUsersPost) | **POST** /um/users | Create a user
+[**umUsersPut**](DOCS.md#umUsersPut) | **PUT** /um/users/{userId} | Modify a user
+[**umUsersS3keysDelete**](DOCS.md#umUsersS3keysDelete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key
+[**umUsersS3keysFindByKey**](DOCS.md#umUsersS3keysFindByKey) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User
+[**umUsersS3keysGet**](DOCS.md#umUsersS3keysGet) | **GET** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys
+[**umUsersS3keysPost**](DOCS.md#umUsersS3keysPost) | **POST** /um/users/{userId}/s3keys | Create a S3 key for the given user
+[**umUsersS3keysPut**](DOCS.md#umUsersS3keysPut) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id
+[**umUsersS3ssourlGet**](DOCS.md#umUsersS3ssourlGet) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user
 
 
 <a name="umGroupsDelete"></a>
@@ -14343,14 +14343,14 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**datacentersVolumesCreateSnapshotPost**](VolumeApi.md#datacentersVolumesCreateSnapshotPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/create-snapshot | Create Volume Snapshot
-[**datacentersVolumesDelete**](VolumeApi.md#datacentersVolumesDelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId} | Delete a Volume
-[**datacentersVolumesFindById**](VolumeApi.md#datacentersVolumesFindById) | **GET** /datacenters/{datacenterId}/volumes/{volumeId} | Retrieve a Volume
-[**datacentersVolumesGet**](VolumeApi.md#datacentersVolumesGet) | **GET** /datacenters/{datacenterId}/volumes | List Volumes 
-[**datacentersVolumesPatch**](VolumeApi.md#datacentersVolumesPatch) | **PATCH** /datacenters/{datacenterId}/volumes/{volumeId} | Partially modify a Volume
-[**datacentersVolumesPost**](VolumeApi.md#datacentersVolumesPost) | **POST** /datacenters/{datacenterId}/volumes | Create a Volume
-[**datacentersVolumesPut**](VolumeApi.md#datacentersVolumesPut) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId} | Modify a Volume
-[**datacentersVolumesRestoreSnapshotPost**](VolumeApi.md#datacentersVolumesRestoreSnapshotPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot | Restore Volume Snapshot
+[**datacentersVolumesCreateSnapshotPost**](DOCS.md#datacentersVolumesCreateSnapshotPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/create-snapshot | Create Volume Snapshot
+[**datacentersVolumesDelete**](DOCS.md#datacentersVolumesDelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId} | Delete a Volume
+[**datacentersVolumesFindById**](DOCS.md#datacentersVolumesFindById) | **GET** /datacenters/{datacenterId}/volumes/{volumeId} | Retrieve a Volume
+[**datacentersVolumesGet**](DOCS.md#datacentersVolumesGet) | **GET** /datacenters/{datacenterId}/volumes | List Volumes 
+[**datacentersVolumesPatch**](DOCS.md#datacentersVolumesPatch) | **PATCH** /datacenters/{datacenterId}/volumes/{volumeId} | Partially modify a Volume
+[**datacentersVolumesPost**](DOCS.md#datacentersVolumesPost) | **POST** /datacenters/{datacenterId}/volumes | Create a Volume
+[**datacentersVolumesPut**](DOCS.md#datacentersVolumesPut) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId} | Modify a Volume
+[**datacentersVolumesRestoreSnapshotPost**](DOCS.md#datacentersVolumesRestoreSnapshotPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot | Restore Volume Snapshot
 
 
 <a name="datacentersVolumesCreateSnapshotPost"></a>
@@ -15162,7 +15162,6 @@ Name | Type | Description  | Notes
 
 ---
 
-# AttachedVolumes
 
 # AttachedVolumes
 
@@ -15177,7 +15176,6 @@ Name | Type | Description | Notes
 
 
 
-# BackupUnit
 
 # BackupUnit
 
@@ -15201,7 +15199,6 @@ BACKUPUNIT | &quot;backupunit&quot;
 
 
 
-# BackupUnitProperties
 
 # BackupUnitProperties
 
@@ -15215,7 +15212,6 @@ Name | Type | Description | Notes
 
 
 
-# BackupUnitSSO
 
 # BackupUnitSSO
 
@@ -15227,7 +15223,6 @@ Name | Type | Description | Notes
 
 
 
-# BackupUnits
 
 # BackupUnits
 
@@ -15250,7 +15245,6 @@ BACKUPUNIT | &quot;backupunit&quot;
 
 
 
-# BalancedNics
 
 # BalancedNics
 
@@ -15265,7 +15259,6 @@ Name | Type | Description | Notes
 
 
 
-# Cdroms
 
 # Cdroms
 
@@ -15280,7 +15273,6 @@ Name | Type | Description | Notes
 
 
 
-# ConnectableDatacenter
 
 # ConnectableDatacenter
 
@@ -15294,7 +15286,6 @@ Name | Type | Description | Notes
 
 
 
-# Contract
 
 # Contract
 
@@ -15307,7 +15298,6 @@ Name | Type | Description | Notes
 
 
 
-# ContractProperties
 
 # ContractProperties
 
@@ -15323,7 +15313,6 @@ Name | Type | Description | Notes
 
 
 
-# Datacenter
 
 # Datacenter
 
@@ -15340,7 +15329,6 @@ Name | Type | Description | Notes
 
 
 
-# DatacenterElementMetadata
 
 # DatacenterElementMetadata
 
@@ -15379,7 +15367,6 @@ TERMINATED | &quot;TERMINATED&quot;
 
 
 
-# DatacenterEntities
 
 # DatacenterEntities
 
@@ -15394,7 +15381,6 @@ Name | Type | Description | Notes
 
 
 
-# DatacenterProperties
 
 # DatacenterProperties
 
@@ -15420,7 +15406,6 @@ SSD_STORAGE_ZONING | &quot;SSD_STORAGE_ZONING&quot;
 
 
 
-# Datacenters
 
 # Datacenters
 
@@ -15435,7 +15420,6 @@ Name | Type | Description | Notes
 
 
 
-# Error
 
 # Error
 
@@ -15448,7 +15432,6 @@ Name | Type | Description | Notes
 
 
 
-# ErrorMessage
 
 # ErrorMessage
 
@@ -15461,7 +15444,6 @@ Name | Type | Description | Notes
 
 
 
-# FirewallRule
 
 # FirewallRule
 
@@ -15477,7 +15459,6 @@ Name | Type | Description | Notes
 
 
 
-# FirewallRules
 
 # FirewallRules
 
@@ -15492,7 +15473,6 @@ Name | Type | Description | Notes
 
 
 
-# FirewallruleProperties
 
 # FirewallruleProperties
 
@@ -15550,7 +15530,6 @@ NULL | &quot;null&quot;
 
 
 
-# Group
 
 # Group
 
@@ -15566,7 +15545,6 @@ Name | Type | Description | Notes
 
 
 
-# GroupEntities
 
 # GroupEntities
 
@@ -15579,7 +15557,6 @@ Name | Type | Description | Notes
 
 
 
-# GroupMembers
 
 # GroupMembers
 
@@ -15594,7 +15571,6 @@ Name | Type | Description | Notes
 
 
 
-# GroupProperties
 
 # GroupProperties
 
@@ -15615,7 +15591,6 @@ Name | Type | Description | Notes
 
 
 
-# GroupShare
 
 # GroupShare
 
@@ -15630,7 +15605,6 @@ Name | Type | Description | Notes
 
 
 
-# GroupShareProperties
 
 # GroupShareProperties
 
@@ -15643,7 +15617,6 @@ Name | Type | Description | Notes
 
 
 
-# GroupShares
 
 # GroupShares
 
@@ -15658,7 +15631,6 @@ Name | Type | Description | Notes
 
 
 
-# GroupUsers
 
 # GroupUsers
 
@@ -15674,7 +15646,6 @@ Name | Type | Description | Notes
 
 
 
-# Groups
 
 # Groups
 
@@ -15689,7 +15660,6 @@ Name | Type | Description | Notes
 
 
 
-# IPFailover
 
 # IPFailover
 
@@ -15702,7 +15672,6 @@ Name | Type | Description | Notes
 
 
 
-# Image
 
 # Image
 
@@ -15718,7 +15687,6 @@ Name | Type | Description | Notes
 
 
 
-# ImageProperties
 
 # ImageProperties
 
@@ -15767,7 +15735,6 @@ CDROM | &quot;CDROM&quot;
 
 
 
-# Images
 
 # Images
 
@@ -15782,7 +15749,6 @@ Name | Type | Description | Notes
 
 
 
-# Info
 
 # Info
 
@@ -15796,7 +15762,6 @@ Name | Type | Description | Notes
 
 
 
-# IpBlock
 
 # IpBlock
 
@@ -15812,7 +15777,6 @@ Name | Type | Description | Notes
 
 
 
-# IpBlockProperties
 
 # IpBlockProperties
 
@@ -15828,7 +15792,6 @@ Name | Type | Description | Notes
 
 
 
-# IpBlocks
 
 # IpBlocks
 
@@ -15843,7 +15806,6 @@ Name | Type | Description | Notes
 
 
 
-# IpConsumer
 
 # IpConsumer
 
@@ -15861,7 +15823,6 @@ Name | Type | Description | Notes
 
 
 
-# KubernetesAutoScaling
 
 # KubernetesAutoScaling
 
@@ -15874,7 +15835,6 @@ Name | Type | Description | Notes
 
 
 
-# KubernetesCluster
 
 # KubernetesCluster
 
@@ -15899,7 +15859,6 @@ K8S | &quot;k8s&quot;
 
 
 
-# KubernetesClusterEntities
 
 # KubernetesClusterEntities
 
@@ -15911,7 +15870,6 @@ Name | Type | Description | Notes
 
 
 
-# KubernetesClusterProperties
 
 # KubernetesClusterProperties
 
@@ -15925,7 +15883,6 @@ Name | Type | Description | Notes
 
 
 
-# KubernetesClusters
 
 # KubernetesClusters
 
@@ -15948,7 +15905,6 @@ K8S | &quot;k8s&quot;
 
 
 
-# KubernetesConfig
 
 # KubernetesConfig
 
@@ -15971,7 +15927,6 @@ KUBECONFIG | &quot;kubeconfig&quot;
 
 
 
-# KubernetesConfigProperties
 
 # KubernetesConfigProperties
 
@@ -15983,7 +15938,6 @@ Name | Type | Description | Notes
 
 
 
-# KubernetesMaintenanceWindow
 
 # KubernetesMaintenanceWindow
 
@@ -16010,7 +15964,6 @@ SUNDAY | &quot;Sunday&quot;
 
 
 
-# KubernetesNode
 
 # KubernetesNode
 
@@ -16034,7 +15987,6 @@ NODEPOOL | &quot;nodepool&quot;
 
 
 
-# KubernetesNodeMetadata
 
 # KubernetesNodeMetadata
 
@@ -16063,7 +16015,6 @@ BUSY | &quot;BUSY&quot;
 
 
 
-# KubernetesNodePool
 
 # KubernetesNodePool
 
@@ -16087,7 +16038,6 @@ NODEPOOL | &quot;nodepool&quot;
 
 
 
-# KubernetesNodePoolAnnotation
 
 # KubernetesNodePoolAnnotation
 
@@ -16101,7 +16051,6 @@ Name | Type | Description | Notes
 
 
 
-# KubernetesNodePoolForPut
 
 # KubernetesNodePoolForPut
 
@@ -16125,7 +16074,6 @@ NODEPOOL | &quot;nodepool&quot;
 
 
 
-# KubernetesNodePoolLabel
 
 # KubernetesNodePoolLabel
 
@@ -16139,7 +16087,6 @@ Name | Type | Description | Notes
 
 
 
-# KubernetesNodePoolLan
 
 # KubernetesNodePoolLan
 
@@ -16151,7 +16098,6 @@ Name | Type | Description | Notes
 
 
 
-# KubernetesNodePoolProperties
 
 # KubernetesNodePoolProperties
 
@@ -16196,7 +16142,6 @@ SSD | &quot;SSD&quot;
 
 
 
-# KubernetesNodePoolPropertiesForPut
 
 # KubernetesNodePoolPropertiesForPut
 
@@ -16239,7 +16184,6 @@ SSD | &quot;SSD&quot;
 
 
 
-# KubernetesNodePools
 
 # KubernetesNodePools
 
@@ -16262,7 +16206,6 @@ NODEPOOL | &quot;nodepool&quot;
 
 
 
-# KubernetesNodeProperties
 
 # KubernetesNodeProperties
 
@@ -16276,7 +16219,6 @@ Name | Type | Description | Notes
 
 
 
-# KubernetesNodes
 
 # KubernetesNodes
 
@@ -16299,7 +16241,6 @@ NODEPOOL | &quot;nodepool&quot;
 
 
 
-# Label
 
 # Label
 
@@ -16323,7 +16264,6 @@ LABEL | &quot;label&quot;
 
 
 
-# LabelProperties
 
 # LabelProperties
 
@@ -16339,7 +16279,6 @@ Name | Type | Description | Notes
 
 
 
-# LabelResource
 
 # LabelResource
 
@@ -16363,7 +16302,6 @@ LABEL | &quot;label&quot;
 
 
 
-# LabelResourceProperties
 
 # LabelResourceProperties
 
@@ -16376,7 +16314,6 @@ Name | Type | Description | Notes
 
 
 
-# LabelResources
 
 # LabelResources
 
@@ -16399,7 +16336,6 @@ LABEL | &quot;label&quot;
 
 
 
-# Labels
 
 # Labels
 
@@ -16422,7 +16358,6 @@ LABEL | &quot;label&quot;
 
 
 
-# Lan
 
 # Lan
 
@@ -16439,7 +16374,6 @@ Name | Type | Description | Notes
 
 
 
-# LanEntities
 
 # LanEntities
 
@@ -16451,7 +16385,6 @@ Name | Type | Description | Notes
 
 
 
-# LanNics
 
 # LanNics
 
@@ -16466,7 +16399,6 @@ Name | Type | Description | Notes
 
 
 
-# LanPost
 
 # LanPost
 
@@ -16483,7 +16415,6 @@ Name | Type | Description | Notes
 
 
 
-# LanProperties
 
 # LanProperties
 
@@ -16498,7 +16429,6 @@ Name | Type | Description | Notes
 
 
 
-# LanPropertiesPost
 
 # LanPropertiesPost
 
@@ -16511,7 +16441,6 @@ Name | Type | Description | Notes
 
 
 
-# Lans
 
 # Lans
 
@@ -16526,7 +16455,6 @@ Name | Type | Description | Notes
 
 
 
-# Loadbalancer
 
 # Loadbalancer
 
@@ -16543,7 +16471,6 @@ Name | Type | Description | Notes
 
 
 
-# LoadbalancerEntities
 
 # LoadbalancerEntities
 
@@ -16555,7 +16482,6 @@ Name | Type | Description | Notes
 
 
 
-# LoadbalancerProperties
 
 # LoadbalancerProperties
 
@@ -16578,7 +16504,6 @@ NULL | &quot;null&quot;
 
 
 
-# Loadbalancers
 
 # Loadbalancers
 
@@ -16593,7 +16518,6 @@ Name | Type | Description | Notes
 
 
 
-# Location
 
 # Location
 
@@ -16609,7 +16533,6 @@ Name | Type | Description | Notes
 
 
 
-# LocationProperties
 
 # LocationProperties
 
@@ -16632,7 +16555,6 @@ SSD_STORAGE_ZONING | &quot;SSD_STORAGE_ZONING&quot;
 
 
 
-# Locations
 
 # Locations
 
@@ -16647,7 +16569,6 @@ Name | Type | Description | Notes
 
 
 
-# Nic
 
 # Nic
 
@@ -16664,7 +16585,6 @@ Name | Type | Description | Notes
 
 
 
-# NicEntities
 
 # NicEntities
 
@@ -16676,7 +16596,6 @@ Name | Type | Description | Notes
 
 
 
-# NicProperties
 
 # NicProperties
 
@@ -16694,7 +16613,6 @@ Name | Type | Description | Notes
 
 
 
-# Nics
 
 # Nics
 
@@ -16709,7 +16627,6 @@ Name | Type | Description | Notes
 
 
 
-# NoStateMetaData
 
 # NoStateMetaData
 
@@ -16727,7 +16644,6 @@ Name | Type | Description | Notes
 
 
 
-# Peer
 
 # Peer
 
@@ -16743,7 +16659,6 @@ Name | Type | Description | Notes
 
 
 
-# PrivateCrossConnect
 
 # PrivateCrossConnect
 
@@ -16759,7 +16674,6 @@ Name | Type | Description | Notes
 
 
 
-# PrivateCrossConnectProperties
 
 # PrivateCrossConnectProperties
 
@@ -16774,7 +16688,6 @@ Name | Type | Description | Notes
 
 
 
-# PrivateCrossConnects
 
 # PrivateCrossConnects
 
@@ -16789,7 +16702,6 @@ Name | Type | Description | Notes
 
 
 
-# Request
 
 # Request
 
@@ -16805,7 +16717,6 @@ Name | Type | Description | Notes
 
 
 
-# RequestMetadata
 
 # RequestMetadata
 
@@ -16820,7 +16731,6 @@ Name | Type | Description | Notes
 
 
 
-# RequestProperties
 
 # RequestProperties
 
@@ -16835,7 +16745,6 @@ Name | Type | Description | Notes
 
 
 
-# RequestStatus
 
 # RequestStatus
 
@@ -16850,7 +16759,6 @@ Name | Type | Description | Notes
 
 
 
-# RequestStatusMetadata
 
 # RequestStatusMetadata
 
@@ -16876,7 +16784,6 @@ FAILED | &quot;FAILED&quot;
 
 
 
-# RequestTarget
 
 # RequestTarget
 
@@ -16900,7 +16807,6 @@ FAILED | &quot;FAILED&quot;
 
 
 
-# Requests
 
 # Requests
 
@@ -16915,7 +16821,6 @@ Name | Type | Description | Notes
 
 
 
-# Resource
 
 # Resource
 
@@ -16933,7 +16838,6 @@ Name | Type | Description | Notes
 
 
 
-# ResourceEntities
 
 # ResourceEntities
 
@@ -16945,7 +16849,6 @@ Name | Type | Description | Notes
 
 
 
-# ResourceGroups
 
 # ResourceGroups
 
@@ -16961,7 +16864,6 @@ Name | Type | Description | Notes
 
 
 
-# ResourceLimits
 
 # ResourceLimits
 
@@ -16989,7 +16891,6 @@ Name | Type | Description | Notes
 
 
 
-# ResourceProperties
 
 # ResourceProperties
 
@@ -17002,7 +16903,6 @@ Name | Type | Description | Notes
 
 
 
-# ResourceReference
 
 # ResourceReference
 
@@ -17016,7 +16916,6 @@ Name | Type | Description | Notes
 
 
 
-# Resources
 
 # Resources
 
@@ -17032,7 +16931,6 @@ Name | Type | Description | Notes
 
 
 
-# ResourcesUsers
 
 # ResourcesUsers
 
@@ -17048,7 +16946,6 @@ Name | Type | Description | Notes
 
 
 
-# S3Key
 
 # S3Key
 
@@ -17064,7 +16961,6 @@ Name | Type | Description | Notes
 
 
 
-# S3KeyMetadata
 
 # S3KeyMetadata
 
@@ -17077,7 +16973,6 @@ Name | Type | Description | Notes
 
 
 
-# S3KeyProperties
 
 # S3KeyProperties
 
@@ -17090,7 +16985,6 @@ Name | Type | Description | Notes
 
 
 
-# S3Keys
 
 # S3Keys
 
@@ -17105,7 +16999,6 @@ Name | Type | Description | Notes
 
 
 
-# S3ObjectStorageSSO
 
 # S3ObjectStorageSSO
 
@@ -17117,7 +17010,6 @@ Name | Type | Description | Notes
 
 
 
-# Server
 
 # Server
 
@@ -17134,7 +17026,6 @@ Name | Type | Description | Notes
 
 
 
-# ServerEntities
 
 # ServerEntities
 
@@ -17148,7 +17039,6 @@ Name | Type | Description | Notes
 
 
 
-# ServerProperties
 
 # ServerProperties
 
@@ -17191,7 +17081,6 @@ CRASHED | &quot;CRASHED&quot;
 
 
 
-# Servers
 
 # Servers
 
@@ -17206,7 +17095,6 @@ Name | Type | Description | Notes
 
 
 
-# Snapshot
 
 # Snapshot
 
@@ -17222,7 +17110,6 @@ Name | Type | Description | Notes
 
 
 
-# SnapshotProperties
 
 # SnapshotProperties
 
@@ -17261,7 +17148,6 @@ OTHER | &quot;OTHER&quot;
 
 
 
-# Snapshots
 
 # Snapshots
 
@@ -17276,7 +17162,6 @@ Name | Type | Description | Notes
 
 
 
-# Type
 
 # Type
 
@@ -17287,7 +17172,6 @@ Name | Type | Description | Notes
 
 
 
-# User
 
 # User
 
@@ -17304,7 +17188,6 @@ Name | Type | Description | Notes
 
 
 
-# UserMetadata
 
 # UserMetadata
 
@@ -17318,7 +17201,6 @@ Name | Type | Description | Notes
 
 
 
-# UserProperties
 
 # UserProperties
 
@@ -17337,7 +17219,6 @@ Name | Type | Description | Notes
 
 
 
-# Users
 
 # Users
 
@@ -17352,7 +17233,6 @@ Name | Type | Description | Notes
 
 
 
-# UsersEntities
 
 # UsersEntities
 
@@ -17365,7 +17245,6 @@ Name | Type | Description | Notes
 
 
 
-# Volume
 
 # Volume
 
@@ -17381,7 +17260,6 @@ Name | Type | Description | Notes
 
 
 
-# VolumeProperties
 
 # VolumeProperties
 
@@ -17453,7 +17331,6 @@ OTHER | &quot;OTHER&quot;
 
 
 
-# Volumes
 
 # Volumes
 
