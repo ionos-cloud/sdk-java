@@ -5,7 +5,7 @@
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2020-11-19T16:41:06.426137+02:00[Europe/Bucharest]
+  - Build date: 2020-11-20T11:53:15.469202+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -43,8 +43,8 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>org.openapitools</groupId>
-  <artifactId>openapi-java-client</artifactId>
+  <groupId>com.ionossdk</groupId>
+  <artifactId>ionossdk</artifactId>
   <version>5.0</version>
   <scope>compile</scope>
 </dependency>
@@ -55,7 +55,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "org.openapitools:openapi-java-client:5.0"
+compile "com.ionossdk:ionossdk:5.0"
 ```
 
 ### Others
@@ -68,7 +68,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/openapi-java-client-5.0.jar`
+* `target/ionossdk-5.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -78,12 +78,12 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.models.*;
-import org.openapitools.client.api.BackupUnitApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.models.*;
+import com.ionossdk.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -381,12 +381,12 @@ NOTE: Running through the deletion process will delete: - the backup plans insid
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.BackupUnitApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -457,12 +457,12 @@ You can retrieve the details of an specific backup unit.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.BackupUnitApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -533,12 +533,12 @@ You can retrieve a complete list of backup Units that you have access to.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.BackupUnitApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -607,12 +607,12 @@ You can use update a backup Unit properties
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.BackupUnitApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -685,12 +685,12 @@ Create a Backup Unit. A Backup Unit is considered a resource like a virtual data
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.BackupUnitApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -761,12 +761,12 @@ You can use update a backup Unit properties
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.BackupUnitApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -839,12 +839,12 @@ Returns a single signon URL for the specified backup Unit.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.BackupUnitApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -926,12 +926,12 @@ Retrieves the attributes of user&#39;s contract.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ContractApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ContractApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1018,12 +1018,12 @@ Will remove all objects within the datacenter and remove the datacenter object i
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.DataCenterApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.DataCenterApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1094,12 +1094,12 @@ You can retrieve a data center by using the resource&#39;s ID. This value can be
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.DataCenterApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.DataCenterApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1170,12 +1170,12 @@ You can retrieve a complete list of data centers provisioned under your account
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.DataCenterApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.DataCenterApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1244,12 +1244,12 @@ You can use update datacenter to re-name the datacenter or update its descriptio
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.DataCenterApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.DataCenterApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1322,12 +1322,12 @@ Virtual data centers are the foundation of the platform. They act as logical con
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.DataCenterApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.DataCenterApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1398,12 +1398,12 @@ You can use update datacenter to re-name the datacenter or update its descriptio
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.DataCenterApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.DataCenterApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1493,12 +1493,12 @@ Deletes the specified image. This operation is permitted on private image only.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ImageApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ImageApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1569,12 +1569,12 @@ Retrieves the attributes of a given image.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ImageApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ImageApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1645,12 +1645,12 @@ Retrieve a list of images within the datacenter
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ImageApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ImageApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1719,12 +1719,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ImageApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ImageApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1797,12 +1797,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ImageApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ImageApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1893,12 +1893,12 @@ Removes the specific IP Block
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.IpBlocksApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.IpBlocksApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1969,12 +1969,12 @@ Retrieves the attributes of a given IP Block.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.IpBlocksApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.IpBlocksApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2045,12 +2045,12 @@ Retrieve a list of all reserved IP Blocks
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.IpBlocksApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.IpBlocksApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2119,12 +2119,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.IpBlocksApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.IpBlocksApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2197,12 +2197,12 @@ This will reserve a new IP Block
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.IpBlocksApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.IpBlocksApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2273,12 +2273,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.IpBlocksApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.IpBlocksApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2381,12 +2381,12 @@ This will remove a Kubernetes Cluster.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2457,12 +2457,12 @@ This will retrieve a single Kubernetes Cluster.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2533,12 +2533,12 @@ You can retrieve a list of all kubernetes clusters associated with a contract
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2607,12 +2607,12 @@ You can retrieve kubernetes configuration file for the kubernetes cluster.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2683,12 +2683,12 @@ This will remove a Kubernetes Node Pool.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2761,12 +2761,12 @@ You can retrieve a single Kubernetes Node Pool.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2839,12 +2839,12 @@ You can retrieve a list of all kubernetes node pools part of kubernetes cluster
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2915,12 +2915,12 @@ This will remove a Kubernetes node.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2995,12 +2995,12 @@ You can retrieve a single Kubernetes Node.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3075,12 +3075,12 @@ You can retrieve all nodes of Kubernetes Node Pool.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3153,12 +3153,12 @@ You can recreate a single Kubernetes Node.  Managed Kubernetes starts a process 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3233,12 +3233,12 @@ This will create a new Kubernetes Node Pool inside a Kubernetes Cluster.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3311,12 +3311,12 @@ This will modify the Kubernetes Node Pool.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3391,12 +3391,12 @@ This will create a new Kubernetes Cluster.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3467,12 +3467,12 @@ This will modify the Kubernetes Cluster.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3545,12 +3545,12 @@ You can retrieve a list of available kubernetes versions for nodepools depending
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3615,12 +3615,12 @@ You can retrieve the current default kubernetes version for clusters and nodepoo
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3681,12 +3681,12 @@ You can retrieve a list of available kubernetes versions
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.KubernetesApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3786,12 +3786,12 @@ This will remove a label from the data center.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3864,12 +3864,12 @@ This will retrieve the properties of a associated label to a data center.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3942,12 +3942,12 @@ You can retrieve a list of all labels associated with a data center
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4018,12 +4018,12 @@ This will add a label to the data center.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4096,12 +4096,12 @@ This will modify the value of the label on a data center.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4176,12 +4176,12 @@ This will remove a label from the server.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4256,12 +4256,12 @@ This will retrieve the properties of a associated label to a server.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4336,12 +4336,12 @@ You can retrieve a list of all labels associated with a server
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4414,12 +4414,12 @@ This will add a label to the server.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4494,12 +4494,12 @@ This will modify the value of the label on a server.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4576,12 +4576,12 @@ This will remove a label from the volume.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4656,12 +4656,12 @@ This will retrieve the properties of a associated label to a volume.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4736,12 +4736,12 @@ You can retrieve a list of all labels associated with a volume
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4814,12 +4814,12 @@ This will add a label to the volume.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4894,12 +4894,12 @@ This will modify the value of the label on a volume.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4976,12 +4976,12 @@ This will remove a label from the Ip Block.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5054,12 +5054,12 @@ This will retrieve the properties of a associated label to a Ip Block.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5132,12 +5132,12 @@ You can retrieve a list of all labels associated with a IP Block
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5208,12 +5208,12 @@ This will add a label to the Ip Block.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5286,12 +5286,12 @@ This will modify the value of the label on a Ip Block.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5366,12 +5366,12 @@ You can retrieve the details of a specific label using its URN. A URN is for uni
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5442,12 +5442,12 @@ You can retrieve a complete list of labels that you have access to.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5516,12 +5516,12 @@ This will remove a label from the snapshot.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5594,12 +5594,12 @@ This will retrieve the properties of a associated label to a snapshot.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5672,12 +5672,12 @@ You can retrieve a list of all labels associated with a snapshot
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5748,12 +5748,12 @@ This will add a label to the snapshot.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5826,12 +5826,12 @@ This will modify the value of the label on a snapshot.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LabelApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5927,12 +5927,12 @@ Removes the specific Lan
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LanApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6005,12 +6005,12 @@ Retrieves the attributes of a given LAN
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LanApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6083,12 +6083,12 @@ Retrieve a list of LANs within the datacenter
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LanApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6159,12 +6159,12 @@ This will retrieve the properties of an attached nic.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LanApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6239,12 +6239,12 @@ You can retrieve a list of nics attached to a lan
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LanApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6317,12 +6317,12 @@ This will attach a pre-existing nic to a lan.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LanApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6397,12 +6397,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LanApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6477,12 +6477,12 @@ Creates a LAN within the datacenter
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LanApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6555,12 +6555,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LanApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6657,12 +6657,12 @@ This will remove a nic from Load Balancer
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LoadBalancerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6737,12 +6737,12 @@ This will retrieve the properties of an attached nic.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LoadBalancerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6817,12 +6817,12 @@ You can retrieve a list of nics attached to a Load Balancer
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LoadBalancerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6895,12 +6895,12 @@ This will attach a pre-existing nic to a Load Balancer.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LoadBalancerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6975,12 +6975,12 @@ Removes the specific Loadbalancer
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LoadBalancerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7053,12 +7053,12 @@ Retrieves the attributes of a given Loadbalancer
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LoadBalancerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7131,12 +7131,12 @@ Retrieve a list of Load Balancers within the datacenter
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LoadBalancerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7207,12 +7207,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LoadBalancerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7287,12 +7287,12 @@ Creates a Loadbalancer within the datacenter
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LoadBalancerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7365,12 +7365,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LoadBalancerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7460,12 +7460,12 @@ Retrieve a list of Locations within a world&#39;s region
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LocationApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LocationApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7536,12 +7536,12 @@ Retrieves the attributes of a given location
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LocationApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LocationApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7614,12 +7614,12 @@ Retrieve a list of Locations. This list represents where you can provision your 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.LocationApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.LocationApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7712,12 +7712,12 @@ Deletes the specified NIC.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.NicApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7792,12 +7792,12 @@ Retrieves the attributes of a given NIC
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.NicApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7872,12 +7872,12 @@ Removes the specific Firewall Rule
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.NicApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7954,12 +7954,12 @@ Retrieves the attributes of a given Firewall Rule.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.NicApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8036,12 +8036,12 @@ Retrieves a list of firewall rules associated with a particular NIC
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.NicApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8116,12 +8116,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.NicApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8200,12 +8200,12 @@ This will add a Firewall Rule to the NIC
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.NicApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8282,12 +8282,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.NicApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8366,12 +8366,12 @@ Retrieves a list of NICs.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.NicApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8444,12 +8444,12 @@ You can use update attributes of a Nic
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.NicApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8526,12 +8526,12 @@ Adds a NIC to the target server. Combine count of Nics and volumes attached to t
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.NicApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8606,12 +8606,12 @@ You can use update attributes of a Nic
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.NicApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8705,12 +8705,12 @@ Delete a private cross-connect if no datacenters are joined to the given PCC
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.PrivateCrossConnectApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.PrivateCrossConnectApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8781,12 +8781,12 @@ You can retrieve a private cross-connect by using the resource&#39;s ID. This va
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.PrivateCrossConnectApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.PrivateCrossConnectApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8857,12 +8857,12 @@ You can retrieve a complete list of private cross-connects provisioned under you
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.PrivateCrossConnectApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.PrivateCrossConnectApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8931,12 +8931,12 @@ You can use update private cross-connect to re-name or update its description
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.PrivateCrossConnectApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.PrivateCrossConnectApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9009,12 +9009,12 @@ You can use this POST method to create a private cross-connect
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.PrivateCrossConnectApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.PrivateCrossConnectApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9100,12 +9100,12 @@ Retrieves the attributes of a given request.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.RequestApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.RequestApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9176,12 +9176,12 @@ Retrieve a list of API requests.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.RequestApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.RequestApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9264,12 +9264,12 @@ Retrieves the status of a given request.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.RequestApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.RequestApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9370,12 +9370,12 @@ This will detach a CD-ROM from the server
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9450,12 +9450,12 @@ You can retrieve a specific CD-ROM attached to the server
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9530,12 +9530,12 @@ You can retrieve a list of CD-ROMs attached to the server.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9608,12 +9608,12 @@ You can attach a CD-ROM to an existing server. You can attach up to 2 CD-ROMs to
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9688,12 +9688,12 @@ This will remove a server from your datacenter; however, it will not remove the 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9766,12 +9766,12 @@ Returns information about a server such as its configuration, provisioning statu
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9844,12 +9844,12 @@ You can retrieve a list of servers within a datacenter
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9922,12 +9922,12 @@ You can use update attributes of a server
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10002,12 +10002,12 @@ Creates a server within an existing datacenter. You can configure the boot volum
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10080,12 +10080,12 @@ Allows to modify the attributes of a Server. From v5 onwards &#39;allowReboot&#3
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10160,12 +10160,12 @@ This will force a hard reboot of the server. Do not use this method if you want 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10238,12 +10238,12 @@ This will start a server. If the server&#39;s public IP was deallocated then a n
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10316,12 +10316,12 @@ This will stop a server. The machine will be forcefully powered off, billing wil
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10394,12 +10394,12 @@ This will upgrade the version of the server, if needed. To verify if there is an
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10472,12 +10472,12 @@ This will detach the volume from the server. This will not delete the volume fro
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10552,12 +10552,12 @@ This will retrieve the properties of an attached volume.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10632,12 +10632,12 @@ You can retrieve a list of volumes attached to the server
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10709,12 +10709,12 @@ This will attach a pre-existing storage volume to the server. It is also possibl
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.ServerApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10805,12 +10805,12 @@ Deletes the specified Snapshot.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.SnapshotApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.SnapshotApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10881,12 +10881,12 @@ Retrieves the attributes of a given Snapshot.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.SnapshotApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.SnapshotApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10957,12 +10957,12 @@ Retrieve a list of available snapshots.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.SnapshotApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.SnapshotApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11031,12 +11031,12 @@ You can use this method to update attributes of a Snapshot.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.SnapshotApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.SnapshotApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11109,12 +11109,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.SnapshotApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.SnapshotApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11229,12 +11229,12 @@ Delete a group
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11305,12 +11305,12 @@ You can retrieve a group by using the group ID. This value can be found in the r
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11381,12 +11381,12 @@ You can retrieve a complete list of all groups that you have access to
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11455,12 +11455,12 @@ You can use this POST method to create a group
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11531,12 +11531,12 @@ You can use this method to update properties of the group.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11607,12 +11607,12 @@ Retrieve resources assigned to a group
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11683,12 +11683,12 @@ This will remove a resource from a group
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11761,12 +11761,12 @@ This will retrieve the properties of a group share.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11839,12 +11839,12 @@ You can retrieve a list of all resources along with their permissions of the gro
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11915,12 +11915,12 @@ This will add a resource to the group.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11995,12 +11995,12 @@ You can use update resource permissions of a group. If empty body will be provid
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12075,12 +12075,12 @@ This will remove a user from a group
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12153,12 +12153,12 @@ You can retrieve a list of users who are members of the group
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12229,12 +12229,12 @@ This will attach a pre-existing user to a group.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12307,12 +12307,12 @@ You can retrieve a list of resources by using the type. Allowed values are { dat
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12383,12 +12383,12 @@ You can retrieve a resource by using the type and its uuid. Allowed values for t
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12461,12 +12461,12 @@ You can retrieve a complete list of all resources that you have access to
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12535,12 +12535,12 @@ Delete a user
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12611,12 +12611,12 @@ You can retrieve user details by using the users ID. This value can be found in 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12687,12 +12687,12 @@ You can retrieve a complete list of users under your account
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12761,12 +12761,12 @@ You can retrieve group resources of user by using the users ID. This value can b
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12837,12 +12837,12 @@ You can retrieve resources owned by using the users ID. This value can be found 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12913,12 +12913,12 @@ You can use this POST method to create a user
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12989,12 +12989,12 @@ You can use update attributes of a User
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13067,12 +13067,12 @@ Delete a S3 key
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13145,12 +13145,12 @@ You can retrieve S3 key belonging to the given User. This user Id can be found i
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13223,12 +13223,12 @@ You can retrieve S3 keys owned by a user by using the users ID. This user Id can
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13299,12 +13299,12 @@ Creates a S3 key for the given user. This user Id can be found in the response b
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13375,12 +13375,12 @@ You can enable or disable a given S3 key
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13455,12 +13455,12 @@ You can retrieve S3 object storage single signon URL for the given user. This us
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.UserManagementApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13549,12 +13549,12 @@ Creates a snapshot of a volume within the datacenter. You can use a snapshot to 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.VolumeApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13635,12 +13635,12 @@ Deletes the specified volume. This will result in the volume being removed from 
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.VolumeApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13713,12 +13713,12 @@ Retrieves the attributes of a given Volume
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.VolumeApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13791,12 +13791,12 @@ Retrieves a list of Volumes.
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.VolumeApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13867,12 +13867,12 @@ You can use update attributes of a Volume
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.VolumeApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13947,12 +13947,12 @@ Creates a volume within the datacenter. This will not attach the volume to a ser
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.VolumeApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -14025,12 +14025,12 @@ You can use update attributes of a Volume
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.VolumeApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -14105,12 +14105,12 @@ This will restore a snapshot onto a volume. A snapshot is created as just anothe
 ### Example
 ```java
 // Import classes:
-import org.openapitools.client.ApiClient;
-import org.openapitools.client.ApiException;
-import org.openapitools.client.Configuration;
-import org.openapitools.client.auth.*;
-import org.openapitools.client.model.*;
-import org.openapitools.client.api.VolumeApi;
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.auth.*;
+import com.ionossdk.model.*;
+import com.ionossdk.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {

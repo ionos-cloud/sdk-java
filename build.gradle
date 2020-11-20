@@ -5,7 +5,7 @@ apply plugin: 'maven'
 apply plugin: 'maven-publish'
 
 
-group = 'org.openapitools'
+group = 'com.ionossdk'
 version = '5.0'
 
 buildscript {
@@ -90,7 +90,7 @@ if(hasProperty('target') && target == 'android') {
 
     install {
         repositories.mavenInstaller {
-            pom.artifactId = 'openapi-java-client'
+            pom.artifactId = 'ionossdk'
         }
     }
 
