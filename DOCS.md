@@ -1,11 +1,10 @@
 [![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
-[![PyPI](https://img.shields.io/pypi/v/ionos-cloud-sdk)](https://pypi.org/project/ionossdk/)
 
 # IONOS Cloud SDK for Java
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2020-11-20T11:53:15.469202+02:00[Europe/Bucharest]
+  - Build date: 2020-11-20T17:37:47.381927+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
