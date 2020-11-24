@@ -21,6 +21,8 @@ target
 gradle
 gradle/
 .openapi-generator
+.openapi-generator-ignore
+.travis.yml
 .idea
 build
 api
