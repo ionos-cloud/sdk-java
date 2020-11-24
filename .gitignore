@@ -19,5 +19,6 @@ hs_err_pid*
 target
 .gradle
 gradle
+gradle/
 .idea
 build
