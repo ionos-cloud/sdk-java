@@ -20,5 +20,6 @@ target
 .gradle
 gradle
 gradle/
+.openapi-generator
 .idea
 build
