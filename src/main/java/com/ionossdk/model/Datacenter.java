@@ -20,8 +20,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ionossdk.model.DataCenterEntities;
 import com.ionossdk.model.DatacenterElementMetadata;
-import com.ionossdk.model.DatacenterEntities;
 import com.ionossdk.model.DatacenterProperties;
 import com.ionossdk.model.Type;
 import io.swagger.annotations.ApiModel;
@@ -32,7 +32,7 @@ import java.net.URI;
 /**
  * Datacenter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-20T17:37:47.381927+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]")
 public class Datacenter {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -56,7 +56,7 @@ public class Datacenter {
 
   public static final String SERIALIZED_NAME_ENTITIES = "entities";
   @SerializedName(SERIALIZED_NAME_ENTITIES)
-  private DatacenterEntities entities;
+  private DataCenterEntities entities;
 
 
    /**
@@ -155,7 +155,7 @@ public class Datacenter {
   }
 
 
-  public Datacenter entities(DatacenterEntities entities) {
+  public Datacenter entities(DataCenterEntities entities) {
     
     this.entities = entities;
     return this;
@@ -168,12 +168,12 @@ public class Datacenter {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public DatacenterEntities getEntities() {
+  public DataCenterEntities getEntities() {
     return entities;
   }
 
 
-  public void setEntities(DatacenterEntities entities) {
+  public void setEntities(DataCenterEntities entities) {
     this.entities = entities;
   }
 

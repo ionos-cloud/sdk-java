@@ -4,7 +4,7 @@
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2020-11-20T17:37:47.381927+02:00[Europe/Bucharest]
+  - Build date: 2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -80,36 +80,23 @@ Please follow the [installation](#installation) instruction and execute the foll
 import com.ionossdk.ApiClient;
 import com.ionossdk.ApiException;
 import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
 import com.ionossdk.models.*;
-import com.ionossdk.api.BackupUnitApi;
+import com.ionossdk.api.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
-    
-    // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
-
-    BackupUnitApi apiInstance = new BackupUnitApi(defaultClient);
-    String backupunitId = "backupunitId_example"; // String | The unique ID of the backup Unit
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.backupunitsDelete(backupunitId, pretty, depth, xContractNumber);
+      Info result = apiInstance.apiInfoGet(pretty, depth, xContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling BackupUnitApi#backupunitsDelete");
+      System.err.println("Exception when calling DefaultApi#apiInfoGet");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -124,6 +111,10 @@ public class Example {
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
+
+#### DefaultApi
+
+- [Display API information](#apiinfoget)
 
 #### BackupUnitApi
 
@@ -168,7 +159,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 #### KubernetesApi
 
 - [Delete Kubernetes Cluster](#k8sdelete)
-- [Retrieve Kubernetes Cluster](#k8sfindbyclusterid)
+- [Retrieve Kubernetes Cluster](#k8sfindbysclusterid)
 - [List Kubernetes Clusters](#k8sget)
 - [Retrieve Kubernetes Configuration File](#k8skubeconfigget)
 - [Delete Kubernetes Node Pool](#k8snodepoolsdelete)
@@ -208,7 +199,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 - [List all Ip Block Labels](#ipblockslabelsget)
 - [Add a Label to IP Block](#ipblockslabelspost)
 - [Modify a Label of IP Block](#ipblockslabelsput)
-- [Returns the label by its URN.](#labelsfindbylabelurn)
+- [Returns the label by its URN.](#labelsfindbyurn)
 - [List Labels ](#labelsget)
 - [Delete a Label from Snapshot](#snapshotslabelsdelete)
 - [Retrieve a Label of Snapshot](#snapshotslabelsfindbykey)
@@ -231,7 +222,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 #### LoadBalancerApi
 
 - [Detach a nic from loadbalancer](#datacentersloadbalancersbalancednicsdelete)
-- [Retrieve a nic attached to Load Balancer](#datacentersloadbalancersbalancednicsfindbynic)
+- [Retrieve a nic attached to Load Balancer](#datacentersloadbalancersbalancednicsfindbynicid)
 - [List Load Balancer Members ](#datacentersloadbalancersbalancednicsget)
 - [Attach a nic to Load Balancer](#datacentersloadbalancersbalancednicspost)
 - [Delete a Loadbalancer.](#datacentersloadbalancersdelete)
@@ -243,8 +234,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 #### LocationApi
 
-- [List Locations within a region](#locationsfindbyregion)
-- [Retrieve a Location](#locationsfindbyregionandid)
+- [List Locations within a region](#locationsfindbyregionid)
+- [Retrieve a Location](#locationsfindbyregionidandid)
 - [List Locations](#locationsget)
 
 #### NicApi
@@ -314,7 +305,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 - [Modify a group](#umgroupsput)
 - [Retrieve resources assigned to a group](#umgroupsresourcesget)
 - [Remove a resource from a group](#umgroupssharesdelete)
-- [Retrieve a group share](#umgroupssharesfindbyresource)
+- [Retrieve a group share](#umgroupssharesfindbyresourceid)
 - [List Group Shares ](#umgroupssharesget)
 - [Add a resource to a group](#umgroupssharespost)
 - [Modify resource permissions of a group](#umgroupssharesput)
@@ -332,7 +323,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 - [Create a user](#umuserspost)
 - [Modify a user](#umusersput)
 - [Delete a S3 key](#umuserss3keysdelete)
-- [Retrieve given S3 key belonging to the given User](#umuserss3keysfindbykey)
+- [Retrieve given S3 key belonging to the given User](#umuserss3keysfindbykeyid)
 - [Retrieve a User&#39;s S3 keys](#umuserss3keysget)
 - [Create a S3 key for the given user](#umuserss3keyspost)
 - [Modify a S3 key having the given key id](#umuserss3keysput)
@@ -350,6 +341,86 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 - [Restore Volume Snapshot](#datacentersvolumesrestoresnapshotpost)
 
 ---
+
+
+### DefaultApi
+
+
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**apiInfoGet**](DOCS.md#apiInfoGet) | **GET** / | Display API information
+
+
+<a name="apiInfoGet"></a>
+# **apiInfoGet**
+> Info apiInfoGet(pretty, depth, xContractNumber)
+
+Display API information
+
+Display API information
+
+### Example
+```java
+// Import classes:
+import com.ionossdk.ApiClient;
+import com.ionossdk.ApiException;
+import com.ionossdk.Configuration;
+import com.ionossdk.model.*;
+import com.ionossdk.api.DefaultApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
+
+    DefaultApi apiInstance = new DefaultApi(defaultClient);
+    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
+    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
+    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    try {
+      Info result = apiInstance.apiInfoGet(pretty, depth, xContractNumber);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling DefaultApi#apiInfoGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
+ **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
+ **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+
+### Return type
+
+[**Info**](DOCS.md#Info)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
+**0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
+
 
 
 ### BackupUnitApi
@@ -1160,7 +1231,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersGet"></a>
 # **datacentersGet**
-> Datacenters datacentersGet(pretty, depth, xContractNumber)
+> Datacenters datacentersGet(pretty, depth, xContractNumber, offset, limit)
 
 List Data Centers under your account
 
@@ -1191,8 +1262,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Datacenters result = apiInstance.datacentersGet(pretty, depth, xContractNumber);
+      Datacenters result = apiInstance.datacentersGet(pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataCenterApi#datacentersGet");
@@ -1212,6 +1285,8 @@ Name | Type | Description  | Notes
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -2350,7 +2425,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**k8sDelete**](DOCS.md#k8sDelete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes Cluster
-[**k8sFindByClusterid**](DOCS.md#k8sFindByClusterid) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
+[**k8sFindBySClusterId**](DOCS.md#k8sFindBySClusterId) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
 [**k8sGet**](DOCS.md#k8sGet) | **GET** /k8s | List Kubernetes Clusters
 [**k8sKubeconfigGet**](DOCS.md#k8sKubeconfigGet) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File
 [**k8sNodepoolsDelete**](DOCS.md#k8sNodepoolsDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool
@@ -2445,9 +2520,9 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-<a name="k8sFindByClusterid"></a>
-# **k8sFindByClusterid**
-> KubernetesCluster k8sFindByClusterid(k8sClusterId, pretty, depth, xContractNumber)
+<a name="k8sFindBySClusterId"></a>
+# **k8sFindBySClusterId**
+> KubernetesCluster k8sFindBySClusterId(k8sClusterId, pretty, depth, xContractNumber)
 
 Retrieve Kubernetes Cluster
 
@@ -2480,10 +2555,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesCluster result = apiInstance.k8sFindByClusterid(k8sClusterId, pretty, depth, xContractNumber);
+      KubernetesCluster result = apiInstance.k8sFindBySClusterId(k8sClusterId, pretty, depth, xContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling KubernetesApi#k8sFindByClusterid");
+      System.err.println("Exception when calling KubernetesApi#k8sFindBySClusterId");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -3301,7 +3376,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sNodepoolsPut"></a>
 # **k8sNodepoolsPut**
-> KubernetesNodePoolForPut k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePoolProperties, pretty, depth, xContractNumber)
+> KubernetesNodePoolForPut k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber)
 
 Modify Kubernetes Node Pool
 
@@ -3331,12 +3406,12 @@ public class Example {
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
     String nodepoolId = "nodepoolId_example"; // String | The unique ID of the Kubernetes Node Pool
-    KubernetesNodePoolPropertiesForPut kubernetesNodePoolProperties = new KubernetesNodePoolPropertiesForPut(); // KubernetesNodePoolPropertiesForPut | Details of the Kubernetes Node Pool
+    KubernetesNodePool kubernetesNodePool = new KubernetesNodePool(); // KubernetesNodePool | Details of the Kubernetes Node Pool
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesNodePoolForPut result = apiInstance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePoolProperties, pretty, depth, xContractNumber);
+      KubernetesNodePoolForPut result = apiInstance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsPut");
@@ -3355,7 +3430,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
  **nodepoolId** | **String**| The unique ID of the Kubernetes Node Pool |
- **kubernetesNodePoolProperties** | [**KubernetesNodePoolPropertiesForPut**](DOCS.md#KubernetesNodePoolPropertiesForPut)| Details of the Kubernetes Node Pool |
+ **kubernetesNodePool** | [**KubernetesNodePool**](DOCS.md#KubernetesNodePool)| Details of the Kubernetes Node Pool |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -3457,7 +3532,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sPut"></a>
 # **k8sPut**
-> KubernetesCluster k8sPut(k8sClusterId, kubernetescluster, pretty, depth, xContractNumber)
+> KubernetesCluster k8sPut(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber)
 
 Modify Kubernetes Cluster
 
@@ -3486,12 +3561,12 @@ public class Example {
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes Cluster
-    KubernetesCluster kubernetescluster = new KubernetesCluster(); // KubernetesCluster | Details of of the Kubernetes Cluster
+    KubernetesCluster kubernetesCluster = new KubernetesCluster(); // KubernetesCluster | Properties of the Kubernetes Cluster
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesCluster result = apiInstance.k8sPut(k8sClusterId, kubernetescluster, pretty, depth, xContractNumber);
+      KubernetesCluster result = apiInstance.k8sPut(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sPut");
@@ -3509,7 +3584,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
- **kubernetescluster** | [**KubernetesCluster**](DOCS.md#KubernetesCluster)| Details of of the Kubernetes Cluster |
+ **kubernetesCluster** | [**KubernetesCluster**](DOCS.md#KubernetesCluster)| Properties of the Kubernetes Cluster |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -3765,7 +3840,7 @@ Method | HTTP request | Description
 [**ipblocksLabelsGet**](DOCS.md#ipblocksLabelsGet) | **GET** /ipblocks/{ipblockId}/labels | List all Ip Block Labels
 [**ipblocksLabelsPost**](DOCS.md#ipblocksLabelsPost) | **POST** /ipblocks/{ipblockId}/labels | Add a Label to IP Block
 [**ipblocksLabelsPut**](DOCS.md#ipblocksLabelsPut) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block
-[**labelsFindByLabelurn**](DOCS.md#labelsFindByLabelurn) | **GET** /labels/{labelurn} | Returns the label by its URN.
+[**labelsFindByUrn**](DOCS.md#labelsFindByUrn) | **GET** /labels/{labelurn} | Returns the label by its URN.
 [**labelsGet**](DOCS.md#labelsGet) | **GET** /labels | List Labels 
 [**snapshotsLabelsDelete**](DOCS.md#snapshotsLabelsDelete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot
 [**snapshotsLabelsFindByKey**](DOCS.md#snapshotsLabelsFindByKey) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot
@@ -3932,7 +4007,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLabelsGet"></a>
 # **datacentersLabelsGet**
-> LabelResources datacentersLabelsGet(datacenterId, pretty, depth, xContractNumber)
+> LabelResources datacentersLabelsGet(datacenterId, pretty, depth, xContractNumber, offset, limit)
 
 List all Data Center Labels
 
@@ -3964,8 +4039,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      LabelResources result = apiInstance.datacentersLabelsGet(datacenterId, pretty, depth, xContractNumber);
+      LabelResources result = apiInstance.datacentersLabelsGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersLabelsGet");
@@ -3986,6 +4063,8 @@ Name | Type | Description  | Notes
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -4326,7 +4405,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersLabelsGet"></a>
 # **datacentersServersLabelsGet**
-> LabelResources datacentersServersLabelsGet(datacenterId, serverId, pretty, depth, xContractNumber)
+> LabelResources datacentersServersLabelsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit)
 
 List all Server Labels
 
@@ -4359,8 +4438,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      LabelResources result = apiInstance.datacentersServersLabelsGet(datacenterId, serverId, pretty, depth, xContractNumber);
+      LabelResources result = apiInstance.datacentersServersLabelsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersServersLabelsGet");
@@ -4382,6 +4463,8 @@ Name | Type | Description  | Notes
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -4726,7 +4809,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesLabelsGet"></a>
 # **datacentersVolumesLabelsGet**
-> LabelResources datacentersVolumesLabelsGet(datacenterId, volumeId, pretty, depth, xContractNumber)
+> LabelResources datacentersVolumesLabelsGet(datacenterId, volumeId, pretty, depth, xContractNumber, offset, limit)
 
 List all Volume Labels
 
@@ -4759,8 +4842,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      LabelResources result = apiInstance.datacentersVolumesLabelsGet(datacenterId, volumeId, pretty, depth, xContractNumber);
+      LabelResources result = apiInstance.datacentersVolumesLabelsGet(datacenterId, volumeId, pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersVolumesLabelsGet");
@@ -4782,6 +4867,8 @@ Name | Type | Description  | Notes
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -5354,9 +5441,9 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-<a name="labelsFindByLabelurn"></a>
-# **labelsFindByLabelurn**
-> Label labelsFindByLabelurn(labelurn, pretty, depth, xContractNumber)
+<a name="labelsFindByUrn"></a>
+# **labelsFindByUrn**
+> Label labelsFindByUrn(labelurn, pretty, depth, xContractNumber)
 
 Returns the label by its URN.
 
@@ -5389,10 +5476,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Label result = apiInstance.labelsFindByLabelurn(labelurn, pretty, depth, xContractNumber);
+      Label result = apiInstance.labelsFindByUrn(labelurn, pretty, depth, xContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling LabelApi#labelsFindByLabelurn");
+      System.err.println("Exception when calling LabelApi#labelsFindByUrn");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -6073,7 +6160,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLansGet"></a>
 # **datacentersLansGet**
-> Lans datacentersLansGet(datacenterId, pretty, depth, xContractNumber)
+> Lans datacentersLansGet(datacenterId, pretty, depth, xContractNumber, offset, limit)
 
 List Lans
 
@@ -6105,8 +6192,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Lans result = apiInstance.datacentersLansGet(datacenterId, pretty, depth, xContractNumber);
+      Lans result = apiInstance.datacentersLansGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LanApi#datacentersLansGet");
@@ -6127,6 +6216,8 @@ Name | Type | Description  | Notes
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -6229,7 +6320,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLansNicsGet"></a>
 # **datacentersLansNicsGet**
-> LanNics datacentersLansNicsGet(datacenterId, lanId, pretty, depth, xContractNumber)
+> LanNics datacentersLansNicsGet(datacenterId, lanId, pretty, depth, xContractNumber, offset, limit)
 
 List Lan Members 
 
@@ -6262,8 +6353,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      LanNics result = apiInstance.datacentersLansNicsGet(datacenterId, lanId, pretty, depth, xContractNumber);
+      LanNics result = apiInstance.datacentersLansNicsGet(datacenterId, lanId, pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LanApi#datacentersLansNicsGet");
@@ -6285,6 +6378,8 @@ Name | Type | Description  | Notes
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -6634,7 +6729,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**datacentersLoadbalancersBalancednicsDelete**](DOCS.md#datacentersLoadbalancersBalancednicsDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer
-[**datacentersLoadbalancersBalancednicsFindByNic**](DOCS.md#datacentersLoadbalancersBalancednicsFindByNic) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer
+[**datacentersLoadbalancersBalancednicsFindByNicId**](DOCS.md#datacentersLoadbalancersBalancednicsFindByNicId) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer
 [**datacentersLoadbalancersBalancednicsGet**](DOCS.md#datacentersLoadbalancersBalancednicsGet) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer Members 
 [**datacentersLoadbalancersBalancednicsPost**](DOCS.md#datacentersLoadbalancersBalancednicsPost) | **POST** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer
 [**datacentersLoadbalancersDelete**](DOCS.md#datacentersLoadbalancersDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer.
@@ -6725,9 +6820,9 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-<a name="datacentersLoadbalancersBalancednicsFindByNic"></a>
-# **datacentersLoadbalancersBalancednicsFindByNic**
-> Nic datacentersLoadbalancersBalancednicsFindByNic(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber)
+<a name="datacentersLoadbalancersBalancednicsFindByNicId"></a>
+# **datacentersLoadbalancersBalancednicsFindByNicId**
+> Nic datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber)
 
 Retrieve a nic attached to Load Balancer
 
@@ -6762,10 +6857,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersLoadbalancersBalancednicsFindByNic(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsFindByNic");
+      System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsFindByNicId");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -6807,7 +6902,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLoadbalancersBalancednicsGet"></a>
 # **datacentersLoadbalancersBalancednicsGet**
-> BalancedNics datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, pretty, depth, xContractNumber)
+> BalancedNics datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, pretty, depth, xContractNumber, offset, limit)
 
 List Load Balancer Members 
 
@@ -6840,8 +6935,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      BalancedNics result = apiInstance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
+      BalancedNics result = apiInstance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsGet");
@@ -6863,6 +6960,8 @@ Name | Type | Description  | Notes
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -7121,7 +7220,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLoadbalancersGet"></a>
 # **datacentersLoadbalancersGet**
-> Loadbalancers datacentersLoadbalancersGet(datacenterId, pretty, depth, xContractNumber)
+> Loadbalancers datacentersLoadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit)
 
 List Load Balancers
 
@@ -7153,8 +7252,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Loadbalancers result = apiInstance.datacentersLoadbalancersGet(datacenterId, pretty, depth, xContractNumber);
+      Loadbalancers result = apiInstance.datacentersLoadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersGet");
@@ -7175,6 +7276,8 @@ Name | Type | Description  | Notes
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -7443,14 +7546,14 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**locationsFindByRegion**](DOCS.md#locationsFindByRegion) | **GET** /locations/{regionId} | List Locations within a region
-[**locationsFindByRegionAndId**](DOCS.md#locationsFindByRegionAndId) | **GET** /locations/{regionId}/{locationId} | Retrieve a Location
+[**locationsFindByRegionId**](DOCS.md#locationsFindByRegionId) | **GET** /locations/{regionId} | List Locations within a region
+[**locationsFindByRegionIdAndId**](DOCS.md#locationsFindByRegionIdAndId) | **GET** /locations/{regionId}/{locationId} | Retrieve a Location
 [**locationsGet**](DOCS.md#locationsGet) | **GET** /locations | List Locations
 
 
-<a name="locationsFindByRegion"></a>
-# **locationsFindByRegion**
-> Locations locationsFindByRegion(regionId, pretty, depth, xContractNumber)
+<a name="locationsFindByRegionId"></a>
+# **locationsFindByRegionId**
+> Locations locationsFindByRegionId(regionId, pretty, depth, xContractNumber)
 
 List Locations within a region
 
@@ -7483,10 +7586,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Locations result = apiInstance.locationsFindByRegion(regionId, pretty, depth, xContractNumber);
+      Locations result = apiInstance.locationsFindByRegionId(regionId, pretty, depth, xContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling LocationApi#locationsFindByRegion");
+      System.err.println("Exception when calling LocationApi#locationsFindByRegionId");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -7524,9 +7627,9 @@ Name | Type | Description  | Notes
 **200** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-<a name="locationsFindByRegionAndId"></a>
-# **locationsFindByRegionAndId**
-> Location locationsFindByRegionAndId(regionId, locationId, pretty, depth, xContractNumber)
+<a name="locationsFindByRegionIdAndId"></a>
+# **locationsFindByRegionIdAndId**
+> Location locationsFindByRegionIdAndId(regionId, locationId, pretty, depth, xContractNumber)
 
 Retrieve a Location
 
@@ -7560,10 +7663,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Location result = apiInstance.locationsFindByRegionAndId(regionId, locationId, pretty, depth, xContractNumber);
+      Location result = apiInstance.locationsFindByRegionIdAndId(regionId, locationId, pretty, depth, xContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling LocationApi#locationsFindByRegionAndId");
+      System.err.println("Exception when calling LocationApi#locationsFindByRegionIdAndId");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -8026,7 +8129,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersNicsFirewallrulesGet"></a>
 # **datacentersServersNicsFirewallrulesGet**
-> FirewallRules datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber)
+> FirewallRules datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit)
 
 List Firewall Rules 
 
@@ -8060,8 +8163,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      FirewallRules result = apiInstance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber);
+      FirewallRules result = apiInstance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesGet");
@@ -8084,6 +8189,8 @@ Name | Type | Description  | Notes
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -8356,7 +8463,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersNicsGet"></a>
 # **datacentersServersNicsGet**
-> Nics datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber)
+> Nics datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit)
 
 List Nics 
 
@@ -8389,8 +8496,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Nics result = apiInstance.datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber);
+      Nics result = apiInstance.datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsGet");
@@ -8412,6 +8521,8 @@ Name | Type | Description  | Notes
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -9166,7 +9277,7 @@ Name | Type | Description  | Notes
 
 <a name="requestsGet"></a>
 # **requestsGet**
-> Requests requestsGet(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody)
+> Requests requestsGet(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody, offset, limit)
 
 List Requests
 
@@ -9203,9 +9314,11 @@ public class Example {
     String filterUrl = "filterUrl_example"; // String | Url filter
     String filterCreatedDate = "filterCreatedDate_example"; // String | Created date filter
     String filterMethod = "filterMethod_example"; // String | Method filter
-    String filterBody = "filterBody_example"; // String | Url filter
+    String filterBody = "filterBody_example"; // String | Body filter
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Requests result = apiInstance.requestsGet(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody);
+      Requests result = apiInstance.requestsGet(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling RequestApi#requestsGet");
@@ -9231,7 +9344,9 @@ Name | Type | Description  | Notes
  **filterUrl** | **String**| Url filter | [optional]
  **filterCreatedDate** | **String**| Created date filter | [optional]
  **filterMethod** | **String**| Method filter | [optional]
- **filterBody** | **String**| Url filter | [optional]
+ **filterBody** | **String**| Body filter | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -9520,7 +9635,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersCdromsGet"></a>
 # **datacentersServersCdromsGet**
-> Cdroms datacentersServersCdromsGet(datacenterId, serverId, pretty, depth, xContractNumber)
+> Cdroms datacentersServersCdromsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit)
 
 List attached CD-ROMs 
 
@@ -9553,8 +9668,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Cdroms result = apiInstance.datacentersServersCdromsGet(datacenterId, serverId, pretty, depth, xContractNumber);
+      Cdroms result = apiInstance.datacentersServersCdromsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersCdromsGet");
@@ -9576,6 +9693,8 @@ Name | Type | Description  | Notes
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -9834,7 +9953,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersGet"></a>
 # **datacentersServersGet**
-> Servers datacentersServersGet(datacenterId, pretty, depth, upgradeNeeded, xContractNumber)
+> Servers datacentersServersGet(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit)
 
 List Servers 
 
@@ -9867,8 +9986,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Boolean upgradeNeeded = true; // Boolean | It can be used to filter which servers can be upgraded which can not be upgraded.
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Servers result = apiInstance.datacentersServersGet(datacenterId, pretty, depth, upgradeNeeded, xContractNumber);
+      Servers result = apiInstance.datacentersServersGet(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersGet");
@@ -9890,6 +10011,8 @@ Name | Type | Description  | Notes
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **upgradeNeeded** | **Boolean**| It can be used to filter which servers can be upgraded which can not be upgraded. | [optional]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -10310,7 +10433,7 @@ Name | Type | Description  | Notes
 
 Stop a Server
 
-This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for CoreVPS servers.
+This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for Cube servers.
 
 ### Example
 ```java
@@ -10622,7 +10745,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersVolumesGet"></a>
 # **datacentersServersVolumesGet**
-> AttachedVolumes datacentersServersVolumesGet(datacenterId, serverId, pretty, depth, xContractNumber)
+> AttachedVolumes datacentersServersVolumesGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit)
 
 List Attached Volumes
 
@@ -10654,8 +10777,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      AttachedVolumes result = apiInstance.datacentersServersVolumesGet(datacenterId, serverId, pretty, depth, xContractNumber);
+      AttachedVolumes result = apiInstance.datacentersServersVolumesGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersVolumesGet");
@@ -10677,6 +10802,8 @@ Name | Type | Description  | Notes
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -11192,7 +11319,7 @@ Method | HTTP request | Description
 [**umGroupsPut**](DOCS.md#umGroupsPut) | **PUT** /um/groups/{groupId} | Modify a group
 [**umGroupsResourcesGet**](DOCS.md#umGroupsResourcesGet) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group
 [**umGroupsSharesDelete**](DOCS.md#umGroupsSharesDelete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group
-[**umGroupsSharesFindByResource**](DOCS.md#umGroupsSharesFindByResource) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share
+[**umGroupsSharesFindByResourceId**](DOCS.md#umGroupsSharesFindByResourceId) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share
 [**umGroupsSharesGet**](DOCS.md#umGroupsSharesGet) | **GET** /um/groups/{groupId}/shares | List Group Shares 
 [**umGroupsSharesPost**](DOCS.md#umGroupsSharesPost) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group
 [**umGroupsSharesPut**](DOCS.md#umGroupsSharesPut) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group
@@ -11210,7 +11337,7 @@ Method | HTTP request | Description
 [**umUsersPost**](DOCS.md#umUsersPost) | **POST** /um/users | Create a user
 [**umUsersPut**](DOCS.md#umUsersPut) | **PUT** /um/users/{userId} | Modify a user
 [**umUsersS3keysDelete**](DOCS.md#umUsersS3keysDelete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key
-[**umUsersS3keysFindByKey**](DOCS.md#umUsersS3keysFindByKey) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User
+[**umUsersS3keysFindByKeyId**](DOCS.md#umUsersS3keysFindByKeyId) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User
 [**umUsersS3keysGet**](DOCS.md#umUsersS3keysGet) | **GET** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys
 [**umUsersS3keysPost**](DOCS.md#umUsersS3keysPost) | **POST** /um/users/{userId}/s3keys | Create a S3 key for the given user
 [**umUsersS3keysPut**](DOCS.md#umUsersS3keysPut) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id
@@ -11749,9 +11876,9 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-<a name="umGroupsSharesFindByResource"></a>
-# **umGroupsSharesFindByResource**
-> GroupShare umGroupsSharesFindByResource(groupId, resourceId, pretty, depth, xContractNumber)
+<a name="umGroupsSharesFindByResourceId"></a>
+# **umGroupsSharesFindByResourceId**
+> GroupShare umGroupsSharesFindByResourceId(groupId, resourceId, pretty, depth, xContractNumber)
 
 Retrieve a group share
 
@@ -11785,10 +11912,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      GroupShare result = apiInstance.umGroupsSharesFindByResource(groupId, resourceId, pretty, depth, xContractNumber);
+      GroupShare result = apiInstance.umGroupsSharesFindByResourceId(groupId, resourceId, pretty, depth, xContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UserManagementApi#umGroupsSharesFindByResource");
+      System.err.println("Exception when calling UserManagementApi#umGroupsSharesFindByResourceId");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -13133,9 +13260,9 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-<a name="umUsersS3keysFindByKey"></a>
-# **umUsersS3keysFindByKey**
-> S3Key umUsersS3keysFindByKey(userId, keyId, pretty, depth, xContractNumber)
+<a name="umUsersS3keysFindByKeyId"></a>
+# **umUsersS3keysFindByKeyId**
+> S3Key umUsersS3keysFindByKeyId(userId, keyId, pretty, depth, xContractNumber)
 
 Retrieve given S3 key belonging to the given User
 
@@ -13169,10 +13296,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      S3Key result = apiInstance.umUsersS3keysFindByKey(userId, keyId, pretty, depth, xContractNumber);
+      S3Key result = apiInstance.umUsersS3keysFindByKeyId(userId, keyId, pretty, depth, xContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UserManagementApi#umUsersS3keysFindByKey");
+      System.err.println("Exception when calling UserManagementApi#umUsersS3keysFindByKeyId");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -13395,7 +13522,7 @@ public class Example {
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String userId = "userId_example"; // String | 
     String keyId = "keyId_example"; // String | The unique access key ID of the S3 key
-    S3Key s3Key = new S3Key(); // S3Key | Modified S3Key
+    S3Key s3Key = new S3Key(); // S3Key | Modified s3 key
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
@@ -13419,7 +13546,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**|  |
  **keyId** | **String**| The unique access key ID of the S3 key |
- **s3Key** | [**S3Key**](DOCS.md#S3Key)| Modified S3Key |
+ **s3Key** | [**S3Key**](DOCS.md#S3Key)| Modified s3 key |
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -13781,7 +13908,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesGet"></a>
 # **datacentersVolumesGet**
-> Volumes datacentersVolumesGet(datacenterId, pretty, depth, xContractNumber)
+> Volumes datacentersVolumesGet(datacenterId, pretty, depth, xContractNumber, offset, limit)
 
 List Volumes 
 
@@ -13813,8 +13940,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Volumes result = apiInstance.datacentersVolumesGet(datacenterId, pretty, depth, xContractNumber);
+      Volumes result = apiInstance.datacentersVolumesGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling VolumeApi#datacentersVolumesGet");
@@ -13835,6 +13964,8 @@ Name | Type | Description  | Notes
  **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
  **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
  **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
+ **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
+ **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
 ### Return type
 
@@ -14189,9 +14320,9 @@ Name | Type | Description  | Notes
  - [ConnectableDatacenter](#ConnectableDatacenter)
  - [Contract](#Contract)
  - [ContractProperties](#ContractProperties)
+ - [DataCenterEntities](#DataCenterEntities)
  - [Datacenter](#Datacenter)
  - [DatacenterElementMetadata](#DatacenterElementMetadata)
- - [DatacenterEntities](#DatacenterEntities)
  - [DatacenterProperties](#DatacenterProperties)
  - [Datacenters](#Datacenters)
  - [Error](#Error)
@@ -14221,6 +14352,7 @@ Name | Type | Description  | Notes
  - [KubernetesCluster](#KubernetesCluster)
  - [KubernetesClusterEntities](#KubernetesClusterEntities)
  - [KubernetesClusterProperties](#KubernetesClusterProperties)
+ - [KubernetesClusterPropertiesForPostAndPut](#KubernetesClusterPropertiesForPostAndPut)
  - [KubernetesClusters](#KubernetesClusters)
  - [KubernetesConfig](#KubernetesConfig)
  - [KubernetesConfigProperties](#KubernetesConfigProperties)
@@ -14233,6 +14365,7 @@ Name | Type | Description  | Notes
  - [KubernetesNodePoolLabel](#KubernetesNodePoolLabel)
  - [KubernetesNodePoolLan](#KubernetesNodePoolLan)
  - [KubernetesNodePoolProperties](#KubernetesNodePoolProperties)
+ - [KubernetesNodePoolPropertiesForPost](#KubernetesNodePoolPropertiesForPost)
  - [KubernetesNodePoolPropertiesForPut](#KubernetesNodePoolPropertiesForPut)
  - [KubernetesNodePools](#KubernetesNodePools)
  - [KubernetesNodeProperties](#KubernetesNodeProperties)
@@ -14262,6 +14395,7 @@ Name | Type | Description  | Notes
  - [NicProperties](#NicProperties)
  - [Nics](#Nics)
  - [NoStateMetaData](#NoStateMetaData)
+ - [PaginationLinks](#PaginationLinks)
  - [Peer](#Peer)
  - [PrivateCrossConnect](#PrivateCrossConnect)
  - [PrivateCrossConnectProperties](#PrivateCrossConnectProperties)
@@ -14317,6 +14451,9 @@ Name | Type | Description | Notes
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;Volume&gt;**](DOCS.md#Volume) | Array of items in that collection |  [optional] [readonly]
+**offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
+**limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
+**links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
 
 
 
@@ -14402,6 +14539,9 @@ Name | Type | Description | Notes
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;Nic&gt;**](DOCS.md#Nic) | Array of items in that collection |  [optional] [readonly]
+**offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
+**limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
+**links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
 
 
 
@@ -14416,6 +14556,9 @@ Name | Type | Description | Notes
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;Image&gt;**](DOCS.md#Image) | Array of items in that collection |  [optional] [readonly]
+**offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
+**limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
+**links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
 
 
 
@@ -14460,6 +14603,20 @@ Name | Type | Description | Notes
 
 
 
+# DataCenterEntities
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**servers** | [**Servers**](DOCS.md#Servers) |  |  [optional]
+**volumes** | [**Volumes**](DOCS.md#Volumes) |  |  [optional]
+**loadbalancers** | [**Loadbalancers**](DOCS.md#Loadbalancers) |  |  [optional]
+**lans** | [**Lans**](DOCS.md#Lans) |  |  [optional]
+
+
+
+
 # Datacenter
 
 ## Properties
@@ -14471,7 +14628,7 @@ Name | Type | Description | Notes
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
 **metadata** | [**DatacenterElementMetadata**](DOCS.md#DatacenterElementMetadata) |  |  [optional]
 **properties** | [**DatacenterProperties**](DOCS.md#DatacenterProperties) |  | 
-**entities** | [**DatacenterEntities**](DOCS.md#DatacenterEntities) |  |  [optional]
+**entities** | [**DataCenterEntities**](DOCS.md#DataCenterEntities) |  |  [optional]
 
 
 
@@ -14515,20 +14672,6 @@ TERMINATED | &quot;TERMINATED&quot;
 
 
 
-# DatacenterEntities
-
-## Properties
-
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**servers** | [**Servers**](DOCS.md#Servers) |  |  [optional]
-**volumes** | [**Volumes**](DOCS.md#Volumes) |  |  [optional]
-**loadbalancers** | [**Loadbalancers**](DOCS.md#Loadbalancers) |  |  [optional]
-**lans** | [**Lans**](DOCS.md#Lans) |  |  [optional]
-
-
-
-
 # DatacenterProperties
 
 ## Properties
@@ -14538,7 +14681,7 @@ Name | Type | Description | Notes
 **name** | **String** | A name of that resource |  [optional]
 **description** | **String** | A description for the datacenter, e.g. staging, production |  [optional]
 **location** | **String** | The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests) | 
-**version** | **Integer** | The version of that Data Center. Gets incremented with every change |  [optional]
+**version** | **Integer** | The version of that Data Center. Gets incremented with every change |  [optional] [readonly]
 **features** | [**List&lt;FeaturesEnum&gt;**](#List&lt;FeaturesEnum&gt;) | List of features supported by the location this data center is part of |  [optional] [readonly]
 **secAuthProtection** | **Boolean** | Boolean value representing if the data center requires extra protection e.g. two factor protection |  [optional]
 
@@ -14565,6 +14708,9 @@ Name | Type | Description | Notes
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;Datacenter&gt;**](DOCS.md#Datacenter) | Array of items in that collection |  [optional] [readonly]
+**offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
+**limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
+**links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
 
 
 
@@ -14618,6 +14764,9 @@ Name | Type | Description | Notes
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;FirewallRule&gt;**](DOCS.md#FirewallRule) | Array of items in that collection |  [optional] [readonly]
+**offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
+**limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
+**links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
 
 
 
@@ -15035,6 +15184,21 @@ Name | Type | Description | Notes
 **name** | **String** | A Kubernetes Cluster Name. Valid Kubernetes Cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | 
 **k8sVersion** | **String** | The kubernetes version in which a cluster is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
 **maintenanceWindow** | [**KubernetesMaintenanceWindow**](DOCS.md#KubernetesMaintenanceWindow) |  |  [optional]
+**availableUpgradeVersions** | **List&lt;String&gt;** | List of available versions for upgrading the cluster |  [optional]
+**viableNodePoolVersions** | **List&lt;String&gt;** | List of versions that may be used for node pools under this cluster |  [optional]
+
+
+
+
+# KubernetesClusterPropertiesForPostAndPut
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A Kubernetes Cluster Name | 
+**k8sVersion** | **String** | The kubernetes version in which a cluster is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
+**maintenanceWindow** | [**KubernetesMaintenanceWindow**](DOCS.md#KubernetesMaintenanceWindow) |  |  [optional]
 
 
 
@@ -15282,6 +15446,55 @@ Name | Type | Description | Notes
 **lans** | [**List&lt;KubernetesNodePoolLan&gt;**](DOCS.md#KubernetesNodePoolLan) | array of additional LANs attached to worker nodes |  [optional]
 **labels** | [**KubernetesNodePoolLabel**](DOCS.md#KubernetesNodePoolLabel) |  |  [optional]
 **annotations** | [**KubernetesNodePoolAnnotation**](DOCS.md#KubernetesNodePoolAnnotation) |  |  [optional]
+**publicIps** | **List&lt;String&gt;** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes. |  [optional]
+**availableUpgradeVersions** | **List&lt;String&gt;** | List of available versions for upgrading the node pool |  [optional]
+
+
+
+## Enum:
+## AvailabilityZoneEnum
+
+Name | Value
+---- | -----
+AUTO | &quot;AUTO&quot;
+ZONE_1 | &quot;ZONE_1&quot;
+ZONE_2 | &quot;ZONE_2&quot;
+
+
+
+## Enum:
+## StorageTypeEnum
+
+Name | Value
+---- | -----
+HDD | &quot;HDD&quot;
+SSD | &quot;SSD&quot;
+
+
+
+
+# KubernetesNodePoolPropertiesForPost
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**name** | **String** | A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | 
+**datacenterId** | **String** | A valid uuid of the datacenter on which user has access | 
+**nodeCount** | **Integer** | Number of nodes part of the Node Pool | 
+**cpuFamily** | **String** | A valid cpu family name | 
+**coresCount** | **Integer** | Number of cores for node | 
+**ramSize** | **Integer** | RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB. | 
+**availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the server should exist | 
+**storageType** | [**StorageTypeEnum**](#StorageTypeEnum) | Hardware type of the volume | 
+**storageSize** | **Integer** | The size of the volume in GB. The size should be greater than 10GB. | 
+**k8sVersion** | **String** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
+**maintenanceWindow** | [**KubernetesMaintenanceWindow**](DOCS.md#KubernetesMaintenanceWindow) |  |  [optional]
+**autoScaling** | [**KubernetesAutoScaling**](DOCS.md#KubernetesAutoScaling) |  |  [optional]
+**lans** | [**List&lt;KubernetesNodePoolLan&gt;**](DOCS.md#KubernetesNodePoolLan) | array of additional LANs attached to worker nodes |  [optional]
+**labels** | [**KubernetesNodePoolLabel**](DOCS.md#KubernetesNodePoolLabel) |  |  [optional]
+**annotations** | [**KubernetesNodePoolAnnotation**](DOCS.md#KubernetesNodePoolAnnotation) |  |  [optional]
+**publicIps** | **List&lt;String&gt;** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes. |  [optional]
 
 
 
@@ -15326,6 +15539,9 @@ Name | Type | Description | Notes
 **maintenanceWindow** | [**KubernetesMaintenanceWindow**](DOCS.md#KubernetesMaintenanceWindow) |  |  [optional]
 **autoScaling** | [**KubernetesAutoScaling**](DOCS.md#KubernetesAutoScaling) |  |  [optional]
 **lans** | [**List&lt;KubernetesNodePoolLan&gt;**](DOCS.md#KubernetesNodePoolLan) | array of additional LANs attached to worker nodes |  [optional]
+**labels** | [**KubernetesNodePoolLabel**](DOCS.md#KubernetesNodePoolLabel) |  |  [optional]
+**annotations** | [**KubernetesNodePoolAnnotation**](DOCS.md#KubernetesNodePoolAnnotation) |  |  [optional]
+**publicIps** | **List&lt;String&gt;** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes. |  [optional]
 
 
 
@@ -15495,6 +15711,9 @@ Name | Type | Description | Notes
 **type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
 **href** | [**URI**](DOCS.md#URI) | URL to the collection representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;LabelResource&gt;**](DOCS.md#LabelResource) | Array of items in that collection |  [optional] [readonly]
+**offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
+**limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
+**links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
 
 
 
@@ -15568,6 +15787,9 @@ Name | Type | Description | Notes
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;Nic&gt;**](DOCS.md#Nic) | Array of items in that collection |  [optional] [readonly]
+**offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
+**limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
+**links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
 
 
 
@@ -15609,6 +15831,8 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | A name of that resource |  [optional]
+**ipFailover** | [**List&lt;IPFailover&gt;**](DOCS.md#IPFailover) | IP failover configurations for lan |  [optional]
+**pcc** | **String** | Unique identifier of the private cross connect the given LAN is connected to if any |  [optional]
 **_public** | **Boolean** | Does this LAN faces the public Internet or not |  [optional]
 
 
@@ -15623,7 +15847,10 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Lan&gt;**](DOCS.md#Lan) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Lan&gt;**](DOCS.md#Lan) | Array of items in lans collection |  [optional] [readonly]
+**offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
+**limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
+**links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
 
 
 
@@ -15688,6 +15915,9 @@ Name | Type | Description | Notes
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;Loadbalancer&gt;**](DOCS.md#Loadbalancer) | Array of items in that collection |  [optional] [readonly]
+**offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
+**limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
+**links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
 
 
 
@@ -15783,7 +16013,7 @@ Name | Type | Description | Notes
 **dhcp** | **Boolean** | Indicates if the nic will reserve an IP using DHCP |  [optional]
 **lan** | **Integer** | The LAN ID the NIC will sit on. If the LAN ID does not exist it will be implicitly created | 
 **firewallActive** | **Boolean** | Activate or deactivate the firewall. By default an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, ip addresses and ports. |  [optional]
-**nat** | **Boolean** | Indicates if NAT is enabled on this NIC |  [optional]
+**nat** | **Boolean** | Indicates if NAT is enabled on this NIC. This is now deprecated. |  [optional]
 
 
 
@@ -15798,6 +16028,9 @@ Name | Type | Description | Notes
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;Nic&gt;**](DOCS.md#Nic) | Array of items in that collection |  [optional] [readonly]
+**offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
+**limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
+**links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
 
 
 
@@ -15815,6 +16048,19 @@ Name | Type | Description | Notes
 **lastModifiedDate** | [**OffsetDateTime**](DOCS.md#OffsetDateTime) | The last time the resource has been modified |  [optional] [readonly]
 **lastModifiedBy** | **String** | The user who last modified the resource. |  [optional] [readonly]
 **lastModifiedByUserId** | **String** | The user id of the user who has last modified the resource. |  [optional] [readonly]
+
+
+
+
+# PaginationLinks
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**prev** | [**URI**](DOCS.md#URI) | URL (with offset and limit parameters) of the previous page; only present if offset is greater than 0 |  [optional] [readonly]
+**self** | [**URI**](DOCS.md#URI) | URL (with offset and limit parameters) of the current page |  [optional] [readonly]
+**next** | [**URI**](DOCS.md#URI) | URL (with offset and limit parameters) of the next page; only present if offset + limit is less than the total number of elements |  [optional] [readonly]
 
 
 
@@ -15994,6 +16240,9 @@ Name | Type | Description | Notes
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;Request&gt;**](DOCS.md#Request) | Array of items in that collection |  [optional] [readonly]
+**offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset specified in the request (or, if none was specified, the default offset of 0) | 
+**limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit specified in the request (or, if none was specified, the default limit of 0) | 
+**links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  | 
 
 
 
@@ -16270,6 +16519,9 @@ Name | Type | Description | Notes
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;Server&gt;**](DOCS.md#Server) | Array of items in that collection |  [optional] [readonly]
+**offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
+**limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
+**links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
 
 
 
@@ -16451,8 +16703,8 @@ Name | Type | Description | Notes
 **size** | [**BigDecimal**](DOCS.md#BigDecimal) | The size of the volume in GB | 
 **availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront |  [optional]
 **image** | **String** | Image or snapshot ID to be used as template for this volume |  [optional]
-**imageAlias** | **String** |  |  [optional]
 **imagePassword** | **String** | Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9 |  [optional]
+**imageAlias** | **String** |  |  [optional]
 **sshKeys** | **List&lt;String&gt;** | Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation. |  [optional]
 **bus** | [**BusEnum**](#BusEnum) | The bus type of the volume. Default is VIRTIO |  [optional]
 **licenceType** | [**LicenceTypeEnum**](#LicenceTypeEnum) | OS type of this volume |  [optional] [readonly]
@@ -16525,6 +16777,9 @@ Name | Type | Description | Notes
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;Volume&gt;**](DOCS.md#Volume) | Array of items in that collection |  [optional] [readonly]
+**offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
+**limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
+**links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
 
 
 

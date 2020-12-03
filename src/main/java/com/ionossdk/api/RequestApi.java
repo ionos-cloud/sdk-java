@@ -207,7 +207,9 @@ public class RequestApi {
      * @param filterUrl Url filter (optional)
      * @param filterCreatedDate Created date filter (optional)
      * @param filterMethod Method filter (optional)
-     * @param filterBody Url filter (optional)
+     * @param filterBody Body filter (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -218,7 +220,7 @@ public class RequestApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call requestsGetCall(Boolean pretty, Integer depth, Integer xContractNumber, String filterStatus, String filterCreatedAfter, String filterCreatedBefore, String filterUrl, String filterCreatedDate, String filterMethod, String filterBody, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call requestsGetCall(Boolean pretty, Integer depth, Integer xContractNumber, String filterStatus, String filterCreatedAfter, String filterCreatedBefore, String filterUrl, String filterCreatedDate, String filterMethod, String filterBody, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -262,6 +264,14 @@ public class RequestApi {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("filter.body", filterBody));
         }
 
+        if (offset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
+        }
+
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
         if (xContractNumber != null) {
             localVarHeaderParams.put("X-Contract-Number", localVarApiClient.parameterToString(xContractNumber));
@@ -288,10 +298,10 @@ public class RequestApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call requestsGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber, String filterStatus, String filterCreatedAfter, String filterCreatedBefore, String filterUrl, String filterCreatedDate, String filterMethod, String filterBody, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call requestsGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber, String filterStatus, String filterCreatedAfter, String filterCreatedBefore, String filterUrl, String filterCreatedDate, String filterMethod, String filterBody, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = requestsGetCall(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody, _callback);
+        okhttp3.Call localVarCall = requestsGetCall(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody, offset, limit, _callback);
         return localVarCall;
 
     }
@@ -308,7 +318,9 @@ public class RequestApi {
      * @param filterUrl Url filter (optional)
      * @param filterCreatedDate Created date filter (optional)
      * @param filterMethod Method filter (optional)
-     * @param filterBody Url filter (optional)
+     * @param filterBody Body filter (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @return Requests
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -318,8 +330,8 @@ public class RequestApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public Requests requestsGet(Boolean pretty, Integer depth, Integer xContractNumber, String filterStatus, String filterCreatedAfter, String filterCreatedBefore, String filterUrl, String filterCreatedDate, String filterMethod, String filterBody) throws ApiException {
-        ApiResponse<Requests> localVarResp = requestsGetWithHttpInfo(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody);
+    public Requests requestsGet(Boolean pretty, Integer depth, Integer xContractNumber, String filterStatus, String filterCreatedAfter, String filterCreatedBefore, String filterUrl, String filterCreatedDate, String filterMethod, String filterBody, Integer offset, Integer limit) throws ApiException {
+        ApiResponse<Requests> localVarResp = requestsGetWithHttpInfo(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody, offset, limit);
         return localVarResp.getData();
     }
 
@@ -335,7 +347,9 @@ public class RequestApi {
      * @param filterUrl Url filter (optional)
      * @param filterCreatedDate Created date filter (optional)
      * @param filterMethod Method filter (optional)
-     * @param filterBody Url filter (optional)
+     * @param filterBody Body filter (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @return ApiResponse&lt;Requests&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -345,8 +359,8 @@ public class RequestApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Requests> requestsGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber, String filterStatus, String filterCreatedAfter, String filterCreatedBefore, String filterUrl, String filterCreatedDate, String filterMethod, String filterBody) throws ApiException {
-        okhttp3.Call localVarCall = requestsGetValidateBeforeCall(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody, null);
+    public ApiResponse<Requests> requestsGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber, String filterStatus, String filterCreatedAfter, String filterCreatedBefore, String filterUrl, String filterCreatedDate, String filterMethod, String filterBody, Integer offset, Integer limit) throws ApiException {
+        okhttp3.Call localVarCall = requestsGetValidateBeforeCall(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody, offset, limit, null);
         Type localVarReturnType = new TypeToken<Requests>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -363,7 +377,9 @@ public class RequestApi {
      * @param filterUrl Url filter (optional)
      * @param filterCreatedDate Created date filter (optional)
      * @param filterMethod Method filter (optional)
-     * @param filterBody Url filter (optional)
+     * @param filterBody Body filter (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -374,9 +390,9 @@ public class RequestApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call requestsGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, String filterStatus, String filterCreatedAfter, String filterCreatedBefore, String filterUrl, String filterCreatedDate, String filterMethod, String filterBody, final ApiCallback<Requests> _callback) throws ApiException {
+    public okhttp3.Call requestsGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, String filterStatus, String filterCreatedAfter, String filterCreatedBefore, String filterUrl, String filterCreatedDate, String filterMethod, String filterBody, Integer offset, Integer limit, final ApiCallback<Requests> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = requestsGetValidateBeforeCall(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody, _callback);
+        okhttp3.Call localVarCall = requestsGetValidateBeforeCall(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody, offset, limit, _callback);
         Type localVarReturnType = new TypeToken<Requests>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

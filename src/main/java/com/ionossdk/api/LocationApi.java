@@ -57,7 +57,7 @@ public class LocationApi {
     }
 
     /**
-     * Build call for locationsFindByRegion
+     * Build call for locationsFindByRegionId
      * @param regionId  (required)
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
@@ -72,7 +72,7 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call locationsFindByRegionCall(String regionId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call locationsFindByRegionIdCall(String regionId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -115,15 +115,15 @@ public class LocationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call locationsFindByRegionValidateBeforeCall(String regionId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call locationsFindByRegionIdValidateBeforeCall(String regionId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'regionId' is set
         if (regionId == null) {
-            throw new ApiException("Missing the required parameter 'regionId' when calling locationsFindByRegion(Async)");
+            throw new ApiException("Missing the required parameter 'regionId' when calling locationsFindByRegionId(Async)");
         }
         
 
-        okhttp3.Call localVarCall = locationsFindByRegionCall(regionId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = locationsFindByRegionIdCall(regionId, pretty, depth, xContractNumber, _callback);
         return localVarCall;
 
     }
@@ -144,8 +144,8 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public Locations locationsFindByRegion(String regionId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<Locations> localVarResp = locationsFindByRegionWithHttpInfo(regionId, pretty, depth, xContractNumber);
+    public Locations locationsFindByRegionId(String regionId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        ApiResponse<Locations> localVarResp = locationsFindByRegionIdWithHttpInfo(regionId, pretty, depth, xContractNumber);
         return localVarResp.getData();
     }
 
@@ -165,8 +165,8 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Locations> locationsFindByRegionWithHttpInfo(String regionId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = locationsFindByRegionValidateBeforeCall(regionId, pretty, depth, xContractNumber, null);
+    public ApiResponse<Locations> locationsFindByRegionIdWithHttpInfo(String regionId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        okhttp3.Call localVarCall = locationsFindByRegionIdValidateBeforeCall(regionId, pretty, depth, xContractNumber, null);
         Type localVarReturnType = new TypeToken<Locations>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -188,15 +188,15 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call locationsFindByRegionAsync(String regionId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Locations> _callback) throws ApiException {
+    public okhttp3.Call locationsFindByRegionIdAsync(String regionId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Locations> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = locationsFindByRegionValidateBeforeCall(regionId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = locationsFindByRegionIdValidateBeforeCall(regionId, pretty, depth, xContractNumber, _callback);
         Type localVarReturnType = new TypeToken<Locations>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for locationsFindByRegionAndId
+     * Build call for locationsFindByRegionIdAndId
      * @param regionId  (required)
      * @param locationId  (required)
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
@@ -212,7 +212,7 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call locationsFindByRegionAndIdCall(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call locationsFindByRegionIdAndIdCall(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -256,20 +256,20 @@ public class LocationApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call locationsFindByRegionAndIdValidateBeforeCall(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call locationsFindByRegionIdAndIdValidateBeforeCall(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'regionId' is set
         if (regionId == null) {
-            throw new ApiException("Missing the required parameter 'regionId' when calling locationsFindByRegionAndId(Async)");
+            throw new ApiException("Missing the required parameter 'regionId' when calling locationsFindByRegionIdAndId(Async)");
         }
         
         // verify the required parameter 'locationId' is set
         if (locationId == null) {
-            throw new ApiException("Missing the required parameter 'locationId' when calling locationsFindByRegionAndId(Async)");
+            throw new ApiException("Missing the required parameter 'locationId' when calling locationsFindByRegionIdAndId(Async)");
         }
         
 
-        okhttp3.Call localVarCall = locationsFindByRegionAndIdCall(regionId, locationId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = locationsFindByRegionIdAndIdCall(regionId, locationId, pretty, depth, xContractNumber, _callback);
         return localVarCall;
 
     }
@@ -291,8 +291,8 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public Location locationsFindByRegionAndId(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<Location> localVarResp = locationsFindByRegionAndIdWithHttpInfo(regionId, locationId, pretty, depth, xContractNumber);
+    public Location locationsFindByRegionIdAndId(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        ApiResponse<Location> localVarResp = locationsFindByRegionIdAndIdWithHttpInfo(regionId, locationId, pretty, depth, xContractNumber);
         return localVarResp.getData();
     }
 
@@ -313,8 +313,8 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Location> locationsFindByRegionAndIdWithHttpInfo(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = locationsFindByRegionAndIdValidateBeforeCall(regionId, locationId, pretty, depth, xContractNumber, null);
+    public ApiResponse<Location> locationsFindByRegionIdAndIdWithHttpInfo(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        okhttp3.Call localVarCall = locationsFindByRegionIdAndIdValidateBeforeCall(regionId, locationId, pretty, depth, xContractNumber, null);
         Type localVarReturnType = new TypeToken<Location>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -337,9 +337,9 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call locationsFindByRegionAndIdAsync(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Location> _callback) throws ApiException {
+    public okhttp3.Call locationsFindByRegionIdAndIdAsync(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Location> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = locationsFindByRegionAndIdValidateBeforeCall(regionId, locationId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = locationsFindByRegionIdAndIdValidateBeforeCall(regionId, locationId, pretty, depth, xContractNumber, _callback);
         Type localVarReturnType = new TypeToken<Location>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

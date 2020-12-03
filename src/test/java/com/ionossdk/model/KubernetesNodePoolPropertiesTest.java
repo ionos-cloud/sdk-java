@@ -167,4 +167,20 @@ public class KubernetesNodePoolPropertiesTest {
         // TODO: test annotations
     }
 
+    /**
+     * Test the property 'publicIps'
+     */
+    @Test
+    public void publicIpsTest() {
+        // TODO: test publicIps
+    }
+
+    /**
+     * Test the property 'availableUpgradeVersions'
+     */
+    @Test
+    public void availableUpgradeVersionsTest() {
+        // TODO: test availableUpgradeVersions
+    }
+
 }

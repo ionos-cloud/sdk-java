@@ -22,6 +22,8 @@ import com.ionossdk.model.KubernetesMaintenanceWindow;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -63,6 +65,22 @@ public class KubernetesClusterPropertiesTest {
     @Test
     public void maintenanceWindowTest() {
         // TODO: test maintenanceWindow
+    }
+
+    /**
+     * Test the property 'availableUpgradeVersions'
+     */
+    @Test
+    public void availableUpgradeVersionsTest() {
+        // TODO: test availableUpgradeVersions
+    }
+
+    /**
+     * Test the property 'viableNodePoolVersions'
+     */
+    @Test
+    public void viableNodePoolVersionsTest() {
+        // TODO: test viableNodePoolVersions
     }
 
 }

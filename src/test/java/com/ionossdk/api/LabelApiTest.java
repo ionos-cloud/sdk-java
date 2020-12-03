@@ -90,7 +90,9 @@ public class LabelApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        LabelResources response = api.datacentersLabelsGet(datacenterId, pretty, depth, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        LabelResources response = api.datacentersLabelsGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
 
         // TODO: test validations
     }
@@ -193,7 +195,9 @@ public class LabelApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        LabelResources response = api.datacentersServersLabelsGet(datacenterId, serverId, pretty, depth, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        LabelResources response = api.datacentersServersLabelsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
 
         // TODO: test validations
     }
@@ -298,7 +302,9 @@ public class LabelApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        LabelResources response = api.datacentersVolumesLabelsGet(datacenterId, volumeId, pretty, depth, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        LabelResources response = api.datacentersVolumesLabelsGet(datacenterId, volumeId, pretty, depth, xContractNumber, offset, limit);
 
         // TODO: test validations
     }
@@ -455,12 +461,12 @@ public class LabelApiTest {
      *          if the Api call fails
      */
     @Test
-    public void labelsFindByLabelurnTest() throws ApiException {
+    public void labelsFindByUrnTest() throws ApiException {
         String labelurn = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        Label response = api.labelsFindByLabelurn(labelurn, pretty, depth, xContractNumber);
+        Label response = api.labelsFindByUrn(labelurn, pretty, depth, xContractNumber);
 
         // TODO: test validations
     }

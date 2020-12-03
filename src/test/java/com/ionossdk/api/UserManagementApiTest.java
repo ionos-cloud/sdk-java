@@ -189,13 +189,13 @@ public class UserManagementApiTest {
      *          if the Api call fails
      */
     @Test
-    public void umGroupsSharesFindByResourceTest() throws ApiException {
+    public void umGroupsSharesFindByResourceIdTest() throws ApiException {
         String groupId = null;
         String resourceId = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        GroupShare response = api.umGroupsSharesFindByResource(groupId, resourceId, pretty, depth, xContractNumber);
+        GroupShare response = api.umGroupsSharesFindByResourceId(groupId, resourceId, pretty, depth, xContractNumber);
 
         // TODO: test validations
     }
@@ -539,13 +539,13 @@ public class UserManagementApiTest {
      *          if the Api call fails
      */
     @Test
-    public void umUsersS3keysFindByKeyTest() throws ApiException {
+    public void umUsersS3keysFindByKeyIdTest() throws ApiException {
         String userId = null;
         String keyId = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        S3Key response = api.umUsersS3keysFindByKey(userId, keyId, pretty, depth, xContractNumber);
+        S3Key response = api.umUsersS3keysFindByKeyId(userId, keyId, pretty, depth, xContractNumber);
 
         // TODO: test validations
     }

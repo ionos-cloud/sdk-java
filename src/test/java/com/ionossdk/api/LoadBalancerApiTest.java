@@ -67,14 +67,14 @@ public class LoadBalancerApiTest {
      *          if the Api call fails
      */
     @Test
-    public void datacentersLoadbalancersBalancednicsFindByNicTest() throws ApiException {
+    public void datacentersLoadbalancersBalancednicsFindByNicIdTest() throws ApiException {
         String datacenterId = null;
         String loadbalancerId = null;
         String nicId = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        Nic response = api.datacentersLoadbalancersBalancednicsFindByNic(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
+        Nic response = api.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
 
         // TODO: test validations
     }
@@ -94,7 +94,9 @@ public class LoadBalancerApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        BalancedNics response = api.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        BalancedNics response = api.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, pretty, depth, xContractNumber, offset, limit);
 
         // TODO: test validations
     }
@@ -174,7 +176,9 @@ public class LoadBalancerApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        Loadbalancers response = api.datacentersLoadbalancersGet(datacenterId, pretty, depth, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        Loadbalancers response = api.datacentersLoadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
 
         // TODO: test validations
     }

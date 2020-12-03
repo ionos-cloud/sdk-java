@@ -86,7 +86,9 @@ public class DataCenterApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        Datacenters response = api.datacentersGet(pretty, depth, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        Datacenters response = api.datacentersGet(pretty, depth, xContractNumber, offset, limit);
 
         // TODO: test validations
     }

@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * KubernetesNodePoolProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-20T17:37:47.381927+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]")
 public class KubernetesNodePoolProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -191,6 +191,14 @@ public class KubernetesNodePoolProperties {
   public static final String SERIALIZED_NAME_ANNOTATIONS = "annotations";
   @SerializedName(SERIALIZED_NAME_ANNOTATIONS)
   private KubernetesNodePoolAnnotation annotations;
+
+  public static final String SERIALIZED_NAME_PUBLIC_IPS = "publicIps";
+  @SerializedName(SERIALIZED_NAME_PUBLIC_IPS)
+  private List<String> publicIps = null;
+
+  public static final String SERIALIZED_NAME_AVAILABLE_UPGRADE_VERSIONS = "availableUpgradeVersions";
+  @SerializedName(SERIALIZED_NAME_AVAILABLE_UPGRADE_VERSIONS)
+  private List<String> availableUpgradeVersions = null;
 
 
   public KubernetesNodePoolProperties name(String name) {
@@ -537,6 +545,68 @@ public class KubernetesNodePoolProperties {
   }
 
 
+  public KubernetesNodePoolProperties publicIps(List<String> publicIps) {
+    
+    this.publicIps = publicIps;
+    return this;
+  }
+
+  public KubernetesNodePoolProperties addPublicIpsItem(String publicIpsItem) {
+    if (this.publicIps == null) {
+      this.publicIps = new ArrayList<String>();
+    }
+    this.publicIps.add(publicIpsItem);
+    return this;
+  }
+
+   /**
+   * Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.
+   * @return publicIps
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "[81.173.1.2, 82.231.2.5, 92.221.2.4]", value = "Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.")
+
+  public List<String> getPublicIps() {
+    return publicIps;
+  }
+
+
+  public void setPublicIps(List<String> publicIps) {
+    this.publicIps = publicIps;
+  }
+
+
+  public KubernetesNodePoolProperties availableUpgradeVersions(List<String> availableUpgradeVersions) {
+    
+    this.availableUpgradeVersions = availableUpgradeVersions;
+    return this;
+  }
+
+  public KubernetesNodePoolProperties addAvailableUpgradeVersionsItem(String availableUpgradeVersionsItem) {
+    if (this.availableUpgradeVersions == null) {
+      this.availableUpgradeVersions = new ArrayList<String>();
+    }
+    this.availableUpgradeVersions.add(availableUpgradeVersionsItem);
+    return this;
+  }
+
+   /**
+   * List of available versions for upgrading the node pool
+   * @return availableUpgradeVersions
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "[1.16.4, 1.17.7]", value = "List of available versions for upgrading the node pool")
+
+  public List<String> getAvailableUpgradeVersions() {
+    return availableUpgradeVersions;
+  }
+
+
+  public void setAvailableUpgradeVersions(List<String> availableUpgradeVersions) {
+    this.availableUpgradeVersions = availableUpgradeVersions;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -560,12 +630,14 @@ public class KubernetesNodePoolProperties {
         Objects.equals(this.autoScaling, kubernetesNodePoolProperties.autoScaling) &&
         Objects.equals(this.lans, kubernetesNodePoolProperties.lans) &&
         Objects.equals(this.labels, kubernetesNodePoolProperties.labels) &&
-        Objects.equals(this.annotations, kubernetesNodePoolProperties.annotations);
+        Objects.equals(this.annotations, kubernetesNodePoolProperties.annotations) &&
+        Objects.equals(this.publicIps, kubernetesNodePoolProperties.publicIps) &&
+        Objects.equals(this.availableUpgradeVersions, kubernetesNodePoolProperties.availableUpgradeVersions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, datacenterId, nodeCount, cpuFamily, coresCount, ramSize, availabilityZone, storageType, storageSize, k8sVersion, maintenanceWindow, autoScaling, lans, labels, annotations);
+    return Objects.hash(name, datacenterId, nodeCount, cpuFamily, coresCount, ramSize, availabilityZone, storageType, storageSize, k8sVersion, maintenanceWindow, autoScaling, lans, labels, annotations, publicIps, availableUpgradeVersions);
   }
 
 
@@ -588,6 +660,8 @@ public class KubernetesNodePoolProperties {
     sb.append("    lans: ").append(toIndentedString(lans)).append("\n");
     sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
     sb.append("    annotations: ").append(toIndentedString(annotations)).append("\n");
+    sb.append("    publicIps: ").append(toIndentedString(publicIps)).append("\n");
+    sb.append("    availableUpgradeVersions: ").append(toIndentedString(availableUpgradeVersions)).append("\n");
     sb.append("}");
     return sb.toString();
   }

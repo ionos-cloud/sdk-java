@@ -24,11 +24,13 @@ import com.ionossdk.model.KubernetesMaintenanceWindow;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * KubernetesClusterProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-20T17:37:47.381927+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]")
 public class KubernetesClusterProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -41,6 +43,14 @@ public class KubernetesClusterProperties {
   public static final String SERIALIZED_NAME_MAINTENANCE_WINDOW = "maintenanceWindow";
   @SerializedName(SERIALIZED_NAME_MAINTENANCE_WINDOW)
   private KubernetesMaintenanceWindow maintenanceWindow;
+
+  public static final String SERIALIZED_NAME_AVAILABLE_UPGRADE_VERSIONS = "availableUpgradeVersions";
+  @SerializedName(SERIALIZED_NAME_AVAILABLE_UPGRADE_VERSIONS)
+  private List<String> availableUpgradeVersions = null;
+
+  public static final String SERIALIZED_NAME_VIABLE_NODE_POOL_VERSIONS = "viableNodePoolVersions";
+  @SerializedName(SERIALIZED_NAME_VIABLE_NODE_POOL_VERSIONS)
+  private List<String> viableNodePoolVersions = null;
 
 
   public KubernetesClusterProperties name(String name) {
@@ -111,6 +121,68 @@ public class KubernetesClusterProperties {
   }
 
 
+  public KubernetesClusterProperties availableUpgradeVersions(List<String> availableUpgradeVersions) {
+    
+    this.availableUpgradeVersions = availableUpgradeVersions;
+    return this;
+  }
+
+  public KubernetesClusterProperties addAvailableUpgradeVersionsItem(String availableUpgradeVersionsItem) {
+    if (this.availableUpgradeVersions == null) {
+      this.availableUpgradeVersions = new ArrayList<String>();
+    }
+    this.availableUpgradeVersions.add(availableUpgradeVersionsItem);
+    return this;
+  }
+
+   /**
+   * List of available versions for upgrading the cluster
+   * @return availableUpgradeVersions
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "[1.16.4, 1.17.7]", value = "List of available versions for upgrading the cluster")
+
+  public List<String> getAvailableUpgradeVersions() {
+    return availableUpgradeVersions;
+  }
+
+
+  public void setAvailableUpgradeVersions(List<String> availableUpgradeVersions) {
+    this.availableUpgradeVersions = availableUpgradeVersions;
+  }
+
+
+  public KubernetesClusterProperties viableNodePoolVersions(List<String> viableNodePoolVersions) {
+    
+    this.viableNodePoolVersions = viableNodePoolVersions;
+    return this;
+  }
+
+  public KubernetesClusterProperties addViableNodePoolVersionsItem(String viableNodePoolVersionsItem) {
+    if (this.viableNodePoolVersions == null) {
+      this.viableNodePoolVersions = new ArrayList<String>();
+    }
+    this.viableNodePoolVersions.add(viableNodePoolVersionsItem);
+    return this;
+  }
+
+   /**
+   * List of versions that may be used for node pools under this cluster
+   * @return viableNodePoolVersions
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "[1.17.7, 1.18.2]", value = "List of versions that may be used for node pools under this cluster")
+
+  public List<String> getViableNodePoolVersions() {
+    return viableNodePoolVersions;
+  }
+
+
+  public void setViableNodePoolVersions(List<String> viableNodePoolVersions) {
+    this.viableNodePoolVersions = viableNodePoolVersions;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -122,12 +194,14 @@ public class KubernetesClusterProperties {
     KubernetesClusterProperties kubernetesClusterProperties = (KubernetesClusterProperties) o;
     return Objects.equals(this.name, kubernetesClusterProperties.name) &&
         Objects.equals(this.k8sVersion, kubernetesClusterProperties.k8sVersion) &&
-        Objects.equals(this.maintenanceWindow, kubernetesClusterProperties.maintenanceWindow);
+        Objects.equals(this.maintenanceWindow, kubernetesClusterProperties.maintenanceWindow) &&
+        Objects.equals(this.availableUpgradeVersions, kubernetesClusterProperties.availableUpgradeVersions) &&
+        Objects.equals(this.viableNodePoolVersions, kubernetesClusterProperties.viableNodePoolVersions);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, k8sVersion, maintenanceWindow);
+    return Objects.hash(name, k8sVersion, maintenanceWindow, availableUpgradeVersions, viableNodePoolVersions);
   }
 
 
@@ -138,6 +212,8 @@ public class KubernetesClusterProperties {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    k8sVersion: ").append(toIndentedString(k8sVersion)).append("\n");
     sb.append("    maintenanceWindow: ").append(toIndentedString(maintenanceWindow)).append("\n");
+    sb.append("    availableUpgradeVersions: ").append(toIndentedString(availableUpgradeVersions)).append("\n");
+    sb.append("    viableNodePoolVersions: ").append(toIndentedString(viableNodePoolVersions)).append("\n");
     sb.append("}");
     return sb.toString();
   }

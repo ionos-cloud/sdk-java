@@ -74,7 +74,9 @@ public class RequestApiTest {
         String filterCreatedDate = null;
         String filterMethod = null;
         String filterBody = null;
-        Requests response = api.requestsGet(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody);
+        Integer offset = null;
+        Integer limit = null;
+        Requests response = api.requestsGet(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody, offset, limit);
 
         // TODO: test validations
     }

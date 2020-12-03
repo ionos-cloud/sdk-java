@@ -29,10 +29,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * DatacenterEntities
+ * DataCenterEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-20T17:37:47.381927+02:00[Europe/Bucharest]")
-public class DatacenterEntities {
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]")
+public class DataCenterEntities {
   public static final String SERIALIZED_NAME_SERVERS = "servers";
   @SerializedName(SERIALIZED_NAME_SERVERS)
   private Servers servers;
@@ -50,7 +50,7 @@ public class DatacenterEntities {
   private Lans lans;
 
 
-  public DatacenterEntities servers(Servers servers) {
+  public DataCenterEntities servers(Servers servers) {
     
     this.servers = servers;
     return this;
@@ -73,7 +73,7 @@ public class DatacenterEntities {
   }
 
 
-  public DatacenterEntities volumes(Volumes volumes) {
+  public DataCenterEntities volumes(Volumes volumes) {
     
     this.volumes = volumes;
     return this;
@@ -96,7 +96,7 @@ public class DatacenterEntities {
   }
 
 
-  public DatacenterEntities loadbalancers(Loadbalancers loadbalancers) {
+  public DataCenterEntities loadbalancers(Loadbalancers loadbalancers) {
     
     this.loadbalancers = loadbalancers;
     return this;
@@ -119,7 +119,7 @@ public class DatacenterEntities {
   }
 
 
-  public DatacenterEntities lans(Lans lans) {
+  public DataCenterEntities lans(Lans lans) {
     
     this.lans = lans;
     return this;
@@ -150,11 +150,11 @@ public class DatacenterEntities {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    DatacenterEntities datacenterEntities = (DatacenterEntities) o;
-    return Objects.equals(this.servers, datacenterEntities.servers) &&
-        Objects.equals(this.volumes, datacenterEntities.volumes) &&
-        Objects.equals(this.loadbalancers, datacenterEntities.loadbalancers) &&
-        Objects.equals(this.lans, datacenterEntities.lans);
+    DataCenterEntities dataCenterEntities = (DataCenterEntities) o;
+    return Objects.equals(this.servers, dataCenterEntities.servers) &&
+        Objects.equals(this.volumes, dataCenterEntities.volumes) &&
+        Objects.equals(this.loadbalancers, dataCenterEntities.loadbalancers) &&
+        Objects.equals(this.lans, dataCenterEntities.lans);
   }
 
   @Override
@@ -166,7 +166,7 @@ public class DatacenterEntities {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class DatacenterEntities {\n");
+    sb.append("class DataCenterEntities {\n");
     sb.append("    servers: ").append(toIndentedString(servers)).append("\n");
     sb.append("    volumes: ").append(toIndentedString(volumes)).append("\n");
     sb.append("    loadbalancers: ").append(toIndentedString(loadbalancers)).append("\n");

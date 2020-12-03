@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * LanProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-20T17:37:47.381927+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]")
 public class LanProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -91,7 +91,7 @@ public class LanProperties {
    * @return ipFailover
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "{ \"ipFailover\": [ { \"ip\": \"192.18.2.231\", \"nicUuid\": \"3c11273c-b3e1-4ca3-8134-84fd2dd4ebec\"} ] }", value = "IP failover configurations for lan")
+  @ApiModelProperty(value = "IP failover configurations for lan")
 
   public List<IPFailover> getIpFailover() {
     return ipFailover;

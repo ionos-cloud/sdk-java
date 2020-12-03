@@ -19,9 +19,11 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.ionossdk.model.LabelResource;
+import com.ionossdk.model.PaginationLinks;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -74,6 +76,30 @@ public class LabelResourcesTest {
     @Test
     public void itemsTest() {
         // TODO: test items
+    }
+
+    /**
+     * Test the property 'offset'
+     */
+    @Test
+    public void offsetTest() {
+        // TODO: test offset
+    }
+
+    /**
+     * Test the property 'limit'
+     */
+    @Test
+    public void limitTest() {
+        // TODO: test limit
+    }
+
+    /**
+     * Test the property 'links'
+     */
+    @Test
+    public void linksTest() {
+        // TODO: test links
     }
 
 }

@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * IPFailover
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-20T17:37:47.381927+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]")
 public class IPFailover {
   public static final String SERIALIZED_NAME_IP = "ip";
   @SerializedName(SERIALIZED_NAME_IP)
@@ -49,7 +49,7 @@ public class IPFailover {
    * @return ip
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "192.18.2.231", value = "")
 
   public String getIp() {
     return ip;
@@ -72,7 +72,7 @@ public class IPFailover {
    * @return nicUuid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec", value = "")
 
   public String getNicUuid() {
     return nicUuid;

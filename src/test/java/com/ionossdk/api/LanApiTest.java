@@ -92,7 +92,9 @@ public class LanApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        Lans response = api.datacentersLansGet(datacenterId, pretty, depth, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        Lans response = api.datacentersLansGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
 
         // TODO: test validations
     }
@@ -133,7 +135,9 @@ public class LanApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        LanNics response = api.datacentersLansNicsGet(datacenterId, lanId, pretty, depth, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        LanNics response = api.datacentersLansNicsGet(datacenterId, lanId, pretty, depth, xContractNumber, offset, limit);
 
         // TODO: test validations
     }

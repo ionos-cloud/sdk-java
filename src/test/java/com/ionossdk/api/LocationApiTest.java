@@ -43,12 +43,12 @@ public class LocationApiTest {
      *          if the Api call fails
      */
     @Test
-    public void locationsFindByRegionTest() throws ApiException {
+    public void locationsFindByRegionIdTest() throws ApiException {
         String regionId = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        Locations response = api.locationsFindByRegion(regionId, pretty, depth, xContractNumber);
+        Locations response = api.locationsFindByRegionId(regionId, pretty, depth, xContractNumber);
 
         // TODO: test validations
     }
@@ -62,13 +62,13 @@ public class LocationApiTest {
      *          if the Api call fails
      */
     @Test
-    public void locationsFindByRegionAndIdTest() throws ApiException {
+    public void locationsFindByRegionIdAndIdTest() throws ApiException {
         String regionId = null;
         String locationId = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        Location response = api.locationsFindByRegionAndId(regionId, locationId, pretty, depth, xContractNumber);
+        Location response = api.locationsFindByRegionIdAndId(regionId, locationId, pretty, depth, xContractNumber);
 
         // TODO: test validations
     }

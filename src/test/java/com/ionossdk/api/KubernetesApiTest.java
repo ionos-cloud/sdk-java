@@ -21,7 +21,6 @@ import com.ionossdk.model.KubernetesConfig;
 import com.ionossdk.model.KubernetesNode;
 import com.ionossdk.model.KubernetesNodePool;
 import com.ionossdk.model.KubernetesNodePoolForPut;
-import com.ionossdk.model.KubernetesNodePoolPropertiesForPut;
 import com.ionossdk.model.KubernetesNodePools;
 import com.ionossdk.model.KubernetesNodes;
 import org.junit.Test;
@@ -69,12 +68,12 @@ public class KubernetesApiTest {
      *          if the Api call fails
      */
     @Test
-    public void k8sFindByClusteridTest() throws ApiException {
+    public void k8sFindBySClusterIdTest() throws ApiException {
         String k8sClusterId = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        KubernetesCluster response = api.k8sFindByClusterid(k8sClusterId, pretty, depth, xContractNumber);
+        KubernetesCluster response = api.k8sFindBySClusterId(k8sClusterId, pretty, depth, xContractNumber);
 
         // TODO: test validations
     }
@@ -290,11 +289,11 @@ public class KubernetesApiTest {
     public void k8sNodepoolsPutTest() throws ApiException {
         String k8sClusterId = null;
         String nodepoolId = null;
-        KubernetesNodePoolPropertiesForPut kubernetesNodePoolProperties = null;
+        KubernetesNodePool kubernetesNodePool = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        KubernetesNodePoolForPut response = api.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePoolProperties, pretty, depth, xContractNumber);
+        KubernetesNodePoolForPut response = api.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber);
 
         // TODO: test validations
     }
@@ -329,11 +328,11 @@ public class KubernetesApiTest {
     @Test
     public void k8sPutTest() throws ApiException {
         String k8sClusterId = null;
-        KubernetesCluster kubernetescluster = null;
+        KubernetesCluster kubernetesCluster = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        KubernetesCluster response = api.k8sPut(k8sClusterId, kubernetescluster, pretty, depth, xContractNumber);
+        KubernetesCluster response = api.k8sPut(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber);
 
         // TODO: test validations
     }

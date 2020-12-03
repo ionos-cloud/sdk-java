@@ -114,7 +114,9 @@ public class VolumeApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        Volumes response = api.datacentersVolumesGet(datacenterId, pretty, depth, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        Volumes response = api.datacentersVolumesGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
 
         // TODO: test validations
     }

@@ -362,6 +362,8 @@ public class LabelApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -372,7 +374,7 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLabelsGetCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLabelsGetCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -387,6 +389,14 @@ public class LabelApi {
 
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+
+        if (offset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
+        }
+
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
         }
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
@@ -415,7 +425,7 @@ public class LabelApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLabelsGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLabelsGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -423,7 +433,7 @@ public class LabelApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersLabelsGetCall(datacenterId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersLabelsGetCall(datacenterId, pretty, depth, xContractNumber, offset, limit, _callback);
         return localVarCall;
 
     }
@@ -435,6 +445,8 @@ public class LabelApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @return LabelResources
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -444,8 +456,8 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public LabelResources datacentersLabelsGet(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<LabelResources> localVarResp = datacentersLabelsGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber);
+    public LabelResources datacentersLabelsGet(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
+        ApiResponse<LabelResources> localVarResp = datacentersLabelsGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber, offset, limit);
         return localVarResp.getData();
     }
 
@@ -456,6 +468,8 @@ public class LabelApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @return ApiResponse&lt;LabelResources&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -465,8 +479,8 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<LabelResources> datacentersLabelsGetWithHttpInfo(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = datacentersLabelsGetValidateBeforeCall(datacenterId, pretty, depth, xContractNumber, null);
+    public ApiResponse<LabelResources> datacentersLabelsGetWithHttpInfo(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
+        okhttp3.Call localVarCall = datacentersLabelsGetValidateBeforeCall(datacenterId, pretty, depth, xContractNumber, offset, limit, null);
         Type localVarReturnType = new TypeToken<LabelResources>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -478,6 +492,8 @@ public class LabelApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -488,9 +504,9 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLabelsGetAsync(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<LabelResources> _callback) throws ApiException {
+    public okhttp3.Call datacentersLabelsGetAsync(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<LabelResources> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersLabelsGetValidateBeforeCall(datacenterId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersLabelsGetValidateBeforeCall(datacenterId, pretty, depth, xContractNumber, offset, limit, _callback);
         Type localVarReturnType = new TypeToken<LabelResources>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -1126,6 +1142,8 @@ public class LabelApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1136,7 +1154,7 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersLabelsGetCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersLabelsGetCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1152,6 +1170,14 @@ public class LabelApi {
 
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+
+        if (offset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
+        }
+
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
         }
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
@@ -1180,7 +1206,7 @@ public class LabelApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersLabelsGetValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersLabelsGetValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1193,7 +1219,7 @@ public class LabelApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersLabelsGetCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersLabelsGetCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, _callback);
         return localVarCall;
 
     }
@@ -1206,6 +1232,8 @@ public class LabelApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @return LabelResources
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1215,8 +1243,8 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public LabelResources datacentersServersLabelsGet(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<LabelResources> localVarResp = datacentersServersLabelsGetWithHttpInfo(datacenterId, serverId, pretty, depth, xContractNumber);
+    public LabelResources datacentersServersLabelsGet(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
+        ApiResponse<LabelResources> localVarResp = datacentersServersLabelsGetWithHttpInfo(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
         return localVarResp.getData();
     }
 
@@ -1228,6 +1256,8 @@ public class LabelApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @return ApiResponse&lt;LabelResources&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1237,8 +1267,8 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<LabelResources> datacentersServersLabelsGetWithHttpInfo(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = datacentersServersLabelsGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, null);
+    public ApiResponse<LabelResources> datacentersServersLabelsGetWithHttpInfo(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
+        okhttp3.Call localVarCall = datacentersServersLabelsGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, null);
         Type localVarReturnType = new TypeToken<LabelResources>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1251,6 +1281,8 @@ public class LabelApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1261,9 +1293,9 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersLabelsGetAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<LabelResources> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersLabelsGetAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<LabelResources> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersLabelsGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersLabelsGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, _callback);
         Type localVarReturnType = new TypeToken<LabelResources>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -1919,6 +1951,8 @@ public class LabelApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1929,7 +1963,7 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersVolumesLabelsGetCall(String datacenterId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersVolumesLabelsGetCall(String datacenterId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1945,6 +1979,14 @@ public class LabelApi {
 
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+
+        if (offset != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
+        }
+
+        if (limit != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
         }
 
         Map<String, String> localVarHeaderParams = new HashMap<String, String>();
@@ -1973,7 +2015,7 @@ public class LabelApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersVolumesLabelsGetValidateBeforeCall(String datacenterId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersVolumesLabelsGetValidateBeforeCall(String datacenterId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1986,7 +2028,7 @@ public class LabelApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersVolumesLabelsGetCall(datacenterId, volumeId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersVolumesLabelsGetCall(datacenterId, volumeId, pretty, depth, xContractNumber, offset, limit, _callback);
         return localVarCall;
 
     }
@@ -1999,6 +2041,8 @@ public class LabelApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @return LabelResources
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2008,8 +2052,8 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public LabelResources datacentersVolumesLabelsGet(String datacenterId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<LabelResources> localVarResp = datacentersVolumesLabelsGetWithHttpInfo(datacenterId, volumeId, pretty, depth, xContractNumber);
+    public LabelResources datacentersVolumesLabelsGet(String datacenterId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
+        ApiResponse<LabelResources> localVarResp = datacentersVolumesLabelsGetWithHttpInfo(datacenterId, volumeId, pretty, depth, xContractNumber, offset, limit);
         return localVarResp.getData();
     }
 
@@ -2021,6 +2065,8 @@ public class LabelApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @return ApiResponse&lt;LabelResources&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2030,8 +2076,8 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<LabelResources> datacentersVolumesLabelsGetWithHttpInfo(String datacenterId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = datacentersVolumesLabelsGetValidateBeforeCall(datacenterId, volumeId, pretty, depth, xContractNumber, null);
+    public ApiResponse<LabelResources> datacentersVolumesLabelsGetWithHttpInfo(String datacenterId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
+        okhttp3.Call localVarCall = datacentersVolumesLabelsGetValidateBeforeCall(datacenterId, volumeId, pretty, depth, xContractNumber, offset, limit, null);
         Type localVarReturnType = new TypeToken<LabelResources>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2044,6 +2090,8 @@ public class LabelApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
+     * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2054,9 +2102,9 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersVolumesLabelsGetAsync(String datacenterId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<LabelResources> _callback) throws ApiException {
+    public okhttp3.Call datacentersVolumesLabelsGetAsync(String datacenterId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<LabelResources> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersVolumesLabelsGetValidateBeforeCall(datacenterId, volumeId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersVolumesLabelsGetValidateBeforeCall(datacenterId, volumeId, pretty, depth, xContractNumber, offset, limit, _callback);
         Type localVarReturnType = new TypeToken<LabelResources>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -3131,7 +3179,7 @@ public class LabelApi {
         return localVarCall;
     }
     /**
-     * Build call for labelsFindByLabelurn
+     * Build call for labelsFindByUrn
      * @param labelurn The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:&lt;resource_type&gt;:&lt;resource_uuid&gt;:&lt;key&gt; (required)
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
@@ -3146,7 +3194,7 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call labelsFindByLabelurnCall(String labelurn, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call labelsFindByUrnCall(String labelurn, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -3189,15 +3237,15 @@ public class LabelApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call labelsFindByLabelurnValidateBeforeCall(String labelurn, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call labelsFindByUrnValidateBeforeCall(String labelurn, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'labelurn' is set
         if (labelurn == null) {
-            throw new ApiException("Missing the required parameter 'labelurn' when calling labelsFindByLabelurn(Async)");
+            throw new ApiException("Missing the required parameter 'labelurn' when calling labelsFindByUrn(Async)");
         }
         
 
-        okhttp3.Call localVarCall = labelsFindByLabelurnCall(labelurn, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = labelsFindByUrnCall(labelurn, pretty, depth, xContractNumber, _callback);
         return localVarCall;
 
     }
@@ -3218,8 +3266,8 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public Label labelsFindByLabelurn(String labelurn, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<Label> localVarResp = labelsFindByLabelurnWithHttpInfo(labelurn, pretty, depth, xContractNumber);
+    public Label labelsFindByUrn(String labelurn, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        ApiResponse<Label> localVarResp = labelsFindByUrnWithHttpInfo(labelurn, pretty, depth, xContractNumber);
         return localVarResp.getData();
     }
 
@@ -3239,8 +3287,8 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Label> labelsFindByLabelurnWithHttpInfo(String labelurn, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = labelsFindByLabelurnValidateBeforeCall(labelurn, pretty, depth, xContractNumber, null);
+    public ApiResponse<Label> labelsFindByUrnWithHttpInfo(String labelurn, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        okhttp3.Call localVarCall = labelsFindByUrnValidateBeforeCall(labelurn, pretty, depth, xContractNumber, null);
         Type localVarReturnType = new TypeToken<Label>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -3262,9 +3310,9 @@ public class LabelApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call labelsFindByLabelurnAsync(String labelurn, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Label> _callback) throws ApiException {
+    public okhttp3.Call labelsFindByUrnAsync(String labelurn, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Label> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = labelsFindByLabelurnValidateBeforeCall(labelurn, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = labelsFindByUrnValidateBeforeCall(labelurn, pretty, depth, xContractNumber, _callback);
         Type localVarReturnType = new TypeToken<Label>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

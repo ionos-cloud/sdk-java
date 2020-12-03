@@ -20,11 +20,13 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ionossdk.model.PaginationLinks;
 import com.ionossdk.model.Request;
 import com.ionossdk.model.Type;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +34,7 @@ import java.util.List;
 /**
  * Requests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-20T17:37:47.381927+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]")
 public class Requests {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -49,6 +51,18 @@ public class Requests {
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
   private List<Request> items = null;
+
+  public static final String SERIALIZED_NAME_OFFSET = "offset";
+  @SerializedName(SERIALIZED_NAME_OFFSET)
+  private BigDecimal offset;
+
+  public static final String SERIALIZED_NAME_LIMIT = "limit";
+  @SerializedName(SERIALIZED_NAME_LIMIT)
+  private BigDecimal limit;
+
+  public static final String SERIALIZED_NAME_LINKS = "_links";
+  @SerializedName(SERIALIZED_NAME_LINKS)
+  private PaginationLinks links;
 
 
    /**
@@ -116,6 +130,72 @@ public class Requests {
 
 
 
+  public Requests offset(BigDecimal offset) {
+    
+    this.offset = offset;
+    return this;
+  }
+
+   /**
+   * the offset specified in the request (or, if none was specified, the default offset of 0)
+   * @return offset
+  **/
+  @ApiModelProperty(example = "0", required = true, value = "the offset specified in the request (or, if none was specified, the default offset of 0)")
+
+  public BigDecimal getOffset() {
+    return offset;
+  }
+
+
+  public void setOffset(BigDecimal offset) {
+    this.offset = offset;
+  }
+
+
+  public Requests limit(BigDecimal limit) {
+    
+    this.limit = limit;
+    return this;
+  }
+
+   /**
+   * the limit specified in the request (or, if none was specified, the default limit of 0)
+   * @return limit
+  **/
+  @ApiModelProperty(example = "1000", required = true, value = "the limit specified in the request (or, if none was specified, the default limit of 0)")
+
+  public BigDecimal getLimit() {
+    return limit;
+  }
+
+
+  public void setLimit(BigDecimal limit) {
+    this.limit = limit;
+  }
+
+
+  public Requests links(PaginationLinks links) {
+    
+    this.links = links;
+    return this;
+  }
+
+   /**
+   * Get links
+   * @return links
+  **/
+  @ApiModelProperty(required = true, value = "")
+
+  public PaginationLinks getLinks() {
+    return links;
+  }
+
+
+  public void setLinks(PaginationLinks links) {
+    this.links = links;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -128,12 +208,15 @@ public class Requests {
     return Objects.equals(this.id, requests.id) &&
         Objects.equals(this.type, requests.type) &&
         Objects.equals(this.href, requests.href) &&
-        Objects.equals(this.items, requests.items);
+        Objects.equals(this.items, requests.items) &&
+        Objects.equals(this.offset, requests.offset) &&
+        Objects.equals(this.limit, requests.limit) &&
+        Objects.equals(this.links, requests.links);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, type, href, items);
+    return Objects.hash(id, type, href, items, offset, limit, links);
   }
 
 
@@ -145,6 +228,9 @@ public class Requests {
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+    sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
+    sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("}");
     return sb.toString();
   }

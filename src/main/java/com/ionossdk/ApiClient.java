@@ -1348,4 +1348,50 @@ public class ApiClient {
             throw new AssertionError(e);
         }
     }
+
+    public static void waitForRequest(String requestId, Integer timeout, Integer initialWait, Integer scaleup) throws ApiException {
+        /**
+        Poll resource request status until resource is provisioned.
+
+        :param      requestId: Request id of the action.
+        :type       requestId: ``str``
+
+        :param      timeout: Maximum waiting time in milliseconds. None means infinite waiting time.
+        :type       timeout: ``int``
+
+        :param      initialWait: Initial polling interval in milliseconds.
+        :type       initialWait: ``int``
+
+        :param      scaleup: Double polling interval every scaleup steps, which will be doubled.
+        :type       scaleup: ``int``
+        */
+
+        try {
+            Thread.sleep(initialWait);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        Long timeoutTime = System.currentTimeMillis() + timeout;
+
+        do {
+            RequestStatus request = new RequestApi().requestsStatusGet(requestId, true, 1, 1);
+
+            if (request.getMetadata().getStatus().getValue().equals("DONE")) {
+                break;
+            } else if (request.getMetadata().getStatus().getValue().equals("FAILED")) {
+                String errorMessage = String.format("Request %s failed to complete: %s", requestId, request.getMetadata().getMessage());
+                throw new ApiException(errorMessage);
+            }
+
+
+            try {
+                Thread.sleep(scaleup);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            scaleup *= 2;
+        } while (System.currentTimeMillis() > timeoutTime);
+    }
 }

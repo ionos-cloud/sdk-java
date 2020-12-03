@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * NicProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-20T17:37:47.381927+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]")
 public class NicProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -203,11 +203,11 @@ public class NicProperties {
   }
 
    /**
-   * Indicates if NAT is enabled on this NIC
+   * Indicates if NAT is enabled on this NIC. This is now deprecated.
    * @return nat
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Indicates if NAT is enabled on this NIC")
+  @ApiModelProperty(example = "true", value = "Indicates if NAT is enabled on this NIC. This is now deprecated.")
 
   public Boolean getNat() {
     return nat;

@@ -18,62 +18,51 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.ionossdk.model.Lans;
-import com.ionossdk.model.Loadbalancers;
-import com.ionossdk.model.Servers;
-import com.ionossdk.model.Volumes;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.net.URI;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for DatacenterEntities
+ * Model tests for PaginationLinks
  */
-public class DatacenterEntitiesTest {
-    private final DatacenterEntities model = new DatacenterEntities();
+public class PaginationLinksTest {
+    private final PaginationLinks model = new PaginationLinks();
 
     /**
-     * Model tests for DatacenterEntities
+     * Model tests for PaginationLinks
      */
     @Test
-    public void testDatacenterEntities() {
-        // TODO: test DatacenterEntities
+    public void testPaginationLinks() {
+        // TODO: test PaginationLinks
     }
 
     /**
-     * Test the property 'servers'
+     * Test the property 'prev'
      */
     @Test
-    public void serversTest() {
-        // TODO: test servers
+    public void prevTest() {
+        // TODO: test prev
     }
 
     /**
-     * Test the property 'volumes'
+     * Test the property 'self'
      */
     @Test
-    public void volumesTest() {
-        // TODO: test volumes
+    public void selfTest() {
+        // TODO: test self
     }
 
     /**
-     * Test the property 'loadbalancers'
+     * Test the property 'next'
      */
     @Test
-    public void loadbalancersTest() {
-        // TODO: test loadbalancers
-    }
-
-    /**
-     * Test the property 'lans'
-     */
-    @Test
-    public void lansTest() {
-        // TODO: test lans
+    public void nextTest() {
+        // TODO: test next
     }
 
 }

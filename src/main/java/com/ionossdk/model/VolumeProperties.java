@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * VolumeProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-20T17:37:47.381927+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]")
 public class VolumeProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -154,13 +154,13 @@ public class VolumeProperties {
   @SerializedName(SERIALIZED_NAME_IMAGE)
   private String image;
 
-  public static final String SERIALIZED_NAME_IMAGE_ALIAS = "imageAlias";
-  @SerializedName(SERIALIZED_NAME_IMAGE_ALIAS)
-  private String imageAlias;
-
   public static final String SERIALIZED_NAME_IMAGE_PASSWORD = "imagePassword";
   @SerializedName(SERIALIZED_NAME_IMAGE_PASSWORD)
   private String imagePassword;
+
+  public static final String SERIALIZED_NAME_IMAGE_ALIAS = "imageAlias";
+  @SerializedName(SERIALIZED_NAME_IMAGE_ALIAS)
+  private String imageAlias;
 
   public static final String SERIALIZED_NAME_SSH_KEYS = "sshKeys";
   @SerializedName(SERIALIZED_NAME_SSH_KEYS)
@@ -421,29 +421,6 @@ public class VolumeProperties {
   }
 
 
-  public VolumeProperties imageAlias(String imageAlias) {
-    
-    this.imageAlias = imageAlias;
-    return this;
-  }
-
-   /**
-   * Get imageAlias
-   * @return imageAlias
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getImageAlias() {
-    return imageAlias;
-  }
-
-
-  public void setImageAlias(String imageAlias) {
-    this.imageAlias = imageAlias;
-  }
-
-
   public VolumeProperties imagePassword(String imagePassword) {
     
     this.imagePassword = imagePassword;
@@ -464,6 +441,29 @@ public class VolumeProperties {
 
   public void setImagePassword(String imagePassword) {
     this.imagePassword = imagePassword;
+  }
+
+
+  public VolumeProperties imageAlias(String imageAlias) {
+    
+    this.imageAlias = imageAlias;
+    return this;
+  }
+
+   /**
+   * Get imageAlias
+   * @return imageAlias
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getImageAlias() {
+    return imageAlias;
+  }
+
+
+  public void setImageAlias(String imageAlias) {
+    this.imageAlias = imageAlias;
   }
 
 
@@ -724,8 +724,8 @@ public class VolumeProperties {
         Objects.equals(this.size, volumeProperties.size) &&
         Objects.equals(this.availabilityZone, volumeProperties.availabilityZone) &&
         Objects.equals(this.image, volumeProperties.image) &&
-        Objects.equals(this.imageAlias, volumeProperties.imageAlias) &&
         Objects.equals(this.imagePassword, volumeProperties.imagePassword) &&
+        Objects.equals(this.imageAlias, volumeProperties.imageAlias) &&
         Objects.equals(this.sshKeys, volumeProperties.sshKeys) &&
         Objects.equals(this.bus, volumeProperties.bus) &&
         Objects.equals(this.licenceType, volumeProperties.licenceType) &&
@@ -741,7 +741,7 @@ public class VolumeProperties {
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, type, size, availabilityZone, image, imageAlias, imagePassword, sshKeys, bus, licenceType, cpuHotPlug, ramHotPlug, nicHotPlug, nicHotUnplug, discVirtioHotPlug, discVirtioHotUnplug, deviceNumber, backupunitId);
+    return Objects.hash(name, type, size, availabilityZone, image, imagePassword, imageAlias, sshKeys, bus, licenceType, cpuHotPlug, ramHotPlug, nicHotPlug, nicHotUnplug, discVirtioHotPlug, discVirtioHotUnplug, deviceNumber, backupunitId);
   }
 
 
@@ -754,8 +754,8 @@ public class VolumeProperties {
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    availabilityZone: ").append(toIndentedString(availabilityZone)).append("\n");
     sb.append("    image: ").append(toIndentedString(image)).append("\n");
-    sb.append("    imageAlias: ").append(toIndentedString(imageAlias)).append("\n");
     sb.append("    imagePassword: ").append(toIndentedString(imagePassword)).append("\n");
+    sb.append("    imageAlias: ").append(toIndentedString(imageAlias)).append("\n");
     sb.append("    sshKeys: ").append(toIndentedString(sshKeys)).append("\n");
     sb.append("    bus: ").append(toIndentedString(bus)).append("\n");
     sb.append("    licenceType: ").append(toIndentedString(licenceType)).append("\n");

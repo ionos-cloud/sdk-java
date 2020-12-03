@@ -1050,7 +1050,7 @@ public class UserManagementApi {
         return localVarCall;
     }
     /**
-     * Build call for umGroupsSharesFindByResource
+     * Build call for umGroupsSharesFindByResourceId
      * @param groupId  (required)
      * @param resourceId  (required)
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
@@ -1066,7 +1066,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsSharesFindByResourceCall(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call umGroupsSharesFindByResourceIdCall(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1110,20 +1110,20 @@ public class UserManagementApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsSharesFindByResourceValidateBeforeCall(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call umGroupsSharesFindByResourceIdValidateBeforeCall(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
-            throw new ApiException("Missing the required parameter 'groupId' when calling umGroupsSharesFindByResource(Async)");
+            throw new ApiException("Missing the required parameter 'groupId' when calling umGroupsSharesFindByResourceId(Async)");
         }
         
         // verify the required parameter 'resourceId' is set
         if (resourceId == null) {
-            throw new ApiException("Missing the required parameter 'resourceId' when calling umGroupsSharesFindByResource(Async)");
+            throw new ApiException("Missing the required parameter 'resourceId' when calling umGroupsSharesFindByResourceId(Async)");
         }
         
 
-        okhttp3.Call localVarCall = umGroupsSharesFindByResourceCall(groupId, resourceId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsSharesFindByResourceIdCall(groupId, resourceId, pretty, depth, xContractNumber, _callback);
         return localVarCall;
 
     }
@@ -1145,8 +1145,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public GroupShare umGroupsSharesFindByResource(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<GroupShare> localVarResp = umGroupsSharesFindByResourceWithHttpInfo(groupId, resourceId, pretty, depth, xContractNumber);
+    public GroupShare umGroupsSharesFindByResourceId(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        ApiResponse<GroupShare> localVarResp = umGroupsSharesFindByResourceIdWithHttpInfo(groupId, resourceId, pretty, depth, xContractNumber);
         return localVarResp.getData();
     }
 
@@ -1167,8 +1167,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GroupShare> umGroupsSharesFindByResourceWithHttpInfo(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = umGroupsSharesFindByResourceValidateBeforeCall(groupId, resourceId, pretty, depth, xContractNumber, null);
+    public ApiResponse<GroupShare> umGroupsSharesFindByResourceIdWithHttpInfo(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        okhttp3.Call localVarCall = umGroupsSharesFindByResourceIdValidateBeforeCall(groupId, resourceId, pretty, depth, xContractNumber, null);
         Type localVarReturnType = new TypeToken<GroupShare>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1191,9 +1191,9 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsSharesFindByResourceAsync(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> _callback) throws ApiException {
+    public okhttp3.Call umGroupsSharesFindByResourceIdAsync(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsSharesFindByResourceValidateBeforeCall(groupId, resourceId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsSharesFindByResourceIdValidateBeforeCall(groupId, resourceId, pretty, depth, xContractNumber, _callback);
         Type localVarReturnType = new TypeToken<GroupShare>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -3627,7 +3627,7 @@ public class UserManagementApi {
         return localVarCall;
     }
     /**
-     * Build call for umUsersS3keysFindByKey
+     * Build call for umUsersS3keysFindByKeyId
      * @param userId The unique ID of the user (required)
      * @param keyId The unique access key ID of the S3 key (required)
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
@@ -3643,7 +3643,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersS3keysFindByKeyCall(String userId, String keyId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call umUsersS3keysFindByKeyIdCall(String userId, String keyId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -3687,20 +3687,20 @@ public class UserManagementApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umUsersS3keysFindByKeyValidateBeforeCall(String userId, String keyId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call umUsersS3keysFindByKeyIdValidateBeforeCall(String userId, String keyId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'userId' is set
         if (userId == null) {
-            throw new ApiException("Missing the required parameter 'userId' when calling umUsersS3keysFindByKey(Async)");
+            throw new ApiException("Missing the required parameter 'userId' when calling umUsersS3keysFindByKeyId(Async)");
         }
         
         // verify the required parameter 'keyId' is set
         if (keyId == null) {
-            throw new ApiException("Missing the required parameter 'keyId' when calling umUsersS3keysFindByKey(Async)");
+            throw new ApiException("Missing the required parameter 'keyId' when calling umUsersS3keysFindByKeyId(Async)");
         }
         
 
-        okhttp3.Call localVarCall = umUsersS3keysFindByKeyCall(userId, keyId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umUsersS3keysFindByKeyIdCall(userId, keyId, pretty, depth, xContractNumber, _callback);
         return localVarCall;
 
     }
@@ -3722,8 +3722,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public S3Key umUsersS3keysFindByKey(String userId, String keyId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<S3Key> localVarResp = umUsersS3keysFindByKeyWithHttpInfo(userId, keyId, pretty, depth, xContractNumber);
+    public S3Key umUsersS3keysFindByKeyId(String userId, String keyId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        ApiResponse<S3Key> localVarResp = umUsersS3keysFindByKeyIdWithHttpInfo(userId, keyId, pretty, depth, xContractNumber);
         return localVarResp.getData();
     }
 
@@ -3744,8 +3744,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<S3Key> umUsersS3keysFindByKeyWithHttpInfo(String userId, String keyId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = umUsersS3keysFindByKeyValidateBeforeCall(userId, keyId, pretty, depth, xContractNumber, null);
+    public ApiResponse<S3Key> umUsersS3keysFindByKeyIdWithHttpInfo(String userId, String keyId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        okhttp3.Call localVarCall = umUsersS3keysFindByKeyIdValidateBeforeCall(userId, keyId, pretty, depth, xContractNumber, null);
         Type localVarReturnType = new TypeToken<S3Key>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -3768,9 +3768,9 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersS3keysFindByKeyAsync(String userId, String keyId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<S3Key> _callback) throws ApiException {
+    public okhttp3.Call umUsersS3keysFindByKeyIdAsync(String userId, String keyId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<S3Key> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umUsersS3keysFindByKeyValidateBeforeCall(userId, keyId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umUsersS3keysFindByKeyIdValidateBeforeCall(userId, keyId, pretty, depth, xContractNumber, _callback);
         Type localVarReturnType = new TypeToken<S3Key>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -4057,7 +4057,7 @@ public class UserManagementApi {
      * Build call for umUsersS3keysPut
      * @param userId  (required)
      * @param keyId The unique access key ID of the S3 key (required)
-     * @param s3Key Modified S3Key (required)
+     * @param s3Key Modified s3 key (required)
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -4143,7 +4143,7 @@ public class UserManagementApi {
      * You can enable or disable a given S3 key
      * @param userId  (required)
      * @param keyId The unique access key ID of the S3 key (required)
-     * @param s3Key Modified S3Key (required)
+     * @param s3Key Modified s3 key (required)
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -4166,7 +4166,7 @@ public class UserManagementApi {
      * You can enable or disable a given S3 key
      * @param userId  (required)
      * @param keyId The unique access key ID of the S3 key (required)
-     * @param s3Key Modified S3Key (required)
+     * @param s3Key Modified s3 key (required)
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -4190,7 +4190,7 @@ public class UserManagementApi {
      * You can enable or disable a given S3 key
      * @param userId  (required)
      * @param keyId The unique access key ID of the S3 key (required)
-     * @param s3Key Modified S3Key (required)
+     * @param s3Key Modified s3 key (required)
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)

@@ -96,7 +96,9 @@ public class ServerApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        Cdroms response = api.datacentersServersCdromsGet(datacenterId, serverId, pretty, depth, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        Cdroms response = api.datacentersServersCdromsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
 
         // TODO: test validations
     }
@@ -177,7 +179,9 @@ public class ServerApiTest {
         Integer depth = null;
         Boolean upgradeNeeded = null;
         Integer xContractNumber = null;
-        Servers response = api.datacentersServersGet(datacenterId, pretty, depth, upgradeNeeded, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        Servers response = api.datacentersServersGet(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit);
 
         // TODO: test validations
     }
@@ -287,7 +291,7 @@ public class ServerApiTest {
     /**
      * Stop a Server
      *
-     * This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for CoreVPS servers.
+     * This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for Cube servers.
      *
      * @throws ApiException
      *          if the Api call fails
@@ -381,7 +385,9 @@ public class ServerApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        AttachedVolumes response = api.datacentersServersVolumesGet(datacenterId, serverId, pretty, depth, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        AttachedVolumes response = api.datacentersServersVolumesGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
 
         // TODO: test validations
     }

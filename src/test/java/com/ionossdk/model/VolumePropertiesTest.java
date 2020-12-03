@@ -84,19 +84,19 @@ public class VolumePropertiesTest {
     }
 
     /**
-     * Test the property 'imageAlias'
-     */
-    @Test
-    public void imageAliasTest() {
-        // TODO: test imageAlias
-    }
-
-    /**
      * Test the property 'imagePassword'
      */
     @Test
     public void imagePasswordTest() {
         // TODO: test imagePassword
+    }
+
+    /**
+     * Test the property 'imageAlias'
+     */
+    @Test
+    public void imageAliasTest() {
+        // TODO: test imageAlias
     }
 
     /**

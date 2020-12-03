@@ -18,9 +18,12 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ionossdk.model.IPFailover;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -46,6 +49,22 @@ public class LanPropertiesPostTest {
     @Test
     public void nameTest() {
         // TODO: test name
+    }
+
+    /**
+     * Test the property 'ipFailover'
+     */
+    @Test
+    public void ipFailoverTest() {
+        // TODO: test ipFailover
+    }
+
+    /**
+     * Test the property 'pcc'
+     */
+    @Test
+    public void pccTest() {
+        // TODO: test pcc
     }
 
     /**

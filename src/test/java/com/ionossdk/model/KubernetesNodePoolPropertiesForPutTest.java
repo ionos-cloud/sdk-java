@@ -20,6 +20,8 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.ionossdk.model.KubernetesAutoScaling;
 import com.ionossdk.model.KubernetesMaintenanceWindow;
+import com.ionossdk.model.KubernetesNodePoolAnnotation;
+import com.ionossdk.model.KubernetesNodePoolLabel;
 import com.ionossdk.model.KubernetesNodePoolLan;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -147,6 +149,30 @@ public class KubernetesNodePoolPropertiesForPutTest {
     @Test
     public void lansTest() {
         // TODO: test lans
+    }
+
+    /**
+     * Test the property 'labels'
+     */
+    @Test
+    public void labelsTest() {
+        // TODO: test labels
+    }
+
+    /**
+     * Test the property 'annotations'
+     */
+    @Test
+    public void annotationsTest() {
+        // TODO: test annotations
+    }
+
+    /**
+     * Test the property 'publicIps'
+     */
+    @Test
+    public void publicIpsTest() {
+        // TODO: test publicIps
     }
 
 }

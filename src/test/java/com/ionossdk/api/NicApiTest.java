@@ -140,7 +140,9 @@ public class NicApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        FirewallRules response = api.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        FirewallRules response = api.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit);
 
         // TODO: test validations
     }
@@ -228,7 +230,9 @@ public class NicApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        Nics response = api.datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber);
+        Integer offset = null;
+        Integer limit = null;
+        Nics response = api.datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
 
         // TODO: test validations
     }

@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * KubernetesConfigProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-20T17:37:47.381927+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]")
 public class KubernetesConfigProperties {
   public static final String SERIALIZED_NAME_KUBECONFIG = "kubeconfig";
   @SerializedName(SERIALIZED_NAME_KUBECONFIG)

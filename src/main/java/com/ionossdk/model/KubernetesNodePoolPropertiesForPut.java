@@ -22,6 +22,8 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.ionossdk.model.KubernetesAutoScaling;
 import com.ionossdk.model.KubernetesMaintenanceWindow;
+import com.ionossdk.model.KubernetesNodePoolAnnotation;
+import com.ionossdk.model.KubernetesNodePoolLabel;
 import com.ionossdk.model.KubernetesNodePoolLan;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -32,7 +34,7 @@ import java.util.List;
 /**
  * KubernetesNodePoolPropertiesForPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-11-20T17:37:47.381927+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]")
 public class KubernetesNodePoolPropertiesForPut {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -181,6 +183,18 @@ public class KubernetesNodePoolPropertiesForPut {
   public static final String SERIALIZED_NAME_LANS = "lans";
   @SerializedName(SERIALIZED_NAME_LANS)
   private List<KubernetesNodePoolLan> lans = null;
+
+  public static final String SERIALIZED_NAME_LABELS = "labels";
+  @SerializedName(SERIALIZED_NAME_LABELS)
+  private KubernetesNodePoolLabel labels;
+
+  public static final String SERIALIZED_NAME_ANNOTATIONS = "annotations";
+  @SerializedName(SERIALIZED_NAME_ANNOTATIONS)
+  private KubernetesNodePoolAnnotation annotations;
+
+  public static final String SERIALIZED_NAME_PUBLIC_IPS = "publicIps";
+  @SerializedName(SERIALIZED_NAME_PUBLIC_IPS)
+  private List<String> publicIps = null;
 
 
   public KubernetesNodePoolPropertiesForPut name(String name) {
@@ -481,6 +495,83 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
 
+  public KubernetesNodePoolPropertiesForPut labels(KubernetesNodePoolLabel labels) {
+    
+    this.labels = labels;
+    return this;
+  }
+
+   /**
+   * Get labels
+   * @return labels
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public KubernetesNodePoolLabel getLabels() {
+    return labels;
+  }
+
+
+  public void setLabels(KubernetesNodePoolLabel labels) {
+    this.labels = labels;
+  }
+
+
+  public KubernetesNodePoolPropertiesForPut annotations(KubernetesNodePoolAnnotation annotations) {
+    
+    this.annotations = annotations;
+    return this;
+  }
+
+   /**
+   * Get annotations
+   * @return annotations
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public KubernetesNodePoolAnnotation getAnnotations() {
+    return annotations;
+  }
+
+
+  public void setAnnotations(KubernetesNodePoolAnnotation annotations) {
+    this.annotations = annotations;
+  }
+
+
+  public KubernetesNodePoolPropertiesForPut publicIps(List<String> publicIps) {
+    
+    this.publicIps = publicIps;
+    return this;
+  }
+
+  public KubernetesNodePoolPropertiesForPut addPublicIpsItem(String publicIpsItem) {
+    if (this.publicIps == null) {
+      this.publicIps = new ArrayList<String>();
+    }
+    this.publicIps.add(publicIpsItem);
+    return this;
+  }
+
+   /**
+   * Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.
+   * @return publicIps
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "[81.173.1.2, 82.231.2.5, 92.221.2.4]", value = "Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.")
+
+  public List<String> getPublicIps() {
+    return publicIps;
+  }
+
+
+  public void setPublicIps(List<String> publicIps) {
+    this.publicIps = publicIps;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -502,12 +593,15 @@ public class KubernetesNodePoolPropertiesForPut {
         Objects.equals(this.k8sVersion, kubernetesNodePoolPropertiesForPut.k8sVersion) &&
         Objects.equals(this.maintenanceWindow, kubernetesNodePoolPropertiesForPut.maintenanceWindow) &&
         Objects.equals(this.autoScaling, kubernetesNodePoolPropertiesForPut.autoScaling) &&
-        Objects.equals(this.lans, kubernetesNodePoolPropertiesForPut.lans);
+        Objects.equals(this.lans, kubernetesNodePoolPropertiesForPut.lans) &&
+        Objects.equals(this.labels, kubernetesNodePoolPropertiesForPut.labels) &&
+        Objects.equals(this.annotations, kubernetesNodePoolPropertiesForPut.annotations) &&
+        Objects.equals(this.publicIps, kubernetesNodePoolPropertiesForPut.publicIps);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, datacenterId, nodeCount, cpuFamily, coresCount, ramSize, availabilityZone, storageType, storageSize, k8sVersion, maintenanceWindow, autoScaling, lans);
+    return Objects.hash(name, datacenterId, nodeCount, cpuFamily, coresCount, ramSize, availabilityZone, storageType, storageSize, k8sVersion, maintenanceWindow, autoScaling, lans, labels, annotations, publicIps);
   }
 
 
@@ -528,6 +622,9 @@ public class KubernetesNodePoolPropertiesForPut {
     sb.append("    maintenanceWindow: ").append(toIndentedString(maintenanceWindow)).append("\n");
     sb.append("    autoScaling: ").append(toIndentedString(autoScaling)).append("\n");
     sb.append("    lans: ").append(toIndentedString(lans)).append("\n");
+    sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
+    sb.append("    annotations: ").append(toIndentedString(annotations)).append("\n");
+    sb.append("    publicIps: ").append(toIndentedString(publicIps)).append("\n");
     sb.append("}");
     return sb.toString();
   }
