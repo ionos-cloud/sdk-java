@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * Error
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T11:13:53.239943+02:00[Europe/Bucharest]")
 public class Error {
   public static final String SERIALIZED_NAME_HTTP_STATUS = "httpStatus";
   @SerializedName(SERIALIZED_NAME_HTTP_STATUS)

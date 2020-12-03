@@ -18,7 +18,7 @@ import com.ionossdk.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T10:59:55.375462+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2020-12-03T11:13:53.239943+02:00[Europe/Bucharest]")
 public class ApiKeyAuth implements Authentication {
   private final String location;
   private final String paramName;

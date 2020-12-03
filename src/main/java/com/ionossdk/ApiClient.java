@@ -52,6 +52,10 @@ import com.ionossdk.auth.HttpBasicAuth;
 import com.ionossdk.auth.HttpBearerAuth;
 import com.ionossdk.auth.ApiKeyAuth;
 
+import com.ionossdk.api.RequestApi;
+import com.ionossdk.model.RequestStatus;
+import com.ionossdk.model.RequestStatusMetadata;
+
 public class ApiClient {
 
     private String basePath = "https://api.ionos.com/cloudapi/v5";

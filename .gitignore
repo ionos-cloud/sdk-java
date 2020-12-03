@@ -19,10 +19,9 @@ hs_err_pid*
 target
 .gradle
 build
-.idea
-.openapi-generator-ignore
-.openapi-generator
 .travis.yml
-gradle
-gradlew
+.openapi-generator
+.openapi-generator-ignore
 gradlew.bat
+gradlew
+gradle
