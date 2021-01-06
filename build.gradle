@@ -4,8 +4,7 @@ apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'maven-publish'
 
-
-group = 'com.ionossdk'
+group = 'com.ionoscloud'
 version = '5.0'
 
 buildscript {
@@ -90,7 +89,7 @@ if(hasProperty('target') && target == 'android') {
 
     install {
         repositories.mavenInstaller {
-            pom.artifactId = 'ionossdk'
+            pom.artifactId = 'ionoscloud'
         }
     }
 

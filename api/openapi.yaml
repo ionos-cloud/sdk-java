@@ -7423,26 +7423,6 @@ paths:
         name: filter.createdBefore
         schema:
           type: string
-      - description: Url filter
-        in: query
-        name: filter.url
-        schema:
-          type: string
-      - description: Created date filter
-        in: query
-        name: filter.createdDate
-        schema:
-          type: string
-      - description: Method filter
-        in: query
-        name: filter.method
-        schema:
-          type: string
-      - description: Body filter
-        in: query
-        name: filter.body
-        schema:
-          type: string
       - description: the first element (of the total list of elements) to include
           in the response (use together with <code>limit</code> for pagination)
         in: query
@@ -14264,7 +14244,7 @@ paths:
       x-accepts: application/json
     get:
       description: This will retrieve a single Kubernetes Cluster.
-      operationId: k8sFindBySClusterId
+      operationId: k8sFindByClusterId
       parameters:
       - description: The unique ID of the Kubernetes Cluster
         in: path
@@ -26306,6 +26286,7 @@ components:
               firstname: firstname
               administrator: true
               password: password
+              active: true
               forceSecAuth: true
               secAuthActive: true
               email: email
@@ -26381,6 +26362,7 @@ components:
               firstname: firstname
               administrator: true
               password: password
+              active: true
               forceSecAuth: true
               secAuthActive: true
               email: email
@@ -26525,6 +26507,7 @@ components:
                 firstname: firstname
                 administrator: true
                 password: password
+                active: true
                 forceSecAuth: true
                 secAuthActive: true
                 email: email
@@ -26600,6 +26583,7 @@ components:
                 firstname: firstname
                 administrator: true
                 password: password
+                active: true
                 forceSecAuth: true
                 secAuthActive: true
                 email: email
@@ -26769,6 +26753,7 @@ components:
                   firstname: firstname
                   administrator: true
                   password: password
+                  active: true
                   forceSecAuth: true
                   secAuthActive: true
                   email: email
@@ -26844,6 +26829,7 @@ components:
                   firstname: firstname
                   administrator: true
                   password: password
+                  active: true
                   forceSecAuth: true
                   secAuthActive: true
                   email: email
@@ -26946,6 +26932,7 @@ components:
                   firstname: firstname
                   administrator: true
                   password: password
+                  active: true
                   forceSecAuth: true
                   secAuthActive: true
                   email: email
@@ -27021,6 +27008,7 @@ components:
                   firstname: firstname
                   administrator: true
                   password: password
+                  active: true
                   forceSecAuth: true
                   secAuthActive: true
                   email: email
@@ -27289,6 +27277,7 @@ components:
         firstname: firstname
         administrator: true
         password: password
+        active: true
         forceSecAuth: true
         secAuthActive: true
         email: email
@@ -27321,6 +27310,9 @@ components:
         password:
           description: User password
           type: string
+        active:
+          description: indicates if the user is active
+          type: boolean
       type: object
     User:
       example:
@@ -27394,6 +27386,7 @@ components:
           firstname: firstname
           administrator: true
           password: password
+          active: true
           forceSecAuth: true
           secAuthActive: true
           email: email
@@ -27568,6 +27561,7 @@ components:
             firstname: firstname
             administrator: true
             password: password
+            active: true
             forceSecAuth: true
             secAuthActive: true
             email: email
@@ -27643,6 +27637,7 @@ components:
             firstname: firstname
             administrator: true
             password: password
+            active: true
             forceSecAuth: true
             secAuthActive: true
             email: email
@@ -30292,6 +30287,7 @@ components:
             firstname: firstname
             administrator: true
             password: password
+            active: true
             forceSecAuth: true
             secAuthActive: true
             email: email
@@ -30367,6 +30363,7 @@ components:
             firstname: firstname
             administrator: true
             password: password
+            active: true
             forceSecAuth: true
             secAuthActive: true
             email: email
@@ -31712,7 +31709,7 @@ components:
           example: 2048
           type: integer
         availabilityZone:
-          description: The availability zone in which the server should exist
+          description: The availability zone in which the target VM should exist
           enum:
           - AUTO
           - ZONE_1
@@ -31840,7 +31837,7 @@ components:
           example: 2048
           type: integer
         availabilityZone:
-          description: The availability zone in which the server should exist
+          description: The availability zone in which the target VM should exist
           enum:
           - AUTO
           - ZONE_1
@@ -31943,7 +31940,7 @@ components:
           example: 2048
           type: integer
         availabilityZone:
-          description: The availability zone in which the server should exist
+          description: The availability zone in which the target VM should exist
           enum:
           - AUTO
           - ZONE_1

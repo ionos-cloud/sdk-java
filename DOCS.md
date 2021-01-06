@@ -4,7 +4,7 @@
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2020-12-03T11:13:53.239943+02:00[Europe/Bucharest]
+  - Build date: 2021-01-06T11:24:28.604531+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -42,8 +42,8 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-  <groupId>com.ionossdk</groupId>
-  <artifactId>ionossdk</artifactId>
+  <groupId>com.ionoscloud</groupId>
+  <artifactId>ionoscloud</artifactId>
   <version>5.0</version>
   <scope>compile</scope>
 </dependency>
@@ -54,7 +54,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ionossdk:ionossdk:5.0"
+compile "com.ionoscloud:ionoscloud:5.0"
 ```
 
 ### Others
@@ -67,7 +67,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ionossdk-5.0.jar`
+* `target/ionoscloud-5.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -77,11 +77,11 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```java
 
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.models.*;
-import com.ionossdk.api.DefaultApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.models.*;
+import com.ionoscloud.api.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -93,7 +93,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Info result = apiInstance.apiInfoGet(pretty, depth, xContractNumber);
+      Info result = apiInstance.apiInfoGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#apiInfoGet");
@@ -159,7 +159,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 #### KubernetesApi
 
 - [Delete Kubernetes Cluster](#k8sdelete)
-- [Retrieve Kubernetes Cluster](#k8sfindbysclusterid)
+- [Retrieve Kubernetes Cluster](#k8sfindbyclusterid)
 - [List Kubernetes Clusters](#k8sget)
 - [Retrieve Kubernetes Configuration File](#k8skubeconfigget)
 - [Delete Kubernetes Node Pool](#k8snodepoolsdelete)
@@ -356,7 +356,7 @@ Method | HTTP request | Description
 
 <a name="apiInfoGet"></a>
 # **apiInfoGet**
-> Info apiInfoGet(pretty, depth, xContractNumber)
+> Info apiInfoGet(prettydepthxContractNumber)
 
 Display API information
 
@@ -365,11 +365,11 @@ Display API information
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.model.*;
-import com.ionossdk.api.DefaultApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.DefaultApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -381,7 +381,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Info result = apiInstance.apiInfoGet(pretty, depth, xContractNumber);
+      Info result = apiInstance.apiInfoGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DefaultApi#apiInfoGet");
@@ -442,7 +442,7 @@ Method | HTTP request | Description
 
 <a name="backupunitsDelete"></a>
 # **backupunitsDelete**
-> Object backupunitsDelete(backupunitId, pretty, depth, xContractNumber)
+> Object backupunitsDelete(backupunitIdprettydepthxContractNumber)
 
 Delete a Backup Unit
 
@@ -451,12 +451,12 @@ NOTE: Running through the deletion process will delete: - the backup plans insid
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.BackupUnitApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -475,7 +475,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.backupunitsDelete(backupunitId, pretty, depth, xContractNumber);
+      Object result = apiInstance.backupunitsDelete(backupunitIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitApi#backupunitsDelete");
@@ -518,7 +518,7 @@ Name | Type | Description  | Notes
 
 <a name="backupunitsFindById"></a>
 # **backupunitsFindById**
-> BackupUnit backupunitsFindById(backupunitId, pretty, depth, xContractNumber)
+> BackupUnit backupunitsFindById(backupunitIdprettydepthxContractNumber)
 
 Returns the specified backup Unit
 
@@ -527,12 +527,12 @@ You can retrieve the details of an specific backup unit.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.BackupUnitApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -551,7 +551,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      BackupUnit result = apiInstance.backupunitsFindById(backupunitId, pretty, depth, xContractNumber);
+      BackupUnit result = apiInstance.backupunitsFindById(backupunitIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitApi#backupunitsFindById");
@@ -594,7 +594,7 @@ Name | Type | Description  | Notes
 
 <a name="backupunitsGet"></a>
 # **backupunitsGet**
-> BackupUnits backupunitsGet(pretty, depth, xContractNumber)
+> BackupUnits backupunitsGet(prettydepthxContractNumber)
 
 List Backup Units 
 
@@ -603,12 +603,12 @@ You can retrieve a complete list of backup Units that you have access to.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.BackupUnitApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -626,7 +626,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      BackupUnits result = apiInstance.backupunitsGet(pretty, depth, xContractNumber);
+      BackupUnits result = apiInstance.backupunitsGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitApi#backupunitsGet");
@@ -668,7 +668,7 @@ Name | Type | Description  | Notes
 
 <a name="backupunitsPatch"></a>
 # **backupunitsPatch**
-> BackupUnit backupunitsPatch(backupunitId, backupUnitProperties, pretty, depth, xContractNumber)
+> BackupUnit backupunitsPatch(backupunitIdbackupUnitPropertiesprettydepthxContractNumber)
 
 Partially modify a Backup Unit
 
@@ -677,12 +677,12 @@ You can use update a backup Unit properties
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.BackupUnitApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -702,7 +702,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      BackupUnit result = apiInstance.backupunitsPatch(backupunitId, backupUnitProperties, pretty, depth, xContractNumber);
+      BackupUnit result = apiInstance.backupunitsPatch(backupunitIdbackupUnitPropertiesprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitApi#backupunitsPatch");
@@ -746,7 +746,7 @@ Name | Type | Description  | Notes
 
 <a name="backupunitsPost"></a>
 # **backupunitsPost**
-> BackupUnit backupunitsPost(backupUnit, pretty, depth, xContractNumber)
+> BackupUnit backupunitsPost(backupUnitprettydepthxContractNumber)
 
 Create a Backup Unit
 
@@ -755,12 +755,12 @@ Create a Backup Unit. A Backup Unit is considered a resource like a virtual data
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.BackupUnitApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -779,7 +779,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      BackupUnit result = apiInstance.backupunitsPost(backupUnit, pretty, depth, xContractNumber);
+      BackupUnit result = apiInstance.backupunitsPost(backupUnitprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitApi#backupunitsPost");
@@ -822,7 +822,7 @@ Name | Type | Description  | Notes
 
 <a name="backupunitsPut"></a>
 # **backupunitsPut**
-> BackupUnit backupunitsPut(backupunitId, backupUnit, pretty, depth, xContractNumber)
+> BackupUnit backupunitsPut(backupunitIdbackupUnitprettydepthxContractNumber)
 
 Modify a Backup Unit
 
@@ -831,12 +831,12 @@ You can use update a backup Unit properties
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.BackupUnitApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -856,7 +856,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      BackupUnit result = apiInstance.backupunitsPut(backupunitId, backupUnit, pretty, depth, xContractNumber);
+      BackupUnit result = apiInstance.backupunitsPut(backupunitIdbackupUnitprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitApi#backupunitsPut");
@@ -900,7 +900,7 @@ Name | Type | Description  | Notes
 
 <a name="backupunitsSsourlGet"></a>
 # **backupunitsSsourlGet**
-> BackupUnitSSO backupunitsSsourlGet(backupunitId, pretty, xContractNumber)
+> BackupUnitSSO backupunitsSsourlGet(backupunitIdprettyxContractNumber)
 
 Returns a single signon URL for the specified backup Unit.
 
@@ -909,12 +909,12 @@ Returns a single signon URL for the specified backup Unit.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.BackupUnitApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.BackupUnitApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -932,7 +932,7 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      BackupUnitSSO result = apiInstance.backupunitsSsourlGet(backupunitId, pretty, xContractNumber);
+      BackupUnitSSO result = apiInstance.backupunitsSsourlGet(backupunitIdprettyxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitApi#backupunitsSsourlGet");
@@ -987,7 +987,7 @@ Method | HTTP request | Description
 
 <a name="contractsGet"></a>
 # **contractsGet**
-> Contract contractsGet(pretty, depth, xContractNumber)
+> Contract contractsGet(prettydepthxContractNumber)
 
 Retrieve a Contract
 
@@ -996,12 +996,12 @@ Retrieves the attributes of user&#39;s contract.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ContractApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ContractApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1019,7 +1019,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Contract result = apiInstance.contractsGet(pretty, depth, xContractNumber);
+      Contract result = apiInstance.contractsGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ContractApi#contractsGet");
@@ -1079,7 +1079,7 @@ Method | HTTP request | Description
 
 <a name="datacentersDelete"></a>
 # **datacentersDelete**
-> Object datacentersDelete(datacenterId, pretty, depth, xContractNumber)
+> Object datacentersDelete(datacenterIdprettydepthxContractNumber)
 
 Delete a Data Center
 
@@ -1088,12 +1088,12 @@ Will remove all objects within the datacenter and remove the datacenter object i
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.DataCenterApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.DataCenterApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1112,7 +1112,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersDelete(datacenterId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersDelete(datacenterIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataCenterApi#datacentersDelete");
@@ -1155,7 +1155,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersFindById"></a>
 # **datacentersFindById**
-> Datacenter datacentersFindById(datacenterId, pretty, depth, xContractNumber)
+> Datacenter datacentersFindById(datacenterIdprettydepthxContractNumber)
 
 Retrieve a Data Center
 
@@ -1164,12 +1164,12 @@ You can retrieve a data center by using the resource&#39;s ID. This value can be
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.DataCenterApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.DataCenterApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1188,7 +1188,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Datacenter result = apiInstance.datacentersFindById(datacenterId, pretty, depth, xContractNumber);
+      Datacenter result = apiInstance.datacentersFindById(datacenterIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataCenterApi#datacentersFindById");
@@ -1231,7 +1231,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersGet"></a>
 # **datacentersGet**
-> Datacenters datacentersGet(pretty, depth, xContractNumber, offset, limit)
+> Datacenters datacentersGet(prettydepthxContractNumberoffsetlimit)
 
 List Data Centers under your account
 
@@ -1240,12 +1240,12 @@ You can retrieve a complete list of data centers provisioned under your account
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.DataCenterApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.DataCenterApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1265,7 +1265,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Datacenters result = apiInstance.datacentersGet(pretty, depth, xContractNumber, offset, limit);
+      Datacenters result = apiInstance.datacentersGet(prettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataCenterApi#datacentersGet");
@@ -1309,7 +1309,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersPatch"></a>
 # **datacentersPatch**
-> Datacenter datacentersPatch(datacenterId, datacenter, pretty, depth, xContractNumber)
+> Datacenter datacentersPatch(datacenterIddatacenterprettydepthxContractNumber)
 
 Partially modify a Data Center
 
@@ -1318,12 +1318,12 @@ You can use update datacenter to re-name the datacenter or update its descriptio
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.DataCenterApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.DataCenterApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1343,7 +1343,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Datacenter result = apiInstance.datacentersPatch(datacenterId, datacenter, pretty, depth, xContractNumber);
+      Datacenter result = apiInstance.datacentersPatch(datacenterIddatacenterprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataCenterApi#datacentersPatch");
@@ -1387,7 +1387,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersPost"></a>
 # **datacentersPost**
-> Datacenter datacentersPost(datacenter, pretty, depth, xContractNumber)
+> Datacenter datacentersPost(datacenterprettydepthxContractNumber)
 
 Create a Data Center
 
@@ -1396,12 +1396,12 @@ Virtual data centers are the foundation of the platform. They act as logical con
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.DataCenterApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.DataCenterApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1420,7 +1420,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Datacenter result = apiInstance.datacentersPost(datacenter, pretty, depth, xContractNumber);
+      Datacenter result = apiInstance.datacentersPost(datacenterprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataCenterApi#datacentersPost");
@@ -1463,7 +1463,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersPut"></a>
 # **datacentersPut**
-> Datacenter datacentersPut(datacenterId, datacenter, pretty, depth, xContractNumber)
+> Datacenter datacentersPut(datacenterIddatacenterprettydepthxContractNumber)
 
 Modify a Data Center
 
@@ -1472,12 +1472,12 @@ You can use update datacenter to re-name the datacenter or update its descriptio
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.DataCenterApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.DataCenterApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1497,7 +1497,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Datacenter result = apiInstance.datacentersPut(datacenterId, datacenter, pretty, depth, xContractNumber);
+      Datacenter result = apiInstance.datacentersPut(datacenterIddatacenterprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataCenterApi#datacentersPut");
@@ -1558,7 +1558,7 @@ Method | HTTP request | Description
 
 <a name="imagesDelete"></a>
 # **imagesDelete**
-> Object imagesDelete(imageId, pretty, depth, xContractNumber)
+> Object imagesDelete(imageIdprettydepthxContractNumber)
 
 Delete an Image
 
@@ -1567,12 +1567,12 @@ Deletes the specified image. This operation is permitted on private image only.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ImageApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ImageApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1591,7 +1591,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.imagesDelete(imageId, pretty, depth, xContractNumber);
+      Object result = apiInstance.imagesDelete(imageIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ImageApi#imagesDelete");
@@ -1634,7 +1634,7 @@ Name | Type | Description  | Notes
 
 <a name="imagesFindById"></a>
 # **imagesFindById**
-> Image imagesFindById(imageId, pretty, depth, xContractNumber)
+> Image imagesFindById(imageIdprettydepthxContractNumber)
 
 Retrieve an Image
 
@@ -1643,12 +1643,12 @@ Retrieves the attributes of a given image.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ImageApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ImageApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1667,7 +1667,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Image result = apiInstance.imagesFindById(imageId, pretty, depth, xContractNumber);
+      Image result = apiInstance.imagesFindById(imageIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ImageApi#imagesFindById");
@@ -1710,7 +1710,7 @@ Name | Type | Description  | Notes
 
 <a name="imagesGet"></a>
 # **imagesGet**
-> Images imagesGet(pretty, depth, xContractNumber)
+> Images imagesGet(prettydepthxContractNumber)
 
 List Images 
 
@@ -1719,12 +1719,12 @@ Retrieve a list of images within the datacenter
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ImageApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ImageApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1742,7 +1742,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Images result = apiInstance.imagesGet(pretty, depth, xContractNumber);
+      Images result = apiInstance.imagesGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ImageApi#imagesGet");
@@ -1784,7 +1784,7 @@ Name | Type | Description  | Notes
 
 <a name="imagesPatch"></a>
 # **imagesPatch**
-> Image imagesPatch(imageId, image, pretty, depth, xContractNumber)
+> Image imagesPatch(imageIdimageprettydepthxContractNumber)
 
 Partially modify an Image
 
@@ -1793,12 +1793,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ImageApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ImageApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1818,7 +1818,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Image result = apiInstance.imagesPatch(imageId, image, pretty, depth, xContractNumber);
+      Image result = apiInstance.imagesPatch(imageIdimageprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ImageApi#imagesPatch");
@@ -1862,7 +1862,7 @@ Name | Type | Description  | Notes
 
 <a name="imagesPut"></a>
 # **imagesPut**
-> Image imagesPut(imageId, image, pretty, depth, xContractNumber)
+> Image imagesPut(imageIdimageprettydepthxContractNumber)
 
 Modify an Image
 
@@ -1871,12 +1871,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ImageApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ImageApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1896,7 +1896,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Image result = apiInstance.imagesPut(imageId, image, pretty, depth, xContractNumber);
+      Image result = apiInstance.imagesPut(imageIdimageprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ImageApi#imagesPut");
@@ -1958,7 +1958,7 @@ Method | HTTP request | Description
 
 <a name="ipblocksDelete"></a>
 # **ipblocksDelete**
-> Object ipblocksDelete(ipblockId, pretty, depth, xContractNumber)
+> Object ipblocksDelete(ipblockIdprettydepthxContractNumber)
 
 Delete IP Block
 
@@ -1967,12 +1967,12 @@ Removes the specific IP Block
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.IpBlocksApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.IpBlocksApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -1991,7 +1991,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.ipblocksDelete(ipblockId, pretty, depth, xContractNumber);
+      Object result = apiInstance.ipblocksDelete(ipblockIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksDelete");
@@ -2034,7 +2034,7 @@ Name | Type | Description  | Notes
 
 <a name="ipblocksFindById"></a>
 # **ipblocksFindById**
-> IpBlock ipblocksFindById(ipblockId, pretty, depth, xContractNumber)
+> IpBlock ipblocksFindById(ipblockIdprettydepthxContractNumber)
 
 Retrieve an IP Block
 
@@ -2043,12 +2043,12 @@ Retrieves the attributes of a given IP Block.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.IpBlocksApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.IpBlocksApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2067,7 +2067,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      IpBlock result = apiInstance.ipblocksFindById(ipblockId, pretty, depth, xContractNumber);
+      IpBlock result = apiInstance.ipblocksFindById(ipblockIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksFindById");
@@ -2110,7 +2110,7 @@ Name | Type | Description  | Notes
 
 <a name="ipblocksGet"></a>
 # **ipblocksGet**
-> IpBlocks ipblocksGet(pretty, depth, xContractNumber)
+> IpBlocks ipblocksGet(prettydepthxContractNumber)
 
 List IP Blocks 
 
@@ -2119,12 +2119,12 @@ Retrieve a list of all reserved IP Blocks
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.IpBlocksApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.IpBlocksApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2142,7 +2142,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      IpBlocks result = apiInstance.ipblocksGet(pretty, depth, xContractNumber);
+      IpBlocks result = apiInstance.ipblocksGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksGet");
@@ -2184,7 +2184,7 @@ Name | Type | Description  | Notes
 
 <a name="ipblocksPatch"></a>
 # **ipblocksPatch**
-> IpBlock ipblocksPatch(ipblockId, ipblock, pretty, depth, xContractNumber)
+> IpBlock ipblocksPatch(ipblockIdipblockprettydepthxContractNumber)
 
 Partially modify IP Block
 
@@ -2193,12 +2193,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.IpBlocksApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.IpBlocksApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2218,7 +2218,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      IpBlock result = apiInstance.ipblocksPatch(ipblockId, ipblock, pretty, depth, xContractNumber);
+      IpBlock result = apiInstance.ipblocksPatch(ipblockIdipblockprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksPatch");
@@ -2262,7 +2262,7 @@ Name | Type | Description  | Notes
 
 <a name="ipblocksPost"></a>
 # **ipblocksPost**
-> IpBlock ipblocksPost(ipblock, pretty, depth, xContractNumber)
+> IpBlock ipblocksPost(ipblockprettydepthxContractNumber)
 
 Reserve IP Block
 
@@ -2271,12 +2271,12 @@ This will reserve a new IP Block
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.IpBlocksApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.IpBlocksApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2295,7 +2295,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      IpBlock result = apiInstance.ipblocksPost(ipblock, pretty, depth, xContractNumber);
+      IpBlock result = apiInstance.ipblocksPost(ipblockprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksPost");
@@ -2338,7 +2338,7 @@ Name | Type | Description  | Notes
 
 <a name="ipblocksPut"></a>
 # **ipblocksPut**
-> IpBlock ipblocksPut(ipblockId, ipblock, pretty, depth, xContractNumber)
+> IpBlock ipblocksPut(ipblockIdipblockprettydepthxContractNumber)
 
 Modify IP Block
 
@@ -2347,12 +2347,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.IpBlocksApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.IpBlocksApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2372,7 +2372,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      IpBlock result = apiInstance.ipblocksPut(ipblockId, ipblock, pretty, depth, xContractNumber);
+      IpBlock result = apiInstance.ipblocksPut(ipblockIdipblockprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksPut");
@@ -2425,7 +2425,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**k8sDelete**](DOCS.md#k8sDelete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes Cluster
-[**k8sFindBySClusterId**](DOCS.md#k8sFindBySClusterId) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
+[**k8sFindByClusterId**](DOCS.md#k8sFindByClusterId) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
 [**k8sGet**](DOCS.md#k8sGet) | **GET** /k8s | List Kubernetes Clusters
 [**k8sKubeconfigGet**](DOCS.md#k8sKubeconfigGet) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File
 [**k8sNodepoolsDelete**](DOCS.md#k8sNodepoolsDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool
@@ -2446,7 +2446,7 @@ Method | HTTP request | Description
 
 <a name="k8sDelete"></a>
 # **k8sDelete**
-> Object k8sDelete(k8sClusterId, pretty, depth, xContractNumber)
+> Object k8sDelete(k8sClusterIdprettydepthxContractNumber)
 
 Delete Kubernetes Cluster
 
@@ -2455,12 +2455,12 @@ This will remove a Kubernetes Cluster.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2479,7 +2479,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.k8sDelete(k8sClusterId, pretty, depth, xContractNumber);
+      Object result = apiInstance.k8sDelete(k8sClusterIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sDelete");
@@ -2520,9 +2520,9 @@ Name | Type | Description  | Notes
 **202** | successful operation |  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  |
 **0** | Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) |  -  |
 
-<a name="k8sFindBySClusterId"></a>
-# **k8sFindBySClusterId**
-> KubernetesCluster k8sFindBySClusterId(k8sClusterId, pretty, depth, xContractNumber)
+<a name="k8sFindByClusterId"></a>
+# **k8sFindByClusterId**
+> KubernetesCluster k8sFindByClusterId(k8sClusterIdprettydepthxContractNumber)
 
 Retrieve Kubernetes Cluster
 
@@ -2531,12 +2531,12 @@ This will retrieve a single Kubernetes Cluster.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2555,10 +2555,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesCluster result = apiInstance.k8sFindBySClusterId(k8sClusterId, pretty, depth, xContractNumber);
+      KubernetesCluster result = apiInstance.k8sFindByClusterId(k8sClusterIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling KubernetesApi#k8sFindBySClusterId");
+      System.err.println("Exception when calling KubernetesApi#k8sFindByClusterId");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -2598,7 +2598,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sGet"></a>
 # **k8sGet**
-> KubernetesClusters k8sGet(pretty, depth, xContractNumber)
+> KubernetesClusters k8sGet(prettydepthxContractNumber)
 
 List Kubernetes Clusters
 
@@ -2607,12 +2607,12 @@ You can retrieve a list of all kubernetes clusters associated with a contract
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2630,7 +2630,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesClusters result = apiInstance.k8sGet(pretty, depth, xContractNumber);
+      KubernetesClusters result = apiInstance.k8sGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sGet");
@@ -2672,7 +2672,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sKubeconfigGet"></a>
 # **k8sKubeconfigGet**
-> KubernetesConfig k8sKubeconfigGet(k8sClusterId, pretty, depth, xContractNumber)
+> KubernetesConfig k8sKubeconfigGet(k8sClusterIdprettydepthxContractNumber)
 
 Retrieve Kubernetes Configuration File
 
@@ -2681,12 +2681,12 @@ You can retrieve kubernetes configuration file for the kubernetes cluster.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2705,7 +2705,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesConfig result = apiInstance.k8sKubeconfigGet(k8sClusterId, pretty, depth, xContractNumber);
+      KubernetesConfig result = apiInstance.k8sKubeconfigGet(k8sClusterIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sKubeconfigGet");
@@ -2748,7 +2748,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sNodepoolsDelete"></a>
 # **k8sNodepoolsDelete**
-> Object k8sNodepoolsDelete(k8sClusterId, nodepoolId, pretty, depth, xContractNumber)
+> Object k8sNodepoolsDelete(k8sClusterIdnodepoolIdprettydepthxContractNumber)
 
 Delete Kubernetes Node Pool
 
@@ -2757,12 +2757,12 @@ This will remove a Kubernetes Node Pool.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2782,7 +2782,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.k8sNodepoolsDelete(k8sClusterId, nodepoolId, pretty, depth, xContractNumber);
+      Object result = apiInstance.k8sNodepoolsDelete(k8sClusterIdnodepoolIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsDelete");
@@ -2826,7 +2826,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sNodepoolsFindById"></a>
 # **k8sNodepoolsFindById**
-> KubernetesNodePool k8sNodepoolsFindById(k8sClusterId, nodepoolId, pretty, depth, xContractNumber)
+> KubernetesNodePool k8sNodepoolsFindById(k8sClusterIdnodepoolIdprettydepthxContractNumber)
 
 Retrieve Kubernetes Node Pool
 
@@ -2835,12 +2835,12 @@ You can retrieve a single Kubernetes Node Pool.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2860,7 +2860,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesNodePool result = apiInstance.k8sNodepoolsFindById(k8sClusterId, nodepoolId, pretty, depth, xContractNumber);
+      KubernetesNodePool result = apiInstance.k8sNodepoolsFindById(k8sClusterIdnodepoolIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsFindById");
@@ -2904,7 +2904,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sNodepoolsGet"></a>
 # **k8sNodepoolsGet**
-> KubernetesNodePools k8sNodepoolsGet(k8sClusterId, pretty, depth, xContractNumber)
+> KubernetesNodePools k8sNodepoolsGet(k8sClusterIdprettydepthxContractNumber)
 
 List Kubernetes Node Pools
 
@@ -2913,12 +2913,12 @@ You can retrieve a list of all kubernetes node pools part of kubernetes cluster
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -2937,7 +2937,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesNodePools result = apiInstance.k8sNodepoolsGet(k8sClusterId, pretty, depth, xContractNumber);
+      KubernetesNodePools result = apiInstance.k8sNodepoolsGet(k8sClusterIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsGet");
@@ -2980,7 +2980,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sNodepoolsNodesDelete"></a>
 # **k8sNodepoolsNodesDelete**
-> Object k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber)
+> Object k8sNodepoolsNodesDelete(k8sClusterIdnodepoolIdnodeIdprettydepthxContractNumber)
 
 Delete Kubernetes node
 
@@ -2989,12 +2989,12 @@ This will remove a Kubernetes node.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3015,7 +3015,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber);
+      Object result = apiInstance.k8sNodepoolsNodesDelete(k8sClusterIdnodepoolIdnodeIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsNodesDelete");
@@ -3060,7 +3060,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sNodepoolsNodesFindById"></a>
 # **k8sNodepoolsNodesFindById**
-> KubernetesNode k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber)
+> KubernetesNode k8sNodepoolsNodesFindById(k8sClusterIdnodepoolIdnodeIdprettydepthxContractNumber)
 
 Retrieve Kubernetes node
 
@@ -3069,12 +3069,12 @@ You can retrieve a single Kubernetes Node.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3095,7 +3095,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesNode result = apiInstance.k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber);
+      KubernetesNode result = apiInstance.k8sNodepoolsNodesFindById(k8sClusterIdnodepoolIdnodeIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsNodesFindById");
@@ -3140,7 +3140,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sNodepoolsNodesGet"></a>
 # **k8sNodepoolsNodesGet**
-> KubernetesNodes k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, pretty, depth, xContractNumber)
+> KubernetesNodes k8sNodepoolsNodesGet(k8sClusterIdnodepoolIdprettydepthxContractNumber)
 
 Retrieve Kubernetes nodes.
 
@@ -3149,12 +3149,12 @@ You can retrieve all nodes of Kubernetes Node Pool.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3174,7 +3174,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesNodes result = apiInstance.k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, pretty, depth, xContractNumber);
+      KubernetesNodes result = apiInstance.k8sNodepoolsNodesGet(k8sClusterIdnodepoolIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsNodesGet");
@@ -3218,7 +3218,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sNodepoolsNodesReplacePost"></a>
 # **k8sNodepoolsNodesReplacePost**
-> Object k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber)
+> Object k8sNodepoolsNodesReplacePost(k8sClusterIdnodepoolIdnodeIdprettydepthxContractNumber)
 
 Recreate the Kubernetes node
 
@@ -3227,12 +3227,12 @@ You can recreate a single Kubernetes Node.  Managed Kubernetes starts a process 
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3253,7 +3253,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber);
+      Object result = apiInstance.k8sNodepoolsNodesReplacePost(k8sClusterIdnodepoolIdnodeIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsNodesReplacePost");
@@ -3298,7 +3298,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sNodepoolsPost"></a>
 # **k8sNodepoolsPost**
-> KubernetesNodePool k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, pretty, depth, xContractNumber)
+> KubernetesNodePool k8sNodepoolsPost(k8sClusterIdkubernetesNodePoolprettydepthxContractNumber)
 
 Create a Kubernetes Node Pool
 
@@ -3307,12 +3307,12 @@ This will create a new Kubernetes Node Pool inside a Kubernetes Cluster.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3332,7 +3332,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesNodePool result = apiInstance.k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, pretty, depth, xContractNumber);
+      KubernetesNodePool result = apiInstance.k8sNodepoolsPost(k8sClusterIdkubernetesNodePoolprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsPost");
@@ -3376,7 +3376,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sNodepoolsPut"></a>
 # **k8sNodepoolsPut**
-> KubernetesNodePoolForPut k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber)
+> KubernetesNodePoolForPut k8sNodepoolsPut(k8sClusterIdnodepoolIdkubernetesNodePoolprettydepthxContractNumber)
 
 Modify Kubernetes Node Pool
 
@@ -3385,12 +3385,12 @@ This will modify the Kubernetes Node Pool.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3411,7 +3411,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesNodePoolForPut result = apiInstance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber);
+      KubernetesNodePoolForPut result = apiInstance.k8sNodepoolsPut(k8sClusterIdnodepoolIdkubernetesNodePoolprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsPut");
@@ -3456,7 +3456,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sPost"></a>
 # **k8sPost**
-> KubernetesCluster k8sPost(kubernetesCluster, pretty, depth, xContractNumber)
+> KubernetesCluster k8sPost(kubernetesClusterprettydepthxContractNumber)
 
 Create Kubernetes Cluster
 
@@ -3465,12 +3465,12 @@ This will create a new Kubernetes Cluster.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3489,7 +3489,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesCluster result = apiInstance.k8sPost(kubernetesCluster, pretty, depth, xContractNumber);
+      KubernetesCluster result = apiInstance.k8sPost(kubernetesClusterprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sPost");
@@ -3532,7 +3532,7 @@ Name | Type | Description  | Notes
 
 <a name="k8sPut"></a>
 # **k8sPut**
-> KubernetesCluster k8sPut(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber)
+> KubernetesCluster k8sPut(k8sClusterIdkubernetesClusterprettydepthxContractNumber)
 
 Modify Kubernetes Cluster
 
@@ -3541,12 +3541,12 @@ This will modify the Kubernetes Cluster.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3566,7 +3566,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      KubernetesCluster result = apiInstance.k8sPut(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber);
+      KubernetesCluster result = apiInstance.k8sPut(k8sClusterIdkubernetesClusterprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sPut");
@@ -3619,12 +3619,12 @@ You can retrieve a list of available kubernetes versions for nodepools depending
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3689,12 +3689,12 @@ You can retrieve the current default kubernetes version for clusters and nodepoo
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3755,12 +3755,12 @@ You can retrieve a list of available kubernetes versions
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.KubernetesApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.KubernetesApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3851,7 +3851,7 @@ Method | HTTP request | Description
 
 <a name="datacentersLabelsDelete"></a>
 # **datacentersLabelsDelete**
-> Object datacentersLabelsDelete(datacenterId, key, pretty, depth, xContractNumber)
+> Object datacentersLabelsDelete(datacenterIdkeyprettydepthxContractNumber)
 
 Delete a Label from Data Center
 
@@ -3860,12 +3860,12 @@ This will remove a label from the data center.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3885,7 +3885,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersLabelsDelete(datacenterId, key, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersLabelsDelete(datacenterIdkeyprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersLabelsDelete");
@@ -3929,7 +3929,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLabelsFindByKey"></a>
 # **datacentersLabelsFindByKey**
-> LabelResource datacentersLabelsFindByKey(datacenterId, key, pretty, depth, xContractNumber)
+> LabelResource datacentersLabelsFindByKey(datacenterIdkeyprettydepthxContractNumber)
 
 Retrieve a Label of Data Center
 
@@ -3938,12 +3938,12 @@ This will retrieve the properties of a associated label to a data center.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -3963,7 +3963,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.datacentersLabelsFindByKey(datacenterId, key, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.datacentersLabelsFindByKey(datacenterIdkeyprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersLabelsFindByKey");
@@ -4007,7 +4007,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLabelsGet"></a>
 # **datacentersLabelsGet**
-> LabelResources datacentersLabelsGet(datacenterId, pretty, depth, xContractNumber, offset, limit)
+> LabelResources datacentersLabelsGet(datacenterIdprettydepthxContractNumberoffsetlimit)
 
 List all Data Center Labels
 
@@ -4016,12 +4016,12 @@ You can retrieve a list of all labels associated with a data center
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4042,7 +4042,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      LabelResources result = apiInstance.datacentersLabelsGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
+      LabelResources result = apiInstance.datacentersLabelsGet(datacenterIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersLabelsGet");
@@ -4087,7 +4087,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLabelsPost"></a>
 # **datacentersLabelsPost**
-> LabelResource datacentersLabelsPost(datacenterId, label, pretty, depth, xContractNumber)
+> LabelResource datacentersLabelsPost(datacenterIdlabelprettydepthxContractNumber)
 
 Add a Label to Data Center
 
@@ -4096,12 +4096,12 @@ This will add a label to the data center.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4121,7 +4121,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.datacentersLabelsPost(datacenterId, label, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.datacentersLabelsPost(datacenterIdlabelprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersLabelsPost");
@@ -4165,7 +4165,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLabelsPut"></a>
 # **datacentersLabelsPut**
-> LabelResource datacentersLabelsPut(datacenterId, key, label, pretty, depth, xContractNumber)
+> LabelResource datacentersLabelsPut(datacenterIdkeylabelprettydepthxContractNumber)
 
 Modify a Label of Data Center
 
@@ -4174,12 +4174,12 @@ This will modify the value of the label on a data center.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4200,7 +4200,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.datacentersLabelsPut(datacenterId, key, label, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.datacentersLabelsPut(datacenterIdkeylabelprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersLabelsPut");
@@ -4245,7 +4245,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersLabelsDelete"></a>
 # **datacentersServersLabelsDelete**
-> Object datacentersServersLabelsDelete(datacenterId, serverId, key, pretty, depth, xContractNumber)
+> Object datacentersServersLabelsDelete(datacenterIdserverIdkeyprettydepthxContractNumber)
 
 Delete a Label from Server
 
@@ -4254,12 +4254,12 @@ This will remove a label from the server.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4280,7 +4280,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersServersLabelsDelete(datacenterId, serverId, key, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersServersLabelsDelete(datacenterIdserverIdkeyprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersServersLabelsDelete");
@@ -4325,7 +4325,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersLabelsFindByKey"></a>
 # **datacentersServersLabelsFindByKey**
-> LabelResource datacentersServersLabelsFindByKey(datacenterId, serverId, key, pretty, depth, xContractNumber)
+> LabelResource datacentersServersLabelsFindByKey(datacenterIdserverIdkeyprettydepthxContractNumber)
 
 Retrieve a Label of Server
 
@@ -4334,12 +4334,12 @@ This will retrieve the properties of a associated label to a server.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4360,7 +4360,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.datacentersServersLabelsFindByKey(datacenterId, serverId, key, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.datacentersServersLabelsFindByKey(datacenterIdserverIdkeyprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersServersLabelsFindByKey");
@@ -4405,7 +4405,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersLabelsGet"></a>
 # **datacentersServersLabelsGet**
-> LabelResources datacentersServersLabelsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit)
+> LabelResources datacentersServersLabelsGet(datacenterIdserverIdprettydepthxContractNumberoffsetlimit)
 
 List all Server Labels
 
@@ -4414,12 +4414,12 @@ You can retrieve a list of all labels associated with a server
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4441,7 +4441,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      LabelResources result = apiInstance.datacentersServersLabelsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
+      LabelResources result = apiInstance.datacentersServersLabelsGet(datacenterIdserverIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersServersLabelsGet");
@@ -4487,7 +4487,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersLabelsPost"></a>
 # **datacentersServersLabelsPost**
-> LabelResource datacentersServersLabelsPost(datacenterId, serverId, label, pretty, depth, xContractNumber)
+> LabelResource datacentersServersLabelsPost(datacenterIdserverIdlabelprettydepthxContractNumber)
 
 Add a Label to Server
 
@@ -4496,12 +4496,12 @@ This will add a label to the server.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4522,7 +4522,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.datacentersServersLabelsPost(datacenterId, serverId, label, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.datacentersServersLabelsPost(datacenterIdserverIdlabelprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersServersLabelsPost");
@@ -4567,7 +4567,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersLabelsPut"></a>
 # **datacentersServersLabelsPut**
-> LabelResource datacentersServersLabelsPut(datacenterId, serverId, key, label, pretty, depth, xContractNumber)
+> LabelResource datacentersServersLabelsPut(datacenterIdserverIdkeylabelprettydepthxContractNumber)
 
 Modify a Label of Server
 
@@ -4576,12 +4576,12 @@ This will modify the value of the label on a server.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4603,7 +4603,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.datacentersServersLabelsPut(datacenterId, serverId, key, label, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.datacentersServersLabelsPut(datacenterIdserverIdkeylabelprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersServersLabelsPut");
@@ -4649,7 +4649,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesLabelsDelete"></a>
 # **datacentersVolumesLabelsDelete**
-> Object datacentersVolumesLabelsDelete(datacenterId, volumeId, key, pretty, depth, xContractNumber)
+> Object datacentersVolumesLabelsDelete(datacenterIdvolumeIdkeyprettydepthxContractNumber)
 
 Delete a Label from Volume
 
@@ -4658,12 +4658,12 @@ This will remove a label from the volume.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4684,7 +4684,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersVolumesLabelsDelete(datacenterId, volumeId, key, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersVolumesLabelsDelete(datacenterIdvolumeIdkeyprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersVolumesLabelsDelete");
@@ -4729,7 +4729,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesLabelsFindByKey"></a>
 # **datacentersVolumesLabelsFindByKey**
-> LabelResource datacentersVolumesLabelsFindByKey(datacenterId, volumeId, key, pretty, depth, xContractNumber)
+> LabelResource datacentersVolumesLabelsFindByKey(datacenterIdvolumeIdkeyprettydepthxContractNumber)
 
 Retrieve a Label of Volume
 
@@ -4738,12 +4738,12 @@ This will retrieve the properties of a associated label to a volume.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4764,7 +4764,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.datacentersVolumesLabelsFindByKey(datacenterId, volumeId, key, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.datacentersVolumesLabelsFindByKey(datacenterIdvolumeIdkeyprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersVolumesLabelsFindByKey");
@@ -4809,7 +4809,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesLabelsGet"></a>
 # **datacentersVolumesLabelsGet**
-> LabelResources datacentersVolumesLabelsGet(datacenterId, volumeId, pretty, depth, xContractNumber, offset, limit)
+> LabelResources datacentersVolumesLabelsGet(datacenterIdvolumeIdprettydepthxContractNumberoffsetlimit)
 
 List all Volume Labels
 
@@ -4818,12 +4818,12 @@ You can retrieve a list of all labels associated with a volume
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4845,7 +4845,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      LabelResources result = apiInstance.datacentersVolumesLabelsGet(datacenterId, volumeId, pretty, depth, xContractNumber, offset, limit);
+      LabelResources result = apiInstance.datacentersVolumesLabelsGet(datacenterIdvolumeIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersVolumesLabelsGet");
@@ -4891,7 +4891,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesLabelsPost"></a>
 # **datacentersVolumesLabelsPost**
-> LabelResource datacentersVolumesLabelsPost(datacenterId, volumeId, label, pretty, depth, xContractNumber)
+> LabelResource datacentersVolumesLabelsPost(datacenterIdvolumeIdlabelprettydepthxContractNumber)
 
 Add a Label to Volume
 
@@ -4900,12 +4900,12 @@ This will add a label to the volume.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -4926,7 +4926,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.datacentersVolumesLabelsPost(datacenterId, volumeId, label, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.datacentersVolumesLabelsPost(datacenterIdvolumeIdlabelprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersVolumesLabelsPost");
@@ -4971,7 +4971,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesLabelsPut"></a>
 # **datacentersVolumesLabelsPut**
-> LabelResource datacentersVolumesLabelsPut(datacenterId, volumeId, key, label, pretty, depth, xContractNumber)
+> LabelResource datacentersVolumesLabelsPut(datacenterIdvolumeIdkeylabelprettydepthxContractNumber)
 
 Modify a Label of Volume
 
@@ -4980,12 +4980,12 @@ This will modify the value of the label on a volume.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5007,7 +5007,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.datacentersVolumesLabelsPut(datacenterId, volumeId, key, label, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.datacentersVolumesLabelsPut(datacenterIdvolumeIdkeylabelprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#datacentersVolumesLabelsPut");
@@ -5053,7 +5053,7 @@ Name | Type | Description  | Notes
 
 <a name="ipblocksLabelsDelete"></a>
 # **ipblocksLabelsDelete**
-> Object ipblocksLabelsDelete(ipblockId, key, pretty, depth, xContractNumber)
+> Object ipblocksLabelsDelete(ipblockIdkeyprettydepthxContractNumber)
 
 Delete a Label from IP Block
 
@@ -5062,12 +5062,12 @@ This will remove a label from the Ip Block.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5087,7 +5087,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.ipblocksLabelsDelete(ipblockId, key, pretty, depth, xContractNumber);
+      Object result = apiInstance.ipblocksLabelsDelete(ipblockIdkeyprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#ipblocksLabelsDelete");
@@ -5131,7 +5131,7 @@ Name | Type | Description  | Notes
 
 <a name="ipblocksLabelsFindByKey"></a>
 # **ipblocksLabelsFindByKey**
-> LabelResource ipblocksLabelsFindByKey(ipblockId, key, pretty, depth, xContractNumber)
+> LabelResource ipblocksLabelsFindByKey(ipblockIdkeyprettydepthxContractNumber)
 
 Retrieve a Label of IP Block
 
@@ -5140,12 +5140,12 @@ This will retrieve the properties of a associated label to a Ip Block.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5165,7 +5165,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.ipblocksLabelsFindByKey(ipblockId, key, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.ipblocksLabelsFindByKey(ipblockIdkeyprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#ipblocksLabelsFindByKey");
@@ -5209,7 +5209,7 @@ Name | Type | Description  | Notes
 
 <a name="ipblocksLabelsGet"></a>
 # **ipblocksLabelsGet**
-> LabelResources ipblocksLabelsGet(ipblockId, pretty, depth, xContractNumber)
+> LabelResources ipblocksLabelsGet(ipblockIdprettydepthxContractNumber)
 
 List all Ip Block Labels
 
@@ -5218,12 +5218,12 @@ You can retrieve a list of all labels associated with a IP Block
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5242,7 +5242,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResources result = apiInstance.ipblocksLabelsGet(ipblockId, pretty, depth, xContractNumber);
+      LabelResources result = apiInstance.ipblocksLabelsGet(ipblockIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#ipblocksLabelsGet");
@@ -5285,7 +5285,7 @@ Name | Type | Description  | Notes
 
 <a name="ipblocksLabelsPost"></a>
 # **ipblocksLabelsPost**
-> LabelResource ipblocksLabelsPost(ipblockId, label, pretty, depth, xContractNumber)
+> LabelResource ipblocksLabelsPost(ipblockIdlabelprettydepthxContractNumber)
 
 Add a Label to IP Block
 
@@ -5294,12 +5294,12 @@ This will add a label to the Ip Block.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5319,7 +5319,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.ipblocksLabelsPost(ipblockId, label, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.ipblocksLabelsPost(ipblockIdlabelprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#ipblocksLabelsPost");
@@ -5363,7 +5363,7 @@ Name | Type | Description  | Notes
 
 <a name="ipblocksLabelsPut"></a>
 # **ipblocksLabelsPut**
-> LabelResource ipblocksLabelsPut(ipblockId, key, label, pretty, depth, xContractNumber)
+> LabelResource ipblocksLabelsPut(ipblockIdkeylabelprettydepthxContractNumber)
 
 Modify a Label of IP Block
 
@@ -5372,12 +5372,12 @@ This will modify the value of the label on a Ip Block.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5398,7 +5398,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.ipblocksLabelsPut(ipblockId, key, label, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.ipblocksLabelsPut(ipblockIdkeylabelprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#ipblocksLabelsPut");
@@ -5443,7 +5443,7 @@ Name | Type | Description  | Notes
 
 <a name="labelsFindByUrn"></a>
 # **labelsFindByUrn**
-> Label labelsFindByUrn(labelurn, pretty, depth, xContractNumber)
+> Label labelsFindByUrn(labelurnprettydepthxContractNumber)
 
 Returns the label by its URN.
 
@@ -5452,12 +5452,12 @@ You can retrieve the details of a specific label using its URN. A URN is for uni
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5476,7 +5476,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Label result = apiInstance.labelsFindByUrn(labelurn, pretty, depth, xContractNumber);
+      Label result = apiInstance.labelsFindByUrn(labelurnprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#labelsFindByUrn");
@@ -5519,7 +5519,7 @@ Name | Type | Description  | Notes
 
 <a name="labelsGet"></a>
 # **labelsGet**
-> Labels labelsGet(pretty, depth, xContractNumber)
+> Labels labelsGet(prettydepthxContractNumber)
 
 List Labels 
 
@@ -5528,12 +5528,12 @@ You can retrieve a complete list of labels that you have access to.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5551,7 +5551,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Labels result = apiInstance.labelsGet(pretty, depth, xContractNumber);
+      Labels result = apiInstance.labelsGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#labelsGet");
@@ -5593,7 +5593,7 @@ Name | Type | Description  | Notes
 
 <a name="snapshotsLabelsDelete"></a>
 # **snapshotsLabelsDelete**
-> Object snapshotsLabelsDelete(snapshotId, key, pretty, depth, xContractNumber)
+> Object snapshotsLabelsDelete(snapshotIdkeyprettydepthxContractNumber)
 
 Delete a Label from Snapshot
 
@@ -5602,12 +5602,12 @@ This will remove a label from the snapshot.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5627,7 +5627,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.snapshotsLabelsDelete(snapshotId, key, pretty, depth, xContractNumber);
+      Object result = apiInstance.snapshotsLabelsDelete(snapshotIdkeyprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#snapshotsLabelsDelete");
@@ -5671,7 +5671,7 @@ Name | Type | Description  | Notes
 
 <a name="snapshotsLabelsFindByKey"></a>
 # **snapshotsLabelsFindByKey**
-> LabelResource snapshotsLabelsFindByKey(snapshotId, key, pretty, depth, xContractNumber)
+> LabelResource snapshotsLabelsFindByKey(snapshotIdkeyprettydepthxContractNumber)
 
 Retrieve a Label of Snapshot
 
@@ -5680,12 +5680,12 @@ This will retrieve the properties of a associated label to a snapshot.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5705,7 +5705,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.snapshotsLabelsFindByKey(snapshotId, key, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.snapshotsLabelsFindByKey(snapshotIdkeyprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#snapshotsLabelsFindByKey");
@@ -5749,7 +5749,7 @@ Name | Type | Description  | Notes
 
 <a name="snapshotsLabelsGet"></a>
 # **snapshotsLabelsGet**
-> LabelResources snapshotsLabelsGet(snapshotId, pretty, depth, xContractNumber)
+> LabelResources snapshotsLabelsGet(snapshotIdprettydepthxContractNumber)
 
 List all Snapshot Labels
 
@@ -5758,12 +5758,12 @@ You can retrieve a list of all labels associated with a snapshot
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5782,7 +5782,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResources result = apiInstance.snapshotsLabelsGet(snapshotId, pretty, depth, xContractNumber);
+      LabelResources result = apiInstance.snapshotsLabelsGet(snapshotIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#snapshotsLabelsGet");
@@ -5825,7 +5825,7 @@ Name | Type | Description  | Notes
 
 <a name="snapshotsLabelsPost"></a>
 # **snapshotsLabelsPost**
-> LabelResource snapshotsLabelsPost(snapshotId, label, pretty, depth, xContractNumber)
+> LabelResource snapshotsLabelsPost(snapshotIdlabelprettydepthxContractNumber)
 
 Add a Label to Snapshot
 
@@ -5834,12 +5834,12 @@ This will add a label to the snapshot.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5859,7 +5859,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.snapshotsLabelsPost(snapshotId, label, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.snapshotsLabelsPost(snapshotIdlabelprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#snapshotsLabelsPost");
@@ -5903,7 +5903,7 @@ Name | Type | Description  | Notes
 
 <a name="snapshotsLabelsPut"></a>
 # **snapshotsLabelsPut**
-> LabelResource snapshotsLabelsPut(snapshotId, key, label, pretty, depth, xContractNumber)
+> LabelResource snapshotsLabelsPut(snapshotIdkeylabelprettydepthxContractNumber)
 
 Modify a Label of Snapshot
 
@@ -5912,12 +5912,12 @@ This will modify the value of the label on a snapshot.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LabelApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LabelApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -5938,7 +5938,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LabelResource result = apiInstance.snapshotsLabelsPut(snapshotId, key, label, pretty, depth, xContractNumber);
+      LabelResource result = apiInstance.snapshotsLabelsPut(snapshotIdkeylabelprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LabelApi#snapshotsLabelsPut");
@@ -6004,7 +6004,7 @@ Method | HTTP request | Description
 
 <a name="datacentersLansDelete"></a>
 # **datacentersLansDelete**
-> Object datacentersLansDelete(datacenterId, lanId, pretty, depth, xContractNumber)
+> Object datacentersLansDelete(datacenterIdlanIdprettydepthxContractNumber)
 
 Delete a Lan.
 
@@ -6013,12 +6013,12 @@ Removes the specific Lan
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LanApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6038,7 +6038,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersLansDelete(datacenterId, lanId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersLansDelete(datacenterIdlanIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LanApi#datacentersLansDelete");
@@ -6082,7 +6082,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLansFindById"></a>
 # **datacentersLansFindById**
-> Lan datacentersLansFindById(datacenterId, lanId, pretty, depth, xContractNumber)
+> Lan datacentersLansFindById(datacenterIdlanIdprettydepthxContractNumber)
 
 Retrieve a Lan
 
@@ -6091,12 +6091,12 @@ Retrieves the attributes of a given LAN
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LanApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6116,7 +6116,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Lan result = apiInstance.datacentersLansFindById(datacenterId, lanId, pretty, depth, xContractNumber);
+      Lan result = apiInstance.datacentersLansFindById(datacenterIdlanIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LanApi#datacentersLansFindById");
@@ -6160,7 +6160,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLansGet"></a>
 # **datacentersLansGet**
-> Lans datacentersLansGet(datacenterId, pretty, depth, xContractNumber, offset, limit)
+> Lans datacentersLansGet(datacenterIdprettydepthxContractNumberoffsetlimit)
 
 List Lans
 
@@ -6169,12 +6169,12 @@ Retrieve a list of LANs within the datacenter
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LanApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6195,7 +6195,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Lans result = apiInstance.datacentersLansGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
+      Lans result = apiInstance.datacentersLansGet(datacenterIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LanApi#datacentersLansGet");
@@ -6240,7 +6240,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLansNicsFindById"></a>
 # **datacentersLansNicsFindById**
-> Nic datacentersLansNicsFindById(datacenterId, lanId, nicId, pretty, depth, xContractNumber)
+> Nic datacentersLansNicsFindById(datacenterIdlanIdnicIdprettydepthxContractNumber)
 
 Retrieve a nic attached to lan
 
@@ -6249,12 +6249,12 @@ This will retrieve the properties of an attached nic.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LanApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6275,7 +6275,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersLansNicsFindById(datacenterId, lanId, nicId, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersLansNicsFindById(datacenterIdlanIdnicIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LanApi#datacentersLansNicsFindById");
@@ -6320,7 +6320,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLansNicsGet"></a>
 # **datacentersLansNicsGet**
-> LanNics datacentersLansNicsGet(datacenterId, lanId, pretty, depth, xContractNumber, offset, limit)
+> LanNics datacentersLansNicsGet(datacenterIdlanIdprettydepthxContractNumberoffsetlimit)
 
 List Lan Members 
 
@@ -6329,12 +6329,12 @@ You can retrieve a list of nics attached to a lan
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LanApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6356,7 +6356,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      LanNics result = apiInstance.datacentersLansNicsGet(datacenterId, lanId, pretty, depth, xContractNumber, offset, limit);
+      LanNics result = apiInstance.datacentersLansNicsGet(datacenterIdlanIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LanApi#datacentersLansNicsGet");
@@ -6402,7 +6402,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLansNicsPost"></a>
 # **datacentersLansNicsPost**
-> Nic datacentersLansNicsPost(datacenterId, lanId, nic, pretty, depth, xContractNumber)
+> Nic datacentersLansNicsPost(datacenterIdlanIdnicprettydepthxContractNumber)
 
 Attach a nic
 
@@ -6411,12 +6411,12 @@ This will attach a pre-existing nic to a lan.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LanApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6437,7 +6437,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersLansNicsPost(datacenterId, lanId, nic, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersLansNicsPost(datacenterIdlanIdnicprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LanApi#datacentersLansNicsPost");
@@ -6482,7 +6482,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLansPatch"></a>
 # **datacentersLansPatch**
-> Lan datacentersLansPatch(datacenterId, lanId, lan, pretty, depth, xContractNumber)
+> Lan datacentersLansPatch(datacenterIdlanIdlanprettydepthxContractNumber)
 
 Partially modify a Lan
 
@@ -6491,12 +6491,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LanApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6517,7 +6517,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Lan result = apiInstance.datacentersLansPatch(datacenterId, lanId, lan, pretty, depth, xContractNumber);
+      Lan result = apiInstance.datacentersLansPatch(datacenterIdlanIdlanprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LanApi#datacentersLansPatch");
@@ -6562,7 +6562,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLansPost"></a>
 # **datacentersLansPost**
-> LanPost datacentersLansPost(datacenterId, lan, pretty, depth, xContractNumber)
+> LanPost datacentersLansPost(datacenterIdlanprettydepthxContractNumber)
 
 Create a Lan
 
@@ -6571,12 +6571,12 @@ Creates a LAN within the datacenter
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LanApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6596,7 +6596,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      LanPost result = apiInstance.datacentersLansPost(datacenterId, lan, pretty, depth, xContractNumber);
+      LanPost result = apiInstance.datacentersLansPost(datacenterIdlanprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LanApi#datacentersLansPost");
@@ -6640,7 +6640,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLansPut"></a>
 # **datacentersLansPut**
-> Lan datacentersLansPut(datacenterId, lanId, lan, pretty, depth, xContractNumber)
+> Lan datacentersLansPut(datacenterIdlanIdlanprettydepthxContractNumber)
 
 Modify a Lan
 
@@ -6649,12 +6649,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LanApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LanApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6675,7 +6675,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Lan result = apiInstance.datacentersLansPut(datacenterId, lanId, lan, pretty, depth, xContractNumber);
+      Lan result = apiInstance.datacentersLansPut(datacenterIdlanIdlanprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LanApi#datacentersLansPut");
@@ -6742,7 +6742,7 @@ Method | HTTP request | Description
 
 <a name="datacentersLoadbalancersBalancednicsDelete"></a>
 # **datacentersLoadbalancersBalancednicsDelete**
-> Object datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber)
+> Object datacentersLoadbalancersBalancednicsDelete(datacenterIdloadbalancerIdnicIdprettydepthxContractNumber)
 
 Detach a nic from loadbalancer
 
@@ -6751,12 +6751,12 @@ This will remove a nic from Load Balancer
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LoadBalancerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6777,7 +6777,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersLoadbalancersBalancednicsDelete(datacenterIdloadbalancerIdnicIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsDelete");
@@ -6822,7 +6822,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLoadbalancersBalancednicsFindByNicId"></a>
 # **datacentersLoadbalancersBalancednicsFindByNicId**
-> Nic datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber)
+> Nic datacentersLoadbalancersBalancednicsFindByNicId(datacenterIdloadbalancerIdnicIdprettydepthxContractNumber)
 
 Retrieve a nic attached to Load Balancer
 
@@ -6831,12 +6831,12 @@ This will retrieve the properties of an attached nic.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LoadBalancerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6857,7 +6857,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterIdloadbalancerIdnicIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsFindByNicId");
@@ -6902,7 +6902,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLoadbalancersBalancednicsGet"></a>
 # **datacentersLoadbalancersBalancednicsGet**
-> BalancedNics datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, pretty, depth, xContractNumber, offset, limit)
+> BalancedNics datacentersLoadbalancersBalancednicsGet(datacenterIdloadbalancerIdprettydepthxContractNumberoffsetlimit)
 
 List Load Balancer Members 
 
@@ -6911,12 +6911,12 @@ You can retrieve a list of nics attached to a Load Balancer
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LoadBalancerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -6938,7 +6938,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      BalancedNics result = apiInstance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, pretty, depth, xContractNumber, offset, limit);
+      BalancedNics result = apiInstance.datacentersLoadbalancersBalancednicsGet(datacenterIdloadbalancerIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsGet");
@@ -6984,7 +6984,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLoadbalancersBalancednicsPost"></a>
 # **datacentersLoadbalancersBalancednicsPost**
-> Nic datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancerId, nic, pretty, depth, xContractNumber)
+> Nic datacentersLoadbalancersBalancednicsPost(datacenterIdloadbalancerIdnicprettydepthxContractNumber)
 
 Attach a nic to Load Balancer
 
@@ -6993,12 +6993,12 @@ This will attach a pre-existing nic to a Load Balancer.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LoadBalancerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7019,7 +7019,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancerId, nic, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersLoadbalancersBalancednicsPost(datacenterIdloadbalancerIdnicprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsPost");
@@ -7064,7 +7064,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLoadbalancersDelete"></a>
 # **datacentersLoadbalancersDelete**
-> Object datacentersLoadbalancersDelete(datacenterId, loadbalancerId, pretty, depth, xContractNumber)
+> Object datacentersLoadbalancersDelete(datacenterIdloadbalancerIdprettydepthxContractNumber)
 
 Delete a Loadbalancer.
 
@@ -7073,12 +7073,12 @@ Removes the specific Loadbalancer
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LoadBalancerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7098,7 +7098,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersLoadbalancersDelete(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersLoadbalancersDelete(datacenterIdloadbalancerIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersDelete");
@@ -7142,7 +7142,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLoadbalancersFindById"></a>
 # **datacentersLoadbalancersFindById**
-> Loadbalancer datacentersLoadbalancersFindById(datacenterId, loadbalancerId, pretty, depth, xContractNumber)
+> Loadbalancer datacentersLoadbalancersFindById(datacenterIdloadbalancerIdprettydepthxContractNumber)
 
 Retrieve a loadbalancer
 
@@ -7151,12 +7151,12 @@ Retrieves the attributes of a given Loadbalancer
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LoadBalancerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7176,7 +7176,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Loadbalancer result = apiInstance.datacentersLoadbalancersFindById(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
+      Loadbalancer result = apiInstance.datacentersLoadbalancersFindById(datacenterIdloadbalancerIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersFindById");
@@ -7220,7 +7220,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLoadbalancersGet"></a>
 # **datacentersLoadbalancersGet**
-> Loadbalancers datacentersLoadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit)
+> Loadbalancers datacentersLoadbalancersGet(datacenterIdprettydepthxContractNumberoffsetlimit)
 
 List Load Balancers
 
@@ -7229,12 +7229,12 @@ Retrieve a list of Load Balancers within the datacenter
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LoadBalancerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7255,7 +7255,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Loadbalancers result = apiInstance.datacentersLoadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
+      Loadbalancers result = apiInstance.datacentersLoadbalancersGet(datacenterIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersGet");
@@ -7300,7 +7300,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLoadbalancersPatch"></a>
 # **datacentersLoadbalancersPatch**
-> Loadbalancer datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber)
+> Loadbalancer datacentersLoadbalancersPatch(datacenterIdloadbalancerIdloadbalancerprettydepthxContractNumber)
 
 Partially modify a Loadbalancer
 
@@ -7309,12 +7309,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LoadBalancerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7335,7 +7335,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Loadbalancer result = apiInstance.datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber);
+      Loadbalancer result = apiInstance.datacentersLoadbalancersPatch(datacenterIdloadbalancerIdloadbalancerprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersPatch");
@@ -7380,7 +7380,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLoadbalancersPost"></a>
 # **datacentersLoadbalancersPost**
-> Loadbalancer datacentersLoadbalancersPost(datacenterId, loadbalancer, pretty, depth, xContractNumber)
+> Loadbalancer datacentersLoadbalancersPost(datacenterIdloadbalancerprettydepthxContractNumber)
 
 Create a Load Balancer
 
@@ -7389,12 +7389,12 @@ Creates a Loadbalancer within the datacenter
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LoadBalancerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7414,7 +7414,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Loadbalancer result = apiInstance.datacentersLoadbalancersPost(datacenterId, loadbalancer, pretty, depth, xContractNumber);
+      Loadbalancer result = apiInstance.datacentersLoadbalancersPost(datacenterIdloadbalancerprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersPost");
@@ -7458,7 +7458,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersLoadbalancersPut"></a>
 # **datacentersLoadbalancersPut**
-> Loadbalancer datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber)
+> Loadbalancer datacentersLoadbalancersPut(datacenterIdloadbalancerIdloadbalancerprettydepthxContractNumber)
 
 Modify a Load Balancer
 
@@ -7467,12 +7467,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LoadBalancerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7493,7 +7493,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Loadbalancer result = apiInstance.datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber);
+      Loadbalancer result = apiInstance.datacentersLoadbalancersPut(datacenterIdloadbalancerIdloadbalancerprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersPut");
@@ -7553,7 +7553,7 @@ Method | HTTP request | Description
 
 <a name="locationsFindByRegionId"></a>
 # **locationsFindByRegionId**
-> Locations locationsFindByRegionId(regionId, pretty, depth, xContractNumber)
+> Locations locationsFindByRegionId(regionIdprettydepthxContractNumber)
 
 List Locations within a region
 
@@ -7562,12 +7562,12 @@ Retrieve a list of Locations within a world&#39;s region
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LocationApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LocationApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7586,7 +7586,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Locations result = apiInstance.locationsFindByRegionId(regionId, pretty, depth, xContractNumber);
+      Locations result = apiInstance.locationsFindByRegionId(regionIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LocationApi#locationsFindByRegionId");
@@ -7629,7 +7629,7 @@ Name | Type | Description  | Notes
 
 <a name="locationsFindByRegionIdAndId"></a>
 # **locationsFindByRegionIdAndId**
-> Location locationsFindByRegionIdAndId(regionId, locationId, pretty, depth, xContractNumber)
+> Location locationsFindByRegionIdAndId(regionIdlocationIdprettydepthxContractNumber)
 
 Retrieve a Location
 
@@ -7638,12 +7638,12 @@ Retrieves the attributes of a given location
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LocationApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LocationApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7663,7 +7663,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Location result = apiInstance.locationsFindByRegionIdAndId(regionId, locationId, pretty, depth, xContractNumber);
+      Location result = apiInstance.locationsFindByRegionIdAndId(regionIdlocationIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LocationApi#locationsFindByRegionIdAndId");
@@ -7707,7 +7707,7 @@ Name | Type | Description  | Notes
 
 <a name="locationsGet"></a>
 # **locationsGet**
-> Locations locationsGet(pretty, depth, xContractNumber)
+> Locations locationsGet(prettydepthxContractNumber)
 
 List Locations
 
@@ -7716,12 +7716,12 @@ Retrieve a list of Locations. This list represents where you can provision your 
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.LocationApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.LocationApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7739,7 +7739,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Locations result = apiInstance.locationsGet(pretty, depth, xContractNumber);
+      Locations result = apiInstance.locationsGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LocationApi#locationsGet");
@@ -7805,7 +7805,7 @@ Method | HTTP request | Description
 
 <a name="datacentersServersNicsDelete"></a>
 # **datacentersServersNicsDelete**
-> Object datacentersServersNicsDelete(datacenterId, serverId, nicId, pretty, depth, xContractNumber)
+> Object datacentersServersNicsDelete(datacenterIdserverIdnicIdprettydepthxContractNumber)
 
 Delete a Nic
 
@@ -7814,12 +7814,12 @@ Deletes the specified NIC.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.NicApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7840,7 +7840,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersServersNicsDelete(datacenterId, serverId, nicId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersServersNicsDelete(datacenterIdserverIdnicIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsDelete");
@@ -7885,7 +7885,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersNicsFindById"></a>
 # **datacentersServersNicsFindById**
-> Nic datacentersServersNicsFindById(datacenterId, serverId, nicId, pretty, depth, xContractNumber)
+> Nic datacentersServersNicsFindById(datacenterIdserverIdnicIdprettydepthxContractNumber)
 
 Retrieve a Nic
 
@@ -7894,12 +7894,12 @@ Retrieves the attributes of a given NIC
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.NicApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -7920,7 +7920,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersServersNicsFindById(datacenterId, serverId, nicId, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersServersNicsFindById(datacenterIdserverIdnicIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFindById");
@@ -7965,7 +7965,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersNicsFirewallrulesDelete"></a>
 # **datacentersServersNicsFirewallrulesDelete**
-> Object datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber)
+> Object datacentersServersNicsFirewallrulesDelete(datacenterIdserverIdnicIdfirewallruleIdprettydepthxContractNumber)
 
 Delete a Firewall Rule
 
@@ -7974,12 +7974,12 @@ Removes the specific Firewall Rule
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.NicApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8001,7 +8001,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersServersNicsFirewallrulesDelete(datacenterIdserverIdnicIdfirewallruleIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesDelete");
@@ -8047,7 +8047,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersNicsFirewallrulesFindById"></a>
 # **datacentersServersNicsFirewallrulesFindById**
-> FirewallRule datacentersServersNicsFirewallrulesFindById(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber)
+> FirewallRule datacentersServersNicsFirewallrulesFindById(datacenterIdserverIdnicIdfirewallruleIdprettydepthxContractNumber)
 
 Retrieve a Firewall Rule
 
@@ -8056,12 +8056,12 @@ Retrieves the attributes of a given Firewall Rule.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.NicApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8083,7 +8083,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesFindById(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber);
+      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesFindById(datacenterIdserverIdnicIdfirewallruleIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesFindById");
@@ -8129,7 +8129,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersNicsFirewallrulesGet"></a>
 # **datacentersServersNicsFirewallrulesGet**
-> FirewallRules datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit)
+> FirewallRules datacentersServersNicsFirewallrulesGet(datacenterIdserverIdnicIdprettydepthxContractNumberoffsetlimit)
 
 List Firewall Rules 
 
@@ -8138,12 +8138,12 @@ Retrieves a list of firewall rules associated with a particular NIC
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.NicApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8166,7 +8166,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      FirewallRules result = apiInstance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit);
+      FirewallRules result = apiInstance.datacentersServersNicsFirewallrulesGet(datacenterIdserverIdnicIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesGet");
@@ -8213,7 +8213,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersNicsFirewallrulesPatch"></a>
 # **datacentersServersNicsFirewallrulesPatch**
-> FirewallRule datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber)
+> FirewallRule datacentersServersNicsFirewallrulesPatch(datacenterIdserverIdnicIdfirewallruleIdfirewallruleprettydepthxContractNumber)
 
 Partially modify a Firewall Rule
 
@@ -8222,12 +8222,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.NicApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8250,7 +8250,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber);
+      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPatch(datacenterIdserverIdnicIdfirewallruleIdfirewallruleprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesPatch");
@@ -8297,7 +8297,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersNicsFirewallrulesPost"></a>
 # **datacentersServersNicsFirewallrulesPost**
-> FirewallRule datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber)
+> FirewallRule datacentersServersNicsFirewallrulesPost(datacenterIdserverIdnicIdfirewallruleprettydepthxContractNumber)
 
 Create a Firewall Rule
 
@@ -8306,12 +8306,12 @@ This will add a Firewall Rule to the NIC
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.NicApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8333,7 +8333,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber);
+      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPost(datacenterIdserverIdnicIdfirewallruleprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesPost");
@@ -8379,7 +8379,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersNicsFirewallrulesPut"></a>
 # **datacentersServersNicsFirewallrulesPut**
-> FirewallRule datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber)
+> FirewallRule datacentersServersNicsFirewallrulesPut(datacenterIdserverIdnicIdfirewallruleIdfirewallruleprettydepthxContractNumber)
 
 Modify a Firewall Rule
 
@@ -8388,12 +8388,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.NicApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8416,7 +8416,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber);
+      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPut(datacenterIdserverIdnicIdfirewallruleIdfirewallruleprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesPut");
@@ -8463,7 +8463,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersNicsGet"></a>
 # **datacentersServersNicsGet**
-> Nics datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit)
+> Nics datacentersServersNicsGet(datacenterIdserverIdprettydepthxContractNumberoffsetlimit)
 
 List Nics 
 
@@ -8472,12 +8472,12 @@ Retrieves a list of NICs.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.NicApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8499,7 +8499,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Nics result = apiInstance.datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
+      Nics result = apiInstance.datacentersServersNicsGet(datacenterIdserverIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsGet");
@@ -8545,7 +8545,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersNicsPatch"></a>
 # **datacentersServersNicsPatch**
-> Nic datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber)
+> Nic datacentersServersNicsPatch(datacenterIdserverIdnicIdnicprettydepthxContractNumber)
 
 Partially modify a Nic
 
@@ -8554,12 +8554,12 @@ You can use update attributes of a Nic
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.NicApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8581,7 +8581,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersServersNicsPatch(datacenterIdserverIdnicIdnicprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsPatch");
@@ -8627,7 +8627,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersNicsPost"></a>
 # **datacentersServersNicsPost**
-> Nic datacentersServersNicsPost(datacenterId, serverId, nic, pretty, depth, xContractNumber)
+> Nic datacentersServersNicsPost(datacenterIdserverIdnicprettydepthxContractNumber)
 
 Create a Nic
 
@@ -8636,12 +8636,12 @@ Adds a NIC to the target server. Combine count of Nics and volumes attached to t
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.NicApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8662,7 +8662,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersServersNicsPost(datacenterId, serverId, nic, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersServersNicsPost(datacenterIdserverIdnicprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsPost");
@@ -8707,7 +8707,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersNicsPut"></a>
 # **datacentersServersNicsPut**
-> Nic datacentersServersNicsPut(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber)
+> Nic datacentersServersNicsPut(datacenterIdserverIdnicIdnicprettydepthxContractNumber)
 
 Modify a Nic
 
@@ -8716,12 +8716,12 @@ You can use update attributes of a Nic
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.NicApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.NicApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8743,7 +8743,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersServersNicsPut(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersServersNicsPut(datacenterIdserverIdnicIdnicprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsPut");
@@ -8806,7 +8806,7 @@ Method | HTTP request | Description
 
 <a name="pccsDelete"></a>
 # **pccsDelete**
-> Object pccsDelete(pccId, pretty, depth, xContractNumber)
+> Object pccsDelete(pccIdprettydepthxContractNumber)
 
 Delete a Private Cross-Connect
 
@@ -8815,12 +8815,12 @@ Delete a private cross-connect if no datacenters are joined to the given PCC
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.PrivateCrossConnectApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.PrivateCrossConnectApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8839,7 +8839,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.pccsDelete(pccId, pretty, depth, xContractNumber);
+      Object result = apiInstance.pccsDelete(pccIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling PrivateCrossConnectApi#pccsDelete");
@@ -8882,7 +8882,7 @@ Name | Type | Description  | Notes
 
 <a name="pccsFindById"></a>
 # **pccsFindById**
-> PrivateCrossConnect pccsFindById(pccId, pretty, depth, xContractNumber)
+> PrivateCrossConnect pccsFindById(pccIdprettydepthxContractNumber)
 
 Retrieve a Private Cross-Connect
 
@@ -8891,12 +8891,12 @@ You can retrieve a private cross-connect by using the resource&#39;s ID. This va
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.PrivateCrossConnectApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.PrivateCrossConnectApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8915,7 +8915,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      PrivateCrossConnect result = apiInstance.pccsFindById(pccId, pretty, depth, xContractNumber);
+      PrivateCrossConnect result = apiInstance.pccsFindById(pccIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling PrivateCrossConnectApi#pccsFindById");
@@ -8958,7 +8958,7 @@ Name | Type | Description  | Notes
 
 <a name="pccsGet"></a>
 # **pccsGet**
-> PrivateCrossConnects pccsGet(pretty, depth, xContractNumber)
+> PrivateCrossConnects pccsGet(prettydepthxContractNumber)
 
 List Private Cross-Connects 
 
@@ -8967,12 +8967,12 @@ You can retrieve a complete list of private cross-connects provisioned under you
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.PrivateCrossConnectApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.PrivateCrossConnectApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -8990,7 +8990,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      PrivateCrossConnects result = apiInstance.pccsGet(pretty, depth, xContractNumber);
+      PrivateCrossConnects result = apiInstance.pccsGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling PrivateCrossConnectApi#pccsGet");
@@ -9032,7 +9032,7 @@ Name | Type | Description  | Notes
 
 <a name="pccsPatch"></a>
 # **pccsPatch**
-> PrivateCrossConnect pccsPatch(pccId, pcc, pretty, depth, xContractNumber)
+> PrivateCrossConnect pccsPatch(pccIdpccprettydepthxContractNumber)
 
 Partially modify a private cross-connect
 
@@ -9041,12 +9041,12 @@ You can use update private cross-connect to re-name or update its description
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.PrivateCrossConnectApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.PrivateCrossConnectApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9066,7 +9066,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      PrivateCrossConnect result = apiInstance.pccsPatch(pccId, pcc, pretty, depth, xContractNumber);
+      PrivateCrossConnect result = apiInstance.pccsPatch(pccIdpccprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling PrivateCrossConnectApi#pccsPatch");
@@ -9110,7 +9110,7 @@ Name | Type | Description  | Notes
 
 <a name="pccsPost"></a>
 # **pccsPost**
-> PrivateCrossConnect pccsPost(pcc, pretty, depth, xContractNumber)
+> PrivateCrossConnect pccsPost(pccprettydepthxContractNumber)
 
 Create a Private Cross-Connect
 
@@ -9119,12 +9119,12 @@ You can use this POST method to create a private cross-connect
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.PrivateCrossConnectApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.PrivateCrossConnectApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9143,7 +9143,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      PrivateCrossConnect result = apiInstance.pccsPost(pcc, pretty, depth, xContractNumber);
+      PrivateCrossConnect result = apiInstance.pccsPost(pccprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling PrivateCrossConnectApi#pccsPost");
@@ -9201,7 +9201,7 @@ Method | HTTP request | Description
 
 <a name="requestsFindById"></a>
 # **requestsFindById**
-> Request requestsFindById(requestId, pretty, depth, xContractNumber)
+> Request requestsFindById(requestIdprettydepthxContractNumber)
 
 Retrieve a Request
 
@@ -9210,12 +9210,12 @@ Retrieves the attributes of a given request.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.RequestApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.RequestApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9234,7 +9234,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Request result = apiInstance.requestsFindById(requestId, pretty, depth, xContractNumber);
+      Request result = apiInstance.requestsFindById(requestIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling RequestApi#requestsFindById");
@@ -9277,7 +9277,7 @@ Name | Type | Description  | Notes
 
 <a name="requestsGet"></a>
 # **requestsGet**
-> Requests requestsGet(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody, offset, limit)
+> Requests requestsGet(prettydepthxContractNumberfilterStatusfilterCreatedAfterfilterCreatedBeforeoffsetlimit)
 
 List Requests
 
@@ -9286,12 +9286,12 @@ Retrieve a list of API requests.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.RequestApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.RequestApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9311,14 +9311,10 @@ public class Example {
     String filterStatus = "filterStatus_example"; // String | Request status filter to fetch all the request based on a particular status [QUEUED, RUNNING, DONE, FAILED]
     String filterCreatedAfter = "filterCreatedAfter_example"; // String | Filter all the requests after the created date
     String filterCreatedBefore = "filterCreatedBefore_example"; // String | Filter all the requests before the created date
-    String filterUrl = "filterUrl_example"; // String | Url filter
-    String filterCreatedDate = "filterCreatedDate_example"; // String | Created date filter
-    String filterMethod = "filterMethod_example"; // String | Method filter
-    String filterBody = "filterBody_example"; // String | Body filter
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Requests result = apiInstance.requestsGet(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterUrl, filterCreatedDate, filterMethod, filterBody, offset, limit);
+      Requests result = apiInstance.requestsGet(prettydepthxContractNumberfilterStatusfilterCreatedAfterfilterCreatedBeforeoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling RequestApi#requestsGet");
@@ -9341,10 +9337,6 @@ Name | Type | Description  | Notes
  **filterStatus** | **String**| Request status filter to fetch all the request based on a particular status [QUEUED, RUNNING, DONE, FAILED] | [optional]
  **filterCreatedAfter** | **String**| Filter all the requests after the created date | [optional]
  **filterCreatedBefore** | **String**| Filter all the requests before the created date | [optional]
- **filterUrl** | **String**| Url filter | [optional]
- **filterCreatedDate** | **String**| Created date filter | [optional]
- **filterMethod** | **String**| Method filter | [optional]
- **filterBody** | **String**| Body filter | [optional]
  **offset** | **Integer**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0]
  **limit** | **Integer**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000]
 
@@ -9369,7 +9361,7 @@ Name | Type | Description  | Notes
 
 <a name="requestsStatusGet"></a>
 # **requestsStatusGet**
-> RequestStatus requestsStatusGet(requestId, pretty, depth, xContractNumber)
+> RequestStatus requestsStatusGet(requestIdprettydepthxContractNumber)
 
 Retrieve Request Status
 
@@ -9378,12 +9370,12 @@ Retrieves the status of a given request.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.RequestApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.RequestApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9402,7 +9394,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      RequestStatus result = apiInstance.requestsStatusGet(requestId, pretty, depth, xContractNumber);
+      RequestStatus result = apiInstance.requestsStatusGet(requestIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling RequestApi#requestsStatusGet");
@@ -9475,7 +9467,7 @@ Method | HTTP request | Description
 
 <a name="datacentersServersCdromsDelete"></a>
 # **datacentersServersCdromsDelete**
-> Object datacentersServersCdromsDelete(datacenterId, serverId, cdromId, pretty, depth, xContractNumber)
+> Object datacentersServersCdromsDelete(datacenterIdserverIdcdromIdprettydepthxContractNumber)
 
 Detach a CD-ROM
 
@@ -9484,12 +9476,12 @@ This will detach a CD-ROM from the server
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9510,7 +9502,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersServersCdromsDelete(datacenterId, serverId, cdromId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersServersCdromsDelete(datacenterIdserverIdcdromIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersCdromsDelete");
@@ -9555,7 +9547,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersCdromsFindById"></a>
 # **datacentersServersCdromsFindById**
-> Image datacentersServersCdromsFindById(datacenterId, serverId, cdromId, pretty, depth, xContractNumber)
+> Image datacentersServersCdromsFindById(datacenterIdserverIdcdromIdprettydepthxContractNumber)
 
 Retrieve an attached CD-ROM
 
@@ -9564,12 +9556,12 @@ You can retrieve a specific CD-ROM attached to the server
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9590,7 +9582,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Image result = apiInstance.datacentersServersCdromsFindById(datacenterId, serverId, cdromId, pretty, depth, xContractNumber);
+      Image result = apiInstance.datacentersServersCdromsFindById(datacenterIdserverIdcdromIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersCdromsFindById");
@@ -9635,7 +9627,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersCdromsGet"></a>
 # **datacentersServersCdromsGet**
-> Cdroms datacentersServersCdromsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit)
+> Cdroms datacentersServersCdromsGet(datacenterIdserverIdprettydepthxContractNumberoffsetlimit)
 
 List attached CD-ROMs 
 
@@ -9644,12 +9636,12 @@ You can retrieve a list of CD-ROMs attached to the server.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9671,7 +9663,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Cdroms result = apiInstance.datacentersServersCdromsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
+      Cdroms result = apiInstance.datacentersServersCdromsGet(datacenterIdserverIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersCdromsGet");
@@ -9717,7 +9709,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersCdromsPost"></a>
 # **datacentersServersCdromsPost**
-> Image datacentersServersCdromsPost(datacenterId, serverId, cdrom, pretty, depth, xContractNumber)
+> Image datacentersServersCdromsPost(datacenterIdserverIdcdromprettydepthxContractNumber)
 
 Attach a CD-ROM
 
@@ -9726,12 +9718,12 @@ You can attach a CD-ROM to an existing server. You can attach up to 2 CD-ROMs to
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9752,7 +9744,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Image result = apiInstance.datacentersServersCdromsPost(datacenterId, serverId, cdrom, pretty, depth, xContractNumber);
+      Image result = apiInstance.datacentersServersCdromsPost(datacenterIdserverIdcdromprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersCdromsPost");
@@ -9797,7 +9789,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersDelete"></a>
 # **datacentersServersDelete**
-> Object datacentersServersDelete(datacenterId, serverId, pretty, depth, xContractNumber)
+> Object datacentersServersDelete(datacenterIdserverIdprettydepthxContractNumber)
 
 Delete a Server
 
@@ -9806,12 +9798,12 @@ This will remove a server from your datacenter; however, it will not remove the 
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9831,7 +9823,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersServersDelete(datacenterId, serverId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersServersDelete(datacenterIdserverIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersDelete");
@@ -9875,7 +9867,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersFindById"></a>
 # **datacentersServersFindById**
-> Server datacentersServersFindById(datacenterId, serverId, pretty, depth, xContractNumber)
+> Server datacentersServersFindById(datacenterIdserverIdprettydepthxContractNumber)
 
 Retrieve a Server
 
@@ -9884,12 +9876,12 @@ Returns information about a server such as its configuration, provisioning statu
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9909,7 +9901,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Server result = apiInstance.datacentersServersFindById(datacenterId, serverId, pretty, depth, xContractNumber);
+      Server result = apiInstance.datacentersServersFindById(datacenterIdserverIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersFindById");
@@ -9953,7 +9945,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersGet"></a>
 # **datacentersServersGet**
-> Servers datacentersServersGet(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit)
+> Servers datacentersServersGet(datacenterIdprettydepthupgradeNeededxContractNumberoffsetlimit)
 
 List Servers 
 
@@ -9962,12 +9954,12 @@ You can retrieve a list of servers within a datacenter
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -9989,7 +9981,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Servers result = apiInstance.datacentersServersGet(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit);
+      Servers result = apiInstance.datacentersServersGet(datacenterIdprettydepthupgradeNeededxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersGet");
@@ -10035,7 +10027,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersPatch"></a>
 # **datacentersServersPatch**
-> Server datacentersServersPatch(datacenterId, serverId, server, pretty, depth, xContractNumber)
+> Server datacentersServersPatch(datacenterIdserverIdserverprettydepthxContractNumber)
 
 Partially modify a Server
 
@@ -10044,12 +10036,12 @@ You can use update attributes of a server
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10070,7 +10062,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Server result = apiInstance.datacentersServersPatch(datacenterId, serverId, server, pretty, depth, xContractNumber);
+      Server result = apiInstance.datacentersServersPatch(datacenterIdserverIdserverprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersPatch");
@@ -10115,7 +10107,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersPost"></a>
 # **datacentersServersPost**
-> Server datacentersServersPost(datacenterId, server, pretty, depth, xContractNumber)
+> Server datacentersServersPost(datacenterIdserverprettydepthxContractNumber)
 
 Create a Server
 
@@ -10124,12 +10116,12 @@ Creates a server within an existing datacenter. You can configure the boot volum
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10149,7 +10141,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Server result = apiInstance.datacentersServersPost(datacenterId, server, pretty, depth, xContractNumber);
+      Server result = apiInstance.datacentersServersPost(datacenterIdserverprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersPost");
@@ -10193,7 +10185,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersPut"></a>
 # **datacentersServersPut**
-> Server datacentersServersPut(datacenterId, serverId, server, pretty, depth, xContractNumber)
+> Server datacentersServersPut(datacenterIdserverIdserverprettydepthxContractNumber)
 
 Modify a Server
 
@@ -10202,12 +10194,12 @@ Allows to modify the attributes of a Server. From v5 onwards &#39;allowReboot&#3
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10228,7 +10220,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Server result = apiInstance.datacentersServersPut(datacenterId, serverId, server, pretty, depth, xContractNumber);
+      Server result = apiInstance.datacentersServersPut(datacenterIdserverIdserverprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersPut");
@@ -10273,7 +10265,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersRebootPost"></a>
 # **datacentersServersRebootPost**
-> Object datacentersServersRebootPost(datacenterId, serverId, pretty, depth, xContractNumber)
+> Object datacentersServersRebootPost(datacenterIdserverIdprettydepthxContractNumber)
 
 Reboot a Server
 
@@ -10282,12 +10274,12 @@ This will force a hard reboot of the server. Do not use this method if you want 
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10307,7 +10299,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersServersRebootPost(datacenterId, serverId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersServersRebootPost(datacenterIdserverIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersRebootPost");
@@ -10351,7 +10343,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersStartPost"></a>
 # **datacentersServersStartPost**
-> Object datacentersServersStartPost(datacenterId, serverId, pretty, depth, xContractNumber)
+> Object datacentersServersStartPost(datacenterIdserverIdprettydepthxContractNumber)
 
 Start a Server
 
@@ -10360,12 +10352,12 @@ This will start a server. If the server&#39;s public IP was deallocated then a n
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10385,7 +10377,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersServersStartPost(datacenterId, serverId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersServersStartPost(datacenterIdserverIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersStartPost");
@@ -10429,7 +10421,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersStopPost"></a>
 # **datacentersServersStopPost**
-> Object datacentersServersStopPost(datacenterId, serverId, pretty, depth, xContractNumber)
+> Object datacentersServersStopPost(datacenterIdserverIdprettydepthxContractNumber)
 
 Stop a Server
 
@@ -10438,12 +10430,12 @@ This will stop a server. The machine will be forcefully powered off, billing wil
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10463,7 +10455,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersServersStopPost(datacenterId, serverId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersServersStopPost(datacenterIdserverIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersStopPost");
@@ -10507,7 +10499,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersUpgradePost"></a>
 # **datacentersServersUpgradePost**
-> Object datacentersServersUpgradePost(datacenterId, serverId, pretty, depth, xContractNumber)
+> Object datacentersServersUpgradePost(datacenterIdserverIdprettydepthxContractNumber)
 
 Upgrade a Server
 
@@ -10516,12 +10508,12 @@ This will upgrade the version of the server, if needed. To verify if there is an
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10541,7 +10533,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersServersUpgradePost(datacenterId, serverId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersServersUpgradePost(datacenterIdserverIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersUpgradePost");
@@ -10585,7 +10577,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersVolumesDelete"></a>
 # **datacentersServersVolumesDelete**
-> Object datacentersServersVolumesDelete(datacenterId, serverId, volumeId, pretty, depth, xContractNumber)
+> Object datacentersServersVolumesDelete(datacenterIdserverIdvolumeIdprettydepthxContractNumber)
 
 Detach a volume
 
@@ -10594,12 +10586,12 @@ This will detach the volume from the server. This will not delete the volume fro
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10620,7 +10612,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersServersVolumesDelete(datacenterId, serverId, volumeId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersServersVolumesDelete(datacenterIdserverIdvolumeIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersVolumesDelete");
@@ -10665,7 +10657,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersVolumesFindById"></a>
 # **datacentersServersVolumesFindById**
-> Volume datacentersServersVolumesFindById(datacenterId, serverId, volumeId, pretty, depth, xContractNumber)
+> Volume datacentersServersVolumesFindById(datacenterIdserverIdvolumeIdprettydepthxContractNumber)
 
 Retrieve an attached volume
 
@@ -10674,12 +10666,12 @@ This will retrieve the properties of an attached volume.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10700,7 +10692,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Volume result = apiInstance.datacentersServersVolumesFindById(datacenterId, serverId, volumeId, pretty, depth, xContractNumber);
+      Volume result = apiInstance.datacentersServersVolumesFindById(datacenterIdserverIdvolumeIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersVolumesFindById");
@@ -10745,7 +10737,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersVolumesGet"></a>
 # **datacentersServersVolumesGet**
-> AttachedVolumes datacentersServersVolumesGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit)
+> AttachedVolumes datacentersServersVolumesGet(datacenterIdserverIdprettydepthxContractNumberoffsetlimit)
 
 List Attached Volumes
 
@@ -10754,12 +10746,12 @@ You can retrieve a list of volumes attached to the server
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10780,7 +10772,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      AttachedVolumes result = apiInstance.datacentersServersVolumesGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
+      AttachedVolumes result = apiInstance.datacentersServersVolumesGet(datacenterIdserverIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersVolumesGet");
@@ -10826,7 +10818,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersServersVolumesPost"></a>
 # **datacentersServersVolumesPost**
-> Volume datacentersServersVolumesPost(datacenterId, serverId, volume, pretty, depth, xContractNumber)
+> Volume datacentersServersVolumesPost(datacenterIdserverIdvolumeprettydepthxContractNumber)
 
 Attach a volume
 
@@ -10835,12 +10827,12 @@ This will attach a pre-existing storage volume to the server. It is also possibl
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.ServerApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.ServerApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10860,7 +10852,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Volume result = apiInstance.datacentersServersVolumesPost(datacenterId, serverId, volume, pretty, depth, xContractNumber);
+      Volume result = apiInstance.datacentersServersVolumesPost(datacenterIdserverIdvolumeprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling ServerApi#datacentersServersVolumesPost");
@@ -10922,7 +10914,7 @@ Method | HTTP request | Description
 
 <a name="snapshotsDelete"></a>
 # **snapshotsDelete**
-> Object snapshotsDelete(snapshotId, pretty, depth, xContractNumber)
+> Object snapshotsDelete(snapshotIdprettydepthxContractNumber)
 
 Delete a Snapshot
 
@@ -10931,12 +10923,12 @@ Deletes the specified Snapshot.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.SnapshotApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.SnapshotApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -10955,7 +10947,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.snapshotsDelete(snapshotId, pretty, depth, xContractNumber);
+      Object result = apiInstance.snapshotsDelete(snapshotIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SnapshotApi#snapshotsDelete");
@@ -10998,7 +10990,7 @@ Name | Type | Description  | Notes
 
 <a name="snapshotsFindById"></a>
 # **snapshotsFindById**
-> Snapshot snapshotsFindById(snapshotId, pretty, depth, xContractNumber)
+> Snapshot snapshotsFindById(snapshotIdprettydepthxContractNumber)
 
 Retrieve a Snapshot by its uuid.
 
@@ -11007,12 +10999,12 @@ Retrieves the attributes of a given Snapshot.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.SnapshotApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.SnapshotApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11031,7 +11023,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Snapshot result = apiInstance.snapshotsFindById(snapshotId, pretty, depth, xContractNumber);
+      Snapshot result = apiInstance.snapshotsFindById(snapshotIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SnapshotApi#snapshotsFindById");
@@ -11074,7 +11066,7 @@ Name | Type | Description  | Notes
 
 <a name="snapshotsGet"></a>
 # **snapshotsGet**
-> Snapshots snapshotsGet(pretty, depth, xContractNumber)
+> Snapshots snapshotsGet(prettydepthxContractNumber)
 
 List Snapshots 
 
@@ -11083,12 +11075,12 @@ Retrieve a list of available snapshots.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.SnapshotApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.SnapshotApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11106,7 +11098,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Snapshots result = apiInstance.snapshotsGet(pretty, depth, xContractNumber);
+      Snapshots result = apiInstance.snapshotsGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SnapshotApi#snapshotsGet");
@@ -11148,7 +11140,7 @@ Name | Type | Description  | Notes
 
 <a name="snapshotsPatch"></a>
 # **snapshotsPatch**
-> Snapshot snapshotsPatch(snapshotId, snapshot, pretty, depth, xContractNumber)
+> Snapshot snapshotsPatch(snapshotIdsnapshotprettydepthxContractNumber)
 
 Partially modify a Snapshot
 
@@ -11157,12 +11149,12 @@ You can use this method to update attributes of a Snapshot.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.SnapshotApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.SnapshotApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11182,7 +11174,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Snapshot result = apiInstance.snapshotsPatch(snapshotId, snapshot, pretty, depth, xContractNumber);
+      Snapshot result = apiInstance.snapshotsPatch(snapshotIdsnapshotprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SnapshotApi#snapshotsPatch");
@@ -11226,7 +11218,7 @@ Name | Type | Description  | Notes
 
 <a name="snapshotsPut"></a>
 # **snapshotsPut**
-> Snapshot snapshotsPut(snapshotId, snapshot, pretty, depth, xContractNumber)
+> Snapshot snapshotsPut(snapshotIdsnapshotprettydepthxContractNumber)
 
 Modify a Snapshot
 
@@ -11235,12 +11227,12 @@ You can use update attributes of a resource
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.SnapshotApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.SnapshotApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11260,7 +11252,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Snapshot result = apiInstance.snapshotsPut(snapshotId, snapshot, pretty, depth, xContractNumber);
+      Snapshot result = apiInstance.snapshotsPut(snapshotIdsnapshotprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SnapshotApi#snapshotsPut");
@@ -11346,7 +11338,7 @@ Method | HTTP request | Description
 
 <a name="umGroupsDelete"></a>
 # **umGroupsDelete**
-> Object umGroupsDelete(groupId, pretty, depth, xContractNumber)
+> Object umGroupsDelete(groupIdprettydepthxContractNumber)
 
 Delete a Group
 
@@ -11355,12 +11347,12 @@ Delete a group
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11379,7 +11371,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.umGroupsDelete(groupId, pretty, depth, xContractNumber);
+      Object result = apiInstance.umGroupsDelete(groupIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsDelete");
@@ -11422,7 +11414,7 @@ Name | Type | Description  | Notes
 
 <a name="umGroupsFindById"></a>
 # **umGroupsFindById**
-> Group umGroupsFindById(groupId, pretty, depth, xContractNumber)
+> Group umGroupsFindById(groupIdprettydepthxContractNumber)
 
 Retrieve a Group
 
@@ -11431,12 +11423,12 @@ You can retrieve a group by using the group ID. This value can be found in the r
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11455,7 +11447,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Group result = apiInstance.umGroupsFindById(groupId, pretty, depth, xContractNumber);
+      Group result = apiInstance.umGroupsFindById(groupIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsFindById");
@@ -11498,7 +11490,7 @@ Name | Type | Description  | Notes
 
 <a name="umGroupsGet"></a>
 # **umGroupsGet**
-> Groups umGroupsGet(pretty, depth, xContractNumber)
+> Groups umGroupsGet(prettydepthxContractNumber)
 
 List All Groups.
 
@@ -11507,12 +11499,12 @@ You can retrieve a complete list of all groups that you have access to
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11530,7 +11522,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Groups result = apiInstance.umGroupsGet(pretty, depth, xContractNumber);
+      Groups result = apiInstance.umGroupsGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsGet");
@@ -11572,7 +11564,7 @@ Name | Type | Description  | Notes
 
 <a name="umGroupsPost"></a>
 # **umGroupsPost**
-> Group umGroupsPost(group, pretty, depth, xContractNumber)
+> Group umGroupsPost(groupprettydepthxContractNumber)
 
 Create a Group
 
@@ -11581,12 +11573,12 @@ You can use this POST method to create a group
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11605,7 +11597,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Group result = apiInstance.umGroupsPost(group, pretty, depth, xContractNumber);
+      Group result = apiInstance.umGroupsPost(groupprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsPost");
@@ -11648,7 +11640,7 @@ Name | Type | Description  | Notes
 
 <a name="umGroupsPut"></a>
 # **umGroupsPut**
-> Group umGroupsPut(groupId, group, pretty, depth, xContractNumber)
+> Group umGroupsPut(groupIdgroupprettydepthxContractNumber)
 
 Modify a group
 
@@ -11657,12 +11649,12 @@ You can use this method to update properties of the group.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11682,7 +11674,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Group result = apiInstance.umGroupsPut(groupId, group, pretty, depth, xContractNumber);
+      Group result = apiInstance.umGroupsPut(groupIdgroupprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsPut");
@@ -11726,19 +11718,19 @@ Name | Type | Description  | Notes
 
 <a name="umGroupsResourcesGet"></a>
 # **umGroupsResourcesGet**
-> ResourceGroups umGroupsResourcesGet(groupId, pretty, depth, xContractNumber)
+> ResourceGroups umGroupsResourcesGet(groupIdprettydepthxContractNumber)
 
 Retrieve resources assigned to a group
 
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11757,7 +11749,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      ResourceGroups result = apiInstance.umGroupsResourcesGet(groupId, pretty, depth, xContractNumber);
+      ResourceGroups result = apiInstance.umGroupsResourcesGet(groupIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsResourcesGet");
@@ -11800,7 +11792,7 @@ Name | Type | Description  | Notes
 
 <a name="umGroupsSharesDelete"></a>
 # **umGroupsSharesDelete**
-> Object umGroupsSharesDelete(groupId, resourceId, pretty, depth, xContractNumber)
+> Object umGroupsSharesDelete(groupIdresourceIdprettydepthxContractNumber)
 
 Remove a resource from a group
 
@@ -11809,12 +11801,12 @@ This will remove a resource from a group
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11834,7 +11826,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.umGroupsSharesDelete(groupId, resourceId, pretty, depth, xContractNumber);
+      Object result = apiInstance.umGroupsSharesDelete(groupIdresourceIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsSharesDelete");
@@ -11878,7 +11870,7 @@ Name | Type | Description  | Notes
 
 <a name="umGroupsSharesFindByResourceId"></a>
 # **umGroupsSharesFindByResourceId**
-> GroupShare umGroupsSharesFindByResourceId(groupId, resourceId, pretty, depth, xContractNumber)
+> GroupShare umGroupsSharesFindByResourceId(groupIdresourceIdprettydepthxContractNumber)
 
 Retrieve a group share
 
@@ -11887,12 +11879,12 @@ This will retrieve the properties of a group share.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11912,7 +11904,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      GroupShare result = apiInstance.umGroupsSharesFindByResourceId(groupId, resourceId, pretty, depth, xContractNumber);
+      GroupShare result = apiInstance.umGroupsSharesFindByResourceId(groupIdresourceIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsSharesFindByResourceId");
@@ -11956,7 +11948,7 @@ Name | Type | Description  | Notes
 
 <a name="umGroupsSharesGet"></a>
 # **umGroupsSharesGet**
-> GroupShares umGroupsSharesGet(groupId, pretty, depth, xContractNumber)
+> GroupShares umGroupsSharesGet(groupIdprettydepthxContractNumber)
 
 List Group Shares 
 
@@ -11965,12 +11957,12 @@ You can retrieve a list of all resources along with their permissions of the gro
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -11989,7 +11981,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      GroupShares result = apiInstance.umGroupsSharesGet(groupId, pretty, depth, xContractNumber);
+      GroupShares result = apiInstance.umGroupsSharesGet(groupIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsSharesGet");
@@ -12032,7 +12024,7 @@ Name | Type | Description  | Notes
 
 <a name="umGroupsSharesPost"></a>
 # **umGroupsSharesPost**
-> GroupShare umGroupsSharesPost(groupId, resourceId, resource, pretty, depth, xContractNumber)
+> GroupShare umGroupsSharesPost(groupIdresourceIdresourceprettydepthxContractNumber)
 
 Add a resource to a group
 
@@ -12041,12 +12033,12 @@ This will add a resource to the group.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12067,7 +12059,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      GroupShare result = apiInstance.umGroupsSharesPost(groupId, resourceId, resource, pretty, depth, xContractNumber);
+      GroupShare result = apiInstance.umGroupsSharesPost(groupIdresourceIdresourceprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsSharesPost");
@@ -12112,7 +12104,7 @@ Name | Type | Description  | Notes
 
 <a name="umGroupsSharesPut"></a>
 # **umGroupsSharesPut**
-> GroupShare umGroupsSharesPut(groupId, resourceId, resource, pretty, depth, xContractNumber)
+> GroupShare umGroupsSharesPut(groupIdresourceIdresourceprettydepthxContractNumber)
 
 Modify resource permissions of a group
 
@@ -12121,12 +12113,12 @@ You can use update resource permissions of a group. If empty body will be provid
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12147,7 +12139,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      GroupShare result = apiInstance.umGroupsSharesPut(groupId, resourceId, resource, pretty, depth, xContractNumber);
+      GroupShare result = apiInstance.umGroupsSharesPut(groupIdresourceIdresourceprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsSharesPut");
@@ -12192,7 +12184,7 @@ Name | Type | Description  | Notes
 
 <a name="umGroupsUsersDelete"></a>
 # **umGroupsUsersDelete**
-> Object umGroupsUsersDelete(groupId, userId, pretty, depth, xContractNumber)
+> Object umGroupsUsersDelete(groupIduserIdprettydepthxContractNumber)
 
 Remove a user from a group
 
@@ -12201,12 +12193,12 @@ This will remove a user from a group
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12226,7 +12218,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.umGroupsUsersDelete(groupId, userId, pretty, depth, xContractNumber);
+      Object result = apiInstance.umGroupsUsersDelete(groupIduserIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsUsersDelete");
@@ -12270,7 +12262,7 @@ Name | Type | Description  | Notes
 
 <a name="umGroupsUsersGet"></a>
 # **umGroupsUsersGet**
-> GroupMembers umGroupsUsersGet(groupId, pretty, depth, xContractNumber)
+> GroupMembers umGroupsUsersGet(groupIdprettydepthxContractNumber)
 
 List Group Members 
 
@@ -12279,12 +12271,12 @@ You can retrieve a list of users who are members of the group
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12303,7 +12295,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      GroupMembers result = apiInstance.umGroupsUsersGet(groupId, pretty, depth, xContractNumber);
+      GroupMembers result = apiInstance.umGroupsUsersGet(groupIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsUsersGet");
@@ -12346,7 +12338,7 @@ Name | Type | Description  | Notes
 
 <a name="umGroupsUsersPost"></a>
 # **umGroupsUsersPost**
-> User umGroupsUsersPost(groupId, user, pretty, depth, xContractNumber)
+> User umGroupsUsersPost(groupIduserprettydepthxContractNumber)
 
 Add a user to a group
 
@@ -12355,12 +12347,12 @@ This will attach a pre-existing user to a group.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12380,7 +12372,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      User result = apiInstance.umGroupsUsersPost(groupId, user, pretty, depth, xContractNumber);
+      User result = apiInstance.umGroupsUsersPost(groupIduserprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsUsersPost");
@@ -12424,7 +12416,7 @@ Name | Type | Description  | Notes
 
 <a name="umResourcesFindByType"></a>
 # **umResourcesFindByType**
-> Resources umResourcesFindByType(resourceType, pretty, depth, xContractNumber)
+> Resources umResourcesFindByType(resourceTypeprettydepthxContractNumber)
 
 Retrieve a list of Resources by type.
 
@@ -12433,12 +12425,12 @@ You can retrieve a list of resources by using the type. Allowed values are { dat
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12457,7 +12449,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Resources result = apiInstance.umResourcesFindByType(resourceType, pretty, depth, xContractNumber);
+      Resources result = apiInstance.umResourcesFindByType(resourceTypeprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umResourcesFindByType");
@@ -12500,7 +12492,7 @@ Name | Type | Description  | Notes
 
 <a name="umResourcesFindByTypeAndId"></a>
 # **umResourcesFindByTypeAndId**
-> Resource umResourcesFindByTypeAndId(resourceType, resourceId, pretty, depth, xContractNumber)
+> Resource umResourcesFindByTypeAndId(resourceTyperesourceIdprettydepthxContractNumber)
 
 Retrieve a Resource by type.
 
@@ -12509,12 +12501,12 @@ You can retrieve a resource by using the type and its uuid. Allowed values for t
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12534,7 +12526,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Resource result = apiInstance.umResourcesFindByTypeAndId(resourceType, resourceId, pretty, depth, xContractNumber);
+      Resource result = apiInstance.umResourcesFindByTypeAndId(resourceTyperesourceIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umResourcesFindByTypeAndId");
@@ -12578,7 +12570,7 @@ Name | Type | Description  | Notes
 
 <a name="umResourcesGet"></a>
 # **umResourcesGet**
-> Resources umResourcesGet(pretty, depth, xContractNumber)
+> Resources umResourcesGet(prettydepthxContractNumber)
 
 List All Resources.
 
@@ -12587,12 +12579,12 @@ You can retrieve a complete list of all resources that you have access to
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12610,7 +12602,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Resources result = apiInstance.umResourcesGet(pretty, depth, xContractNumber);
+      Resources result = apiInstance.umResourcesGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umResourcesGet");
@@ -12652,7 +12644,7 @@ Name | Type | Description  | Notes
 
 <a name="umUsersDelete"></a>
 # **umUsersDelete**
-> Object umUsersDelete(userId, pretty, depth, xContractNumber)
+> Object umUsersDelete(userIdprettydepthxContractNumber)
 
 Delete a User
 
@@ -12661,12 +12653,12 @@ Delete a user
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12685,7 +12677,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.umUsersDelete(userId, pretty, depth, xContractNumber);
+      Object result = apiInstance.umUsersDelete(userIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersDelete");
@@ -12728,7 +12720,7 @@ Name | Type | Description  | Notes
 
 <a name="umUsersFindById"></a>
 # **umUsersFindById**
-> User umUsersFindById(userId, pretty, depth, xContractNumber)
+> User umUsersFindById(userIdprettydepthxContractNumber)
 
 Retrieve a User
 
@@ -12737,12 +12729,12 @@ You can retrieve user details by using the users ID. This value can be found in 
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12761,7 +12753,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      User result = apiInstance.umUsersFindById(userId, pretty, depth, xContractNumber);
+      User result = apiInstance.umUsersFindById(userIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersFindById");
@@ -12804,7 +12796,7 @@ Name | Type | Description  | Notes
 
 <a name="umUsersGet"></a>
 # **umUsersGet**
-> Users umUsersGet(pretty, depth, xContractNumber)
+> Users umUsersGet(prettydepthxContractNumber)
 
 List all Users 
 
@@ -12813,12 +12805,12 @@ You can retrieve a complete list of users under your account
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12836,7 +12828,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Users result = apiInstance.umUsersGet(pretty, depth, xContractNumber);
+      Users result = apiInstance.umUsersGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersGet");
@@ -12878,7 +12870,7 @@ Name | Type | Description  | Notes
 
 <a name="umUsersGroupsGet"></a>
 # **umUsersGroupsGet**
-> ResourceGroups umUsersGroupsGet(userId, pretty, depth, xContractNumber)
+> ResourceGroups umUsersGroupsGet(userIdprettydepthxContractNumber)
 
 Retrieve a User&#39;s group resources
 
@@ -12887,12 +12879,12 @@ You can retrieve group resources of user by using the users ID. This value can b
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12911,7 +12903,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      ResourceGroups result = apiInstance.umUsersGroupsGet(userId, pretty, depth, xContractNumber);
+      ResourceGroups result = apiInstance.umUsersGroupsGet(userIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersGroupsGet");
@@ -12954,7 +12946,7 @@ Name | Type | Description  | Notes
 
 <a name="umUsersOwnsGet"></a>
 # **umUsersOwnsGet**
-> ResourcesUsers umUsersOwnsGet(userId, pretty, depth, xContractNumber)
+> ResourcesUsers umUsersOwnsGet(userIdprettydepthxContractNumber)
 
 Retrieve a User&#39;s own resources
 
@@ -12963,12 +12955,12 @@ You can retrieve resources owned by using the users ID. This value can be found 
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -12987,7 +12979,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      ResourcesUsers result = apiInstance.umUsersOwnsGet(userId, pretty, depth, xContractNumber);
+      ResourcesUsers result = apiInstance.umUsersOwnsGet(userIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersOwnsGet");
@@ -13030,7 +13022,7 @@ Name | Type | Description  | Notes
 
 <a name="umUsersPost"></a>
 # **umUsersPost**
-> User umUsersPost(user, pretty, depth, xContractNumber)
+> User umUsersPost(userprettydepthxContractNumber)
 
 Create a user
 
@@ -13039,12 +13031,12 @@ You can use this POST method to create a user
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13063,7 +13055,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      User result = apiInstance.umUsersPost(user, pretty, depth, xContractNumber);
+      User result = apiInstance.umUsersPost(userprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersPost");
@@ -13106,7 +13098,7 @@ Name | Type | Description  | Notes
 
 <a name="umUsersPut"></a>
 # **umUsersPut**
-> User umUsersPut(userId, user, pretty, depth, xContractNumber)
+> User umUsersPut(userIduserprettydepthxContractNumber)
 
 Modify a user
 
@@ -13115,12 +13107,12 @@ You can use update attributes of a User
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13140,7 +13132,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      User result = apiInstance.umUsersPut(userId, user, pretty, depth, xContractNumber);
+      User result = apiInstance.umUsersPut(userIduserprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersPut");
@@ -13184,7 +13176,7 @@ Name | Type | Description  | Notes
 
 <a name="umUsersS3keysDelete"></a>
 # **umUsersS3keysDelete**
-> Object umUsersS3keysDelete(userId, keyId, pretty, depth, xContractNumber)
+> Object umUsersS3keysDelete(userIdkeyIdprettydepthxContractNumber)
 
 Delete a S3 key
 
@@ -13193,12 +13185,12 @@ Delete a S3 key
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13218,7 +13210,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.umUsersS3keysDelete(userId, keyId, pretty, depth, xContractNumber);
+      Object result = apiInstance.umUsersS3keysDelete(userIdkeyIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersS3keysDelete");
@@ -13262,7 +13254,7 @@ Name | Type | Description  | Notes
 
 <a name="umUsersS3keysFindByKeyId"></a>
 # **umUsersS3keysFindByKeyId**
-> S3Key umUsersS3keysFindByKeyId(userId, keyId, pretty, depth, xContractNumber)
+> S3Key umUsersS3keysFindByKeyId(userIdkeyIdprettydepthxContractNumber)
 
 Retrieve given S3 key belonging to the given User
 
@@ -13271,12 +13263,12 @@ You can retrieve S3 key belonging to the given User. This user Id can be found i
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13296,7 +13288,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      S3Key result = apiInstance.umUsersS3keysFindByKeyId(userId, keyId, pretty, depth, xContractNumber);
+      S3Key result = apiInstance.umUsersS3keysFindByKeyId(userIdkeyIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersS3keysFindByKeyId");
@@ -13340,7 +13332,7 @@ Name | Type | Description  | Notes
 
 <a name="umUsersS3keysGet"></a>
 # **umUsersS3keysGet**
-> S3Keys umUsersS3keysGet(userId, pretty, depth, xContractNumber)
+> S3Keys umUsersS3keysGet(userIdprettydepthxContractNumber)
 
 Retrieve a User&#39;s S3 keys
 
@@ -13349,12 +13341,12 @@ You can retrieve S3 keys owned by a user by using the users ID. This user Id can
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13373,7 +13365,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      S3Keys result = apiInstance.umUsersS3keysGet(userId, pretty, depth, xContractNumber);
+      S3Keys result = apiInstance.umUsersS3keysGet(userIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersS3keysGet");
@@ -13416,7 +13408,7 @@ Name | Type | Description  | Notes
 
 <a name="umUsersS3keysPost"></a>
 # **umUsersS3keysPost**
-> S3Key umUsersS3keysPost(userId, pretty, depth, xContractNumber)
+> S3Key umUsersS3keysPost(userIdprettydepthxContractNumber)
 
 Create a S3 key for the given user
 
@@ -13425,12 +13417,12 @@ Creates a S3 key for the given user. This user Id can be found in the response b
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13449,7 +13441,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      S3Key result = apiInstance.umUsersS3keysPost(userId, pretty, depth, xContractNumber);
+      S3Key result = apiInstance.umUsersS3keysPost(userIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersS3keysPost");
@@ -13492,7 +13484,7 @@ Name | Type | Description  | Notes
 
 <a name="umUsersS3keysPut"></a>
 # **umUsersS3keysPut**
-> S3Key umUsersS3keysPut(userId, keyId, s3Key, pretty, depth, xContractNumber)
+> S3Key umUsersS3keysPut(userIdkeyIds3KeyprettydepthxContractNumber)
 
 Modify a S3 key having the given key id
 
@@ -13501,12 +13493,12 @@ You can enable or disable a given S3 key
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13527,7 +13519,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      S3Key result = apiInstance.umUsersS3keysPut(userId, keyId, s3Key, pretty, depth, xContractNumber);
+      S3Key result = apiInstance.umUsersS3keysPut(userIdkeyIds3KeyprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersS3keysPut");
@@ -13572,7 +13564,7 @@ Name | Type | Description  | Notes
 
 <a name="umUsersS3ssourlGet"></a>
 # **umUsersS3ssourlGet**
-> S3ObjectStorageSSO umUsersS3ssourlGet(userId, pretty, xContractNumber)
+> S3ObjectStorageSSO umUsersS3ssourlGet(userIdprettyxContractNumber)
 
 Retrieve S3 object storage single signon URL for the given user
 
@@ -13581,12 +13573,12 @@ You can retrieve S3 object storage single signon URL for the given user. This us
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.UserManagementApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.UserManagementApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13604,7 +13596,7 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      S3ObjectStorageSSO result = apiInstance.umUsersS3ssourlGet(userId, pretty, xContractNumber);
+      S3ObjectStorageSSO result = apiInstance.umUsersS3ssourlGet(userIdprettyxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersS3ssourlGet");
@@ -13666,7 +13658,7 @@ Method | HTTP request | Description
 
 <a name="datacentersVolumesCreateSnapshotPost"></a>
 # **datacentersVolumesCreateSnapshotPost**
-> Snapshot datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, name, description, secAuthProtection, licenceType)
+> Snapshot datacentersVolumesCreateSnapshotPost(datacenterIdvolumeIdprettydepthxContractNumbernamedescriptionsecAuthProtectionlicenceType)
 
 Create Volume Snapshot
 
@@ -13675,12 +13667,12 @@ Creates a snapshot of a volume within the datacenter. You can use a snapshot to 
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.VolumeApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13704,7 +13696,7 @@ public class Example {
     Boolean secAuthProtection = true; // Boolean | Flag representing if extra protection is enabled on snapshot e.g. Two Factor protection etc.
     String licenceType = "licenceType_example"; // String | The OS type of this Snapshot
     try {
-      Snapshot result = apiInstance.datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, name, description, secAuthProtection, licenceType);
+      Snapshot result = apiInstance.datacentersVolumesCreateSnapshotPost(datacenterIdvolumeIdprettydepthxContractNumbernamedescriptionsecAuthProtectionlicenceType);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling VolumeApi#datacentersVolumesCreateSnapshotPost");
@@ -13752,7 +13744,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesDelete"></a>
 # **datacentersVolumesDelete**
-> Object datacentersVolumesDelete(datacenterId, volumeId, pretty, depth, xContractNumber)
+> Object datacentersVolumesDelete(datacenterIdvolumeIdprettydepthxContractNumber)
 
 Delete a Volume
 
@@ -13761,12 +13753,12 @@ Deletes the specified volume. This will result in the volume being removed from 
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.VolumeApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13786,7 +13778,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersVolumesDelete(datacenterId, volumeId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersVolumesDelete(datacenterIdvolumeIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling VolumeApi#datacentersVolumesDelete");
@@ -13830,7 +13822,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesFindById"></a>
 # **datacentersVolumesFindById**
-> Volume datacentersVolumesFindById(datacenterId, volumeId, pretty, depth, xContractNumber)
+> Volume datacentersVolumesFindById(datacenterIdvolumeIdprettydepthxContractNumber)
 
 Retrieve a Volume
 
@@ -13839,12 +13831,12 @@ Retrieves the attributes of a given Volume
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.VolumeApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13864,7 +13856,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Volume result = apiInstance.datacentersVolumesFindById(datacenterId, volumeId, pretty, depth, xContractNumber);
+      Volume result = apiInstance.datacentersVolumesFindById(datacenterIdvolumeIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling VolumeApi#datacentersVolumesFindById");
@@ -13908,7 +13900,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesGet"></a>
 # **datacentersVolumesGet**
-> Volumes datacentersVolumesGet(datacenterId, pretty, depth, xContractNumber, offset, limit)
+> Volumes datacentersVolumesGet(datacenterIdprettydepthxContractNumberoffsetlimit)
 
 List Volumes 
 
@@ -13917,12 +13909,12 @@ Retrieves a list of Volumes.
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.VolumeApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -13943,7 +13935,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Volumes result = apiInstance.datacentersVolumesGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
+      Volumes result = apiInstance.datacentersVolumesGet(datacenterIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling VolumeApi#datacentersVolumesGet");
@@ -13988,7 +13980,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesPatch"></a>
 # **datacentersVolumesPatch**
-> Volume datacentersVolumesPatch(datacenterId, volumeId, volume, pretty, depth, xContractNumber)
+> Volume datacentersVolumesPatch(datacenterIdvolumeIdvolumeprettydepthxContractNumber)
 
 Partially modify a Volume
 
@@ -13997,12 +13989,12 @@ You can use update attributes of a Volume
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.VolumeApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -14023,7 +14015,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Volume result = apiInstance.datacentersVolumesPatch(datacenterId, volumeId, volume, pretty, depth, xContractNumber);
+      Volume result = apiInstance.datacentersVolumesPatch(datacenterIdvolumeIdvolumeprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling VolumeApi#datacentersVolumesPatch");
@@ -14068,7 +14060,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesPost"></a>
 # **datacentersVolumesPost**
-> Volume datacentersVolumesPost(datacenterId, volume, pretty, depth, xContractNumber)
+> Volume datacentersVolumesPost(datacenterIdvolumeprettydepthxContractNumber)
 
 Create a Volume
 
@@ -14077,12 +14069,12 @@ Creates a volume within the datacenter. This will not attach the volume to a ser
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.VolumeApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -14102,7 +14094,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Volume result = apiInstance.datacentersVolumesPost(datacenterId, volume, pretty, depth, xContractNumber);
+      Volume result = apiInstance.datacentersVolumesPost(datacenterIdvolumeprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling VolumeApi#datacentersVolumesPost");
@@ -14146,7 +14138,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesPut"></a>
 # **datacentersVolumesPut**
-> Volume datacentersVolumesPut(datacenterId, volumeId, volume, pretty, depth, xContractNumber)
+> Volume datacentersVolumesPut(datacenterIdvolumeIdvolumeprettydepthxContractNumber)
 
 Modify a Volume
 
@@ -14155,12 +14147,12 @@ You can use update attributes of a Volume
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.VolumeApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -14181,7 +14173,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Volume result = apiInstance.datacentersVolumesPut(datacenterId, volumeId, volume, pretty, depth, xContractNumber);
+      Volume result = apiInstance.datacentersVolumesPut(datacenterIdvolumeIdvolumeprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling VolumeApi#datacentersVolumesPut");
@@ -14226,7 +14218,7 @@ Name | Type | Description  | Notes
 
 <a name="datacentersVolumesRestoreSnapshotPost"></a>
 # **datacentersVolumesRestoreSnapshotPost**
-> Object datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, snapshotId)
+> Object datacentersVolumesRestoreSnapshotPost(datacenterIdvolumeIdprettydepthxContractNumbersnapshotId)
 
 Restore Volume Snapshot
 
@@ -14235,12 +14227,12 @@ This will restore a snapshot onto a volume. A snapshot is created as just anothe
 ### Example
 ```java
 // Import classes:
-import com.ionossdk.ApiClient;
-import com.ionossdk.ApiException;
-import com.ionossdk.Configuration;
-import com.ionossdk.auth.*;
-import com.ionossdk.model.*;
-import com.ionossdk.api.VolumeApi;
+import com.ionoscloud.ApiClient;
+import com.ionoscloud.ApiException;
+import com.ionoscloud.Configuration;
+import com.ionoscloud.auth.*;
+import com.ionoscloud.model.*;
+import com.ionoscloud.api.VolumeApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -14261,7 +14253,7 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     String snapshotId = "snapshotId_example"; // String | This is the ID of the snapshot
     try {
-      Object result = apiInstance.datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, snapshotId);
+      Object result = apiInstance.datacentersVolumesRestoreSnapshotPost(datacenterIdvolumeIdprettydepthxContractNumbersnapshotId);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling VolumeApi#datacentersVolumesRestoreSnapshotPost");
@@ -15437,7 +15429,7 @@ Name | Type | Description | Notes
 **cpuFamily** | **String** | A valid cpu family name | 
 **coresCount** | **Integer** | Number of cores for node | 
 **ramSize** | **Integer** | RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB. | 
-**availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the server should exist | 
+**availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the target VM should exist | 
 **storageType** | [**StorageTypeEnum**](#StorageTypeEnum) | Hardware type of the volume | 
 **storageSize** | **Integer** | The size of the volume in GB. The size should be greater than 10GB. | 
 **k8sVersion** | **String** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
@@ -15485,7 +15477,7 @@ Name | Type | Description | Notes
 **cpuFamily** | **String** | A valid cpu family name | 
 **coresCount** | **Integer** | Number of cores for node | 
 **ramSize** | **Integer** | RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB. | 
-**availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the server should exist | 
+**availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the target VM should exist | 
 **storageType** | [**StorageTypeEnum**](#StorageTypeEnum) | Hardware type of the volume | 
 **storageSize** | **Integer** | The size of the volume in GB. The size should be greater than 10GB. | 
 **k8sVersion** | **String** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
@@ -15532,7 +15524,7 @@ Name | Type | Description | Notes
 **cpuFamily** | **String** | A valid cpu family name | 
 **coresCount** | **Integer** | Number of cores for node | 
 **ramSize** | **Integer** | RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB. | 
-**availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the server should exist | 
+**availabilityZone** | [**AvailabilityZoneEnum**](#AvailabilityZoneEnum) | The availability zone in which the target VM should exist | 
 **storageType** | [**StorageTypeEnum**](#StorageTypeEnum) | Hardware type of the volume | 
 **storageSize** | **Integer** | The size of the volume in GB. The size should be greater than 10GB. | 
 **k8sVersion** | **String** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. |  [optional]
@@ -16647,6 +16639,7 @@ Name | Type | Description | Notes
 **secAuthActive** | **Boolean** | indicates if secure authentication is active for the user or not |  [optional]
 **s3CanonicalUserId** | **String** | Canonical (S3) id of the user for a given identity |  [optional]
 **password** | **String** | User password |  [optional]
+**active** | **Boolean** | indicates if the user is active |  [optional]
 
 
 
