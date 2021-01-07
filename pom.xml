@@ -2,16 +2,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ionoscloud</groupId>
-    <artifactId>ionoscloud</artifactId>
+    <artifactId>ionos-cloud-sdk</artifactId>
     <packaging>jar</packaging>
-    <name>ionoscloud</name>
+    <name>ionos-cloud-sdk</name>
     <version>5.0</version>
-    <url>https://github.com/openapitools/openapi-generator</url>
-    <description>OpenAPI Java</description>
+    <url>https://github.com/ionos-cloud/sdk-java</url>
+    <description>IONOS Cloud SDK</description>
     <scm>
-        <connection>scm:git:git@github.com:openapitools/openapi-generator.git</connection>
-        <developerConnection>scm:git:git@github.com:openapitools/openapi-generator.git</developerConnection>
-        <url>https://github.com/openapitools/openapi-generator</url>
+        <connection>scm:git:git@github.com:ionos-cloud/sdk-java.git</connection>
+        <developerConnection>scm:git:git@github.com:ionos-cloud/sdk-java.git</developerConnection>
+        <url>https://github.com/ionos-cloud</url>
     </scm>
 
     <licenses>
@@ -24,9 +24,9 @@
 
     <developers>
         <developer>
-            <name>OpenAPI-Generator Contributors</name>
-            <email>team@openapitools.org</email>
-            <organization>OpenAPITools.org</organization>
+            <name>Ionos</name>
+            <email>sdk@cloud.ionos.com</email>
+            <organization>Ionos Cloud</organization>
             <organizationUrl>http://openapitools.org</organizationUrl>
         </developer>
     </developers>

@@ -89,7 +89,7 @@ if(hasProperty('target') && target == 'android') {
 
     install {
         repositories.mavenInstaller {
-            pom.artifactId = 'ionoscloud'
+            pom.artifactId = 'ionos-cloud-sdk'
         }
     }
 

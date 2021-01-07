@@ -1,10 +1,10 @@
 [![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
 
-# IONOS Cloud SDK for Java
+# IONOS Cloud SDK
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2021-01-06T11:24:28.604531+02:00[Europe/Bucharest]
+  - Build date: 2021-01-07T17:22:54.537709+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -44,7 +44,7 @@ Add this dependency to your project's POM:
 ```xml
 <dependency>
   <groupId>com.ionoscloud</groupId>
-  <artifactId>ionoscloud</artifactId>
+  <artifactId>ionos-cloud-sdk</artifactId>
   <version>5.0</version>
   <scope>compile</scope>
 </dependency>
@@ -55,7 +55,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ionoscloud:ionoscloud:5.0"
+compile "com.ionoscloud:ionos-cloud-sdk:5.0"
 ```
 
 ### Others
@@ -68,7 +68,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ionoscloud-5.0.jar`
+* `target/ionos-cloud-sdk-5.0.jar`
 * `target/lib/*.jar`
 
 ## Our latest, most up to date documentation is available [here](https://github.com/ionos-cloud/sdk-java/blob/master/DOCS.md)
