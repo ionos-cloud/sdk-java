@@ -28,7 +28,7 @@ import java.io.IOException;
  * map of labels attached to node pool
  */
 @ApiModel(description = "map of labels attached to node pool")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-07T17:22:54.537709+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-07T17:26:52.038839+02:00[Europe/Bucharest]")
 public class KubernetesNodePoolLabel {
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)

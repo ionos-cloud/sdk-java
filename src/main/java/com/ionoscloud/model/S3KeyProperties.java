@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * S3KeyProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-07T17:22:54.537709+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-07T17:26:52.038839+02:00[Europe/Bucharest]")
 public class S3KeyProperties {
   public static final String SERIALIZED_NAME_SECRET_KEY = "secretKey";
   @SerializedName(SERIALIZED_NAME_SECRET_KEY)

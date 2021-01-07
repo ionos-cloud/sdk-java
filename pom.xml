@@ -27,7 +27,7 @@
             <name>Ionos</name>
             <email>sdk@cloud.ionos.com</email>
             <organization>Ionos Cloud</organization>
-            <organizationUrl>http://openapitools.org</organizationUrl>
+            <organizationUrl>https://github.com/ionos-cloud</organizationUrl>
         </developer>
     </developers>
 
