@@ -4,7 +4,7 @@
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2021-01-07T17:26:52.038839+02:00[Europe/Bucharest]
+  - Build date: 2021-01-15T13:32:34.479649+02:00[Europe/Bucharest]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -14352,9 +14352,7 @@ Name | Type | Description  | Notes
  - [KubernetesNode](#KubernetesNode)
  - [KubernetesNodeMetadata](#KubernetesNodeMetadata)
  - [KubernetesNodePool](#KubernetesNodePool)
- - [KubernetesNodePoolAnnotation](#KubernetesNodePoolAnnotation)
  - [KubernetesNodePoolForPut](#KubernetesNodePoolForPut)
- - [KubernetesNodePoolLabel](#KubernetesNodePoolLabel)
  - [KubernetesNodePoolLan](#KubernetesNodePoolLan)
  - [KubernetesNodePoolProperties](#KubernetesNodePoolProperties)
  - [KubernetesNodePoolPropertiesForPost](#KubernetesNodePoolPropertiesForPost)
@@ -15214,6 +15212,7 @@ Name | Type | Description | Notes
 Name | Value
 ---- | -----
 K8S | &quot;k8s&quot;
+COLLECTION | &quot;collection&quot;
 
 
 
@@ -15356,19 +15355,6 @@ NODEPOOL | &quot;nodepool&quot;
 
 
 
-# KubernetesNodePoolAnnotation
-
-map of annotations attached to node pool
-## Properties
-
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**key** | **String** | Key of the annotation. String part must consist of alphanumeric characters, &#39;-&#39;, &#39;_&#39; or &#39;.&#39;, and must start and end with an alphanumeric character. |  [optional]
-**value** | **String** | Value of the annotation. |  [optional]
-
-
-
-
 # KubernetesNodePoolForPut
 
 ## Properties
@@ -15389,19 +15375,6 @@ Name | Type | Description | Notes
 Name | Value
 ---- | -----
 NODEPOOL | &quot;nodepool&quot;
-
-
-
-
-# KubernetesNodePoolLabel
-
-map of labels attached to node pool
-## Properties
-
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**key** | **String** | Key of the label. String part must consist of alphanumeric characters, &#39;-&#39;, &#39;_&#39; or &#39;.&#39;, and must start and end with an alphanumeric character. |  [optional]
-**value** | **String** | Value of the label. String part must consist of alphanumeric characters, &#39;-&#39;, &#39;_&#39; or &#39;.&#39;, and must start and end with an alphanumeric character. |  [optional]
 
 
 
@@ -15436,8 +15409,8 @@ Name | Type | Description | Notes
 **maintenanceWindow** | [**KubernetesMaintenanceWindow**](DOCS.md#KubernetesMaintenanceWindow) |  |  [optional]
 **autoScaling** | [**KubernetesAutoScaling**](DOCS.md#KubernetesAutoScaling) |  |  [optional]
 **lans** | [**List&lt;KubernetesNodePoolLan&gt;**](DOCS.md#KubernetesNodePoolLan) | array of additional LANs attached to worker nodes |  [optional]
-**labels** | [**KubernetesNodePoolLabel**](DOCS.md#KubernetesNodePoolLabel) |  |  [optional]
-**annotations** | [**KubernetesNodePoolAnnotation**](DOCS.md#KubernetesNodePoolAnnotation) |  |  [optional]
+**labels** | **Map&lt;String, String&gt;** | map of labels attached to node pool |  [optional]
+**annotations** | **Map&lt;String, String&gt;** | map of annotations attached to node pool |  [optional]
 **publicIps** | **List&lt;String&gt;** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes. |  [optional]
 **availableUpgradeVersions** | **List&lt;String&gt;** | List of available versions for upgrading the node pool |  [optional]
 
@@ -15484,8 +15457,8 @@ Name | Type | Description | Notes
 **maintenanceWindow** | [**KubernetesMaintenanceWindow**](DOCS.md#KubernetesMaintenanceWindow) |  |  [optional]
 **autoScaling** | [**KubernetesAutoScaling**](DOCS.md#KubernetesAutoScaling) |  |  [optional]
 **lans** | [**List&lt;KubernetesNodePoolLan&gt;**](DOCS.md#KubernetesNodePoolLan) | array of additional LANs attached to worker nodes |  [optional]
-**labels** | [**KubernetesNodePoolLabel**](DOCS.md#KubernetesNodePoolLabel) |  |  [optional]
-**annotations** | [**KubernetesNodePoolAnnotation**](DOCS.md#KubernetesNodePoolAnnotation) |  |  [optional]
+**labels** | **Map&lt;String, String&gt;** | map of labels attached to node pool |  [optional]
+**annotations** | **Map&lt;String, String&gt;** | map of annotations attached to node pool |  [optional]
 **publicIps** | **List&lt;String&gt;** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes. |  [optional]
 
 
@@ -15531,8 +15504,8 @@ Name | Type | Description | Notes
 **maintenanceWindow** | [**KubernetesMaintenanceWindow**](DOCS.md#KubernetesMaintenanceWindow) |  |  [optional]
 **autoScaling** | [**KubernetesAutoScaling**](DOCS.md#KubernetesAutoScaling) |  |  [optional]
 **lans** | [**List&lt;KubernetesNodePoolLan&gt;**](DOCS.md#KubernetesNodePoolLan) | array of additional LANs attached to worker nodes |  [optional]
-**labels** | [**KubernetesNodePoolLabel**](DOCS.md#KubernetesNodePoolLabel) |  |  [optional]
-**annotations** | [**KubernetesNodePoolAnnotation**](DOCS.md#KubernetesNodePoolAnnotation) |  |  [optional]
+**labels** | **Map&lt;String, String&gt;** | map of labels attached to node pool |  [optional]
+**annotations** | **Map&lt;String, String&gt;** | map of annotations attached to node pool |  [optional]
 **publicIps** | **List&lt;String&gt;** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes. |  [optional]
 
 
@@ -15578,6 +15551,7 @@ Name | Type | Description | Notes
 Name | Value
 ---- | -----
 NODEPOOL | &quot;nodepool&quot;
+COLLECTION | &quot;collection&quot;
 
 
 

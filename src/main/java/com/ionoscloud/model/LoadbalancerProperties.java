@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * LoadbalancerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-07T17:26:52.038839+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-15T13:32:34.479649+02:00[Europe/Bucharest]")
 public class LoadbalancerProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -59,7 +59,7 @@ public class LoadbalancerProperties {
 
     public static IpEnum fromValue(String value) {
       for (IpEnum b : IpEnum.values()) {
-        if (b.value.equals(value)) {
+        if (b.value.equals(value) || value.equals("collection")) {
           return b;
         }
       }

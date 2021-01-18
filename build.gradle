@@ -2,108 +2,107 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'java'
 apply plugin: 'maven'
+apply plugin: 'java-library'
 apply plugin: 'maven-publish'
+apply plugin: 'signing'
 
 group = 'com.ionoscloud'
-version = '5.0'
+version = '5.0-SNAPSHOT'
 
 buildscript {
     repositories {
         maven { url "https://repo1.maven.org/maven2" }
         jcenter()
     }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.+'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
-    }
 }
 
 repositories {
     jcenter()
 }
+
 sourceSets {
     main.java.srcDirs = ['src/main/java']
 }
 
-if(hasProperty('target') && target == 'android') {
+apply plugin: 'java'
+apply plugin: 'maven'
 
-    apply plugin: 'com.android.library'
-    apply plugin: 'com.github.dcendents.android-maven'
+sourceCompatibility = JavaVersion.VERSION_1_7
+targetCompatibility = JavaVersion.VERSION_1_7
 
-    android {
-        compileSdkVersion 25
-        buildToolsVersion '25.0.2'
-        defaultConfig {
-            minSdkVersion 14
-            targetSdkVersion 25
-        }
-        compileOptions {
-            sourceCompatibility JavaVersion.VERSION_1_7
-            targetCompatibility JavaVersion.VERSION_1_7
-        }
-
-        // Rename the aar correctly
-        libraryVariants.all { variant ->
-            variant.outputs.each { output ->
-                def outputFile = output.outputFile
-                if (outputFile != null && outputFile.name.endsWith('.aar')) {
-                    def fileName = "${project.name}-${variant.baseName}-${version}.aar"
-                    output.outputFile = new File(outputFile.parent, fileName)
-                }
-            }
-        }
-
-        dependencies {
-            provided 'javax.annotation:javax.annotation-api:1.3.2'
-        }
-    }
-
-    afterEvaluate {
-        android.libraryVariants.all { variant ->
-            def task = project.tasks.create "jar${variant.name.capitalize()}", Jar
-            task.description = "Create jar artifact for ${variant.name}"
-            task.dependsOn variant.javaCompile
-            task.from variant.javaCompile.destinationDir
-            task.destinationDir = project.file("${project.buildDir}/outputs/jar")
-            task.archiveName = "${project.name}-${variant.baseName}-${version}.jar"
-            artifacts.add('archives', task);
-        }
-    }
-
-    task sourcesJar(type: Jar) {
-        from android.sourceSets.main.java.srcDirs
-        classifier = 'sources'
-    }
-
-    artifacts {
-        archives sourcesJar
-    }
-
-} else {
-
-    apply plugin: 'java'
-    apply plugin: 'maven'
-
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
-
-    install {
-        repositories.mavenInstaller {
-            pom.artifactId = 'ionos-cloud-sdk'
-        }
-    }
-
-    task execute(type:JavaExec) {
-       main = System.getProperty('mainClass')
-       classpath = sourceSets.main.runtimeClasspath
+install {
+    repositories.mavenInstaller {
+        pom.artifactId = 'ionos-cloud-sdk'
     }
 }
 
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
 publishing {
-    publications {
-        jar(MavenPublication) {
-            from components.java
+    repositories {
+        maven {
+            name = "MavenCentral"
+            def baseUrl = "https://oss.sonatype.org"
+            def snapshotsRepoUrl = "$baseUrl/content/repositories/snapshots"
+            def releasesRepoUrl = "$baseUrl/service/local/staging/deploy/maven2"
+            url = uri(version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl)
+            credentials {
+                username = "ionoscloud"
+                password = "Effects1*Effects1*"
+            }
         }
+    }
+
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'ionos-cloud-sdk'
+            from components.java
+            versionMapping {
+                usage('java-api') {
+                    fromResolutionOf('runtimeClasspath')
+                }
+                usage('java-runtime') {
+                    fromResolutionResult()
+                }
+            }
+            pom {
+                name = "Ionos Cloud Sdk"
+                description = "The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive."
+                url = "https://github.com/ionos-cloud/sdk-java"
+                licenses {
+                    license {
+                        name = "Unlicense"
+                        url = "http://unlicense.org"
+                    }
+                }
+                developers {
+                    developer {
+                        id = "ionoscloud"
+                        name = "Ionos"
+                        email = "sdk@cloud.ionos.com"
+                    }
+                }
+                scm {
+                    connection = "scm:git:git@github.com:ionos-cloud/sdk-java.git"
+                    developerConnection = "scm:git:git@github.com:ionos-cloud/sdk-java.git"
+                    url = "https://github.com/ionos-cloud"
+                }
+            }
+        }
+    }
+}
+
+signing {
+    useInMemoryPgpKeys("C848235DF854B6880AA110E9D455A8120A19D9B6", "parola")
+    sign publishing.publications.mavenJava
+}
+
+javadoc {
+    if(JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
     }
 }
 

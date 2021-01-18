@@ -22,19 +22,19 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import com.ionoscloud.model.KubernetesAutoScaling;
 import com.ionoscloud.model.KubernetesMaintenanceWindow;
-import com.ionoscloud.model.KubernetesNodePoolAnnotation;
-import com.ionoscloud.model.KubernetesNodePoolLabel;
 import com.ionoscloud.model.KubernetesNodePoolLan;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * KubernetesNodePoolPropertiesForPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-07T17:26:52.038839+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-15T13:32:34.479649+02:00[Europe/Bucharest]")
 public class KubernetesNodePoolPropertiesForPut {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -88,7 +88,7 @@ public class KubernetesNodePoolPropertiesForPut {
 
     public static AvailabilityZoneEnum fromValue(String value) {
       for (AvailabilityZoneEnum b : AvailabilityZoneEnum.values()) {
-        if (b.value.equals(value)) {
+        if (b.value.equals(value) || value.equals("collection")) {
           return b;
         }
       }
@@ -139,7 +139,7 @@ public class KubernetesNodePoolPropertiesForPut {
 
     public static StorageTypeEnum fromValue(String value) {
       for (StorageTypeEnum b : StorageTypeEnum.values()) {
-        if (b.value.equals(value)) {
+        if (b.value.equals(value) || value.equals("collection")) {
           return b;
         }
       }
@@ -186,11 +186,11 @@ public class KubernetesNodePoolPropertiesForPut {
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
-  private KubernetesNodePoolLabel labels;
+  private Map<String, String> labels = null;
 
   public static final String SERIALIZED_NAME_ANNOTATIONS = "annotations";
   @SerializedName(SERIALIZED_NAME_ANNOTATIONS)
-  private KubernetesNodePoolAnnotation annotations;
+  private Map<String, String> annotations = null;
 
   public static final String SERIALIZED_NAME_PUBLIC_IPS = "publicIps";
   @SerializedName(SERIALIZED_NAME_PUBLIC_IPS)
@@ -495,48 +495,64 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
 
-  public KubernetesNodePoolPropertiesForPut labels(KubernetesNodePoolLabel labels) {
+  public KubernetesNodePoolPropertiesForPut labels(Map<String, String> labels) {
     
     this.labels = labels;
     return this;
   }
 
+  public KubernetesNodePoolPropertiesForPut putLabelsItem(String key, String labelsItem) {
+    if (this.labels == null) {
+      this.labels = new HashMap<String, String>();
+    }
+    this.labels.put(key, labelsItem);
+    return this;
+  }
+
    /**
-   * Get labels
+   * map of labels attached to node pool
    * @return labels
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "map of labels attached to node pool")
 
-  public KubernetesNodePoolLabel getLabels() {
+  public Map<String, String> getLabels() {
     return labels;
   }
 
 
-  public void setLabels(KubernetesNodePoolLabel labels) {
+  public void setLabels(Map<String, String> labels) {
     this.labels = labels;
   }
 
 
-  public KubernetesNodePoolPropertiesForPut annotations(KubernetesNodePoolAnnotation annotations) {
+  public KubernetesNodePoolPropertiesForPut annotations(Map<String, String> annotations) {
     
     this.annotations = annotations;
     return this;
   }
 
+  public KubernetesNodePoolPropertiesForPut putAnnotationsItem(String key, String annotationsItem) {
+    if (this.annotations == null) {
+      this.annotations = new HashMap<String, String>();
+    }
+    this.annotations.put(key, annotationsItem);
+    return this;
+  }
+
    /**
-   * Get annotations
+   * map of annotations attached to node pool
    * @return annotations
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "map of annotations attached to node pool")
 
-  public KubernetesNodePoolAnnotation getAnnotations() {
+  public Map<String, String> getAnnotations() {
     return annotations;
   }
 
 
-  public void setAnnotations(KubernetesNodePoolAnnotation annotations) {
+  public void setAnnotations(Map<String, String> annotations) {
     this.annotations = annotations;
   }
 

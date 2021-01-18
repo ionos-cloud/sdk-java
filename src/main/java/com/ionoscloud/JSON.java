@@ -221,6 +221,8 @@ public class JSON {
                     String date = in.nextString();
                     if (date.endsWith("+0000")) {
                         date = date.substring(0, date.length()-5) + "Z";
+                    } else if (!date.endsWith("Z")) {
+                        date = date + "Z";
                     }
                     return OffsetDateTime.parse(date, formatter);
             }

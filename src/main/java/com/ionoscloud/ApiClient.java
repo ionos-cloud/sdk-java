@@ -87,6 +87,7 @@ public class ApiClient {
 
     private int maxRetries = 3;
     private int waitTime = 10;
+    private int maxWaitTime = 2000;
 
     /*
      * Basic constructor for ApiClient
@@ -219,6 +220,15 @@ public class ApiClient {
     */
     public void setWaitTime(int waitTime) {
         this.waitTime = waitTime;
+    }
+
+    /**
+     * Set max wait time after failed request.
+     *
+     * @param maxWaitTime in seconds between requests
+     */
+    public void setMaxWaitTime(int maxWaitTime) {
+        this.maxWaitTime = maxWaitTime;
     }
 
     /**
@@ -968,7 +978,11 @@ public class ApiClient {
                         break;
                     case TOO_MANY_REQUESTS:
                         if (response.header("Retry-After") != null) {
-                            backoffTime = Integer.parseInt(response.header("Retry-After"));
+                            try {
+                                backoffTime = Integer.parseInt(response.header("Retry-After"));
+                            } catch (NumberFormatException nfe) {
+                                backoffTime = waitTime;
+                            }
                         } else {
                             backoffTime = waitTime;
                         }
@@ -982,6 +996,11 @@ public class ApiClient {
                     T data = handleResponse(response, returnType);
                     return new ApiResponse<T>(response.code(), response.headers().toMultimap(), data);
                 } else {
+
+                    if (backoffTime > maxWaitTime) {
+                        backoffTime = maxWaitTime;
+                    }
+
                     try {
                         Thread.sleep(backoffTime * 1000);
                     } catch(InterruptedException e) {
@@ -1454,6 +1473,6 @@ public class ApiClient {
             }
 
             scaleup *= 2;
-        } while (System.currentTimeMillis() > timeoutTime);
+        } while (System.currentTimeMillis() < timeoutTime);
     }
 }

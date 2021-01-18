@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * KubernetesNodePools
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-07T17:26:52.038839+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-15T13:32:34.479649+02:00[Europe/Bucharest]")
 public class KubernetesNodePools {
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
@@ -42,7 +42,9 @@ public class KubernetesNodePools {
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
-    NODEPOOL("nodepool");
+    NODEPOOL("nodepool"),
+    
+    COLLECTION("collection");
 
     private String value;
 
@@ -61,7 +63,7 @@ public class KubernetesNodePools {
 
     public static TypeEnum fromValue(String value) {
       for (TypeEnum b : TypeEnum.values()) {
-        if (b.value.equals(value)) {
+        if (b.value.equals(value) || value.equals("collection")) {
           return b;
         }
       }

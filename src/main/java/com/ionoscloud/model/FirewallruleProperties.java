@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * FirewallruleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-07T17:26:52.038839+02:00[Europe/Bucharest]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-15T13:32:34.479649+02:00[Europe/Bucharest]")
 public class FirewallruleProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
@@ -63,7 +63,7 @@ public class FirewallruleProperties {
 
     public static ProtocolEnum fromValue(String value) {
       for (ProtocolEnum b : ProtocolEnum.values()) {
-        if (b.value.equals(value)) {
+        if (b.value.equals(value) || value.equals("collection")) {
           return b;
         }
       }
@@ -114,7 +114,7 @@ public class FirewallruleProperties {
 
     public static SourceMacEnum fromValue(String value) {
       for (SourceMacEnum b : SourceMacEnum.values()) {
-        if (b.value.equals(value)) {
+        if (b.value.equals(value) || value.equals("collection")) {
           return b;
         }
       }
@@ -165,7 +165,7 @@ public class FirewallruleProperties {
 
     public static SourceIpEnum fromValue(String value) {
       for (SourceIpEnum b : SourceIpEnum.values()) {
-        if (b.value.equals(value)) {
+        if (b.value.equals(value) || value.equals("collection")) {
           return b;
         }
       }
@@ -216,7 +216,7 @@ public class FirewallruleProperties {
 
     public static TargetIpEnum fromValue(String value) {
       for (TargetIpEnum b : TargetIpEnum.values()) {
-        if (b.value.equals(value)) {
+        if (b.value.equals(value) || value.equals("collection")) {
           return b;
         }
       }

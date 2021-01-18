@@ -31063,14 +31063,12 @@ components:
                 - id: 3
                 - id: 3
                 annotations:
-                  value: value
-                  key: key
+                  key: annotations
                 ramSize: 2048
                 availabilityZone: AUTO
                 k8sVersion: 1.15.4
                 labels:
-                  value: value
-                  key: key
+                  key: labels
                 maintenanceWindow:
                   dayOfTheWeek: Monday
                   time: 13:00:00
@@ -31108,14 +31106,12 @@ components:
                 - id: 3
                 - id: 3
                 annotations:
-                  value: value
-                  key: key
+                  key: annotations
                 ramSize: 2048
                 availabilityZone: AUTO
                 k8sVersion: 1.15.4
                 labels:
-                  value: value
-                  key: key
+                  key: labels
                 maintenanceWindow:
                   dayOfTheWeek: Monday
                   time: 13:00:00
@@ -31202,14 +31198,12 @@ components:
               - id: 3
               - id: 3
               annotations:
-                value: value
-                key: key
+                key: annotations
               ramSize: 2048
               availabilityZone: AUTO
               k8sVersion: 1.15.4
               labels:
-                value: value
-                key: key
+                key: labels
               maintenanceWindow:
                 dayOfTheWeek: Monday
                 time: 13:00:00
@@ -31247,14 +31241,12 @@ components:
               - id: 3
               - id: 3
               annotations:
-                value: value
-                key: key
+                key: annotations
               ramSize: 2048
               availabilityZone: AUTO
               k8sVersion: 1.15.4
               labels:
-                value: value
-                key: key
+                key: labels
               maintenanceWindow:
                 dayOfTheWeek: Monday
                 time: 13:00:00
@@ -31317,14 +31309,12 @@ components:
                   - id: 3
                   - id: 3
                   annotations:
-                    value: value
-                    key: key
+                    key: annotations
                   ramSize: 2048
                   availabilityZone: AUTO
                   k8sVersion: 1.15.4
                   labels:
-                    value: value
-                    key: key
+                    key: labels
                   maintenanceWindow:
                     dayOfTheWeek: Monday
                     time: 13:00:00
@@ -31362,14 +31352,12 @@ components:
                   - id: 3
                   - id: 3
                   annotations:
-                    value: value
-                    key: key
+                    key: annotations
                   ramSize: 2048
                   availabilityZone: AUTO
                   k8sVersion: 1.15.4
                   labels:
-                    value: value
-                    key: key
+                    key: labels
                   maintenanceWindow:
                     dayOfTheWeek: Monday
                     time: 13:00:00
@@ -31437,14 +31425,12 @@ components:
                   - id: 3
                   - id: 3
                   annotations:
-                    value: value
-                    key: key
+                    key: annotations
                   ramSize: 2048
                   availabilityZone: AUTO
                   k8sVersion: 1.15.4
                   labels:
-                    value: value
-                    key: key
+                    key: labels
                   maintenanceWindow:
                     dayOfTheWeek: Monday
                     time: 13:00:00
@@ -31482,14 +31468,12 @@ components:
                   - id: 3
                   - id: 3
                   annotations:
-                    value: value
-                    key: key
+                    key: annotations
                   ramSize: 2048
                   availabilityZone: AUTO
                   k8sVersion: 1.15.4
                   labels:
-                    value: value
-                    key: key
+                    key: labels
                   maintenanceWindow:
                     dayOfTheWeek: Monday
                     time: 13:00:00
@@ -31532,6 +31516,7 @@ components:
           description: The type of resource within a collection
           enum:
           - k8s
+          - collection
           example: collection
           readOnly: true
           type: string
@@ -31658,14 +31643,12 @@ components:
         - id: 3
         - id: 3
         annotations:
-          value: value
-          key: key
+          key: annotations
         ramSize: 2048
         availabilityZone: AUTO
         k8sVersion: 1.15.4
         labels:
-          value: value
-          key: key
+          key: labels
         maintenanceWindow:
           dayOfTheWeek: Monday
           time: 13:00:00
@@ -31745,9 +31728,15 @@ components:
             $ref: '#/components/schemas/KubernetesNodePoolLan'
           type: array
         labels:
-          $ref: '#/components/schemas/KubernetesNodePoolLabel'
+          additionalProperties:
+            type: string
+          description: map of labels attached to node pool
+          type: object
         annotations:
-          $ref: '#/components/schemas/KubernetesNodePoolAnnotation'
+          additionalProperties:
+            type: string
+          description: map of annotations attached to node pool
+          type: object
         publicIps:
           description: Optional array of reserved public IP addresses to be used by
             the nodes. IPs must be from same location as the data center used for
@@ -31783,14 +31772,12 @@ components:
         - id: 3
         - id: 3
         annotations:
-          value: value
-          key: key
+          key: annotations
         ramSize: 2048
         availabilityZone: AUTO
         k8sVersion: 1.15.4
         labels:
-          value: value
-          key: key
+          key: labels
         maintenanceWindow:
           dayOfTheWeek: Monday
           time: 13:00:00
@@ -31873,9 +31860,15 @@ components:
             $ref: '#/components/schemas/KubernetesNodePoolLan'
           type: array
         labels:
-          $ref: '#/components/schemas/KubernetesNodePoolLabel'
+          additionalProperties:
+            type: string
+          description: map of labels attached to node pool
+          type: object
         annotations:
-          $ref: '#/components/schemas/KubernetesNodePoolAnnotation'
+          additionalProperties:
+            type: string
+          description: map of annotations attached to node pool
+          type: object
         publicIps:
           description: Optional array of reserved public IP addresses to be used by
             the nodes. IPs must be from same location as the data center used for
@@ -31976,9 +31969,15 @@ components:
             $ref: '#/components/schemas/KubernetesNodePoolLan'
           type: array
         labels:
-          $ref: '#/components/schemas/KubernetesNodePoolLabel'
+          additionalProperties:
+            type: string
+          description: map of labels attached to node pool
+          type: object
         annotations:
-          $ref: '#/components/schemas/KubernetesNodePoolAnnotation'
+          additionalProperties:
+            type: string
+          description: map of annotations attached to node pool
+          type: object
         publicIps:
           description: Optional array of reserved public IP addresses to be used by
             the nodes. IPs must be from same location as the data center used for
@@ -32027,14 +32026,12 @@ components:
           - id: 3
           - id: 3
           annotations:
-            value: value
-            key: key
+            key: annotations
           ramSize: 2048
           availabilityZone: AUTO
           k8sVersion: 1.15.4
           labels:
-            value: value
-            key: key
+            key: labels
           maintenanceWindow:
             dayOfTheWeek: Monday
             time: 13:00:00
@@ -32096,14 +32093,12 @@ components:
           - id: 3
           - id: 3
           annotations:
-            value: value
-            key: key
+            key: annotations
           ramSize: 2048
           availabilityZone: AUTO
           k8sVersion: 1.15.4
           labels:
-            value: value
-            key: key
+            key: labels
           maintenanceWindow:
             dayOfTheWeek: Monday
             time: 13:00:00
@@ -32172,14 +32167,12 @@ components:
             - id: 3
             - id: 3
             annotations:
-              value: value
-              key: key
+              key: annotations
             ramSize: 2048
             availabilityZone: AUTO
             k8sVersion: 1.15.4
             labels:
-              value: value
-              key: key
+              key: labels
             maintenanceWindow:
               dayOfTheWeek: Monday
               time: 13:00:00
@@ -32217,14 +32210,12 @@ components:
             - id: 3
             - id: 3
             annotations:
-              value: value
-              key: key
+              key: annotations
             ramSize: 2048
             availabilityZone: AUTO
             k8sVersion: 1.15.4
             labels:
-              value: value
-              key: key
+              key: labels
             maintenanceWindow:
               dayOfTheWeek: Monday
               time: 13:00:00
@@ -32252,6 +32243,7 @@ components:
           description: The type of resource within a collection
           enum:
           - nodepool
+          - collection
           example: collection
           readOnly: true
           type: string
@@ -32404,36 +32396,14 @@ components:
           type: integer
       type: object
     KubernetesNodePoolLabel:
+      additionalProperties:
+        type: string
       description: map of labels attached to node pool
-      example:
-        value: value
-        key: key
-      properties:
-        key:
-          description: Key of the label. String part must consist of alphanumeric
-            characters, '-', '_' or '.', and must start and end with an alphanumeric
-            character.
-          type: string
-        value:
-          description: Value of the label. String part must consist of alphanumeric
-            characters, '-', '_' or '.', and must start and end with an alphanumeric
-            character.
-          type: string
       type: object
     KubernetesNodePoolAnnotation:
+      additionalProperties:
+        type: string
       description: map of annotations attached to node pool
-      example:
-        value: value
-        key: key
-      properties:
-        key:
-          description: Key of the annotation. String part must consist of alphanumeric
-            characters, '-', '_' or '.', and must start and end with an alphanumeric
-            character.
-          type: string
-        value:
-          description: Value of the annotation.
-          type: string
       type: object
     Error:
       properties:
