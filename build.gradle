@@ -50,8 +50,8 @@ publishing {
             def releasesRepoUrl = "$baseUrl/service/local/staging/deploy/maven2"
             url = uri(version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl)
             credentials {
-                username = "ionoscloud"
-                password = "Effects1*Effects1*"
+                username = "mionosz"
+                password = "rmsec"
             }
         }
     }
