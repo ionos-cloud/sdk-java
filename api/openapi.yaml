@@ -31513,9 +31513,8 @@ components:
           readOnly: true
           type: string
         type:
-          description: The type of resource within a collection
+          description: The type of object that has been created
           enum:
-          - k8s
           - collection
           example: collection
           readOnly: true
@@ -32240,9 +32239,8 @@ components:
           readOnly: true
           type: string
         type:
-          description: The type of resource within a collection
+          description: The type of object that has been created
           enum:
-          - nodepool
           - collection
           example: collection
           readOnly: true
@@ -32516,4 +32514,5 @@ components:
       in: header
       name: Authorization
       type: apiKey
+x-original-swagger-version: "2.0"
 

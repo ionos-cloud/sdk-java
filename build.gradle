@@ -7,7 +7,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
 group = 'com.ionoscloud'
-version = '5.0-SNAPSHOT'
+version = '5.8.1-SNAPSHOT'
 
 buildscript {
     repositories {
@@ -50,8 +50,8 @@ publishing {
             def releasesRepoUrl = "$baseUrl/service/local/staging/deploy/maven2"
             url = uri(version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl)
             credentials {
-                username = "mionosz"
-                password = "rmsec"
+                username = project.getProperties().get("mvn.credentials.username")
+                password = project.getProperties().get("mvn.credentials.password")
             }
         }
     }
@@ -95,17 +95,6 @@ publishing {
     }
 }
 
-signing {
-    useInMemoryPgpKeys("C848235DF854B6880AA110E9D455A8120A19D9B6", "parola")
-    sign publishing.publications.mavenJava
-}
-
-javadoc {
-    if(JavaVersion.current().isJava9Compatible()) {
-        options.addBooleanOption('html5', true)
-    }
-}
-
 dependencies {
     compile 'io.swagger:swagger-annotations:1.5.24'
     compile "com.google.code.findbugs:jsr305:3.0.2"
@@ -120,5 +109,6 @@ dependencies {
 }
 
 javadoc {
+    options.addStringOption('Xdoclint:none', '-quiet')
     options.tags = [ "http.response.details:a:Http Response Details" ]
 }

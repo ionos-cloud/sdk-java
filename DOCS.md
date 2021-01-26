@@ -4,7 +4,7 @@
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2021-01-15T13:32:34.479649+02:00[Europe/Bucharest]
+  - Build date: 2021-01-26T10:35:34.247Z[Etc/UTC]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -44,7 +44,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ionoscloud</groupId>
   <artifactId>ionos-cloud-sdk</artifactId>
-  <version>5.0</version>
+  <version>5.8.1-SNAPSHOT</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -54,7 +54,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ionoscloud:ionos-cloud-sdk:5.0"
+compile "com.ionoscloud:ionos-cloud-sdk:5.8.1-SNAPSHOT"
 ```
 
 ### Others
@@ -67,7 +67,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ionos-cloud-sdk-5.0.jar`
+* `target/ionos-cloud-sdk-5.8.1-SNAPSHOT.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -15200,7 +15200,7 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Unique representation for Kubernetes Cluster as a collection on a resource. |  [optional] [readonly]
-**type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of object that has been created |  [optional] [readonly]
 **href** | [**URI**](DOCS.md#URI) | URL to the collection representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;KubernetesCluster&gt;**](DOCS.md#KubernetesCluster) | Array of items in that collection |  [optional] [readonly]
 
@@ -15211,7 +15211,6 @@ Name | Type | Description | Notes
 
 Name | Value
 ---- | -----
-K8S | &quot;k8s&quot;
 COLLECTION | &quot;collection&quot;
 
 
@@ -15539,7 +15538,7 @@ SSD | &quot;SSD&quot;
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **String** | Unique representation for Kubernetes Node Pool as a collection on a resource. |  [optional] [readonly]
-**type** | [**TypeEnum**](#TypeEnum) | The type of resource within a collection |  [optional] [readonly]
+**type** | [**TypeEnum**](#TypeEnum) | The type of object that has been created |  [optional] [readonly]
 **href** | [**URI**](DOCS.md#URI) | URL to the collection representation (absolute path) |  [optional] [readonly]
 **items** | [**List&lt;KubernetesNodePool&gt;**](DOCS.md#KubernetesNodePool) | Array of items in that collection |  [optional] [readonly]
 
@@ -15550,7 +15549,6 @@ Name | Type | Description | Notes
 
 Name | Value
 ---- | -----
-NODEPOOL | &quot;nodepool&quot;
 COLLECTION | &quot;collection&quot;
 
 
