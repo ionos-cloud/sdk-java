@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * DatacenterElementMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-27T14:18:19.688Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-27T14:28:27.256Z[Etc/UTC]")
 
 public class DatacenterElementMetadata {
   public static final String SERIALIZED_NAME_ETAG = "etag";
