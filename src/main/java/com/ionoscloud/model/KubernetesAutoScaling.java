@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * KubernetesAutoScaling
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-27T09:34:27.683Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-27T13:42:21.767Z[Etc/UTC]")
 
 public class KubernetesAutoScaling {
   public static final String SERIALIZED_NAME_MIN_NODE_COUNT = "minNodeCount";

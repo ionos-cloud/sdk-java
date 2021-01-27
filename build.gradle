@@ -7,7 +7,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
 group = 'com.ionoscloud'
-version = '5.0.1'
+version = '5.0.2'
 
 buildscript {
     repositories {
@@ -93,6 +93,10 @@ publishing {
             }
         }
     }
+}
+
+signing {
+    sign publishing.publications.mavenJava
 }
 
 dependencies {

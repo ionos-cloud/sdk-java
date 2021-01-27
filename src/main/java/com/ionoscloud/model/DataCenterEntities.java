@@ -31,7 +31,7 @@ import java.io.IOException;
 /**
  * DataCenterEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-27T09:34:27.683Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-27T13:42:21.767Z[Etc/UTC]")
 
 public class DataCenterEntities {
   public static final String SERIALIZED_NAME_SERVERS = "servers";
