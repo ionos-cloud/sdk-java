@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * BackupUnitSSO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-26T14:40:41.624Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-27T09:34:27.683Z[Etc/UTC]")
 
 public class BackupUnitSSO {
   public static final String SERIALIZED_NAME_SSO_URL = "ssoUrl";

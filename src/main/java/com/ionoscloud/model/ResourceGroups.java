@@ -33,7 +33,7 @@ import java.util.List;
  * Resources assigned to this group.
  */
 @ApiModel(description = "Resources assigned to this group.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-26T14:40:41.624Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-27T09:34:27.683Z[Etc/UTC]")
 
 public class ResourceGroups {
   public static final String SERIALIZED_NAME_ID = "id";
