@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * IpBlockProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-27T14:28:27.256Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-27T15:15:19.313Z[Etc/UTC]")
 
 public class IpBlockProperties {
   public static final String SERIALIZED_NAME_IPS = "ips";
