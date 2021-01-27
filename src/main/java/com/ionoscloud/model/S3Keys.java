@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * S3Keys
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-27T13:42:21.767Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-27T14:18:19.688Z[Etc/UTC]")
 
 public class S3Keys {
   public static final String SERIALIZED_NAME_ID = "id";
