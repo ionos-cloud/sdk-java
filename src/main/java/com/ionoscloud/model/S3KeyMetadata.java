@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * S3KeyMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-28T09:19:33.484Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-28T09:35:28.661Z[Etc/UTC]")
 
 public class S3KeyMetadata {
   public static final String SERIALIZED_NAME_ETAG = "etag";
