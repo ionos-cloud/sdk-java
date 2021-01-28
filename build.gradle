@@ -9,7 +9,7 @@ apply plugin: 'nexus-workflow'
 
 
 group = 'com.ionoscloud'
-version = '5.0.6'
+version = '5.0.7'
 
 buildscript {
     repositories {
@@ -51,10 +51,6 @@ publishing {
             def snapshotsRepoUrl = "$baseUrl/content/repositories/snapshots"
             def releasesRepoUrl = "$baseUrl/service/local/staging/deploy/maven2"
             url = uri(version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl)
-
-            ext."oss-releases.username" = project.getProperties().get("mvn.credentials.username")
-            ext."oss-releases.password" = project.getProperties().get("mvn.credentials.password")
-            ext."oss-releases.url" = "https://oss.sonatype.org/index.html#stagingRepositories"
 
             credentials {
                 username = project.getProperties().get("mvn.credentials.username")
@@ -101,6 +97,10 @@ publishing {
         }
     }
 }
+
+ext."oss-releases.username" = project.getProperties().get("mvn.credentials.username")
+ext."oss-releases.password" = project.getProperties().get("mvn.credentials.password")
+ext."oss-releases.url" = "https://oss.sonatype.org/index.html#stagingRepositories"
 
 signing {
     sign publishing.publications.mavenJava

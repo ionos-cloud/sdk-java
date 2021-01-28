@@ -18,7 +18,7 @@ import com.ionoscloud.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-28T09:07:45.117Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-28T09:19:33.484Z[Etc/UTC]")
 public class HttpBearerAuth implements Authentication {
   private final String scheme;
   private String bearerToken;
