@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * IpBlocks
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-27T15:15:19.313Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-28T09:07:45.117Z[Etc/UTC]")
 
 public class IpBlocks {
   public static final String SERIALIZED_NAME_ID = "id";
