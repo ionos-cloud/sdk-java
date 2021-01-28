@@ -5,16 +5,19 @@ apply plugin: 'maven'
 apply plugin: 'java-library'
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
-apply plugin: 'io.codearte.nexus-staging'
+apply plugin: 'nexus-workflow'
 
 
 group = 'com.ionoscloud'
-version = '5.0.8'
+version = '5.0.0-SNAPSHOT'
 
 buildscript {
     repositories {
         maven { url "https://repo1.maven.org/maven2" }
         jcenter()
+    }
+    dependencies {
+        classpath 'com.adaptc.gradle:nexus-workflow:0.6'
     }
 }
 
@@ -101,11 +104,6 @@ publishing {
 ext."oss-releases.username" = project.getProperties().get("mvn.credentials.username")
 ext."oss-releases.password" = project.getProperties().get("mvn.credentials.password")
 ext."oss-releases.url" = "https://oss.sonatype.org/index.html#stagingRepositories"
-
-
-nexusStaging {
-    packageGroup = "com.ionoscloud.ionos-cloud-sdk"
-}
 
 signing {
     sign publishing.publications.mavenJava
