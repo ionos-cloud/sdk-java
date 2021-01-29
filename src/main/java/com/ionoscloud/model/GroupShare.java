@@ -30,7 +30,7 @@ import java.net.URI;
 /**
  * GroupShare
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T13:48:51.777Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T13:57:01.547Z[Etc/UTC]")
 
 public class GroupShare {
   public static final String SERIALIZED_NAME_ID = "id";
