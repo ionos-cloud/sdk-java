@@ -101,10 +101,6 @@ publishing {
     }
 }
 
-ext."oss-releases.username" = project.getProperties().get("mvn.credentials.username")
-ext."oss-releases.password" = project.getProperties().get("mvn.credentials.password")
-ext."oss-releases.url" = "https://oss.sonatype.org/index.html#stagingRepositories"
-
 signing {
     sign publishing.publications.mavenJava
 }
