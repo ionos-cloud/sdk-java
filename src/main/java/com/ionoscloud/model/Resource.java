@@ -33,7 +33,7 @@ import java.net.URI;
  * datacenter resource representation
  */
 @ApiModel(description = "datacenter resource representation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T13:57:01.547Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T14:13:56.015Z[Etc/UTC]")
 
 public class Resource {
   public static final String SERIALIZED_NAME_ID = "id";
