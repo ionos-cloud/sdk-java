@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * LabelResourceProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-28T15:47:18.888Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T05:07:26.377Z[Etc/UTC]")
 
 public class LabelResourceProperties {
   public static final String SERIALIZED_NAME_KEY = "key";
