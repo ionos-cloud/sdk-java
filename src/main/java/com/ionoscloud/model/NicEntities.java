@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * NicEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T05:46:08.684Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T05:53:33.217Z[Etc/UTC]")
 
 public class NicEntities {
   public static final String SERIALIZED_NAME_FIREWALLRULES = "firewallrules";

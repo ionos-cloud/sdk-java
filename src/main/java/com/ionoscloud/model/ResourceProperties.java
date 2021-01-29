@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ResourceProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T05:46:08.684Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T05:53:33.217Z[Etc/UTC]")
 
 public class ResourceProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
