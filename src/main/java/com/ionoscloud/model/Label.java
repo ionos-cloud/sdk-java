@@ -30,7 +30,7 @@ import java.net.URI;
 /**
  * Label
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-10T09:04:24.312Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-10T11:37:41.687Z[Etc/UTC]")
 
 public class Label {
   public static final String SERIALIZED_NAME_ID = "id";
