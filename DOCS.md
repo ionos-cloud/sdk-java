@@ -4,7 +4,7 @@
 
 CLOUD API
 - API version: 5.0
-  - Build date: 2021-01-29T14:13:56.015Z[Etc/UTC]
+  - Build date: 2021-02-10T09:04:24.312Z[Etc/UTC]
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -44,7 +44,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ionoscloud</groupId>
   <artifactId>ionos-cloud-sdk</artifactId>
-  <version>5.0.0</version>
+  <version>5.0.1-SNAPSHOT</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -54,7 +54,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ionoscloud:ionos-cloud-sdk:5.0.0"
+compile "com.ionoscloud:ionos-cloud-sdk:5.0.1-SNAPSHOT"
 ```
 
 ### Others
@@ -67,7 +67,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ionos-cloud-sdk-5.0.0.jar`
+* `target/ionos-cloud-sdk-5.0.1-SNAPSHOT.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -14440,7 +14440,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Volume&gt;**](DOCS.md#Volume) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Volume&gt;**](DOCS.md#Volume) | Array of items in that collection |  [optional]
 **offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
 **limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
 **links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
@@ -14545,7 +14545,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Image&gt;**](DOCS.md#Image) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Image&gt;**](DOCS.md#Image) | Array of items in that collection |  [optional]
 **offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
 **limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
 **links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]
@@ -15991,7 +15991,7 @@ Name | Type | Description | Notes
 **id** | **String** | The resource&#39;s unique identifier |  [optional] [readonly]
 **type** | [**Type**](DOCS.md#Type) | The type of object that has been created |  [optional]
 **href** | [**URI**](DOCS.md#URI) | URL to the object representation (absolute path) |  [optional] [readonly]
-**items** | [**List&lt;Nic&gt;**](DOCS.md#Nic) | Array of items in that collection |  [optional] [readonly]
+**items** | [**List&lt;Nic&gt;**](DOCS.md#Nic) | Array of items in that collection |  [optional]
 **offset** | [**BigDecimal**](DOCS.md#BigDecimal) | the offset (if specified in the request) |  [optional]
 **limit** | [**BigDecimal**](DOCS.md#BigDecimal) | the limit (if specified in the request) |  [optional]
 **links** | [**PaginationLinks**](DOCS.md#PaginationLinks) |  |  [optional]

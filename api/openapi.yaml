@@ -15593,7 +15593,6 @@ components:
           description: Array of items in that collection
           items:
             $ref: '#/components/schemas/Volume'
-          readOnly: true
           type: array
         offset:
           description: the offset (if specified in the request)
@@ -16094,7 +16093,6 @@ components:
           description: Array of items in that collection
           items:
             $ref: '#/components/schemas/Image'
-          readOnly: true
           type: array
         offset:
           description: the offset (if specified in the request)
@@ -25771,7 +25769,6 @@ components:
           description: Array of items in that collection
           items:
             $ref: '#/components/schemas/Nic'
-          readOnly: true
           type: array
         offset:
           description: the offset (if specified in the request)

@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * Cdroms
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T14:13:56.015Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-10T09:04:24.312Z[Etc/UTC]")
 
 public class Cdroms {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -117,6 +117,20 @@ public class Cdroms {
 
 
 
+  public Cdroms items(List<Image> items) {
+    
+    this.items = items;
+    return this;
+  }
+
+  public Cdroms addItemsItem(Image itemsItem) {
+    if (this.items == null) {
+      this.items = new ArrayList<Image>();
+    }
+    this.items.add(itemsItem);
+    return this;
+  }
+
    /**
    * Array of items in that collection
    * @return items
@@ -129,6 +143,9 @@ public class Cdroms {
   }
 
 
+  public void setItems(List<Image> items) {
+    this.items = items;
+  }
 
 
   public Cdroms offset(BigDecimal offset) {

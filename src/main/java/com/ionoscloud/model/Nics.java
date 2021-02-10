@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * Nics
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-01-29T14:13:56.015Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-10T09:04:24.312Z[Etc/UTC]")
 
 public class Nics {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -117,6 +117,20 @@ public class Nics {
 
 
 
+  public Nics items(List<Nic> items) {
+    
+    this.items = items;
+    return this;
+  }
+
+  public Nics addItemsItem(Nic itemsItem) {
+    if (this.items == null) {
+      this.items = new ArrayList<Nic>();
+    }
+    this.items.add(itemsItem);
+    return this;
+  }
+
    /**
    * Array of items in that collection
    * @return items
@@ -129,6 +143,9 @@ public class Nics {
   }
 
 
+  public void setItems(List<Nic> items) {
+    this.items = items;
+  }
 
 
   public Nics offset(BigDecimal offset) {
