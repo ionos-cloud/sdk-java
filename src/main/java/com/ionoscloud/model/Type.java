@@ -75,7 +75,9 @@ public enum Type {
   
   K8S("k8s"),
   
-  NODEPOOL("nodepool");
+  NODEPOOL("nodepool"),
+  
+  NODE("node");
 
   private String value;
 

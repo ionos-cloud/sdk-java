@@ -27,63 +27,16 @@ import java.io.IOException;
 /**
  * LoadbalancerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-10T11:37:41.687Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-15T14:46:34.288Z[Etc/UTC]")
 
 public class LoadbalancerProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
-  /**
-   * IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically
-   */
-  @JsonAdapter(IpEnum.Adapter.class)
-  public enum IpEnum {
-    _VALID_IP_ADDRESS_("@Valid IP address@"),
-    
-    NULL("null");
-
-    private String value;
-
-    IpEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static IpEnum fromValue(String value) {
-      for (IpEnum b : IpEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<IpEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final IpEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public IpEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return IpEnum.fromValue(value);
-      }
-    }
-  }
-
   public static final String SERIALIZED_NAME_IP = "ip";
   @SerializedName(SERIALIZED_NAME_IP)
-  private IpEnum ip;
+  private String ip;
 
   public static final String SERIALIZED_NAME_DHCP = "dhcp";
   @SerializedName(SERIALIZED_NAME_DHCP)
@@ -113,7 +66,7 @@ public class LoadbalancerProperties {
   }
 
 
-  public LoadbalancerProperties ip(IpEnum ip) {
+  public LoadbalancerProperties ip(String ip) {
     
     this.ip = ip;
     return this;
@@ -126,12 +79,12 @@ public class LoadbalancerProperties {
   @javax.annotation.Nullable
   @ApiModelProperty(example = "22.231.113.64", value = "IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically")
 
-  public IpEnum getIp() {
+  public String getIp() {
     return ip;
   }
 
 
-  public void setIp(IpEnum ip) {
+  public void setIp(String ip) {
     this.ip = ip;
   }
 

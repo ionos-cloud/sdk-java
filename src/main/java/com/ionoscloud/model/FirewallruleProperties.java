@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * FirewallruleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-10T11:37:41.687Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-15T14:46:34.288Z[Etc/UTC]")
 
 public class FirewallruleProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -89,158 +89,17 @@ public class FirewallruleProperties {
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
   private ProtocolEnum protocol;
 
-  /**
-   * Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows all source MAC address
-   */
-  @JsonAdapter(SourceMacEnum.Adapter.class)
-  public enum SourceMacEnum {
-    _VALID_MAC_ADDRESS_("@Valid MAC address@"),
-    
-    NULL("null");
-
-    private String value;
-
-    SourceMacEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static SourceMacEnum fromValue(String value) {
-      for (SourceMacEnum b : SourceMacEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<SourceMacEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final SourceMacEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public SourceMacEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return SourceMacEnum.fromValue(value);
-      }
-    }
-  }
-
   public static final String SERIALIZED_NAME_SOURCE_MAC = "sourceMac";
   @SerializedName(SERIALIZED_NAME_SOURCE_MAC)
-  private SourceMacEnum sourceMac;
-
-  /**
-   * Only traffic originating from the respective IPv4 address is allowed. Value null allows all source IPs
-   */
-  @JsonAdapter(SourceIpEnum.Adapter.class)
-  public enum SourceIpEnum {
-    _VALID_IP_ADDRESS_("@Valid IP address@"),
-    
-    NULL("null");
-
-    private String value;
-
-    SourceIpEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static SourceIpEnum fromValue(String value) {
-      for (SourceIpEnum b : SourceIpEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<SourceIpEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final SourceIpEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public SourceIpEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return SourceIpEnum.fromValue(value);
-      }
-    }
-  }
+  private String sourceMac;
 
   public static final String SERIALIZED_NAME_SOURCE_IP = "sourceIp";
   @SerializedName(SERIALIZED_NAME_SOURCE_IP)
-  private SourceIpEnum sourceIp;
-
-  /**
-   * In case the target NIC has multiple IP addresses, only traffic directed to the respective IP address of the NIC is allowed. Value null allows all target IPs
-   */
-  @JsonAdapter(TargetIpEnum.Adapter.class)
-  public enum TargetIpEnum {
-    _VALID_IP_ADDRESS_("@Valid IP address@"),
-    
-    NULL("null");
-
-    private String value;
-
-    TargetIpEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static TargetIpEnum fromValue(String value) {
-      for (TargetIpEnum b : TargetIpEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<TargetIpEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final TargetIpEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public TargetIpEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return TargetIpEnum.fromValue(value);
-      }
-    }
-  }
+  private String sourceIp;
 
   public static final String SERIALIZED_NAME_TARGET_IP = "targetIp";
   @SerializedName(SERIALIZED_NAME_TARGET_IP)
-  private TargetIpEnum targetIp;
+  private String targetIp;
 
   public static final String SERIALIZED_NAME_ICMP_CODE = "icmpCode";
   @SerializedName(SERIALIZED_NAME_ICMP_CODE)
@@ -304,7 +163,7 @@ public class FirewallruleProperties {
   }
 
 
-  public FirewallruleProperties sourceMac(SourceMacEnum sourceMac) {
+  public FirewallruleProperties sourceMac(String sourceMac) {
     
     this.sourceMac = sourceMac;
     return this;
@@ -317,17 +176,17 @@ public class FirewallruleProperties {
   @javax.annotation.Nullable
   @ApiModelProperty(example = "00:0a:95:9d:68:16", value = "Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows all source MAC address")
 
-  public SourceMacEnum getSourceMac() {
+  public String getSourceMac() {
     return sourceMac;
   }
 
 
-  public void setSourceMac(SourceMacEnum sourceMac) {
+  public void setSourceMac(String sourceMac) {
     this.sourceMac = sourceMac;
   }
 
 
-  public FirewallruleProperties sourceIp(SourceIpEnum sourceIp) {
+  public FirewallruleProperties sourceIp(String sourceIp) {
     
     this.sourceIp = sourceIp;
     return this;
@@ -340,17 +199,17 @@ public class FirewallruleProperties {
   @javax.annotation.Nullable
   @ApiModelProperty(example = "22.231.113.64", value = "Only traffic originating from the respective IPv4 address is allowed. Value null allows all source IPs")
 
-  public SourceIpEnum getSourceIp() {
+  public String getSourceIp() {
     return sourceIp;
   }
 
 
-  public void setSourceIp(SourceIpEnum sourceIp) {
+  public void setSourceIp(String sourceIp) {
     this.sourceIp = sourceIp;
   }
 
 
-  public FirewallruleProperties targetIp(TargetIpEnum targetIp) {
+  public FirewallruleProperties targetIp(String targetIp) {
     
     this.targetIp = targetIp;
     return this;
@@ -363,12 +222,12 @@ public class FirewallruleProperties {
   @javax.annotation.Nullable
   @ApiModelProperty(example = "22.231.113.64", value = "In case the target NIC has multiple IP addresses, only traffic directed to the respective IP address of the NIC is allowed. Value null allows all target IPs")
 
-  public TargetIpEnum getTargetIp() {
+  public String getTargetIp() {
     return targetIp;
   }
 
 
-  public void setTargetIp(TargetIpEnum targetIp) {
+  public void setTargetIp(String targetIp) {
     this.targetIp = targetIp;
   }
 
