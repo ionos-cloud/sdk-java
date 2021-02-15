@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 /**
  * ImageProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-15T14:46:34.288Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-15T15:14:48.811Z[Etc/UTC]")
 
 public class ImageProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
