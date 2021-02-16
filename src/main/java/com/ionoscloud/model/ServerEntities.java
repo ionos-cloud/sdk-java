@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * ServerEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-16T08:52:16.551Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-16T12:49:42.721Z[Etc/UTC]")
 
 public class ServerEntities {
   public static final String SERIALIZED_NAME_CDROMS = "cdroms";
