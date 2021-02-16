@@ -32,7 +32,7 @@ import java.net.URI;
 /**
  * Lan
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-16T14:15:11.994Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-16T16:38:42.288Z[Etc/UTC]")
 
 public class Lan {
   public static final String SERIALIZED_NAME_ID = "id";
