@@ -4,11 +4,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**snapshotsDelete**](SnapshotApi.md#snapshotsDelete) | **DELETE** /snapshots/{snapshotId} | Delete a Snapshot |
-| [**snapshotsFindById**](SnapshotApi.md#snapshotsFindById) | **GET** /snapshots/{snapshotId} | Retrieve a Snapshot by its uuid. |
-| [**snapshotsGet**](SnapshotApi.md#snapshotsGet) | **GET** /snapshots | List Snapshots  |
-| [**snapshotsPatch**](SnapshotApi.md#snapshotsPatch) | **PATCH** /snapshots/{snapshotId} | Partially modify a Snapshot |
-| [**snapshotsPut**](SnapshotApi.md#snapshotsPut) | **PUT** /snapshots/{snapshotId} | Modify a Snapshot |
+| [**snapshotsDelete**](SnapshotApi.md#snapshotsdelete) | **DELETE** /snapshots/{snapshotId} | Delete a Snapshot |
+| [**snapshotsFindById**](SnapshotApi.md#snapshotsfindbyid) | **GET** /snapshots/{snapshotId} | Retrieve a Snapshot by its uuid. |
+| [**snapshotsGet**](SnapshotApi.md#snapshotsget) | **GET** /snapshots | List Snapshots  |
+| [**snapshotsPatch**](SnapshotApi.md#snapshotspatch) | **PATCH** /snapshots/{snapshotId} | Partially modify a Snapshot |
+| [**snapshotsPut**](SnapshotApi.md#snapshotsput) | **PUT** /snapshots/{snapshotId} | Modify a Snapshot |
 
 
 <a name="snapshotsDelete"></a>
@@ -76,10 +76,6 @@ public class Example {
 ### Return type
 
 **Object**
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -158,10 +154,6 @@ public class Example {
 
 [**Snapshot**](Snapshot.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -237,10 +229,6 @@ public class Example {
 
 [**Snapshots**](Snapshots.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -311,7 +299,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **snapshotId** | **String**| The unique ID of the Snapshot |
-| **snapshot** | [**SnapshotProperties**](SnapshotProperties.md)| Modified Snapshot |
+| **snapshot** |  [**SnapshotProperties**](SnapshotProperties.md)| Modified Snapshot |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -319,10 +307,6 @@ public class Example {
 ### Return type
 
 [**Snapshot**](Snapshot.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -394,7 +378,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **snapshotId** | **String**| The unique ID of the Snapshot |
-| **snapshot** | [**Snapshot**](Snapshot.md)| Modified Snapshot |
+| **snapshot** |  [**Snapshot**](Snapshot.md)| Modified Snapshot |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -402,10 +386,6 @@ public class Example {
 ### Return type
 
 [**Snapshot**](Snapshot.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

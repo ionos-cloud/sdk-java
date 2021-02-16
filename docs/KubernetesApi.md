@@ -4,24 +4,24 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**k8sDelete**](KubernetesApi.md#k8sDelete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes Cluster |
-| [**k8sFindByClusterId**](KubernetesApi.md#k8sFindByClusterId) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster |
-| [**k8sGet**](KubernetesApi.md#k8sGet) | **GET** /k8s | List Kubernetes Clusters |
-| [**k8sKubeconfigGet**](KubernetesApi.md#k8sKubeconfigGet) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File |
-| [**k8sNodepoolsDelete**](KubernetesApi.md#k8sNodepoolsDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool |
-| [**k8sNodepoolsFindById**](KubernetesApi.md#k8sNodepoolsFindById) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes Node Pool |
-| [**k8sNodepoolsGet**](KubernetesApi.md#k8sNodepoolsGet) | **GET** /k8s/{k8sClusterId}/nodepools | List Kubernetes Node Pools |
-| [**k8sNodepoolsNodesDelete**](KubernetesApi.md#k8sNodepoolsNodesDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes node |
-| [**k8sNodepoolsNodesFindById**](KubernetesApi.md#k8sNodepoolsNodesFindById) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes node |
-| [**k8sNodepoolsNodesGet**](KubernetesApi.md#k8sNodepoolsNodesGet) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Retrieve Kubernetes nodes. |
-| [**k8sNodepoolsNodesReplacePost**](KubernetesApi.md#k8sNodepoolsNodesReplacePost) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate the Kubernetes node |
-| [**k8sNodepoolsPost**](KubernetesApi.md#k8sNodepoolsPost) | **POST** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool |
-| [**k8sNodepoolsPut**](KubernetesApi.md#k8sNodepoolsPut) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool |
-| [**k8sPost**](KubernetesApi.md#k8sPost) | **POST** /k8s | Create Kubernetes Cluster |
-| [**k8sPut**](KubernetesApi.md#k8sPut) | **PUT** /k8s/{k8sClusterId} | Modify Kubernetes Cluster |
-| [**k8sVersionsCompatibilitiesGet**](KubernetesApi.md#k8sVersionsCompatibilitiesGet) | **GET** /k8s/versions/{clusterVersion}/compatibilities | Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster. |
-| [**k8sVersionsDefaultGet**](KubernetesApi.md#k8sVersionsDefaultGet) | **GET** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools. |
-| [**k8sVersionsGet**](KubernetesApi.md#k8sVersionsGet) | **GET** /k8s/versions | Retrieve available Kubernetes versions |
+| [**k8sDelete**](KubernetesApi.md#k8sdelete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes Cluster |
+| [**k8sFindByClusterId**](KubernetesApi.md#k8sfindbyclusterid) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster |
+| [**k8sGet**](KubernetesApi.md#k8sget) | **GET** /k8s | List Kubernetes Clusters |
+| [**k8sKubeconfigGet**](KubernetesApi.md#k8skubeconfigget) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File |
+| [**k8sNodepoolsDelete**](KubernetesApi.md#k8snodepoolsdelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool |
+| [**k8sNodepoolsFindById**](KubernetesApi.md#k8snodepoolsfindbyid) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes Node Pool |
+| [**k8sNodepoolsGet**](KubernetesApi.md#k8snodepoolsget) | **GET** /k8s/{k8sClusterId}/nodepools | List Kubernetes Node Pools |
+| [**k8sNodepoolsNodesDelete**](KubernetesApi.md#k8snodepoolsnodesdelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes node |
+| [**k8sNodepoolsNodesFindById**](KubernetesApi.md#k8snodepoolsnodesfindbyid) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes node |
+| [**k8sNodepoolsNodesGet**](KubernetesApi.md#k8snodepoolsnodesget) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Retrieve Kubernetes nodes. |
+| [**k8sNodepoolsNodesReplacePost**](KubernetesApi.md#k8snodepoolsnodesreplacepost) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate the Kubernetes node |
+| [**k8sNodepoolsPost**](KubernetesApi.md#k8snodepoolspost) | **POST** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool |
+| [**k8sNodepoolsPut**](KubernetesApi.md#k8snodepoolsput) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool |
+| [**k8sPost**](KubernetesApi.md#k8spost) | **POST** /k8s | Create Kubernetes Cluster |
+| [**k8sPut**](KubernetesApi.md#k8sput) | **PUT** /k8s/{k8sClusterId} | Modify Kubernetes Cluster |
+| [**k8sVersionsCompatibilitiesGet**](KubernetesApi.md#k8sversionscompatibilitiesget) | **GET** /k8s/versions/{clusterVersion}/compatibilities | Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster. |
+| [**k8sVersionsDefaultGet**](KubernetesApi.md#k8sversionsdefaultget) | **GET** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools. |
+| [**k8sVersionsGet**](KubernetesApi.md#k8sversionsget) | **GET** /k8s/versions | Retrieve available Kubernetes versions |
 
 
 <a name="k8sDelete"></a>
@@ -89,10 +89,6 @@ public class Example {
 ### Return type
 
 **Object**
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -171,10 +167,6 @@ public class Example {
 
 [**KubernetesCluster**](KubernetesCluster.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -249,10 +241,6 @@ public class Example {
 ### Return type
 
 [**KubernetesClusters**](KubernetesClusters.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -330,10 +318,6 @@ public class Example {
 ### Return type
 
 [**KubernetesConfig**](KubernetesConfig.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -414,10 +398,6 @@ public class Example {
 
 **Object**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -497,10 +477,6 @@ public class Example {
 
 [**KubernetesNodePool**](KubernetesNodePool.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -577,10 +553,6 @@ public class Example {
 ### Return type
 
 [**KubernetesNodePools**](KubernetesNodePools.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -663,10 +635,6 @@ public class Example {
 
 **Object**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -748,10 +716,6 @@ public class Example {
 
 [**KubernetesNode**](KubernetesNode.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -830,10 +794,6 @@ public class Example {
 ### Return type
 
 [**KubernetesNodes**](KubernetesNodes.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -916,10 +876,6 @@ public class Example {
 
 **Object**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -990,7 +946,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
-| **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md)| Details of Kubernetes Node Pool |
+| **kubernetesNodePool** |  [**KubernetesNodePool**](KubernetesNodePool.md)| Details of Kubernetes Node Pool |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -998,10 +954,6 @@ public class Example {
 ### Return type
 
 [**KubernetesNodePool**](KubernetesNodePool.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1075,7 +1027,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
 | **nodepoolId** | **String**| The unique ID of the Kubernetes Node Pool |
-| **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md)| Details of the Kubernetes Node Pool |
+| **kubernetesNodePool** |  [**KubernetesNodePool**](KubernetesNodePool.md)| Details of the Kubernetes Node Pool |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -1083,10 +1035,6 @@ public class Example {
 ### Return type
 
 [**KubernetesNodePoolForPut**](KubernetesNodePoolForPut.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1156,7 +1104,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **kubernetesCluster** | [**KubernetesCluster**](KubernetesCluster.md)| Properties of the Kubernetes Cluster |
+| **kubernetesCluster** |  [**KubernetesCluster**](KubernetesCluster.md)| Properties of the Kubernetes Cluster |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -1164,10 +1112,6 @@ public class Example {
 ### Return type
 
 [**KubernetesCluster**](KubernetesCluster.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1239,7 +1183,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **k8sClusterId** | **String**| The unique ID of the Kubernetes Cluster |
-| **kubernetesCluster** | [**KubernetesCluster**](KubernetesCluster.md)| Properties of the Kubernetes Cluster |
+| **kubernetesCluster** |  [**KubernetesCluster**](KubernetesCluster.md)| Properties of the Kubernetes Cluster |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -1247,10 +1191,6 @@ public class Example {
 ### Return type
 
 [**KubernetesCluster**](KubernetesCluster.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1323,10 +1263,6 @@ public class Example {
 
 **List&lt;String&gt;**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1394,10 +1330,6 @@ This endpoint does not need any parameter.
 
 **String**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1464,10 +1396,6 @@ This endpoint does not need any parameter.
 ### Return type
 
 **List&lt;String&gt;**
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

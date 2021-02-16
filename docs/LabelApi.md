@@ -4,33 +4,33 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**datacentersLabelsDelete**](LabelApi.md#datacentersLabelsDelete) | **DELETE** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center |
-| [**datacentersLabelsFindByKey**](LabelApi.md#datacentersLabelsFindByKey) | **GET** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center |
-| [**datacentersLabelsGet**](LabelApi.md#datacentersLabelsGet) | **GET** /datacenters/{datacenterId}/labels | List all Data Center Labels |
-| [**datacentersLabelsPost**](LabelApi.md#datacentersLabelsPost) | **POST** /datacenters/{datacenterId}/labels | Add a Label to Data Center |
-| [**datacentersLabelsPut**](LabelApi.md#datacentersLabelsPut) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center |
-| [**datacentersServersLabelsDelete**](LabelApi.md#datacentersServersLabelsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server |
-| [**datacentersServersLabelsFindByKey**](LabelApi.md#datacentersServersLabelsFindByKey) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server |
-| [**datacentersServersLabelsGet**](LabelApi.md#datacentersServersLabelsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels |
-| [**datacentersServersLabelsPost**](LabelApi.md#datacentersServersLabelsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server |
-| [**datacentersServersLabelsPut**](LabelApi.md#datacentersServersLabelsPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server |
-| [**datacentersVolumesLabelsDelete**](LabelApi.md#datacentersVolumesLabelsDelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume |
-| [**datacentersVolumesLabelsFindByKey**](LabelApi.md#datacentersVolumesLabelsFindByKey) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume |
-| [**datacentersVolumesLabelsGet**](LabelApi.md#datacentersVolumesLabelsGet) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels |
-| [**datacentersVolumesLabelsPost**](LabelApi.md#datacentersVolumesLabelsPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume |
-| [**datacentersVolumesLabelsPut**](LabelApi.md#datacentersVolumesLabelsPut) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume |
-| [**ipblocksLabelsDelete**](LabelApi.md#ipblocksLabelsDelete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block |
-| [**ipblocksLabelsFindByKey**](LabelApi.md#ipblocksLabelsFindByKey) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block |
-| [**ipblocksLabelsGet**](LabelApi.md#ipblocksLabelsGet) | **GET** /ipblocks/{ipblockId}/labels | List all Ip Block Labels |
-| [**ipblocksLabelsPost**](LabelApi.md#ipblocksLabelsPost) | **POST** /ipblocks/{ipblockId}/labels | Add a Label to IP Block |
-| [**ipblocksLabelsPut**](LabelApi.md#ipblocksLabelsPut) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block |
-| [**labelsFindByUrn**](LabelApi.md#labelsFindByUrn) | **GET** /labels/{labelurn} | Returns the label by its URN. |
-| [**labelsGet**](LabelApi.md#labelsGet) | **GET** /labels | List Labels  |
-| [**snapshotsLabelsDelete**](LabelApi.md#snapshotsLabelsDelete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot |
-| [**snapshotsLabelsFindByKey**](LabelApi.md#snapshotsLabelsFindByKey) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot |
-| [**snapshotsLabelsGet**](LabelApi.md#snapshotsLabelsGet) | **GET** /snapshots/{snapshotId}/labels | List all Snapshot Labels |
-| [**snapshotsLabelsPost**](LabelApi.md#snapshotsLabelsPost) | **POST** /snapshots/{snapshotId}/labels | Add a Label to Snapshot |
-| [**snapshotsLabelsPut**](LabelApi.md#snapshotsLabelsPut) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot |
+| [**datacentersLabelsDelete**](LabelApi.md#datacenterslabelsdelete) | **DELETE** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center |
+| [**datacentersLabelsFindByKey**](LabelApi.md#datacenterslabelsfindbykey) | **GET** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center |
+| [**datacentersLabelsGet**](LabelApi.md#datacenterslabelsget) | **GET** /datacenters/{datacenterId}/labels | List all Data Center Labels |
+| [**datacentersLabelsPost**](LabelApi.md#datacenterslabelspost) | **POST** /datacenters/{datacenterId}/labels | Add a Label to Data Center |
+| [**datacentersLabelsPut**](LabelApi.md#datacenterslabelsput) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center |
+| [**datacentersServersLabelsDelete**](LabelApi.md#datacentersserverslabelsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server |
+| [**datacentersServersLabelsFindByKey**](LabelApi.md#datacentersserverslabelsfindbykey) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server |
+| [**datacentersServersLabelsGet**](LabelApi.md#datacentersserverslabelsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels |
+| [**datacentersServersLabelsPost**](LabelApi.md#datacentersserverslabelspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server |
+| [**datacentersServersLabelsPut**](LabelApi.md#datacentersserverslabelsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server |
+| [**datacentersVolumesLabelsDelete**](LabelApi.md#datacentersvolumeslabelsdelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume |
+| [**datacentersVolumesLabelsFindByKey**](LabelApi.md#datacentersvolumeslabelsfindbykey) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume |
+| [**datacentersVolumesLabelsGet**](LabelApi.md#datacentersvolumeslabelsget) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels |
+| [**datacentersVolumesLabelsPost**](LabelApi.md#datacentersvolumeslabelspost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume |
+| [**datacentersVolumesLabelsPut**](LabelApi.md#datacentersvolumeslabelsput) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume |
+| [**ipblocksLabelsDelete**](LabelApi.md#ipblockslabelsdelete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block |
+| [**ipblocksLabelsFindByKey**](LabelApi.md#ipblockslabelsfindbykey) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block |
+| [**ipblocksLabelsGet**](LabelApi.md#ipblockslabelsget) | **GET** /ipblocks/{ipblockId}/labels | List all Ip Block Labels |
+| [**ipblocksLabelsPost**](LabelApi.md#ipblockslabelspost) | **POST** /ipblocks/{ipblockId}/labels | Add a Label to IP Block |
+| [**ipblocksLabelsPut**](LabelApi.md#ipblockslabelsput) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block |
+| [**labelsFindByUrn**](LabelApi.md#labelsfindbyurn) | **GET** /labels/{labelurn} | Returns the label by its URN. |
+| [**labelsGet**](LabelApi.md#labelsget) | **GET** /labels | List Labels  |
+| [**snapshotsLabelsDelete**](LabelApi.md#snapshotslabelsdelete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot |
+| [**snapshotsLabelsFindByKey**](LabelApi.md#snapshotslabelsfindbykey) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot |
+| [**snapshotsLabelsGet**](LabelApi.md#snapshotslabelsget) | **GET** /snapshots/{snapshotId}/labels | List all Snapshot Labels |
+| [**snapshotsLabelsPost**](LabelApi.md#snapshotslabelspost) | **POST** /snapshots/{snapshotId}/labels | Add a Label to Snapshot |
+| [**snapshotsLabelsPut**](LabelApi.md#snapshotslabelsput) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot |
 
 
 <a name="datacentersLabelsDelete"></a>
@@ -100,10 +100,6 @@ public class Example {
 ### Return type
 
 **Object**
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -183,10 +179,6 @@ public class Example {
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -269,10 +261,6 @@ public class Example {
 
 [**LabelResources**](LabelResources.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -343,7 +331,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the Data Center |
-| **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+| **label** |  [**LabelResource**](LabelResource.md)| Label to be added |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -351,10 +339,6 @@ public class Example {
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -428,7 +412,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the Data Center |
 | **key** | **String**| The key of the Label |
-| **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+| **label** |  [**LabelResource**](LabelResource.md)| Modified Label |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -436,10 +420,6 @@ public class Example {
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -522,10 +502,6 @@ public class Example {
 
 **Object**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -606,10 +582,6 @@ public class Example {
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -694,10 +666,6 @@ public class Example {
 
 [**LabelResources**](LabelResources.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -770,7 +738,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the Datacenter |
 | **serverId** | **String**| The unique ID of the Server |
-| **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+| **label** |  [**LabelResource**](LabelResource.md)| Label to be added |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -778,10 +746,6 @@ public class Example {
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -857,7 +821,7 @@ public class Example {
 | **datacenterId** | **String**| The unique ID of the Datacenter |
 | **serverId** | **String**| The unique ID of the Server |
 | **key** | **String**| The key of the Label |
-| **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+| **label** |  [**LabelResource**](LabelResource.md)| Modified Label |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -865,10 +829,6 @@ public class Example {
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -951,10 +911,6 @@ public class Example {
 
 **Object**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1035,10 +991,6 @@ public class Example {
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1123,10 +1075,6 @@ public class Example {
 
 [**LabelResources**](LabelResources.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1199,7 +1147,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the Datacenter |
 | **volumeId** | **String**| The unique ID of the Volume |
-| **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+| **label** |  [**LabelResource**](LabelResource.md)| Label to be added |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -1207,10 +1155,6 @@ public class Example {
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1286,7 +1230,7 @@ public class Example {
 | **datacenterId** | **String**| The unique ID of the Datacenter |
 | **volumeId** | **String**| The unique ID of the Volume |
 | **key** | **String**| The key of the Label |
-| **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+| **label** |  [**LabelResource**](LabelResource.md)| Modified Label |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -1294,10 +1238,6 @@ public class Example {
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1378,10 +1318,6 @@ public class Example {
 
 **Object**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1461,10 +1397,6 @@ public class Example {
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1542,10 +1474,6 @@ public class Example {
 
 [**LabelResources**](LabelResources.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1616,7 +1544,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ipblockId** | **String**| The unique ID of the Ip Block |
-| **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+| **label** |  [**LabelResource**](LabelResource.md)| Label to be added |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -1624,10 +1552,6 @@ public class Example {
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1701,7 +1625,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **ipblockId** | **String**| The unique ID of the Ip Block |
 | **key** | **String**| The key of the Label |
-| **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+| **label** |  [**LabelResource**](LabelResource.md)| Modified Label |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -1709,10 +1633,6 @@ public class Example {
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1791,10 +1711,6 @@ public class Example {
 
 [**Label**](Label.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1869,10 +1785,6 @@ public class Example {
 ### Return type
 
 [**Labels**](Labels.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1953,10 +1865,6 @@ public class Example {
 
 **Object**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -2036,10 +1944,6 @@ public class Example {
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -2117,10 +2021,6 @@ public class Example {
 
 [**LabelResources**](LabelResources.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -2191,7 +2091,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **snapshotId** | **String**| The unique ID of the Snapshot |
-| **label** | [**LabelResource**](LabelResource.md)| Label to be added |
+| **label** |  [**LabelResource**](LabelResource.md)| Label to be added |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -2199,10 +2099,6 @@ public class Example {
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2276,7 +2172,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **snapshotId** | **String**| The unique ID of the Snapshot |
 | **key** | **String**| The key of the Label |
-| **label** | [**LabelResource**](LabelResource.md)| Modified Label |
+| **label** |  [**LabelResource**](LabelResource.md)| Modified Label |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -2284,10 +2180,6 @@ public class Example {
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

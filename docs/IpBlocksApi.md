@@ -4,12 +4,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**ipblocksDelete**](IpBlocksApi.md#ipblocksDelete) | **DELETE** /ipblocks/{ipblockId} | Delete IP Block |
-| [**ipblocksFindById**](IpBlocksApi.md#ipblocksFindById) | **GET** /ipblocks/{ipblockId} | Retrieve an IP Block |
-| [**ipblocksGet**](IpBlocksApi.md#ipblocksGet) | **GET** /ipblocks | List IP Blocks  |
-| [**ipblocksPatch**](IpBlocksApi.md#ipblocksPatch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP Block |
-| [**ipblocksPost**](IpBlocksApi.md#ipblocksPost) | **POST** /ipblocks | Reserve IP Block |
-| [**ipblocksPut**](IpBlocksApi.md#ipblocksPut) | **PUT** /ipblocks/{ipblockId} | Modify IP Block |
+| [**ipblocksDelete**](IpBlocksApi.md#ipblocksdelete) | **DELETE** /ipblocks/{ipblockId} | Delete IP Block |
+| [**ipblocksFindById**](IpBlocksApi.md#ipblocksfindbyid) | **GET** /ipblocks/{ipblockId} | Retrieve an IP Block |
+| [**ipblocksGet**](IpBlocksApi.md#ipblocksget) | **GET** /ipblocks | List IP Blocks  |
+| [**ipblocksPatch**](IpBlocksApi.md#ipblockspatch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP Block |
+| [**ipblocksPost**](IpBlocksApi.md#ipblockspost) | **POST** /ipblocks | Reserve IP Block |
+| [**ipblocksPut**](IpBlocksApi.md#ipblocksput) | **PUT** /ipblocks/{ipblockId} | Modify IP Block |
 
 
 <a name="ipblocksDelete"></a>
@@ -77,10 +77,6 @@ public class Example {
 ### Return type
 
 **Object**
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -159,10 +155,6 @@ public class Example {
 
 [**IpBlock**](IpBlock.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -238,10 +230,6 @@ public class Example {
 
 [**IpBlocks**](IpBlocks.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -312,7 +300,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ipblockId** | **String**|  |
-| **ipblock** | [**IpBlockProperties**](IpBlockProperties.md)| IP Block to be modified |
+| **ipblock** |  [**IpBlockProperties**](IpBlockProperties.md)| IP Block to be modified |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -320,10 +308,6 @@ public class Example {
 ### Return type
 
 [**IpBlock**](IpBlock.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -393,7 +377,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ipblock** | [**IpBlock**](IpBlock.md)| IP Block to be reserved |
+| **ipblock** |  [**IpBlock**](IpBlock.md)| IP Block to be reserved |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -401,10 +385,6 @@ public class Example {
 ### Return type
 
 [**IpBlock**](IpBlock.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -476,7 +456,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ipblockId** | **String**|  |
-| **ipblock** | [**IpBlock**](IpBlock.md)| IP Block to be modified |
+| **ipblock** |  [**IpBlock**](IpBlock.md)| IP Block to be modified |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -484,10 +464,6 @@ public class Example {
 ### Return type
 
 [**IpBlock**](IpBlock.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

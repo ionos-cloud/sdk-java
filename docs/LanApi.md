@@ -4,15 +4,15 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**datacentersLansDelete**](LanApi.md#datacentersLansDelete) | **DELETE** /datacenters/{datacenterId}/lans/{lanId} | Delete a Lan. |
-| [**datacentersLansFindById**](LanApi.md#datacentersLansFindById) | **GET** /datacenters/{datacenterId}/lans/{lanId} | Retrieve a Lan |
-| [**datacentersLansGet**](LanApi.md#datacentersLansGet) | **GET** /datacenters/{datacenterId}/lans | List Lans |
-| [**datacentersLansNicsFindById**](LanApi.md#datacentersLansNicsFindById) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve a nic attached to lan |
-| [**datacentersLansNicsGet**](LanApi.md#datacentersLansNicsGet) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics | List Lan Members  |
-| [**datacentersLansNicsPost**](LanApi.md#datacentersLansNicsPost) | **POST** /datacenters/{datacenterId}/lans/{lanId}/nics | Attach a nic |
-| [**datacentersLansPatch**](LanApi.md#datacentersLansPatch) | **PATCH** /datacenters/{datacenterId}/lans/{lanId} | Partially modify a Lan |
-| [**datacentersLansPost**](LanApi.md#datacentersLansPost) | **POST** /datacenters/{datacenterId}/lans | Create a Lan |
-| [**datacentersLansPut**](LanApi.md#datacentersLansPut) | **PUT** /datacenters/{datacenterId}/lans/{lanId} | Modify a Lan |
+| [**datacentersLansDelete**](LanApi.md#datacenterslansdelete) | **DELETE** /datacenters/{datacenterId}/lans/{lanId} | Delete a Lan. |
+| [**datacentersLansFindById**](LanApi.md#datacenterslansfindbyid) | **GET** /datacenters/{datacenterId}/lans/{lanId} | Retrieve a Lan |
+| [**datacentersLansGet**](LanApi.md#datacenterslansget) | **GET** /datacenters/{datacenterId}/lans | List Lans |
+| [**datacentersLansNicsFindById**](LanApi.md#datacenterslansnicsfindbyid) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve a nic attached to lan |
+| [**datacentersLansNicsGet**](LanApi.md#datacenterslansnicsget) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics | List Lan Members  |
+| [**datacentersLansNicsPost**](LanApi.md#datacenterslansnicspost) | **POST** /datacenters/{datacenterId}/lans/{lanId}/nics | Attach a nic |
+| [**datacentersLansPatch**](LanApi.md#datacenterslanspatch) | **PATCH** /datacenters/{datacenterId}/lans/{lanId} | Partially modify a Lan |
+| [**datacentersLansPost**](LanApi.md#datacenterslanspost) | **POST** /datacenters/{datacenterId}/lans | Create a Lan |
+| [**datacentersLansPut**](LanApi.md#datacenterslansput) | **PUT** /datacenters/{datacenterId}/lans/{lanId} | Modify a Lan |
 
 
 <a name="datacentersLansDelete"></a>
@@ -82,10 +82,6 @@ public class Example {
 ### Return type
 
 **Object**
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -165,10 +161,6 @@ public class Example {
 ### Return type
 
 [**Lan**](Lan.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -251,10 +243,6 @@ public class Example {
 
 [**Lans**](Lans.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -335,10 +323,6 @@ public class Example {
 ### Return type
 
 [**Nic**](Nic.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -423,10 +407,6 @@ public class Example {
 
 [**LanNics**](LanNics.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -499,7 +479,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the datacenter |
 | **lanId** | **String**| The unique ID of the LAN |
-| **nic** | [**Nic**](Nic.md)| Nic to be attached |
+| **nic** |  [**Nic**](Nic.md)| Nic to be attached |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -507,10 +487,6 @@ public class Example {
 ### Return type
 
 [**Nic**](Nic.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -584,7 +560,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the datacenter |
 | **lanId** | **String**| The unique ID of the LAN |
-| **lan** | [**LanProperties**](LanProperties.md)| Modified Lan |
+| **lan** |  [**LanProperties**](LanProperties.md)| Modified Lan |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -592,10 +568,6 @@ public class Example {
 ### Return type
 
 [**Lan**](Lan.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -667,7 +639,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the datacenter |
-| **lan** | [**LanPost**](LanPost.md)| Lan to be created |
+| **lan** |  [**LanPost**](LanPost.md)| Lan to be created |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -675,10 +647,6 @@ public class Example {
 ### Return type
 
 [**LanPost**](LanPost.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -752,7 +720,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the datacenter |
 | **lanId** | **String**| The unique ID of the LAN |
-| **lan** | [**Lan**](Lan.md)| Modified Lan |
+| **lan** |  [**Lan**](Lan.md)| Modified Lan |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -760,10 +728,6 @@ public class Example {
 ### Return type
 
 [**Lan**](Lan.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

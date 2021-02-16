@@ -4,9 +4,9 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**requestsFindById**](RequestApi.md#requestsFindById) | **GET** /requests/{requestId} | Retrieve a Request |
-| [**requestsGet**](RequestApi.md#requestsGet) | **GET** /requests | List Requests |
-| [**requestsStatusGet**](RequestApi.md#requestsStatusGet) | **GET** /requests/{requestId}/status | Retrieve Request Status |
+| [**requestsFindById**](RequestApi.md#requestsfindbyid) | **GET** /requests/{requestId} | Retrieve a Request |
+| [**requestsGet**](RequestApi.md#requestsget) | **GET** /requests | List Requests |
+| [**requestsStatusGet**](RequestApi.md#requestsstatusget) | **GET** /requests/{requestId}/status | Retrieve Request Status |
 
 
 <a name="requestsFindById"></a>
@@ -74,10 +74,6 @@ public class Example {
 ### Return type
 
 [**Request**](Request.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -164,10 +160,6 @@ public class Example {
 
 [**Requests**](Requests.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -244,10 +236,6 @@ public class Example {
 ### Return type
 
 [**RequestStatus**](RequestStatus.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

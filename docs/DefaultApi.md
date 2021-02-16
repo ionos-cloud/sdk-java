@@ -4,7 +4,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**apiInfoGet**](DefaultApi.md#apiInfoGet) | **GET** / | Display API information |
+| [**apiInfoGet**](DefaultApi.md#apiinfoget) | **GET** / | Display API information |
 
 
 <a name="apiInfoGet"></a>
@@ -58,10 +58,6 @@ public class Example {
 ### Return type
 
 [**Info**](Info.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 

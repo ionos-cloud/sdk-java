@@ -4,14 +4,14 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**datacentersVolumesCreateSnapshotPost**](VolumeApi.md#datacentersVolumesCreateSnapshotPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/create-snapshot | Create Volume Snapshot |
-| [**datacentersVolumesDelete**](VolumeApi.md#datacentersVolumesDelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId} | Delete a Volume |
-| [**datacentersVolumesFindById**](VolumeApi.md#datacentersVolumesFindById) | **GET** /datacenters/{datacenterId}/volumes/{volumeId} | Retrieve a Volume |
-| [**datacentersVolumesGet**](VolumeApi.md#datacentersVolumesGet) | **GET** /datacenters/{datacenterId}/volumes | List Volumes  |
-| [**datacentersVolumesPatch**](VolumeApi.md#datacentersVolumesPatch) | **PATCH** /datacenters/{datacenterId}/volumes/{volumeId} | Partially modify a Volume |
-| [**datacentersVolumesPost**](VolumeApi.md#datacentersVolumesPost) | **POST** /datacenters/{datacenterId}/volumes | Create a Volume |
-| [**datacentersVolumesPut**](VolumeApi.md#datacentersVolumesPut) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId} | Modify a Volume |
-| [**datacentersVolumesRestoreSnapshotPost**](VolumeApi.md#datacentersVolumesRestoreSnapshotPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot | Restore Volume Snapshot |
+| [**datacentersVolumesCreateSnapshotPost**](VolumeApi.md#datacentersvolumescreatesnapshotpost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/create-snapshot | Create Volume Snapshot |
+| [**datacentersVolumesDelete**](VolumeApi.md#datacentersvolumesdelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId} | Delete a Volume |
+| [**datacentersVolumesFindById**](VolumeApi.md#datacentersvolumesfindbyid) | **GET** /datacenters/{datacenterId}/volumes/{volumeId} | Retrieve a Volume |
+| [**datacentersVolumesGet**](VolumeApi.md#datacentersvolumesget) | **GET** /datacenters/{datacenterId}/volumes | List Volumes  |
+| [**datacentersVolumesPatch**](VolumeApi.md#datacentersvolumespatch) | **PATCH** /datacenters/{datacenterId}/volumes/{volumeId} | Partially modify a Volume |
+| [**datacentersVolumesPost**](VolumeApi.md#datacentersvolumespost) | **POST** /datacenters/{datacenterId}/volumes | Create a Volume |
+| [**datacentersVolumesPut**](VolumeApi.md#datacentersvolumesput) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId} | Modify a Volume |
+| [**datacentersVolumesRestoreSnapshotPost**](VolumeApi.md#datacentersvolumesrestoresnapshotpost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot | Restore Volume Snapshot |
 
 
 <a name="datacentersVolumesCreateSnapshotPost"></a>
@@ -89,10 +89,6 @@ public class Example {
 ### Return type
 
 [**Snapshot**](Snapshot.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -173,10 +169,6 @@ public class Example {
 
 **Object**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -255,10 +247,6 @@ public class Example {
 ### Return type
 
 [**Volume**](Volume.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -341,10 +329,6 @@ public class Example {
 
 [**Volumes**](Volumes.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -417,7 +401,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the datacenter |
 | **volumeId** | **String**| The unique ID of the Volume |
-| **volume** | [**VolumeProperties**](VolumeProperties.md)| Modified properties of Volume |
+| **volume** |  [**VolumeProperties**](VolumeProperties.md)| Modified properties of Volume |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -425,10 +409,6 @@ public class Example {
 ### Return type
 
 [**Volume**](Volume.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -500,7 +480,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the datacenter |
-| **volume** | [**Volume**](Volume.md)| Volume to be created |
+| **volume** |  [**Volume**](Volume.md)| Volume to be created |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -508,10 +488,6 @@ public class Example {
 ### Return type
 
 [**Volume**](Volume.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -585,7 +561,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the datacenter |
 | **volumeId** | **String**| The unique ID of the Volume |
-| **volume** | [**Volume**](Volume.md)| Modified Volume |
+| **volume** |  [**Volume**](Volume.md)| Modified Volume |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -593,10 +569,6 @@ public class Example {
 ### Return type
 
 [**Volume**](Volume.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -678,10 +650,6 @@ public class Example {
 ### Return type
 
 **Object**
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

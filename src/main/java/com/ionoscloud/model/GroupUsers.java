@@ -33,7 +33,7 @@ import java.util.List;
  * collection of groups a user is member of
  */
 @ApiModel(description = "collection of groups a user is member of")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-15T15:14:48.811Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-16T07:47:28.208Z[Etc/UTC]")
 
 public class GroupUsers {
   public static final String SERIALIZED_NAME_ID = "id";

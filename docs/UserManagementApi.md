@@ -4,36 +4,36 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**umGroupsDelete**](UserManagementApi.md#umGroupsDelete) | **DELETE** /um/groups/{groupId} | Delete a Group |
-| [**umGroupsFindById**](UserManagementApi.md#umGroupsFindById) | **GET** /um/groups/{groupId} | Retrieve a Group |
-| [**umGroupsGet**](UserManagementApi.md#umGroupsGet) | **GET** /um/groups | List All Groups. |
-| [**umGroupsPost**](UserManagementApi.md#umGroupsPost) | **POST** /um/groups | Create a Group |
-| [**umGroupsPut**](UserManagementApi.md#umGroupsPut) | **PUT** /um/groups/{groupId} | Modify a group |
-| [**umGroupsResourcesGet**](UserManagementApi.md#umGroupsResourcesGet) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group |
-| [**umGroupsSharesDelete**](UserManagementApi.md#umGroupsSharesDelete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group |
-| [**umGroupsSharesFindByResourceId**](UserManagementApi.md#umGroupsSharesFindByResourceId) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share |
-| [**umGroupsSharesGet**](UserManagementApi.md#umGroupsSharesGet) | **GET** /um/groups/{groupId}/shares | List Group Shares  |
-| [**umGroupsSharesPost**](UserManagementApi.md#umGroupsSharesPost) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group |
-| [**umGroupsSharesPut**](UserManagementApi.md#umGroupsSharesPut) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group |
-| [**umGroupsUsersDelete**](UserManagementApi.md#umGroupsUsersDelete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove a user from a group |
-| [**umGroupsUsersGet**](UserManagementApi.md#umGroupsUsersGet) | **GET** /um/groups/{groupId}/users | List Group Members  |
-| [**umGroupsUsersPost**](UserManagementApi.md#umGroupsUsersPost) | **POST** /um/groups/{groupId}/users | Add a user to a group |
-| [**umResourcesFindByType**](UserManagementApi.md#umResourcesFindByType) | **GET** /um/resources/{resourceType} | Retrieve a list of Resources by type. |
-| [**umResourcesFindByTypeAndId**](UserManagementApi.md#umResourcesFindByTypeAndId) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type. |
-| [**umResourcesGet**](UserManagementApi.md#umResourcesGet) | **GET** /um/resources | List All Resources. |
-| [**umUsersDelete**](UserManagementApi.md#umUsersDelete) | **DELETE** /um/users/{userId} | Delete a User |
-| [**umUsersFindById**](UserManagementApi.md#umUsersFindById) | **GET** /um/users/{userId} | Retrieve a User |
-| [**umUsersGet**](UserManagementApi.md#umUsersGet) | **GET** /um/users | List all Users  |
-| [**umUsersGroupsGet**](UserManagementApi.md#umUsersGroupsGet) | **GET** /um/users/{userId}/groups | Retrieve a User&#39;s group resources |
-| [**umUsersOwnsGet**](UserManagementApi.md#umUsersOwnsGet) | **GET** /um/users/{userId}/owns | Retrieve a User&#39;s own resources |
-| [**umUsersPost**](UserManagementApi.md#umUsersPost) | **POST** /um/users | Create a user |
-| [**umUsersPut**](UserManagementApi.md#umUsersPut) | **PUT** /um/users/{userId} | Modify a user |
-| [**umUsersS3keysDelete**](UserManagementApi.md#umUsersS3keysDelete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key |
-| [**umUsersS3keysFindByKeyId**](UserManagementApi.md#umUsersS3keysFindByKeyId) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User |
-| [**umUsersS3keysGet**](UserManagementApi.md#umUsersS3keysGet) | **GET** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys |
-| [**umUsersS3keysPost**](UserManagementApi.md#umUsersS3keysPost) | **POST** /um/users/{userId}/s3keys | Create a S3 key for the given user |
-| [**umUsersS3keysPut**](UserManagementApi.md#umUsersS3keysPut) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id |
-| [**umUsersS3ssourlGet**](UserManagementApi.md#umUsersS3ssourlGet) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user |
+| [**umGroupsDelete**](UserManagementApi.md#umgroupsdelete) | **DELETE** /um/groups/{groupId} | Delete a Group |
+| [**umGroupsFindById**](UserManagementApi.md#umgroupsfindbyid) | **GET** /um/groups/{groupId} | Retrieve a Group |
+| [**umGroupsGet**](UserManagementApi.md#umgroupsget) | **GET** /um/groups | List All Groups. |
+| [**umGroupsPost**](UserManagementApi.md#umgroupspost) | **POST** /um/groups | Create a Group |
+| [**umGroupsPut**](UserManagementApi.md#umgroupsput) | **PUT** /um/groups/{groupId} | Modify a group |
+| [**umGroupsResourcesGet**](UserManagementApi.md#umgroupsresourcesget) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group |
+| [**umGroupsSharesDelete**](UserManagementApi.md#umgroupssharesdelete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group |
+| [**umGroupsSharesFindByResourceId**](UserManagementApi.md#umgroupssharesfindbyresourceid) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share |
+| [**umGroupsSharesGet**](UserManagementApi.md#umgroupssharesget) | **GET** /um/groups/{groupId}/shares | List Group Shares  |
+| [**umGroupsSharesPost**](UserManagementApi.md#umgroupssharespost) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group |
+| [**umGroupsSharesPut**](UserManagementApi.md#umgroupssharesput) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group |
+| [**umGroupsUsersDelete**](UserManagementApi.md#umgroupsusersdelete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove a user from a group |
+| [**umGroupsUsersGet**](UserManagementApi.md#umgroupsusersget) | **GET** /um/groups/{groupId}/users | List Group Members  |
+| [**umGroupsUsersPost**](UserManagementApi.md#umgroupsuserspost) | **POST** /um/groups/{groupId}/users | Add a user to a group |
+| [**umResourcesFindByType**](UserManagementApi.md#umresourcesfindbytype) | **GET** /um/resources/{resourceType} | Retrieve a list of Resources by type. |
+| [**umResourcesFindByTypeAndId**](UserManagementApi.md#umresourcesfindbytypeandid) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type. |
+| [**umResourcesGet**](UserManagementApi.md#umresourcesget) | **GET** /um/resources | List All Resources. |
+| [**umUsersDelete**](UserManagementApi.md#umusersdelete) | **DELETE** /um/users/{userId} | Delete a User |
+| [**umUsersFindById**](UserManagementApi.md#umusersfindbyid) | **GET** /um/users/{userId} | Retrieve a User |
+| [**umUsersGet**](UserManagementApi.md#umusersget) | **GET** /um/users | List all Users  |
+| [**umUsersGroupsGet**](UserManagementApi.md#umusersgroupsget) | **GET** /um/users/{userId}/groups | Retrieve a User&#39;s group resources |
+| [**umUsersOwnsGet**](UserManagementApi.md#umusersownsget) | **GET** /um/users/{userId}/owns | Retrieve a User&#39;s own resources |
+| [**umUsersPost**](UserManagementApi.md#umuserspost) | **POST** /um/users | Create a user |
+| [**umUsersPut**](UserManagementApi.md#umusersput) | **PUT** /um/users/{userId} | Modify a user |
+| [**umUsersS3keysDelete**](UserManagementApi.md#umuserss3keysdelete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key |
+| [**umUsersS3keysFindByKeyId**](UserManagementApi.md#umuserss3keysfindbykeyid) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User |
+| [**umUsersS3keysGet**](UserManagementApi.md#umuserss3keysget) | **GET** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys |
+| [**umUsersS3keysPost**](UserManagementApi.md#umuserss3keyspost) | **POST** /um/users/{userId}/s3keys | Create a S3 key for the given user |
+| [**umUsersS3keysPut**](UserManagementApi.md#umuserss3keysput) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id |
+| [**umUsersS3ssourlGet**](UserManagementApi.md#umuserss3ssourlget) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user |
 
 
 <a name="umGroupsDelete"></a>
@@ -101,10 +101,6 @@ public class Example {
 ### Return type
 
 **Object**
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -183,10 +179,6 @@ public class Example {
 
 [**Group**](Group.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -262,10 +254,6 @@ public class Example {
 
 [**Groups**](Groups.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -334,7 +322,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **group** | [**Group**](Group.md)| Group to be created |
+| **group** |  [**Group**](Group.md)| Group to be created |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -342,10 +330,6 @@ public class Example {
 ### Return type
 
 [**Group**](Group.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -417,7 +401,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**| The unique ID of the group |
-| **group** | [**Group**](Group.md)| Modified properties of the Group |
+| **group** |  [**Group**](Group.md)| Modified properties of the Group |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -425,10 +409,6 @@ public class Example {
 ### Return type
 
 [**Group**](Group.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -504,10 +484,6 @@ public class Example {
 ### Return type
 
 [**ResourceGroups**](ResourceGroups.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -588,10 +564,6 @@ public class Example {
 
 **Object**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -671,10 +643,6 @@ public class Example {
 
 [**GroupShare**](GroupShare.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -752,10 +720,6 @@ public class Example {
 
 [**GroupShares**](GroupShares.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -828,7 +792,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**|  |
 | **resourceId** | **String**|  |
-| **resource** | [**GroupShare**](GroupShare.md)| Resource to be added |
+| **resource** |  [**GroupShare**](GroupShare.md)| Resource to be added |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -836,10 +800,6 @@ public class Example {
 ### Return type
 
 [**GroupShare**](GroupShare.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -913,7 +873,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**|  |
 | **resourceId** | **String**|  |
-| **resource** | [**GroupShare**](GroupShare.md)| Modified Resource |
+| **resource** |  [**GroupShare**](GroupShare.md)| Modified Resource |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -921,10 +881,6 @@ public class Example {
 ### Return type
 
 [**GroupShare**](GroupShare.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1005,10 +961,6 @@ public class Example {
 
 **Object**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1086,10 +1038,6 @@ public class Example {
 
 [**GroupMembers**](GroupMembers.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1160,7 +1108,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **groupId** | **String**|  |
-| **user** | [**User**](User.md)| User to be added |
+| **user** |  [**User**](User.md)| User to be added |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -1168,10 +1116,6 @@ public class Example {
 ### Return type
 
 [**User**](User.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1249,10 +1193,6 @@ public class Example {
 ### Return type
 
 [**Resources**](Resources.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1333,10 +1273,6 @@ public class Example {
 
 [**Resource**](Resource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1411,10 +1347,6 @@ public class Example {
 ### Return type
 
 [**Resources**](Resources.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1493,10 +1425,6 @@ public class Example {
 
 **Object**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1574,10 +1502,6 @@ public class Example {
 
 [**User**](User.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1652,10 +1576,6 @@ public class Example {
 ### Return type
 
 [**Users**](Users.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1734,10 +1654,6 @@ public class Example {
 
 [**ResourceGroups**](ResourceGroups.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1815,10 +1731,6 @@ public class Example {
 
 [**ResourcesUsers**](ResourcesUsers.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -1887,7 +1799,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user** | [**User**](User.md)| User to be created |
+| **user** |  [**User**](User.md)| User to be created |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -1895,10 +1807,6 @@ public class Example {
 ### Return type
 
 [**User**](User.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -1970,7 +1878,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**|  |
-| **user** | [**User**](User.md)| Modified user |
+| **user** |  [**User**](User.md)| Modified user |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -1978,10 +1886,6 @@ public class Example {
 ### Return type
 
 [**User**](User.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2062,10 +1966,6 @@ public class Example {
 
 **Object**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -2145,10 +2045,6 @@ public class Example {
 
 [**S3Key**](S3Key.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -2225,10 +2121,6 @@ public class Example {
 ### Return type
 
 [**S3Keys**](S3Keys.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2307,10 +2199,6 @@ public class Example {
 
 [**S3Key**](S3Key.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -2383,7 +2271,7 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**|  |
 | **keyId** | **String**| The unique access key ID of the S3 key |
-| **s3Key** | [**S3Key**](S3Key.md)| Modified s3 key |
+| **s3Key** |  [**S3Key**](S3Key.md)| Modified s3 key |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -2391,10 +2279,6 @@ public class Example {
 ### Return type
 
 [**S3Key**](S3Key.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -2470,10 +2354,6 @@ public class Example {
 ### Return type
 
 [**S3ObjectStorageSSO**](S3ObjectStorageSSO.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

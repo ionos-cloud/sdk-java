@@ -4,11 +4,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**pccsDelete**](PrivateCrossConnectApi.md#pccsDelete) | **DELETE** /pccs/{pccId} | Delete a Private Cross-Connect |
-| [**pccsFindById**](PrivateCrossConnectApi.md#pccsFindById) | **GET** /pccs/{pccId} | Retrieve a Private Cross-Connect |
-| [**pccsGet**](PrivateCrossConnectApi.md#pccsGet) | **GET** /pccs | List Private Cross-Connects  |
-| [**pccsPatch**](PrivateCrossConnectApi.md#pccsPatch) | **PATCH** /pccs/{pccId} | Partially modify a private cross-connect |
-| [**pccsPost**](PrivateCrossConnectApi.md#pccsPost) | **POST** /pccs | Create a Private Cross-Connect |
+| [**pccsDelete**](PrivateCrossConnectApi.md#pccsdelete) | **DELETE** /pccs/{pccId} | Delete a Private Cross-Connect |
+| [**pccsFindById**](PrivateCrossConnectApi.md#pccsfindbyid) | **GET** /pccs/{pccId} | Retrieve a Private Cross-Connect |
+| [**pccsGet**](PrivateCrossConnectApi.md#pccsget) | **GET** /pccs | List Private Cross-Connects  |
+| [**pccsPatch**](PrivateCrossConnectApi.md#pccspatch) | **PATCH** /pccs/{pccId} | Partially modify a private cross-connect |
+| [**pccsPost**](PrivateCrossConnectApi.md#pccspost) | **POST** /pccs | Create a Private Cross-Connect |
 
 
 <a name="pccsDelete"></a>
@@ -76,10 +76,6 @@ public class Example {
 ### Return type
 
 **Object**
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -158,10 +154,6 @@ public class Example {
 
 [**PrivateCrossConnect**](PrivateCrossConnect.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -237,10 +229,6 @@ public class Example {
 
 [**PrivateCrossConnects**](PrivateCrossConnects.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
  - **Content-Type**: Not defined
@@ -311,7 +299,7 @@ public class Example {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **pccId** | **String**| The unique ID of the private cross-connect |
-| **pcc** | [**PrivateCrossConnectProperties**](PrivateCrossConnectProperties.md)| Modified properties of private cross-connect |
+| **pcc** |  [**PrivateCrossConnectProperties**](PrivateCrossConnectProperties.md)| Modified properties of private cross-connect |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -319,10 +307,6 @@ public class Example {
 ### Return type
 
 [**PrivateCrossConnect**](PrivateCrossConnect.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
@@ -392,7 +376,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **pcc** | [**PrivateCrossConnect**](PrivateCrossConnect.md)| Private Cross-Connect to be created |
+| **pcc** |  [**PrivateCrossConnect**](PrivateCrossConnect.md)| Private Cross-Connect to be created |
 | **pretty** | **Boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true]
 | **depth** | **Integer**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0]
 | **xContractNumber** | **Integer**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional]
@@ -400,10 +384,6 @@ public class Example {
 ### Return type
 
 [**PrivateCrossConnect**](PrivateCrossConnect.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
