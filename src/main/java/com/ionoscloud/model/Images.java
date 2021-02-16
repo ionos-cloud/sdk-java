@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * Images
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-16T08:23:53.274Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-16T08:42:19.941Z[Etc/UTC]")
 
 public class Images {
   public static final String SERIALIZED_NAME_ID = "id";

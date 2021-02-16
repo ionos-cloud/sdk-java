@@ -5,7 +5,7 @@
     <artifactId>ionos-cloud-sdk</artifactId>
     <packaging>jar</packaging>
     <name>ionos-cloud-sdk</name>
-    <version>5.0.4-SNAPSHOT</version>
+    <version>5.0.5-SNAPSHOT</version>
     <url>https://github.com/ionos-cloud/sdk-java</url>
     <description>The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth.</description>
     <scm>
