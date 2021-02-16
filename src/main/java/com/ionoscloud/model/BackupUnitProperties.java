@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * BackupUnitProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-16T07:47:28.208Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-16T08:23:53.274Z[Etc/UTC]")
 
 public class BackupUnitProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
