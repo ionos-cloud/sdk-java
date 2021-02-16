@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * ContractProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-16T08:42:19.941Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-16T08:52:16.551Z[Etc/UTC]")
 
 public class ContractProperties {
   public static final String SERIALIZED_NAME_CONTRACT_NUMBER = "contractNumber";
