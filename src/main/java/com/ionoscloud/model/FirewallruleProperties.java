@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * FirewallruleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-22T09:31:27.489Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-23T15:51:08.261Z[Etc/UTC]")
 
 public class FirewallruleProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
