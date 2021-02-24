@@ -13,7 +13,7 @@
 
 package com.ionoscloud;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-24T10:06:27.493Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-24T10:15:26.146Z[Etc/UTC]")
 public class Pair {
     private String name = "";
     private String value = "";
