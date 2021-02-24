@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ResourceLimits
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-24T08:15:36.431Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-24T08:33:34.214Z[Etc/UTC]")
 
 public class ResourceLimits {
   public static final String SERIALIZED_NAME_CORES_PER_SERVER = "coresPerServer";

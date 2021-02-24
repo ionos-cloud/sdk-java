@@ -31,7 +31,7 @@ import java.net.URI;
 /**
  * Request
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-24T08:15:36.431Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-24T08:33:34.214Z[Etc/UTC]")
 
 public class Request {
   public static final String SERIALIZED_NAME_ID = "id";
