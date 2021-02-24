@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * LanPropertiesPost
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-24T12:36:57.961Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-24T12:41:13.594Z[Etc/UTC]")
 
 public class LanPropertiesPost {
   public static final String SERIALIZED_NAME_NAME = "name";
