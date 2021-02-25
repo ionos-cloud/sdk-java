@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * KubernetesNodeMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-25T09:08:18.007Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-02-25T09:33:54.385Z[Etc/UTC]")
 
 public class KubernetesNodeMetadata {
   public static final String SERIALIZED_NAME_ETAG = "etag";

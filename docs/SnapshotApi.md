@@ -26,7 +26,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.SnapshotApi;
 
 public class Example {
@@ -35,15 +35,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     SnapshotApi apiInstance = new SnapshotApi(defaultClient);
     String snapshotId = "snapshotId_example"; // String | The unique ID of the Snapshot
@@ -51,7 +46,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.snapshotsDelete(snapshotId, pretty, depth, xContractNumber);
+      Object result = apiInstance.snapshotsDelete(snapshotIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SnapshotApi#snapshotsDelete");
@@ -97,7 +92,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.SnapshotApi;
 
 public class Example {
@@ -106,15 +101,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     SnapshotApi apiInstance = new SnapshotApi(defaultClient);
     String snapshotId = "snapshotId_example"; // String | The unique ID of the Snapshot
@@ -122,7 +112,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Snapshot result = apiInstance.snapshotsFindById(snapshotId, pretty, depth, xContractNumber);
+      Snapshot result = apiInstance.snapshotsFindById(snapshotIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SnapshotApi#snapshotsFindById");
@@ -168,7 +158,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.SnapshotApi;
 
 public class Example {
@@ -177,22 +167,17 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     SnapshotApi apiInstance = new SnapshotApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Snapshots result = apiInstance.snapshotsGet(pretty, depth, xContractNumber);
+      Snapshots result = apiInstance.snapshotsGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SnapshotApi#snapshotsGet");
@@ -237,7 +222,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.SnapshotApi;
 
 public class Example {
@@ -246,15 +231,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     SnapshotApi apiInstance = new SnapshotApi(defaultClient);
     String snapshotId = "snapshotId_example"; // String | The unique ID of the Snapshot
@@ -263,7 +243,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Snapshot result = apiInstance.snapshotsPatch(snapshotId, snapshot, pretty, depth, xContractNumber);
+      Snapshot result = apiInstance.snapshotsPatch(snapshotIdsnapshotprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SnapshotApi#snapshotsPatch");
@@ -310,7 +290,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.SnapshotApi;
 
 public class Example {
@@ -319,15 +299,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     SnapshotApi apiInstance = new SnapshotApi(defaultClient);
     String snapshotId = "snapshotId_example"; // String | The unique ID of the Snapshot
@@ -336,7 +311,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Snapshot result = apiInstance.snapshotsPut(snapshotId, snapshot, pretty, depth, xContractNumber);
+      Snapshot result = apiInstance.snapshotsPut(snapshotIdsnapshotprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SnapshotApi#snapshotsPut");

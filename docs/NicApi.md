@@ -33,7 +33,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.NicApi;
 
 public class Example {
@@ -42,15 +42,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     NicApi apiInstance = new NicApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -60,7 +55,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersServersNicsDelete(datacenterId, serverId, nicId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersServersNicsDelete(datacenterIdserverIdnicIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsDelete");
@@ -108,7 +103,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.NicApi;
 
 public class Example {
@@ -117,15 +112,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     NicApi apiInstance = new NicApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -135,7 +125,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersServersNicsFindById(datacenterId, serverId, nicId, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersServersNicsFindById(datacenterIdserverIdnicIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFindById");
@@ -183,7 +173,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.NicApi;
 
 public class Example {
@@ -192,15 +182,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     NicApi apiInstance = new NicApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -211,7 +196,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersServersNicsFirewallrulesDelete(datacenterIdserverIdnicIdfirewallruleIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesDelete");
@@ -260,7 +245,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.NicApi;
 
 public class Example {
@@ -269,15 +254,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     NicApi apiInstance = new NicApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -288,7 +268,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesFindById(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber);
+      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesFindById(datacenterIdserverIdnicIdfirewallruleIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesFindById");
@@ -337,7 +317,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.NicApi;
 
 public class Example {
@@ -346,15 +326,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     NicApi apiInstance = new NicApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -366,7 +341,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      FirewallRules result = apiInstance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit);
+      FirewallRules result = apiInstance.datacentersServersNicsFirewallrulesGet(datacenterIdserverIdnicIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesGet");
@@ -416,7 +391,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.NicApi;
 
 public class Example {
@@ -425,15 +400,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     NicApi apiInstance = new NicApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -445,7 +415,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber);
+      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPatch(datacenterIdserverIdnicIdfirewallruleIdfirewallruleprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesPatch");
@@ -495,7 +465,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.NicApi;
 
 public class Example {
@@ -504,15 +474,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     NicApi apiInstance = new NicApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -523,7 +488,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber);
+      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPost(datacenterIdserverIdnicIdfirewallruleprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesPost");
@@ -572,7 +537,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.NicApi;
 
 public class Example {
@@ -581,15 +546,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     NicApi apiInstance = new NicApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -601,7 +561,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber);
+      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPut(datacenterIdserverIdnicIdfirewallruleIdfirewallruleprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsFirewallrulesPut");
@@ -651,7 +611,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.NicApi;
 
 public class Example {
@@ -660,15 +620,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     NicApi apiInstance = new NicApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -679,7 +634,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Nics result = apiInstance.datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
+      Nics result = apiInstance.datacentersServersNicsGet(datacenterIdserverIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsGet");
@@ -728,7 +683,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.NicApi;
 
 public class Example {
@@ -737,15 +692,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     NicApi apiInstance = new NicApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -756,7 +706,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersServersNicsPatch(datacenterIdserverIdnicIdnicprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsPatch");
@@ -805,7 +755,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.NicApi;
 
 public class Example {
@@ -814,15 +764,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     NicApi apiInstance = new NicApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -832,7 +777,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersServersNicsPost(datacenterId, serverId, nic, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersServersNicsPost(datacenterIdserverIdnicprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsPost");
@@ -880,7 +825,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.NicApi;
 
 public class Example {
@@ -889,15 +834,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     NicApi apiInstance = new NicApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -908,7 +848,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersServersNicsPut(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersServersNicsPut(datacenterIdserverIdnicIdnicprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NicApi#datacentersServersNicsPut");

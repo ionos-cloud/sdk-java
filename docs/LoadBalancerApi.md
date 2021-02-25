@@ -31,7 +31,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
@@ -40,15 +40,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -58,7 +53,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersLoadbalancersBalancednicsDelete(datacenterIdloadbalancerIdnicIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsDelete");
@@ -106,7 +101,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
@@ -115,15 +110,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -133,7 +123,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterIdloadbalancerIdnicIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsFindByNicId");
@@ -181,7 +171,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
@@ -190,15 +180,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -209,7 +194,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      BalancedNics result = apiInstance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, pretty, depth, xContractNumber, offset, limit);
+      BalancedNics result = apiInstance.datacentersLoadbalancersBalancednicsGet(datacenterIdloadbalancerIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsGet");
@@ -258,7 +243,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
@@ -267,15 +252,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -285,7 +265,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Nic result = apiInstance.datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancerId, nic, pretty, depth, xContractNumber);
+      Nic result = apiInstance.datacentersLoadbalancersBalancednicsPost(datacenterIdloadbalancerIdnicprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersBalancednicsPost");
@@ -333,7 +313,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
@@ -342,15 +322,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -359,7 +334,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.datacentersLoadbalancersDelete(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
+      Object result = apiInstance.datacentersLoadbalancersDelete(datacenterIdloadbalancerIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersDelete");
@@ -406,7 +381,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
@@ -415,15 +390,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -432,7 +402,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Loadbalancer result = apiInstance.datacentersLoadbalancersFindById(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
+      Loadbalancer result = apiInstance.datacentersLoadbalancersFindById(datacenterIdloadbalancerIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersFindById");
@@ -479,7 +449,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
@@ -488,15 +458,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -506,7 +471,7 @@ public class Example {
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Loadbalancers result = apiInstance.datacentersLoadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
+      Loadbalancers result = apiInstance.datacentersLoadbalancersGet(datacenterIdprettydepthxContractNumberoffsetlimit);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersGet");
@@ -554,7 +519,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
@@ -563,15 +528,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -581,7 +541,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Loadbalancer result = apiInstance.datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber);
+      Loadbalancer result = apiInstance.datacentersLoadbalancersPatch(datacenterIdloadbalancerIdloadbalancerprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersPatch");
@@ -629,7 +589,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
@@ -638,15 +598,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -655,7 +610,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Loadbalancer result = apiInstance.datacentersLoadbalancersPost(datacenterId, loadbalancer, pretty, depth, xContractNumber);
+      Loadbalancer result = apiInstance.datacentersLoadbalancersPost(datacenterIdloadbalancerprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersPost");
@@ -702,7 +657,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.LoadBalancerApi;
 
 public class Example {
@@ -711,15 +666,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     LoadBalancerApi apiInstance = new LoadBalancerApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the datacenter
@@ -729,7 +679,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Loadbalancer result = apiInstance.datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber);
+      Loadbalancer result = apiInstance.datacentersLoadbalancersPut(datacenterIdloadbalancerIdloadbalancerprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancerApi#datacentersLoadbalancersPut");

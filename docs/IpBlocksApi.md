@@ -27,7 +27,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.IpBlocksApi;
 
 public class Example {
@@ -36,15 +36,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     IpBlocksApi apiInstance = new IpBlocksApi(defaultClient);
     String ipblockId = "ipblockId_example"; // String | 
@@ -52,7 +47,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      Object result = apiInstance.ipblocksDelete(ipblockId, pretty, depth, xContractNumber);
+      Object result = apiInstance.ipblocksDelete(ipblockIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksDelete");
@@ -98,7 +93,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.IpBlocksApi;
 
 public class Example {
@@ -107,15 +102,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     IpBlocksApi apiInstance = new IpBlocksApi(defaultClient);
     String ipblockId = "ipblockId_example"; // String | 
@@ -123,7 +113,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      IpBlock result = apiInstance.ipblocksFindById(ipblockId, pretty, depth, xContractNumber);
+      IpBlock result = apiInstance.ipblocksFindById(ipblockIdprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksFindById");
@@ -169,7 +159,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.IpBlocksApi;
 
 public class Example {
@@ -178,22 +168,17 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     IpBlocksApi apiInstance = new IpBlocksApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      IpBlocks result = apiInstance.ipblocksGet(pretty, depth, xContractNumber);
+      IpBlocks result = apiInstance.ipblocksGet(prettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksGet");
@@ -238,7 +223,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.IpBlocksApi;
 
 public class Example {
@@ -247,15 +232,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     IpBlocksApi apiInstance = new IpBlocksApi(defaultClient);
     String ipblockId = "ipblockId_example"; // String | 
@@ -264,7 +244,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      IpBlock result = apiInstance.ipblocksPatch(ipblockId, ipblock, pretty, depth, xContractNumber);
+      IpBlock result = apiInstance.ipblocksPatch(ipblockIdipblockprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksPatch");
@@ -311,7 +291,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.IpBlocksApi;
 
 public class Example {
@@ -320,15 +300,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     IpBlocksApi apiInstance = new IpBlocksApi(defaultClient);
     IpBlock ipblock = new IpBlock(); // IpBlock | IP Block to be reserved
@@ -336,7 +311,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      IpBlock result = apiInstance.ipblocksPost(ipblock, pretty, depth, xContractNumber);
+      IpBlock result = apiInstance.ipblocksPost(ipblockprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksPost");
@@ -382,7 +357,7 @@ import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.IpBlocksApi;
 
 public class Example {
@@ -391,15 +366,10 @@ public class Example {
     defaultClient.setBasePath("https://api.ionos.com/cloudapi/v5");
     
     // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth Basic Authentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    Basic Authentication.setUsername("YOUR USERNAME");
-    Basic Authentication.setPassword("YOUR PASSWORD");
+    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+    basicAuthentication.setUsername("YOUR USERNAME");
+    basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure API key authorization: Token Authentication
-    ApiKeyAuth Token Authentication = (ApiKeyAuth) defaultClient.getAuthentication("Token Authentication");
-    Token Authentication.setApiKey("YOUR API KEY");
-    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-    //Token Authentication.setApiKeyPrefix("Token");
 
     IpBlocksApi apiInstance = new IpBlocksApi(defaultClient);
     String ipblockId = "ipblockId_example"; // String | 
@@ -408,7 +378,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      IpBlock result = apiInstance.ipblocksPut(ipblockId, ipblock, pretty, depth, xContractNumber);
+      IpBlock result = apiInstance.ipblocksPut(ipblockIdipblockprettydepthxContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksPut");

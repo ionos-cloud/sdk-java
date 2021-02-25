@@ -70,7 +70,7 @@ Then manually install the following JARs:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
-import com.ionoscloud.models.*;
+import com.ionoscloud.model.*;
 import com.ionoscloud.api.DefaultApi;
 
 public class Example {
