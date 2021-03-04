@@ -187,4 +187,12 @@ public class VolumePropertiesTest {
         // TODO: test backupunitId
     }
 
+    /**
+     * Test the property 'userData'
+     */
+    @Test
+    public void userDataTest() {
+        // TODO: test userData
+    }
+
 }
