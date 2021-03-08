@@ -27,3 +27,6 @@ build
 build.sbt
 gradlew*
 gradle
+.settings
+.classpath
+.project
