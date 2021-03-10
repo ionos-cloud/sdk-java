@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * Requests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-04T15:35:45.982Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-10T05:23:54.210Z[Etc/UTC]")
 
 public class Requests {
   public static final String SERIALIZED_NAME_ID = "id";
