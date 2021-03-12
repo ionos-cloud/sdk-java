@@ -1,4 +1,4 @@
 root: docs
 structure:
-	readme: README.md
-	summary: summary.md
+    readme: README.md
+    summary: summary.md
