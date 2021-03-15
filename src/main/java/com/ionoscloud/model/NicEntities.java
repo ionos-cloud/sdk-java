@@ -29,7 +29,7 @@ import java.io.IOException;
 /**
  * NicEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-03T14:20:00.275Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
 
 public class NicEntities {
   public static final String SERIALIZED_NAME_FLOWLOGS = "flowlogs";

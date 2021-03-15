@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * NatGatewayRuleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-03T14:20:00.275Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
 
 public class NatGatewayRuleProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -181,11 +181,11 @@ public class NatGatewayRuleProperties {
   }
 
    /**
-   * Target or destination subnet of the NAT gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. Useful for nat reflection/hairpin. If none is provided, rule will match any address.
+   * Target or destination subnet of the NAT gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address.
    * @return targetSubnet
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "10.0.1.0/24", value = "Target or destination subnet of the NAT gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. Useful for nat reflection/hairpin. If none is provided, rule will match any address.")
+  @ApiModelProperty(example = "10.0.1.0/24", value = "Target or destination subnet of the NAT gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address.")
 
   public String getTargetSubnet() {
     return targetSubnet;

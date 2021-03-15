@@ -5,7 +5,7 @@
     <artifactId>ionos-cloud-sdk</artifactId>
     <packaging>jar</packaging>
     <name>ionos-cloud-sdk</name>
-    <version>6.0.0-SNAPSHOT</version>
+    <version>6.0.0-SNAPSHOT2</version>
     <url>https://github.com/ionos-cloud/sdk-java</url>
     <description>The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth.</description>
     <scm>
@@ -266,7 +266,7 @@
         </dependency>
     </dependencies>
     <properties>
-        <java.version>1.7</java.version>
+        <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <gson-fire-version>1.8.4</gson-fire-version>

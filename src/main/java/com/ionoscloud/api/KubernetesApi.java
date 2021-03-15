@@ -29,6 +29,8 @@ import java.io.IOException;
 
 import com.ionoscloud.model.Error;
 import com.ionoscloud.model.KubernetesCluster;
+import com.ionoscloud.model.KubernetesClusterForPost;
+import com.ionoscloud.model.KubernetesClusterForPut;
 import com.ionoscloud.model.KubernetesClusters;
 import com.ionoscloud.model.KubernetesNode;
 import com.ionoscloud.model.KubernetesNodePool;
@@ -2005,7 +2007,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sPostCall(KubernetesCluster kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call k8sPostCall(KubernetesClusterForPost kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = kubernetesCluster;
 
         // create path and map variables
@@ -2048,7 +2050,7 @@ public class KubernetesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sPostValidateBeforeCall(KubernetesCluster kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call k8sPostValidateBeforeCall(KubernetesClusterForPost kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'kubernetesCluster' is set
         if (kubernetesCluster == null) {
@@ -2077,7 +2079,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public KubernetesCluster k8sPost(KubernetesCluster kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+    public KubernetesCluster k8sPost(KubernetesClusterForPost kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
         ApiResponse<KubernetesCluster> localVarResp = k8sPostWithHttpInfo(kubernetesCluster, pretty, depth, xContractNumber);
         return localVarResp.getData();
     }
@@ -2098,7 +2100,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<KubernetesCluster> k8sPostWithHttpInfo(KubernetesCluster kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+    public ApiResponse<KubernetesCluster> k8sPostWithHttpInfo(KubernetesClusterForPost kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
         okhttp3.Call localVarCall = k8sPostValidateBeforeCall(kubernetesCluster, pretty, depth, xContractNumber, null);
         Type localVarReturnType = new TypeToken<KubernetesCluster>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2121,7 +2123,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sPostAsync(KubernetesCluster kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> _callback) throws ApiException {
+    public okhttp3.Call k8sPostAsync(KubernetesClusterForPost kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = k8sPostValidateBeforeCall(kubernetesCluster, pretty, depth, xContractNumber, _callback);
         Type localVarReturnType = new TypeToken<KubernetesCluster>(){}.getType();
@@ -2145,7 +2147,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sPutCall(String k8sClusterId, KubernetesCluster kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call k8sPutCall(String k8sClusterId, KubernetesClusterForPut kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = kubernetesCluster;
 
         // create path and map variables
@@ -2189,7 +2191,7 @@ public class KubernetesApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sPutValidateBeforeCall(String k8sClusterId, KubernetesCluster kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call k8sPutValidateBeforeCall(String k8sClusterId, KubernetesClusterForPut kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -2224,7 +2226,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public KubernetesCluster k8sPut(String k8sClusterId, KubernetesCluster kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+    public KubernetesCluster k8sPut(String k8sClusterId, KubernetesClusterForPut kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
         ApiResponse<KubernetesCluster> localVarResp = k8sPutWithHttpInfo(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber);
         return localVarResp.getData();
     }
@@ -2246,7 +2248,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<KubernetesCluster> k8sPutWithHttpInfo(String k8sClusterId, KubernetesCluster kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+    public ApiResponse<KubernetesCluster> k8sPutWithHttpInfo(String k8sClusterId, KubernetesClusterForPut kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
         okhttp3.Call localVarCall = k8sPutValidateBeforeCall(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber, null);
         Type localVarReturnType = new TypeToken<KubernetesCluster>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -2270,7 +2272,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sPutAsync(String k8sClusterId, KubernetesCluster kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> _callback) throws ApiException {
+    public okhttp3.Call k8sPutAsync(String k8sClusterId, KubernetesClusterForPut kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = k8sPutValidateBeforeCall(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber, _callback);
         Type localVarReturnType = new TypeToken<KubernetesCluster>(){}.getType();

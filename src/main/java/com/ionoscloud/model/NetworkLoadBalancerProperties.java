@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * NetworkLoadBalancerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-03T14:20:00.275Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
 
 public class NetworkLoadBalancerProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -48,9 +48,9 @@ public class NetworkLoadBalancerProperties {
   @SerializedName(SERIALIZED_NAME_TARGET_LAN)
   private Integer targetLan;
 
-  public static final String SERIALIZED_NAME_GATEWAY_IPS = "gatewayIps";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_IPS)
-  private List<String> gatewayIps = null;
+  public static final String SERIALIZED_NAME_LB_PRIVATE_IPS = "lbPrivateIps";
+  @SerializedName(SERIALIZED_NAME_LB_PRIVATE_IPS)
+  private List<String> lbPrivateIps = null;
 
 
   public NetworkLoadBalancerProperties name(String name) {
@@ -150,34 +150,34 @@ public class NetworkLoadBalancerProperties {
   }
 
 
-  public NetworkLoadBalancerProperties gatewayIps(List<String> gatewayIps) {
+  public NetworkLoadBalancerProperties lbPrivateIps(List<String> lbPrivateIps) {
     
-    this.gatewayIps = gatewayIps;
+    this.lbPrivateIps = lbPrivateIps;
     return this;
   }
 
-  public NetworkLoadBalancerProperties addGatewayIpsItem(String gatewayIpsItem) {
-    if (this.gatewayIps == null) {
-      this.gatewayIps = new ArrayList<String>();
+  public NetworkLoadBalancerProperties addLbPrivateIpsItem(String lbPrivateIpsItem) {
+    if (this.lbPrivateIps == null) {
+      this.lbPrivateIps = new ArrayList<String>();
     }
-    this.gatewayIps.add(gatewayIpsItem);
+    this.lbPrivateIps.add(lbPrivateIpsItem);
     return this;
   }
 
    /**
-   * Collection of gateway IP addresses with subnet mask of the Network Load Balancer. IPs must contains valid subnet mask. If user will not provide any IP then system will gerenrated one IP with /24 subnet.
-   * @return gatewayIps
+   * Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain valid subnet mask. If user will not provide any IP then the system will generate one IP with /24 subnet.
+   * @return lbPrivateIps
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[81.173.1.5/24, 22.231.2.5/24]", value = "Collection of gateway IP addresses with subnet mask of the Network Load Balancer. IPs must contains valid subnet mask. If user will not provide any IP then system will gerenrated one IP with /24 subnet.")
+  @ApiModelProperty(example = "[81.173.1.5/24, 22.231.2.5/24]", value = "Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain valid subnet mask. If user will not provide any IP then the system will generate one IP with /24 subnet.")
 
-  public List<String> getGatewayIps() {
-    return gatewayIps;
+  public List<String> getLbPrivateIps() {
+    return lbPrivateIps;
   }
 
 
-  public void setGatewayIps(List<String> gatewayIps) {
-    this.gatewayIps = gatewayIps;
+  public void setLbPrivateIps(List<String> lbPrivateIps) {
+    this.lbPrivateIps = lbPrivateIps;
   }
 
 
@@ -190,7 +190,7 @@ public class NetworkLoadBalancerProperties {
       return false;
     }
     NetworkLoadBalancerProperties networkLoadBalancerProperties = (NetworkLoadBalancerProperties) o;
-    return Objects.equals(this.name, networkLoadBalancerProperties.name) && Objects.equals(this.listenerLan, networkLoadBalancerProperties.listenerLan) && Objects.equals(this.ips, networkLoadBalancerProperties.ips) && Objects.equals(this.targetLan, networkLoadBalancerProperties.targetLan) && Objects.equals(this.gatewayIps, networkLoadBalancerProperties.gatewayIps);
+    return Objects.equals(this.name, networkLoadBalancerProperties.name) && Objects.equals(this.listenerLan, networkLoadBalancerProperties.listenerLan) && Objects.equals(this.ips, networkLoadBalancerProperties.ips) && Objects.equals(this.targetLan, networkLoadBalancerProperties.targetLan) && Objects.equals(this.lbPrivateIps, networkLoadBalancerProperties.lbPrivateIps);
   }
 
 
@@ -204,7 +204,7 @@ public class NetworkLoadBalancerProperties {
     sb.append("    listenerLan: ").append(toIndentedString(listenerLan)).append("\n");
     sb.append("    ips: ").append(toIndentedString(ips)).append("\n");
     sb.append("    targetLan: ").append(toIndentedString(targetLan)).append("\n");
-    sb.append("    gatewayIps: ").append(toIndentedString(gatewayIps)).append("\n");
+    sb.append("    lbPrivateIps: ").append(toIndentedString(lbPrivateIps)).append("\n");
     sb.append("}");
     return sb.toString();
   }

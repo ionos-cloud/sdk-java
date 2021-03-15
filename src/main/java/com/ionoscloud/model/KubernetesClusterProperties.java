@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * KubernetesClusterProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-03T14:20:00.275Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
 
 public class KubernetesClusterProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -52,6 +52,14 @@ public class KubernetesClusterProperties {
   public static final String SERIALIZED_NAME_VIABLE_NODE_POOL_VERSIONS = "viableNodePoolVersions";
   @SerializedName(SERIALIZED_NAME_VIABLE_NODE_POOL_VERSIONS)
   private List<String> viableNodePoolVersions = null;
+
+  public static final String SERIALIZED_NAME_PUBLIC = "public";
+  @SerializedName(SERIALIZED_NAME_PUBLIC)
+  private Boolean _public = true;
+
+  public static final String SERIALIZED_NAME_GATEWAY_IP = "gatewayIp";
+  @SerializedName(SERIALIZED_NAME_GATEWAY_IP)
+  private String gatewayIp;
 
 
   public KubernetesClusterProperties name(String name) {
@@ -184,6 +192,52 @@ public class KubernetesClusterProperties {
   }
 
 
+  public KubernetesClusterProperties _public(Boolean _public) {
+    
+    this._public = _public;
+    return this;
+  }
+
+   /**
+   * The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.
+   * @return _public
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.")
+
+  public Boolean getPublic() {
+    return _public;
+  }
+
+
+  public void setPublic(Boolean _public) {
+    this._public = _public;
+  }
+
+
+  public KubernetesClusterProperties gatewayIp(String gatewayIp) {
+    
+    this.gatewayIp = gatewayIp;
+    return this;
+  }
+
+   /**
+   * The IP address of the gateway used by the cluster. This is mandatory when &#x60;public&#x60; is set to &#x60;false&#x60; and should not be provided otherwise.
+   * @return gatewayIp
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "192.170.0.1", value = "The IP address of the gateway used by the cluster. This is mandatory when `public` is set to `false` and should not be provided otherwise.")
+
+  public String getGatewayIp() {
+    return gatewayIp;
+  }
+
+
+  public void setGatewayIp(String gatewayIp) {
+    this.gatewayIp = gatewayIp;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -193,7 +247,7 @@ public class KubernetesClusterProperties {
       return false;
     }
     KubernetesClusterProperties kubernetesClusterProperties = (KubernetesClusterProperties) o;
-    return Objects.equals(this.name, kubernetesClusterProperties.name) && Objects.equals(this.k8sVersion, kubernetesClusterProperties.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesClusterProperties.maintenanceWindow) && Objects.equals(this.availableUpgradeVersions, kubernetesClusterProperties.availableUpgradeVersions) && Objects.equals(this.viableNodePoolVersions, kubernetesClusterProperties.viableNodePoolVersions);
+    return Objects.equals(this.name, kubernetesClusterProperties.name) && Objects.equals(this.k8sVersion, kubernetesClusterProperties.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesClusterProperties.maintenanceWindow) && Objects.equals(this.availableUpgradeVersions, kubernetesClusterProperties.availableUpgradeVersions) && Objects.equals(this.viableNodePoolVersions, kubernetesClusterProperties.viableNodePoolVersions) && Objects.equals(this._public, kubernetesClusterProperties._public) && Objects.equals(this.gatewayIp, kubernetesClusterProperties.gatewayIp);
   }
 
 
@@ -208,6 +262,8 @@ public class KubernetesClusterProperties {
     sb.append("    maintenanceWindow: ").append(toIndentedString(maintenanceWindow)).append("\n");
     sb.append("    availableUpgradeVersions: ").append(toIndentedString(availableUpgradeVersions)).append("\n");
     sb.append("    viableNodePoolVersions: ").append(toIndentedString(viableNodePoolVersions)).append("\n");
+    sb.append("    _public: ").append(toIndentedString(_public)).append("\n");
+    sb.append("    gatewayIp: ").append(toIndentedString(gatewayIp)).append("\n");
     sb.append("}");
     return sb.toString();
   }

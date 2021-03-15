@@ -2918,7 +2918,7 @@ paths:
       responses:
         "200":
           content:
-            text:
+            application/json:
               schema:
                 $ref: '#/components/schemas/RemoteConsoleUrl'
           description: successful operation
@@ -2941,7 +2941,7 @@ paths:
                 type: integer
         default:
           content:
-            text:
+            application/json:
               schema:
                 $ref: '#/components/schemas/Error'
           description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
@@ -2954,7 +2954,7 @@ paths:
       summary: Get the server remote console link
       tags:
       - Servers
-      x-accepts: text
+      x-accepts: application/json
   /images:
     get:
       description: Retrieve a list of images within the datacenter
@@ -12535,7 +12535,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: '#/components/schemas/UserPost'
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -12790,7 +12790,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/User'
+                $ref: '#/components/schemas/UserPut'
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -15625,7 +15625,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/KubernetesCluster'
+              $ref: '#/components/schemas/KubernetesClusterForPost'
         description: Details of the Kubernetes Cluster
         required: true
       responses:
@@ -15869,7 +15869,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/KubernetesCluster'
+              $ref: '#/components/schemas/KubernetesClusterForPut'
         description: Details of of the Kubernetes Cluster
         required: true
       responses:
@@ -21511,7 +21511,7 @@ components:
             href: <RESOURCE-URI>
             type: networkloadbalancer
             properties:
-              gatewayIps:
+              lbPrivateIps:
               - 81.173.1.5/24
               - 22.231.2.5/24
               name: My Network Load Balancer
@@ -21669,7 +21669,7 @@ components:
             href: <RESOURCE-URI>
             type: networkloadbalancer
             properties:
-              gatewayIps:
+              lbPrivateIps:
               - 81.173.1.5/24
               - 22.231.2.5/24
               name: My Network Load Balancer
@@ -23375,7 +23375,6 @@ components:
                 - 10.11.2.5/24
                 - 10.11.2.4
                 id: 3
-              description: Description for my NAT Gateway
               publicIps:
               - 81.173.1.2
               - 82.231.2.5
@@ -23500,7 +23499,6 @@ components:
                 - 10.11.2.5/24
                 - 10.11.2.4
                 id: 3
-              description: Description for my NAT Gateway
               publicIps:
               - 81.173.1.2
               - 82.231.2.5
@@ -24139,19 +24137,8 @@ components:
           example: '[SSD]'
           items:
             enum:
+            - SSD
             - SSD_STORAGE_ZONING
-            - pcc
-            - ssd
-            - nic-hot-unplug
-            - disk-vio-hot-unplug
-            - disk-vio-hot-plug
-            - vnf-nat-pcc-connection
-            - k8s
-            - cpu-hot-plug
-            - nic-hot-plug
-            - private-loadbalancer
-            - mem-hot-plug
-            - vnf-nlb-pcc-connection
             type: string
           readOnly: true
           type: array
@@ -24340,7 +24327,7 @@ components:
               href: <RESOURCE-URI>
               type: networkloadbalancer
               properties:
-                gatewayIps:
+                lbPrivateIps:
                 - 81.173.1.5/24
                 - 22.231.2.5/24
                 name: My Network Load Balancer
@@ -24498,7 +24485,7 @@ components:
               href: <RESOURCE-URI>
               type: networkloadbalancer
               properties:
-                gatewayIps:
+                lbPrivateIps:
                 - 81.173.1.5/24
                 - 22.231.2.5/24
                 name: My Network Load Balancer
@@ -26204,7 +26191,6 @@ components:
                   - 10.11.2.5/24
                   - 10.11.2.4
                   id: 3
-                description: Description for my NAT Gateway
                 publicIps:
                 - 81.173.1.2
                 - 82.231.2.5
@@ -26329,7 +26315,6 @@ components:
                   - 10.11.2.5/24
                   - 10.11.2.4
                   id: 3
-                description: Description for my NAT Gateway
                 publicIps:
                 - 81.173.1.2
                 - 82.231.2.5
@@ -27136,7 +27121,7 @@ components:
                 href: <RESOURCE-URI>
                 type: networkloadbalancer
                 properties:
-                  gatewayIps:
+                  lbPrivateIps:
                   - 81.173.1.5/24
                   - 22.231.2.5/24
                   name: My Network Load Balancer
@@ -27294,7 +27279,7 @@ components:
                 href: <RESOURCE-URI>
                 type: networkloadbalancer
                 properties:
-                  gatewayIps:
+                  lbPrivateIps:
                   - 81.173.1.5/24
                   - 22.231.2.5/24
                   name: My Network Load Balancer
@@ -29000,7 +28985,6 @@ components:
                     - 10.11.2.5/24
                     - 10.11.2.4
                     id: 3
-                  description: Description for my NAT Gateway
                   publicIps:
                   - 81.173.1.2
                   - 82.231.2.5
@@ -29125,7 +29109,6 @@ components:
                     - 10.11.2.5/24
                     - 10.11.2.4
                     id: 3
-                  description: Description for my NAT Gateway
                   publicIps:
                   - 81.173.1.2
                   - 82.231.2.5
@@ -29893,7 +29876,7 @@ components:
                 href: <RESOURCE-URI>
                 type: networkloadbalancer
                 properties:
-                  gatewayIps:
+                  lbPrivateIps:
                   - 81.173.1.5/24
                   - 22.231.2.5/24
                   name: My Network Load Balancer
@@ -30051,7 +30034,7 @@ components:
                 href: <RESOURCE-URI>
                 type: networkloadbalancer
                 properties:
-                  gatewayIps:
+                  lbPrivateIps:
                   - 81.173.1.5/24
                   - 22.231.2.5/24
                   name: My Network Load Balancer
@@ -31757,7 +31740,6 @@ components:
                     - 10.11.2.5/24
                     - 10.11.2.4
                     id: 3
-                  description: Description for my NAT Gateway
                   publicIps:
                   - 81.173.1.2
                   - 82.231.2.5
@@ -31882,7 +31864,6 @@ components:
                     - 10.11.2.5/24
                     - 10.11.2.4
                     id: 3
-                  description: Description for my NAT Gateway
                   publicIps:
                   - 81.173.1.2
                   - 82.231.2.5
@@ -38708,23 +38689,8 @@ components:
           example: '[SSD]'
           items:
             enum:
+            - SSD
             - SSD_STORAGE_ZONING
-            - pcc
-            - nic-hot-unplug
-            - disk-vio-hot-unplug
-            - ssd
-            - disk-vio-hot-plug
-            - vnf-nat-pcc-connection
-            - k8s
-            - cpu-hot-plug
-            - nic-hot-plug
-            - private-loadbalancer
-            - mem-hot-plug
-            - vnf-nlb-pcc-connection
-            - vnf-nat
-            - vnf-lb
-            - flow-logs
-            - core-vps
             type: string
           readOnly: true
           type: array
@@ -39554,9 +39520,15 @@ components:
           type: string
       type: object
     RemoteConsoleUrl:
-      description: The remote console url with the jwToken parameter for access
-      example: https://dcd.ionos.com/noVNC?token=eyJ0eXAiOiJKV1QiLCJraWQiOiI0MWM1MDFlNC03NGY3LTQwYjctYmMxMi1lZWIzMTAzNThlZDkiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJpb25vc2Nsb3VkIiwiaWF0IjoxNjAyNDg5NTkzMDcxLCJzZXJ2ZXIiOnsidXVpZCI6IjMwNGEwZGVlLWE3OTgtNDNhNi04MzIyLTk3M2NiYzc3Yjg4ZCIsIm5hbWUiOiJTZXJ2ZXIifX0.TND9kJd8GXM39XP5PMH_LnF_99al4MEkI_eoEowPvPztirgM50aZEdg6SuLYQzg-R7vrA7hEFaK4NJb2BUUsIZYVMhjl1QmKUE5TnP0Q2zYnIfNQNZFDu2rKrOydPCkPQwlMVvvZLeBSz7lrKYujF-qZ_yY_6SHlFtt-rg6IznRtup8AFziXtl-9cEsWU92_GCTd5LiriQrsnFAiGRbb0p2_6OYAQAH9FeWu4cxrbSwUmeR7Q4klJyZqFd0fv6UTFBtpSiyci7rsB142MXyLcqM4PrBkgd9P5OFbJYf5lbsb9pW04wLSl9rqoWGgZvWsqpuzosUkQRZt_O5yuYmT9w
-      type: string
+      example:
+        url: https://dcd.ionos.com/noVNC?token=eyJ0eXAiOiJKV1QiLCJraWQiOiI0MWM1MDFlNC03NGY3LTQwYjctYmMxMi1lZWIzMTAzNThlZDkiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJpb25vc2Nsb3VkIiwiaWF0IjoxNjAyNDg5NTkzMDcxLCJzZXJ2ZXIiOnsidXVpZCI6IjMwNGEwZGVlLWE3OTgtNDNhNi04MzIyLTk3M2NiYzc3Yjg4ZCIsIm5hbWUiOiJTZXJ2ZXIifX0.TND9kJd8GXM39XP5PMH_LnF_99al4MEkI_eoEowPvPztirgM50aZEdg6SuLYQzg-R7vrA7hEFaK4NJb2BUUsIZYVMhjl1QmKUE5TnP0Q2zYnIfNQNZFDu2rKrOydPCkPQwlMVvvZLeBSz7lrKYujF-qZ_yY_6SHlFtt-rg6IznRtup8AFziXtl-9cEsWU92_GCTd5LiriQrsnFAiGRbb0p2_6OYAQAH9FeWu4cxrbSwUmeR7Q4klJyZqFd0fv6UTFBtpSiyci7rsB142MXyLcqM4PrBkgd9P5OFbJYf5lbsb9pW04wLSl9rqoWGgZvWsqpuzosUkQRZt_O5yuYmT9w
+      properties:
+        url:
+          description: The remote console url with the jwToken parameter for access
+          example: https://dcd.ionos.com/noVNC?token=eyJ0eXAiOiJKV1QiLCJraWQiOiI0MWM1MDFlNC03NGY3LTQwYjctYmMxMi1lZWIzMTAzNThlZDkiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJpb25vc2Nsb3VkIiwiaWF0IjoxNjAyNDg5NTkzMDcxLCJzZXJ2ZXIiOnsidXVpZCI6IjMwNGEwZGVlLWE3OTgtNDNhNi04MzIyLTk3M2NiYzc3Yjg4ZCIsIm5hbWUiOiJTZXJ2ZXIifX0.TND9kJd8GXM39XP5PMH_LnF_99al4MEkI_eoEowPvPztirgM50aZEdg6SuLYQzg-R7vrA7hEFaK4NJb2BUUsIZYVMhjl1QmKUE5TnP0Q2zYnIfNQNZFDu2rKrOydPCkPQwlMVvvZLeBSz7lrKYujF-qZ_yY_6SHlFtt-rg6IznRtup8AFziXtl-9cEsWU92_GCTd5LiriQrsnFAiGRbb0p2_6OYAQAH9FeWu4cxrbSwUmeR7Q4klJyZqFd0fv6UTFBtpSiyci7rsB142MXyLcqM4PrBkgd9P5OFbJYf5lbsb9pW04wLSl9rqoWGgZvWsqpuzosUkQRZt_O5yuYmT9w
+          readOnly: true
+          type: string
+      type: object
     Server:
       example:
         metadata:
@@ -42100,10 +42072,12 @@ components:
         viableNodePoolVersions:
         - 1.17.7
         - 1.18.2
+        public: true
         name: k8s
         availableUpgradeVersions:
         - 1.16.4
         - 1.17.7
+        gatewayIp: 192.170.0.1
         k8sVersion: 1.15.4
       properties:
         name:
@@ -42139,6 +42113,16 @@ components:
           items:
             type: string
           type: array
+        public:
+          default: true
+          description: The indicator if the cluster is public or private. Be aware
+            that setting it to false is currently in beta phase.
+          type: boolean
+        gatewayIp:
+          description: The IP address of the gateway used by the cluster. This is
+            mandatory when `public` is set to `false` and should not be provided otherwise.
+          example: 192.170.0.1
+          type: string
       required:
       - name
       type: object
@@ -42279,10 +42263,12 @@ components:
           viableNodePoolVersions:
           - 1.17.7
           - 1.18.2
+          public: true
           name: k8s
           availableUpgradeVersions:
           - 1.16.4
           - 1.17.7
+          gatewayIp: 192.170.0.1
           k8sVersion: 1.15.4
       properties:
         id:
@@ -42311,7 +42297,144 @@ components:
       required:
       - properties
       type: object
-    KubernetesClusterForPostAndPut:
+    KubernetesClusterForPost:
+      example:
+        metadata:
+          createdByUserId: user@example.com
+          createdDate: 2015-12-04T14:34:09.809Z
+          createdBy: user@example.com
+          lastModifiedDate: 2015-12-04T14:34:09.809Z
+          lastModifiedBy: user@example.com
+          etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+          state: AVAILABLE
+          lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+        entities:
+          nodepools:
+            id: 1e072e52-2ed3-492f-b6b6-c6b116907527/nodepools
+            href: <RESOURCE-URI>
+            type: collection
+            items:
+            - metadata:
+                createdByUserId: user@example.com
+                createdDate: 2015-12-04T14:34:09.809Z
+                createdBy: user@example.com
+                lastModifiedDate: 2015-12-04T14:34:09.809Z
+                lastModifiedBy: user@example.com
+                etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+                state: AVAILABLE
+                lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+              id: 1e072e52-2ed3-492f-b6b6-c6b116907527
+              href: <RESOURCE-URI>
+              type: nodepool
+              properties:
+                autoScaling:
+                  minNodeCount: 1
+                  maxNodeCount: 1
+                datacenterId: 1e072e52-2ed3-492f-b6b6-c6b116907521
+                lans:
+                - routes:
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  id: 3
+                  dhcp: true
+                - routes:
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  id: 3
+                  dhcp: true
+                annotations:
+                  key: annotations
+                ramSize: 2048
+                availabilityZone: AUTO
+                k8sVersion: 1.15.4
+                labels:
+                  key: labels
+                maintenanceWindow:
+                  dayOfTheWeek: Monday
+                  time: 13:00:00
+                coresCount: 4
+                storageSize: 100
+                name: k8s-node-pool
+                availableUpgradeVersions:
+                - 1.16.4
+                - 1.17.7
+                storageType: HDD
+                nodeCount: 2
+                cpuFamily: AMD_OPTERON
+                publicIps:
+                - 81.173.1.2
+                - 82.231.2.5
+                - 92.221.2.4
+            - metadata:
+                createdByUserId: user@example.com
+                createdDate: 2015-12-04T14:34:09.809Z
+                createdBy: user@example.com
+                lastModifiedDate: 2015-12-04T14:34:09.809Z
+                lastModifiedBy: user@example.com
+                etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+                state: AVAILABLE
+                lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+              id: 1e072e52-2ed3-492f-b6b6-c6b116907527
+              href: <RESOURCE-URI>
+              type: nodepool
+              properties:
+                autoScaling:
+                  minNodeCount: 1
+                  maxNodeCount: 1
+                datacenterId: 1e072e52-2ed3-492f-b6b6-c6b116907521
+                lans:
+                - routes:
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  id: 3
+                  dhcp: true
+                - routes:
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  id: 3
+                  dhcp: true
+                annotations:
+                  key: annotations
+                ramSize: 2048
+                availabilityZone: AUTO
+                k8sVersion: 1.15.4
+                labels:
+                  key: labels
+                maintenanceWindow:
+                  dayOfTheWeek: Monday
+                  time: 13:00:00
+                coresCount: 4
+                storageSize: 100
+                name: k8s-node-pool
+                availableUpgradeVersions:
+                - 1.16.4
+                - 1.17.7
+                storageType: HDD
+                nodeCount: 2
+                cpuFamily: AMD_OPTERON
+                publicIps:
+                - 81.173.1.2
+                - 82.231.2.5
+                - 92.221.2.4
+        id: 1e072e52-2ed3-492f-b6b6-c6b116907527
+        href: <RESOURCE-URI>
+        type: k8s
+        properties:
+          maintenanceWindow:
+            dayOfTheWeek: Monday
+            time: 13:00:00
+          public: true
+          name: k8s
+          gatewayIp: 192.170.0.1
+          k8sVersion: 1.15.4
       properties:
         id:
           description: The resource's unique identifier.
@@ -42333,7 +42456,170 @@ components:
         metadata:
           $ref: '#/components/schemas/DatacenterElementMetadata'
         properties:
-          $ref: '#/components/schemas/KubernetesClusterPropertiesForPostAndPut'
+          $ref: '#/components/schemas/KubernetesClusterPropertiesForPost'
+        entities:
+          $ref: '#/components/schemas/KubernetesClusterEntities'
+      required:
+      - properties
+      type: object
+    KubernetesClusterForPut:
+      example:
+        metadata:
+          createdByUserId: user@example.com
+          createdDate: 2015-12-04T14:34:09.809Z
+          createdBy: user@example.com
+          lastModifiedDate: 2015-12-04T14:34:09.809Z
+          lastModifiedBy: user@example.com
+          etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+          state: AVAILABLE
+          lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+        entities:
+          nodepools:
+            id: 1e072e52-2ed3-492f-b6b6-c6b116907527/nodepools
+            href: <RESOURCE-URI>
+            type: collection
+            items:
+            - metadata:
+                createdByUserId: user@example.com
+                createdDate: 2015-12-04T14:34:09.809Z
+                createdBy: user@example.com
+                lastModifiedDate: 2015-12-04T14:34:09.809Z
+                lastModifiedBy: user@example.com
+                etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+                state: AVAILABLE
+                lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+              id: 1e072e52-2ed3-492f-b6b6-c6b116907527
+              href: <RESOURCE-URI>
+              type: nodepool
+              properties:
+                autoScaling:
+                  minNodeCount: 1
+                  maxNodeCount: 1
+                datacenterId: 1e072e52-2ed3-492f-b6b6-c6b116907521
+                lans:
+                - routes:
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  id: 3
+                  dhcp: true
+                - routes:
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  id: 3
+                  dhcp: true
+                annotations:
+                  key: annotations
+                ramSize: 2048
+                availabilityZone: AUTO
+                k8sVersion: 1.15.4
+                labels:
+                  key: labels
+                maintenanceWindow:
+                  dayOfTheWeek: Monday
+                  time: 13:00:00
+                coresCount: 4
+                storageSize: 100
+                name: k8s-node-pool
+                availableUpgradeVersions:
+                - 1.16.4
+                - 1.17.7
+                storageType: HDD
+                nodeCount: 2
+                cpuFamily: AMD_OPTERON
+                publicIps:
+                - 81.173.1.2
+                - 82.231.2.5
+                - 92.221.2.4
+            - metadata:
+                createdByUserId: user@example.com
+                createdDate: 2015-12-04T14:34:09.809Z
+                createdBy: user@example.com
+                lastModifiedDate: 2015-12-04T14:34:09.809Z
+                lastModifiedBy: user@example.com
+                etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+                state: AVAILABLE
+                lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+              id: 1e072e52-2ed3-492f-b6b6-c6b116907527
+              href: <RESOURCE-URI>
+              type: nodepool
+              properties:
+                autoScaling:
+                  minNodeCount: 1
+                  maxNodeCount: 1
+                datacenterId: 1e072e52-2ed3-492f-b6b6-c6b116907521
+                lans:
+                - routes:
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  id: 3
+                  dhcp: true
+                - routes:
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  - gatewayIp: 10.1.5.16
+                    network: 1.2.3.4/24
+                  id: 3
+                  dhcp: true
+                annotations:
+                  key: annotations
+                ramSize: 2048
+                availabilityZone: AUTO
+                k8sVersion: 1.15.4
+                labels:
+                  key: labels
+                maintenanceWindow:
+                  dayOfTheWeek: Monday
+                  time: 13:00:00
+                coresCount: 4
+                storageSize: 100
+                name: k8s-node-pool
+                availableUpgradeVersions:
+                - 1.16.4
+                - 1.17.7
+                storageType: HDD
+                nodeCount: 2
+                cpuFamily: AMD_OPTERON
+                publicIps:
+                - 81.173.1.2
+                - 82.231.2.5
+                - 92.221.2.4
+        id: 1e072e52-2ed3-492f-b6b6-c6b116907527
+        href: <RESOURCE-URI>
+        type: k8s
+        properties:
+          maintenanceWindow:
+            dayOfTheWeek: Monday
+            time: 13:00:00
+          name: k8s
+          k8sVersion: 1.15.4
+      properties:
+        id:
+          description: The resource's unique identifier.
+          example: 1e072e52-2ed3-492f-b6b6-c6b116907527
+          readOnly: true
+          type: string
+        type:
+          description: The type of object
+          enum:
+          - k8s
+          readOnly: true
+          type: string
+        href:
+          description: URL to the object representation (absolute path)
+          example: <RESOURCE-URI>
+          format: uri
+          readOnly: true
+          type: string
+        metadata:
+          $ref: '#/components/schemas/DatacenterElementMetadata'
+        properties:
+          $ref: '#/components/schemas/KubernetesClusterPropertiesForPut'
         entities:
           $ref: '#/components/schemas/KubernetesClusterEntities'
       required:
@@ -42601,10 +42887,12 @@ components:
             viableNodePoolVersions:
             - 1.17.7
             - 1.18.2
+            public: true
             name: k8s
             availableUpgradeVersions:
             - 1.16.4
             - 1.17.7
+            gatewayIp: 192.170.0.1
             k8sVersion: 1.15.4
         - metadata:
             createdByUserId: user@example.com
@@ -42741,10 +43029,12 @@ components:
             viableNodePoolVersions:
             - 1.17.7
             - 1.18.2
+            public: true
             name: k8s
             availableUpgradeVersions:
             - 1.16.4
             - 1.17.7
+            gatewayIp: 192.170.0.1
             k8sVersion: 1.15.4
       properties:
         id:
@@ -42822,7 +43112,52 @@ components:
       - maxNodeCount
       - minNodeCount
       type: object
-    KubernetesClusterPropertiesForPostAndPut:
+    KubernetesClusterPropertiesForPost:
+      example:
+        maintenanceWindow:
+          dayOfTheWeek: Monday
+          time: 13:00:00
+        public: true
+        name: k8s
+        gatewayIp: 192.170.0.1
+        k8sVersion: 1.15.4
+      properties:
+        name:
+          description: A Kubernetes Cluster Name. Valid Kubernetes Cluster name must
+            be 63 characters or less and must be empty or begin and end with an alphanumeric
+            character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and
+            alphanumerics between.
+          example: k8s
+          type: string
+        k8sVersion:
+          description: The kubernetes version in which a cluster is running. This
+            imposes restrictions on what kubernetes versions can be run in a cluster's
+            nodepools. Additionally, not all kubernetes versions are viable upgrade
+            targets for all prior versions.
+          example: 1.15.4
+          type: string
+        maintenanceWindow:
+          $ref: '#/components/schemas/KubernetesMaintenanceWindow'
+        public:
+          default: true
+          description: The indicator if the cluster is public or private. Be aware
+            that setting it to false is currently in beta phase.
+          type: boolean
+        gatewayIp:
+          description: The IP address of the gateway used by the cluster. This is
+            mandatory when `public` is set to `false` and should not be provided otherwise.
+          example: 192.170.0.1
+          type: string
+      required:
+      - name
+      type: object
+    KubernetesClusterPropertiesForPut:
+      example:
+        maintenanceWindow:
+          dayOfTheWeek: Monday
+          time: 13:00:00
+        name: k8s
+        k8sVersion: 1.15.4
       properties:
         name:
           description: A Kubernetes Cluster Name. Valid Kubernetes Cluster name must
@@ -43511,6 +43846,7 @@ components:
       type: object
     KubernetesNodeProperties:
       example:
+        privateIP: 192.168.23.2
         name: k8s-node
         publicIP: 192.168.23.2
         k8sVersion: 1.15.4
@@ -43523,6 +43859,10 @@ components:
           description: A valid public IP.
           example: 192.168.23.2
           type: string
+        privateIP:
+          description: A valid private IP.
+          example: 192.168.23.2
+          type: string
         k8sVersion:
           description: The kubernetes version in which a nodepool is running. This
             imposes restrictions on what kubernetes versions can be run in a cluster's
@@ -43533,7 +43873,6 @@ components:
       required:
       - k8sVersion
       - name
-      - publicIP
       type: object
     KubernetesNode:
       example:
@@ -43547,6 +43886,7 @@ components:
         href: <RESOURCE-URI>
         type: node
         properties:
+          privateIP: 192.168.23.2
           name: k8s-node
           publicIP: 192.168.23.2
           k8sVersion: 1.15.4
@@ -43591,6 +43931,7 @@ components:
           href: <RESOURCE-URI>
           type: node
           properties:
+            privateIP: 192.168.23.2
             name: k8s-node
             publicIP: 192.168.23.2
             k8sVersion: 1.15.4
@@ -43604,6 +43945,7 @@ components:
           href: <RESOURCE-URI>
           type: node
           properties:
+            privateIP: 192.168.23.2
             name: k8s-node
             publicIP: 192.168.23.2
             k8sVersion: 1.15.4
@@ -43796,7 +44138,6 @@ components:
             - 10.11.2.5/24
             - 10.11.2.4
             id: 3
-          description: Description for my NAT Gateway
           publicIps:
           - 81.173.1.2
           - 82.231.2.5
@@ -43846,7 +44187,6 @@ components:
             - 10.11.2.5/24
             - 10.11.2.4
             id: 3
-          description: Description for my NAT Gateway
           publicIps:
           - 81.173.1.2
           - 82.231.2.5
@@ -43888,7 +44228,6 @@ components:
           - 10.11.2.5/24
           - 10.11.2.4
           id: 3
-        description: Description for my NAT Gateway
         publicIps:
         - 81.173.1.2
         - 82.231.2.5
@@ -43897,10 +44236,6 @@ components:
         name:
           description: Name of the NAT gateway
           example: My NAT Gateway
-          type: string
-        description:
-          description: Description of the NAT gateway
-          example: Description for my NAT Gateway
           type: string
         publicIps:
           description: Collection of public IP addresses of the NAT gateway. Should
@@ -44184,7 +44519,6 @@ components:
               - 10.11.2.5/24
               - 10.11.2.4
               id: 3
-            description: Description for my NAT Gateway
             publicIps:
             - 81.173.1.2
             - 82.231.2.5
@@ -44309,7 +44643,6 @@ components:
               - 10.11.2.5/24
               - 10.11.2.4
               id: 3
-            description: Description for my NAT Gateway
             publicIps:
             - 81.173.1.2
             - 82.231.2.5
@@ -44556,8 +44889,8 @@ components:
         targetSubnet:
           description: Target or destination subnet of the NAT gateway rule. For SNAT
             rules it specifies which packets this translation rule applies to based
-            on the packets destination IP address. Useful for nat reflection/hairpin.
-            If none is provided, rule will match any address.
+            on the packets destination IP address. If none is provided, rule will
+            match any address.
           example: 10.0.1.0/24
           type: string
         targetPortRange:
@@ -44754,7 +45087,7 @@ components:
         href: <RESOURCE-URI>
         type: networkloadbalancer
         properties:
-          gatewayIps:
+          lbPrivateIps:
           - 81.173.1.5/24
           - 22.231.2.5/24
           name: My Network Load Balancer
@@ -44793,7 +45126,7 @@ components:
       type: object
     NetworkLoadBalancerProperties:
       example:
-        gatewayIps:
+        lbPrivateIps:
         - 81.173.1.5/24
         - 22.231.2.5/24
         name: My Network Load Balancer
@@ -44827,10 +45160,10 @@ components:
           description: Id of the balanced private target LAN. (outbound)
           example: 2
           type: integer
-        gatewayIps:
-          description: Collection of gateway IP addresses with subnet mask of the
-            Network Load Balancer. IPs must contains valid subnet mask. If user will
-            not provide any IP then system will gerenrated one IP with /24 subnet.
+        lbPrivateIps:
+          description: Collection of private IP addresses with subnet mask of the
+            Network Load Balancer. IPs must contain valid subnet mask. If user will
+            not provide any IP then the system will generate one IP with /24 subnet.
           example:
           - 81.173.1.5/24
           - 22.231.2.5/24
@@ -45144,7 +45477,7 @@ components:
           href: <RESOURCE-URI>
           type: networkloadbalancer
           properties:
-            gatewayIps:
+            lbPrivateIps:
             - 81.173.1.5/24
             - 22.231.2.5/24
             name: My Network Load Balancer
@@ -45302,7 +45635,7 @@ components:
           href: <RESOURCE-URI>
           type: networkloadbalancer
           properties:
-            gatewayIps:
+            lbPrivateIps:
             - 81.173.1.5/24
             - 22.231.2.5/24
             name: My Network Load Balancer
@@ -45353,7 +45686,7 @@ components:
         href: <RESOURCE-URI>
         type: networkloadbalancer
         properties:
-          gatewayIps:
+          lbPrivateIps:
           - 81.173.1.5/24
           - 22.231.2.5/24
           name: My Network Load Balancer

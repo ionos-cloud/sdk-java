@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * DatacenterProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-03T14:20:00.275Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
 
 public class DatacenterProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -54,31 +54,9 @@ public class DatacenterProperties {
    */
   @JsonAdapter(FeaturesEnum.Adapter.class)
   public enum FeaturesEnum {
-    SSD_STORAGE_ZONING("SSD_STORAGE_ZONING"),
+    SSD("SSD"),
     
-    PCC("pcc"),
-    
-    SSD("ssd"),
-    
-    NIC_HOT_UNPLUG("nic-hot-unplug"),
-    
-    DISK_VIO_HOT_UNPLUG("disk-vio-hot-unplug"),
-    
-    DISK_VIO_HOT_PLUG("disk-vio-hot-plug"),
-    
-    VNF_NAT_PCC_CONNECTION("vnf-nat-pcc-connection"),
-    
-    K8S("k8s"),
-    
-    CPU_HOT_PLUG("cpu-hot-plug"),
-    
-    NIC_HOT_PLUG("nic-hot-plug"),
-    
-    PRIVATE_LOADBALANCER("private-loadbalancer"),
-    
-    MEM_HOT_PLUG("mem-hot-plug"),
-    
-    VNF_NLB_PCC_CONNECTION("vnf-nlb-pcc-connection");
+    SSD_STORAGE_ZONING("SSD_STORAGE_ZONING");
 
     private String value;
 

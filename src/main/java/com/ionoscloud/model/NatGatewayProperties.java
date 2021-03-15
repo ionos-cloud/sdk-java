@@ -30,16 +30,12 @@ import java.util.List;
 /**
  * NatGatewayProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-03T14:20:00.275Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
 
 public class NatGatewayProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
-
-  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
-  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
-  private String description;
 
   public static final String SERIALIZED_NAME_PUBLIC_IPS = "publicIps";
   @SerializedName(SERIALIZED_NAME_PUBLIC_IPS)
@@ -69,29 +65,6 @@ public class NatGatewayProperties {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-
-  public NatGatewayProperties description(String description) {
-    
-    this.description = description;
-    return this;
-  }
-
-   /**
-   * Description of the NAT gateway
-   * @return description
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "Description for my NAT Gateway", value = "Description of the NAT gateway")
-
-  public String getDescription() {
-    return description;
-  }
-
-
-  public void setDescription(String description) {
-    this.description = description;
   }
 
 
@@ -162,7 +135,7 @@ public class NatGatewayProperties {
       return false;
     }
     NatGatewayProperties natGatewayProperties = (NatGatewayProperties) o;
-    return Objects.equals(this.name, natGatewayProperties.name) && Objects.equals(this.description, natGatewayProperties.description) && Objects.equals(this.publicIps, natGatewayProperties.publicIps) && Objects.equals(this.lans, natGatewayProperties.lans);
+    return Objects.equals(this.name, natGatewayProperties.name) && Objects.equals(this.publicIps, natGatewayProperties.publicIps) && Objects.equals(this.lans, natGatewayProperties.lans);
   }
 
 
@@ -173,7 +146,6 @@ public class NatGatewayProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class NatGatewayProperties {\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    publicIps: ").append(toIndentedString(publicIps)).append("\n");
     sb.append("    lans: ").append(toIndentedString(lans)).append("\n");
     sb.append("}");
