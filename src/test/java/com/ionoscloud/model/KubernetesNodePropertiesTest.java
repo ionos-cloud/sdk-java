@@ -57,6 +57,14 @@ public class KubernetesNodePropertiesTest {
     }
 
     /**
+     * Test the property 'privateIP'
+     */
+    @Test
+    public void privateIPTest() {
+        // TODO: test privateIP
+    }
+
+    /**
      * Test the property 'k8sVersion'
      */
     @Test

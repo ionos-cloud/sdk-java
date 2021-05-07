@@ -56,67 +56,11 @@ public class KubernetesNodePoolPropertiesForPutTest {
     }
 
     /**
-     * Test the property 'datacenterId'
-     */
-    @Test
-    public void datacenterIdTest() {
-        // TODO: test datacenterId
-    }
-
-    /**
      * Test the property 'nodeCount'
      */
     @Test
     public void nodeCountTest() {
         // TODO: test nodeCount
-    }
-
-    /**
-     * Test the property 'cpuFamily'
-     */
-    @Test
-    public void cpuFamilyTest() {
-        // TODO: test cpuFamily
-    }
-
-    /**
-     * Test the property 'coresCount'
-     */
-    @Test
-    public void coresCountTest() {
-        // TODO: test coresCount
-    }
-
-    /**
-     * Test the property 'ramSize'
-     */
-    @Test
-    public void ramSizeTest() {
-        // TODO: test ramSize
-    }
-
-    /**
-     * Test the property 'availabilityZone'
-     */
-    @Test
-    public void availabilityZoneTest() {
-        // TODO: test availabilityZone
-    }
-
-    /**
-     * Test the property 'storageType'
-     */
-    @Test
-    public void storageTypeTest() {
-        // TODO: test storageType
-    }
-
-    /**
-     * Test the property 'storageSize'
-     */
-    @Test
-    public void storageSizeTest() {
-        // TODO: test storageSize
     }
 
     /**

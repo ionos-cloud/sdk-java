@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * AttachedVolumes
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-10T05:23:54.210Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-07T13:08:49.985Z[Etc/UTC]")
 
 public class AttachedVolumes {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -117,20 +117,6 @@ public class AttachedVolumes {
 
 
 
-  public AttachedVolumes items(List<Volume> items) {
-    
-    this.items = items;
-    return this;
-  }
-
-  public AttachedVolumes addItemsItem(Volume itemsItem) {
-    if (this.items == null) {
-      this.items = new ArrayList<Volume>();
-    }
-    this.items.add(itemsItem);
-    return this;
-  }
-
    /**
    * Array of items in that collection
    * @return items
@@ -143,9 +129,6 @@ public class AttachedVolumes {
   }
 
 
-  public void setItems(List<Volume> items) {
-    this.items = items;
-  }
 
 
   public AttachedVolumes offset(BigDecimal offset) {

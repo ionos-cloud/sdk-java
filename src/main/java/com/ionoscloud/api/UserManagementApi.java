@@ -41,6 +41,8 @@ import com.ionoscloud.model.S3Key;
 import com.ionoscloud.model.S3Keys;
 import com.ionoscloud.model.S3ObjectStorageSSO;
 import com.ionoscloud.model.User;
+import com.ionoscloud.model.UserPost;
+import com.ionoscloud.model.UserPut;
 import com.ionoscloud.model.Users;
 
 import java.lang.reflect.Type;
@@ -3229,7 +3231,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersPostCall(User user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call umUsersPostCall(UserPost user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = user;
 
         // create path and map variables
@@ -3272,7 +3274,7 @@ public class UserManagementApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umUsersPostValidateBeforeCall(User user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call umUsersPostValidateBeforeCall(UserPost user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'user' is set
         if (user == null) {
@@ -3301,7 +3303,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public User umUsersPost(User user, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+    public User umUsersPost(UserPost user, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
         ApiResponse<User> localVarResp = umUsersPostWithHttpInfo(user, pretty, depth, xContractNumber);
         return localVarResp.getData();
     }
@@ -3322,7 +3324,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<User> umUsersPostWithHttpInfo(User user, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+    public ApiResponse<User> umUsersPostWithHttpInfo(UserPost user, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
         okhttp3.Call localVarCall = umUsersPostValidateBeforeCall(user, pretty, depth, xContractNumber, null);
         Type localVarReturnType = new TypeToken<User>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3345,7 +3347,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersPostAsync(User user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    public okhttp3.Call umUsersPostAsync(UserPost user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = umUsersPostValidateBeforeCall(user, pretty, depth, xContractNumber, _callback);
         Type localVarReturnType = new TypeToken<User>(){}.getType();
@@ -3369,7 +3371,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersPutCall(String userId, User user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call umUsersPutCall(String userId, UserPut user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         Object localVarPostBody = user;
 
         // create path and map variables
@@ -3413,7 +3415,7 @@ public class UserManagementApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umUsersPutValidateBeforeCall(String userId, User user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call umUsersPutValidateBeforeCall(String userId, UserPut user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
         
         // verify the required parameter 'userId' is set
         if (userId == null) {
@@ -3448,7 +3450,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public User umUsersPut(String userId, User user, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+    public User umUsersPut(String userId, UserPut user, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
         ApiResponse<User> localVarResp = umUsersPutWithHttpInfo(userId, user, pretty, depth, xContractNumber);
         return localVarResp.getData();
     }
@@ -3470,7 +3472,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<User> umUsersPutWithHttpInfo(String userId, User user, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+    public ApiResponse<User> umUsersPutWithHttpInfo(String userId, UserPut user, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
         okhttp3.Call localVarCall = umUsersPutValidateBeforeCall(userId, user, pretty, depth, xContractNumber, null);
         Type localVarReturnType = new TypeToken<User>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
@@ -3494,7 +3496,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersPutAsync(String userId, User user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    public okhttp3.Call umUsersPutAsync(String userId, UserPut user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = umUsersPutValidateBeforeCall(userId, user, pretty, depth, xContractNumber, _callback);
         Type localVarReturnType = new TypeToken<User>(){}.getType();
@@ -4085,7 +4087,7 @@ public class UserManagementApi {
      * Build call for umUsersS3keysPut
      * @param userId  (required)
      * @param keyId The unique access key ID of the S3 key (required)
-     * @param s3Key Modified s3 key (required)
+     * @param s3Key Modified S3 key (required)
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -4169,10 +4171,10 @@ public class UserManagementApi {
 
     /**
      * Modify a S3 key having the given key id
-     * You can enable or disable a given S3 key
+     * You can enable or disable a given S3 key.
      * @param userId  (required)
      * @param keyId The unique access key ID of the S3 key (required)
-     * @param s3Key Modified s3 key (required)
+     * @param s3Key Modified S3 key (required)
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -4192,10 +4194,10 @@ public class UserManagementApi {
 
     /**
      * Modify a S3 key having the given key id
-     * You can enable or disable a given S3 key
+     * You can enable or disable a given S3 key.
      * @param userId  (required)
      * @param keyId The unique access key ID of the S3 key (required)
-     * @param s3Key Modified s3 key (required)
+     * @param s3Key Modified S3 key (required)
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -4216,10 +4218,10 @@ public class UserManagementApi {
 
     /**
      * Modify a S3 key having the given key id (asynchronously)
-     * You can enable or disable a given S3 key
+     * You can enable or disable a given S3 key.
      * @param userId  (required)
      * @param keyId The unique access key ID of the S3 key (required)
-     * @param s3Key Modified s3 key (required)
+     * @param s3Key Modified S3 key (required)
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)

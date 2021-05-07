@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * KubernetesNodeMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-10T05:23:54.210Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-07T13:08:49.985Z[Etc/UTC]")
 
 public class KubernetesNodeMetadata {
   public static final String SERIALIZED_NAME_ETAG = "etag";
@@ -48,6 +48,7 @@ public class KubernetesNodeMetadata {
    */
   @JsonAdapter(StateEnum.Adapter.class)
   public enum StateEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     PROVISIONING("PROVISIONING"),
     
     PROVISIONED("PROVISIONED"),
@@ -83,7 +84,7 @@ public class KubernetesNodeMetadata {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return StateEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<StateEnum> {

@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * IpConsumer
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-10T05:23:54.210Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-07T13:08:49.985Z[Etc/UTC]")
 
 public class IpConsumer {
   public static final String SERIALIZED_NAME_IP = "ip";
@@ -57,6 +57,14 @@ public class IpConsumer {
   public static final String SERIALIZED_NAME_DATACENTER_NAME = "datacenterName";
   @SerializedName(SERIALIZED_NAME_DATACENTER_NAME)
   private String datacenterName;
+
+  public static final String SERIALIZED_NAME_K8S_NODE_POOL_UUID = "k8sNodePoolUuid";
+  @SerializedName(SERIALIZED_NAME_K8S_NODE_POOL_UUID)
+  private String k8sNodePoolUuid;
+
+  public static final String SERIALIZED_NAME_K8S_CLUSTER_UUID = "k8sClusterUuid";
+  @SerializedName(SERIALIZED_NAME_K8S_CLUSTER_UUID)
+  private String k8sClusterUuid;
 
 
   public IpConsumer ip(String ip) {
@@ -220,6 +228,52 @@ public class IpConsumer {
   }
 
 
+  public IpConsumer k8sNodePoolUuid(String k8sNodePoolUuid) {
+    
+    this.k8sNodePoolUuid = k8sNodePoolUuid;
+    return this;
+  }
+
+   /**
+   * Get k8sNodePoolUuid
+   * @return k8sNodePoolUuid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getK8sNodePoolUuid() {
+    return k8sNodePoolUuid;
+  }
+
+
+  public void setK8sNodePoolUuid(String k8sNodePoolUuid) {
+    this.k8sNodePoolUuid = k8sNodePoolUuid;
+  }
+
+
+  public IpConsumer k8sClusterUuid(String k8sClusterUuid) {
+    
+    this.k8sClusterUuid = k8sClusterUuid;
+    return this;
+  }
+
+   /**
+   * Get k8sClusterUuid
+   * @return k8sClusterUuid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getK8sClusterUuid() {
+    return k8sClusterUuid;
+  }
+
+
+  public void setK8sClusterUuid(String k8sClusterUuid) {
+    this.k8sClusterUuid = k8sClusterUuid;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -229,7 +283,7 @@ public class IpConsumer {
       return false;
     }
     IpConsumer ipConsumer = (IpConsumer) o;
-    return Objects.equals(this.ip, ipConsumer.ip) && Objects.equals(this.mac, ipConsumer.mac) && Objects.equals(this.nicId, ipConsumer.nicId) && Objects.equals(this.serverId, ipConsumer.serverId) && Objects.equals(this.serverName, ipConsumer.serverName) && Objects.equals(this.datacenterId, ipConsumer.datacenterId) && Objects.equals(this.datacenterName, ipConsumer.datacenterName);
+    return Objects.equals(this.ip, ipConsumer.ip) && Objects.equals(this.mac, ipConsumer.mac) && Objects.equals(this.nicId, ipConsumer.nicId) && Objects.equals(this.serverId, ipConsumer.serverId) && Objects.equals(this.serverName, ipConsumer.serverName) && Objects.equals(this.datacenterId, ipConsumer.datacenterId) && Objects.equals(this.datacenterName, ipConsumer.datacenterName) && Objects.equals(this.k8sNodePoolUuid, ipConsumer.k8sNodePoolUuid) && Objects.equals(this.k8sClusterUuid, ipConsumer.k8sClusterUuid);
   }
 
 
@@ -246,6 +300,8 @@ public class IpConsumer {
     sb.append("    serverName: ").append(toIndentedString(serverName)).append("\n");
     sb.append("    datacenterId: ").append(toIndentedString(datacenterId)).append("\n");
     sb.append("    datacenterName: ").append(toIndentedString(datacenterName)).append("\n");
+    sb.append("    k8sNodePoolUuid: ").append(toIndentedString(k8sNodePoolUuid)).append("\n");
+    sb.append("    k8sClusterUuid: ").append(toIndentedString(k8sClusterUuid)).append("\n");
     sb.append("}");
     return sb.toString();
   }

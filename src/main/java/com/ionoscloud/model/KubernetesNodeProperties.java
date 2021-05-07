@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * KubernetesNodeProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-10T05:23:54.210Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-07T13:08:49.985Z[Etc/UTC]")
 
 public class KubernetesNodeProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -37,6 +37,10 @@ public class KubernetesNodeProperties {
   public static final String SERIALIZED_NAME_PUBLIC_I_P = "publicIP";
   @SerializedName(SERIALIZED_NAME_PUBLIC_I_P)
   private String publicIP;
+
+  public static final String SERIALIZED_NAME_PRIVATE_I_P = "privateIP";
+  @SerializedName(SERIALIZED_NAME_PRIVATE_I_P)
+  private String privateIP;
 
   public static final String SERIALIZED_NAME_K8S_VERSION = "k8sVersion";
   @SerializedName(SERIALIZED_NAME_K8S_VERSION)
@@ -75,7 +79,8 @@ public class KubernetesNodeProperties {
    * A valid public IP.
    * @return publicIP
   **/
-  @ApiModelProperty(example = "192.168.23.2", required = true, value = "A valid public IP.")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "192.168.23.2", value = "A valid public IP.")
 
   public String getPublicIP() {
     return publicIP;
@@ -84,6 +89,29 @@ public class KubernetesNodeProperties {
 
   public void setPublicIP(String publicIP) {
     this.publicIP = publicIP;
+  }
+
+
+  public KubernetesNodeProperties privateIP(String privateIP) {
+    
+    this.privateIP = privateIP;
+    return this;
+  }
+
+   /**
+   * A valid private IP.
+   * @return privateIP
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "192.168.23.2", value = "A valid private IP.")
+
+  public String getPrivateIP() {
+    return privateIP;
+  }
+
+
+  public void setPrivateIP(String privateIP) {
+    this.privateIP = privateIP;
   }
 
 
@@ -118,7 +146,7 @@ public class KubernetesNodeProperties {
       return false;
     }
     KubernetesNodeProperties kubernetesNodeProperties = (KubernetesNodeProperties) o;
-    return Objects.equals(this.name, kubernetesNodeProperties.name) && Objects.equals(this.publicIP, kubernetesNodeProperties.publicIP) && Objects.equals(this.k8sVersion, kubernetesNodeProperties.k8sVersion);
+    return Objects.equals(this.name, kubernetesNodeProperties.name) && Objects.equals(this.publicIP, kubernetesNodeProperties.publicIP) && Objects.equals(this.privateIP, kubernetesNodeProperties.privateIP) && Objects.equals(this.k8sVersion, kubernetesNodeProperties.k8sVersion);
   }
 
 
@@ -130,6 +158,7 @@ public class KubernetesNodeProperties {
     sb.append("class KubernetesNodeProperties {\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    publicIP: ").append(toIndentedString(publicIP)).append("\n");
+    sb.append("    privateIP: ").append(toIndentedString(privateIP)).append("\n");
     sb.append("    k8sVersion: ").append(toIndentedString(k8sVersion)).append("\n");
     sb.append("}");
     return sb.toString();

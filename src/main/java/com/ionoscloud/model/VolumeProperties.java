@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * VolumeProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-10T05:23:54.210Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-07T13:08:49.985Z[Etc/UTC]")
 
 public class VolumeProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -42,6 +42,7 @@ public class VolumeProperties {
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     HDD("HDD"),
     
     SSD("SSD"),
@@ -71,7 +72,7 @@ public class VolumeProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return TypeEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<TypeEnum> {
@@ -101,6 +102,7 @@ public class VolumeProperties {
    */
   @JsonAdapter(AvailabilityZoneEnum.Adapter.class)
   public enum AvailabilityZoneEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     AUTO("AUTO"),
     
     ZONE_1("ZONE_1"),
@@ -130,7 +132,7 @@ public class VolumeProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return AvailabilityZoneEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<AvailabilityZoneEnum> {
@@ -172,6 +174,7 @@ public class VolumeProperties {
    */
   @JsonAdapter(BusEnum.Adapter.class)
   public enum BusEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     VIRTIO("VIRTIO"),
     
     IDE("IDE");
@@ -197,7 +200,7 @@ public class VolumeProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return BusEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<BusEnum> {
@@ -223,6 +226,7 @@ public class VolumeProperties {
    */
   @JsonAdapter(LicenceTypeEnum.Adapter.class)
   public enum LicenceTypeEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     UNKNOWN("UNKNOWN"),
     
     WINDOWS("WINDOWS"),
@@ -254,7 +258,7 @@ public class VolumeProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return LicenceTypeEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<LicenceTypeEnum> {
@@ -699,11 +703,11 @@ public class VolumeProperties {
   }
 
    /**
-   * The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provied either public image or imageAlias in conjunction with this property.
+   * The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; in conjunction with this property.
    * @return backupunitId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "25f67991-0f51-4efc-a8ad-ef1fb31a481c", value = "The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provied either public image or imageAlias in conjunction with this property.")
+  @ApiModelProperty(example = "25f67991-0f51-4efc-a8ad-ef1fb31a481c", value = "The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either 'public image' or 'imageAlias' in conjunction with this property.")
 
   public String getBackupunitId() {
     return backupunitId;

@@ -16,10 +16,13 @@ package com.ionoscloud.api;
 import com.ionoscloud.ApiException;
 import com.ionoscloud.model.Error;
 import com.ionoscloud.model.KubernetesCluster;
+import com.ionoscloud.model.KubernetesClusterForPost;
+import com.ionoscloud.model.KubernetesClusterForPut;
 import com.ionoscloud.model.KubernetesClusters;
 import com.ionoscloud.model.KubernetesConfig;
 import com.ionoscloud.model.KubernetesNode;
 import com.ionoscloud.model.KubernetesNodePool;
+import com.ionoscloud.model.KubernetesNodePoolForPost;
 import com.ionoscloud.model.KubernetesNodePoolForPut;
 import com.ionoscloud.model.KubernetesNodePools;
 import com.ionoscloud.model.KubernetesNodes;
@@ -268,7 +271,7 @@ public class KubernetesApiTest {
     @Test
     public void k8sNodepoolsPostTest() throws ApiException {
         String k8sClusterId = null;
-        KubernetesNodePool kubernetesNodePool = null;
+        KubernetesNodePoolForPost kubernetesNodePool = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
@@ -289,11 +292,11 @@ public class KubernetesApiTest {
     public void k8sNodepoolsPutTest() throws ApiException {
         String k8sClusterId = null;
         String nodepoolId = null;
-        KubernetesNodePool kubernetesNodePool = null;
+        KubernetesNodePoolForPut kubernetesNodePool = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        KubernetesNodePoolForPut response = api.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber);
+        KubernetesNodePool response = api.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber);
 
         // TODO: test validations
     }
@@ -308,7 +311,7 @@ public class KubernetesApiTest {
      */
     @Test
     public void k8sPostTest() throws ApiException {
-        KubernetesCluster kubernetesCluster = null;
+        KubernetesClusterForPost kubernetesCluster = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
@@ -328,7 +331,7 @@ public class KubernetesApiTest {
     @Test
     public void k8sPutTest() throws ApiException {
         String k8sClusterId = null;
-        KubernetesCluster kubernetesCluster = null;
+        KubernetesClusterForPut kubernetesCluster = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;

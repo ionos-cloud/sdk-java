@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * KubernetesNodePoolProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-10T05:23:54.210Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-07T13:08:49.985Z[Etc/UTC]")
 
 public class KubernetesNodePoolProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -66,6 +66,7 @@ public class KubernetesNodePoolProperties {
    */
   @JsonAdapter(AvailabilityZoneEnum.Adapter.class)
   public enum AvailabilityZoneEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     AUTO("AUTO"),
     
     ZONE_1("ZONE_1"),
@@ -93,7 +94,7 @@ public class KubernetesNodePoolProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return AvailabilityZoneEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<AvailabilityZoneEnum> {
@@ -119,6 +120,7 @@ public class KubernetesNodePoolProperties {
    */
   @JsonAdapter(StorageTypeEnum.Adapter.class)
   public enum StorageTypeEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     HDD("HDD"),
     
     SSD("SSD");
@@ -144,7 +146,7 @@ public class KubernetesNodePoolProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return StorageTypeEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<StorageTypeEnum> {
@@ -319,10 +321,10 @@ public class KubernetesNodePoolProperties {
   }
 
    /**
-   * RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB.
+   * RAM size for node, minimum size is 2048MB. Ram size must be set to multiple of 1024MB.
    * @return ramSize
   **/
-  @ApiModelProperty(example = "2048", required = true, value = "RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB.")
+  @ApiModelProperty(example = "2048", required = true, value = "RAM size for node, minimum size is 2048MB. Ram size must be set to multiple of 1024MB.")
 
   public Integer getRamSize() {
     return ramSize;

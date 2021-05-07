@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * KubernetesNodes
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-10T05:23:54.210Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-07T13:08:49.985Z[Etc/UTC]")
 
 public class KubernetesNodes {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -43,6 +43,7 @@ public class KubernetesNodes {
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     COLLECTION("collection");
 
     private String value;
@@ -66,7 +67,7 @@ public class KubernetesNodes {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return TypeEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<TypeEnum> {

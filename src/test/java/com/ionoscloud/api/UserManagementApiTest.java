@@ -28,6 +28,8 @@ import com.ionoscloud.model.S3Key;
 import com.ionoscloud.model.S3Keys;
 import com.ionoscloud.model.S3ObjectStorageSSO;
 import com.ionoscloud.model.User;
+import com.ionoscloud.model.UserPost;
+import com.ionoscloud.model.UserPut;
 import com.ionoscloud.model.Users;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -481,7 +483,7 @@ public class UserManagementApiTest {
      */
     @Test
     public void umUsersPostTest() throws ApiException {
-        User user = null;
+        UserPost user = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
@@ -501,7 +503,7 @@ public class UserManagementApiTest {
     @Test
     public void umUsersPutTest() throws ApiException {
         String userId = null;
-        User user = null;
+        UserPut user = null;
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
@@ -591,7 +593,7 @@ public class UserManagementApiTest {
     /**
      * Modify a S3 key having the given key id
      *
-     * You can enable or disable a given S3 key
+     * You can enable or disable a given S3 key.
      *
      * @throws ApiException
      *          if the Api call fails

@@ -1,24 +1,24 @@
-# Introduction
+[![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ionoscloud/ionos-cloud-sdk/badge.svg?style=plastic)](https://mvnrepository.com/artifact/com.ionoscloud/ionos-cloud-sdk)
 
 ## Overview
 
-The IONOS Cloud SDK for Java provides you with access to the IONOS Cloud API. The client library supports both simple and complex requests. It is designed for developers who are building applications in Java . The SDK for Java wraps the IONOS Cloud API. All API operations are performed over SSL and authenticated using your IONOS Cloud portal credentials. The API can be accessed within an instance running in IONOS Cloud or directly over the Internet from any application that can send an HTTPS request and receive an HTTPS response.
+The IONOS Cloud SDK for Java provides you with access to the IONOS Cloud API. The client library supports both simple and complex requests. It is designed for developers who are building applications in Java .
+The SDK for Java wraps the IONOS Cloud API. All API operations are performed over SSL and authenticated using your IONOS Cloud portal credentials. The API can be accessed within an instance running in IONOS Cloud or directly over the Internet from any application that can send an HTTPS request and receive an HTTPS response.
 
 ## Getting Started
 
-An IONOS account is required for access to the Cloud API; credentials from your registration are used to authenticate against the IONOS Cloud API.
-
-### Installation
+### Instalation
 
 To install the API client library to your local Maven repository, simply execute:
 
-```text
+```shell
 mvn clean install
 ```
 
 To deploy it to a remote Maven repository instead, configure the settings of the repository and execute:
 
-```text
+```shell
 mvn clean deploy
 ```
 
@@ -28,11 +28,11 @@ Refer to the [OSSRH Guide](http://central.sonatype.org/pages/ossrh-guide.html) f
 
 Add this dependency to your project's POM:
 
-```markup
+```xml
 <dependency>
   <groupId>com.ionoscloud</groupId>
   <artifactId>ionos-cloud-sdk</artifactId>
-  <version>5.0.4-SNAPSHOT</version>
+  <version>5.1.0-beta.1</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -42,21 +42,22 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ionoscloud:ionos-cloud-sdk:5.0.4-SNAPSHOT"
+compile "com.ionoscloud:ionos-cloud-sdk:5.1.0-beta.1"
 ```
 
 #### Others
 
 At first generate the JAR by executing:
 
-```text
+```shell
 mvn clean package
 ```
 
 Then manually install the following JARs:
 
-* `target/ionos-cloud-sdk-5.0.4-SNAPSHOT.jar`
+* `target/ionos-cloud-sdk-5.1.0-beta.1.jar`
 * `target/lib/*.jar`
+
 
 ### Usage
 
@@ -102,12 +103,13 @@ public class Example {
 ## Feature Reference
 
 The IONOS Cloud SDK for JAVA aims to offer access to all resources in the IONOS Cloud API and also offers some additional features that make the integration easier:
-
-* authentication for API calls
-* handling of asynchronous requests
+ - authentication for API calls
+ - handling of asynchronous requests
 
 ## FAQ
 
-* How can I open a bug/feature request? Bugs & feature requests can be open on the repository issues: [https://github.com/ionos-cloud/sdk-java/issues/new/choose](https://github.com/ionos-cloud/sdk-java/issues/new/choose)
-* Can I contribute to the Java SDK? Pur SDKs are automatically generated using OpenAPI Generator and don’t support manual changes. If you need changes please open an issue and we’ll try to take care of it.
+ - How can I open a bug/feature request?
+	Bugs & feature requests can be open on the repository issues: https://github.com/ionos-cloud/sdk-java/issues/new/choose
 
+ - Can I contribute to the Java SDK?
+    Pur SDKs are automatically generated using OpenAPI Generator and don’t support manual changes. If you need changes please open an issue and we’ll try to take care of it.

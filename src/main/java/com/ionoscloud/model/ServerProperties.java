@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * ServerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-10T05:23:54.210Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-07T13:08:49.985Z[Etc/UTC]")
 
 public class ServerProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -48,6 +48,7 @@ public class ServerProperties {
    */
   @JsonAdapter(AvailabilityZoneEnum.Adapter.class)
   public enum AvailabilityZoneEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     AUTO("AUTO"),
     
     ZONE_1("ZONE_1"),
@@ -75,7 +76,7 @@ public class ServerProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return AvailabilityZoneEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<AvailabilityZoneEnum> {
@@ -101,6 +102,7 @@ public class ServerProperties {
    */
   @JsonAdapter(VmStateEnum.Adapter.class)
   public enum VmStateEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     NOSTATE("NOSTATE"),
     
     RUNNING("RUNNING"),
@@ -136,7 +138,7 @@ public class ServerProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return VmStateEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<VmStateEnum> {

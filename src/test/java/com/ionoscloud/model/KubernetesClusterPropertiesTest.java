@@ -83,4 +83,20 @@ public class KubernetesClusterPropertiesTest {
         // TODO: test viableNodePoolVersions
     }
 
+    /**
+     * Test the property '_public'
+     */
+    @Test
+    public void _publicTest() {
+        // TODO: test _public
+    }
+
+    /**
+     * Test the property 'gatewayIp'
+     */
+    @Test
+    public void gatewayIpTest() {
+        // TODO: test gatewayIp
+    }
+
 }

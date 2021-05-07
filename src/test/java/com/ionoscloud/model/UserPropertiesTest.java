@@ -97,14 +97,6 @@ public class UserPropertiesTest {
     }
 
     /**
-     * Test the property 'password'
-     */
-    @Test
-    public void passwordTest() {
-        // TODO: test password
-    }
-
-    /**
      * Test the property 'active'
      */
     @Test

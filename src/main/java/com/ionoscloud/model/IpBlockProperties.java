@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * IpBlockProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-10T05:23:54.210Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-07T13:08:49.985Z[Etc/UTC]")
 
 public class IpBlockProperties {
   public static final String SERIALIZED_NAME_IPS = "ips";
@@ -140,7 +140,7 @@ public class IpBlockProperties {
    * @return ipConsumers
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "{ \"ipConsumers\": [ { \"ip\" : \"192.18.2.11\", \"mac\" : \"02:01:3f:52:6e:57\", \"nicId\" : \"0e8ee463-1174-46f2-87ba-a5c79c14d8e5\", \"serverId\" : \"e6a3466f-8d6e-4cb6-8001-f4e245f222b7\", \"serverName\" : \"Unnamed Server\", \"datacenterId\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fccfc\", \"datacenterName\" : \"IpConsumerDC\"} ] }", value = "Read-Only attribute. Lists consumption detail of an individual ip")
+  @ApiModelProperty(example = "{ \"ipConsumers\": [ { \"ip\" : \"192.18.2.11\", \"mac\" : \"02:01:3f:52:6e:57\", \"nicId\" : \"0e8ee463-1174-46f2-87ba-a5c79c14d8e5\", \"serverId\" : \"e6a3466f-8d6e-4cb6-8001-f4e245f222b7\", \"serverName\" : \"Unnamed Server\", \"datacenterId\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fccfc\", \"datacenterName\" : \"IpConsumerDC\", \"k8sNodePoolUuid\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fcc12\", \"k8sClusterUuid\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fcc23\"} ] }", value = "Read-Only attribute. Lists consumption detail of an individual ip")
 
   public List<IpConsumer> getIpConsumers() {
     return ipConsumers;

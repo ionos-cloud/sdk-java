@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * S3KeyProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-10T05:23:54.210Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-07T13:08:49.985Z[Etc/UTC]")
 
 public class S3KeyProperties {
   public static final String SERIALIZED_NAME_SECRET_KEY = "secretKey";
@@ -40,11 +40,11 @@ public class S3KeyProperties {
 
 
    /**
-   * secret of the s3 key
+   * secret of the S3 key
    * @return secretKey
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "tFVkUARsoeCdntQs2jVSyGG6TMPfPZ+ghnsWj/gG", value = "secret of the s3 key")
+  @ApiModelProperty(example = "tFVkUARsoeCdntQs2jVSyGG6TMPfPZ+ghnsWj/gG", value = "secret of the S3 key")
 
   public String getSecretKey() {
     return secretKey;
@@ -60,11 +60,11 @@ public class S3KeyProperties {
   }
 
    /**
-   * denotes if the s3 key is active or not
+   * denotes if the S3 key is active or not
    * @return active
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "denotes if the s3 key is active or not")
+  @ApiModelProperty(value = "denotes if the S3 key is active or not")
 
   public Boolean getActive() {
     return active;

@@ -28,6 +28,7 @@ import com.google.gson.stream.JsonWriter;
  */
 @JsonAdapter(Type.Adapter.class)
 public enum Type {
+  UNKNOWN_VALUE("UNKNOWN_VALUE"),
   
   DATACENTER("datacenter"),
   
@@ -100,7 +101,7 @@ public enum Type {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return Type.UNKNOWN_VALUE;
   }
 
   public static class Adapter extends TypeAdapter<Type> {

@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * UserProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-10T05:23:54.210Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-07T13:08:49.985Z[Etc/UTC]")
 
 public class UserProperties {
   public static final String SERIALIZED_NAME_FIRSTNAME = "firstname";
@@ -57,10 +57,6 @@ public class UserProperties {
   public static final String SERIALIZED_NAME_S3_CANONICAL_USER_ID = "s3CanonicalUserId";
   @SerializedName(SERIALIZED_NAME_S3_CANONICAL_USER_ID)
   private String s3CanonicalUserId;
-
-  public static final String SERIALIZED_NAME_PASSWORD = "password";
-  @SerializedName(SERIALIZED_NAME_PASSWORD)
-  private String password;
 
   public static final String SERIALIZED_NAME_ACTIVE = "active";
   @SerializedName(SERIALIZED_NAME_ACTIVE)
@@ -228,29 +224,6 @@ public class UserProperties {
   }
 
 
-  public UserProperties password(String password) {
-    
-    this.password = password;
-    return this;
-  }
-
-   /**
-   * User password
-   * @return password
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "User password")
-
-  public String getPassword() {
-    return password;
-  }
-
-
-  public void setPassword(String password) {
-    this.password = password;
-  }
-
-
   public UserProperties active(Boolean active) {
     
     this.active = active;
@@ -283,7 +256,7 @@ public class UserProperties {
       return false;
     }
     UserProperties userProperties = (UserProperties) o;
-    return Objects.equals(this.firstname, userProperties.firstname) && Objects.equals(this.lastname, userProperties.lastname) && Objects.equals(this.email, userProperties.email) && Objects.equals(this.administrator, userProperties.administrator) && Objects.equals(this.forceSecAuth, userProperties.forceSecAuth) && Objects.equals(this.secAuthActive, userProperties.secAuthActive) && Objects.equals(this.s3CanonicalUserId, userProperties.s3CanonicalUserId) && Objects.equals(this.password, userProperties.password) && Objects.equals(this.active, userProperties.active);
+    return Objects.equals(this.firstname, userProperties.firstname) && Objects.equals(this.lastname, userProperties.lastname) && Objects.equals(this.email, userProperties.email) && Objects.equals(this.administrator, userProperties.administrator) && Objects.equals(this.forceSecAuth, userProperties.forceSecAuth) && Objects.equals(this.secAuthActive, userProperties.secAuthActive) && Objects.equals(this.s3CanonicalUserId, userProperties.s3CanonicalUserId) && Objects.equals(this.active, userProperties.active);
   }
 
 
@@ -300,7 +273,6 @@ public class UserProperties {
     sb.append("    forceSecAuth: ").append(toIndentedString(forceSecAuth)).append("\n");
     sb.append("    secAuthActive: ").append(toIndentedString(secAuthActive)).append("\n");
     sb.append("    s3CanonicalUserId: ").append(toIndentedString(s3CanonicalUserId)).append("\n");
-    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
     sb.append("}");
     return sb.toString();
