@@ -9,7 +9,7 @@ apply plugin: 'nexus-workflow'
 
 
 group = 'com.ionoscloud'
-version = '5.1.0-beta.1'
+version = '5.1.0-SNAPSHOT'
 
 buildscript {
     repositories {

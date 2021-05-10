@@ -29,7 +29,7 @@ import java.io.IOException;
 /**
  * GroupEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-07T13:08:49.985Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
 
 public class GroupEntities {
   public static final String SERIALIZED_NAME_USERS = "users";

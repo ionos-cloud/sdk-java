@@ -32,7 +32,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ionoscloud</groupId>
   <artifactId>ionos-cloud-sdk</artifactId>
-  <version>5.1.0-beta.1</version>
+  <version>5.1.0-SNAPSHOT</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -42,7 +42,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ionoscloud:ionos-cloud-sdk:5.1.0-beta.1"
+compile "com.ionoscloud:ionos-cloud-sdk:5.1.0-SNAPSHOT"
 ```
 
 #### Others
@@ -55,7 +55,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ionos-cloud-sdk-5.1.0-beta.1.jar`
+* `target/ionos-cloud-sdk-5.1.0-SNAPSHOT.jar`
 * `target/lib/*.jar`
 
 
