@@ -37,6 +37,22 @@ Add this dependency to your project's POM:
 </dependency>
 ```
 
+Also make sure to add the snapshot repository to your project's POM:
+```xml
+<repositories>
+  <repository>
+    <id>oss.sonatype.org-snapshot</id>
+    <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+    <releases>
+      <enabled>false</enabled>
+    </releases>
+    <snapshots>
+      <enabled>true</enabled>
+    </snapshots>
+  </repository>
+</repositories>
+```
+
 #### Gradle users
 
 Add this dependency to your project's build file:
