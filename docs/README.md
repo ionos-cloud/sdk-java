@@ -32,9 +32,25 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ionoscloud</groupId>
   <artifactId>ionos-cloud-sdk</artifactId>
-  <version>6.0.0-SNAPSHOT2</version>
+  <version>6.0.0-SNAPSHOT</version>
   <scope>compile</scope>
 </dependency>
+```
+
+Also make sure to add the snapshot repository to your project's POM:
+```xml
+<repositories>
+  <repository>
+    <id>oss.sonatype.org-snapshot</id>
+    <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+    <releases>
+      <enabled>false</enabled>
+    </releases>
+    <snapshots>
+      <enabled>true</enabled>
+    </snapshots>
+  </repository>
+</repositories>
 ```
 
 #### Gradle users
@@ -42,7 +58,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ionoscloud:ionos-cloud-sdk:6.0.0-SNAPSHOT2"
+compile "com.ionoscloud:ionos-cloud-sdk:6.0.0-SNAPSHOT"
 ```
 
 #### Others
@@ -55,7 +71,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ionos-cloud-sdk-6.0.0-SNAPSHOT2.jar`
+* `target/ionos-cloud-sdk-6.0.0-SNAPSHOT.jar`
 * `target/lib/*.jar`
 
 
