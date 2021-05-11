@@ -3,6 +3,8 @@
 ## v5.1.0-SNAPSHOT - May 11, 2021
 
 * Aligning with the latest VDC Api changes
+* Deserialization of API Enum responses relaxed in order to accept possibly new entries without
+  crashing the client app using the sdk
 * `ImageAliases` and `CloudInit` attributes added to the `ImageProperties` model
 * `Public` and `GatewayIp` attributes added to the `KubernetesClusterProperties` model
 * `PrivateIP` attribute added to the `KubernetesNodeProperties` model
