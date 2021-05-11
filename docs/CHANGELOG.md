@@ -2,7 +2,7 @@
 
 ## v5.1.0-SNAPSHOT - May 11, 2021
 
-* Aligning with the latest VDC Api changes
+* Aligning with the latest Ionos Cloud Api changes
 * Deserialization of API Enum responses relaxed in order to accept possibly new entries without
   crashing the client app using the sdk
 * `ImageAliases` and `CloudInit` attributes added to the `ImageProperties` model
