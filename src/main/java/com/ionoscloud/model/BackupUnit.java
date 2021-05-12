@@ -30,7 +30,7 @@ import java.net.URI;
 /**
  * BackupUnit
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class BackupUnit {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -42,6 +42,7 @@ public class BackupUnit {
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     BACKUPUNIT("backupunit");
 
     private String value;
@@ -65,7 +66,7 @@ public class BackupUnit {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return TypeEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<TypeEnum> {

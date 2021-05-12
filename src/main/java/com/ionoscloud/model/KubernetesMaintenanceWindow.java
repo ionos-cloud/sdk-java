@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * KubernetesMaintenanceWindow
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class KubernetesMaintenanceWindow {
   /**
@@ -35,6 +35,7 @@ public class KubernetesMaintenanceWindow {
    */
   @JsonAdapter(DayOfTheWeekEnum.Adapter.class)
   public enum DayOfTheWeekEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     MONDAY("Monday"),
     
     TUESDAY("Tuesday"),
@@ -70,7 +71,7 @@ public class KubernetesMaintenanceWindow {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return DayOfTheWeekEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<DayOfTheWeekEnum> {

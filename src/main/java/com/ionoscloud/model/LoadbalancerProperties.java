@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * LoadbalancerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class LoadbalancerProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -39,6 +39,7 @@ public class LoadbalancerProperties {
    */
   @JsonAdapter(IpEnum.Adapter.class)
   public enum IpEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     _VALID_IP_ADDRESS_("@Valid IP address@"),
     
     NULL("null");
@@ -64,7 +65,7 @@ public class LoadbalancerProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return IpEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<IpEnum> {

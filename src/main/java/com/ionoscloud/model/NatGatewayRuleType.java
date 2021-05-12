@@ -28,6 +28,7 @@ import com.google.gson.stream.JsonWriter;
  */
 @JsonAdapter(NatGatewayRuleType.Adapter.class)
 public enum NatGatewayRuleType {
+  UNKNOWN_VALUE("UNKNOWN_VALUE"),
   
   SNAT("SNAT");
 
@@ -52,7 +53,7 @@ public enum NatGatewayRuleType {
         return b;
       }
     }
-    throw new IllegalArgumentException("Unexpected value '" + value + "'");
+    return NatGatewayRuleType.UNKNOWN_VALUE;
   }
 
   public static class Adapter extends TypeAdapter<NatGatewayRuleType> {

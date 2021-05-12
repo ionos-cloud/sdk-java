@@ -13,5 +13,7 @@
 | **serverName** | **String** |  |  [optional] |
 | **datacenterId** | **String** |  |  [optional] |
 | **datacenterName** | **String** |  |  [optional] |
+| **k8sNodePoolUuid** | **String** |  |  [optional] |
+| **k8sClusterUuid** | **String** |  |  [optional] |
 
 

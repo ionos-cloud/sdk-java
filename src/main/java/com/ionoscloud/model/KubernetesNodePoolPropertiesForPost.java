@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * KubernetesNodePoolPropertiesForPost
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class KubernetesNodePoolPropertiesForPost {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -66,6 +66,7 @@ public class KubernetesNodePoolPropertiesForPost {
    */
   @JsonAdapter(AvailabilityZoneEnum.Adapter.class)
   public enum AvailabilityZoneEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     AUTO("AUTO"),
     
     ZONE_1("ZONE_1"),
@@ -93,7 +94,7 @@ public class KubernetesNodePoolPropertiesForPost {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return AvailabilityZoneEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<AvailabilityZoneEnum> {
@@ -119,6 +120,7 @@ public class KubernetesNodePoolPropertiesForPost {
    */
   @JsonAdapter(StorageTypeEnum.Adapter.class)
   public enum StorageTypeEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     HDD("HDD"),
     
     SSD("SSD");
@@ -144,7 +146,7 @@ public class KubernetesNodePoolPropertiesForPost {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return StorageTypeEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<StorageTypeEnum> {

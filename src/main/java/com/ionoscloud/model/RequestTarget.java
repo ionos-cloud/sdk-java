@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * RequestTarget
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class RequestTarget {
   public static final String SERIALIZED_NAME_TARGET = "target";
@@ -40,6 +40,7 @@ public class RequestTarget {
    */
   @JsonAdapter(StatusEnum.Adapter.class)
   public enum StatusEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     QUEUED("QUEUED"),
     
     RUNNING("RUNNING"),
@@ -69,7 +70,7 @@ public class RequestTarget {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return StatusEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<StatusEnum> {

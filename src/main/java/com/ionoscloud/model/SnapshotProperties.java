@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 /**
  * SnapshotProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class SnapshotProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -96,6 +96,7 @@ public class SnapshotProperties {
    */
   @JsonAdapter(LicenceTypeEnum.Adapter.class)
   public enum LicenceTypeEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     UNKNOWN("UNKNOWN"),
     
     WINDOWS("WINDOWS"),
@@ -127,7 +128,7 @@ public class SnapshotProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return LicenceTypeEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<LicenceTypeEnum> {

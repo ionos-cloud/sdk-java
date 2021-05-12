@@ -23,6 +23,8 @@
 | **licenceType** | [**LicenceTypeEnum**](#LicenceTypeEnum) | OS type of this Image |  |
 | **imageType** | [**ImageTypeEnum**](#ImageTypeEnum) | This indicates the type of image |  [optional] [readonly] |
 | **_public** | **Boolean** | Indicates if the image is part of the public repository or not |  [optional] [readonly] |
+| **imageAliases** | **List&lt;String&gt;** | List of image aliases mapped for this Image |  [optional] [readonly] |
+| **cloudInit** | [**CloudInitEnum**](#CloudInitEnum) | Cloud init compatibility |  [optional] |
 
 
 
@@ -44,5 +46,14 @@
 | ---- | -----
 | HDD | &quot;HDD&quot; |
 | CDROM | &quot;CDROM&quot; |
+
+
+
+## Enum: CloudInitEnum
+
+| Name | Value |
+| ---- | -----
+| NONE | &quot;NONE&quot; |
+| V1 | &quot;V1&quot; |
 
 

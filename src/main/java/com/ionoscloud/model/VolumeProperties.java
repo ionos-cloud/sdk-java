@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * VolumeProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class VolumeProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -42,6 +42,7 @@ public class VolumeProperties {
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     HDD("HDD"),
     
     SSD("SSD"),
@@ -73,7 +74,7 @@ public class VolumeProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return TypeEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<TypeEnum> {
@@ -103,6 +104,7 @@ public class VolumeProperties {
    */
   @JsonAdapter(AvailabilityZoneEnum.Adapter.class)
   public enum AvailabilityZoneEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     AUTO("AUTO"),
     
     ZONE_1("ZONE_1"),
@@ -132,7 +134,7 @@ public class VolumeProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return AvailabilityZoneEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<AvailabilityZoneEnum> {
@@ -170,6 +172,7 @@ public class VolumeProperties {
    */
   @JsonAdapter(BusEnum.Adapter.class)
   public enum BusEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     VIRTIO("VIRTIO"),
     
     IDE("IDE");
@@ -195,7 +198,7 @@ public class VolumeProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return BusEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<BusEnum> {
@@ -221,6 +224,7 @@ public class VolumeProperties {
    */
   @JsonAdapter(LicenceTypeEnum.Adapter.class)
   public enum LicenceTypeEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     UNKNOWN("UNKNOWN"),
     
     WINDOWS("WINDOWS"),
@@ -252,7 +256,7 @@ public class VolumeProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return LicenceTypeEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<LicenceTypeEnum> {

@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * DatacenterProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class DatacenterProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -49,56 +49,9 @@ public class DatacenterProperties {
   @SerializedName(SERIALIZED_NAME_VERSION)
   private Integer version;
 
-  /**
-   * Gets or Sets features
-   */
-  @JsonAdapter(FeaturesEnum.Adapter.class)
-  public enum FeaturesEnum {
-    SSD("SSD"),
-    
-    SSD_STORAGE_ZONING("SSD_STORAGE_ZONING");
-
-    private String value;
-
-    FeaturesEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static FeaturesEnum fromValue(String value) {
-      for (FeaturesEnum b : FeaturesEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
-          return b;
-        }
-      }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
-    }
-
-    public static class Adapter extends TypeAdapter<FeaturesEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final FeaturesEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public FeaturesEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return FeaturesEnum.fromValue(value);
-      }
-    }
-  }
-
   public static final String SERIALIZED_NAME_FEATURES = "features";
   @SerializedName(SERIALIZED_NAME_FEATURES)
-  private List<FeaturesEnum> features = null;
+  private List<String> features = null;
 
   public static final String SERIALIZED_NAME_SEC_AUTH_PROTECTION = "secAuthProtection";
   @SerializedName(SERIALIZED_NAME_SEC_AUTH_PROTECTION)
@@ -198,7 +151,7 @@ public class DatacenterProperties {
   @javax.annotation.Nullable
   @ApiModelProperty(example = "[SSD]", value = "List of features supported by the location this data center is part of")
 
-  public List<FeaturesEnum> getFeatures() {
+  public List<String> getFeatures() {
     return features;
   }
 

@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * FlowLogProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class FlowLogProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -39,6 +39,7 @@ public class FlowLogProperties {
    */
   @JsonAdapter(ActionEnum.Adapter.class)
   public enum ActionEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     ACCEPTED("ACCEPTED"),
     
     REJECTED("REJECTED"),
@@ -66,7 +67,7 @@ public class FlowLogProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return ActionEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<ActionEnum> {
@@ -92,6 +93,7 @@ public class FlowLogProperties {
    */
   @JsonAdapter(DirectionEnum.Adapter.class)
   public enum DirectionEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     INGRESS("INGRESS"),
     
     EGRESS("EGRESS"),
@@ -119,7 +121,7 @@ public class FlowLogProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return DirectionEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<DirectionEnum> {

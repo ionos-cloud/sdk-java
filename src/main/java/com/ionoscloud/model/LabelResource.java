@@ -30,7 +30,7 @@ import java.net.URI;
 /**
  * LabelResource
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class LabelResource {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -42,6 +42,7 @@ public class LabelResource {
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     LABEL("label");
 
     private String value;
@@ -65,7 +66,7 @@ public class LabelResource {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return TypeEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<TypeEnum> {

@@ -12191,20 +12191,80 @@ paths:
         schema:
           format: int32
           type: integer
-      - description: Request status filter to fetch all the request based on a particular
-          status [QUEUED, RUNNING, DONE, FAILED]
+      - description: Request filter to fetch all requests based on a particular status
+          [QUEUED, RUNNING, DONE, FAILED]. It doesn't depend on depth query parameter
         in: query
         name: filter.status
         schema:
           type: string
-      - description: Filter all the requests after the created date
+      - description: Request filter to fetch all requests created after the specified
+          date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00
         in: query
         name: filter.createdAfter
         schema:
           type: string
-      - description: Filter all the requests before the created date
+      - description: Request filter to fetch all requests created before the specified
+          date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00
         in: query
         name: filter.createdBefore
+        schema:
+          type: string
+      - description: Response filter to select and display only the requests that
+          contains the specified createdDate. The value is case insensitive and it  depends
+          on depth query parameter that should have a value greater than 0. Date format
+          e.g. 2020-11-16T17:42:59Z
+        in: query
+        name: filter.createdDate
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified createdBy. The value is case insensitive and it depends
+          on depth query parameter that should have a value greater than 0. '
+        in: query
+        name: filter.createdBy
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified etag. The value is case insensitive and it depends
+          on depth query parameter that should have a value greater than 0. '
+        in: query
+        name: filter.etag
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified requestStatus. The value is case insensitive and
+          it depends on depth query parameter that should have a value greater than
+          0. '
+        in: query
+        name: filter.requestStatus
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified method. The value is case insensitive and it depends
+          on depth query parameter that should have a value greater than 0. '
+        in: query
+        name: filter.method
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified headers. The value is case insensitive and it depends
+          on depth query parameter that should have a value greater than 0. '
+        in: query
+        name: filter.headers
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified body. The value is case insensitive and it depends
+          on depth query parameter that should have a value greater than 0. '
+        in: query
+        name: filter.body
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified url. The value is case insensitive and it depends
+          on depth query parameter that should have a value greater than 0. '
+        in: query
+        name: filter.url
         schema:
           type: string
       - description: the first element (of the total list of elements) to include
@@ -12535,7 +12595,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UserPost'
+                $ref: '#/components/schemas/User'
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -12790,7 +12850,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UserPut'
+                $ref: '#/components/schemas/User'
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -19838,7 +19898,7 @@ paths:
       security:
       - Basic Authentication: []
       - Token Authentication: []
-      summary: Retrieve a Template
+      summary: Retrieve an available template
       tags:
       - Templates
       x-accepts: application/json
@@ -20487,11 +20547,15 @@ components:
           properties:
             nicHotUnplug: true
             discVirtioHotPlug: true
+            imageAliases:
+            - imageAliases
+            - imageAliases
             cpuHotPlug: true
             ramHotPlug: true
             discScsiHotUnplug: true
             description: 'Image/Snapshot of Ubuntu '
             discVirtioHotUnplug: true
+            cloudInit: V1
             size: 100.0
             nicHotPlug: true
             public: true
@@ -20517,11 +20581,15 @@ components:
           properties:
             nicHotUnplug: true
             discVirtioHotPlug: true
+            imageAliases:
+            - imageAliases
+            - imageAliases
             cpuHotPlug: true
             ramHotPlug: true
             discScsiHotUnplug: true
             description: 'Image/Snapshot of Ubuntu '
             discVirtioHotUnplug: true
+            cloudInit: V1
             size: 100.0
             nicHotPlug: true
             public: true
@@ -20583,11 +20651,15 @@ components:
         properties:
           nicHotUnplug: true
           discVirtioHotPlug: true
+          imageAliases:
+          - imageAliases
+          - imageAliases
           cpuHotPlug: true
           ramHotPlug: true
           discScsiHotUnplug: true
           description: 'Image/Snapshot of Ubuntu '
           discVirtioHotUnplug: true
+          cloudInit: V1
           size: 100.0
           nicHotPlug: true
           public: true
@@ -20627,11 +20699,15 @@ components:
       example:
         nicHotUnplug: true
         discVirtioHotPlug: true
+        imageAliases:
+        - imageAliases
+        - imageAliases
         cpuHotPlug: true
         ramHotPlug: true
         discScsiHotUnplug: true
         description: 'Image/Snapshot of Ubuntu '
         discVirtioHotUnplug: true
+        cloudInit: V1
         size: 100.0
         nicHotPlug: true
         public: true
@@ -20727,6 +20803,19 @@ components:
           example: true
           readOnly: true
           type: boolean
+        imageAliases:
+          description: List of image aliases mapped for this Image
+          items:
+            type: string
+          readOnly: true
+          type: array
+        cloudInit:
+          description: Cloud init compatibility
+          enum:
+          - NONE
+          - V1
+          example: V1
+          type: string
       required:
       - licenceType
       type: object
@@ -21726,11 +21815,15 @@ components:
                   properties:
                     nicHotUnplug: true
                     discVirtioHotPlug: true
+                    imageAliases:
+                    - imageAliases
+                    - imageAliases
                     cpuHotPlug: true
                     ramHotPlug: true
                     discScsiHotUnplug: true
                     description: 'Image/Snapshot of Ubuntu '
                     discVirtioHotUnplug: true
+                    cloudInit: V1
                     size: 100.0
                     nicHotPlug: true
                     public: true
@@ -21756,11 +21849,15 @@ components:
                   properties:
                     nicHotUnplug: true
                     discVirtioHotPlug: true
+                    imageAliases:
+                    - imageAliases
+                    - imageAliases
                     cpuHotPlug: true
                     ramHotPlug: true
                     discScsiHotUnplug: true
                     description: 'Image/Snapshot of Ubuntu '
                     discVirtioHotUnplug: true
+                    cloudInit: V1
                     size: 100.0
                     nicHotPlug: true
                     public: true
@@ -22171,11 +22268,15 @@ components:
                   properties:
                     nicHotUnplug: true
                     discVirtioHotPlug: true
+                    imageAliases:
+                    - imageAliases
+                    - imageAliases
                     cpuHotPlug: true
                     ramHotPlug: true
                     discScsiHotUnplug: true
                     description: 'Image/Snapshot of Ubuntu '
                     discVirtioHotUnplug: true
+                    cloudInit: V1
                     size: 100.0
                     nicHotPlug: true
                     public: true
@@ -22201,11 +22302,15 @@ components:
                   properties:
                     nicHotUnplug: true
                     discVirtioHotPlug: true
+                    imageAliases:
+                    - imageAliases
+                    - imageAliases
                     cpuHotPlug: true
                     ramHotPlug: true
                     discScsiHotUnplug: true
                     description: 'Image/Snapshot of Ubuntu '
                     discVirtioHotUnplug: true
+                    cloudInit: V1
                     size: 100.0
                     nicHotPlug: true
                     public: true
@@ -24136,9 +24241,6 @@ components:
             is part of
           example: '[SSD]'
           items:
-            enum:
-            - SSD
-            - SSD_STORAGE_ZONING
             type: string
           readOnly: true
           type: array
@@ -24542,11 +24644,15 @@ components:
                     properties:
                       nicHotUnplug: true
                       discVirtioHotPlug: true
+                      imageAliases:
+                      - imageAliases
+                      - imageAliases
                       cpuHotPlug: true
                       ramHotPlug: true
                       discScsiHotUnplug: true
                       description: 'Image/Snapshot of Ubuntu '
                       discVirtioHotUnplug: true
+                      cloudInit: V1
                       size: 100.0
                       nicHotPlug: true
                       public: true
@@ -24572,11 +24678,15 @@ components:
                     properties:
                       nicHotUnplug: true
                       discVirtioHotPlug: true
+                      imageAliases:
+                      - imageAliases
+                      - imageAliases
                       cpuHotPlug: true
                       ramHotPlug: true
                       discScsiHotUnplug: true
                       description: 'Image/Snapshot of Ubuntu '
                       discVirtioHotUnplug: true
+                      cloudInit: V1
                       size: 100.0
                       nicHotPlug: true
                       public: true
@@ -24987,11 +25097,15 @@ components:
                     properties:
                       nicHotUnplug: true
                       discVirtioHotPlug: true
+                      imageAliases:
+                      - imageAliases
+                      - imageAliases
                       cpuHotPlug: true
                       ramHotPlug: true
                       discScsiHotUnplug: true
                       description: 'Image/Snapshot of Ubuntu '
                       discVirtioHotUnplug: true
+                      cloudInit: V1
                       size: 100.0
                       nicHotPlug: true
                       public: true
@@ -25017,11 +25131,15 @@ components:
                     properties:
                       nicHotUnplug: true
                       discVirtioHotPlug: true
+                      imageAliases:
+                      - imageAliases
+                      - imageAliases
                       cpuHotPlug: true
                       ramHotPlug: true
                       discScsiHotUnplug: true
                       description: 'Image/Snapshot of Ubuntu '
                       discVirtioHotUnplug: true
+                      cloudInit: V1
                       size: 100.0
                       nicHotPlug: true
                       public: true
@@ -27336,11 +27454,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -27366,11 +27488,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -27781,11 +27907,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -27811,11 +27941,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -30091,11 +30225,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -30121,11 +30259,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -30536,11 +30678,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -30566,11 +30712,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -36747,11 +36897,15 @@ components:
             properties:
               nicHotUnplug: true
               discVirtioHotPlug: true
+              imageAliases:
+              - imageAliases
+              - imageAliases
               cpuHotPlug: true
               ramHotPlug: true
               discScsiHotUnplug: true
               description: 'Image/Snapshot of Ubuntu '
               discVirtioHotUnplug: true
+              cloudInit: V1
               size: 100.0
               nicHotPlug: true
               public: true
@@ -36777,11 +36931,15 @@ components:
             properties:
               nicHotUnplug: true
               discVirtioHotPlug: true
+              imageAliases:
+              - imageAliases
+              - imageAliases
               cpuHotPlug: true
               ramHotPlug: true
               discScsiHotUnplug: true
               description: 'Image/Snapshot of Ubuntu '
               discVirtioHotUnplug: true
+              cloudInit: V1
               size: 100.0
               nicHotPlug: true
               public: true
@@ -37288,18 +37446,19 @@ components:
           href: https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c
           type: group
           properties:
-            reserveIp: true
             createInternetAccess: true
-            createDataCenter: true
             createBackupUnit: true
             createK8sCluster: true
+            accessAndManageMonitoring: true
+            reserveIp: true
+            createDataCenter: true
+            accessAndManageCertificates: true
             accessActivityLog: true
             name: My resource
             createSnapshot: true
             s3Privilege: true
             createFlowLog: true
             createPcc: true
-            accessAndManageMonitoring: true
         - entities:
             resources:
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -37319,18 +37478,19 @@ components:
           href: https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c
           type: group
           properties:
-            reserveIp: true
             createInternetAccess: true
-            createDataCenter: true
             createBackupUnit: true
             createK8sCluster: true
+            accessAndManageMonitoring: true
+            reserveIp: true
+            createDataCenter: true
+            accessAndManageCertificates: true
             accessActivityLog: true
             name: My resource
             createSnapshot: true
             s3Privilege: true
             createFlowLog: true
             createPcc: true
-            accessAndManageMonitoring: true
       properties:
         id:
           description: The resource's unique identifier
@@ -37377,18 +37537,19 @@ components:
         href: https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c
         type: group
         properties:
-          reserveIp: true
           createInternetAccess: true
-          createDataCenter: true
           createBackupUnit: true
           createK8sCluster: true
+          accessAndManageMonitoring: true
+          reserveIp: true
+          createDataCenter: true
+          accessAndManageCertificates: true
           accessActivityLog: true
           name: My resource
           createSnapshot: true
           s3Privilege: true
           createFlowLog: true
           createPcc: true
-          accessAndManageMonitoring: true
       properties:
         id:
           description: The resource's unique identifier
@@ -37475,18 +37636,19 @@ components:
           href: https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c
           type: group
           properties:
-            reserveIp: true
             createInternetAccess: true
-            createDataCenter: true
             createBackupUnit: true
             createK8sCluster: true
+            accessAndManageMonitoring: true
+            reserveIp: true
+            createDataCenter: true
+            accessAndManageCertificates: true
             accessActivityLog: true
             name: My resource
             createSnapshot: true
             s3Privilege: true
             createFlowLog: true
             createPcc: true
-            accessAndManageMonitoring: true
         - entities:
             resources:
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -37506,18 +37668,19 @@ components:
           href: https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c
           type: group
           properties:
-            reserveIp: true
             createInternetAccess: true
-            createDataCenter: true
             createBackupUnit: true
             createK8sCluster: true
+            accessAndManageMonitoring: true
+            reserveIp: true
+            createDataCenter: true
+            accessAndManageCertificates: true
             accessActivityLog: true
             name: My resource
             createSnapshot: true
             s3Privilege: true
             createFlowLog: true
             createPcc: true
-            accessAndManageMonitoring: true
       properties:
         id:
           description: The resource's unique identifier
@@ -37954,18 +38117,19 @@ components:
               href: https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c
               type: group
               properties:
-                reserveIp: true
                 createInternetAccess: true
-                createDataCenter: true
                 createBackupUnit: true
                 createK8sCluster: true
+                accessAndManageMonitoring: true
+                reserveIp: true
+                createDataCenter: true
+                accessAndManageCertificates: true
                 accessActivityLog: true
                 name: My resource
                 createSnapshot: true
                 s3Privilege: true
                 createFlowLog: true
                 createPcc: true
-                accessAndManageMonitoring: true
             - entities:
                 resources:
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -37985,18 +38149,19 @@ components:
               href: https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c
               type: group
               properties:
-                reserveIp: true
                 createInternetAccess: true
-                createDataCenter: true
                 createBackupUnit: true
                 createK8sCluster: true
+                accessAndManageMonitoring: true
+                reserveIp: true
+                createDataCenter: true
+                accessAndManageCertificates: true
                 accessActivityLog: true
                 name: My resource
                 createSnapshot: true
                 s3Privilege: true
                 createFlowLog: true
                 createPcc: true
-                accessAndManageMonitoring: true
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         href: <RESOURCE-URI>
         type: user
@@ -38151,18 +38316,19 @@ components:
             href: https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c
             type: group
             properties:
-              reserveIp: true
               createInternetAccess: true
-              createDataCenter: true
               createBackupUnit: true
               createK8sCluster: true
+              accessAndManageMonitoring: true
+              reserveIp: true
+              createDataCenter: true
+              accessAndManageCertificates: true
               accessActivityLog: true
               name: My resource
               createSnapshot: true
               s3Privilege: true
               createFlowLog: true
               createPcc: true
-              accessAndManageMonitoring: true
           - entities:
               resources:
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -38182,18 +38348,19 @@ components:
             href: https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c
             type: group
             properties:
-              reserveIp: true
               createInternetAccess: true
-              createDataCenter: true
               createBackupUnit: true
               createK8sCluster: true
+              accessAndManageMonitoring: true
+              reserveIp: true
+              createDataCenter: true
+              accessAndManageCertificates: true
               accessActivityLog: true
               name: My resource
               createSnapshot: true
               s3Privilege: true
               createFlowLog: true
               createPcc: true
-              accessAndManageMonitoring: true
       properties:
         owns:
           $ref: '#/components/schemas/ResourcesUsers'
@@ -38235,18 +38402,19 @@ components:
       type: object
     GroupProperties:
       example:
-        reserveIp: true
         createInternetAccess: true
-        createDataCenter: true
         createBackupUnit: true
         createK8sCluster: true
+        accessAndManageMonitoring: true
+        reserveIp: true
+        createDataCenter: true
+        accessAndManageCertificates: true
         accessActivityLog: true
         name: My resource
         createSnapshot: true
         s3Privilege: true
         createFlowLog: true
         createPcc: true
-        accessAndManageMonitoring: true
       properties:
         name:
           description: A name of that resource
@@ -38286,6 +38454,9 @@ components:
           description: Privilege for a group to access and manage monitoring related
             functionality (access metrics, CRUD on alarms, alarm-actions etc) using
             Monotoring-as-a-Service (MaaS).
+          type: boolean
+        accessAndManageCertificates:
+          description: Privilege for a group to access and manage certificates.
           type: boolean
       type: object
     GroupShare:
@@ -38395,11 +38566,15 @@ components:
           properties:
             nicHotUnplug: true
             discVirtioHotPlug: true
+            imageAliases:
+            - imageAliases
+            - imageAliases
             cpuHotPlug: true
             ramHotPlug: true
             discScsiHotUnplug: true
             description: 'Image/Snapshot of Ubuntu '
             discVirtioHotUnplug: true
+            cloudInit: V1
             size: 100.0
             nicHotPlug: true
             public: true
@@ -38425,11 +38600,15 @@ components:
           properties:
             nicHotUnplug: true
             discVirtioHotPlug: true
+            imageAliases:
+            - imageAliases
+            - imageAliases
             cpuHotPlug: true
             ramHotPlug: true
             discScsiHotUnplug: true
             description: 'Image/Snapshot of Ubuntu '
             discVirtioHotUnplug: true
+            cloudInit: V1
             size: 100.0
             nicHotPlug: true
             public: true
@@ -38487,7 +38666,8 @@ components:
           ipConsumers: '{ "ipConsumers": [ { "ip" : "192.18.2.11", "mac" : "02:01:3f:52:6e:57",
             "nicId" : "0e8ee463-1174-46f2-87ba-a5c79c14d8e5", "serverId" : "e6a3466f-8d6e-4cb6-8001-f4e245f222b7",
             "serverName" : "Unnamed Server", "datacenterId" : "6e54a9ec-aace-4176-8ee4-1c3a704fccfc",
-            "datacenterName" : "IpConsumerDC"} ] }'
+            "datacenterName" : "IpConsumerDC", "k8sNodePoolUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc12",
+            "k8sClusterUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc23"} ] }'
       properties:
         id:
           description: The resource's unique identifier
@@ -38522,7 +38702,8 @@ components:
         ipConsumers: '{ "ipConsumers": [ { "ip" : "192.18.2.11", "mac" : "02:01:3f:52:6e:57",
           "nicId" : "0e8ee463-1174-46f2-87ba-a5c79c14d8e5", "serverId" : "e6a3466f-8d6e-4cb6-8001-f4e245f222b7",
           "serverName" : "Unnamed Server", "datacenterId" : "6e54a9ec-aace-4176-8ee4-1c3a704fccfc",
-          "datacenterName" : "IpConsumerDC"} ] }'
+          "datacenterName" : "IpConsumerDC", "k8sNodePoolUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc12",
+          "k8sClusterUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc23"} ] }'
       properties:
         ips:
           description: A collection of IPs associated with the IP Block
@@ -38551,7 +38732,8 @@ components:
           example: '{ "ipConsumers": [ { "ip" : "192.18.2.11", "mac" : "02:01:3f:52:6e:57",
             "nicId" : "0e8ee463-1174-46f2-87ba-a5c79c14d8e5", "serverId" : "e6a3466f-8d6e-4cb6-8001-f4e245f222b7",
             "serverName" : "Unnamed Server", "datacenterId" : "6e54a9ec-aace-4176-8ee4-1c3a704fccfc",
-            "datacenterName" : "IpConsumerDC"} ] }'
+            "datacenterName" : "IpConsumerDC", "k8sNodePoolUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc12",
+            "k8sClusterUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc23"} ] }'
           items:
             $ref: '#/components/schemas/IpConsumer'
           readOnly: true
@@ -38586,7 +38768,8 @@ components:
             ipConsumers: '{ "ipConsumers": [ { "ip" : "192.18.2.11", "mac" : "02:01:3f:52:6e:57",
               "nicId" : "0e8ee463-1174-46f2-87ba-a5c79c14d8e5", "serverId" : "e6a3466f-8d6e-4cb6-8001-f4e245f222b7",
               "serverName" : "Unnamed Server", "datacenterId" : "6e54a9ec-aace-4176-8ee4-1c3a704fccfc",
-              "datacenterName" : "IpConsumerDC"} ] }'
+              "datacenterName" : "IpConsumerDC", "k8sNodePoolUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc12",
+              "k8sClusterUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc23"} ] }'
         - metadata:
             createdByUserId: user@example.com
             createdDate: 2015-12-04T14:34:09.809Z
@@ -38607,7 +38790,8 @@ components:
             ipConsumers: '{ "ipConsumers": [ { "ip" : "192.18.2.11", "mac" : "02:01:3f:52:6e:57",
               "nicId" : "0e8ee463-1174-46f2-87ba-a5c79c14d8e5", "serverId" : "e6a3466f-8d6e-4cb6-8001-f4e245f222b7",
               "serverName" : "Unnamed Server", "datacenterId" : "6e54a9ec-aace-4176-8ee4-1c3a704fccfc",
-              "datacenterName" : "IpConsumerDC"} ] }'
+              "datacenterName" : "IpConsumerDC", "k8sNodePoolUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc12",
+              "k8sClusterUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc23"} ] }'
       properties:
         id:
           description: The resource's unique identifier
@@ -38688,9 +38872,6 @@ components:
           description: List of features supported by the location
           example: '[SSD]'
           items:
-            enum:
-            - SSD
-            - SSD_STORAGE_ZONING
             type: string
           readOnly: true
           type: array
@@ -38909,6 +39090,10 @@ components:
         datacenterId:
           type: string
         datacenterName:
+          type: string
+        k8sNodePoolUuid:
+          type: string
+        k8sClusterUuid:
           type: string
       type: object
     PrivateCrossConnectProperties:
@@ -39567,11 +39752,15 @@ components:
               properties:
                 nicHotUnplug: true
                 discVirtioHotPlug: true
+                imageAliases:
+                - imageAliases
+                - imageAliases
                 cpuHotPlug: true
                 ramHotPlug: true
                 discScsiHotUnplug: true
                 description: 'Image/Snapshot of Ubuntu '
                 discVirtioHotUnplug: true
+                cloudInit: V1
                 size: 100.0
                 nicHotPlug: true
                 public: true
@@ -39597,11 +39786,15 @@ components:
               properties:
                 nicHotUnplug: true
                 discVirtioHotPlug: true
+                imageAliases:
+                - imageAliases
+                - imageAliases
                 cpuHotPlug: true
                 ramHotPlug: true
                 discScsiHotUnplug: true
                 description: 'Image/Snapshot of Ubuntu '
                 discVirtioHotUnplug: true
+                cloudInit: V1
                 size: 100.0
                 nicHotPlug: true
                 public: true
@@ -40051,11 +40244,15 @@ components:
                 properties:
                   nicHotUnplug: true
                   discVirtioHotPlug: true
+                  imageAliases:
+                  - imageAliases
+                  - imageAliases
                   cpuHotPlug: true
                   ramHotPlug: true
                   discScsiHotUnplug: true
                   description: 'Image/Snapshot of Ubuntu '
                   discVirtioHotUnplug: true
+                  cloudInit: V1
                   size: 100.0
                   nicHotPlug: true
                   public: true
@@ -40081,11 +40278,15 @@ components:
                 properties:
                   nicHotUnplug: true
                   discVirtioHotPlug: true
+                  imageAliases:
+                  - imageAliases
+                  - imageAliases
                   cpuHotPlug: true
                   ramHotPlug: true
                   discScsiHotUnplug: true
                   description: 'Image/Snapshot of Ubuntu '
                   discVirtioHotUnplug: true
+                  cloudInit: V1
                   size: 100.0
                   nicHotPlug: true
                   public: true
@@ -40496,11 +40697,15 @@ components:
                 properties:
                   nicHotUnplug: true
                   discVirtioHotPlug: true
+                  imageAliases:
+                  - imageAliases
+                  - imageAliases
                   cpuHotPlug: true
                   ramHotPlug: true
                   discScsiHotUnplug: true
                   description: 'Image/Snapshot of Ubuntu '
                   discVirtioHotUnplug: true
+                  cloudInit: V1
                   size: 100.0
                   nicHotPlug: true
                   public: true
@@ -40526,11 +40731,15 @@ components:
                 properties:
                   nicHotUnplug: true
                   discVirtioHotPlug: true
+                  imageAliases:
+                  - imageAliases
+                  - imageAliases
                   cpuHotPlug: true
                   ramHotPlug: true
                   discScsiHotUnplug: true
                   description: 'Image/Snapshot of Ubuntu '
                   discVirtioHotUnplug: true
+                  cloudInit: V1
                   size: 100.0
                   nicHotPlug: true
                   public: true
@@ -41266,18 +41475,19 @@ components:
                 href: https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 type: group
                 properties:
-                  reserveIp: true
                   createInternetAccess: true
-                  createDataCenter: true
                   createBackupUnit: true
                   createK8sCluster: true
+                  accessAndManageMonitoring: true
+                  reserveIp: true
+                  createDataCenter: true
+                  accessAndManageCertificates: true
                   accessActivityLog: true
                   name: My resource
                   createSnapshot: true
                   s3Privilege: true
                   createFlowLog: true
                   createPcc: true
-                  accessAndManageMonitoring: true
               - entities:
                   resources:
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -41297,18 +41507,19 @@ components:
                 href: https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 type: group
                 properties:
-                  reserveIp: true
                   createInternetAccess: true
-                  createDataCenter: true
                   createBackupUnit: true
                   createK8sCluster: true
+                  accessAndManageMonitoring: true
+                  reserveIp: true
+                  createDataCenter: true
+                  accessAndManageCertificates: true
                   accessActivityLog: true
                   name: My resource
                   createSnapshot: true
                   s3Privilege: true
                   createFlowLog: true
                   createPcc: true
-                  accessAndManageMonitoring: true
           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
           href: <RESOURCE-URI>
           type: user
@@ -41401,18 +41612,19 @@ components:
                 href: https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 type: group
                 properties:
-                  reserveIp: true
                   createInternetAccess: true
-                  createDataCenter: true
                   createBackupUnit: true
                   createK8sCluster: true
+                  accessAndManageMonitoring: true
+                  reserveIp: true
+                  createDataCenter: true
+                  accessAndManageCertificates: true
                   accessActivityLog: true
                   name: My resource
                   createSnapshot: true
                   s3Privilege: true
                   createFlowLog: true
                   createPcc: true
-                  accessAndManageMonitoring: true
               - entities:
                   resources:
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -41432,18 +41644,19 @@ components:
                 href: https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 type: group
                 properties:
-                  reserveIp: true
                   createInternetAccess: true
-                  createDataCenter: true
                   createBackupUnit: true
                   createK8sCluster: true
+                  accessAndManageMonitoring: true
+                  reserveIp: true
+                  createDataCenter: true
+                  accessAndManageCertificates: true
                   accessActivityLog: true
                   name: My resource
                   createSnapshot: true
                   s3Privilege: true
                   createFlowLog: true
                   createPcc: true
-                  accessAndManageMonitoring: true
           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
           href: <RESOURCE-URI>
           type: user

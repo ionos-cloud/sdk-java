@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * GroupProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class GroupProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -77,6 +77,10 @@ public class GroupProperties {
   public static final String SERIALIZED_NAME_ACCESS_AND_MANAGE_MONITORING = "accessAndManageMonitoring";
   @SerializedName(SERIALIZED_NAME_ACCESS_AND_MANAGE_MONITORING)
   private Boolean accessAndManageMonitoring;
+
+  public static final String SERIALIZED_NAME_ACCESS_AND_MANAGE_CERTIFICATES = "accessAndManageCertificates";
+  @SerializedName(SERIALIZED_NAME_ACCESS_AND_MANAGE_CERTIFICATES)
+  private Boolean accessAndManageCertificates;
 
 
   public GroupProperties name(String name) {
@@ -355,6 +359,29 @@ public class GroupProperties {
   }
 
 
+  public GroupProperties accessAndManageCertificates(Boolean accessAndManageCertificates) {
+    
+    this.accessAndManageCertificates = accessAndManageCertificates;
+    return this;
+  }
+
+   /**
+   * Privilege for a group to access and manage certificates.
+   * @return accessAndManageCertificates
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Privilege for a group to access and manage certificates.")
+
+  public Boolean getAccessAndManageCertificates() {
+    return accessAndManageCertificates;
+  }
+
+
+  public void setAccessAndManageCertificates(Boolean accessAndManageCertificates) {
+    this.accessAndManageCertificates = accessAndManageCertificates;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -364,7 +391,7 @@ public class GroupProperties {
       return false;
     }
     GroupProperties groupProperties = (GroupProperties) o;
-    return Objects.equals(this.name, groupProperties.name) && Objects.equals(this.createDataCenter, groupProperties.createDataCenter) && Objects.equals(this.createSnapshot, groupProperties.createSnapshot) && Objects.equals(this.reserveIp, groupProperties.reserveIp) && Objects.equals(this.accessActivityLog, groupProperties.accessActivityLog) && Objects.equals(this.createPcc, groupProperties.createPcc) && Objects.equals(this.s3Privilege, groupProperties.s3Privilege) && Objects.equals(this.createBackupUnit, groupProperties.createBackupUnit) && Objects.equals(this.createInternetAccess, groupProperties.createInternetAccess) && Objects.equals(this.createK8sCluster, groupProperties.createK8sCluster) && Objects.equals(this.createFlowLog, groupProperties.createFlowLog) && Objects.equals(this.accessAndManageMonitoring, groupProperties.accessAndManageMonitoring);
+    return Objects.equals(this.name, groupProperties.name) && Objects.equals(this.createDataCenter, groupProperties.createDataCenter) && Objects.equals(this.createSnapshot, groupProperties.createSnapshot) && Objects.equals(this.reserveIp, groupProperties.reserveIp) && Objects.equals(this.accessActivityLog, groupProperties.accessActivityLog) && Objects.equals(this.createPcc, groupProperties.createPcc) && Objects.equals(this.s3Privilege, groupProperties.s3Privilege) && Objects.equals(this.createBackupUnit, groupProperties.createBackupUnit) && Objects.equals(this.createInternetAccess, groupProperties.createInternetAccess) && Objects.equals(this.createK8sCluster, groupProperties.createK8sCluster) && Objects.equals(this.createFlowLog, groupProperties.createFlowLog) && Objects.equals(this.accessAndManageMonitoring, groupProperties.accessAndManageMonitoring) && Objects.equals(this.accessAndManageCertificates, groupProperties.accessAndManageCertificates);
   }
 
 
@@ -386,6 +413,7 @@ public class GroupProperties {
     sb.append("    createK8sCluster: ").append(toIndentedString(createK8sCluster)).append("\n");
     sb.append("    createFlowLog: ").append(toIndentedString(createFlowLog)).append("\n");
     sb.append("    accessAndManageMonitoring: ").append(toIndentedString(accessAndManageMonitoring)).append("\n");
+    sb.append("    accessAndManageCertificates: ").append(toIndentedString(accessAndManageCertificates)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -484,7 +484,7 @@ public class UserManagementApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        UserPost response = api.umUsersPost(user, pretty, depth, xContractNumber);
+        User response = api.umUsersPost(user, pretty, depth, xContractNumber);
 
         // TODO: test validations
     }
@@ -504,7 +504,7 @@ public class UserManagementApiTest {
         Boolean pretty = null;
         Integer depth = null;
         Integer xContractNumber = null;
-        UserPut response = api.umUsersPut(userId, user, pretty, depth, xContractNumber);
+        User response = api.umUsersPut(userId, user, pretty, depth, xContractNumber);
 
         // TODO: test validations
     }

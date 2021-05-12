@@ -22,6 +22,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -175,6 +177,22 @@ public class ImagePropertiesTest {
     @Test
     public void _publicTest() {
         // TODO: test _public
+    }
+
+    /**
+     * Test the property 'imageAliases'
+     */
+    @Test
+    public void imageAliasesTest() {
+        // TODO: test imageAliases
+    }
+
+    /**
+     * Test the property 'cloudInit'
+     */
+    @Test
+    public void cloudInitTest() {
+        // TODO: test cloudInit
     }
 
 }

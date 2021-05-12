@@ -24,6 +24,9 @@ build
 .openapi-generator-ignore
 .openapi-generator
 .travis.yml
+.settings
+.classpath
+.project
 build.sbt
 gradlew*
 gradle

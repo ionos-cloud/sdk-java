@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * NetworkLoadBalancerForwardingRuleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRuleProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -43,6 +43,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
    */
   @JsonAdapter(AlgorithmEnum.Adapter.class)
   public enum AlgorithmEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     ROUND_ROBIN("ROUND_ROBIN"),
     
     LEAST_CONNECTION("LEAST_CONNECTION"),
@@ -72,7 +73,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return AlgorithmEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<AlgorithmEnum> {
@@ -98,6 +99,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
    */
   @JsonAdapter(ProtocolEnum.Adapter.class)
   public enum ProtocolEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     TCP("TCP");
 
     private String value;
@@ -121,7 +123,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return ProtocolEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<ProtocolEnum> {

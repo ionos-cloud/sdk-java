@@ -136,4 +136,12 @@ public class GroupPropertiesTest {
         // TODO: test accessAndManageMonitoring
     }
 
+    /**
+     * Test the property 'accessAndManageCertificates'
+     */
+    @Test
+    public void accessAndManageCertificatesTest() {
+        // TODO: test accessAndManageCertificates
+    }
+
 }

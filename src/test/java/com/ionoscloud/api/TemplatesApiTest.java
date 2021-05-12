@@ -35,7 +35,7 @@ public class TemplatesApiTest {
 
     
     /**
-     * Retrieve a Template
+     * Retrieve an available template
      *
      * Retrieves the attributes of a given template.
      *

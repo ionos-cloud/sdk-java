@@ -70,9 +70,17 @@ public class RequestsApiTest {
         String filterStatus = null;
         String filterCreatedAfter = null;
         String filterCreatedBefore = null;
+        String filterCreatedDate = null;
+        String filterCreatedBy = null;
+        String filterEtag = null;
+        String filterRequestStatus = null;
+        String filterMethod = null;
+        String filterHeaders = null;
+        String filterBody = null;
+        String filterUrl = null;
         Integer offset = null;
         Integer limit = null;
-        Requests response = api.requestsGet(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, offset, limit);
+        Requests response = api.requestsGet(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterCreatedDate, filterCreatedBy, filterEtag, filterRequestStatus, filterMethod, filterHeaders, filterBody, filterUrl, offset, limit);
 
         // TODO: test validations
     }

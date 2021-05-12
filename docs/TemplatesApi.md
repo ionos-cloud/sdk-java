@@ -4,7 +4,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**templatesFindById**](TemplatesApi.md#templatesfindbyid) | **GET** /templates/{templateId} | Retrieve a Template |
+| [**templatesFindById**](TemplatesApi.md#templatesfindbyid) | **GET** /templates/{templateId} | Retrieve an available template |
 | [**templatesGet**](TemplatesApi.md#templatesget) | **GET** /templates | List Templates |
 
 
@@ -12,7 +12,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 # **templatesFindById**
 > Template templatesFindById(templateId, depth)
 
-Retrieve a Template
+Retrieve an available template
 
 Retrieves the attributes of a given template.
 

@@ -24,11 +24,13 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * ImageProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class ImageProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -92,6 +94,7 @@ public class ImageProperties {
    */
   @JsonAdapter(LicenceTypeEnum.Adapter.class)
   public enum LicenceTypeEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     UNKNOWN("UNKNOWN"),
     
     WINDOWS("WINDOWS"),
@@ -123,7 +126,7 @@ public class ImageProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return LicenceTypeEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<LicenceTypeEnum> {
@@ -149,6 +152,7 @@ public class ImageProperties {
    */
   @JsonAdapter(ImageTypeEnum.Adapter.class)
   public enum ImageTypeEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     HDD("HDD"),
     
     CDROM("CDROM");
@@ -174,7 +178,7 @@ public class ImageProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return ImageTypeEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<ImageTypeEnum> {
@@ -198,6 +202,62 @@ public class ImageProperties {
   public static final String SERIALIZED_NAME_PUBLIC = "public";
   @SerializedName(SERIALIZED_NAME_PUBLIC)
   private Boolean _public;
+
+  public static final String SERIALIZED_NAME_IMAGE_ALIASES = "imageAliases";
+  @SerializedName(SERIALIZED_NAME_IMAGE_ALIASES)
+  private List<String> imageAliases = null;
+
+  /**
+   * Cloud init compatibility
+   */
+  @JsonAdapter(CloudInitEnum.Adapter.class)
+  public enum CloudInitEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
+    NONE("NONE"),
+    
+    V1("V1");
+
+    private String value;
+
+    CloudInitEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static CloudInitEnum fromValue(String value) {
+      for (CloudInitEnum b : CloudInitEnum.values()) {
+        if (b.value.equals(value) || value.equals("collection")) {
+          return b;
+        }
+      }
+      return CloudInitEnum.UNKNOWN_VALUE;
+    }
+
+    public static class Adapter extends TypeAdapter<CloudInitEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final CloudInitEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public CloudInitEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return CloudInitEnum.fromValue(value);
+      }
+    }
+  }
+
+  public static final String SERIALIZED_NAME_CLOUD_INIT = "cloudInit";
+  @SerializedName(SERIALIZED_NAME_CLOUD_INIT)
+  private CloudInitEnum cloudInit;
 
 
   public ImageProperties name(String name) {
@@ -554,6 +614,43 @@ public class ImageProperties {
 
 
 
+   /**
+   * List of image aliases mapped for this Image
+   * @return imageAliases
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "List of image aliases mapped for this Image")
+
+  public List<String> getImageAliases() {
+    return imageAliases;
+  }
+
+
+
+
+  public ImageProperties cloudInit(CloudInitEnum cloudInit) {
+    
+    this.cloudInit = cloudInit;
+    return this;
+  }
+
+   /**
+   * Cloud init compatibility
+   * @return cloudInit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "V1", value = "Cloud init compatibility")
+
+  public CloudInitEnum getCloudInit() {
+    return cloudInit;
+  }
+
+
+  public void setCloudInit(CloudInitEnum cloudInit) {
+    this.cloudInit = cloudInit;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -563,7 +660,7 @@ public class ImageProperties {
       return false;
     }
     ImageProperties imageProperties = (ImageProperties) o;
-    return Objects.equals(this.name, imageProperties.name) && Objects.equals(this.description, imageProperties.description) && Objects.equals(this.location, imageProperties.location) && Objects.equals(this.size, imageProperties.size) && Objects.equals(this.cpuHotPlug, imageProperties.cpuHotPlug) && Objects.equals(this.cpuHotUnplug, imageProperties.cpuHotUnplug) && Objects.equals(this.ramHotPlug, imageProperties.ramHotPlug) && Objects.equals(this.ramHotUnplug, imageProperties.ramHotUnplug) && Objects.equals(this.nicHotPlug, imageProperties.nicHotPlug) && Objects.equals(this.nicHotUnplug, imageProperties.nicHotUnplug) && Objects.equals(this.discVirtioHotPlug, imageProperties.discVirtioHotPlug) && Objects.equals(this.discVirtioHotUnplug, imageProperties.discVirtioHotUnplug) && Objects.equals(this.discScsiHotPlug, imageProperties.discScsiHotPlug) && Objects.equals(this.discScsiHotUnplug, imageProperties.discScsiHotUnplug) && Objects.equals(this.licenceType, imageProperties.licenceType) && Objects.equals(this.imageType, imageProperties.imageType) && Objects.equals(this._public, imageProperties._public);
+    return Objects.equals(this.name, imageProperties.name) && Objects.equals(this.description, imageProperties.description) && Objects.equals(this.location, imageProperties.location) && Objects.equals(this.size, imageProperties.size) && Objects.equals(this.cpuHotPlug, imageProperties.cpuHotPlug) && Objects.equals(this.cpuHotUnplug, imageProperties.cpuHotUnplug) && Objects.equals(this.ramHotPlug, imageProperties.ramHotPlug) && Objects.equals(this.ramHotUnplug, imageProperties.ramHotUnplug) && Objects.equals(this.nicHotPlug, imageProperties.nicHotPlug) && Objects.equals(this.nicHotUnplug, imageProperties.nicHotUnplug) && Objects.equals(this.discVirtioHotPlug, imageProperties.discVirtioHotPlug) && Objects.equals(this.discVirtioHotUnplug, imageProperties.discVirtioHotUnplug) && Objects.equals(this.discScsiHotPlug, imageProperties.discScsiHotPlug) && Objects.equals(this.discScsiHotUnplug, imageProperties.discScsiHotUnplug) && Objects.equals(this.licenceType, imageProperties.licenceType) && Objects.equals(this.imageType, imageProperties.imageType) && Objects.equals(this._public, imageProperties._public) && Objects.equals(this.imageAliases, imageProperties.imageAliases) && Objects.equals(this.cloudInit, imageProperties.cloudInit);
   }
 
 
@@ -590,6 +687,8 @@ public class ImageProperties {
     sb.append("    licenceType: ").append(toIndentedString(licenceType)).append("\n");
     sb.append("    imageType: ").append(toIndentedString(imageType)).append("\n");
     sb.append("    _public: ").append(toIndentedString(_public)).append("\n");
+    sb.append("    imageAliases: ").append(toIndentedString(imageAliases)).append("\n");
+    sb.append("    cloudInit: ").append(toIndentedString(cloudInit)).append("\n");
     sb.append("}");
     return sb.toString();
   }

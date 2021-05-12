@@ -96,4 +96,20 @@ public class IpConsumerTest {
         // TODO: test datacenterName
     }
 
+    /**
+     * Test the property 'k8sNodePoolUuid'
+     */
+    @Test
+    public void k8sNodePoolUuidTest() {
+        // TODO: test k8sNodePoolUuid
+    }
+
+    /**
+     * Test the property 'k8sClusterUuid'
+     */
+    @Test
+    public void k8sClusterUuidTest() {
+        // TODO: test k8sClusterUuid
+    }
+
 }

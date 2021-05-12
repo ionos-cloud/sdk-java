@@ -1474,7 +1474,7 @@ public class Example {
 
 <a name="umUsersPost"></a>
 # **umUsersPost**
-> UserPost umUsersPost(user, pretty, depth, xContractNumber)
+> User umUsersPost(user, pretty, depth, xContractNumber)
 
 Create a user
 
@@ -1506,7 +1506,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      UserPost result = apiInstance.umUsersPost(user, pretty, depth, xContractNumber);
+      User result = apiInstance.umUsersPost(user, pretty, depth, xContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersPost");
@@ -1530,7 +1530,7 @@ public class Example {
 
 ### Return type
 
-[**UserPost**](UserPost.md)
+[**User**](User.md)
 
 ### HTTP request headers
 
@@ -1539,7 +1539,7 @@ public class Example {
 
 <a name="umUsersPut"></a>
 # **umUsersPut**
-> UserPut umUsersPut(userId, user, pretty, depth, xContractNumber)
+> User umUsersPut(userId, user, pretty, depth, xContractNumber)
 
 Modify a user
 
@@ -1572,7 +1572,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     try {
-      UserPut result = apiInstance.umUsersPut(userId, user, pretty, depth, xContractNumber);
+      User result = apiInstance.umUsersPut(userId, user, pretty, depth, xContractNumber);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersPut");
@@ -1597,7 +1597,7 @@ public class Example {
 
 ### Return type
 
-[**UserPut**](UserPut.md)
+[**User**](User.md)
 
 ### HTTP request headers
 

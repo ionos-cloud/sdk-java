@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * FirewallruleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-03-15T10:46:23.668Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
 
 public class FirewallruleProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -39,6 +39,7 @@ public class FirewallruleProperties {
    */
   @JsonAdapter(ProtocolEnum.Adapter.class)
   public enum ProtocolEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     TCP("TCP"),
     
     UDP("UDP"),
@@ -68,7 +69,7 @@ public class FirewallruleProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return ProtocolEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<ProtocolEnum> {
@@ -94,6 +95,7 @@ public class FirewallruleProperties {
    */
   @JsonAdapter(SourceMacEnum.Adapter.class)
   public enum SourceMacEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     _VALID_MAC_ADDRESS_("@Valid MAC address@"),
     
     NULL("null");
@@ -119,7 +121,7 @@ public class FirewallruleProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return SourceMacEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<SourceMacEnum> {
@@ -145,6 +147,7 @@ public class FirewallruleProperties {
    */
   @JsonAdapter(SourceIpEnum.Adapter.class)
   public enum SourceIpEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     _VALID_IP_ADDRESS_("@Valid IP address@"),
     
     NULL("null");
@@ -170,7 +173,7 @@ public class FirewallruleProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return SourceIpEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<SourceIpEnum> {
@@ -196,6 +199,7 @@ public class FirewallruleProperties {
    */
   @JsonAdapter(TargetIpEnum.Adapter.class)
   public enum TargetIpEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     _VALID_IP_ADDRESS_("@Valid IP address@"),
     
     NULL("null");
@@ -221,7 +225,7 @@ public class FirewallruleProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return TargetIpEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<TargetIpEnum> {
@@ -263,6 +267,7 @@ public class FirewallruleProperties {
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
+    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     INGRESS("INGRESS"),
     
     EGRESS("EGRESS");
@@ -288,7 +293,7 @@ public class FirewallruleProperties {
           return b;
         }
       }
-      throw new IllegalArgumentException("Unexpected value '" + value + "'");
+      return TypeEnum.UNKNOWN_VALUE;
     }
 
     public static class Adapter extends TypeAdapter<TypeEnum> {
