@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * NicProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class NicProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -96,6 +96,9 @@ public class NicProperties {
   }
 
 
+  public void setMac(String mac) {
+    this.mac = mac;
+  }
 
 
   public NicProperties ips(List<String> ips) {

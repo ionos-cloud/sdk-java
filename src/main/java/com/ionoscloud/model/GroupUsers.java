@@ -33,7 +33,7 @@ import java.util.List;
  * collection of groups a user is member of
  */
 @ApiModel(description = "collection of groups a user is member of")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class GroupUsers {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -65,6 +65,9 @@ public class GroupUsers {
   }
 
 
+  public void setId(String id) {
+    this.id = id;
+  }
 
 
   public GroupUsers type(Type type) {
@@ -102,6 +105,9 @@ public class GroupUsers {
   }
 
 
+  public void setHref(URI href) {
+    this.href = href;
+  }
 
 
    /**
@@ -116,6 +122,9 @@ public class GroupUsers {
   }
 
 
+  public void setItems(List<Group> items) {
+    this.items = items;
+  }
 
 
   @Override

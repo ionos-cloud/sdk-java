@@ -31,7 +31,7 @@ import java.net.URI;
 /**
  * S3Key
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class S3Key {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -67,6 +67,9 @@ public class S3Key {
   }
 
 
+  public void setId(String id) {
+    this.id = id;
+  }
 
 
   public S3Key type(Type type) {
@@ -104,6 +107,9 @@ public class S3Key {
   }
 
 
+  public void setHref(URI href) {
+    this.href = href;
+  }
 
 
   public S3Key metadata(S3KeyMetadata metadata) {

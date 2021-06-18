@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * VolumeProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class VolumeProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -542,6 +542,9 @@ public class VolumeProperties {
   }
 
 
+  public void setLicenceType(LicenceTypeEnum licenceType) {
+    this.licenceType = licenceType;
+  }
 
 
   public VolumeProperties cpuHotPlug(Boolean cpuHotPlug) {
@@ -694,6 +697,9 @@ public class VolumeProperties {
   }
 
 
+  public void setDeviceNumber(Long deviceNumber) {
+    this.deviceNumber = deviceNumber;
+  }
 
 
   public VolumeProperties backupunitId(String backupunitId) {

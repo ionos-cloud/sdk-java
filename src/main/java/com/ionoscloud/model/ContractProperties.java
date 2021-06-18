@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * ContractProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class ContractProperties {
   public static final String SERIALIZED_NAME_CONTRACT_NUMBER = "contractNumber";
@@ -64,6 +64,9 @@ public class ContractProperties {
   }
 
 
+  public void setContractNumber(Long contractNumber) {
+    this.contractNumber = contractNumber;
+  }
 
 
    /**
@@ -78,6 +81,9 @@ public class ContractProperties {
   }
 
 
+  public void setOwner(String owner) {
+    this.owner = owner;
+  }
 
 
    /**
@@ -92,6 +98,9 @@ public class ContractProperties {
   }
 
 
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
 
    /**
@@ -106,6 +115,9 @@ public class ContractProperties {
   }
 
 
+  public void setRegDomain(String regDomain) {
+    this.regDomain = regDomain;
+  }
 
 
   public ContractProperties resourceLimits(ResourceLimits resourceLimits) {

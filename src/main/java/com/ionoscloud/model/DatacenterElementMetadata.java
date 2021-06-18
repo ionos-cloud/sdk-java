@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * DatacenterElementMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class DatacenterElementMetadata {
   public static final String SERIALIZED_NAME_ETAG = "etag";
@@ -148,6 +148,9 @@ public class DatacenterElementMetadata {
   }
 
 
+  public void setEtag(String etag) {
+    this.etag = etag;
+  }
 
 
    /**
@@ -162,6 +165,9 @@ public class DatacenterElementMetadata {
   }
 
 
+  public void setCreatedDate(OffsetDateTime createdDate) {
+    this.createdDate = createdDate;
+  }
 
 
    /**
@@ -176,6 +182,9 @@ public class DatacenterElementMetadata {
   }
 
 
+  public void setCreatedBy(String createdBy) {
+    this.createdBy = createdBy;
+  }
 
 
    /**
@@ -190,6 +199,9 @@ public class DatacenterElementMetadata {
   }
 
 
+  public void setCreatedByUserId(String createdByUserId) {
+    this.createdByUserId = createdByUserId;
+  }
 
 
    /**
@@ -204,6 +216,9 @@ public class DatacenterElementMetadata {
   }
 
 
+  public void setLastModifiedDate(OffsetDateTime lastModifiedDate) {
+    this.lastModifiedDate = lastModifiedDate;
+  }
 
 
    /**
@@ -218,6 +233,9 @@ public class DatacenterElementMetadata {
   }
 
 
+  public void setLastModifiedBy(String lastModifiedBy) {
+    this.lastModifiedBy = lastModifiedBy;
+  }
 
 
    /**
@@ -232,6 +250,9 @@ public class DatacenterElementMetadata {
   }
 
 
+  public void setLastModifiedByUserId(String lastModifiedByUserId) {
+    this.lastModifiedByUserId = lastModifiedByUserId;
+  }
 
 
    /**
@@ -246,6 +267,9 @@ public class DatacenterElementMetadata {
   }
 
 
+  public void setState(StateEnum state) {
+    this.state = state;
+  }
 
 
   @Override

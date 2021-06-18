@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 /**
  * SnapshotProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class SnapshotProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -208,6 +208,9 @@ public class SnapshotProperties {
   }
 
 
+  public void setLocation(String location) {
+    this.location = location;
+  }
 
 
    /**
@@ -222,6 +225,9 @@ public class SnapshotProperties {
   }
 
 
+  public void setSize(BigDecimal size) {
+    this.size = size;
+  }
 
 
   public SnapshotProperties secAuthProtection(Boolean secAuthProtection) {

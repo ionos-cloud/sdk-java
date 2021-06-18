@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * Volumes
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class Volumes {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -78,6 +78,9 @@ public class Volumes {
   }
 
 
+  public void setId(String id) {
+    this.id = id;
+  }
 
 
   public Volumes type(Type type) {
@@ -115,6 +118,9 @@ public class Volumes {
   }
 
 
+  public void setHref(URI href) {
+    this.href = href;
+  }
 
 
    /**
@@ -129,6 +135,9 @@ public class Volumes {
   }
 
 
+  public void setItems(List<Volume> items) {
+    this.items = items;
+  }
 
 
   public Volumes offset(BigDecimal offset) {

@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * UserMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class UserMetadata {
   public static final String SERIALIZED_NAME_ETAG = "etag";
@@ -56,6 +56,9 @@ public class UserMetadata {
   }
 
 
+  public void setEtag(String etag) {
+    this.etag = etag;
+  }
 
 
    /**
@@ -70,6 +73,9 @@ public class UserMetadata {
   }
 
 
+  public void setCreatedDate(OffsetDateTime createdDate) {
+    this.createdDate = createdDate;
+  }
 
 
    /**
@@ -84,6 +90,9 @@ public class UserMetadata {
   }
 
 
+  public void setLastLogin(OffsetDateTime lastLogin) {
+    this.lastLogin = lastLogin;
+  }
 
 
   @Override

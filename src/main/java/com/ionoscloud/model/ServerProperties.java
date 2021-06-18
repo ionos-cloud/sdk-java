@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * ServerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class ServerProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -274,6 +274,9 @@ public class ServerProperties {
   }
 
 
+  public void setVmState(VmStateEnum vmState) {
+    this.vmState = vmState;
+  }
 
 
   public ServerProperties bootCdrom(ResourceReference bootCdrom) {

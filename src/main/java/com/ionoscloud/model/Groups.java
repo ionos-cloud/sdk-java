@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * Groups
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class Groups {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -64,6 +64,9 @@ public class Groups {
   }
 
 
+  public void setId(String id) {
+    this.id = id;
+  }
 
 
   public Groups type(Type type) {
@@ -101,6 +104,9 @@ public class Groups {
   }
 
 
+  public void setHref(URI href) {
+    this.href = href;
+  }
 
 
    /**
@@ -115,6 +121,9 @@ public class Groups {
   }
 
 
+  public void setItems(List<Group> items) {
+    this.items = items;
+  }
 
 
   @Override

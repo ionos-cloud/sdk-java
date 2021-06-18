@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * UserPropertiesPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class UserPropertiesPut {
   public static final String SERIALIZED_NAME_FIRSTNAME = "firstname";

@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * S3ObjectStorageSSO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class S3ObjectStorageSSO {
   public static final String SERIALIZED_NAME_SSO_URL = "ssoUrl";
@@ -47,6 +47,9 @@ public class S3ObjectStorageSSO {
   }
 
 
+  public void setSsoUrl(String ssoUrl) {
+    this.ssoUrl = ssoUrl;
+  }
 
 
   @Override

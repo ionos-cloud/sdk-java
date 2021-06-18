@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * ImageProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-10T13:30:13.055Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
 
 public class ImageProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -318,6 +318,9 @@ public class ImageProperties {
   }
 
 
+  public void setLocation(String location) {
+    this.location = location;
+  }
 
 
    /**
@@ -332,6 +335,9 @@ public class ImageProperties {
   }
 
 
+  public void setSize(BigDecimal size) {
+    this.size = size;
+  }
 
 
   public ImageProperties cpuHotPlug(Boolean cpuHotPlug) {
@@ -598,6 +604,9 @@ public class ImageProperties {
   }
 
 
+  public void setImageType(ImageTypeEnum imageType) {
+    this.imageType = imageType;
+  }
 
 
    /**
@@ -612,6 +621,9 @@ public class ImageProperties {
   }
 
 
+  public void setPublic(Boolean _public) {
+    this._public = _public;
+  }
 
 
    /**
@@ -626,6 +638,9 @@ public class ImageProperties {
   }
 
 
+  public void setImageAliases(List<String> imageAliases) {
+    this.imageAliases = imageAliases;
+  }
 
 
   public ImageProperties cloudInit(CloudInitEnum cloudInit) {
