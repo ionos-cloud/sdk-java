@@ -56,7 +56,7 @@ Also make sure to add the snapshot repository to your project's POM:
 #### Gradle users
 
 Add this dependency to your project's build file:
-
+https://github.com/ionos-cloud/sdk-java.git
 ```groovy
 compile "com.ionoscloud:ionos-cloud-sdk:5.1.0-SNAPSHOT"
 ```
@@ -75,46 +75,47 @@ Then manually install the following JARs:
 * `target/lib/*.jar`
 
 
-### Usage
+
+### Authentication
+
+The username and password or the authentication token can be manually specified when initializing the SDK client:
 
 ```java
-// Import classes:
-import com.ionoscloud.ApiClient;
-import com.ionoscloud.ApiException;
-import com.ionoscloud.Configuration;
-import com.ionoscloud.auth.*;
-import com.ionoscloud.model.*;
-import com.ionoscloud.api.DataCenterApi;
+ApiClient defaultClient = Configuration.getDefaultApiClient();
 
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
+HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
+basicAuthentication.setUsername("YOUR USERNAME");
+basicAuthentication.setPassword("YOUR PASSWORD");
 
-    // Configure HTTP basic authorization: Basic Authentication
-    HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
-    basicAuthentication.setUsername("YOUR USERNAME");
-    basicAuthentication.setPassword("YOUR PASSWORD");
-
-
-    DataCenterApi apiInstance = new DataCenterApi(defaultClient);
-    Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
-    Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-    Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-    Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-    try {
-      Datacenters result = apiInstance.datacentersGet(pretty, depth, xContractNumber, offset, limit);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling DataCenterApi#datacentersGet");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
 ```
+
+Environment variables can also be used; the SDK uses the following variables:
+
+* IONOS\_USERNAME - to specify the username used to login
+* IONOS\_PASSWORD - to specify the password
+* IONOS\_TOKEN - if an authentication token is being used
+
+
+
+**Warning**: Make sure to follow the Information Security Best Practices when using credentials within your code or storing them in a file.
+
+### Depth
+
+Many of the _List_ or _Get_ operations will accept an optional _depth_ argument. Setting this to a value between 0 and 5 affects the amount of data that is returned. The details returned vary depending on the resource being queried, but it generally follows this pattern. By default, the SDK sets the _depth_ argument to the maximum value.
+
+| Depth | Description |
+| :--- | :--- |
+| 0 | Only direct properties are included. Children are not included. |
+| 1 | Direct properties and children's references are returned. |
+| 2 | Direct properties and children's properties are returned. |
+| 3 | Direct properties, children's properties, and descendants' references are returned. |
+| 4 | Direct properties, children's properties, and descendants' properties are returned. |
+| 5 | Returns all available properties. |
+
+### Pretty
+
+The operations will also accept an optional _pretty_ argument. Setting this to a value of `true` or `false` controls whether the response is pretty-printed (with indentation and new lines). By default, the SDK sets the _pretty_ argument to `true`.
+
 
 ## Feature Reference
 
