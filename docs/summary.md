@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Java SDK](README.md)
+* [IONOS Cloud Java SDK](README.md)
 * [Changelog](changelog.md)
 
 ## API
