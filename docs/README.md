@@ -1,10 +1,10 @@
-[![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ionoscloud/ionos-cloud-sdk/badge.svg?style=plastic)](https://mvnrepository.com/artifact/com.ionoscloud/ionos-cloud-sdk)
+# Introduction
+
+[![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ionoscloud/ionos-cloud-sdk/badge.svg?style=plastic)](https://mvnrepository.com/artifact/com.ionoscloud/ionos-cloud-sdk)
 
 ## Overview
 
-The IONOS Cloud SDK for Java provides you with access to the IONOS Cloud API. The client library supports both simple and complex requests. It is designed for developers who are building applications in Java .
-The SDK for Java wraps the IONOS Cloud API. All API operations are performed over SSL and authenticated using your IONOS Cloud portal credentials. The API can be accessed within an instance running in IONOS Cloud or directly over the Internet from any application that can send an HTTPS request and receive an HTTPS response.
+The IONOS Cloud SDK for Java provides you with access to the IONOS Cloud API. The client library supports both simple and complex requests. It is designed for developers who are building applications in Java . The SDK for Java wraps the IONOS Cloud API. All API operations are performed over SSL and authenticated using your IONOS Cloud portal credentials. The API can be accessed within an instance running in IONOS Cloud or directly over the Internet from any application that can send an HTTPS request and receive an HTTPS response.
 
 ## Getting Started
 
@@ -12,13 +12,13 @@ The SDK for Java wraps the IONOS Cloud API. All API operations are performed ove
 
 To install the API client library to your local Maven repository, simply execute:
 
-```shell
+```text
 mvn clean install
 ```
 
 To deploy it to a remote Maven repository instead, configure the settings of the repository and execute:
 
-```shell
+```text
 mvn clean deploy
 ```
 
@@ -28,7 +28,7 @@ Refer to the [OSSRH Guide](http://central.sonatype.org/pages/ossrh-guide.html) f
 
 Add this dependency to your project's POM:
 
-```xml
+```markup
 <dependency>
   <groupId>com.ionoscloud</groupId>
   <artifactId>ionos-cloud-sdk</artifactId>
@@ -38,7 +38,8 @@ Add this dependency to your project's POM:
 ```
 
 Also make sure to add the snapshot repository to your project's POM:
-```xml
+
+```markup
 <repositories>
   <repository>
     <id>oss.sonatype.org-snapshot</id>
@@ -65,7 +66,7 @@ compile "com.ionoscloud:ionos-cloud-sdk:6.0.0-SNAPSHOT"
 
 At first generate the JAR by executing:
 
-```shell
+```text
 mvn clean package
 ```
 
@@ -73,7 +74,6 @@ Then manually install the following JARs:
 
 * `target/ionos-cloud-sdk-6.0.0-SNAPSHOT.jar`
 * `target/lib/*.jar`
-
 
 ### Usage
 
@@ -119,13 +119,12 @@ public class Example {
 ## Feature Reference
 
 The IONOS Cloud SDK for JAVA aims to offer access to all resources in the IONOS Cloud API and also offers some additional features that make the integration easier:
- - authentication for API calls
- - handling of asynchronous requests
+
+* authentication for API calls
+* handling of asynchronous requests
 
 ## FAQ
 
- - How can I open a bug/feature request?
-	Bugs & feature requests can be open on the repository issues: https://github.com/ionos-cloud/sdk-java/issues/new/choose
+* How can I open a bug/feature request? Bugs & feature requests can be open on the repository issues: [https://github.com/ionos-cloud/sdk-java/issues/new/choose](https://github.com/ionos-cloud/sdk-java/issues/new/choose)
+* Can I contribute to the Java SDK? Pur SDKs are automatically generated using OpenAPI Generator and don’t support manual changes. If you need changes please open an issue and we’ll try to take care of it.
 
- - Can I contribute to the Java SDK?
-    Pur SDKs are automatically generated using OpenAPI Generator and don’t support manual changes. If you need changes please open an issue and we’ll try to take care of it.
