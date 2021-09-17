@@ -8,7 +8,7 @@ The IONOS Cloud SDK for Java provides you with access to the IONOS Cloud API. Th
 
 ## Getting Started
 
-### Instalation
+### Installation
 
 To install the API client library to your local Maven repository, simply execute:
 
