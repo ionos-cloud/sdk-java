@@ -1,5 +1,12 @@
 [![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ionoscloud/ionos-cloud-sdk/badge.svg?style=plastic)](https://mvnrepository.com/artifact/com.ionoscloud/ionos-cloud-sdk)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ionoscloud/ionos-cloud-sdk/badge.svg?style=plastic)]
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=alert_status)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=bugs)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=security_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
+(https://mvnrepository.com/artifact/com.ionoscloud/ionos-cloud-sdk)
 
 ## Overview
 
