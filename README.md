@@ -1,4 +1,4 @@
-[![Build](https://github.com/ionos-cloud/sdk-java/actions/workflows/build.yml/badge.svg)](https://github.com/ionos-cloud/sdk-java/actions/workflows/build.yml)
+![CI](https://github.com/ionos-cloud/sdk-resources/workflows/%5B%20CI%20%5D%20CloudApi%20V5%20/%20Java/badge.svg)
 [![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ionoscloud/ionos-cloud-sdk/badge.svg?style=plastic)](https://mvnrepository.com/artifact/com.ionoscloud/ionos-cloud-sdk)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=alert_status)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
