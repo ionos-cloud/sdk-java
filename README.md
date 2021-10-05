@@ -8,6 +8,7 @@
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=security_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
 
+![Alt text](.github/IONOS.CLOUD.BLU.svg?raw=true "Title")
 
 ## Overview
 
