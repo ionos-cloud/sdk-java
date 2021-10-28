@@ -28,13 +28,15 @@ import java.io.IOException;
 /**
  * UserPost
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class UserPost {
+  
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private UserPropertiesPost properties;
 
+  
 
   public UserPost properties(UserPropertiesPost properties) {
     
@@ -77,6 +79,7 @@ public class UserPost {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserPost {\n");
+    
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
     sb.append("}");
     return sb.toString();

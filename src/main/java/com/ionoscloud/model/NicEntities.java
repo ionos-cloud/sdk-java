@@ -28,13 +28,15 @@ import java.io.IOException;
 /**
  * NicEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class NicEntities {
+  
   public static final String SERIALIZED_NAME_FIREWALLRULES = "firewallrules";
   @SerializedName(SERIALIZED_NAME_FIREWALLRULES)
   private FirewallRules firewallrules;
 
+  
 
   public NicEntities firewallrules(FirewallRules firewallrules) {
     
@@ -78,6 +80,7 @@ public class NicEntities {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NicEntities {\n");
+    
     sb.append("    firewallrules: ").append(toIndentedString(firewallrules)).append("\n");
     sb.append("}");
     return sb.toString();

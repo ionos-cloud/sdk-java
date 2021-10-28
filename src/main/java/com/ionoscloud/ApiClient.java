@@ -138,7 +138,7 @@ public class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("ionos-cloud-sdk-java/v5");
+        setUserAgent("ionos-cloud-sdk-java/5.1.1");
 
         authentications = new HashMap<String, Authentication>();
     }
@@ -1002,9 +1002,10 @@ public class ApiClient {
                     }
 
                     try {
-                        Thread.sleep(backoffTime * 1000);
+                        Thread.sleep(backoffTime * 1_000L);
                     } catch(InterruptedException e) {
                         e.printStackTrace();
+                        Thread.currentThread().interrupt();
                     }
                 }
             }
@@ -1366,54 +1367,29 @@ public class ApiClient {
         try {
             TrustManager[] trustManagers;
             HostnameVerifier hostnameVerifier;
-            if (!verifyingSsl) {
-                trustManagers = new TrustManager[]{
-                        new X509TrustManager() {
-                            @Override
-                            public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
-                            }
+            TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
 
-                            @Override
-                            public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
-                            }
-
-                            @Override
-                            public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-                                return new java.security.cert.X509Certificate[]{};
-                            }
-                        }
-                };
-                hostnameVerifier = new HostnameVerifier() {
-                    @Override
-                    public boolean verify(String hostname, SSLSession session) {
-                        return true;
-                    }
-                };
+            if (sslCaCert == null) {
+                trustManagerFactory.init((KeyStore) null);
             } else {
-                TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
-
-                if (sslCaCert == null) {
-                    trustManagerFactory.init((KeyStore) null);
-                } else {
-                    char[] password = null; // Any password will work.
-                    CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
-                    Collection<? extends Certificate> certificates = certificateFactory.generateCertificates(sslCaCert);
-                    if (certificates.isEmpty()) {
-                        throw new IllegalArgumentException("expected non-empty set of trusted certificates");
-                    }
-                    KeyStore caKeyStore = newEmptyKeyStore(password);
-                    int index = 0;
-                    for (Certificate certificate : certificates) {
-                        String certificateAlias = "ca" + Integer.toString(index++);
-                        caKeyStore.setCertificateEntry(certificateAlias, certificate);
-                    }
-                    trustManagerFactory.init(caKeyStore);
+                char[] password = null; // Any password will work.
+                CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
+                Collection<? extends Certificate> certificates = certificateFactory.generateCertificates(sslCaCert);
+                if (certificates.isEmpty()) {
+                    throw new IllegalArgumentException("expected non-empty set of trusted certificates");
                 }
-                trustManagers = trustManagerFactory.getTrustManagers();
-                hostnameVerifier = OkHostnameVerifier.INSTANCE;
+                KeyStore caKeyStore = newEmptyKeyStore(password);
+                int index = 0;
+                for (Certificate certificate : certificates) {
+                    String certificateAlias = "ca" + Integer.toString(index++);
+                    caKeyStore.setCertificateEntry(certificateAlias, certificate);
+                }
+                trustManagerFactory.init(caKeyStore);
             }
+            trustManagers = trustManagerFactory.getTrustManagers();
+            hostnameVerifier = OkHostnameVerifier.INSTANCE;
 
-            SSLContext sslContext = SSLContext.getInstance("TLS");
+            SSLContext sslContext = SSLContext.getInstance("TLSv1.2");
             sslContext.init(keyManagers, trustManagers, new SecureRandom());
             httpClient = httpClient.newBuilder()
                             .sslSocketFactory(sslContext.getSocketFactory(), (X509TrustManager) trustManagers[0])
@@ -1451,6 +1427,7 @@ public class ApiClient {
             Thread.sleep(initialWait);
         } catch (InterruptedException e) {
             e.printStackTrace();
+            Thread.currentThread().interrupt();
         }
 
         Long timeoutTime = System.currentTimeMillis() + timeout;
@@ -1470,6 +1447,7 @@ public class ApiClient {
                 Thread.sleep(scaleup);
             } catch (InterruptedException e) {
                 e.printStackTrace();
+                Thread.currentThread().interrupt();
             }
 
             scaleup *= 2;

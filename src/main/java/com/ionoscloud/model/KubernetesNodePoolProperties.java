@@ -34,32 +34,39 @@ import java.util.Map;
 /**
  * KubernetesNodePoolProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class KubernetesNodePoolProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_DATACENTER_ID = "datacenterId";
   @SerializedName(SERIALIZED_NAME_DATACENTER_ID)
   private String datacenterId;
 
+
   public static final String SERIALIZED_NAME_NODE_COUNT = "nodeCount";
   @SerializedName(SERIALIZED_NAME_NODE_COUNT)
   private Integer nodeCount;
+
 
   public static final String SERIALIZED_NAME_CPU_FAMILY = "cpuFamily";
   @SerializedName(SERIALIZED_NAME_CPU_FAMILY)
   private String cpuFamily;
 
+
   public static final String SERIALIZED_NAME_CORES_COUNT = "coresCount";
   @SerializedName(SERIALIZED_NAME_CORES_COUNT)
   private Integer coresCount;
 
+
   public static final String SERIALIZED_NAME_RAM_SIZE = "ramSize";
   @SerializedName(SERIALIZED_NAME_RAM_SIZE)
   private Integer ramSize;
+
 
   /**
    * The availability zone in which the target VM should exist
@@ -89,8 +96,9 @@ public class KubernetesNodePoolProperties {
     }
 
     public static AvailabilityZoneEnum fromValue(String value) {
+
       for (AvailabilityZoneEnum b : AvailabilityZoneEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -114,6 +122,7 @@ public class KubernetesNodePoolProperties {
   public static final String SERIALIZED_NAME_AVAILABILITY_ZONE = "availabilityZone";
   @SerializedName(SERIALIZED_NAME_AVAILABILITY_ZONE)
   private AvailabilityZoneEnum availabilityZone;
+
 
   /**
    * Hardware type of the volume
@@ -141,8 +150,9 @@ public class KubernetesNodePoolProperties {
     }
 
     public static StorageTypeEnum fromValue(String value) {
+
       for (StorageTypeEnum b : StorageTypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -167,42 +177,52 @@ public class KubernetesNodePoolProperties {
   @SerializedName(SERIALIZED_NAME_STORAGE_TYPE)
   private StorageTypeEnum storageType;
 
+
   public static final String SERIALIZED_NAME_STORAGE_SIZE = "storageSize";
   @SerializedName(SERIALIZED_NAME_STORAGE_SIZE)
   private Integer storageSize;
+
 
   public static final String SERIALIZED_NAME_K8S_VERSION = "k8sVersion";
   @SerializedName(SERIALIZED_NAME_K8S_VERSION)
   private String k8sVersion;
 
+
   public static final String SERIALIZED_NAME_MAINTENANCE_WINDOW = "maintenanceWindow";
   @SerializedName(SERIALIZED_NAME_MAINTENANCE_WINDOW)
   private KubernetesMaintenanceWindow maintenanceWindow;
+
 
   public static final String SERIALIZED_NAME_AUTO_SCALING = "autoScaling";
   @SerializedName(SERIALIZED_NAME_AUTO_SCALING)
   private KubernetesAutoScaling autoScaling;
 
+
   public static final String SERIALIZED_NAME_LANS = "lans";
   @SerializedName(SERIALIZED_NAME_LANS)
   private List<KubernetesNodePoolLan> lans = null;
+
 
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
   private Map<String, String> labels = null;
 
+
   public static final String SERIALIZED_NAME_ANNOTATIONS = "annotations";
   @SerializedName(SERIALIZED_NAME_ANNOTATIONS)
   private Map<String, String> annotations = null;
+
 
   public static final String SERIALIZED_NAME_PUBLIC_IPS = "publicIps";
   @SerializedName(SERIALIZED_NAME_PUBLIC_IPS)
   private List<String> publicIps = null;
 
+
   public static final String SERIALIZED_NAME_AVAILABLE_UPGRADE_VERSIONS = "availableUpgradeVersions";
   @SerializedName(SERIALIZED_NAME_AVAILABLE_UPGRADE_VERSIONS)
   private List<String> availableUpgradeVersions = null;
 
+  
 
   public KubernetesNodePoolProperties name(String name) {
     
@@ -224,6 +244,7 @@ public class KubernetesNodePoolProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public KubernetesNodePoolProperties datacenterId(String datacenterId) {
@@ -248,6 +269,7 @@ public class KubernetesNodePoolProperties {
   }
 
 
+
   public KubernetesNodePoolProperties nodeCount(Integer nodeCount) {
     
     this.nodeCount = nodeCount;
@@ -268,6 +290,7 @@ public class KubernetesNodePoolProperties {
   public void setNodeCount(Integer nodeCount) {
     this.nodeCount = nodeCount;
   }
+
 
 
   public KubernetesNodePoolProperties cpuFamily(String cpuFamily) {
@@ -292,6 +315,7 @@ public class KubernetesNodePoolProperties {
   }
 
 
+
   public KubernetesNodePoolProperties coresCount(Integer coresCount) {
     
     this.coresCount = coresCount;
@@ -312,6 +336,7 @@ public class KubernetesNodePoolProperties {
   public void setCoresCount(Integer coresCount) {
     this.coresCount = coresCount;
   }
+
 
 
   public KubernetesNodePoolProperties ramSize(Integer ramSize) {
@@ -336,6 +361,7 @@ public class KubernetesNodePoolProperties {
   }
 
 
+
   public KubernetesNodePoolProperties availabilityZone(AvailabilityZoneEnum availabilityZone) {
     
     this.availabilityZone = availabilityZone;
@@ -356,6 +382,7 @@ public class KubernetesNodePoolProperties {
   public void setAvailabilityZone(AvailabilityZoneEnum availabilityZone) {
     this.availabilityZone = availabilityZone;
   }
+
 
 
   public KubernetesNodePoolProperties storageType(StorageTypeEnum storageType) {
@@ -380,6 +407,7 @@ public class KubernetesNodePoolProperties {
   }
 
 
+
   public KubernetesNodePoolProperties storageSize(Integer storageSize) {
     
     this.storageSize = storageSize;
@@ -400,6 +428,7 @@ public class KubernetesNodePoolProperties {
   public void setStorageSize(Integer storageSize) {
     this.storageSize = storageSize;
   }
+
 
 
   public KubernetesNodePoolProperties k8sVersion(String k8sVersion) {
@@ -425,6 +454,7 @@ public class KubernetesNodePoolProperties {
   }
 
 
+
   public KubernetesNodePoolProperties maintenanceWindow(KubernetesMaintenanceWindow maintenanceWindow) {
     
     this.maintenanceWindow = maintenanceWindow;
@@ -448,6 +478,7 @@ public class KubernetesNodePoolProperties {
   }
 
 
+
   public KubernetesNodePoolProperties autoScaling(KubernetesAutoScaling autoScaling) {
     
     this.autoScaling = autoScaling;
@@ -469,6 +500,7 @@ public class KubernetesNodePoolProperties {
   public void setAutoScaling(KubernetesAutoScaling autoScaling) {
     this.autoScaling = autoScaling;
   }
+
 
 
   public KubernetesNodePoolProperties lans(List<KubernetesNodePoolLan> lans) {
@@ -502,6 +534,7 @@ public class KubernetesNodePoolProperties {
   }
 
 
+
   public KubernetesNodePoolProperties labels(Map<String, String> labels) {
     
     this.labels = labels;
@@ -531,6 +564,7 @@ public class KubernetesNodePoolProperties {
   public void setLabels(Map<String, String> labels) {
     this.labels = labels;
   }
+
 
 
   public KubernetesNodePoolProperties annotations(Map<String, String> annotations) {
@@ -564,6 +598,7 @@ public class KubernetesNodePoolProperties {
   }
 
 
+
   public KubernetesNodePoolProperties publicIps(List<String> publicIps) {
     
     this.publicIps = publicIps;
@@ -593,6 +628,7 @@ public class KubernetesNodePoolProperties {
   public void setPublicIps(List<String> publicIps) {
     this.publicIps = publicIps;
   }
+
 
 
   public KubernetesNodePoolProperties availableUpgradeVersions(List<String> availableUpgradeVersions) {
@@ -635,7 +671,7 @@ public class KubernetesNodePoolProperties {
       return false;
     }
     KubernetesNodePoolProperties kubernetesNodePoolProperties = (KubernetesNodePoolProperties) o;
-    return Objects.equals(this.name, kubernetesNodePoolProperties.name) && Objects.equals(this.datacenterId, kubernetesNodePoolProperties.datacenterId) && Objects.equals(this.nodeCount, kubernetesNodePoolProperties.nodeCount) && Objects.equals(this.cpuFamily, kubernetesNodePoolProperties.cpuFamily) && Objects.equals(this.coresCount, kubernetesNodePoolProperties.coresCount) && Objects.equals(this.ramSize, kubernetesNodePoolProperties.ramSize) && Objects.equals(this.availabilityZone, kubernetesNodePoolProperties.availabilityZone) && Objects.equals(this.storageType, kubernetesNodePoolProperties.storageType) && Objects.equals(this.storageSize, kubernetesNodePoolProperties.storageSize) && Objects.equals(this.k8sVersion, kubernetesNodePoolProperties.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesNodePoolProperties.maintenanceWindow) && Objects.equals(this.autoScaling, kubernetesNodePoolProperties.autoScaling) && Objects.equals(this.lans, kubernetesNodePoolProperties.lans) && Objects.equals(this.labels, kubernetesNodePoolProperties.labels) && Objects.equals(this.annotations, kubernetesNodePoolProperties.annotations) && Objects.equals(this.publicIps, kubernetesNodePoolProperties.publicIps) && Objects.equals(this.availableUpgradeVersions, kubernetesNodePoolProperties.availableUpgradeVersions);
+    return Objects.equals(this.name, kubernetesNodePoolProperties.name) && Objects.equals(this.datacenterId, kubernetesNodePoolProperties.datacenterId) && Objects.equals(this.nodeCount, kubernetesNodePoolProperties.nodeCount) && Objects.equals(this.cpuFamily, kubernetesNodePoolProperties.cpuFamily) && Objects.equals(this.coresCount, kubernetesNodePoolProperties.coresCount) && Objects.equals(this.ramSize, kubernetesNodePoolProperties.ramSize) && Objects.equals(this.availabilityZone, kubernetesNodePoolProperties.availabilityZone) && Objects.equals(this.storageType, kubernetesNodePoolProperties.storageType) && Objects.equals(this.storageSize, kubernetesNodePoolProperties.storageSize) && Objects.equals(this.k8sVersion, kubernetesNodePoolProperties.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesNodePoolProperties.maintenanceWindow) && Objects.equals(this.autoScaling, kubernetesNodePoolProperties.autoScaling) && Objects.equals(this.lans, kubernetesNodePoolProperties.lans) && Objects.equals(this.labels, kubernetesNodePoolProperties.labels) && Objects.equals(this.annotations, kubernetesNodePoolProperties.annotations) && Objects.equals(this.publicIps, kubernetesNodePoolProperties.publicIps) && Objects.equals(this.availableUpgradeVersions, kubernetesNodePoolProperties.availableUpgradeVersions) && true;
   }
 
 
@@ -645,22 +681,39 @@ public class KubernetesNodePoolProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodePoolProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    datacenterId: ").append(toIndentedString(datacenterId)).append("\n");
+
     sb.append("    nodeCount: ").append(toIndentedString(nodeCount)).append("\n");
+
     sb.append("    cpuFamily: ").append(toIndentedString(cpuFamily)).append("\n");
+
     sb.append("    coresCount: ").append(toIndentedString(coresCount)).append("\n");
+
     sb.append("    ramSize: ").append(toIndentedString(ramSize)).append("\n");
+
     sb.append("    availabilityZone: ").append(toIndentedString(availabilityZone)).append("\n");
+
     sb.append("    storageType: ").append(toIndentedString(storageType)).append("\n");
+
     sb.append("    storageSize: ").append(toIndentedString(storageSize)).append("\n");
+
     sb.append("    k8sVersion: ").append(toIndentedString(k8sVersion)).append("\n");
+
     sb.append("    maintenanceWindow: ").append(toIndentedString(maintenanceWindow)).append("\n");
+
     sb.append("    autoScaling: ").append(toIndentedString(autoScaling)).append("\n");
+
     sb.append("    lans: ").append(toIndentedString(lans)).append("\n");
+
     sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
+
     sb.append("    annotations: ").append(toIndentedString(annotations)).append("\n");
+
     sb.append("    publicIps: ").append(toIndentedString(publicIps)).append("\n");
+
     sb.append("    availableUpgradeVersions: ").append(toIndentedString(availableUpgradeVersions)).append("\n");
     sb.append("}");
     return sb.toString();

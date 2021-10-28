@@ -28,20 +28,24 @@ import java.io.IOException;
 /**
  * ServerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class ServerProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_CORES = "cores";
   @SerializedName(SERIALIZED_NAME_CORES)
   private Integer cores;
 
+
   public static final String SERIALIZED_NAME_RAM = "ram";
   @SerializedName(SERIALIZED_NAME_RAM)
   private Integer ram;
+
 
   /**
    * The availability zone in which the server should exist
@@ -71,8 +75,9 @@ public class ServerProperties {
     }
 
     public static AvailabilityZoneEnum fromValue(String value) {
+
       for (AvailabilityZoneEnum b : AvailabilityZoneEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -97,6 +102,7 @@ public class ServerProperties {
   @SerializedName(SERIALIZED_NAME_AVAILABILITY_ZONE)
   private AvailabilityZoneEnum availabilityZone;
 
+
   /**
    * Status of the virtual Machine
    */
@@ -115,7 +121,9 @@ public class ServerProperties {
     
     SHUTOFF("SHUTOFF"),
     
-    CRASHED("CRASHED");
+    CRASHED("CRASHED"),
+    
+    SUSPENDED("SUSPENDED");
 
     private String value;
 
@@ -133,8 +141,9 @@ public class ServerProperties {
     }
 
     public static VmStateEnum fromValue(String value) {
+
       for (VmStateEnum b : VmStateEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -159,18 +168,22 @@ public class ServerProperties {
   @SerializedName(SERIALIZED_NAME_VM_STATE)
   private VmStateEnum vmState;
 
+
   public static final String SERIALIZED_NAME_BOOT_CDROM = "bootCdrom";
   @SerializedName(SERIALIZED_NAME_BOOT_CDROM)
   private ResourceReference bootCdrom;
+
 
   public static final String SERIALIZED_NAME_BOOT_VOLUME = "bootVolume";
   @SerializedName(SERIALIZED_NAME_BOOT_VOLUME)
   private ResourceReference bootVolume;
 
+
   public static final String SERIALIZED_NAME_CPU_FAMILY = "cpuFamily";
   @SerializedName(SERIALIZED_NAME_CPU_FAMILY)
   private String cpuFamily;
 
+  
 
   public ServerProperties name(String name) {
     
@@ -195,6 +208,7 @@ public class ServerProperties {
   }
 
 
+
   public ServerProperties cores(Integer cores) {
     
     this.cores = cores;
@@ -217,6 +231,7 @@ public class ServerProperties {
   }
 
 
+
   public ServerProperties ram(Integer ram) {
     
     this.ram = ram;
@@ -237,6 +252,7 @@ public class ServerProperties {
   public void setRam(Integer ram) {
     this.ram = ram;
   }
+
 
 
   public ServerProperties availabilityZone(AvailabilityZoneEnum availabilityZone) {
@@ -262,6 +278,7 @@ public class ServerProperties {
   }
 
 
+
    /**
    * Status of the virtual Machine
    * @return vmState
@@ -277,6 +294,7 @@ public class ServerProperties {
   public void setVmState(VmStateEnum vmState) {
     this.vmState = vmState;
   }
+
 
 
   public ServerProperties bootCdrom(ResourceReference bootCdrom) {
@@ -302,6 +320,7 @@ public class ServerProperties {
   }
 
 
+
   public ServerProperties bootVolume(ResourceReference bootVolume) {
     
     this.bootVolume = bootVolume;
@@ -323,6 +342,7 @@ public class ServerProperties {
   public void setBootVolume(ResourceReference bootVolume) {
     this.bootVolume = bootVolume;
   }
+
 
 
   public ServerProperties cpuFamily(String cpuFamily) {
@@ -367,13 +387,21 @@ public class ServerProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServerProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    cores: ").append(toIndentedString(cores)).append("\n");
+
     sb.append("    ram: ").append(toIndentedString(ram)).append("\n");
+
     sb.append("    availabilityZone: ").append(toIndentedString(availabilityZone)).append("\n");
+
     sb.append("    vmState: ").append(toIndentedString(vmState)).append("\n");
+
     sb.append("    bootCdrom: ").append(toIndentedString(bootCdrom)).append("\n");
+
     sb.append("    bootVolume: ").append(toIndentedString(bootVolume)).append("\n");
+
     sb.append("    cpuFamily: ").append(toIndentedString(cpuFamily)).append("\n");
     sb.append("}");
     return sb.toString();

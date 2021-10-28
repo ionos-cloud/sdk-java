@@ -29,17 +29,20 @@ import java.io.IOException;
 /**
  * GroupEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class GroupEntities {
+  
   public static final String SERIALIZED_NAME_USERS = "users";
   @SerializedName(SERIALIZED_NAME_USERS)
   private GroupMembers users;
+
 
   public static final String SERIALIZED_NAME_RESOURCES = "resources";
   @SerializedName(SERIALIZED_NAME_RESOURCES)
   private ResourceGroups resources;
 
+  
 
   public GroupEntities users(GroupMembers users) {
     
@@ -62,6 +65,7 @@ public class GroupEntities {
   public void setUsers(GroupMembers users) {
     this.users = users;
   }
+
 
 
   public GroupEntities resources(ResourceGroups resources) {
@@ -106,7 +110,9 @@ public class GroupEntities {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GroupEntities {\n");
+    
     sb.append("    users: ").append(toIndentedString(users)).append("\n");
+
     sb.append("    resources: ").append(toIndentedString(resources)).append("\n");
     sb.append("}");
     return sb.toString();

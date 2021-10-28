@@ -27,13 +27,15 @@ import java.io.IOException;
 /**
  * S3ObjectStorageSSO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class S3ObjectStorageSSO {
+  
   public static final String SERIALIZED_NAME_SSO_URL = "ssoUrl";
   @SerializedName(SERIALIZED_NAME_SSO_URL)
   private String ssoUrl;
 
+  
 
    /**
    * The S3 object storage single sign on url
@@ -71,6 +73,7 @@ public class S3ObjectStorageSSO {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class S3ObjectStorageSSO {\n");
+    
     sb.append("    ssoUrl: ").append(toIndentedString(ssoUrl)).append("\n");
     sb.append("}");
     return sb.toString();

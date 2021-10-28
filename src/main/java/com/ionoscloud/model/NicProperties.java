@@ -29,37 +29,45 @@ import java.util.List;
 /**
  * NicProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class NicProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_MAC = "mac";
   @SerializedName(SERIALIZED_NAME_MAC)
   private String mac;
 
+
   public static final String SERIALIZED_NAME_IPS = "ips";
   @SerializedName(SERIALIZED_NAME_IPS)
   private List<String> ips = null;
+
 
   public static final String SERIALIZED_NAME_DHCP = "dhcp";
   @SerializedName(SERIALIZED_NAME_DHCP)
   private Boolean dhcp;
 
+
   public static final String SERIALIZED_NAME_LAN = "lan";
   @SerializedName(SERIALIZED_NAME_LAN)
   private Integer lan;
+
 
   public static final String SERIALIZED_NAME_FIREWALL_ACTIVE = "firewallActive";
   @SerializedName(SERIALIZED_NAME_FIREWALL_ACTIVE)
   private Boolean firewallActive;
 
+
   public static final String SERIALIZED_NAME_NAT = "nat";
   @SerializedName(SERIALIZED_NAME_NAT)
   private Boolean nat;
 
+  
 
   public NicProperties name(String name) {
     
@@ -84,6 +92,7 @@ public class NicProperties {
   }
 
 
+
    /**
    * The MAC address of the NIC
    * @return mac
@@ -99,6 +108,7 @@ public class NicProperties {
   public void setMac(String mac) {
     this.mac = mac;
   }
+
 
 
   public NicProperties ips(List<String> ips) {
@@ -132,6 +142,7 @@ public class NicProperties {
   }
 
 
+
   public NicProperties dhcp(Boolean dhcp) {
     
     this.dhcp = dhcp;
@@ -153,6 +164,7 @@ public class NicProperties {
   public void setDhcp(Boolean dhcp) {
     this.dhcp = dhcp;
   }
+
 
 
   public NicProperties lan(Integer lan) {
@@ -177,6 +189,7 @@ public class NicProperties {
   }
 
 
+
   public NicProperties firewallActive(Boolean firewallActive) {
     
     this.firewallActive = firewallActive;
@@ -198,6 +211,7 @@ public class NicProperties {
   public void setFirewallActive(Boolean firewallActive) {
     this.firewallActive = firewallActive;
   }
+
 
 
   public NicProperties nat(Boolean nat) {
@@ -242,12 +256,19 @@ public class NicProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NicProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    mac: ").append(toIndentedString(mac)).append("\n");
+
     sb.append("    ips: ").append(toIndentedString(ips)).append("\n");
+
     sb.append("    dhcp: ").append(toIndentedString(dhcp)).append("\n");
+
     sb.append("    lan: ").append(toIndentedString(lan)).append("\n");
+
     sb.append("    firewallActive: ").append(toIndentedString(firewallActive)).append("\n");
+
     sb.append("    nat: ").append(toIndentedString(nat)).append("\n");
     sb.append("}");
     return sb.toString();

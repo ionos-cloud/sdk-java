@@ -27,17 +27,20 @@ import java.io.IOException;
 /**
  * ResourceProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class ResourceProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_SEC_AUTH_PROTECTION = "secAuthProtection";
   @SerializedName(SERIALIZED_NAME_SEC_AUTH_PROTECTION)
   private Boolean secAuthProtection;
 
+  
 
   public ResourceProperties name(String name) {
     
@@ -60,6 +63,7 @@ public class ResourceProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public ResourceProperties secAuthProtection(Boolean secAuthProtection) {
@@ -104,7 +108,9 @@ public class ResourceProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResourceProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    secAuthProtection: ").append(toIndentedString(secAuthProtection)).append("\n");
     sb.append("}");
     return sb.toString();

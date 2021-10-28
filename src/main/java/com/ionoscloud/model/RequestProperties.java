@@ -30,25 +30,30 @@ import java.util.Map;
 /**
  * RequestProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class RequestProperties {
+  
   public static final String SERIALIZED_NAME_METHOD = "method";
   @SerializedName(SERIALIZED_NAME_METHOD)
   private String method;
+
 
   public static final String SERIALIZED_NAME_HEADERS = "headers";
   @SerializedName(SERIALIZED_NAME_HEADERS)
   private Map<String, String> headers = null;
 
+
   public static final String SERIALIZED_NAME_BODY = "body";
   @SerializedName(SERIALIZED_NAME_BODY)
   private String body;
+
 
   public static final String SERIALIZED_NAME_URL = "url";
   @SerializedName(SERIALIZED_NAME_URL)
   private String url;
 
+  
 
   public RequestProperties method(String method) {
     
@@ -71,6 +76,7 @@ public class RequestProperties {
   public void setMethod(String method) {
     this.method = method;
   }
+
 
 
   public RequestProperties headers(Map<String, String> headers) {
@@ -104,6 +110,7 @@ public class RequestProperties {
   }
 
 
+
   public RequestProperties body(String body) {
     
     this.body = body;
@@ -125,6 +132,7 @@ public class RequestProperties {
   public void setBody(String body) {
     this.body = body;
   }
+
 
 
   public RequestProperties url(String url) {
@@ -169,9 +177,13 @@ public class RequestProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RequestProperties {\n");
+    
     sb.append("    method: ").append(toIndentedString(method)).append("\n");
+
     sb.append("    headers: ").append(toIndentedString(headers)).append("\n");
+
     sb.append("    body: ").append(toIndentedString(body)).append("\n");
+
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -33,33 +33,40 @@ import java.net.URI;
  * datacenter resource representation
  */
 @ApiModel(description = "datacenter resource representation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class Resource {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private Type type;
 
+
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
   private DatacenterElementMetadata metadata;
 
+
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private ResourceProperties properties;
+
 
   public static final String SERIALIZED_NAME_ENTITIES = "entities";
   @SerializedName(SERIALIZED_NAME_ENTITIES)
   private ResourceEntities entities;
 
+  
 
    /**
    * The resource&#39;s unique identifier
@@ -76,6 +83,7 @@ public class Resource {
   public void setId(String id) {
     this.id = id;
   }
+
 
 
   public Resource type(Type type) {
@@ -101,6 +109,7 @@ public class Resource {
   }
 
 
+
    /**
    * URL to the object representation (absolute path)
    * @return href
@@ -116,6 +125,7 @@ public class Resource {
   public void setHref(URI href) {
     this.href = href;
   }
+
 
 
   public Resource metadata(DatacenterElementMetadata metadata) {
@@ -141,6 +151,7 @@ public class Resource {
   }
 
 
+
   public Resource properties(ResourceProperties properties) {
     
     this.properties = properties;
@@ -162,6 +173,7 @@ public class Resource {
   public void setProperties(ResourceProperties properties) {
     this.properties = properties;
   }
+
 
 
   public Resource entities(ResourceEntities entities) {
@@ -206,11 +218,17 @@ public class Resource {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Resource {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
+
     sb.append("    entities: ").append(toIndentedString(entities)).append("\n");
     sb.append("}");
     return sb.toString();

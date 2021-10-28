@@ -28,13 +28,15 @@ import java.io.IOException;
 /**
  * ResourceEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class ResourceEntities {
+  
   public static final String SERIALIZED_NAME_GROUPS = "groups";
   @SerializedName(SERIALIZED_NAME_GROUPS)
   private ResourceGroups groups;
 
+  
 
   public ResourceEntities groups(ResourceGroups groups) {
     
@@ -78,6 +80,7 @@ public class ResourceEntities {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResourceEntities {\n");
+    
     sb.append("    groups: ").append(toIndentedString(groups)).append("\n");
     sb.append("}");
     return sb.toString();

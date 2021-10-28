@@ -29,17 +29,20 @@ import java.io.IOException;
 /**
  * Contract
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class Contract {
+  
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private Type type;
+
 
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private ContractProperties properties;
 
+  
 
   public Contract type(Type type) {
     
@@ -62,6 +65,7 @@ public class Contract {
   public void setType(Type type) {
     this.type = type;
   }
+
 
 
   public Contract properties(ContractProperties properties) {
@@ -105,7 +109,9 @@ public class Contract {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Contract {\n");
+    
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
     sb.append("}");
     return sb.toString();

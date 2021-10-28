@@ -32,33 +32,40 @@ import java.net.URI;
 /**
  * Lan
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class Lan {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private Type type;
 
+
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
   private DatacenterElementMetadata metadata;
 
+
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private LanProperties properties;
+
 
   public static final String SERIALIZED_NAME_ENTITIES = "entities";
   @SerializedName(SERIALIZED_NAME_ENTITIES)
   private LanEntities entities;
 
+  
 
    /**
    * The resource&#39;s unique identifier
@@ -75,6 +82,7 @@ public class Lan {
   public void setId(String id) {
     this.id = id;
   }
+
 
 
   public Lan type(Type type) {
@@ -100,6 +108,7 @@ public class Lan {
   }
 
 
+
    /**
    * URL to the object representation (absolute path)
    * @return href
@@ -115,6 +124,7 @@ public class Lan {
   public void setHref(URI href) {
     this.href = href;
   }
+
 
 
   public Lan metadata(DatacenterElementMetadata metadata) {
@@ -140,6 +150,7 @@ public class Lan {
   }
 
 
+
   public Lan properties(LanProperties properties) {
     
     this.properties = properties;
@@ -160,6 +171,7 @@ public class Lan {
   public void setProperties(LanProperties properties) {
     this.properties = properties;
   }
+
 
 
   public Lan entities(LanEntities entities) {
@@ -204,11 +216,17 @@ public class Lan {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Lan {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
+
     sb.append("    entities: ").append(toIndentedString(entities)).append("\n");
     sb.append("}");
     return sb.toString();

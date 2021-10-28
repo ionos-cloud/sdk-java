@@ -28,37 +28,45 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * NoStateMetaData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class NoStateMetaData {
+  
   public static final String SERIALIZED_NAME_ETAG = "etag";
   @SerializedName(SERIALIZED_NAME_ETAG)
   private String etag;
+
 
   public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
   @SerializedName(SERIALIZED_NAME_CREATED_DATE)
   private OffsetDateTime createdDate;
 
+
   public static final String SERIALIZED_NAME_CREATED_BY = "createdBy";
   @SerializedName(SERIALIZED_NAME_CREATED_BY)
   private String createdBy;
+
 
   public static final String SERIALIZED_NAME_CREATED_BY_USER_ID = "createdByUserId";
   @SerializedName(SERIALIZED_NAME_CREATED_BY_USER_ID)
   private String createdByUserId;
 
+
   public static final String SERIALIZED_NAME_LAST_MODIFIED_DATE = "lastModifiedDate";
   @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_DATE)
   private OffsetDateTime lastModifiedDate;
+
 
   public static final String SERIALIZED_NAME_LAST_MODIFIED_BY = "lastModifiedBy";
   @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_BY)
   private String lastModifiedBy;
 
+
   public static final String SERIALIZED_NAME_LAST_MODIFIED_BY_USER_ID = "lastModifiedByUserId";
   @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_BY_USER_ID)
   private String lastModifiedByUserId;
 
+  
 
    /**
    * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
@@ -75,6 +83,7 @@ public class NoStateMetaData {
   public void setEtag(String etag) {
     this.etag = etag;
   }
+
 
 
    /**
@@ -94,6 +103,7 @@ public class NoStateMetaData {
   }
 
 
+
    /**
    * The user who has created the resource.
    * @return createdBy
@@ -109,6 +119,7 @@ public class NoStateMetaData {
   public void setCreatedBy(String createdBy) {
     this.createdBy = createdBy;
   }
+
 
 
    /**
@@ -128,6 +139,7 @@ public class NoStateMetaData {
   }
 
 
+
    /**
    * The last time the resource has been modified
    * @return lastModifiedDate
@@ -145,6 +157,7 @@ public class NoStateMetaData {
   }
 
 
+
    /**
    * The user who last modified the resource.
    * @return lastModifiedBy
@@ -160,6 +173,7 @@ public class NoStateMetaData {
   public void setLastModifiedBy(String lastModifiedBy) {
     this.lastModifiedBy = lastModifiedBy;
   }
+
 
 
    /**
@@ -198,12 +212,19 @@ public class NoStateMetaData {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NoStateMetaData {\n");
+    
     sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
+
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
+
     sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
+
     sb.append("    createdByUserId: ").append(toIndentedString(createdByUserId)).append("\n");
+
     sb.append("    lastModifiedDate: ").append(toIndentedString(lastModifiedDate)).append("\n");
+
     sb.append("    lastModifiedBy: ").append(toIndentedString(lastModifiedBy)).append("\n");
+
     sb.append("    lastModifiedByUserId: ").append(toIndentedString(lastModifiedByUserId)).append("\n");
     sb.append("}");
     return sb.toString();

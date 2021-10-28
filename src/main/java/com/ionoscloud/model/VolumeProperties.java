@@ -30,12 +30,14 @@ import java.util.List;
 /**
  * VolumeProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class VolumeProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   /**
    * Hardware type of the volume.
@@ -49,7 +51,11 @@ public class VolumeProperties {
     
     SSD_STANDARD("SSD Standard"),
     
-    SSD_PREMIUM("SSD Premium");
+    SSD_PREMIUM("SSD Premium"),
+    
+    DAS("DAS"),
+    
+    ISO("ISO");
 
     private String value;
 
@@ -67,8 +73,9 @@ public class VolumeProperties {
     }
 
     public static TypeEnum fromValue(String value) {
+
       for (TypeEnum b : TypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -93,9 +100,11 @@ public class VolumeProperties {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private TypeEnum type;
 
+
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
   private BigDecimal size;
+
 
   /**
    * The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront
@@ -127,8 +136,9 @@ public class VolumeProperties {
     }
 
     public static AvailabilityZoneEnum fromValue(String value) {
+
       for (AvailabilityZoneEnum b : AvailabilityZoneEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -153,21 +163,26 @@ public class VolumeProperties {
   @SerializedName(SERIALIZED_NAME_AVAILABILITY_ZONE)
   private AvailabilityZoneEnum availabilityZone;
 
+
   public static final String SERIALIZED_NAME_IMAGE = "image";
   @SerializedName(SERIALIZED_NAME_IMAGE)
   private String image;
+
 
   public static final String SERIALIZED_NAME_IMAGE_PASSWORD = "imagePassword";
   @SerializedName(SERIALIZED_NAME_IMAGE_PASSWORD)
   private String imagePassword;
 
+
   public static final String SERIALIZED_NAME_IMAGE_ALIAS = "imageAlias";
   @SerializedName(SERIALIZED_NAME_IMAGE_ALIAS)
   private String imageAlias;
 
+
   public static final String SERIALIZED_NAME_SSH_KEYS = "sshKeys";
   @SerializedName(SERIALIZED_NAME_SSH_KEYS)
   private List<String> sshKeys = null;
+
 
   /**
    * The bus type of the volume. Default is VIRTIO
@@ -177,7 +192,9 @@ public class VolumeProperties {
     UNKNOWN_VALUE("UNKNOWN_VALUE"),
     VIRTIO("VIRTIO"),
     
-    IDE("IDE");
+    IDE("IDE"),
+    
+    UNKNOWN("UNKNOWN");
 
     private String value;
 
@@ -195,8 +212,9 @@ public class VolumeProperties {
     }
 
     public static BusEnum fromValue(String value) {
+
       for (BusEnum b : BusEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -220,6 +238,7 @@ public class VolumeProperties {
   public static final String SERIALIZED_NAME_BUS = "bus";
   @SerializedName(SERIALIZED_NAME_BUS)
   private BusEnum bus;
+
 
   /**
    * OS type of this volume
@@ -253,8 +272,9 @@ public class VolumeProperties {
     }
 
     public static LicenceTypeEnum fromValue(String value) {
+
       for (LicenceTypeEnum b : LicenceTypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -279,42 +299,52 @@ public class VolumeProperties {
   @SerializedName(SERIALIZED_NAME_LICENCE_TYPE)
   private LicenceTypeEnum licenceType;
 
+
   public static final String SERIALIZED_NAME_CPU_HOT_PLUG = "cpuHotPlug";
   @SerializedName(SERIALIZED_NAME_CPU_HOT_PLUG)
   private Boolean cpuHotPlug;
+
 
   public static final String SERIALIZED_NAME_RAM_HOT_PLUG = "ramHotPlug";
   @SerializedName(SERIALIZED_NAME_RAM_HOT_PLUG)
   private Boolean ramHotPlug;
 
+
   public static final String SERIALIZED_NAME_NIC_HOT_PLUG = "nicHotPlug";
   @SerializedName(SERIALIZED_NAME_NIC_HOT_PLUG)
   private Boolean nicHotPlug;
+
 
   public static final String SERIALIZED_NAME_NIC_HOT_UNPLUG = "nicHotUnplug";
   @SerializedName(SERIALIZED_NAME_NIC_HOT_UNPLUG)
   private Boolean nicHotUnplug;
 
+
   public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG = "discVirtioHotPlug";
   @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG)
   private Boolean discVirtioHotPlug;
+
 
   public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG = "discVirtioHotUnplug";
   @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG)
   private Boolean discVirtioHotUnplug;
 
+
   public static final String SERIALIZED_NAME_DEVICE_NUMBER = "deviceNumber";
   @SerializedName(SERIALIZED_NAME_DEVICE_NUMBER)
   private Long deviceNumber;
+
 
   public static final String SERIALIZED_NAME_BACKUPUNIT_ID = "backupunitId";
   @SerializedName(SERIALIZED_NAME_BACKUPUNIT_ID)
   private String backupunitId;
 
+
   public static final String SERIALIZED_NAME_USER_DATA = "userData";
   @SerializedName(SERIALIZED_NAME_USER_DATA)
   private String userData;
 
+  
 
   public VolumeProperties name(String name) {
     
@@ -337,6 +367,7 @@ public class VolumeProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public VolumeProperties type(TypeEnum type) {
@@ -362,6 +393,7 @@ public class VolumeProperties {
   }
 
 
+
   public VolumeProperties size(BigDecimal size) {
     
     this.size = size;
@@ -382,6 +414,7 @@ public class VolumeProperties {
   public void setSize(BigDecimal size) {
     this.size = size;
   }
+
 
 
   public VolumeProperties availabilityZone(AvailabilityZoneEnum availabilityZone) {
@@ -407,6 +440,7 @@ public class VolumeProperties {
   }
 
 
+
   public VolumeProperties image(String image) {
     
     this.image = image;
@@ -428,6 +462,7 @@ public class VolumeProperties {
   public void setImage(String image) {
     this.image = image;
   }
+
 
 
   public VolumeProperties imagePassword(String imagePassword) {
@@ -453,6 +488,7 @@ public class VolumeProperties {
   }
 
 
+
   public VolumeProperties imageAlias(String imageAlias) {
     
     this.imageAlias = imageAlias;
@@ -474,6 +510,7 @@ public class VolumeProperties {
   public void setImageAlias(String imageAlias) {
     this.imageAlias = imageAlias;
   }
+
 
 
   public VolumeProperties sshKeys(List<String> sshKeys) {
@@ -507,6 +544,7 @@ public class VolumeProperties {
   }
 
 
+
   public VolumeProperties bus(BusEnum bus) {
     
     this.bus = bus;
@@ -530,6 +568,7 @@ public class VolumeProperties {
   }
 
 
+
    /**
    * OS type of this volume
    * @return licenceType
@@ -545,6 +584,7 @@ public class VolumeProperties {
   public void setLicenceType(LicenceTypeEnum licenceType) {
     this.licenceType = licenceType;
   }
+
 
 
   public VolumeProperties cpuHotPlug(Boolean cpuHotPlug) {
@@ -570,6 +610,7 @@ public class VolumeProperties {
   }
 
 
+
   public VolumeProperties ramHotPlug(Boolean ramHotPlug) {
     
     this.ramHotPlug = ramHotPlug;
@@ -591,6 +632,7 @@ public class VolumeProperties {
   public void setRamHotPlug(Boolean ramHotPlug) {
     this.ramHotPlug = ramHotPlug;
   }
+
 
 
   public VolumeProperties nicHotPlug(Boolean nicHotPlug) {
@@ -616,6 +658,7 @@ public class VolumeProperties {
   }
 
 
+
   public VolumeProperties nicHotUnplug(Boolean nicHotUnplug) {
     
     this.nicHotUnplug = nicHotUnplug;
@@ -637,6 +680,7 @@ public class VolumeProperties {
   public void setNicHotUnplug(Boolean nicHotUnplug) {
     this.nicHotUnplug = nicHotUnplug;
   }
+
 
 
   public VolumeProperties discVirtioHotPlug(Boolean discVirtioHotPlug) {
@@ -662,6 +706,7 @@ public class VolumeProperties {
   }
 
 
+
   public VolumeProperties discVirtioHotUnplug(Boolean discVirtioHotUnplug) {
     
     this.discVirtioHotUnplug = discVirtioHotUnplug;
@@ -685,6 +730,7 @@ public class VolumeProperties {
   }
 
 
+
    /**
    * The LUN ID of the storage volume. Null for volumes not mounted to any VM
    * @return deviceNumber
@@ -700,6 +746,7 @@ public class VolumeProperties {
   public void setDeviceNumber(Long deviceNumber) {
     this.deviceNumber = deviceNumber;
   }
+
 
 
   public VolumeProperties backupunitId(String backupunitId) {
@@ -723,6 +770,7 @@ public class VolumeProperties {
   public void setBackupunitId(String backupunitId) {
     this.backupunitId = backupunitId;
   }
+
 
 
   public VolumeProperties userData(String userData) {
@@ -767,24 +815,43 @@ public class VolumeProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class VolumeProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
+
     sb.append("    availabilityZone: ").append(toIndentedString(availabilityZone)).append("\n");
+
     sb.append("    image: ").append(toIndentedString(image)).append("\n");
+
     sb.append("    imagePassword: ").append(toIndentedString(imagePassword)).append("\n");
+
     sb.append("    imageAlias: ").append(toIndentedString(imageAlias)).append("\n");
+
     sb.append("    sshKeys: ").append(toIndentedString(sshKeys)).append("\n");
+
     sb.append("    bus: ").append(toIndentedString(bus)).append("\n");
+
     sb.append("    licenceType: ").append(toIndentedString(licenceType)).append("\n");
+
     sb.append("    cpuHotPlug: ").append(toIndentedString(cpuHotPlug)).append("\n");
+
     sb.append("    ramHotPlug: ").append(toIndentedString(ramHotPlug)).append("\n");
+
     sb.append("    nicHotPlug: ").append(toIndentedString(nicHotPlug)).append("\n");
+
     sb.append("    nicHotUnplug: ").append(toIndentedString(nicHotUnplug)).append("\n");
+
     sb.append("    discVirtioHotPlug: ").append(toIndentedString(discVirtioHotPlug)).append("\n");
+
     sb.append("    discVirtioHotUnplug: ").append(toIndentedString(discVirtioHotUnplug)).append("\n");
+
     sb.append("    deviceNumber: ").append(toIndentedString(deviceNumber)).append("\n");
+
     sb.append("    backupunitId: ").append(toIndentedString(backupunitId)).append("\n");
+
     sb.append("    userData: ").append(toIndentedString(userData)).append("\n");
     sb.append("}");
     return sb.toString();

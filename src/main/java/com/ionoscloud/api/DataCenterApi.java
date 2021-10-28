@@ -415,7 +415,7 @@ public class DataCenterApi {
 
     /**
      * List Data Centers under your account
-     * You can retrieve a complete list of data centers provisioned under your account
+     * You can retrieve a list of data centers provisioned under your account. Default list will contain first 100 items. For more items use pagination query parameters
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -437,7 +437,7 @@ public class DataCenterApi {
 
     /**
      * List Data Centers under your account
-     * You can retrieve a complete list of data centers provisioned under your account
+     * You can retrieve a list of data centers provisioned under your account. Default list will contain first 100 items. For more items use pagination query parameters
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -460,7 +460,7 @@ public class DataCenterApi {
 
     /**
      * List Data Centers under your account (asynchronously)
-     * You can retrieve a complete list of data centers provisioned under your account
+     * You can retrieve a list of data centers provisioned under your account. Default list will contain first 100 items. For more items use pagination query parameters
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)

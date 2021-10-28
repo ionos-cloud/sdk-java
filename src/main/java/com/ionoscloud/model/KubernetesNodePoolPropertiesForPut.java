@@ -34,45 +34,55 @@ import java.util.Map;
 /**
  * KubernetesNodePoolPropertiesForPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class KubernetesNodePoolPropertiesForPut {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_NODE_COUNT = "nodeCount";
   @SerializedName(SERIALIZED_NAME_NODE_COUNT)
   private Integer nodeCount;
 
+
   public static final String SERIALIZED_NAME_K8S_VERSION = "k8sVersion";
   @SerializedName(SERIALIZED_NAME_K8S_VERSION)
   private String k8sVersion;
+
 
   public static final String SERIALIZED_NAME_MAINTENANCE_WINDOW = "maintenanceWindow";
   @SerializedName(SERIALIZED_NAME_MAINTENANCE_WINDOW)
   private KubernetesMaintenanceWindow maintenanceWindow;
 
+
   public static final String SERIALIZED_NAME_AUTO_SCALING = "autoScaling";
   @SerializedName(SERIALIZED_NAME_AUTO_SCALING)
   private KubernetesAutoScaling autoScaling;
+
 
   public static final String SERIALIZED_NAME_LANS = "lans";
   @SerializedName(SERIALIZED_NAME_LANS)
   private List<KubernetesNodePoolLan> lans = null;
 
+
   public static final String SERIALIZED_NAME_LABELS = "labels";
   @SerializedName(SERIALIZED_NAME_LABELS)
   private Map<String, String> labels = null;
+
 
   public static final String SERIALIZED_NAME_ANNOTATIONS = "annotations";
   @SerializedName(SERIALIZED_NAME_ANNOTATIONS)
   private Map<String, String> annotations = null;
 
+
   public static final String SERIALIZED_NAME_PUBLIC_IPS = "publicIps";
   @SerializedName(SERIALIZED_NAME_PUBLIC_IPS)
   private List<String> publicIps = null;
 
+  
 
   public KubernetesNodePoolPropertiesForPut name(String name) {
     
@@ -96,6 +106,7 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
 
+
   public KubernetesNodePoolPropertiesForPut nodeCount(Integer nodeCount) {
     
     this.nodeCount = nodeCount;
@@ -116,6 +127,7 @@ public class KubernetesNodePoolPropertiesForPut {
   public void setNodeCount(Integer nodeCount) {
     this.nodeCount = nodeCount;
   }
+
 
 
   public KubernetesNodePoolPropertiesForPut k8sVersion(String k8sVersion) {
@@ -141,6 +153,7 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
 
+
   public KubernetesNodePoolPropertiesForPut maintenanceWindow(KubernetesMaintenanceWindow maintenanceWindow) {
     
     this.maintenanceWindow = maintenanceWindow;
@@ -164,6 +177,7 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
 
+
   public KubernetesNodePoolPropertiesForPut autoScaling(KubernetesAutoScaling autoScaling) {
     
     this.autoScaling = autoScaling;
@@ -185,6 +199,7 @@ public class KubernetesNodePoolPropertiesForPut {
   public void setAutoScaling(KubernetesAutoScaling autoScaling) {
     this.autoScaling = autoScaling;
   }
+
 
 
   public KubernetesNodePoolPropertiesForPut lans(List<KubernetesNodePoolLan> lans) {
@@ -218,6 +233,7 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
 
+
   public KubernetesNodePoolPropertiesForPut labels(Map<String, String> labels) {
     
     this.labels = labels;
@@ -249,6 +265,7 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
 
+
   public KubernetesNodePoolPropertiesForPut annotations(Map<String, String> annotations) {
     
     this.annotations = annotations;
@@ -278,6 +295,7 @@ public class KubernetesNodePoolPropertiesForPut {
   public void setAnnotations(Map<String, String> annotations) {
     this.annotations = annotations;
   }
+
 
 
   public KubernetesNodePoolPropertiesForPut publicIps(List<String> publicIps) {
@@ -330,14 +348,23 @@ public class KubernetesNodePoolPropertiesForPut {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodePoolPropertiesForPut {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    nodeCount: ").append(toIndentedString(nodeCount)).append("\n");
+
     sb.append("    k8sVersion: ").append(toIndentedString(k8sVersion)).append("\n");
+
     sb.append("    maintenanceWindow: ").append(toIndentedString(maintenanceWindow)).append("\n");
+
     sb.append("    autoScaling: ").append(toIndentedString(autoScaling)).append("\n");
+
     sb.append("    lans: ").append(toIndentedString(lans)).append("\n");
+
     sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
+
     sb.append("    annotations: ").append(toIndentedString(annotations)).append("\n");
+
     sb.append("    publicIps: ").append(toIndentedString(publicIps)).append("\n");
     sb.append("}");
     return sb.toString();

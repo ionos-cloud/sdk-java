@@ -27,12 +27,14 @@ import java.io.IOException;
 /**
  * FirewallruleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class FirewallruleProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   /**
    * The protocol for the rule. Property cannot be modified after creation (disallowed in update requests)
@@ -64,8 +66,9 @@ public class FirewallruleProperties {
     }
 
     public static ProtocolEnum fromValue(String value) {
+
       for (ProtocolEnum b : ProtocolEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -90,34 +93,42 @@ public class FirewallruleProperties {
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
   private ProtocolEnum protocol;
 
+
   public static final String SERIALIZED_NAME_SOURCE_MAC = "sourceMac";
   @SerializedName(SERIALIZED_NAME_SOURCE_MAC)
   private String sourceMac;
+
 
   public static final String SERIALIZED_NAME_SOURCE_IP = "sourceIp";
   @SerializedName(SERIALIZED_NAME_SOURCE_IP)
   private String sourceIp;
 
+
   public static final String SERIALIZED_NAME_TARGET_IP = "targetIp";
   @SerializedName(SERIALIZED_NAME_TARGET_IP)
   private String targetIp;
+
 
   public static final String SERIALIZED_NAME_ICMP_CODE = "icmpCode";
   @SerializedName(SERIALIZED_NAME_ICMP_CODE)
   private Integer icmpCode;
 
+
   public static final String SERIALIZED_NAME_ICMP_TYPE = "icmpType";
   @SerializedName(SERIALIZED_NAME_ICMP_TYPE)
   private Integer icmpType;
+
 
   public static final String SERIALIZED_NAME_PORT_RANGE_START = "portRangeStart";
   @SerializedName(SERIALIZED_NAME_PORT_RANGE_START)
   private Integer portRangeStart;
 
+
   public static final String SERIALIZED_NAME_PORT_RANGE_END = "portRangeEnd";
   @SerializedName(SERIALIZED_NAME_PORT_RANGE_END)
   private Integer portRangeEnd;
 
+  
 
   public FirewallruleProperties name(String name) {
     
@@ -142,6 +153,7 @@ public class FirewallruleProperties {
   }
 
 
+
   public FirewallruleProperties protocol(ProtocolEnum protocol) {
     
     this.protocol = protocol;
@@ -162,6 +174,7 @@ public class FirewallruleProperties {
   public void setProtocol(ProtocolEnum protocol) {
     this.protocol = protocol;
   }
+
 
 
   public FirewallruleProperties sourceMac(String sourceMac) {
@@ -187,6 +200,7 @@ public class FirewallruleProperties {
   }
 
 
+
   public FirewallruleProperties sourceIp(String sourceIp) {
     
     this.sourceIp = sourceIp;
@@ -210,6 +224,7 @@ public class FirewallruleProperties {
   }
 
 
+
   public FirewallruleProperties targetIp(String targetIp) {
     
     this.targetIp = targetIp;
@@ -231,6 +246,7 @@ public class FirewallruleProperties {
   public void setTargetIp(String targetIp) {
     this.targetIp = targetIp;
   }
+
 
 
   public FirewallruleProperties icmpCode(Integer icmpCode) {
@@ -258,6 +274,7 @@ public class FirewallruleProperties {
   }
 
 
+
   public FirewallruleProperties icmpType(Integer icmpType) {
     
     this.icmpType = icmpType;
@@ -283,6 +300,7 @@ public class FirewallruleProperties {
   }
 
 
+
   public FirewallruleProperties portRangeStart(Integer portRangeStart) {
     
     this.portRangeStart = portRangeStart;
@@ -306,6 +324,7 @@ public class FirewallruleProperties {
   public void setPortRangeStart(Integer portRangeStart) {
     this.portRangeStart = portRangeStart;
   }
+
 
 
   public FirewallruleProperties portRangeEnd(Integer portRangeEnd) {
@@ -352,14 +371,23 @@ public class FirewallruleProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FirewallruleProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
+
     sb.append("    sourceMac: ").append(toIndentedString(sourceMac)).append("\n");
+
     sb.append("    sourceIp: ").append(toIndentedString(sourceIp)).append("\n");
+
     sb.append("    targetIp: ").append(toIndentedString(targetIp)).append("\n");
+
     sb.append("    icmpCode: ").append(toIndentedString(icmpCode)).append("\n");
+
     sb.append("    icmpType: ").append(toIndentedString(icmpType)).append("\n");
+
     sb.append("    portRangeStart: ").append(toIndentedString(portRangeStart)).append("\n");
+
     sb.append("    portRangeEnd: ").append(toIndentedString(portRangeEnd)).append("\n");
     sb.append("}");
     return sb.toString();

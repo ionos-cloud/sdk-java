@@ -27,21 +27,25 @@ import java.io.IOException;
 /**
  * BackupUnitProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class BackupUnitProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_PASSWORD = "password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)
   private String password;
 
+
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
   private String email;
 
+  
 
   public BackupUnitProperties name(String name) {
     
@@ -65,6 +69,7 @@ public class BackupUnitProperties {
   }
 
 
+
   public BackupUnitProperties password(String password) {
     
     this.password = password;
@@ -86,6 +91,7 @@ public class BackupUnitProperties {
   public void setPassword(String password) {
     this.password = password;
   }
+
 
 
   public BackupUnitProperties email(String email) {
@@ -130,8 +136,11 @@ public class BackupUnitProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BackupUnitProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
+
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("}");
     return sb.toString();

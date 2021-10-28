@@ -27,13 +27,15 @@ import java.io.IOException;
 /**
  * KubernetesNodePoolLan
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class KubernetesNodePoolLan {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private Integer id;
 
+  
 
   public KubernetesNodePoolLan id(Integer id) {
     
@@ -45,8 +47,7 @@ public class KubernetesNodePoolLan {
    * The LAN ID of an existing LAN at the related datacenter
    * @return id
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "3", value = "The LAN ID of an existing LAN at the related datacenter")
+  @ApiModelProperty(example = "3", required = true, value = "The LAN ID of an existing LAN at the related datacenter")
 
   public Integer getId() {
     return id;
@@ -77,6 +78,7 @@ public class KubernetesNodePoolLan {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodePoolLan {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("}");
     return sb.toString();

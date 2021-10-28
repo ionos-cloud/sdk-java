@@ -30,12 +30,14 @@ import java.net.URI;
 /**
  * LabelResource
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class LabelResource {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   /**
    * The type of object that has been created
@@ -61,8 +63,9 @@ public class LabelResource {
     }
 
     public static TypeEnum fromValue(String value) {
+
       for (TypeEnum b : TypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -87,18 +90,22 @@ public class LabelResource {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private TypeEnum type;
 
+
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
   private NoStateMetaData metadata;
 
+
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private LabelResourceProperties properties;
 
+  
 
    /**
    * Label on a resource is identified using label key.
@@ -115,6 +122,7 @@ public class LabelResource {
   public void setId(String id) {
     this.id = id;
   }
+
 
 
    /**
@@ -134,6 +142,7 @@ public class LabelResource {
   }
 
 
+
    /**
    * URL to the object representation (absolute path)
    * @return href
@@ -149,6 +158,7 @@ public class LabelResource {
   public void setHref(URI href) {
     this.href = href;
   }
+
 
 
   public LabelResource metadata(NoStateMetaData metadata) {
@@ -172,6 +182,7 @@ public class LabelResource {
   public void setMetadata(NoStateMetaData metadata) {
     this.metadata = metadata;
   }
+
 
 
   public LabelResource properties(LabelResourceProperties properties) {
@@ -215,10 +226,15 @@ public class LabelResource {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LabelResource {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
     sb.append("}");
     return sb.toString();

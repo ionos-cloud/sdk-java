@@ -30,29 +30,35 @@ import java.util.List;
 /**
  * IpBlockProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class IpBlockProperties {
+  
   public static final String SERIALIZED_NAME_IPS = "ips";
   @SerializedName(SERIALIZED_NAME_IPS)
   private List<String> ips = null;
+
 
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
   private String location;
 
+
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
   private Integer size;
+
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
+
   public static final String SERIALIZED_NAME_IP_CONSUMERS = "ipConsumers";
   @SerializedName(SERIALIZED_NAME_IP_CONSUMERS)
   private List<IpConsumer> ipConsumers = null;
 
+  
 
    /**
    * A collection of IPs associated with the IP Block
@@ -69,6 +75,7 @@ public class IpBlockProperties {
   public void setIps(List<String> ips) {
     this.ips = ips;
   }
+
 
 
   public IpBlockProperties location(String location) {
@@ -93,6 +100,7 @@ public class IpBlockProperties {
   }
 
 
+
   public IpBlockProperties size(Integer size) {
     
     this.size = size;
@@ -113,6 +121,7 @@ public class IpBlockProperties {
   public void setSize(Integer size) {
     this.size = size;
   }
+
 
 
   public IpBlockProperties name(String name) {
@@ -136,6 +145,7 @@ public class IpBlockProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
    /**
@@ -174,10 +184,15 @@ public class IpBlockProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IpBlockProperties {\n");
+    
     sb.append("    ips: ").append(toIndentedString(ips)).append("\n");
+
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
+
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
+
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    ipConsumers: ").append(toIndentedString(ipConsumers)).append("\n");
     sb.append("}");
     return sb.toString();

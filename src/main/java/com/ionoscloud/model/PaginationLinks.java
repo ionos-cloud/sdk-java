@@ -28,21 +28,25 @@ import java.net.URI;
 /**
  * PaginationLinks
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class PaginationLinks {
+  
   public static final String SERIALIZED_NAME_PREV = "prev";
   @SerializedName(SERIALIZED_NAME_PREV)
   private URI prev;
+
 
   public static final String SERIALIZED_NAME_SELF = "self";
   @SerializedName(SERIALIZED_NAME_SELF)
   private URI self;
 
+
   public static final String SERIALIZED_NAME_NEXT = "next";
   @SerializedName(SERIALIZED_NAME_NEXT)
   private URI next;
 
+  
 
    /**
    * URL (with offset and limit parameters) of the previous page; only present if offset is greater than 0
@@ -61,6 +65,7 @@ public class PaginationLinks {
   }
 
 
+
    /**
    * URL (with offset and limit parameters) of the current page
    * @return self
@@ -76,6 +81,7 @@ public class PaginationLinks {
   public void setSelf(URI self) {
     this.self = self;
   }
+
 
 
    /**
@@ -114,8 +120,11 @@ public class PaginationLinks {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaginationLinks {\n");
+    
     sb.append("    prev: ").append(toIndentedString(prev)).append("\n");
+
     sb.append("    self: ").append(toIndentedString(self)).append("\n");
+
     sb.append("    next: ").append(toIndentedString(next)).append("\n");
     sb.append("}");
     return sb.toString();

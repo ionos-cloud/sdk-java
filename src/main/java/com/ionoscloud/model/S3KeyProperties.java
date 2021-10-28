@@ -27,17 +27,20 @@ import java.io.IOException;
 /**
  * S3KeyProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class S3KeyProperties {
+  
   public static final String SERIALIZED_NAME_SECRET_KEY = "secretKey";
   @SerializedName(SERIALIZED_NAME_SECRET_KEY)
   private String secretKey;
+
 
   public static final String SERIALIZED_NAME_ACTIVE = "active";
   @SerializedName(SERIALIZED_NAME_ACTIVE)
   private Boolean active;
 
+  
 
    /**
    * secret of the S3 key
@@ -54,6 +57,7 @@ public class S3KeyProperties {
   public void setSecretKey(String secretKey) {
     this.secretKey = secretKey;
   }
+
 
 
   public S3KeyProperties active(Boolean active) {
@@ -98,7 +102,9 @@ public class S3KeyProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class S3KeyProperties {\n");
+    
     sb.append("    secretKey: ").append(toIndentedString(secretKey)).append("\n");
+
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -28,12 +28,14 @@ import java.io.IOException;
 /**
  * RequestTarget
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class RequestTarget {
+  
   public static final String SERIALIZED_NAME_TARGET = "target";
   @SerializedName(SERIALIZED_NAME_TARGET)
   private ResourceReference target;
+
 
   /**
    * Gets or Sets status
@@ -65,8 +67,9 @@ public class RequestTarget {
     }
 
     public static StatusEnum fromValue(String value) {
+
       for (StatusEnum b : StatusEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -91,6 +94,7 @@ public class RequestTarget {
   @SerializedName(SERIALIZED_NAME_STATUS)
   private StatusEnum status;
 
+  
 
   public RequestTarget target(ResourceReference target) {
     
@@ -113,6 +117,7 @@ public class RequestTarget {
   public void setTarget(ResourceReference target) {
     this.target = target;
   }
+
 
 
   public RequestTarget status(StatusEnum status) {
@@ -157,7 +162,9 @@ public class RequestTarget {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RequestTarget {\n");
+    
     sb.append("    target: ").append(toIndentedString(target)).append("\n");
+
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();

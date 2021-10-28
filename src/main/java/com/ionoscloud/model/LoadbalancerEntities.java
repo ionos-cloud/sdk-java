@@ -28,13 +28,15 @@ import java.io.IOException;
 /**
  * LoadbalancerEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class LoadbalancerEntities {
+  
   public static final String SERIALIZED_NAME_BALANCEDNICS = "balancednics";
   @SerializedName(SERIALIZED_NAME_BALANCEDNICS)
   private BalancedNics balancednics;
 
+  
 
   public LoadbalancerEntities balancednics(BalancedNics balancednics) {
     
@@ -78,6 +80,7 @@ public class LoadbalancerEntities {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LoadbalancerEntities {\n");
+    
     sb.append("    balancednics: ").append(toIndentedString(balancednics)).append("\n");
     sb.append("}");
     return sb.toString();

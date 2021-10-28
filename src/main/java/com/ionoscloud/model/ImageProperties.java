@@ -30,64 +30,79 @@ import java.util.List;
 /**
  * ImageProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class ImageProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
+
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
   private String location;
+
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
   private BigDecimal size;
 
+
   public static final String SERIALIZED_NAME_CPU_HOT_PLUG = "cpuHotPlug";
   @SerializedName(SERIALIZED_NAME_CPU_HOT_PLUG)
   private Boolean cpuHotPlug;
+
 
   public static final String SERIALIZED_NAME_CPU_HOT_UNPLUG = "cpuHotUnplug";
   @SerializedName(SERIALIZED_NAME_CPU_HOT_UNPLUG)
   private Boolean cpuHotUnplug;
 
+
   public static final String SERIALIZED_NAME_RAM_HOT_PLUG = "ramHotPlug";
   @SerializedName(SERIALIZED_NAME_RAM_HOT_PLUG)
   private Boolean ramHotPlug;
+
 
   public static final String SERIALIZED_NAME_RAM_HOT_UNPLUG = "ramHotUnplug";
   @SerializedName(SERIALIZED_NAME_RAM_HOT_UNPLUG)
   private Boolean ramHotUnplug;
 
+
   public static final String SERIALIZED_NAME_NIC_HOT_PLUG = "nicHotPlug";
   @SerializedName(SERIALIZED_NAME_NIC_HOT_PLUG)
   private Boolean nicHotPlug;
+
 
   public static final String SERIALIZED_NAME_NIC_HOT_UNPLUG = "nicHotUnplug";
   @SerializedName(SERIALIZED_NAME_NIC_HOT_UNPLUG)
   private Boolean nicHotUnplug;
 
+
   public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG = "discVirtioHotPlug";
   @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG)
   private Boolean discVirtioHotPlug;
+
 
   public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG = "discVirtioHotUnplug";
   @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG)
   private Boolean discVirtioHotUnplug;
 
+
   public static final String SERIALIZED_NAME_DISC_SCSI_HOT_PLUG = "discScsiHotPlug";
   @SerializedName(SERIALIZED_NAME_DISC_SCSI_HOT_PLUG)
   private Boolean discScsiHotPlug;
 
+
   public static final String SERIALIZED_NAME_DISC_SCSI_HOT_UNPLUG = "discScsiHotUnplug";
   @SerializedName(SERIALIZED_NAME_DISC_SCSI_HOT_UNPLUG)
   private Boolean discScsiHotUnplug;
+
 
   /**
    * OS type of this Image
@@ -121,8 +136,9 @@ public class ImageProperties {
     }
 
     public static LicenceTypeEnum fromValue(String value) {
+
       for (LicenceTypeEnum b : LicenceTypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -147,6 +163,7 @@ public class ImageProperties {
   @SerializedName(SERIALIZED_NAME_LICENCE_TYPE)
   private LicenceTypeEnum licenceType;
 
+
   /**
    * This indicates the type of image
    */
@@ -155,7 +172,9 @@ public class ImageProperties {
     UNKNOWN_VALUE("UNKNOWN_VALUE"),
     HDD("HDD"),
     
-    CDROM("CDROM");
+    CDROM("CDROM"),
+    
+    UNKNOWN("UNKNOWN");
 
     private String value;
 
@@ -173,8 +192,9 @@ public class ImageProperties {
     }
 
     public static ImageTypeEnum fromValue(String value) {
+
       for (ImageTypeEnum b : ImageTypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -199,13 +219,16 @@ public class ImageProperties {
   @SerializedName(SERIALIZED_NAME_IMAGE_TYPE)
   private ImageTypeEnum imageType;
 
+
   public static final String SERIALIZED_NAME_PUBLIC = "public";
   @SerializedName(SERIALIZED_NAME_PUBLIC)
   private Boolean _public;
 
+
   public static final String SERIALIZED_NAME_IMAGE_ALIASES = "imageAliases";
   @SerializedName(SERIALIZED_NAME_IMAGE_ALIASES)
   private List<String> imageAliases = null;
+
 
   /**
    * Cloud init compatibility
@@ -233,8 +256,9 @@ public class ImageProperties {
     }
 
     public static CloudInitEnum fromValue(String value) {
+
       for (CloudInitEnum b : CloudInitEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -259,6 +283,7 @@ public class ImageProperties {
   @SerializedName(SERIALIZED_NAME_CLOUD_INIT)
   private CloudInitEnum cloudInit;
 
+  
 
   public ImageProperties name(String name) {
     
@@ -281,6 +306,7 @@ public class ImageProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public ImageProperties description(String description) {
@@ -306,6 +332,7 @@ public class ImageProperties {
   }
 
 
+
    /**
    * Location of that image/snapshot. 
    * @return location
@@ -323,6 +350,7 @@ public class ImageProperties {
   }
 
 
+
    /**
    * The size of the image in GB
    * @return size
@@ -338,6 +366,7 @@ public class ImageProperties {
   public void setSize(BigDecimal size) {
     this.size = size;
   }
+
 
 
   public ImageProperties cpuHotPlug(Boolean cpuHotPlug) {
@@ -363,6 +392,7 @@ public class ImageProperties {
   }
 
 
+
   public ImageProperties cpuHotUnplug(Boolean cpuHotUnplug) {
     
     this.cpuHotUnplug = cpuHotUnplug;
@@ -384,6 +414,7 @@ public class ImageProperties {
   public void setCpuHotUnplug(Boolean cpuHotUnplug) {
     this.cpuHotUnplug = cpuHotUnplug;
   }
+
 
 
   public ImageProperties ramHotPlug(Boolean ramHotPlug) {
@@ -409,6 +440,7 @@ public class ImageProperties {
   }
 
 
+
   public ImageProperties ramHotUnplug(Boolean ramHotUnplug) {
     
     this.ramHotUnplug = ramHotUnplug;
@@ -430,6 +462,7 @@ public class ImageProperties {
   public void setRamHotUnplug(Boolean ramHotUnplug) {
     this.ramHotUnplug = ramHotUnplug;
   }
+
 
 
   public ImageProperties nicHotPlug(Boolean nicHotPlug) {
@@ -455,6 +488,7 @@ public class ImageProperties {
   }
 
 
+
   public ImageProperties nicHotUnplug(Boolean nicHotUnplug) {
     
     this.nicHotUnplug = nicHotUnplug;
@@ -476,6 +510,7 @@ public class ImageProperties {
   public void setNicHotUnplug(Boolean nicHotUnplug) {
     this.nicHotUnplug = nicHotUnplug;
   }
+
 
 
   public ImageProperties discVirtioHotPlug(Boolean discVirtioHotPlug) {
@@ -501,6 +536,7 @@ public class ImageProperties {
   }
 
 
+
   public ImageProperties discVirtioHotUnplug(Boolean discVirtioHotUnplug) {
     
     this.discVirtioHotUnplug = discVirtioHotUnplug;
@@ -522,6 +558,7 @@ public class ImageProperties {
   public void setDiscVirtioHotUnplug(Boolean discVirtioHotUnplug) {
     this.discVirtioHotUnplug = discVirtioHotUnplug;
   }
+
 
 
   public ImageProperties discScsiHotPlug(Boolean discScsiHotPlug) {
@@ -547,6 +584,7 @@ public class ImageProperties {
   }
 
 
+
   public ImageProperties discScsiHotUnplug(Boolean discScsiHotUnplug) {
     
     this.discScsiHotUnplug = discScsiHotUnplug;
@@ -568,6 +606,7 @@ public class ImageProperties {
   public void setDiscScsiHotUnplug(Boolean discScsiHotUnplug) {
     this.discScsiHotUnplug = discScsiHotUnplug;
   }
+
 
 
   public ImageProperties licenceType(LicenceTypeEnum licenceType) {
@@ -592,6 +631,7 @@ public class ImageProperties {
   }
 
 
+
    /**
    * This indicates the type of image
    * @return imageType
@@ -607,6 +647,7 @@ public class ImageProperties {
   public void setImageType(ImageTypeEnum imageType) {
     this.imageType = imageType;
   }
+
 
 
    /**
@@ -626,6 +667,7 @@ public class ImageProperties {
   }
 
 
+
    /**
    * List of image aliases mapped for this Image
    * @return imageAliases
@@ -641,6 +683,7 @@ public class ImageProperties {
   public void setImageAliases(List<String> imageAliases) {
     this.imageAliases = imageAliases;
   }
+
 
 
   public ImageProperties cloudInit(CloudInitEnum cloudInit) {
@@ -685,24 +728,43 @@ public class ImageProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ImageProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
+
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
+
     sb.append("    cpuHotPlug: ").append(toIndentedString(cpuHotPlug)).append("\n");
+
     sb.append("    cpuHotUnplug: ").append(toIndentedString(cpuHotUnplug)).append("\n");
+
     sb.append("    ramHotPlug: ").append(toIndentedString(ramHotPlug)).append("\n");
+
     sb.append("    ramHotUnplug: ").append(toIndentedString(ramHotUnplug)).append("\n");
+
     sb.append("    nicHotPlug: ").append(toIndentedString(nicHotPlug)).append("\n");
+
     sb.append("    nicHotUnplug: ").append(toIndentedString(nicHotUnplug)).append("\n");
+
     sb.append("    discVirtioHotPlug: ").append(toIndentedString(discVirtioHotPlug)).append("\n");
+
     sb.append("    discVirtioHotUnplug: ").append(toIndentedString(discVirtioHotUnplug)).append("\n");
+
     sb.append("    discScsiHotPlug: ").append(toIndentedString(discScsiHotPlug)).append("\n");
+
     sb.append("    discScsiHotUnplug: ").append(toIndentedString(discScsiHotUnplug)).append("\n");
+
     sb.append("    licenceType: ").append(toIndentedString(licenceType)).append("\n");
+
     sb.append("    imageType: ").append(toIndentedString(imageType)).append("\n");
+
     sb.append("    _public: ").append(toIndentedString(_public)).append("\n");
+
     sb.append("    imageAliases: ").append(toIndentedString(imageAliases)).append("\n");
+
     sb.append("    cloudInit: ").append(toIndentedString(cloudInit)).append("\n");
     sb.append("}");
     return sb.toString();

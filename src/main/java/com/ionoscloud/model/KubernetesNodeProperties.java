@@ -27,25 +27,30 @@ import java.io.IOException;
 /**
  * KubernetesNodeProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class KubernetesNodeProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_PUBLIC_I_P = "publicIP";
   @SerializedName(SERIALIZED_NAME_PUBLIC_I_P)
   private String publicIP;
 
+
   public static final String SERIALIZED_NAME_PRIVATE_I_P = "privateIP";
   @SerializedName(SERIALIZED_NAME_PRIVATE_I_P)
   private String privateIP;
+
 
   public static final String SERIALIZED_NAME_K8S_VERSION = "k8sVersion";
   @SerializedName(SERIALIZED_NAME_K8S_VERSION)
   private String k8sVersion;
 
+  
 
   public KubernetesNodeProperties name(String name) {
     
@@ -67,6 +72,7 @@ public class KubernetesNodeProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public KubernetesNodeProperties publicIP(String publicIP) {
@@ -92,6 +98,7 @@ public class KubernetesNodeProperties {
   }
 
 
+
   public KubernetesNodeProperties privateIP(String privateIP) {
     
     this.privateIP = privateIP;
@@ -113,6 +120,7 @@ public class KubernetesNodeProperties {
   public void setPrivateIP(String privateIP) {
     this.privateIP = privateIP;
   }
+
 
 
   public KubernetesNodeProperties k8sVersion(String k8sVersion) {
@@ -156,9 +164,13 @@ public class KubernetesNodeProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodeProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    publicIP: ").append(toIndentedString(publicIP)).append("\n");
+
     sb.append("    privateIP: ").append(toIndentedString(privateIP)).append("\n");
+
     sb.append("    k8sVersion: ").append(toIndentedString(k8sVersion)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -30,17 +30,20 @@ import java.util.List;
 /**
  * Error
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class Error {
+  
   public static final String SERIALIZED_NAME_HTTP_STATUS = "httpStatus";
   @SerializedName(SERIALIZED_NAME_HTTP_STATUS)
   private Integer httpStatus;
+
 
   public static final String SERIALIZED_NAME_MESSAGES = "messages";
   @SerializedName(SERIALIZED_NAME_MESSAGES)
   private List<ErrorMessage> messages = null;
 
+  
 
    /**
    * HTTP status code of the operation
@@ -57,6 +60,7 @@ public class Error {
   public void setHttpStatus(Integer httpStatus) {
     this.httpStatus = httpStatus;
   }
+
 
 
   public Error messages(List<ErrorMessage> messages) {
@@ -109,7 +113,9 @@ public class Error {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Error {\n");
+    
     sb.append("    httpStatus: ").append(toIndentedString(httpStatus)).append("\n");
+
     sb.append("    messages: ").append(toIndentedString(messages)).append("\n");
     sb.append("}");
     return sb.toString();

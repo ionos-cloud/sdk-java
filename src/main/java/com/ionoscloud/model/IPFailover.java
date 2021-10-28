@@ -27,17 +27,20 @@ import java.io.IOException;
 /**
  * IPFailover
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class IPFailover {
+  
   public static final String SERIALIZED_NAME_IP = "ip";
   @SerializedName(SERIALIZED_NAME_IP)
   private String ip;
+
 
   public static final String SERIALIZED_NAME_NIC_UUID = "nicUuid";
   @SerializedName(SERIALIZED_NAME_NIC_UUID)
   private String nicUuid;
 
+  
 
   public IPFailover ip(String ip) {
     
@@ -60,6 +63,7 @@ public class IPFailover {
   public void setIp(String ip) {
     this.ip = ip;
   }
+
 
 
   public IPFailover nicUuid(String nicUuid) {
@@ -104,7 +108,9 @@ public class IPFailover {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class IPFailover {\n");
+    
     sb.append("    ip: ").append(toIndentedString(ip)).append("\n");
+
     sb.append("    nicUuid: ").append(toIndentedString(nicUuid)).append("\n");
     sb.append("}");
     return sb.toString();

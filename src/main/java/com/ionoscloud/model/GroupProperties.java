@@ -27,49 +27,60 @@ import java.io.IOException;
 /**
  * GroupProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class GroupProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_CREATE_DATA_CENTER = "createDataCenter";
   @SerializedName(SERIALIZED_NAME_CREATE_DATA_CENTER)
   private Boolean createDataCenter;
 
+
   public static final String SERIALIZED_NAME_CREATE_SNAPSHOT = "createSnapshot";
   @SerializedName(SERIALIZED_NAME_CREATE_SNAPSHOT)
   private Boolean createSnapshot;
+
 
   public static final String SERIALIZED_NAME_RESERVE_IP = "reserveIp";
   @SerializedName(SERIALIZED_NAME_RESERVE_IP)
   private Boolean reserveIp;
 
+
   public static final String SERIALIZED_NAME_ACCESS_ACTIVITY_LOG = "accessActivityLog";
   @SerializedName(SERIALIZED_NAME_ACCESS_ACTIVITY_LOG)
   private Boolean accessActivityLog;
+
 
   public static final String SERIALIZED_NAME_CREATE_PCC = "createPcc";
   @SerializedName(SERIALIZED_NAME_CREATE_PCC)
   private Boolean createPcc;
 
+
   public static final String SERIALIZED_NAME_S3_PRIVILEGE = "s3Privilege";
   @SerializedName(SERIALIZED_NAME_S3_PRIVILEGE)
   private Boolean s3Privilege;
+
 
   public static final String SERIALIZED_NAME_CREATE_BACKUP_UNIT = "createBackupUnit";
   @SerializedName(SERIALIZED_NAME_CREATE_BACKUP_UNIT)
   private Boolean createBackupUnit;
 
+
   public static final String SERIALIZED_NAME_CREATE_INTERNET_ACCESS = "createInternetAccess";
   @SerializedName(SERIALIZED_NAME_CREATE_INTERNET_ACCESS)
   private Boolean createInternetAccess;
+
 
   public static final String SERIALIZED_NAME_CREATE_K8S_CLUSTER = "createK8sCluster";
   @SerializedName(SERIALIZED_NAME_CREATE_K8S_CLUSTER)
   private Boolean createK8sCluster;
 
+  
 
   public GroupProperties name(String name) {
     
@@ -92,6 +103,7 @@ public class GroupProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public GroupProperties createDataCenter(Boolean createDataCenter) {
@@ -117,6 +129,7 @@ public class GroupProperties {
   }
 
 
+
   public GroupProperties createSnapshot(Boolean createSnapshot) {
     
     this.createSnapshot = createSnapshot;
@@ -138,6 +151,7 @@ public class GroupProperties {
   public void setCreateSnapshot(Boolean createSnapshot) {
     this.createSnapshot = createSnapshot;
   }
+
 
 
   public GroupProperties reserveIp(Boolean reserveIp) {
@@ -163,6 +177,7 @@ public class GroupProperties {
   }
 
 
+
   public GroupProperties accessActivityLog(Boolean accessActivityLog) {
     
     this.accessActivityLog = accessActivityLog;
@@ -184,6 +199,7 @@ public class GroupProperties {
   public void setAccessActivityLog(Boolean accessActivityLog) {
     this.accessActivityLog = accessActivityLog;
   }
+
 
 
   public GroupProperties createPcc(Boolean createPcc) {
@@ -209,6 +225,7 @@ public class GroupProperties {
   }
 
 
+
   public GroupProperties s3Privilege(Boolean s3Privilege) {
     
     this.s3Privilege = s3Privilege;
@@ -230,6 +247,7 @@ public class GroupProperties {
   public void setS3Privilege(Boolean s3Privilege) {
     this.s3Privilege = s3Privilege;
   }
+
 
 
   public GroupProperties createBackupUnit(Boolean createBackupUnit) {
@@ -255,6 +273,7 @@ public class GroupProperties {
   }
 
 
+
   public GroupProperties createInternetAccess(Boolean createInternetAccess) {
     
     this.createInternetAccess = createInternetAccess;
@@ -276,6 +295,7 @@ public class GroupProperties {
   public void setCreateInternetAccess(Boolean createInternetAccess) {
     this.createInternetAccess = createInternetAccess;
   }
+
 
 
   public GroupProperties createK8sCluster(Boolean createK8sCluster) {
@@ -320,15 +340,25 @@ public class GroupProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GroupProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    createDataCenter: ").append(toIndentedString(createDataCenter)).append("\n");
+
     sb.append("    createSnapshot: ").append(toIndentedString(createSnapshot)).append("\n");
+
     sb.append("    reserveIp: ").append(toIndentedString(reserveIp)).append("\n");
+
     sb.append("    accessActivityLog: ").append(toIndentedString(accessActivityLog)).append("\n");
+
     sb.append("    createPcc: ").append(toIndentedString(createPcc)).append("\n");
+
     sb.append("    s3Privilege: ").append(toIndentedString(s3Privilege)).append("\n");
+
     sb.append("    createBackupUnit: ").append(toIndentedString(createBackupUnit)).append("\n");
+
     sb.append("    createInternetAccess: ").append(toIndentedString(createInternetAccess)).append("\n");
+
     sb.append("    createK8sCluster: ").append(toIndentedString(createK8sCluster)).append("\n");
     sb.append("}");
     return sb.toString();

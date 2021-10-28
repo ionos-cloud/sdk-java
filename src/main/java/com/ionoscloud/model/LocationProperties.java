@@ -29,21 +29,25 @@ import java.util.List;
 /**
  * LocationProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class LocationProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_FEATURES = "features";
   @SerializedName(SERIALIZED_NAME_FEATURES)
   private List<String> features = null;
 
+
   public static final String SERIALIZED_NAME_IMAGE_ALIASES = "imageAliases";
   @SerializedName(SERIALIZED_NAME_IMAGE_ALIASES)
   private List<String> imageAliases = null;
 
+  
 
   public LocationProperties name(String name) {
     
@@ -68,6 +72,7 @@ public class LocationProperties {
   }
 
 
+
    /**
    * List of features supported by the location
    * @return features
@@ -83,6 +88,7 @@ public class LocationProperties {
   public void setFeatures(List<String> features) {
     this.features = features;
   }
+
 
 
    /**
@@ -121,8 +127,11 @@ public class LocationProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LocationProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    features: ").append(toIndentedString(features)).append("\n");
+
     sb.append("    imageAliases: ").append(toIndentedString(imageAliases)).append("\n");
     sb.append("}");
     return sb.toString();

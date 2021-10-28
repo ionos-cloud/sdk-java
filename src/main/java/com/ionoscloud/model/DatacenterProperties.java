@@ -29,33 +29,40 @@ import java.util.List;
 /**
  * DatacenterProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class DatacenterProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
+
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
   private String location;
+
 
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
   private Integer version;
 
+
   public static final String SERIALIZED_NAME_FEATURES = "features";
   @SerializedName(SERIALIZED_NAME_FEATURES)
   private List<String> features = null;
+
 
   public static final String SERIALIZED_NAME_SEC_AUTH_PROTECTION = "secAuthProtection";
   @SerializedName(SERIALIZED_NAME_SEC_AUTH_PROTECTION)
   private Boolean secAuthProtection;
 
+  
 
   public DatacenterProperties name(String name) {
     
@@ -78,6 +85,7 @@ public class DatacenterProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public DatacenterProperties description(String description) {
@@ -103,6 +111,7 @@ public class DatacenterProperties {
   }
 
 
+
   public DatacenterProperties location(String location) {
     
     this.location = location;
@@ -125,6 +134,7 @@ public class DatacenterProperties {
   }
 
 
+
    /**
    * The version of that Data Center. Gets incremented with every change
    * @return version
@@ -142,6 +152,7 @@ public class DatacenterProperties {
   }
 
 
+
    /**
    * List of features supported by the location this data center is part of
    * @return features
@@ -157,6 +168,7 @@ public class DatacenterProperties {
   public void setFeatures(List<String> features) {
     this.features = features;
   }
+
 
 
   public DatacenterProperties secAuthProtection(Boolean secAuthProtection) {
@@ -201,11 +213,17 @@ public class DatacenterProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DatacenterProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
+
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
+
     sb.append("    features: ").append(toIndentedString(features)).append("\n");
+
     sb.append("    secAuthProtection: ").append(toIndentedString(secAuthProtection)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -28,21 +28,25 @@ import java.net.URI;
 /**
  * Info
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class Info {
+  
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
+
   public static final String SERIALIZED_NAME_VERSION = "version";
   @SerializedName(SERIALIZED_NAME_VERSION)
   private String version;
 
+  
 
    /**
    * API entry point
@@ -61,6 +65,7 @@ public class Info {
   }
 
 
+
    /**
    * Name of the API
    * @return name
@@ -76,6 +81,7 @@ public class Info {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
    /**
@@ -114,8 +120,11 @@ public class Info {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Info {\n");
+    
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -31,25 +31,30 @@ import java.io.IOException;
 /**
  * DataCenterEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class DataCenterEntities {
+  
   public static final String SERIALIZED_NAME_SERVERS = "servers";
   @SerializedName(SERIALIZED_NAME_SERVERS)
   private Servers servers;
+
 
   public static final String SERIALIZED_NAME_VOLUMES = "volumes";
   @SerializedName(SERIALIZED_NAME_VOLUMES)
   private Volumes volumes;
 
+
   public static final String SERIALIZED_NAME_LOADBALANCERS = "loadbalancers";
   @SerializedName(SERIALIZED_NAME_LOADBALANCERS)
   private Loadbalancers loadbalancers;
+
 
   public static final String SERIALIZED_NAME_LANS = "lans";
   @SerializedName(SERIALIZED_NAME_LANS)
   private Lans lans;
 
+  
 
   public DataCenterEntities servers(Servers servers) {
     
@@ -72,6 +77,7 @@ public class DataCenterEntities {
   public void setServers(Servers servers) {
     this.servers = servers;
   }
+
 
 
   public DataCenterEntities volumes(Volumes volumes) {
@@ -97,6 +103,7 @@ public class DataCenterEntities {
   }
 
 
+
   public DataCenterEntities loadbalancers(Loadbalancers loadbalancers) {
     
     this.loadbalancers = loadbalancers;
@@ -118,6 +125,7 @@ public class DataCenterEntities {
   public void setLoadbalancers(Loadbalancers loadbalancers) {
     this.loadbalancers = loadbalancers;
   }
+
 
 
   public DataCenterEntities lans(Lans lans) {
@@ -162,9 +170,13 @@ public class DataCenterEntities {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DataCenterEntities {\n");
+    
     sb.append("    servers: ").append(toIndentedString(servers)).append("\n");
+
     sb.append("    volumes: ").append(toIndentedString(volumes)).append("\n");
+
     sb.append("    loadbalancers: ").append(toIndentedString(loadbalancers)).append("\n");
+
     sb.append("    lans: ").append(toIndentedString(lans)).append("\n");
     sb.append("}");
     return sb.toString();

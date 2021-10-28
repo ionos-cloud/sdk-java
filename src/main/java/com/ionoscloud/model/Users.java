@@ -20,11 +20,13 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ionoscloud.model.PaginationLinks;
 import com.ionoscloud.model.Type;
 import com.ionoscloud.model.User;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,25 +34,45 @@ import java.util.List;
 /**
  * Users
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class Users {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private Type type;
 
+
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
   private List<User> items = null;
 
+
+  public static final String SERIALIZED_NAME_OFFSET = "offset";
+  @SerializedName(SERIALIZED_NAME_OFFSET)
+  private BigDecimal offset;
+
+
+  public static final String SERIALIZED_NAME_LIMIT = "limit";
+  @SerializedName(SERIALIZED_NAME_LIMIT)
+  private BigDecimal limit;
+
+
+  public static final String SERIALIZED_NAME_LINKS = "_links";
+  @SerializedName(SERIALIZED_NAME_LINKS)
+  private PaginationLinks links;
+
+  
 
    /**
    * The resource&#39;s unique identifier
@@ -67,6 +89,7 @@ public class Users {
   public void setId(String id) {
     this.id = id;
   }
+
 
 
   public Users type(Type type) {
@@ -92,6 +115,7 @@ public class Users {
   }
 
 
+
    /**
    * URL to the object representation (absolute path)
    * @return href
@@ -107,6 +131,7 @@ public class Users {
   public void setHref(URI href) {
     this.href = href;
   }
+
 
 
    /**
@@ -126,6 +151,78 @@ public class Users {
   }
 
 
+
+  public Users offset(BigDecimal offset) {
+    
+    this.offset = offset;
+    return this;
+  }
+
+   /**
+   * the offset (if specified in the request)
+   * @return offset
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "0", value = "the offset (if specified in the request)")
+
+  public BigDecimal getOffset() {
+    return offset;
+  }
+
+
+  public void setOffset(BigDecimal offset) {
+    this.offset = offset;
+  }
+
+
+
+  public Users limit(BigDecimal limit) {
+    
+    this.limit = limit;
+    return this;
+  }
+
+   /**
+   * the limit (if specified in the request)
+   * @return limit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "1000", value = "the limit (if specified in the request)")
+
+  public BigDecimal getLimit() {
+    return limit;
+  }
+
+
+  public void setLimit(BigDecimal limit) {
+    this.limit = limit;
+  }
+
+
+
+  public Users links(PaginationLinks links) {
+    
+    this.links = links;
+    return this;
+  }
+
+   /**
+   * Get links
+   * @return links
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public PaginationLinks getLinks() {
+    return links;
+  }
+
+
+  public void setLinks(PaginationLinks links) {
+    this.links = links;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -135,7 +232,7 @@ public class Users {
       return false;
     }
     Users users = (Users) o;
-    return Objects.equals(this.id, users.id) && Objects.equals(this.type, users.type) && Objects.equals(this.href, users.href) && Objects.equals(this.items, users.items);
+    return Objects.equals(this.id, users.id) && Objects.equals(this.type, users.type) && Objects.equals(this.href, users.href) && Objects.equals(this.items, users.items) && Objects.equals(this.offset, users.offset) && Objects.equals(this.limit, users.limit) && Objects.equals(this.links, users.links);
   }
 
 
@@ -145,10 +242,20 @@ public class Users {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Users {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
+
+    sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+
+    sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
+
+    sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("}");
     return sb.toString();
   }

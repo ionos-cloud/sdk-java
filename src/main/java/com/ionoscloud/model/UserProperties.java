@@ -27,41 +27,50 @@ import java.io.IOException;
 /**
  * UserProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class UserProperties {
+  
   public static final String SERIALIZED_NAME_FIRSTNAME = "firstname";
   @SerializedName(SERIALIZED_NAME_FIRSTNAME)
   private String firstname;
+
 
   public static final String SERIALIZED_NAME_LASTNAME = "lastname";
   @SerializedName(SERIALIZED_NAME_LASTNAME)
   private String lastname;
 
+
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
   private String email;
+
 
   public static final String SERIALIZED_NAME_ADMINISTRATOR = "administrator";
   @SerializedName(SERIALIZED_NAME_ADMINISTRATOR)
   private Boolean administrator;
 
+
   public static final String SERIALIZED_NAME_FORCE_SEC_AUTH = "forceSecAuth";
   @SerializedName(SERIALIZED_NAME_FORCE_SEC_AUTH)
   private Boolean forceSecAuth;
+
 
   public static final String SERIALIZED_NAME_SEC_AUTH_ACTIVE = "secAuthActive";
   @SerializedName(SERIALIZED_NAME_SEC_AUTH_ACTIVE)
   private Boolean secAuthActive;
 
+
   public static final String SERIALIZED_NAME_S3_CANONICAL_USER_ID = "s3CanonicalUserId";
   @SerializedName(SERIALIZED_NAME_S3_CANONICAL_USER_ID)
   private String s3CanonicalUserId;
+
 
   public static final String SERIALIZED_NAME_ACTIVE = "active";
   @SerializedName(SERIALIZED_NAME_ACTIVE)
   private Boolean active;
 
+  
 
   public UserProperties firstname(String firstname) {
     
@@ -84,6 +93,7 @@ public class UserProperties {
   public void setFirstname(String firstname) {
     this.firstname = firstname;
   }
+
 
 
   public UserProperties lastname(String lastname) {
@@ -109,6 +119,7 @@ public class UserProperties {
   }
 
 
+
   public UserProperties email(String email) {
     
     this.email = email;
@@ -130,6 +141,7 @@ public class UserProperties {
   public void setEmail(String email) {
     this.email = email;
   }
+
 
 
   public UserProperties administrator(Boolean administrator) {
@@ -155,6 +167,7 @@ public class UserProperties {
   }
 
 
+
   public UserProperties forceSecAuth(Boolean forceSecAuth) {
     
     this.forceSecAuth = forceSecAuth;
@@ -176,6 +189,7 @@ public class UserProperties {
   public void setForceSecAuth(Boolean forceSecAuth) {
     this.forceSecAuth = forceSecAuth;
   }
+
 
 
   public UserProperties secAuthActive(Boolean secAuthActive) {
@@ -201,6 +215,7 @@ public class UserProperties {
   }
 
 
+
   public UserProperties s3CanonicalUserId(String s3CanonicalUserId) {
     
     this.s3CanonicalUserId = s3CanonicalUserId;
@@ -222,6 +237,7 @@ public class UserProperties {
   public void setS3CanonicalUserId(String s3CanonicalUserId) {
     this.s3CanonicalUserId = s3CanonicalUserId;
   }
+
 
 
   public UserProperties active(Boolean active) {
@@ -266,13 +282,21 @@ public class UserProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserProperties {\n");
+    
     sb.append("    firstname: ").append(toIndentedString(firstname)).append("\n");
+
     sb.append("    lastname: ").append(toIndentedString(lastname)).append("\n");
+
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+
     sb.append("    administrator: ").append(toIndentedString(administrator)).append("\n");
+
     sb.append("    forceSecAuth: ").append(toIndentedString(forceSecAuth)).append("\n");
+
     sb.append("    secAuthActive: ").append(toIndentedString(secAuthActive)).append("\n");
+
     sb.append("    s3CanonicalUserId: ").append(toIndentedString(s3CanonicalUserId)).append("\n");
+
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
     sb.append("}");
     return sb.toString();

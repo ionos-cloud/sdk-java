@@ -27,77 +27,95 @@ import java.io.IOException;
 /**
  * ResourceLimits
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class ResourceLimits {
+  
   public static final String SERIALIZED_NAME_CORES_PER_SERVER = "coresPerServer";
   @SerializedName(SERIALIZED_NAME_CORES_PER_SERVER)
   private Integer coresPerServer;
+
 
   public static final String SERIALIZED_NAME_CORES_PER_CONTRACT = "coresPerContract";
   @SerializedName(SERIALIZED_NAME_CORES_PER_CONTRACT)
   private Integer coresPerContract;
 
+
   public static final String SERIALIZED_NAME_CORES_PROVISIONED = "coresProvisioned";
   @SerializedName(SERIALIZED_NAME_CORES_PROVISIONED)
   private Integer coresProvisioned;
+
 
   public static final String SERIALIZED_NAME_RAM_PER_SERVER = "ramPerServer";
   @SerializedName(SERIALIZED_NAME_RAM_PER_SERVER)
   private Integer ramPerServer;
 
+
   public static final String SERIALIZED_NAME_RAM_PER_CONTRACT = "ramPerContract";
   @SerializedName(SERIALIZED_NAME_RAM_PER_CONTRACT)
   private Integer ramPerContract;
+
 
   public static final String SERIALIZED_NAME_RAM_PROVISIONED = "ramProvisioned";
   @SerializedName(SERIALIZED_NAME_RAM_PROVISIONED)
   private Integer ramProvisioned;
 
+
   public static final String SERIALIZED_NAME_HDD_LIMIT_PER_VOLUME = "hddLimitPerVolume";
   @SerializedName(SERIALIZED_NAME_HDD_LIMIT_PER_VOLUME)
   private Long hddLimitPerVolume;
+
 
   public static final String SERIALIZED_NAME_HDD_LIMIT_PER_CONTRACT = "hddLimitPerContract";
   @SerializedName(SERIALIZED_NAME_HDD_LIMIT_PER_CONTRACT)
   private Long hddLimitPerContract;
 
+
   public static final String SERIALIZED_NAME_HDD_VOLUME_PROVISIONED = "hddVolumeProvisioned";
   @SerializedName(SERIALIZED_NAME_HDD_VOLUME_PROVISIONED)
   private Long hddVolumeProvisioned;
+
 
   public static final String SERIALIZED_NAME_SSD_LIMIT_PER_VOLUME = "ssdLimitPerVolume";
   @SerializedName(SERIALIZED_NAME_SSD_LIMIT_PER_VOLUME)
   private Long ssdLimitPerVolume;
 
+
   public static final String SERIALIZED_NAME_SSD_LIMIT_PER_CONTRACT = "ssdLimitPerContract";
   @SerializedName(SERIALIZED_NAME_SSD_LIMIT_PER_CONTRACT)
   private Long ssdLimitPerContract;
+
 
   public static final String SERIALIZED_NAME_SSD_VOLUME_PROVISIONED = "ssdVolumeProvisioned";
   @SerializedName(SERIALIZED_NAME_SSD_VOLUME_PROVISIONED)
   private Long ssdVolumeProvisioned;
 
+
   public static final String SERIALIZED_NAME_RESERVABLE_IPS = "reservableIps";
   @SerializedName(SERIALIZED_NAME_RESERVABLE_IPS)
   private Integer reservableIps;
+
 
   public static final String SERIALIZED_NAME_RESERVED_IPS_ON_CONTRACT = "reservedIpsOnContract";
   @SerializedName(SERIALIZED_NAME_RESERVED_IPS_ON_CONTRACT)
   private Integer reservedIpsOnContract;
 
+
   public static final String SERIALIZED_NAME_RESERVED_IPS_IN_USE = "reservedIpsInUse";
   @SerializedName(SERIALIZED_NAME_RESERVED_IPS_IN_USE)
   private Integer reservedIpsInUse;
+
 
   public static final String SERIALIZED_NAME_K8S_CLUSTER_LIMIT_TOTAL = "k8sClusterLimitTotal";
   @SerializedName(SERIALIZED_NAME_K8S_CLUSTER_LIMIT_TOTAL)
   private Integer k8sClusterLimitTotal;
 
+
   public static final String SERIALIZED_NAME_K8S_CLUSTERS_PROVISIONED = "k8sClustersProvisioned";
   @SerializedName(SERIALIZED_NAME_K8S_CLUSTERS_PROVISIONED)
   private Integer k8sClustersProvisioned;
 
+  
 
   public ResourceLimits coresPerServer(Integer coresPerServer) {
     
@@ -119,6 +137,7 @@ public class ResourceLimits {
   public void setCoresPerServer(Integer coresPerServer) {
     this.coresPerServer = coresPerServer;
   }
+
 
 
   public ResourceLimits coresPerContract(Integer coresPerContract) {
@@ -143,6 +162,7 @@ public class ResourceLimits {
   }
 
 
+
   public ResourceLimits coresProvisioned(Integer coresProvisioned) {
     
     this.coresProvisioned = coresProvisioned;
@@ -163,6 +183,7 @@ public class ResourceLimits {
   public void setCoresProvisioned(Integer coresProvisioned) {
     this.coresProvisioned = coresProvisioned;
   }
+
 
 
   public ResourceLimits ramPerServer(Integer ramPerServer) {
@@ -187,6 +208,7 @@ public class ResourceLimits {
   }
 
 
+
   public ResourceLimits ramPerContract(Integer ramPerContract) {
     
     this.ramPerContract = ramPerContract;
@@ -207,6 +229,7 @@ public class ResourceLimits {
   public void setRamPerContract(Integer ramPerContract) {
     this.ramPerContract = ramPerContract;
   }
+
 
 
   public ResourceLimits ramProvisioned(Integer ramProvisioned) {
@@ -231,6 +254,7 @@ public class ResourceLimits {
   }
 
 
+
   public ResourceLimits hddLimitPerVolume(Long hddLimitPerVolume) {
     
     this.hddLimitPerVolume = hddLimitPerVolume;
@@ -251,6 +275,7 @@ public class ResourceLimits {
   public void setHddLimitPerVolume(Long hddLimitPerVolume) {
     this.hddLimitPerVolume = hddLimitPerVolume;
   }
+
 
 
   public ResourceLimits hddLimitPerContract(Long hddLimitPerContract) {
@@ -275,6 +300,7 @@ public class ResourceLimits {
   }
 
 
+
   public ResourceLimits hddVolumeProvisioned(Long hddVolumeProvisioned) {
     
     this.hddVolumeProvisioned = hddVolumeProvisioned;
@@ -295,6 +321,7 @@ public class ResourceLimits {
   public void setHddVolumeProvisioned(Long hddVolumeProvisioned) {
     this.hddVolumeProvisioned = hddVolumeProvisioned;
   }
+
 
 
   public ResourceLimits ssdLimitPerVolume(Long ssdLimitPerVolume) {
@@ -319,6 +346,7 @@ public class ResourceLimits {
   }
 
 
+
   public ResourceLimits ssdLimitPerContract(Long ssdLimitPerContract) {
     
     this.ssdLimitPerContract = ssdLimitPerContract;
@@ -339,6 +367,7 @@ public class ResourceLimits {
   public void setSsdLimitPerContract(Long ssdLimitPerContract) {
     this.ssdLimitPerContract = ssdLimitPerContract;
   }
+
 
 
   public ResourceLimits ssdVolumeProvisioned(Long ssdVolumeProvisioned) {
@@ -363,6 +392,7 @@ public class ResourceLimits {
   }
 
 
+
   public ResourceLimits reservableIps(Integer reservableIps) {
     
     this.reservableIps = reservableIps;
@@ -383,6 +413,7 @@ public class ResourceLimits {
   public void setReservableIps(Integer reservableIps) {
     this.reservableIps = reservableIps;
   }
+
 
 
   public ResourceLimits reservedIpsOnContract(Integer reservedIpsOnContract) {
@@ -407,6 +438,7 @@ public class ResourceLimits {
   }
 
 
+
   public ResourceLimits reservedIpsInUse(Integer reservedIpsInUse) {
     
     this.reservedIpsInUse = reservedIpsInUse;
@@ -429,6 +461,7 @@ public class ResourceLimits {
   }
 
 
+
   public ResourceLimits k8sClusterLimitTotal(Integer k8sClusterLimitTotal) {
     
     this.k8sClusterLimitTotal = k8sClusterLimitTotal;
@@ -449,6 +482,7 @@ public class ResourceLimits {
   public void setK8sClusterLimitTotal(Integer k8sClusterLimitTotal) {
     this.k8sClusterLimitTotal = k8sClusterLimitTotal;
   }
+
 
 
   public ResourceLimits k8sClustersProvisioned(Integer k8sClustersProvisioned) {
@@ -492,22 +526,39 @@ public class ResourceLimits {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResourceLimits {\n");
+    
     sb.append("    coresPerServer: ").append(toIndentedString(coresPerServer)).append("\n");
+
     sb.append("    coresPerContract: ").append(toIndentedString(coresPerContract)).append("\n");
+
     sb.append("    coresProvisioned: ").append(toIndentedString(coresProvisioned)).append("\n");
+
     sb.append("    ramPerServer: ").append(toIndentedString(ramPerServer)).append("\n");
+
     sb.append("    ramPerContract: ").append(toIndentedString(ramPerContract)).append("\n");
+
     sb.append("    ramProvisioned: ").append(toIndentedString(ramProvisioned)).append("\n");
+
     sb.append("    hddLimitPerVolume: ").append(toIndentedString(hddLimitPerVolume)).append("\n");
+
     sb.append("    hddLimitPerContract: ").append(toIndentedString(hddLimitPerContract)).append("\n");
+
     sb.append("    hddVolumeProvisioned: ").append(toIndentedString(hddVolumeProvisioned)).append("\n");
+
     sb.append("    ssdLimitPerVolume: ").append(toIndentedString(ssdLimitPerVolume)).append("\n");
+
     sb.append("    ssdLimitPerContract: ").append(toIndentedString(ssdLimitPerContract)).append("\n");
+
     sb.append("    ssdVolumeProvisioned: ").append(toIndentedString(ssdVolumeProvisioned)).append("\n");
+
     sb.append("    reservableIps: ").append(toIndentedString(reservableIps)).append("\n");
+
     sb.append("    reservedIpsOnContract: ").append(toIndentedString(reservedIpsOnContract)).append("\n");
+
     sb.append("    reservedIpsInUse: ").append(toIndentedString(reservedIpsInUse)).append("\n");
+
     sb.append("    k8sClusterLimitTotal: ").append(toIndentedString(k8sClusterLimitTotal)).append("\n");
+
     sb.append("    k8sClustersProvisioned: ").append(toIndentedString(k8sClustersProvisioned)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -27,17 +27,20 @@ import java.io.IOException;
 /**
  * KubernetesAutoScaling
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class KubernetesAutoScaling {
+  
   public static final String SERIALIZED_NAME_MIN_NODE_COUNT = "minNodeCount";
   @SerializedName(SERIALIZED_NAME_MIN_NODE_COUNT)
   private Integer minNodeCount;
+
 
   public static final String SERIALIZED_NAME_MAX_NODE_COUNT = "maxNodeCount";
   @SerializedName(SERIALIZED_NAME_MAX_NODE_COUNT)
   private Integer maxNodeCount;
 
+  
 
   public KubernetesAutoScaling minNodeCount(Integer minNodeCount) {
     
@@ -60,6 +63,7 @@ public class KubernetesAutoScaling {
   public void setMinNodeCount(Integer minNodeCount) {
     this.minNodeCount = minNodeCount;
   }
+
 
 
   public KubernetesAutoScaling maxNodeCount(Integer maxNodeCount) {
@@ -104,7 +108,9 @@ public class KubernetesAutoScaling {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesAutoScaling {\n");
+    
     sb.append("    minNodeCount: ").append(toIndentedString(minNodeCount)).append("\n");
+
     sb.append("    maxNodeCount: ").append(toIndentedString(maxNodeCount)).append("\n");
     sb.append("}");
     return sb.toString();

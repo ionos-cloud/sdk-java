@@ -32,33 +32,40 @@ import java.net.URI;
 /**
  * LanPost
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class LanPost {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private Type type;
 
+
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
   private DatacenterElementMetadata metadata;
 
+
   public static final String SERIALIZED_NAME_ENTITIES = "entities";
   @SerializedName(SERIALIZED_NAME_ENTITIES)
   private LanEntities entities;
+
 
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private LanPropertiesPost properties;
 
+  
 
    /**
    * The resource&#39;s unique identifier
@@ -75,6 +82,7 @@ public class LanPost {
   public void setId(String id) {
     this.id = id;
   }
+
 
 
   public LanPost type(Type type) {
@@ -100,6 +108,7 @@ public class LanPost {
   }
 
 
+
    /**
    * URL to the object representation (absolute path)
    * @return href
@@ -115,6 +124,7 @@ public class LanPost {
   public void setHref(URI href) {
     this.href = href;
   }
+
 
 
   public LanPost metadata(DatacenterElementMetadata metadata) {
@@ -140,6 +150,7 @@ public class LanPost {
   }
 
 
+
   public LanPost entities(LanEntities entities) {
     
     this.entities = entities;
@@ -161,6 +172,7 @@ public class LanPost {
   public void setEntities(LanEntities entities) {
     this.entities = entities;
   }
+
 
 
   public LanPost properties(LanPropertiesPost properties) {
@@ -204,11 +216,17 @@ public class LanPost {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LanPost {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+
     sb.append("    entities: ").append(toIndentedString(entities)).append("\n");
+
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
     sb.append("}");
     return sb.toString();

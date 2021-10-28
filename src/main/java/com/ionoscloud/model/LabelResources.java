@@ -33,12 +33,14 @@ import java.util.List;
 /**
  * LabelResources
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-06-18T10:41:36.947Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-10-28T11:16:05.486Z[Etc/UTC]")
 
 public class LabelResources {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   /**
    * The type of resource within a collection
@@ -64,8 +66,9 @@ public class LabelResources {
     }
 
     public static TypeEnum fromValue(String value) {
+
       for (TypeEnum b : TypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
@@ -90,26 +93,32 @@ public class LabelResources {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private TypeEnum type;
 
+
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
   private List<LabelResource> items = null;
 
+
   public static final String SERIALIZED_NAME_OFFSET = "offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
   private BigDecimal offset;
+
 
   public static final String SERIALIZED_NAME_LIMIT = "limit";
   @SerializedName(SERIALIZED_NAME_LIMIT)
   private BigDecimal limit;
 
+
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
   private PaginationLinks links;
 
+  
 
    /**
    * Unique representation for Label as a collection on a resource.
@@ -126,6 +135,7 @@ public class LabelResources {
   public void setId(String id) {
     this.id = id;
   }
+
 
 
    /**
@@ -145,6 +155,7 @@ public class LabelResources {
   }
 
 
+
    /**
    * URL to the collection representation (absolute path)
    * @return href
@@ -162,6 +173,7 @@ public class LabelResources {
   }
 
 
+
    /**
    * Array of items in that collection
    * @return items
@@ -177,6 +189,7 @@ public class LabelResources {
   public void setItems(List<LabelResource> items) {
     this.items = items;
   }
+
 
 
   public LabelResources offset(BigDecimal offset) {
@@ -202,6 +215,7 @@ public class LabelResources {
   }
 
 
+
   public LabelResources limit(BigDecimal limit) {
     
     this.limit = limit;
@@ -223,6 +237,7 @@ public class LabelResources {
   public void setLimit(BigDecimal limit) {
     this.limit = limit;
   }
+
 
 
   public LabelResources links(PaginationLinks links) {
@@ -267,12 +282,19 @@ public class LabelResources {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LabelResources {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
+
     sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+
     sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("}");
     return sb.toString();
