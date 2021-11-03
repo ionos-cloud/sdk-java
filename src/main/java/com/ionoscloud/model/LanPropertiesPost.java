@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * LanPropertiesPost
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-01T15:06:52.944Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T14:46:34.743Z[Etc/UTC]")
 
 public class LanPropertiesPost {
   
