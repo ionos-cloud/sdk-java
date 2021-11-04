@@ -30,7 +30,7 @@ import java.net.URI;
 /**
  * KubernetesNodePoolForPost
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-04T10:04:07.407Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-04T10:08:17.736Z[Etc/UTC]")
 
 public class KubernetesNodePoolForPost {
   
