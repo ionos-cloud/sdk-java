@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * GroupMembers
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-03T14:46:34.743Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-04T09:29:15.694Z[Etc/UTC]")
 
 public class GroupMembers {
   
