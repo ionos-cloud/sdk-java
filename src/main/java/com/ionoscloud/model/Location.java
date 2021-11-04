@@ -31,7 +31,7 @@ import java.net.URI;
 /**
  * Location
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-04T09:29:15.694Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-04T10:04:07.407Z[Etc/UTC]")
 
 public class Location {
   
