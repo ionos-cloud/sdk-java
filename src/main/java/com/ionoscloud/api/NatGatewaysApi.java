@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -68,22 +68,22 @@ public class NatGatewaysApi {
 
     /**
      * Build call for datacentersNatgatewaysDelete
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysDeleteCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysDeleteCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -128,7 +128,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysDeleteValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysDeleteValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -147,93 +147,89 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Remove a NAT gateway
-     * Removes the specified NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @return Object
+     * Delete NAT Gateways
+     * Remove the specified NAT Gateway from the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public Object datacentersNatgatewaysDelete(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<Object> localVarResp = datacentersNatgatewaysDeleteWithHttpInfo(datacenterId, natGatewayId, pretty, depth, xContractNumber);
-        return localVarResp.getData();
+    public void datacentersNatgatewaysDelete(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        datacentersNatgatewaysDeleteWithHttpInfo(datacenterId, natGatewayId, pretty, depth, xContractNumber);
     }
 
     /**
-     * Remove a NAT gateway
-     * Removes the specified NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @return ApiResponse&lt;Object&gt;
+     * Delete NAT Gateways
+     * Remove the specified NAT Gateway from the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> datacentersNatgatewaysDeleteWithHttpInfo(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+    public ApiResponse<Void> datacentersNatgatewaysDeleteWithHttpInfo(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
         okhttp3.Call localVarCall = datacentersNatgatewaysDeleteValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, xContractNumber, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        return localVarApiClient.execute(localVarCall);
     }
 
     /**
-     * Remove a NAT gateway (asynchronously)
-     * Removes the specified NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Delete NAT Gateways (asynchronously)
+     * Remove the specified NAT Gateway from the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysDeleteAsync(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysDeleteAsync(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = datacentersNatgatewaysDeleteValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, xContractNumber, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
      * Build call for datacentersNatgatewaysFindByNatGatewayId
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFindByNatGatewayIdCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFindByNatGatewayIdCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -278,7 +274,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFindByNatGatewayIdValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFindByNatGatewayIdValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -297,20 +293,20 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Retrieve a NAT gateway
-     * Retrieves the attributes of a given NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve NAT Gateways
+     * Retrieve the properties of the specified NAT Gateway within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return NatGateway
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public NatGateway datacentersNatgatewaysFindByNatGatewayId(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -319,20 +315,20 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Retrieve a NAT gateway
-     * Retrieves the attributes of a given NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve NAT Gateways
+     * Retrieve the properties of the specified NAT Gateway within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;NatGateway&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<NatGateway> datacentersNatgatewaysFindByNatGatewayIdWithHttpInfo(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -342,21 +338,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Retrieve a NAT gateway (asynchronously)
-     * Retrieves the attributes of a given NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve NAT Gateways (asynchronously)
+     * Retrieve the properties of the specified NAT Gateway within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysFindByNatGatewayIdAsync(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
@@ -368,22 +364,22 @@ public class NatGatewaysApi {
     }
     /**
      * Build call for datacentersNatgatewaysFlowlogsDelete
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsDeleteCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsDeleteCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<Void> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -425,7 +421,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFlowlogsDeleteValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFlowlogsDeleteValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<Void> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -449,93 +445,89 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Remove Flow Log from NAT Gateway
-     * This will remove a flow log from the NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @return Object
+     * Delete NAT Gateway Flow Logs
+     * Delete the specified NAT Gateway Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public Object datacentersNatgatewaysFlowlogsDelete(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth) throws ApiException {
-        ApiResponse<Object> localVarResp = datacentersNatgatewaysFlowlogsDeleteWithHttpInfo(datacenterId, natGatewayId, flowLogId, pretty, depth);
-        return localVarResp.getData();
+    public void datacentersNatgatewaysFlowlogsDelete(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth) throws ApiException {
+        datacentersNatgatewaysFlowlogsDeleteWithHttpInfo(datacenterId, natGatewayId, flowLogId, pretty, depth);
     }
 
     /**
-     * Remove Flow Log from NAT Gateway
-     * This will remove a flow log from the NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @return ApiResponse&lt;Object&gt;
+     * Delete NAT Gateway Flow Logs
+     * Delete the specified NAT Gateway Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> datacentersNatgatewaysFlowlogsDeleteWithHttpInfo(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth) throws ApiException {
+    public ApiResponse<Void> datacentersNatgatewaysFlowlogsDeleteWithHttpInfo(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth) throws ApiException {
         okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsDeleteValidateBeforeCall(datacenterId, natGatewayId, flowLogId, pretty, depth, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        return localVarApiClient.execute(localVarCall);
     }
 
     /**
-     * Remove Flow Log from NAT Gateway (asynchronously)
-     * This will remove a flow log from the NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * Delete NAT Gateway Flow Logs (asynchronously)
+     * Delete the specified NAT Gateway Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsDeleteAsync(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsDeleteAsync(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsDeleteValidateBeforeCall(datacenterId, natGatewayId, flowLogId, pretty, depth, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
      * Build call for datacentersNatgatewaysFlowlogsFindByFlowLogId
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsFindByFlowLogIdCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsFindByFlowLogIdCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -577,7 +569,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFlowlogsFindByFlowLogIdValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFlowlogsFindByFlowLogIdValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -601,20 +593,20 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Retrieve a Flow Log of the NAT Gateway
-     * This will return a Flow Log of the NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * Retrieve NAT Gateway Flow Logs
+     * Retrieve the specified NAT Gateway Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public FlowLog datacentersNatgatewaysFlowlogsFindByFlowLogId(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth) throws ApiException {
@@ -623,20 +615,20 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Retrieve a Flow Log of the NAT Gateway
-     * This will return a Flow Log of the NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * Retrieve NAT Gateway Flow Logs
+     * Retrieve the specified NAT Gateway Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<FlowLog> datacentersNatgatewaysFlowlogsFindByFlowLogIdWithHttpInfo(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth) throws ApiException {
@@ -646,21 +638,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Retrieve a Flow Log of the NAT Gateway (asynchronously)
-     * This will return a Flow Log of the NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * Retrieve NAT Gateway Flow Logs (asynchronously)
+     * Retrieve the specified NAT Gateway Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysFlowlogsFindByFlowLogIdAsync(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
@@ -672,23 +664,23 @@ public class NatGatewaysApi {
     }
     /**
      * Build call for datacentersNatgatewaysFlowlogsGet
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsGetCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsGetCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit, final ApiCallback<FlowLogs> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -737,7 +729,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFlowlogsGetValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFlowlogsGetValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit, final ApiCallback<FlowLogs> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -757,20 +749,20 @@ public class NatGatewaysApi {
 
     /**
      * List NAT Gateway Flow Logs
-     * You can retrieve a list of Flow Logs of the NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * List all the Flow Logs for the specified NAT Gateway.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @return FlowLogs
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public FlowLogs datacentersNatgatewaysFlowlogsGet(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit) throws ApiException {
@@ -780,20 +772,20 @@ public class NatGatewaysApi {
 
     /**
      * List NAT Gateway Flow Logs
-     * You can retrieve a list of Flow Logs of the NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * List all the Flow Logs for the specified NAT Gateway.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @return ApiResponse&lt;FlowLogs&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<FlowLogs> datacentersNatgatewaysFlowlogsGetWithHttpInfo(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit) throws ApiException {
@@ -804,21 +796,21 @@ public class NatGatewaysApi {
 
     /**
      * List NAT Gateway Flow Logs (asynchronously)
-     * You can retrieve a list of Flow Logs of the NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * List all the Flow Logs for the specified NAT Gateway.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysFlowlogsGetAsync(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit, final ApiCallback<FlowLogs> _callback) throws ApiException {
@@ -830,23 +822,23 @@ public class NatGatewaysApi {
     }
     /**
      * Build call for datacentersNatgatewaysFlowlogsPatch
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param natGatewayFlowLogProperties Properties of a Flow Log to be updated (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param natGatewayFlowLogProperties The properties of the Flow Log to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsPatchCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogProperties natGatewayFlowLogProperties, Boolean pretty, Integer depth, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsPatchCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogProperties natGatewayFlowLogProperties, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
         Object localVarPostBody = natGatewayFlowLogProperties;
 
         // create path and map variables
@@ -888,7 +880,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFlowlogsPatchValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogProperties natGatewayFlowLogProperties, Boolean pretty, Integer depth, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFlowlogsPatchValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogProperties natGatewayFlowLogProperties, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -917,21 +909,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Partially modify a Flow Log of the NAT Gateway
-     * You can use to partially update a Flow Log of a NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param natGatewayFlowLogProperties Properties of a Flow Log to be updated (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * Partially modify NAT Gateway Flow Logs
+     * Update the properties of the specified NAT Gateway Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param natGatewayFlowLogProperties The properties of the Flow Log to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public FlowLog datacentersNatgatewaysFlowlogsPatch(String datacenterId, String natGatewayId, String flowLogId, FlowLogProperties natGatewayFlowLogProperties, Boolean pretty, Integer depth) throws ApiException {
@@ -940,21 +932,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Partially modify a Flow Log of the NAT Gateway
-     * You can use to partially update a Flow Log of a NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param natGatewayFlowLogProperties Properties of a Flow Log to be updated (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * Partially modify NAT Gateway Flow Logs
+     * Update the properties of the specified NAT Gateway Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param natGatewayFlowLogProperties The properties of the Flow Log to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<FlowLog> datacentersNatgatewaysFlowlogsPatchWithHttpInfo(String datacenterId, String natGatewayId, String flowLogId, FlowLogProperties natGatewayFlowLogProperties, Boolean pretty, Integer depth) throws ApiException {
@@ -964,22 +956,22 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Partially modify a Flow Log of the NAT Gateway (asynchronously)
-     * You can use to partially update a Flow Log of a NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param natGatewayFlowLogProperties Properties of a Flow Log to be updated (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * Partially modify NAT Gateway Flow Logs (asynchronously)
+     * Update the properties of the specified NAT Gateway Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param natGatewayFlowLogProperties The properties of the Flow Log to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysFlowlogsPatchAsync(String datacenterId, String natGatewayId, String flowLogId, FlowLogProperties natGatewayFlowLogProperties, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
@@ -991,22 +983,22 @@ public class NatGatewaysApi {
     }
     /**
      * Build call for datacentersNatgatewaysFlowlogsPost
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayFlowLog Flow Log to add on NAT Gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayFlowLog The Flow Log to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsPostCall(String datacenterId, String natGatewayId, FlowLog natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsPostCall(String datacenterId, String natGatewayId, FlowLog natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
         Object localVarPostBody = natGatewayFlowLog;
 
         // create path and map variables
@@ -1047,7 +1039,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFlowlogsPostValidateBeforeCall(String datacenterId, String natGatewayId, FlowLog natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFlowlogsPostValidateBeforeCall(String datacenterId, String natGatewayId, FlowLog natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1071,20 +1063,20 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Add a NAT Gateways Flow Log
-     * This will add a new Flow Log to the NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayFlowLog Flow Log to add on NAT Gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * Create NAT Gateway Flow Logs
+     * Add a new Flow Log for the specified NAT Gateway.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayFlowLog The Flow Log to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public FlowLog datacentersNatgatewaysFlowlogsPost(String datacenterId, String natGatewayId, FlowLog natGatewayFlowLog, Boolean pretty, Integer depth) throws ApiException {
@@ -1093,20 +1085,20 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Add a NAT Gateways Flow Log
-     * This will add a new Flow Log to the NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayFlowLog Flow Log to add on NAT Gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * Create NAT Gateway Flow Logs
+     * Add a new Flow Log for the specified NAT Gateway.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayFlowLog The Flow Log to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<FlowLog> datacentersNatgatewaysFlowlogsPostWithHttpInfo(String datacenterId, String natGatewayId, FlowLog natGatewayFlowLog, Boolean pretty, Integer depth) throws ApiException {
@@ -1116,21 +1108,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Add a NAT Gateways Flow Log (asynchronously)
-     * This will add a new Flow Log to the NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayFlowLog Flow Log to add on NAT Gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * Create NAT Gateway Flow Logs (asynchronously)
+     * Add a new Flow Log for the specified NAT Gateway.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayFlowLog The Flow Log to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysFlowlogsPostAsync(String datacenterId, String natGatewayId, FlowLog natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
@@ -1142,23 +1134,23 @@ public class NatGatewaysApi {
     }
     /**
      * Build call for datacentersNatgatewaysFlowlogsPut
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param natGatewayFlowLog Modified NAT Gateway Flow Log (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param natGatewayFlowLog The modified NAT Gateway Flow Log. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsPutCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogPut natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsPutCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogPut natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
         Object localVarPostBody = natGatewayFlowLog;
 
         // create path and map variables
@@ -1200,7 +1192,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFlowlogsPutValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogPut natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFlowlogsPutValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogPut natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1229,21 +1221,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Modify a Flow Log of the NAT Gateway
-     * You can use to update a Flow Log of the NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param natGatewayFlowLog Modified NAT Gateway Flow Log (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * Modify NAT Gateway Flow Logs
+     * Modify the specified NAT Gateway Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param natGatewayFlowLog The modified NAT Gateway Flow Log. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public FlowLog datacentersNatgatewaysFlowlogsPut(String datacenterId, String natGatewayId, String flowLogId, FlowLogPut natGatewayFlowLog, Boolean pretty, Integer depth) throws ApiException {
@@ -1252,21 +1244,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Modify a Flow Log of the NAT Gateway
-     * You can use to update a Flow Log of the NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param natGatewayFlowLog Modified NAT Gateway Flow Log (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * Modify NAT Gateway Flow Logs
+     * Modify the specified NAT Gateway Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param natGatewayFlowLog The modified NAT Gateway Flow Log. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<FlowLog> datacentersNatgatewaysFlowlogsPutWithHttpInfo(String datacenterId, String natGatewayId, String flowLogId, FlowLogPut natGatewayFlowLog, Boolean pretty, Integer depth) throws ApiException {
@@ -1276,22 +1268,22 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Modify a Flow Log of the NAT Gateway (asynchronously)
-     * You can use to update a Flow Log of the NAT Gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param flowLogId The unique ID of the flow log (required)
-     * @param natGatewayFlowLog Modified NAT Gateway Flow Log (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
+     * Modify NAT Gateway Flow Logs (asynchronously)
+     * Modify the specified NAT Gateway Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param natGatewayFlowLog The modified NAT Gateway Flow Log. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysFlowlogsPutAsync(String datacenterId, String natGatewayId, String flowLogId, FlowLogPut natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
@@ -1303,21 +1295,21 @@ public class NatGatewaysApi {
     }
     /**
      * Build call for datacentersNatgatewaysGet
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysGetCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysGetCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateways> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1361,7 +1353,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateways> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1376,18 +1368,18 @@ public class NatGatewaysApi {
 
     /**
      * List NAT Gateways
-     * Retrieve a list of NAT Gateways within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * List all NAT Gateways within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return NatGateways
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public NatGateways datacentersNatgatewaysGet(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1397,18 +1389,18 @@ public class NatGatewaysApi {
 
     /**
      * List NAT Gateways
-     * Retrieve a list of NAT Gateways within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * List all NAT Gateways within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;NatGateways&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<NatGateways> datacentersNatgatewaysGetWithHttpInfo(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1419,19 +1411,19 @@ public class NatGatewaysApi {
 
     /**
      * List NAT Gateways (asynchronously)
-     * Retrieve a list of NAT Gateways within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * List all NAT Gateways within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysGetAsync(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateways> _callback) throws ApiException {
@@ -1443,23 +1435,23 @@ public class NatGatewaysApi {
     }
     /**
      * Build call for datacentersNatgatewaysPatch
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayProperties NAT gateway properties to be updated (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayProperties The properties of the NAT Gateway to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysPatchCall(String datacenterId, String natGatewayId, NatGatewayProperties natGatewayProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysPatchCall(String datacenterId, String natGatewayId, NatGatewayProperties natGatewayProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
         Object localVarPostBody = natGatewayProperties;
 
         // create path and map variables
@@ -1504,7 +1496,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysPatchValidateBeforeCall(String datacenterId, String natGatewayId, NatGatewayProperties natGatewayProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysPatchValidateBeforeCall(String datacenterId, String natGatewayId, NatGatewayProperties natGatewayProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1528,21 +1520,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Partially update a NAT gateway
-     * Partially update the attributes of a given NAT gateway
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayProperties NAT gateway properties to be updated (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Partially modify NAT Gateways
+     * Update the properties of the specified NAT Gateway within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayProperties The properties of the NAT Gateway to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return NatGateway
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public NatGateway datacentersNatgatewaysPatch(String datacenterId, String natGatewayId, NatGatewayProperties natGatewayProperties, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1551,21 +1543,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Partially update a NAT gateway
-     * Partially update the attributes of a given NAT gateway
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayProperties NAT gateway properties to be updated (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Partially modify NAT Gateways
+     * Update the properties of the specified NAT Gateway within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayProperties The properties of the NAT Gateway to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;NatGateway&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<NatGateway> datacentersNatgatewaysPatchWithHttpInfo(String datacenterId, String natGatewayId, NatGatewayProperties natGatewayProperties, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1575,22 +1567,22 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Partially update a NAT gateway (asynchronously)
-     * Partially update the attributes of a given NAT gateway
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayProperties NAT gateway properties to be updated (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Partially modify NAT Gateways (asynchronously)
+     * Update the properties of the specified NAT Gateway within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayProperties The properties of the NAT Gateway to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysPatchAsync(String datacenterId, String natGatewayId, NatGatewayProperties natGatewayProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
@@ -1602,22 +1594,22 @@ public class NatGatewaysApi {
     }
     /**
      * Build call for datacentersNatgatewaysPost
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGateway NAT gateway to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGateway The NAT Gateway to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysPostCall(String datacenterId, NatGateway natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysPostCall(String datacenterId, NatGateway natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
         Object localVarPostBody = natGateway;
 
         // create path and map variables
@@ -1661,7 +1653,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysPostValidateBeforeCall(String datacenterId, NatGateway natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysPostValidateBeforeCall(String datacenterId, NatGateway natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1680,20 +1672,20 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create a NAT Gateway
-     * Creates a NAT Gateway within the datacenter. User should be the contract owner or a admin or a user with createInternetAccess privilege
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGateway NAT gateway to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Create NAT Gateways
+     * Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with &#39;createInternetAccess&#39; privileges.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGateway The NAT Gateway to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return NatGateway
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public NatGateway datacentersNatgatewaysPost(String datacenterId, NatGateway natGateway, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1702,20 +1694,20 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create a NAT Gateway
-     * Creates a NAT Gateway within the datacenter. User should be the contract owner or a admin or a user with createInternetAccess privilege
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGateway NAT gateway to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Create NAT Gateways
+     * Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with &#39;createInternetAccess&#39; privileges.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGateway The NAT Gateway to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;NatGateway&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<NatGateway> datacentersNatgatewaysPostWithHttpInfo(String datacenterId, NatGateway natGateway, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1725,21 +1717,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create a NAT Gateway (asynchronously)
-     * Creates a NAT Gateway within the datacenter. User should be the contract owner or a admin or a user with createInternetAccess privilege
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGateway NAT gateway to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Create NAT Gateways (asynchronously)
+     * Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with &#39;createInternetAccess&#39; privileges.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGateway The NAT Gateway to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysPostAsync(String datacenterId, NatGateway natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
@@ -1751,25 +1743,23 @@ public class NatGatewaysApi {
     }
     /**
      * Build call for datacentersNatgatewaysPut
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGateway Modified NAT Gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGateway The modified NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysPutCall(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysPutCall(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
         Object localVarPostBody = natGateway;
 
         // create path and map variables
@@ -1789,14 +1779,6 @@ public class NatGatewaysApi {
 
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
-        }
-
-        if (offset != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
-        }
-
-        if (limit != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
         }
 
         if (xContractNumber != null) {
@@ -1822,7 +1804,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysPutValidateBeforeCall(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysPutValidateBeforeCall(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1840,109 +1822,103 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysPutCall(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysPutCall(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Update a NAT gateway
-     * Update the attributes of a given NAT gateway
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGateway Modified NAT Gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * Modify NAT Gateways
+     * Modify the properties of the specified NAT Gateway within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGateway The modified NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return NatGateway
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public NatGateway datacentersNatgatewaysPut(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<NatGateway> localVarResp = datacentersNatgatewaysPutWithHttpInfo(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber, offset, limit);
+    public NatGateway datacentersNatgatewaysPut(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        ApiResponse<NatGateway> localVarResp = datacentersNatgatewaysPutWithHttpInfo(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber);
         return localVarResp.getData();
     }
 
     /**
-     * Update a NAT gateway
-     * Update the attributes of a given NAT gateway
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGateway Modified NAT Gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * Modify NAT Gateways
+     * Modify the properties of the specified NAT Gateway within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGateway The modified NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;NatGateway&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NatGateway> datacentersNatgatewaysPutWithHttpInfo(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = datacentersNatgatewaysPutValidateBeforeCall(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber, offset, limit, null);
+    public ApiResponse<NatGateway> datacentersNatgatewaysPutWithHttpInfo(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        okhttp3.Call localVarCall = datacentersNatgatewaysPutValidateBeforeCall(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber, null);
         Type localVarReturnType = new TypeToken<NatGateway>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Update a NAT gateway (asynchronously)
-     * Update the attributes of a given NAT gateway
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGateway Modified NAT Gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * Modify NAT Gateways (asynchronously)
+     * Modify the properties of the specified NAT Gateway within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGateway The modified NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysPutAsync(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<NatGateway> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysPutAsync(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysPutValidateBeforeCall(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysPutValidateBeforeCall(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber, _callback);
         Type localVarReturnType = new TypeToken<NatGateway>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for datacentersNatgatewaysRulesDelete
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesDeleteCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesDeleteCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1988,7 +1964,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysRulesDeleteValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysRulesDeleteValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2012,97 +1988,93 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Remove rule from NAT Gateway
-     * This will remove a rule from the NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @return Object
+     * Delete NAT Gateway rules
+     * Delete the specified NAT Gateway rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public Object datacentersNatgatewaysRulesDelete(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<Object> localVarResp = datacentersNatgatewaysRulesDeleteWithHttpInfo(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber);
-        return localVarResp.getData();
+    public void datacentersNatgatewaysRulesDelete(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        datacentersNatgatewaysRulesDeleteWithHttpInfo(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber);
     }
 
     /**
-     * Remove rule from NAT Gateway
-     * This will remove a rule from the NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @return ApiResponse&lt;Object&gt;
+     * Delete NAT Gateway rules
+     * Delete the specified NAT Gateway rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> datacentersNatgatewaysRulesDeleteWithHttpInfo(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+    public ApiResponse<Void> datacentersNatgatewaysRulesDeleteWithHttpInfo(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
         okhttp3.Call localVarCall = datacentersNatgatewaysRulesDeleteValidateBeforeCall(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        return localVarApiClient.execute(localVarCall);
     }
 
     /**
-     * Remove rule from NAT Gateway (asynchronously)
-     * This will remove a rule from the NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Delete NAT Gateway rules (asynchronously)
+     * Delete the specified NAT Gateway rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesDeleteAsync(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesDeleteAsync(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = datacentersNatgatewaysRulesDeleteValidateBeforeCall(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
      * Build call for datacentersNatgatewaysRulesFindByNatGatewayRuleId
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesFindByNatGatewayRuleIdCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesFindByNatGatewayRuleIdCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2148,7 +2120,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysRulesFindByNatGatewayRuleIdValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysRulesFindByNatGatewayRuleIdValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2172,21 +2144,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Retrieve a NAT Gateway Rule
-     * Retrieves the attributes of a given NAT gateway rule.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve NAT Gateway rules
+     * Retrieve the properties of the specified NAT Gateway rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return NatGatewayRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public NatGatewayRule datacentersNatgatewaysRulesFindByNatGatewayRuleId(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -2195,21 +2167,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Retrieve a NAT Gateway Rule
-     * Retrieves the attributes of a given NAT gateway rule.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve NAT Gateway rules
+     * Retrieve the properties of the specified NAT Gateway rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;NatGatewayRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<NatGatewayRule> datacentersNatgatewaysRulesFindByNatGatewayRuleIdWithHttpInfo(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -2219,22 +2191,22 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Retrieve a NAT Gateway Rule (asynchronously)
-     * Retrieves the attributes of a given NAT gateway rule.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve NAT Gateway rules (asynchronously)
+     * Retrieve the properties of the specified NAT Gateway rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysRulesFindByNatGatewayRuleIdAsync(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
@@ -2246,22 +2218,22 @@ public class NatGatewaysApi {
     }
     /**
      * Build call for datacentersNatgatewaysRulesGet
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesGetCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesGetCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRules> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2306,7 +2278,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysRulesGetValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysRulesGetValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRules> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2325,20 +2297,20 @@ public class NatGatewaysApi {
     }
 
     /**
-     * List NAT Gateways Rules
-     * Retrieve a list of rules of a NAT Gateway within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * List NAT Gateway rules
+     * List all rules for the specified NAT Gateway.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return NatGatewayRules
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public NatGatewayRules datacentersNatgatewaysRulesGet(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -2347,20 +2319,20 @@ public class NatGatewaysApi {
     }
 
     /**
-     * List NAT Gateways Rules
-     * Retrieve a list of rules of a NAT Gateway within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * List NAT Gateway rules
+     * List all rules for the specified NAT Gateway.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;NatGatewayRules&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<NatGatewayRules> datacentersNatgatewaysRulesGetWithHttpInfo(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -2370,21 +2342,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * List NAT Gateways Rules (asynchronously)
-     * Retrieve a list of rules of a NAT Gateway within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * List NAT Gateway rules (asynchronously)
+     * List all rules for the specified NAT Gateway.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysRulesGetAsync(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRules> _callback) throws ApiException {
@@ -2396,24 +2368,24 @@ public class NatGatewaysApi {
     }
     /**
      * Build call for datacentersNatgatewaysRulesPatch
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param natGatewayRuleProperties Properties of a NAT gateway rule to be updated (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param natGatewayRuleProperties The properties of the NAT Gateway rule to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesPatchCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRuleProperties natGatewayRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesPatchCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRuleProperties natGatewayRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
         Object localVarPostBody = natGatewayRuleProperties;
 
         // create path and map variables
@@ -2459,7 +2431,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysRulesPatchValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRuleProperties natGatewayRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysRulesPatchValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRuleProperties natGatewayRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2488,22 +2460,22 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Partially modify a rule of the NAT gateway
-     * You can use to partially update a rule of a NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param natGatewayRuleProperties Properties of a NAT gateway rule to be updated (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Partially modify NAT Gateway rules
+     * Update the properties of the specified NAT Gateway rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param natGatewayRuleProperties The properties of the NAT Gateway rule to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return NatGatewayRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public NatGatewayRule datacentersNatgatewaysRulesPatch(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRuleProperties natGatewayRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -2512,22 +2484,22 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Partially modify a rule of the NAT gateway
-     * You can use to partially update a rule of a NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param natGatewayRuleProperties Properties of a NAT gateway rule to be updated (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Partially modify NAT Gateway rules
+     * Update the properties of the specified NAT Gateway rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param natGatewayRuleProperties The properties of the NAT Gateway rule to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;NatGatewayRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<NatGatewayRule> datacentersNatgatewaysRulesPatchWithHttpInfo(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRuleProperties natGatewayRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -2537,23 +2509,23 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Partially modify a rule of the NAT gateway (asynchronously)
-     * You can use to partially update a rule of a NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param natGatewayRuleProperties Properties of a NAT gateway rule to be updated (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Partially modify NAT Gateway rules (asynchronously)
+     * Update the properties of the specified NAT Gateway rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param natGatewayRuleProperties The properties of the NAT Gateway rule to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysRulesPatchAsync(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRuleProperties natGatewayRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
@@ -2565,23 +2537,23 @@ public class NatGatewaysApi {
     }
     /**
      * Build call for datacentersNatgatewaysRulesPost
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRule NAT gateway rule to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRule The NAT Gateway rule to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesPostCall(String datacenterId, String natGatewayId, NatGatewayRule natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesPostCall(String datacenterId, String natGatewayId, NatGatewayRule natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
         Object localVarPostBody = natGatewayRule;
 
         // create path and map variables
@@ -2626,7 +2598,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysRulesPostValidateBeforeCall(String datacenterId, String natGatewayId, NatGatewayRule natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysRulesPostValidateBeforeCall(String datacenterId, String natGatewayId, NatGatewayRule natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2650,21 +2622,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create a NAT Gateway Rule
-     * Creates a rule within the NAT Gateway of a datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRule NAT gateway rule to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Create NAT Gateway rules
+     * Create a rule for the specified NAT Gateway.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRule The NAT Gateway rule to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return NatGatewayRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public NatGatewayRule datacentersNatgatewaysRulesPost(String datacenterId, String natGatewayId, NatGatewayRule natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -2673,21 +2645,21 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create a NAT Gateway Rule
-     * Creates a rule within the NAT Gateway of a datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRule NAT gateway rule to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Create NAT Gateway rules
+     * Create a rule for the specified NAT Gateway.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRule The NAT Gateway rule to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;NatGatewayRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<NatGatewayRule> datacentersNatgatewaysRulesPostWithHttpInfo(String datacenterId, String natGatewayId, NatGatewayRule natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -2697,22 +2669,22 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create a NAT Gateway Rule (asynchronously)
-     * Creates a rule within the NAT Gateway of a datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRule NAT gateway rule to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Create NAT Gateway rules (asynchronously)
+     * Create a rule for the specified NAT Gateway.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRule The NAT Gateway rule to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysRulesPostAsync(String datacenterId, String natGatewayId, NatGatewayRule natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
@@ -2724,24 +2696,24 @@ public class NatGatewaysApi {
     }
     /**
      * Build call for datacentersNatgatewaysRulesPut
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param natGatewayRule Modified NAT Gateway Rule (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param natGatewayRule The modified NAT Gateway rule. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesPutCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRulePut natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesPutCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRulePut natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
         Object localVarPostBody = natGatewayRule;
 
         // create path and map variables
@@ -2787,7 +2759,7 @@ public class NatGatewaysApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysRulesPutValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRulePut natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysRulesPutValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRulePut natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2816,22 +2788,22 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Modify a rule of the NAT gateway
-     * You can use to update a rule of the NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param natGatewayRule Modified NAT Gateway Rule (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Modify NAT Gateway rules
+     * Modify the specified NAT Gateway rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param natGatewayRule The modified NAT Gateway rule. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return NatGatewayRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public NatGatewayRule datacentersNatgatewaysRulesPut(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRulePut natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -2840,22 +2812,22 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Modify a rule of the NAT gateway
-     * You can use to update a rule of the NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param natGatewayRule Modified NAT Gateway Rule (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Modify NAT Gateway rules
+     * Modify the specified NAT Gateway rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param natGatewayRule The modified NAT Gateway rule. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;NatGatewayRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<NatGatewayRule> datacentersNatgatewaysRulesPutWithHttpInfo(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRulePut natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -2865,23 +2837,23 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Modify a rule of the NAT gateway (asynchronously)
-     * You can use to update a rule of the NAT gateway.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param natGatewayId The unique ID of the NAT gateway (required)
-     * @param natGatewayRuleId The unique ID of the NAT gateway rule (required)
-     * @param natGatewayRule Modified NAT Gateway Rule (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Modify NAT Gateway rules (asynchronously)
+     * Modify the specified NAT Gateway rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param natGatewayId The unique ID of the NAT Gateway. (required)
+     * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
+     * @param natGatewayRule The modified NAT Gateway rule. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersNatgatewaysRulesPutAsync(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRulePut natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {

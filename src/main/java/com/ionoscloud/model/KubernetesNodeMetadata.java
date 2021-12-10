@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * KubernetesNodeMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class KubernetesNodeMetadata {
   public static final String SERIALIZED_NAME_ETAG = "etag";
@@ -48,7 +48,6 @@ public class KubernetesNodeMetadata {
    */
   @JsonAdapter(StateEnum.Adapter.class)
   public enum StateEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     PROVISIONING("PROVISIONING"),
     
     PROVISIONED("PROVISIONED"),
@@ -77,12 +76,13 @@ public class KubernetesNodeMetadata {
     }
 
     public static StateEnum fromValue(String value) {
+
       for (StateEnum b : StateEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return StateEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<StateEnum> {
@@ -109,45 +109,54 @@ public class KubernetesNodeMetadata {
 
 
    /**
-   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
+   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
    * @return etag
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
+  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
 
   public String getEtag() {
     return etag;
   }
 
 
+  public void setEtag(String etag) {
+    this.etag = etag;
+  }
 
 
    /**
-   * The last time the resource was created
+   * The last time the resource was created.
    * @return createdDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource was created")
+  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource was created.")
 
   public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
 
 
+  public void setCreatedDate(OffsetDateTime createdDate) {
+    this.createdDate = createdDate;
+  }
 
 
    /**
-   * The last time the resource has been modified
+   * The last time the resource was modified.
    * @return lastModifiedDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource has been modified")
+  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource was modified.")
 
   public OffsetDateTime getLastModifiedDate() {
     return lastModifiedDate;
   }
 
 
+  public void setLastModifiedDate(OffsetDateTime lastModifiedDate) {
+    this.lastModifiedDate = lastModifiedDate;
+  }
 
 
    /**
@@ -162,20 +171,26 @@ public class KubernetesNodeMetadata {
   }
 
 
+  public void setState(StateEnum state) {
+    this.state = state;
+  }
 
 
    /**
-   * The last time the software updated on node.
+   * The last time the software was updated on the node.
    * @return lastSoftwareUpdatedDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the software updated on node.")
+  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the software was updated on the node.")
 
   public OffsetDateTime getLastSoftwareUpdatedDate() {
     return lastSoftwareUpdatedDate;
   }
 
 
+  public void setLastSoftwareUpdatedDate(OffsetDateTime lastSoftwareUpdatedDate) {
+    this.lastSoftwareUpdatedDate = lastSoftwareUpdatedDate;
+  }
 
 
   @Override

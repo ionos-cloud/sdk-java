@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * UserMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class UserMetadata {
   public static final String SERIALIZED_NAME_ETAG = "etag";
@@ -45,45 +45,54 @@ public class UserMetadata {
 
 
    /**
-   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
+   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
    * @return etag
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
+  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
 
   public String getEtag() {
     return etag;
   }
 
 
+  public void setEtag(String etag) {
+    this.etag = etag;
+  }
 
 
    /**
-   * time of creation of the user
+   * The time the user was created.
    * @return createdDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "time of creation of the user")
+  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The time the user was created.")
 
   public OffsetDateTime getCreatedDate() {
     return createdDate;
   }
 
 
+  public void setCreatedDate(OffsetDateTime createdDate) {
+    this.createdDate = createdDate;
+  }
 
 
    /**
-   * time of last login by the user
+   * The time of the last login by the user.
    * @return lastLogin
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "time of last login by the user")
+  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The time of the last login by the user.")
 
   public OffsetDateTime getLastLogin() {
     return lastLogin;
   }
 
 
+  public void setLastLogin(OffsetDateTime lastLogin) {
+    this.lastLogin = lastLogin;
+  }
 
 
   @Override

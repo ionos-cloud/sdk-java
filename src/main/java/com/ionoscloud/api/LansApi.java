@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -62,22 +62,22 @@ public class LansApi {
 
     /**
      * Build call for datacentersLansDelete
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLansDeleteCall(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLansDeleteCall(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -122,7 +122,7 @@ public class LansApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLansDeleteValidateBeforeCall(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLansDeleteValidateBeforeCall(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -141,93 +141,89 @@ public class LansApi {
     }
 
     /**
-     * Delete a Lan.
-     * Removes the specific LAN.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @return Object
+     * Delete LANs
+     * Delete the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public Object datacentersLansDelete(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<Object> localVarResp = datacentersLansDeleteWithHttpInfo(datacenterId, lanId, pretty, depth, xContractNumber);
-        return localVarResp.getData();
+    public void datacentersLansDelete(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        datacentersLansDeleteWithHttpInfo(datacenterId, lanId, pretty, depth, xContractNumber);
     }
 
     /**
-     * Delete a Lan.
-     * Removes the specific LAN.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @return ApiResponse&lt;Object&gt;
+     * Delete LANs
+     * Delete the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> datacentersLansDeleteWithHttpInfo(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+    public ApiResponse<Void> datacentersLansDeleteWithHttpInfo(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
         okhttp3.Call localVarCall = datacentersLansDeleteValidateBeforeCall(datacenterId, lanId, pretty, depth, xContractNumber, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        return localVarApiClient.execute(localVarCall);
     }
 
     /**
-     * Delete a Lan. (asynchronously)
-     * Removes the specific LAN.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Delete LANs (asynchronously)
+     * Delete the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLansDeleteAsync(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersLansDeleteAsync(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = datacentersLansDeleteValidateBeforeCall(datacenterId, lanId, pretty, depth, xContractNumber, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
      * Build call for datacentersLansFindById
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLansFindByIdCall(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLansFindByIdCall(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Lan> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -272,7 +268,7 @@ public class LansApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLansFindByIdValidateBeforeCall(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLansFindByIdValidateBeforeCall(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Lan> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -291,20 +287,20 @@ public class LansApi {
     }
 
     /**
-     * Retrieve a Lan
-     * Retrieves the attributes of a given LAN.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve LANs
+     * Retrieve the properties of the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return Lan
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public Lan datacentersLansFindById(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -313,20 +309,20 @@ public class LansApi {
     }
 
     /**
-     * Retrieve a Lan
-     * Retrieves the attributes of a given LAN.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve LANs
+     * Retrieve the properties of the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;Lan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Lan> datacentersLansFindByIdWithHttpInfo(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -336,21 +332,21 @@ public class LansApi {
     }
 
     /**
-     * Retrieve a Lan (asynchronously)
-     * Retrieves the attributes of a given LAN.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve LANs (asynchronously)
+     * Retrieve the properties of the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLansFindByIdAsync(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Lan> _callback) throws ApiException {
@@ -362,23 +358,23 @@ public class LansApi {
     }
     /**
      * Build call for datacentersLansGet
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLansGetCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLansGetCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Lans> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -430,7 +426,7 @@ public class LansApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLansGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLansGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Lans> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -444,21 +440,21 @@ public class LansApi {
     }
 
     /**
-     * List Lans
-     * Retrieve a list of LANs within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * List LANs
+     * List all LANs within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @return Lans
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public Lans datacentersLansGet(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
@@ -467,21 +463,21 @@ public class LansApi {
     }
 
     /**
-     * List Lans
-     * Retrieve a list of LANs within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * List LANs
+     * List all LANs within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @return ApiResponse&lt;Lans&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Lans> datacentersLansGetWithHttpInfo(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
@@ -491,22 +487,22 @@ public class LansApi {
     }
 
     /**
-     * List Lans (asynchronously)
-     * Retrieve a list of LANs within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * List LANs (asynchronously)
+     * List all LANs within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLansGetAsync(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Lans> _callback) throws ApiException {
@@ -518,23 +514,23 @@ public class LansApi {
     }
     /**
      * Build call for datacentersLansNicsFindById
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param nicId The unique ID of the NIC (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param nicId The unique ID of the NIC. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLansNicsFindByIdCall(String datacenterId, String lanId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLansNicsFindByIdCall(String datacenterId, String lanId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -580,7 +576,7 @@ public class LansApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLansNicsFindByIdValidateBeforeCall(String datacenterId, String lanId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLansNicsFindByIdValidateBeforeCall(String datacenterId, String lanId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -604,21 +600,21 @@ public class LansApi {
     }
 
     /**
-     * Retrieve a nic attached to lan
-     * This will retrieve the properties of an attached network interface.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param nicId The unique ID of the NIC (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve attached NICs
+     * Retrieve the properties of the NIC, attached to the specified LAN.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param nicId The unique ID of the NIC. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return Nic
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public Nic datacentersLansNicsFindById(String datacenterId, String lanId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -627,21 +623,21 @@ public class LansApi {
     }
 
     /**
-     * Retrieve a nic attached to lan
-     * This will retrieve the properties of an attached network interface.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param nicId The unique ID of the NIC (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve attached NICs
+     * Retrieve the properties of the NIC, attached to the specified LAN.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param nicId The unique ID of the NIC. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;Nic&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Nic> datacentersLansNicsFindByIdWithHttpInfo(String datacenterId, String lanId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -651,22 +647,22 @@ public class LansApi {
     }
 
     /**
-     * Retrieve a nic attached to lan (asynchronously)
-     * This will retrieve the properties of an attached network interface.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param nicId The unique ID of the NIC (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve attached NICs (asynchronously)
+     * Retrieve the properties of the NIC, attached to the specified LAN.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param nicId The unique ID of the NIC. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLansNicsFindByIdAsync(String datacenterId, String lanId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
@@ -678,24 +674,24 @@ public class LansApi {
     }
     /**
      * Build call for datacentersLansNicsGet
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLansNicsGetCall(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLansNicsGetCall(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<LanNics> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -748,7 +744,7 @@ public class LansApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLansNicsGetValidateBeforeCall(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLansNicsGetValidateBeforeCall(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<LanNics> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -767,22 +763,22 @@ public class LansApi {
     }
 
     /**
-     * List Lan Members 
-     * You can retrieve a list of nics attached to a LAN.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * List LAN members
+     * List all NICs, attached to the specified LAN.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @return LanNics
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public LanNics datacentersLansNicsGet(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
@@ -791,22 +787,22 @@ public class LansApi {
     }
 
     /**
-     * List Lan Members 
-     * You can retrieve a list of nics attached to a LAN.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * List LAN members
+     * List all NICs, attached to the specified LAN.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @return ApiResponse&lt;LanNics&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<LanNics> datacentersLansNicsGetWithHttpInfo(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
@@ -816,23 +812,23 @@ public class LansApi {
     }
 
     /**
-     * List Lan Members  (asynchronously)
-     * You can retrieve a list of nics attached to a LAN.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * List LAN members (asynchronously)
+     * List all NICs, attached to the specified LAN.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLansNicsGetAsync(String datacenterId, String lanId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<LanNics> _callback) throws ApiException {
@@ -844,23 +840,23 @@ public class LansApi {
     }
     /**
      * Build call for datacentersLansNicsPost
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param nic Nic to be attached (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param nic The NIC to be attached. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLansNicsPostCall(String datacenterId, String lanId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLansNicsPostCall(String datacenterId, String lanId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
         Object localVarPostBody = nic;
 
         // create path and map variables
@@ -905,7 +901,7 @@ public class LansApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLansNicsPostValidateBeforeCall(String datacenterId, String lanId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLansNicsPostValidateBeforeCall(String datacenterId, String lanId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -929,21 +925,21 @@ public class LansApi {
     }
 
     /**
-     * Attach a nic
-     * This will attach a pre-existing nic to a LAN.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param nic Nic to be attached (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Attach NICs
+     * Attach an existing NIC to the specified LAN.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param nic The NIC to be attached. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return Nic
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public Nic datacentersLansNicsPost(String datacenterId, String lanId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -952,21 +948,21 @@ public class LansApi {
     }
 
     /**
-     * Attach a nic
-     * This will attach a pre-existing nic to a LAN.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param nic Nic to be attached (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Attach NICs
+     * Attach an existing NIC to the specified LAN.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param nic The NIC to be attached. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;Nic&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Nic> datacentersLansNicsPostWithHttpInfo(String datacenterId, String lanId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -976,22 +972,22 @@ public class LansApi {
     }
 
     /**
-     * Attach a nic (asynchronously)
-     * This will attach a pre-existing nic to a LAN.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param nic Nic to be attached (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Attach NICs (asynchronously)
+     * Attach an existing NIC to the specified LAN.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param nic The NIC to be attached. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLansNicsPostAsync(String datacenterId, String lanId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
@@ -1003,23 +999,23 @@ public class LansApi {
     }
     /**
      * Build call for datacentersLansPatch
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param lan Modified Lan (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param lan The properties of the LAN to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLansPatchCall(String datacenterId, String lanId, LanProperties lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLansPatchCall(String datacenterId, String lanId, LanProperties lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Lan> _callback) throws ApiException {
         Object localVarPostBody = lan;
 
         // create path and map variables
@@ -1064,7 +1060,7 @@ public class LansApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLansPatchValidateBeforeCall(String datacenterId, String lanId, LanProperties lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLansPatchValidateBeforeCall(String datacenterId, String lanId, LanProperties lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Lan> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1088,21 +1084,21 @@ public class LansApi {
     }
 
     /**
-     * Partially modify a Lan
-     * You can use update attributes of a resource.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param lan Modified Lan (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Partially modify LANs
+     * Update the properties of the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param lan The properties of the LAN to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return Lan
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public Lan datacentersLansPatch(String datacenterId, String lanId, LanProperties lan, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1111,21 +1107,21 @@ public class LansApi {
     }
 
     /**
-     * Partially modify a Lan
-     * You can use update attributes of a resource.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param lan Modified Lan (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Partially modify LANs
+     * Update the properties of the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param lan The properties of the LAN to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;Lan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Lan> datacentersLansPatchWithHttpInfo(String datacenterId, String lanId, LanProperties lan, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1135,22 +1131,22 @@ public class LansApi {
     }
 
     /**
-     * Partially modify a Lan (asynchronously)
-     * You can use update attributes of a resource.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param lan Modified Lan (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Partially modify LANs (asynchronously)
+     * Update the properties of the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param lan The properties of the LAN to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLansPatchAsync(String datacenterId, String lanId, LanProperties lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Lan> _callback) throws ApiException {
@@ -1162,22 +1158,22 @@ public class LansApi {
     }
     /**
      * Build call for datacentersLansPost
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lan Lan to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lan The LAN to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLansPostCall(String datacenterId, LanPost lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLansPostCall(String datacenterId, LanPost lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<LanPost> _callback) throws ApiException {
         Object localVarPostBody = lan;
 
         // create path and map variables
@@ -1221,7 +1217,7 @@ public class LansApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLansPostValidateBeforeCall(String datacenterId, LanPost lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLansPostValidateBeforeCall(String datacenterId, LanPost lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<LanPost> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1240,20 +1236,20 @@ public class LansApi {
     }
 
     /**
-     * Create a Lan
-     * Creates a LAN within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lan Lan to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Create LANs
+     * Create a LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lan The LAN to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return LanPost
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public LanPost datacentersLansPost(String datacenterId, LanPost lan, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1262,20 +1258,20 @@ public class LansApi {
     }
 
     /**
-     * Create a Lan
-     * Creates a LAN within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lan Lan to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Create LANs
+     * Create a LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lan The LAN to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;LanPost&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<LanPost> datacentersLansPostWithHttpInfo(String datacenterId, LanPost lan, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1285,21 +1281,21 @@ public class LansApi {
     }
 
     /**
-     * Create a Lan (asynchronously)
-     * Creates a LAN within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lan Lan to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Create LANs (asynchronously)
+     * Create a LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lan The LAN to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLansPostAsync(String datacenterId, LanPost lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<LanPost> _callback) throws ApiException {
@@ -1311,23 +1307,23 @@ public class LansApi {
     }
     /**
      * Build call for datacentersLansPut
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param lan Modified Lan (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param lan The modified LAN (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLansPutCall(String datacenterId, String lanId, Lan lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLansPutCall(String datacenterId, String lanId, Lan lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Lan> _callback) throws ApiException {
         Object localVarPostBody = lan;
 
         // create path and map variables
@@ -1372,7 +1368,7 @@ public class LansApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLansPutValidateBeforeCall(String datacenterId, String lanId, Lan lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLansPutValidateBeforeCall(String datacenterId, String lanId, Lan lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Lan> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1396,21 +1392,21 @@ public class LansApi {
     }
 
     /**
-     * Modify a Lan
-     * You can use update attributes of a resource.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param lan Modified Lan (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Modify LANs
+     * Modify the properties of the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param lan The modified LAN (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return Lan
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public Lan datacentersLansPut(String datacenterId, String lanId, Lan lan, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1419,21 +1415,21 @@ public class LansApi {
     }
 
     /**
-     * Modify a Lan
-     * You can use update attributes of a resource.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param lan Modified Lan (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Modify LANs
+     * Modify the properties of the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param lan The modified LAN (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;Lan&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Lan> datacentersLansPutWithHttpInfo(String datacenterId, String lanId, Lan lan, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1443,22 +1439,22 @@ public class LansApi {
     }
 
     /**
-     * Modify a Lan (asynchronously)
-     * You can use update attributes of a resource.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param lanId The unique ID of the LAN (required)
-     * @param lan Modified Lan (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Modify LANs (asynchronously)
+     * Modify the properties of the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param lan The modified LAN (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLansPutAsync(String datacenterId, String lanId, Lan lan, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Lan> _callback) throws ApiException {

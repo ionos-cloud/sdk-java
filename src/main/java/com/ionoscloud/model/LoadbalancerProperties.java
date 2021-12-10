@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -27,64 +27,16 @@ import java.io.IOException;
 /**
  * LoadbalancerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class LoadbalancerProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
-  /**
-   * IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically
-   */
-  @JsonAdapter(IpEnum.Adapter.class)
-  public enum IpEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
-    _VALID_IP_ADDRESS_("@Valid IP address@"),
-    
-    NULL("null");
-
-    private String value;
-
-    IpEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static IpEnum fromValue(String value) {
-      for (IpEnum b : IpEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
-          return b;
-        }
-      }
-      return IpEnum.UNKNOWN_VALUE;
-    }
-
-    public static class Adapter extends TypeAdapter<IpEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final IpEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public IpEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return IpEnum.fromValue(value);
-      }
-    }
-  }
-
   public static final String SERIALIZED_NAME_IP = "ip";
   @SerializedName(SERIALIZED_NAME_IP)
-  private IpEnum ip;
+  private String ip;
 
   public static final String SERIALIZED_NAME_DHCP = "dhcp";
   @SerializedName(SERIALIZED_NAME_DHCP)
@@ -98,11 +50,11 @@ public class LoadbalancerProperties {
   }
 
    /**
-   * A name of that resource
+   * The name of the  resource.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "A name of that resource")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
   public String getName() {
     return name;
@@ -114,25 +66,25 @@ public class LoadbalancerProperties {
   }
 
 
-  public LoadbalancerProperties ip(IpEnum ip) {
+  public LoadbalancerProperties ip(String ip) {
     
     this.ip = ip;
     return this;
   }
 
    /**
-   * IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically
+   * IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically.
    * @return ip
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "22.231.113.64", value = "IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically")
+  @ApiModelProperty(example = "22.231.113.64", value = "IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically.")
 
-  public IpEnum getIp() {
+  public String getIp() {
     return ip;
   }
 
 
-  public void setIp(IpEnum ip) {
+  public void setIp(String ip) {
     this.ip = ip;
   }
 
@@ -144,11 +96,11 @@ public class LoadbalancerProperties {
   }
 
    /**
-   * Indicates if the loadbalancer will reserve an IP using DHCP
+   * Indicates if the loadbalancer will reserve an IP using DHCP.
    * @return dhcp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Indicates if the loadbalancer will reserve an IP using DHCP")
+  @ApiModelProperty(example = "true", value = "Indicates if the loadbalancer will reserve an IP using DHCP.")
 
   public Boolean getDhcp() {
     return dhcp;

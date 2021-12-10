@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -27,16 +27,12 @@ import java.io.IOException;
 /**
  * NetworkLoadBalancerForwardingRuleHealthCheck
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRuleHealthCheck {
   public static final String SERIALIZED_NAME_CLIENT_TIMEOUT = "clientTimeout";
   @SerializedName(SERIALIZED_NAME_CLIENT_TIMEOUT)
   private Integer clientTimeout;
-
-  public static final String SERIALIZED_NAME_CHECK_TIMEOUT = "checkTimeout";
-  @SerializedName(SERIALIZED_NAME_CHECK_TIMEOUT)
-  private Integer checkTimeout;
 
   public static final String SERIALIZED_NAME_CONNECT_TIMEOUT = "connectTimeout";
   @SerializedName(SERIALIZED_NAME_CONNECT_TIMEOUT)
@@ -71,29 +67,6 @@ public class NetworkLoadBalancerForwardingRuleHealthCheck {
 
   public void setClientTimeout(Integer clientTimeout) {
     this.clientTimeout = clientTimeout;
-  }
-
-
-  public NetworkLoadBalancerForwardingRuleHealthCheck checkTimeout(Integer checkTimeout) {
-    
-    this.checkTimeout = checkTimeout;
-    return this;
-  }
-
-   /**
-   * It specifies the time (in milliseconds) for a target VM in this pool to answer the check. If a target VM has CheckInterval set and CheckTimeout is set too, then the smaller value of the two is used after the TCP connection is established.
-   * @return checkTimeout
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "2000", value = "It specifies the time (in milliseconds) for a target VM in this pool to answer the check. If a target VM has CheckInterval set and CheckTimeout is set too, then the smaller value of the two is used after the TCP connection is established.")
-
-  public Integer getCheckTimeout() {
-    return checkTimeout;
-  }
-
-
-  public void setCheckTimeout(Integer checkTimeout) {
-    this.checkTimeout = checkTimeout;
   }
 
 
@@ -175,7 +148,7 @@ public class NetworkLoadBalancerForwardingRuleHealthCheck {
       return false;
     }
     NetworkLoadBalancerForwardingRuleHealthCheck networkLoadBalancerForwardingRuleHealthCheck = (NetworkLoadBalancerForwardingRuleHealthCheck) o;
-    return Objects.equals(this.clientTimeout, networkLoadBalancerForwardingRuleHealthCheck.clientTimeout) && Objects.equals(this.checkTimeout, networkLoadBalancerForwardingRuleHealthCheck.checkTimeout) && Objects.equals(this.connectTimeout, networkLoadBalancerForwardingRuleHealthCheck.connectTimeout) && Objects.equals(this.targetTimeout, networkLoadBalancerForwardingRuleHealthCheck.targetTimeout) && Objects.equals(this.retries, networkLoadBalancerForwardingRuleHealthCheck.retries);
+    return Objects.equals(this.clientTimeout, networkLoadBalancerForwardingRuleHealthCheck.clientTimeout) && Objects.equals(this.connectTimeout, networkLoadBalancerForwardingRuleHealthCheck.connectTimeout) && Objects.equals(this.targetTimeout, networkLoadBalancerForwardingRuleHealthCheck.targetTimeout) && Objects.equals(this.retries, networkLoadBalancerForwardingRuleHealthCheck.retries);
   }
 
 
@@ -186,7 +159,6 @@ public class NetworkLoadBalancerForwardingRuleHealthCheck {
     StringBuilder sb = new StringBuilder();
     sb.append("class NetworkLoadBalancerForwardingRuleHealthCheck {\n");
     sb.append("    clientTimeout: ").append(toIndentedString(clientTimeout)).append("\n");
-    sb.append("    checkTimeout: ").append(toIndentedString(checkTimeout)).append("\n");
     sb.append("    connectTimeout: ").append(toIndentedString(connectTimeout)).append("\n");
     sb.append("    targetTimeout: ").append(toIndentedString(targetTimeout)).append("\n");
     sb.append("    retries: ").append(toIndentedString(retries)).append("\n");

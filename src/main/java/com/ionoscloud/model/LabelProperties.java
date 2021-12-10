@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * LabelProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class LabelProperties {
   public static final String SERIALIZED_NAME_KEY = "key";
@@ -58,11 +58,11 @@ public class LabelProperties {
   }
 
    /**
-   * A Label Key
+   * A label key
    * @return key
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "environment", value = "A Label Key")
+  @ApiModelProperty(example = "environment", value = "A label key")
 
   public String getKey() {
     return key;
@@ -81,11 +81,11 @@ public class LabelProperties {
   }
 
    /**
-   * A Label Value
+   * A label value
    * @return value
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "production", value = "A Label Value")
+  @ApiModelProperty(example = "production", value = "A label value")
 
   public String getValue() {
     return value;
@@ -104,11 +104,11 @@ public class LabelProperties {
   }
 
    /**
-   * The id of the resource
+   * The ID of the resource.
    * @return resourceId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "700e1cab-99b2-4c30-ba8c-1d273ddba022", value = "The id of the resource")
+  @ApiModelProperty(example = "700e1cab-99b2-4c30-ba8c-1d273ddba022", value = "The ID of the resource.")
 
   public String getResourceId() {
     return resourceId;

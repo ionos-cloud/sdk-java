@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * ImageProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class ImageProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -90,11 +90,10 @@ public class ImageProperties {
   private Boolean discScsiHotUnplug;
 
   /**
-   * OS type of this Image
+   * OS type for this image.
    */
   @JsonAdapter(LicenceTypeEnum.Adapter.class)
   public enum LicenceTypeEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     UNKNOWN("UNKNOWN"),
     
     WINDOWS("WINDOWS"),
@@ -121,12 +120,13 @@ public class ImageProperties {
     }
 
     public static LicenceTypeEnum fromValue(String value) {
+
       for (LicenceTypeEnum b : LicenceTypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return LicenceTypeEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<LicenceTypeEnum> {
@@ -148,14 +148,15 @@ public class ImageProperties {
   private LicenceTypeEnum licenceType;
 
   /**
-   * This indicates the type of image
+   * The image type.
    */
   @JsonAdapter(ImageTypeEnum.Adapter.class)
   public enum ImageTypeEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     HDD("HDD"),
     
-    CDROM("CDROM");
+    CDROM("CDROM"),
+    
+    UNKNOWN("UNKNOWN");
 
     private String value;
 
@@ -173,12 +174,13 @@ public class ImageProperties {
     }
 
     public static ImageTypeEnum fromValue(String value) {
+
       for (ImageTypeEnum b : ImageTypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return ImageTypeEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<ImageTypeEnum> {
@@ -208,11 +210,10 @@ public class ImageProperties {
   private List<String> imageAliases = null;
 
   /**
-   * Cloud init compatibility
+   * Cloud init compatibility.
    */
   @JsonAdapter(CloudInitEnum.Adapter.class)
   public enum CloudInitEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     NONE("NONE"),
     
     V1("V1");
@@ -233,12 +234,13 @@ public class ImageProperties {
     }
 
     public static CloudInitEnum fromValue(String value) {
+
       for (CloudInitEnum b : CloudInitEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return CloudInitEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<CloudInitEnum> {
@@ -267,11 +269,11 @@ public class ImageProperties {
   }
 
    /**
-   * A name of that resource
+   * The name of the  resource.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "A name of that resource")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
   public String getName() {
     return name;
@@ -290,11 +292,11 @@ public class ImageProperties {
   }
 
    /**
-   * Human readable description
+   * Human-readable description.
    * @return description
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Image/Snapshot of Ubuntu ", value = "Human readable description")
+  @ApiModelProperty(example = "Image/Snapshot of Ubuntu ", value = "Human-readable description.")
 
   public String getDescription() {
     return description;
@@ -318,20 +320,26 @@ public class ImageProperties {
   }
 
 
+  public void setLocation(String location) {
+    this.location = location;
+  }
 
 
    /**
-   * The size of the image in GB
+   * The size of the image in GB.
    * @return size
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "100.0", value = "The size of the image in GB")
+  @ApiModelProperty(example = "100.0", value = "The size of the image in GB.")
 
   public BigDecimal getSize() {
     return size;
   }
 
 
+  public void setSize(BigDecimal size) {
+    this.size = size;
+  }
 
 
   public ImageProperties cpuHotPlug(Boolean cpuHotPlug) {
@@ -341,11 +349,11 @@ public class ImageProperties {
   }
 
    /**
-   * Is capable of CPU hot plug (no reboot required)
+   * Hot-plug capable CPU (no reboot required).
    * @return cpuHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of CPU hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable CPU (no reboot required).")
 
   public Boolean getCpuHotPlug() {
     return cpuHotPlug;
@@ -364,11 +372,11 @@ public class ImageProperties {
   }
 
    /**
-   * Is capable of CPU hot unplug (no reboot required)
+   * Hot-unplug capable CPU (no reboot required).
    * @return cpuHotUnplug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of CPU hot unplug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable CPU (no reboot required).")
 
   public Boolean getCpuHotUnplug() {
     return cpuHotUnplug;
@@ -387,11 +395,11 @@ public class ImageProperties {
   }
 
    /**
-   * Is capable of memory hot plug (no reboot required)
+   * Hot-plug capable RAM (no reboot required).
    * @return ramHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of memory hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable RAM (no reboot required).")
 
   public Boolean getRamHotPlug() {
     return ramHotPlug;
@@ -410,11 +418,11 @@ public class ImageProperties {
   }
 
    /**
-   * Is capable of memory hot unplug (no reboot required)
+   * Hot-unplug capable RAM (no reboot required).
    * @return ramHotUnplug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of memory hot unplug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable RAM (no reboot required).")
 
   public Boolean getRamHotUnplug() {
     return ramHotUnplug;
@@ -433,11 +441,11 @@ public class ImageProperties {
   }
 
    /**
-   * Is capable of nic hot plug (no reboot required)
+   * Hot-plug capable NIC (no reboot required).
    * @return nicHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of nic hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable NIC (no reboot required).")
 
   public Boolean getNicHotPlug() {
     return nicHotPlug;
@@ -456,11 +464,11 @@ public class ImageProperties {
   }
 
    /**
-   * Is capable of nic hot unplug (no reboot required)
+   * Hot-unplug capable NIC (no reboot required).
    * @return nicHotUnplug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of nic hot unplug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable NIC (no reboot required).")
 
   public Boolean getNicHotUnplug() {
     return nicHotUnplug;
@@ -479,11 +487,11 @@ public class ImageProperties {
   }
 
    /**
-   * Is capable of Virt-IO drive hot plug (no reboot required)
+   * Hot-plug capable Virt-IO drive (no reboot required).
    * @return discVirtioHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of Virt-IO drive hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable Virt-IO drive (no reboot required).")
 
   public Boolean getDiscVirtioHotPlug() {
     return discVirtioHotPlug;
@@ -502,11 +510,11 @@ public class ImageProperties {
   }
 
    /**
-   * Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines.
+   * Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.
    * @return discVirtioHotUnplug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines.")
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.")
 
   public Boolean getDiscVirtioHotUnplug() {
     return discVirtioHotUnplug;
@@ -525,11 +533,11 @@ public class ImageProperties {
   }
 
    /**
-   * Is capable of SCSI drive hot plug (no reboot required)
+   * Hot-plug capable SCSI drive (no reboot required).
    * @return discScsiHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of SCSI drive hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable SCSI drive (no reboot required).")
 
   public Boolean getDiscScsiHotPlug() {
     return discScsiHotPlug;
@@ -548,11 +556,11 @@ public class ImageProperties {
   }
 
    /**
-   * Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines.
+   * Hot-unplug capable SCSI drive (no reboot required). Not supported with Windows VMs.
    * @return discScsiHotUnplug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines.")
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable SCSI drive (no reboot required). Not supported with Windows VMs.")
 
   public Boolean getDiscScsiHotUnplug() {
     return discScsiHotUnplug;
@@ -571,10 +579,10 @@ public class ImageProperties {
   }
 
    /**
-   * OS type of this Image
+   * OS type for this image.
    * @return licenceType
   **/
-  @ApiModelProperty(example = "LINUX", required = true, value = "OS type of this Image")
+  @ApiModelProperty(example = "LINUX", required = true, value = "OS type for this image.")
 
   public LicenceTypeEnum getLicenceType() {
     return licenceType;
@@ -587,31 +595,37 @@ public class ImageProperties {
 
 
    /**
-   * This indicates the type of image
+   * The image type.
    * @return imageType
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "HDD", value = "This indicates the type of image")
+  @ApiModelProperty(example = "HDD", value = "The image type.")
 
   public ImageTypeEnum getImageType() {
     return imageType;
   }
 
 
+  public void setImageType(ImageTypeEnum imageType) {
+    this.imageType = imageType;
+  }
 
 
    /**
-   * Indicates if the image is part of the public repository or not
+   * Indicates whether the image is part of a public repository.
    * @return _public
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Indicates if the image is part of the public repository or not")
+  @ApiModelProperty(example = "true", value = "Indicates whether the image is part of a public repository.")
 
   public Boolean getPublic() {
     return _public;
   }
 
 
+  public void setPublic(Boolean _public) {
+    this._public = _public;
+  }
 
 
    /**
@@ -626,6 +640,9 @@ public class ImageProperties {
   }
 
 
+  public void setImageAliases(List<String> imageAliases) {
+    this.imageAliases = imageAliases;
+  }
 
 
   public ImageProperties cloudInit(CloudInitEnum cloudInit) {
@@ -635,11 +652,11 @@ public class ImageProperties {
   }
 
    /**
-   * Cloud init compatibility
+   * Cloud init compatibility.
    * @return cloudInit
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "V1", value = "Cloud init compatibility")
+  @ApiModelProperty(example = "V1", value = "Cloud init compatibility.")
 
   public CloudInitEnum getCloudInit() {
     return cloudInit;

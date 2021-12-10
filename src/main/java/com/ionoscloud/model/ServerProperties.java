@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * ServerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class ServerProperties {
   public static final String SERIALIZED_NAME_TEMPLATE_UUID = "templateUuid";
@@ -48,11 +48,10 @@ public class ServerProperties {
   private Integer ram;
 
   /**
-   * The availability zone in which the server should exist
+   * The availability zone in which the server should be provisioned.
    */
   @JsonAdapter(AvailabilityZoneEnum.Adapter.class)
   public enum AvailabilityZoneEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     AUTO("AUTO"),
     
     ZONE_1("ZONE_1"),
@@ -75,12 +74,13 @@ public class ServerProperties {
     }
 
     public static AvailabilityZoneEnum fromValue(String value) {
+
       for (AvailabilityZoneEnum b : AvailabilityZoneEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return AvailabilityZoneEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<AvailabilityZoneEnum> {
@@ -102,11 +102,10 @@ public class ServerProperties {
   private AvailabilityZoneEnum availabilityZone;
 
   /**
-   * Status of the virtual Machine
+   * Status of the virtual machine.
    */
   @JsonAdapter(VmStateEnum.Adapter.class)
   public enum VmStateEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     NOSTATE("NOSTATE"),
     
     RUNNING("RUNNING"),
@@ -119,7 +118,9 @@ public class ServerProperties {
     
     SHUTOFF("SHUTOFF"),
     
-    CRASHED("CRASHED");
+    CRASHED("CRASHED"),
+    
+    SUSPENDED("SUSPENDED");
 
     private String value;
 
@@ -137,12 +138,13 @@ public class ServerProperties {
     }
 
     public static VmStateEnum fromValue(String value) {
+
       for (VmStateEnum b : VmStateEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return VmStateEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<VmStateEnum> {
@@ -187,11 +189,11 @@ public class ServerProperties {
   }
 
    /**
-   * The UUID of the template for creating a CUBE server; the available templates for CUBE servers can be found on the templates resource
+   * The ID of the template for creating a CUBE server; the available templates for CUBE servers can be found on the templates resource.
    * @return templateUuid
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The UUID of the template for creating a CUBE server; the available templates for CUBE servers can be found on the templates resource")
+  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The ID of the template for creating a CUBE server; the available templates for CUBE servers can be found on the templates resource.")
 
   public String getTemplateUuid() {
     return templateUuid;
@@ -210,11 +212,11 @@ public class ServerProperties {
   }
 
    /**
-   * A name of that resource
+   * The name of the  resource.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "A name of that resource")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
   public String getName() {
     return name;
@@ -233,10 +235,10 @@ public class ServerProperties {
   }
 
    /**
-   * The total number of cores for the server
+   * The total number of cores for the server.
    * @return cores
   **/
-  @ApiModelProperty(example = "4", required = true, value = "The total number of cores for the server")
+  @ApiModelProperty(example = "4", required = true, value = "The total number of cores for the server.")
 
   public Integer getCores() {
     return cores;
@@ -255,10 +257,10 @@ public class ServerProperties {
   }
 
    /**
-   * The amount of memory for the server in MB, e.g. 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB.
+   * The memory size for the server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB.
    * @return ram
   **/
-  @ApiModelProperty(example = "4096", required = true, value = "The amount of memory for the server in MB, e.g. 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB.")
+  @ApiModelProperty(example = "4096", required = true, value = "The memory size for the server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB.")
 
   public Integer getRam() {
     return ram;
@@ -277,11 +279,11 @@ public class ServerProperties {
   }
 
    /**
-   * The availability zone in which the server should exist
+   * The availability zone in which the server should be provisioned.
    * @return availabilityZone
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "AUTO", value = "The availability zone in which the server should exist")
+  @ApiModelProperty(example = "AUTO", value = "The availability zone in which the server should be provisioned.")
 
   public AvailabilityZoneEnum getAvailabilityZone() {
     return availabilityZone;
@@ -294,17 +296,20 @@ public class ServerProperties {
 
 
    /**
-   * Status of the virtual Machine
+   * Status of the virtual machine.
    * @return vmState
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "RUNNING", value = "Status of the virtual Machine")
+  @ApiModelProperty(example = "RUNNING", value = "Status of the virtual machine.")
 
   public VmStateEnum getVmState() {
     return vmState;
   }
 
 
+  public void setVmState(VmStateEnum vmState) {
+    this.vmState = vmState;
+  }
 
 
   public ServerProperties bootCdrom(ResourceReference bootCdrom) {
@@ -360,11 +365,11 @@ public class ServerProperties {
   }
 
    /**
-   * CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource
+   * CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource.
    * @return cpuFamily
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "AMD_OPTERON", value = "CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource")
+  @ApiModelProperty(example = "AMD_OPTERON", value = "CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource.")
 
   public String getCpuFamily() {
     return cpuFamily;

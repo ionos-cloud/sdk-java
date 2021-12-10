@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * NicProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class NicProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -57,11 +57,10 @@ public class NicProperties {
   private Boolean firewallActive;
 
   /**
-   * The type of firewall rules that will be allowed on the NIC. If it is not specified it will take the default value INGRESS
+   * The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is taken.
    */
   @JsonAdapter(FirewallTypeEnum.Adapter.class)
   public enum FirewallTypeEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     INGRESS("INGRESS"),
     
     EGRESS("EGRESS"),
@@ -84,12 +83,13 @@ public class NicProperties {
     }
 
     public static FirewallTypeEnum fromValue(String value) {
+
       for (FirewallTypeEnum b : FirewallTypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return FirewallTypeEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<FirewallTypeEnum> {
@@ -126,11 +126,11 @@ public class NicProperties {
   }
 
    /**
-   * A name of that resource
+   * The name of the  resource.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "A name of that resource")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
   public String getName() {
     return name;
@@ -143,17 +143,20 @@ public class NicProperties {
 
 
    /**
-   * The MAC address of the NIC
+   * The MAC address of the NIC.
    * @return mac
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "00:0a:95:9d:68:16", value = "The MAC address of the NIC")
+  @ApiModelProperty(example = "00:0a:95:9d:68:16", value = "The MAC address of the NIC.")
 
   public String getMac() {
     return mac;
   }
 
 
+  public void setMac(String mac) {
+    this.mac = mac;
+  }
 
 
   public NicProperties ips(List<String> ips) {
@@ -171,11 +174,11 @@ public class NicProperties {
   }
 
    /**
-   * Collection of IP addresses assigned to a nic. Explicitly assigned public IPs need to come from reserved IP blocks, Passing value null or empty array will assign an IP address automatically.
+   * Collection of IP addresses, assigned to the NIC. Explicitly assigned public IPs need to come from reserved IP blocks. Passing value null or empty array will assign an IP address automatically.
    * @return ips
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Collection of IP addresses assigned to a nic. Explicitly assigned public IPs need to come from reserved IP blocks, Passing value null or empty array will assign an IP address automatically.")
+  @ApiModelProperty(value = "Collection of IP addresses, assigned to the NIC. Explicitly assigned public IPs need to come from reserved IP blocks. Passing value null or empty array will assign an IP address automatically.")
 
   public List<String> getIps() {
     return ips;
@@ -194,11 +197,11 @@ public class NicProperties {
   }
 
    /**
-   * Indicates if the nic will reserve an IP using DHCP
+   * Indicates if the NIC will reserve an IP using DHCP.
    * @return dhcp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Indicates if the nic will reserve an IP using DHCP")
+  @ApiModelProperty(example = "true", value = "Indicates if the NIC will reserve an IP using DHCP.")
 
   public Boolean getDhcp() {
     return dhcp;
@@ -217,10 +220,10 @@ public class NicProperties {
   }
 
    /**
-   * The LAN ID the NIC will sit on. If the LAN ID does not exist it will be implicitly created
+   * The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created.
    * @return lan
   **/
-  @ApiModelProperty(example = "2", required = true, value = "The LAN ID the NIC will sit on. If the LAN ID does not exist it will be implicitly created")
+  @ApiModelProperty(example = "2", required = true, value = "The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created.")
 
   public Integer getLan() {
     return lan;
@@ -239,11 +242,11 @@ public class NicProperties {
   }
 
    /**
-   * Activate or deactivate the firewall. By default an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, ip addresses and ports.
+   * Activate or deactivate the firewall. By default, an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, IP addresses and ports.
    * @return firewallActive
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "false", value = "Activate or deactivate the firewall. By default an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, ip addresses and ports.")
+  @ApiModelProperty(example = "false", value = "Activate or deactivate the firewall. By default, an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, IP addresses and ports.")
 
   public Boolean getFirewallActive() {
     return firewallActive;
@@ -262,11 +265,11 @@ public class NicProperties {
   }
 
    /**
-   * The type of firewall rules that will be allowed on the NIC. If it is not specified it will take the default value INGRESS
+   * The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is taken.
    * @return firewallType
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "INGRESS", value = "The type of firewall rules that will be allowed on the NIC. If it is not specified it will take the default value INGRESS")
+  @ApiModelProperty(example = "INGRESS", value = "The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is taken.")
 
   public FirewallTypeEnum getFirewallType() {
     return firewallType;
@@ -290,20 +293,26 @@ public class NicProperties {
   }
 
 
+  public void setDeviceNumber(Integer deviceNumber) {
+    this.deviceNumber = deviceNumber;
+  }
 
 
    /**
-   * The PCI slot number of the Nic.
+   * The PCI slot number of the NIC.
    * @return pciSlot
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "7", value = "The PCI slot number of the Nic.")
+  @ApiModelProperty(example = "7", value = "The PCI slot number of the NIC.")
 
   public Integer getPciSlot() {
     return pciSlot;
   }
 
 
+  public void setPciSlot(Integer pciSlot) {
+    this.pciSlot = pciSlot;
+  }
 
 
   @Override

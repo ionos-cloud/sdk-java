@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -61,23 +61,23 @@ public class LoadBalancersApi {
 
     /**
      * Build call for datacentersLoadbalancersBalancednicsDelete
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param nicId The unique ID of the NIC (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param nicId The unique ID of the NIC. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLoadbalancersBalancednicsDeleteCall(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLoadbalancersBalancednicsDeleteCall(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -123,7 +123,7 @@ public class LoadBalancersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLoadbalancersBalancednicsDeleteValidateBeforeCall(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLoadbalancersBalancednicsDeleteValidateBeforeCall(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -147,99 +147,93 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Detach a nic from loadbalancer
-     * This will remove a network interface from load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param nicId The unique ID of the NIC (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @return Object
+     * Detach balanced NICs
+     * Detach the specified NIC from the Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param nicId The unique ID of the NIC. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public Object datacentersLoadbalancersBalancednicsDelete(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<Object> localVarResp = datacentersLoadbalancersBalancednicsDeleteWithHttpInfo(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
-        return localVarResp.getData();
+    public void datacentersLoadbalancersBalancednicsDelete(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        datacentersLoadbalancersBalancednicsDeleteWithHttpInfo(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
     }
 
     /**
-     * Detach a nic from loadbalancer
-     * This will remove a network interface from load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param nicId The unique ID of the NIC (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @return ApiResponse&lt;Object&gt;
+     * Detach balanced NICs
+     * Detach the specified NIC from the Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param nicId The unique ID of the NIC. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> datacentersLoadbalancersBalancednicsDeleteWithHttpInfo(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+    public ApiResponse<Void> datacentersLoadbalancersBalancednicsDeleteWithHttpInfo(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
         okhttp3.Call localVarCall = datacentersLoadbalancersBalancednicsDeleteValidateBeforeCall(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+        return localVarApiClient.execute(localVarCall);
     }
 
     /**
-     * Detach a nic from loadbalancer (asynchronously)
-     * This will remove a network interface from load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param nicId The unique ID of the NIC (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Detach balanced NICs (asynchronously)
+     * Detach the specified NIC from the Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param nicId The unique ID of the NIC. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLoadbalancersBalancednicsDeleteAsync(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersLoadbalancersBalancednicsDeleteAsync(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
 
         okhttp3.Call localVarCall = datacentersLoadbalancersBalancednicsDeleteValidateBeforeCall(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
      * Build call for datacentersLoadbalancersBalancednicsFindByNicId
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param nicId The unique ID of the NIC (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param nicId The unique ID of the NIC. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLoadbalancersBalancednicsFindByNicIdCall(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLoadbalancersBalancednicsFindByNicIdCall(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -260,14 +254,6 @@ public class LoadBalancersApi {
 
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
-        }
-
-        if (offset != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
-        }
-
-        if (limit != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
         }
 
         if (xContractNumber != null) {
@@ -293,7 +279,7 @@ public class LoadBalancersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLoadbalancersBalancednicsFindByNicIdValidateBeforeCall(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLoadbalancersBalancednicsFindByNicIdValidateBeforeCall(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -311,108 +297,102 @@ public class LoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersLoadbalancersBalancednicsFindByNicIdCall(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersLoadbalancersBalancednicsFindByNicIdCall(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Retrieve a network interface attached to Load Balancer
-     * This will retrieve the properties of an attached network interface.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param nicId The unique ID of the NIC (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * Retrieve balanced NICs
+     * Retrieve the properties of the specified NIC, attached to the Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param nicId The unique ID of the NIC. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return Nic
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public Nic datacentersLoadbalancersBalancednicsFindByNicId(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<Nic> localVarResp = datacentersLoadbalancersBalancednicsFindByNicIdWithHttpInfo(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber, offset, limit);
+    public Nic datacentersLoadbalancersBalancednicsFindByNicId(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        ApiResponse<Nic> localVarResp = datacentersLoadbalancersBalancednicsFindByNicIdWithHttpInfo(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
         return localVarResp.getData();
     }
 
     /**
-     * Retrieve a network interface attached to Load Balancer
-     * This will retrieve the properties of an attached network interface.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param nicId The unique ID of the NIC (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * Retrieve balanced NICs
+     * Retrieve the properties of the specified NIC, attached to the Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param nicId The unique ID of the NIC. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;Nic&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Nic> datacentersLoadbalancersBalancednicsFindByNicIdWithHttpInfo(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = datacentersLoadbalancersBalancednicsFindByNicIdValidateBeforeCall(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber, offset, limit, null);
+    public ApiResponse<Nic> datacentersLoadbalancersBalancednicsFindByNicIdWithHttpInfo(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        okhttp3.Call localVarCall = datacentersLoadbalancersBalancednicsFindByNicIdValidateBeforeCall(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber, null);
         Type localVarReturnType = new TypeToken<Nic>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Retrieve a network interface attached to Load Balancer (asynchronously)
-     * This will retrieve the properties of an attached network interface.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param nicId The unique ID of the NIC (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * Retrieve balanced NICs (asynchronously)
+     * Retrieve the properties of the specified NIC, attached to the Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param nicId The unique ID of the NIC. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLoadbalancersBalancednicsFindByNicIdAsync(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Nic> _callback) throws ApiException {
+    public okhttp3.Call datacentersLoadbalancersBalancednicsFindByNicIdAsync(String datacenterId, String loadbalancerId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersLoadbalancersBalancednicsFindByNicIdValidateBeforeCall(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersLoadbalancersBalancednicsFindByNicIdValidateBeforeCall(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber, _callback);
         Type localVarReturnType = new TypeToken<Nic>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
      * Build call for datacentersLoadbalancersBalancednicsGet
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLoadbalancersBalancednicsGetCall(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLoadbalancersBalancednicsGetCall(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<BalancedNics> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -457,7 +437,7 @@ public class LoadBalancersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLoadbalancersBalancednicsGetValidateBeforeCall(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLoadbalancersBalancednicsGetValidateBeforeCall(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<BalancedNics> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -476,20 +456,20 @@ public class LoadBalancersApi {
     }
 
     /**
-     * List Load Balancer balaced NICs
-     * You can retrieve a list of nics attached to a load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * List balanced NICs
+     * List all NICs, attached to the specified Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return BalancedNics
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public BalancedNics datacentersLoadbalancersBalancednicsGet(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -498,20 +478,20 @@ public class LoadBalancersApi {
     }
 
     /**
-     * List Load Balancer balaced NICs
-     * You can retrieve a list of nics attached to a load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * List balanced NICs
+     * List all NICs, attached to the specified Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;BalancedNics&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<BalancedNics> datacentersLoadbalancersBalancednicsGetWithHttpInfo(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -521,21 +501,21 @@ public class LoadBalancersApi {
     }
 
     /**
-     * List Load Balancer balaced NICs (asynchronously)
-     * You can retrieve a list of nics attached to a load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * List balanced NICs (asynchronously)
+     * List all NICs, attached to the specified Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLoadbalancersBalancednicsGetAsync(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<BalancedNics> _callback) throws ApiException {
@@ -547,23 +527,23 @@ public class LoadBalancersApi {
     }
     /**
      * Build call for datacentersLoadbalancersBalancednicsPost
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param nic Nic id to be attached (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param nic The NIC to be attached. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLoadbalancersBalancednicsPostCall(String datacenterId, String loadbalancerId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLoadbalancersBalancednicsPostCall(String datacenterId, String loadbalancerId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
         Object localVarPostBody = nic;
 
         // create path and map variables
@@ -608,7 +588,7 @@ public class LoadBalancersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLoadbalancersBalancednicsPostValidateBeforeCall(String datacenterId, String loadbalancerId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLoadbalancersBalancednicsPostValidateBeforeCall(String datacenterId, String loadbalancerId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -632,21 +612,21 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Attach a nic to Load Balancer
-     * This will attach a pre-existing nic to a load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param nic Nic id to be attached (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Attach balanced NICs
+     * Attach an existing NIC to the specified Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param nic The NIC to be attached. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return Nic
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public Nic datacentersLoadbalancersBalancednicsPost(String datacenterId, String loadbalancerId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -655,21 +635,21 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Attach a nic to Load Balancer
-     * This will attach a pre-existing nic to a load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param nic Nic id to be attached (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Attach balanced NICs
+     * Attach an existing NIC to the specified Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param nic The NIC to be attached. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;Nic&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Nic> datacentersLoadbalancersBalancednicsPostWithHttpInfo(String datacenterId, String loadbalancerId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -679,22 +659,22 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Attach a nic to Load Balancer (asynchronously)
-     * This will attach a pre-existing nic to a load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param nic Nic id to be attached (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Attach balanced NICs (asynchronously)
+     * Attach an existing NIC to the specified Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param nic The NIC to be attached. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLoadbalancersBalancednicsPostAsync(String datacenterId, String loadbalancerId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
@@ -706,24 +686,22 @@ public class LoadBalancersApi {
     }
     /**
      * Build call for datacentersLoadbalancersDelete
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLoadbalancersDeleteCall(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLoadbalancersDeleteCall(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -743,14 +721,6 @@ public class LoadBalancersApi {
 
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
-        }
-
-        if (offset != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
-        }
-
-        if (limit != null) {
-            localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
         }
 
         if (xContractNumber != null) {
@@ -776,7 +746,7 @@ public class LoadBalancersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLoadbalancersDeleteValidateBeforeCall(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLoadbalancersDeleteValidateBeforeCall(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -789,105 +759,95 @@ public class LoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersLoadbalancersDeleteCall(datacenterId, loadbalancerId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersLoadbalancersDeleteCall(datacenterId, loadbalancerId, pretty, depth, xContractNumber, _callback);
         return localVarCall;
 
     }
 
     /**
-     * Delete a Loadbalancer.
-     * Removes the specified load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
-     * @return Object
+     * Delete Load Balancers
+     * Remove the specified Load Balancer from the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public Object datacentersLoadbalancersDelete(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<Object> localVarResp = datacentersLoadbalancersDeleteWithHttpInfo(datacenterId, loadbalancerId, pretty, depth, xContractNumber, offset, limit);
-        return localVarResp.getData();
+    public void datacentersLoadbalancersDelete(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        datacentersLoadbalancersDeleteWithHttpInfo(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
     }
 
     /**
-     * Delete a Loadbalancer.
-     * Removes the specified load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
-     * @return ApiResponse&lt;Object&gt;
+     * Delete Load Balancers
+     * Remove the specified Load Balancer from the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Object> datacentersLoadbalancersDeleteWithHttpInfo(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = datacentersLoadbalancersDeleteValidateBeforeCall(datacenterId, loadbalancerId, pretty, depth, xContractNumber, offset, limit, null);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        return localVarApiClient.execute(localVarCall, localVarReturnType);
+    public ApiResponse<Void> datacentersLoadbalancersDeleteWithHttpInfo(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
+        okhttp3.Call localVarCall = datacentersLoadbalancersDeleteValidateBeforeCall(datacenterId, loadbalancerId, pretty, depth, xContractNumber, null);
+        return localVarApiClient.execute(localVarCall);
     }
 
     /**
-     * Delete a Loadbalancer. (asynchronously)
-     * Removes the specified load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * Delete Load Balancers (asynchronously)
+     * Remove the specified Load Balancer from the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLoadbalancersDeleteAsync(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersLoadbalancersDeleteAsync(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersLoadbalancersDeleteValidateBeforeCall(datacenterId, loadbalancerId, pretty, depth, xContractNumber, offset, limit, _callback);
-        Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        okhttp3.Call localVarCall = datacentersLoadbalancersDeleteValidateBeforeCall(datacenterId, loadbalancerId, pretty, depth, xContractNumber, _callback);
+        localVarApiClient.executeAsync(localVarCall, _callback);
         return localVarCall;
     }
     /**
      * Build call for datacentersLoadbalancersFindById
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLoadbalancersFindByIdCall(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLoadbalancersFindByIdCall(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Loadbalancer> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -932,7 +892,7 @@ public class LoadBalancersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLoadbalancersFindByIdValidateBeforeCall(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLoadbalancersFindByIdValidateBeforeCall(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Loadbalancer> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -951,20 +911,20 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Retrieve a loadbalancer
-     * Retrieves the attributes of a given load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve Load Balancers
+     * Retrieve the properties of the specified Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return Loadbalancer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public Loadbalancer datacentersLoadbalancersFindById(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -973,20 +933,20 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Retrieve a loadbalancer
-     * Retrieves the attributes of a given load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve Load Balancers
+     * Retrieve the properties of the specified Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;Loadbalancer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Loadbalancer> datacentersLoadbalancersFindByIdWithHttpInfo(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -996,21 +956,21 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Retrieve a loadbalancer (asynchronously)
-     * Retrieves the attributes of a given load balancer.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Retrieve Load Balancers (asynchronously)
+     * Retrieve the properties of the specified Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLoadbalancersFindByIdAsync(String datacenterId, String loadbalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Loadbalancer> _callback) throws ApiException {
@@ -1022,23 +982,23 @@ public class LoadBalancersApi {
     }
     /**
      * Build call for datacentersLoadbalancersGet
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLoadbalancersGetCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLoadbalancersGetCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Loadbalancers> _callback) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1090,7 +1050,7 @@ public class LoadBalancersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLoadbalancersGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLoadbalancersGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Loadbalancers> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1105,20 +1065,20 @@ public class LoadBalancersApi {
 
     /**
      * List Load Balancers
-     * Retrieve a list of Load Balancers within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * List all the Load Balancers within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @return Loadbalancers
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public Loadbalancers datacentersLoadbalancersGet(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
@@ -1128,20 +1088,20 @@ public class LoadBalancersApi {
 
     /**
      * List Load Balancers
-     * Retrieve a list of Load Balancers within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * List all the Load Balancers within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @return ApiResponse&lt;Loadbalancers&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Loadbalancers> datacentersLoadbalancersGetWithHttpInfo(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
@@ -1152,21 +1112,21 @@ public class LoadBalancersApi {
 
     /**
      * List Load Balancers (asynchronously)
-     * Retrieve a list of Load Balancers within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param offset the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional, default to 0)
-     * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 1000)
+     * List all the Load Balancers within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 200 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLoadbalancersGetAsync(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Loadbalancers> _callback) throws ApiException {
@@ -1178,23 +1138,23 @@ public class LoadBalancersApi {
     }
     /**
      * Build call for datacentersLoadbalancersPatch
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param loadbalancer Modified Loadbalancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param loadbalancer The properties of the Load Balancer to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLoadbalancersPatchCall(String datacenterId, String loadbalancerId, LoadbalancerProperties loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLoadbalancersPatchCall(String datacenterId, String loadbalancerId, LoadbalancerProperties loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Loadbalancer> _callback) throws ApiException {
         Object localVarPostBody = loadbalancer;
 
         // create path and map variables
@@ -1239,7 +1199,7 @@ public class LoadBalancersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLoadbalancersPatchValidateBeforeCall(String datacenterId, String loadbalancerId, LoadbalancerProperties loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLoadbalancersPatchValidateBeforeCall(String datacenterId, String loadbalancerId, LoadbalancerProperties loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Loadbalancer> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1263,21 +1223,21 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Partially modify a Loadbalancer
-     * You can use update attributes of a resource.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param loadbalancer Modified Loadbalancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Partially modify Load Balancers
+     * Update the properties of the specified Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param loadbalancer The properties of the Load Balancer to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return Loadbalancer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public Loadbalancer datacentersLoadbalancersPatch(String datacenterId, String loadbalancerId, LoadbalancerProperties loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1286,21 +1246,21 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Partially modify a Loadbalancer
-     * You can use update attributes of a resource.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param loadbalancer Modified Loadbalancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Partially modify Load Balancers
+     * Update the properties of the specified Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param loadbalancer The properties of the Load Balancer to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;Loadbalancer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Loadbalancer> datacentersLoadbalancersPatchWithHttpInfo(String datacenterId, String loadbalancerId, LoadbalancerProperties loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1310,22 +1270,22 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Partially modify a Loadbalancer (asynchronously)
-     * You can use update attributes of a resource.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param loadbalancer Modified Loadbalancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Partially modify Load Balancers (asynchronously)
+     * Update the properties of the specified Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param loadbalancer The properties of the Load Balancer to be updated. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLoadbalancersPatchAsync(String datacenterId, String loadbalancerId, LoadbalancerProperties loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Loadbalancer> _callback) throws ApiException {
@@ -1337,22 +1297,22 @@ public class LoadBalancersApi {
     }
     /**
      * Build call for datacentersLoadbalancersPost
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancer Loadbalancer to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancer The Load Balancer to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLoadbalancersPostCall(String datacenterId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLoadbalancersPostCall(String datacenterId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Loadbalancer> _callback) throws ApiException {
         Object localVarPostBody = loadbalancer;
 
         // create path and map variables
@@ -1396,7 +1356,7 @@ public class LoadBalancersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLoadbalancersPostValidateBeforeCall(String datacenterId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLoadbalancersPostValidateBeforeCall(String datacenterId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Loadbalancer> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1415,20 +1375,20 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Create a Load Balancer
-     * Creates a Loadbalancer within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancer Loadbalancer to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Create Load Balancers
+     * Create a Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancer The Load Balancer to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return Loadbalancer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public Loadbalancer datacentersLoadbalancersPost(String datacenterId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1437,20 +1397,20 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Create a Load Balancer
-     * Creates a Loadbalancer within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancer Loadbalancer to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Create Load Balancers
+     * Create a Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancer The Load Balancer to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;Loadbalancer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Loadbalancer> datacentersLoadbalancersPostWithHttpInfo(String datacenterId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1460,21 +1420,21 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Create a Load Balancer (asynchronously)
-     * Creates a Loadbalancer within the datacenter.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancer Loadbalancer to be created (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Create Load Balancers (asynchronously)
+     * Create a Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancer The Load Balancer to create. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLoadbalancersPostAsync(String datacenterId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Loadbalancer> _callback) throws ApiException {
@@ -1486,23 +1446,23 @@ public class LoadBalancersApi {
     }
     /**
      * Build call for datacentersLoadbalancersPut
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param loadbalancer Modified Loadbalancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param loadbalancer The modified Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersLoadbalancersPutCall(String datacenterId, String loadbalancerId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersLoadbalancersPutCall(String datacenterId, String loadbalancerId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Loadbalancer> _callback) throws ApiException {
         Object localVarPostBody = loadbalancer;
 
         // create path and map variables
@@ -1547,7 +1507,7 @@ public class LoadBalancersApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersLoadbalancersPutValidateBeforeCall(String datacenterId, String loadbalancerId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersLoadbalancersPutValidateBeforeCall(String datacenterId, String loadbalancerId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Loadbalancer> _callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1571,21 +1531,21 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Modify a Load Balancer
-     * You can use update attributes of a resource.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param loadbalancer Modified Loadbalancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Modify Load Balancers
+     * Modify the properties of the specified Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param loadbalancer The modified Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return Loadbalancer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public Loadbalancer datacentersLoadbalancersPut(String datacenterId, String loadbalancerId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1594,21 +1554,21 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Modify a Load Balancer
-     * You can use update attributes of a resource.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param loadbalancer Modified Loadbalancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Modify Load Balancers
+     * Modify the properties of the specified Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param loadbalancer The modified Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @return ApiResponse&lt;Loadbalancer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public ApiResponse<Loadbalancer> datacentersLoadbalancersPutWithHttpInfo(String datacenterId, String loadbalancerId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
@@ -1618,22 +1578,22 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Modify a Load Balancer (asynchronously)
-     * You can use update attributes of a resource.
-     * @param datacenterId The unique ID of the datacenter (required)
-     * @param loadbalancerId The unique ID of the Load Balancer (required)
-     * @param loadbalancer Modified Loadbalancer (required)
-     * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
-     * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * Modify Load Balancers (asynchronously)
+     * Modify the properties of the specified Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param loadbalancerId The unique ID of the Load Balancer. (required)
+     * @param loadbalancer The modified Load Balancer. (required)
+     * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+     * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
      <table summary="Response Details" border="1">
         <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
-        <tr><td> 202 </td><td> successful operation </td><td>  * X-RateLimit-Remaining - Number of requests which can still be made without triggering a failure response.  <br>  * X-RateLimit-Limit - Average number of requests allowed per minute <br>  * X-RateLimit-Burst - Maximum number of concurrent API requests allowed <br>  * Location - Callback URL to poll async operation status <br>  </td></tr>
-        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
     public okhttp3.Call datacentersLoadbalancersPutAsync(String datacenterId, String loadbalancerId, Loadbalancer loadbalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Loadbalancer> _callback) throws ApiException {

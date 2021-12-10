@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * S3KeyProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class S3KeyProperties {
   public static final String SERIALIZED_NAME_SECRET_KEY = "secretKey";
@@ -40,17 +40,20 @@ public class S3KeyProperties {
 
 
    /**
-   * secret of the S3 key
+   * Secret of the S3 key.
    * @return secretKey
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "tFVkUARsoeCdntQs2jVSyGG6TMPfPZ+ghnsWj/gG", value = "secret of the S3 key")
+  @ApiModelProperty(example = "tFVkUARsoeCdntQs2jVSyGG6TMPfPZ+ghnsWj/gG", value = "Secret of the S3 key.")
 
   public String getSecretKey() {
     return secretKey;
   }
 
 
+  public void setSecretKey(String secretKey) {
+    this.secretKey = secretKey;
+  }
 
 
   public S3KeyProperties active(Boolean active) {
@@ -60,11 +63,11 @@ public class S3KeyProperties {
   }
 
    /**
-   * denotes if the S3 key is active or not
+   * Denotes weather the S3 key is active.
    * @return active
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "denotes if the S3 key is active or not")
+  @ApiModelProperty(value = "Denotes weather the S3 key is active.")
 
   public Boolean getActive() {
     return active;

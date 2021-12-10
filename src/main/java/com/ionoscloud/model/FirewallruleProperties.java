@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * FirewallruleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class FirewallruleProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -35,11 +35,10 @@ public class FirewallruleProperties {
   private String name;
 
   /**
-   * The protocol for the rule. Property cannot be modified after creation (disallowed in update requests)
+   * The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests).
    */
   @JsonAdapter(ProtocolEnum.Adapter.class)
   public enum ProtocolEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     TCP("TCP"),
     
     UDP("UDP"),
@@ -64,12 +63,13 @@ public class FirewallruleProperties {
     }
 
     public static ProtocolEnum fromValue(String value) {
+
       for (ProtocolEnum b : ProtocolEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return ProtocolEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<ProtocolEnum> {
@@ -90,161 +90,17 @@ public class FirewallruleProperties {
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
   private ProtocolEnum protocol;
 
-  /**
-   * Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows all source MAC address
-   */
-  @JsonAdapter(SourceMacEnum.Adapter.class)
-  public enum SourceMacEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
-    _VALID_MAC_ADDRESS_("@Valid MAC address@"),
-    
-    NULL("null");
-
-    private String value;
-
-    SourceMacEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static SourceMacEnum fromValue(String value) {
-      for (SourceMacEnum b : SourceMacEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
-          return b;
-        }
-      }
-      return SourceMacEnum.UNKNOWN_VALUE;
-    }
-
-    public static class Adapter extends TypeAdapter<SourceMacEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final SourceMacEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public SourceMacEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return SourceMacEnum.fromValue(value);
-      }
-    }
-  }
-
   public static final String SERIALIZED_NAME_SOURCE_MAC = "sourceMac";
   @SerializedName(SERIALIZED_NAME_SOURCE_MAC)
-  private SourceMacEnum sourceMac;
-
-  /**
-   * Only traffic originating from the respective IPv4 address is allowed. Value null allows all source IPs
-   */
-  @JsonAdapter(SourceIpEnum.Adapter.class)
-  public enum SourceIpEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
-    _VALID_IP_ADDRESS_("@Valid IP address@"),
-    
-    NULL("null");
-
-    private String value;
-
-    SourceIpEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static SourceIpEnum fromValue(String value) {
-      for (SourceIpEnum b : SourceIpEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
-          return b;
-        }
-      }
-      return SourceIpEnum.UNKNOWN_VALUE;
-    }
-
-    public static class Adapter extends TypeAdapter<SourceIpEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final SourceIpEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public SourceIpEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return SourceIpEnum.fromValue(value);
-      }
-    }
-  }
+  private String sourceMac;
 
   public static final String SERIALIZED_NAME_SOURCE_IP = "sourceIp";
   @SerializedName(SERIALIZED_NAME_SOURCE_IP)
-  private SourceIpEnum sourceIp;
-
-  /**
-   * In case the target NIC has multiple IP addresses, only traffic directed to the respective IP address of the NIC is allowed. Value null allows all target IPs
-   */
-  @JsonAdapter(TargetIpEnum.Adapter.class)
-  public enum TargetIpEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
-    _VALID_IP_ADDRESS_("@Valid IP address@"),
-    
-    NULL("null");
-
-    private String value;
-
-    TargetIpEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static TargetIpEnum fromValue(String value) {
-      for (TargetIpEnum b : TargetIpEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
-          return b;
-        }
-      }
-      return TargetIpEnum.UNKNOWN_VALUE;
-    }
-
-    public static class Adapter extends TypeAdapter<TargetIpEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final TargetIpEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public TargetIpEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return TargetIpEnum.fromValue(value);
-      }
-    }
-  }
+  private String sourceIp;
 
   public static final String SERIALIZED_NAME_TARGET_IP = "targetIp";
   @SerializedName(SERIALIZED_NAME_TARGET_IP)
-  private TargetIpEnum targetIp;
+  private String targetIp;
 
   public static final String SERIALIZED_NAME_ICMP_CODE = "icmpCode";
   @SerializedName(SERIALIZED_NAME_ICMP_CODE)
@@ -263,11 +119,10 @@ public class FirewallruleProperties {
   private Integer portRangeEnd;
 
   /**
-   * The type of firewall rule. If is not specified, it will take the default value INGRESS
+   * The type of firewall rule. If not specified, the default INGRESS value is taken.
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     INGRESS("INGRESS"),
     
     EGRESS("EGRESS");
@@ -288,12 +143,13 @@ public class FirewallruleProperties {
     }
 
     public static TypeEnum fromValue(String value) {
+
       for (TypeEnum b : TypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return TypeEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<TypeEnum> {
@@ -322,11 +178,11 @@ public class FirewallruleProperties {
   }
 
    /**
-   * A name of that resource
+   * The name of the  resource.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "A name of that resource")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
   public String getName() {
     return name;
@@ -345,10 +201,10 @@ public class FirewallruleProperties {
   }
 
    /**
-   * The protocol for the rule. Property cannot be modified after creation (disallowed in update requests)
+   * The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests).
    * @return protocol
   **/
-  @ApiModelProperty(example = "TCP", required = true, value = "The protocol for the rule. Property cannot be modified after creation (disallowed in update requests)")
+  @ApiModelProperty(example = "TCP", required = true, value = "The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests).")
 
   public ProtocolEnum getProtocol() {
     return protocol;
@@ -360,71 +216,71 @@ public class FirewallruleProperties {
   }
 
 
-  public FirewallruleProperties sourceMac(SourceMacEnum sourceMac) {
+  public FirewallruleProperties sourceMac(String sourceMac) {
     
     this.sourceMac = sourceMac;
     return this;
   }
 
    /**
-   * Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows all source MAC address
+   * Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows traffic from any MAC address.
    * @return sourceMac
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "00:0a:95:9d:68:16", value = "Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows all source MAC address")
+  @ApiModelProperty(example = "00:0a:95:9d:68:16", value = "Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows traffic from any MAC address.")
 
-  public SourceMacEnum getSourceMac() {
+  public String getSourceMac() {
     return sourceMac;
   }
 
 
-  public void setSourceMac(SourceMacEnum sourceMac) {
+  public void setSourceMac(String sourceMac) {
     this.sourceMac = sourceMac;
   }
 
 
-  public FirewallruleProperties sourceIp(SourceIpEnum sourceIp) {
+  public FirewallruleProperties sourceIp(String sourceIp) {
     
     this.sourceIp = sourceIp;
     return this;
   }
 
    /**
-   * Only traffic originating from the respective IPv4 address is allowed. Value null allows all source IPs
+   * Only traffic originating from the respective IPv4 address is allowed. Value null allows traffic from any IP address.
    * @return sourceIp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "22.231.113.64", value = "Only traffic originating from the respective IPv4 address is allowed. Value null allows all source IPs")
+  @ApiModelProperty(example = "22.231.113.64", value = "Only traffic originating from the respective IPv4 address is allowed. Value null allows traffic from any IP address.")
 
-  public SourceIpEnum getSourceIp() {
+  public String getSourceIp() {
     return sourceIp;
   }
 
 
-  public void setSourceIp(SourceIpEnum sourceIp) {
+  public void setSourceIp(String sourceIp) {
     this.sourceIp = sourceIp;
   }
 
 
-  public FirewallruleProperties targetIp(TargetIpEnum targetIp) {
+  public FirewallruleProperties targetIp(String targetIp) {
     
     this.targetIp = targetIp;
     return this;
   }
 
    /**
-   * In case the target NIC has multiple IP addresses, only traffic directed to the respective IP address of the NIC is allowed. Value null allows all target IPs
+   * If the target NIC has multiple IP addresses, only the traffic directed to the respective IP address of the NIC is allowed. Value null Value null allows traffic to any target IP address.
    * @return targetIp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "22.231.113.64", value = "In case the target NIC has multiple IP addresses, only traffic directed to the respective IP address of the NIC is allowed. Value null allows all target IPs")
+  @ApiModelProperty(example = "22.231.113.64", value = "If the target NIC has multiple IP addresses, only the traffic directed to the respective IP address of the NIC is allowed. Value null Value null allows traffic to any target IP address.")
 
-  public TargetIpEnum getTargetIp() {
+  public String getTargetIp() {
     return targetIp;
   }
 
 
-  public void setTargetIp(TargetIpEnum targetIp) {
+  public void setTargetIp(String targetIp) {
     this.targetIp = targetIp;
   }
 
@@ -436,13 +292,13 @@ public class FirewallruleProperties {
   }
 
    /**
-   * Defines the allowed code (from 0 to 254) if protocol ICMP is chosen. Value null allows all codes
+   * Defines the allowed code (from 0 to 254) if protocol ICMP is chosen. Value null allows all codes.
    * minimum: 0
    * maximum: 254
    * @return icmpCode
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "0", value = "Defines the allowed code (from 0 to 254) if protocol ICMP is chosen. Value null allows all codes")
+  @ApiModelProperty(example = "0", value = "Defines the allowed code (from 0 to 254) if protocol ICMP is chosen. Value null allows all codes.")
 
   public Integer getIcmpCode() {
     return icmpCode;
@@ -461,13 +317,13 @@ public class FirewallruleProperties {
   }
 
    /**
-   * Defines the allowed type (from 0 to 254) if the protocol ICMP is chosen. Value null allows all types
+   * Defines the allowed type (from 0 to 254) if the protocol ICMP is chosen. Value null allows all types.
    * minimum: 0
    * maximum: 254
    * @return icmpType
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "8", value = "Defines the allowed type (from 0 to 254) if the protocol ICMP is chosen. Value null allows all types")
+  @ApiModelProperty(example = "8", value = "Defines the allowed type (from 0 to 254) if the protocol ICMP is chosen. Value null allows all types.")
 
   public Integer getIcmpType() {
     return icmpType;
@@ -486,13 +342,13 @@ public class FirewallruleProperties {
   }
 
    /**
-   * Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports
+   * Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports.
    * minimum: 1
    * maximum: 65534
    * @return portRangeStart
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "8", value = "Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports")
+  @ApiModelProperty(example = "8", value = "Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports.")
 
   public Integer getPortRangeStart() {
     return portRangeStart;
@@ -511,13 +367,13 @@ public class FirewallruleProperties {
   }
 
    /**
-   * Defines the end range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd null to allow all ports
+   * Defines the end range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd null to allow all ports.
    * minimum: 1
    * maximum: 65534
    * @return portRangeEnd
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "8", value = "Defines the end range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd null to allow all ports")
+  @ApiModelProperty(example = "8", value = "Defines the end range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd null to allow all ports.")
 
   public Integer getPortRangeEnd() {
     return portRangeEnd;
@@ -536,11 +392,11 @@ public class FirewallruleProperties {
   }
 
    /**
-   * The type of firewall rule. If is not specified, it will take the default value INGRESS
+   * The type of firewall rule. If not specified, the default INGRESS value is taken.
    * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "INGRESS", value = "The type of firewall rule. If is not specified, it will take the default value INGRESS")
+  @ApiModelProperty(example = "INGRESS", value = "The type of firewall rule. If not specified, the default INGRESS value is taken.")
 
   public TypeEnum getType() {
     return type;

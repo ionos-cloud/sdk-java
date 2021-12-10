@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * UserPropertiesPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class UserPropertiesPut {
   public static final String SERIALIZED_NAME_FIRSTNAME = "firstname";
@@ -41,6 +41,10 @@ public class UserPropertiesPut {
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
   private String email;
+
+  public static final String SERIALIZED_NAME_PASSWORD = "password";
+  @SerializedName(SERIALIZED_NAME_PASSWORD)
+  private String password;
 
   public static final String SERIALIZED_NAME_ADMINISTRATOR = "administrator";
   @SerializedName(SERIALIZED_NAME_ADMINISTRATOR)
@@ -66,11 +70,11 @@ public class UserPropertiesPut {
   }
 
    /**
-   * first name of the user
+   * The first name of the user.
    * @return firstname
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "first name of the user")
+  @ApiModelProperty(value = "The first name of the user.")
 
   public String getFirstname() {
     return firstname;
@@ -89,11 +93,11 @@ public class UserPropertiesPut {
   }
 
    /**
-   * last name of the user
+   * The last name of the user.
    * @return lastname
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "last name of the user")
+  @ApiModelProperty(value = "The last name of the user.")
 
   public String getLastname() {
     return lastname;
@@ -112,11 +116,11 @@ public class UserPropertiesPut {
   }
 
    /**
-   * email address of the user
+   * The email address of the user.
    * @return email
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "email address of the user")
+  @ApiModelProperty(value = "The email address of the user.")
 
   public String getEmail() {
     return email;
@@ -128,6 +132,29 @@ public class UserPropertiesPut {
   }
 
 
+  public UserPropertiesPut password(String password) {
+    
+    this.password = password;
+    return this;
+  }
+
+   /**
+   * password of the user
+   * @return password
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "password of the user")
+
+  public String getPassword() {
+    return password;
+  }
+
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+
   public UserPropertiesPut administrator(Boolean administrator) {
     
     this.administrator = administrator;
@@ -135,11 +162,11 @@ public class UserPropertiesPut {
   }
 
    /**
-   * indicates if the user has admin rights or not
+   * Indicates if the user has admin rights.
    * @return administrator
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "indicates if the user has admin rights or not")
+  @ApiModelProperty(value = "Indicates if the user has admin rights.")
 
   public Boolean getAdministrator() {
     return administrator;
@@ -158,11 +185,11 @@ public class UserPropertiesPut {
   }
 
    /**
-   * indicates if secure authentication should be forced on the user or not
+   * Indicates if secure authentication should be forced on the user.
    * @return forceSecAuth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "indicates if secure authentication should be forced on the user or not")
+  @ApiModelProperty(value = "Indicates if secure authentication should be forced on the user.")
 
   public Boolean getForceSecAuth() {
     return forceSecAuth;
@@ -181,11 +208,11 @@ public class UserPropertiesPut {
   }
 
    /**
-   * indicates if secure authentication is active for the user or not
+   * Indicates if secure authentication is active for the user.
    * @return secAuthActive
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "indicates if secure authentication is active for the user or not")
+  @ApiModelProperty(value = "Indicates if secure authentication is active for the user.")
 
   public Boolean getSecAuthActive() {
     return secAuthActive;
@@ -204,11 +231,11 @@ public class UserPropertiesPut {
   }
 
    /**
-   * indicates if the user is active
+   * Indicates if the user is active.
    * @return active
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "indicates if the user is active")
+  @ApiModelProperty(value = "Indicates if the user is active.")
 
   public Boolean getActive() {
     return active;
@@ -229,7 +256,7 @@ public class UserPropertiesPut {
       return false;
     }
     UserPropertiesPut userPropertiesPut = (UserPropertiesPut) o;
-    return Objects.equals(this.firstname, userPropertiesPut.firstname) && Objects.equals(this.lastname, userPropertiesPut.lastname) && Objects.equals(this.email, userPropertiesPut.email) && Objects.equals(this.administrator, userPropertiesPut.administrator) && Objects.equals(this.forceSecAuth, userPropertiesPut.forceSecAuth) && Objects.equals(this.secAuthActive, userPropertiesPut.secAuthActive) && Objects.equals(this.active, userPropertiesPut.active);
+    return Objects.equals(this.firstname, userPropertiesPut.firstname) && Objects.equals(this.lastname, userPropertiesPut.lastname) && Objects.equals(this.email, userPropertiesPut.email) && Objects.equals(this.password, userPropertiesPut.password) && Objects.equals(this.administrator, userPropertiesPut.administrator) && Objects.equals(this.forceSecAuth, userPropertiesPut.forceSecAuth) && Objects.equals(this.secAuthActive, userPropertiesPut.secAuthActive) && Objects.equals(this.active, userPropertiesPut.active);
   }
 
 
@@ -242,6 +269,7 @@ public class UserPropertiesPut {
     sb.append("    firstname: ").append(toIndentedString(firstname)).append("\n");
     sb.append("    lastname: ").append(toIndentedString(lastname)).append("\n");
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
     sb.append("    administrator: ").append(toIndentedString(administrator)).append("\n");
     sb.append("    forceSecAuth: ").append(toIndentedString(forceSecAuth)).append("\n");
     sb.append("    secAuthActive: ").append(toIndentedString(secAuthActive)).append("\n");

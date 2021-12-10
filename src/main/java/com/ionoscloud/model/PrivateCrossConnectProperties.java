@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * PrivateCrossConnectProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class PrivateCrossConnectProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -58,11 +58,11 @@ public class PrivateCrossConnectProperties {
   }
 
    /**
-   * A name of that resource
+   * The name of the  resource.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "A name of that resource")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
   public String getName() {
     return name;
@@ -81,11 +81,11 @@ public class PrivateCrossConnectProperties {
   }
 
    /**
-   * Human readable description
+   * Human-readable description.
    * @return description
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Private Cross-Connect between datacenter 'A' and datacenter 'B' ", value = "Human readable description")
+  @ApiModelProperty(example = "Private Cross-Connect between datacenter 'A' and datacenter 'B' ", value = "Human-readable description.")
 
   public String getDescription() {
     return description;
@@ -98,31 +98,37 @@ public class PrivateCrossConnectProperties {
 
 
    /**
-   * Read-Only attribute. Lists LAN&#39;s joined to this private cross connect
+   * Read-Only attribute. Lists LAN&#39;s joined to this private Cross-Connect.
    * @return peers
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "{ \"peers\": [ { \"id\": \"<lan-id>\", \"name\": \"<lan-name>\", \"datacenterId\": \"<dc-uuid>\",  \"datacenterName\": \"<dc-name>\", \"location\": \"<de/fra>\"} ] }", value = "Read-Only attribute. Lists LAN's joined to this private cross connect")
+  @ApiModelProperty(example = "{ \"peers\": [ { \"id\": \"<lan-id>\", \"name\": \"<lan-name>\", \"datacenterId\": \"<dc-uuid>\",  \"datacenterName\": \"<dc-name>\", \"location\": \"<de/fra>\"} ] }", value = "Read-Only attribute. Lists LAN's joined to this private Cross-Connect.")
 
   public List<Peer> getPeers() {
     return peers;
   }
 
 
+  public void setPeers(List<Peer> peers) {
+    this.peers = peers;
+  }
 
 
    /**
-   * Read-Only attribute. Lists datacenters that can be joined to this private cross connect
+   * Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect.
    * @return connectableDatacenters
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "{ \"connectableDatacenters\": [ { \"id\": \"<dc-id>\", \"name\": \"<dc-name>\", \"location\": \"<de/fra>\"} ] }", value = "Read-Only attribute. Lists datacenters that can be joined to this private cross connect")
+  @ApiModelProperty(example = "{ \"connectableDatacenters\": [ { \"id\": \"<dc-id>\", \"name\": \"<dc-name>\", \"location\": \"<de/fra>\"} ] }", value = "Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect.")
 
   public List<ConnectableDatacenter> getConnectableDatacenters() {
     return connectableDatacenters;
   }
 
 
+  public void setConnectableDatacenters(List<ConnectableDatacenter> connectableDatacenters) {
+    this.connectableDatacenters = connectableDatacenters;
+  }
 
 
   @Override

@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * DatacenterProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class DatacenterProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -69,11 +69,11 @@ public class DatacenterProperties {
   }
 
    /**
-   * A name of that resource
+   * The name of the  resource.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "A name of that resource")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
   public String getName() {
     return name;
@@ -92,11 +92,11 @@ public class DatacenterProperties {
   }
 
    /**
-   * A description for the datacenter, e.g. staging, production
+   * A description for the datacenter, such as staging, production.
    * @return description
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My Production Datacenter", value = "A description for the datacenter, e.g. staging, production")
+  @ApiModelProperty(example = "My Production Datacenter", value = "A description for the datacenter, such as staging, production.")
 
   public String getDescription() {
     return description;
@@ -115,10 +115,10 @@ public class DatacenterProperties {
   }
 
    /**
-   * The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests)
+   * The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests).
    * @return location
   **/
-  @ApiModelProperty(example = "us/las", required = true, value = "The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests)")
+  @ApiModelProperty(example = "us/las", required = true, value = "The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests).")
 
   public String getLocation() {
     return location;
@@ -131,31 +131,37 @@ public class DatacenterProperties {
 
 
    /**
-   * The version of that Data Center. Gets incremented with every change
+   * The version of the data center; incremented with every change.
    * @return version
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "8", value = "The version of that Data Center. Gets incremented with every change")
+  @ApiModelProperty(example = "8", value = "The version of the data center; incremented with every change.")
 
   public Integer getVersion() {
     return version;
   }
 
 
+  public void setVersion(Integer version) {
+    this.version = version;
+  }
 
 
    /**
-   * List of features supported by the location this data center is part of
+   * List of features supported by the location where this data center is provisioned.
    * @return features
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[SSD]", value = "List of features supported by the location this data center is part of")
+  @ApiModelProperty(example = "[SSD]", value = "List of features supported by the location where this data center is provisioned.")
 
   public List<String> getFeatures() {
     return features;
   }
 
 
+  public void setFeatures(List<String> features) {
+    this.features = features;
+  }
 
 
   public DatacenterProperties secAuthProtection(Boolean secAuthProtection) {
@@ -165,11 +171,11 @@ public class DatacenterProperties {
   }
 
    /**
-   * Boolean value representing if the data center requires extra protection e.g. two factor protection
+   * Boolean value representing if the data center requires extra protection, such as two-step verification.
    * @return secAuthProtection
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Boolean value representing if the data center requires extra protection e.g. two factor protection")
+  @ApiModelProperty(example = "true", value = "Boolean value representing if the data center requires extra protection, such as two-step verification.")
 
   public Boolean getSecAuthProtection() {
     return secAuthProtection;
@@ -193,6 +199,9 @@ public class DatacenterProperties {
   }
 
 
+  public void setCpuArchitecture(List<CpuArchitectureProperties> cpuArchitecture) {
+    this.cpuArchitecture = cpuArchitecture;
+  }
 
 
   @Override

@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * GroupProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class GroupProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -90,11 +90,11 @@ public class GroupProperties {
   }
 
    /**
-   * A name of that resource
+   * The name of the  resource.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "A name of that resource")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
   public String getName() {
     return name;
@@ -113,11 +113,11 @@ public class GroupProperties {
   }
 
    /**
-   * create data center privilege
+   * Create data center privilege.
    * @return createDataCenter
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "create data center privilege")
+  @ApiModelProperty(value = "Create data center privilege.")
 
   public Boolean getCreateDataCenter() {
     return createDataCenter;
@@ -136,11 +136,11 @@ public class GroupProperties {
   }
 
    /**
-   * create snapshot privilege
+   * Create snapshot privilege.
    * @return createSnapshot
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "create snapshot privilege")
+  @ApiModelProperty(value = "Create snapshot privilege.")
 
   public Boolean getCreateSnapshot() {
     return createSnapshot;
@@ -159,11 +159,11 @@ public class GroupProperties {
   }
 
    /**
-   * reserve ip block privilege
+   * Reserve IP block privilege.
    * @return reserveIp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "reserve ip block privilege")
+  @ApiModelProperty(value = "Reserve IP block privilege.")
 
   public Boolean getReserveIp() {
     return reserveIp;
@@ -182,11 +182,11 @@ public class GroupProperties {
   }
 
    /**
-   * activity log access privilege
+   * Activity log access privilege.
    * @return accessActivityLog
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "activity log access privilege")
+  @ApiModelProperty(value = "Activity log access privilege.")
 
   public Boolean getAccessActivityLog() {
     return accessActivityLog;
@@ -205,11 +205,11 @@ public class GroupProperties {
   }
 
    /**
-   * create pcc privilege
+   * Create pcc privilege.
    * @return createPcc
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "create pcc privilege")
+  @ApiModelProperty(value = "Create pcc privilege.")
 
   public Boolean getCreatePcc() {
     return createPcc;
@@ -228,11 +228,11 @@ public class GroupProperties {
   }
 
    /**
-   * S3 privilege
+   * S3 privilege.
    * @return s3Privilege
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "S3 privilege")
+  @ApiModelProperty(value = "S3 privilege.")
 
   public Boolean getS3Privilege() {
     return s3Privilege;
@@ -251,11 +251,11 @@ public class GroupProperties {
   }
 
    /**
-   * create backup unit privilege
+   * Create backup unit privilege.
    * @return createBackupUnit
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "create backup unit privilege")
+  @ApiModelProperty(value = "Create backup unit privilege.")
 
   public Boolean getCreateBackupUnit() {
     return createBackupUnit;
@@ -274,11 +274,11 @@ public class GroupProperties {
   }
 
    /**
-   * create internet access privilege
+   * Create internet access privilege.
    * @return createInternetAccess
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "create internet access privilege")
+  @ApiModelProperty(value = "Create internet access privilege.")
 
   public Boolean getCreateInternetAccess() {
     return createInternetAccess;
@@ -297,11 +297,11 @@ public class GroupProperties {
   }
 
    /**
-   * create kubernetes cluster privilege
+   * Create Kubernetes cluster privilege.
    * @return createK8sCluster
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "create kubernetes cluster privilege")
+  @ApiModelProperty(value = "Create Kubernetes cluster privilege.")
 
   public Boolean getCreateK8sCluster() {
     return createK8sCluster;
@@ -320,11 +320,11 @@ public class GroupProperties {
   }
 
    /**
-   * create Flow Logs privilege
+   * Create Flow Logs privilege.
    * @return createFlowLog
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "create Flow Logs privilege")
+  @ApiModelProperty(value = "Create Flow Logs privilege.")
 
   public Boolean getCreateFlowLog() {
     return createFlowLog;

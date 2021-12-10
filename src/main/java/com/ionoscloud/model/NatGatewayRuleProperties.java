@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * NatGatewayRuleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class NatGatewayRuleProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -69,10 +69,10 @@ public class NatGatewayRuleProperties {
   }
 
    /**
-   * Name of the NAT gateway rule
+   * The name of the NAT Gateway rule.
    * @return name
   **/
-  @ApiModelProperty(example = "My NAT Gateway Rule", required = true, value = "Name of the NAT gateway rule")
+  @ApiModelProperty(example = "My NAT Gateway rule", required = true, value = "The name of the NAT Gateway rule.")
 
   public String getName() {
     return name;
@@ -91,11 +91,11 @@ public class NatGatewayRuleProperties {
   }
 
    /**
-   * Type of the NAT gateway rule.
+   * Type of the NAT Gateway rule.
    * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"SNAT\"", value = "Type of the NAT gateway rule.")
+  @ApiModelProperty(example = "\"SNAT\"", value = "Type of the NAT Gateway rule.")
 
   public NatGatewayRuleType getType() {
     return type;
@@ -114,11 +114,11 @@ public class NatGatewayRuleProperties {
   }
 
    /**
-   * Protocol of the NAT gateway rule. Defaults to ALL. If protocol is &#39;ICMP&#39; then targetPortRange start and end cannot be set.
+   * Protocol of the NAT Gateway rule. Defaults to ALL. If protocol is &#39;ICMP&#39; then targetPortRange start and end cannot be set.
    * @return protocol
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"TCP\"", value = "Protocol of the NAT gateway rule. Defaults to ALL. If protocol is 'ICMP' then targetPortRange start and end cannot be set.")
+  @ApiModelProperty(example = "\"TCP\"", value = "Protocol of the NAT Gateway rule. Defaults to ALL. If protocol is 'ICMP' then targetPortRange start and end cannot be set.")
 
   public NatGatewayRuleProtocol getProtocol() {
     return protocol;
@@ -137,10 +137,10 @@ public class NatGatewayRuleProperties {
   }
 
    /**
-   * Source subnet of the NAT gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address.
+   * Source subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address.
    * @return sourceSubnet
   **/
-  @ApiModelProperty(example = "10.0.1.0/24", required = true, value = "Source subnet of the NAT gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address.")
+  @ApiModelProperty(example = "10.0.1.0/24", required = true, value = "Source subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address.")
 
   public String getSourceSubnet() {
     return sourceSubnet;
@@ -159,10 +159,10 @@ public class NatGatewayRuleProperties {
   }
 
    /**
-   * Public IP address of the NAT gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT gateway resource
+   * Public IP address of the NAT Gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT Gateway resource
    * @return publicIp
   **/
-  @ApiModelProperty(example = "192.18.7.17", required = true, value = "Public IP address of the NAT gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT gateway resource")
+  @ApiModelProperty(example = "192.18.7.17", required = true, value = "Public IP address of the NAT Gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT Gateway resource")
 
   public String getPublicIp() {
     return publicIp;
@@ -181,11 +181,11 @@ public class NatGatewayRuleProperties {
   }
 
    /**
-   * Target or destination subnet of the NAT gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address.
+   * Target or destination subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address.
    * @return targetSubnet
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "10.0.1.0/24", value = "Target or destination subnet of the NAT gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address.")
+  @ApiModelProperty(example = "10.0.1.0/24", value = "Target or destination subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address.")
 
   public String getTargetSubnet() {
     return targetSubnet;

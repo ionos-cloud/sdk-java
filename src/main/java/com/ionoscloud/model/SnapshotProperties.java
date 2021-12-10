@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -28,7 +28,7 @@ import java.math.BigDecimal;
 /**
  * SnapshotProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class SnapshotProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -92,11 +92,10 @@ public class SnapshotProperties {
   private Boolean discScsiHotUnplug;
 
   /**
-   * OS type of this Snapshot
+   * OS type of this snapshot
    */
   @JsonAdapter(LicenceTypeEnum.Adapter.class)
   public enum LicenceTypeEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     UNKNOWN("UNKNOWN"),
     
     WINDOWS("WINDOWS"),
@@ -123,12 +122,13 @@ public class SnapshotProperties {
     }
 
     public static LicenceTypeEnum fromValue(String value) {
+
       for (LicenceTypeEnum b : LicenceTypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return LicenceTypeEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<LicenceTypeEnum> {
@@ -157,11 +157,11 @@ public class SnapshotProperties {
   }
 
    /**
-   * A name of that resource
+   * The name of the  resource.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "A name of that resource")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
   public String getName() {
     return name;
@@ -180,11 +180,11 @@ public class SnapshotProperties {
   }
 
    /**
-   * Human readable description
+   * Human-readable description.
    * @return description
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Image/Snapshot of Ubuntu ", value = "Human readable description")
+  @ApiModelProperty(example = "Image/Snapshot of Ubuntu ", value = "Human-readable description.")
 
   public String getDescription() {
     return description;
@@ -208,20 +208,26 @@ public class SnapshotProperties {
   }
 
 
+  public void setLocation(String location) {
+    this.location = location;
+  }
 
 
    /**
-   * The size of the image in GB
+   * The size of the image in GB.
    * @return size
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "100.0", value = "The size of the image in GB")
+  @ApiModelProperty(example = "100.0", value = "The size of the image in GB.")
 
   public BigDecimal getSize() {
     return size;
   }
 
 
+  public void setSize(BigDecimal size) {
+    this.size = size;
+  }
 
 
   public SnapshotProperties secAuthProtection(Boolean secAuthProtection) {
@@ -231,11 +237,11 @@ public class SnapshotProperties {
   }
 
    /**
-   * Boolean value representing if the snapshot requires extra protection e.g. two factor protection
+   * Boolean value representing if the snapshot requires extra protection, such as two-step verification.
    * @return secAuthProtection
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Boolean value representing if the snapshot requires extra protection e.g. two factor protection")
+  @ApiModelProperty(example = "true", value = "Boolean value representing if the snapshot requires extra protection, such as two-step verification.")
 
   public Boolean getSecAuthProtection() {
     return secAuthProtection;
@@ -254,11 +260,11 @@ public class SnapshotProperties {
   }
 
    /**
-   * Is capable of CPU hot plug (no reboot required)
+   * Hot-plug capable CPU (no reboot required).
    * @return cpuHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of CPU hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable CPU (no reboot required).")
 
   public Boolean getCpuHotPlug() {
     return cpuHotPlug;
@@ -277,11 +283,11 @@ public class SnapshotProperties {
   }
 
    /**
-   * Is capable of CPU hot unplug (no reboot required)
+   * Hot-unplug capable CPU (no reboot required).
    * @return cpuHotUnplug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of CPU hot unplug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable CPU (no reboot required).")
 
   public Boolean getCpuHotUnplug() {
     return cpuHotUnplug;
@@ -300,11 +306,11 @@ public class SnapshotProperties {
   }
 
    /**
-   * Is capable of memory hot plug (no reboot required)
+   * Hot-plug capable RAM (no reboot required).
    * @return ramHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of memory hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable RAM (no reboot required).")
 
   public Boolean getRamHotPlug() {
     return ramHotPlug;
@@ -323,11 +329,11 @@ public class SnapshotProperties {
   }
 
    /**
-   * Is capable of memory hot unplug (no reboot required)
+   * Hot-unplug capable RAM (no reboot required).
    * @return ramHotUnplug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of memory hot unplug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable RAM (no reboot required).")
 
   public Boolean getRamHotUnplug() {
     return ramHotUnplug;
@@ -346,11 +352,11 @@ public class SnapshotProperties {
   }
 
    /**
-   * Is capable of nic hot plug (no reboot required)
+   * Hot-plug capable NIC (no reboot required).
    * @return nicHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of nic hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable NIC (no reboot required).")
 
   public Boolean getNicHotPlug() {
     return nicHotPlug;
@@ -369,11 +375,11 @@ public class SnapshotProperties {
   }
 
    /**
-   * Is capable of nic hot unplug (no reboot required)
+   * Hot-unplug capable NIC (no reboot required).
    * @return nicHotUnplug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of nic hot unplug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable NIC (no reboot required).")
 
   public Boolean getNicHotUnplug() {
     return nicHotUnplug;
@@ -392,11 +398,11 @@ public class SnapshotProperties {
   }
 
    /**
-   * Is capable of Virt-IO drive hot plug (no reboot required)
+   * Hot-plug capable Virt-IO drive (no reboot required).
    * @return discVirtioHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of Virt-IO drive hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable Virt-IO drive (no reboot required).")
 
   public Boolean getDiscVirtioHotPlug() {
     return discVirtioHotPlug;
@@ -415,11 +421,11 @@ public class SnapshotProperties {
   }
 
    /**
-   * Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines.
+   * Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.
    * @return discVirtioHotUnplug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines.")
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.")
 
   public Boolean getDiscVirtioHotUnplug() {
     return discVirtioHotUnplug;
@@ -438,11 +444,11 @@ public class SnapshotProperties {
   }
 
    /**
-   * Is capable of SCSI drive hot plug (no reboot required)
+   * Hot-plug capable SCSI drive (no reboot required).
    * @return discScsiHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of SCSI drive hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable SCSI drive (no reboot required).")
 
   public Boolean getDiscScsiHotPlug() {
     return discScsiHotPlug;
@@ -484,11 +490,11 @@ public class SnapshotProperties {
   }
 
    /**
-   * OS type of this Snapshot
+   * OS type of this snapshot
    * @return licenceType
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "LINUX", value = "OS type of this Snapshot")
+  @ApiModelProperty(example = "LINUX", value = "OS type of this snapshot")
 
   public LicenceTypeEnum getLicenceType() {
     return licenceType;

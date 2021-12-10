@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * Token
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class Token {
   public static final String SERIALIZED_NAME_TOKEN = "token";
@@ -36,17 +36,20 @@ public class Token {
 
 
    /**
-   * The jwToken for the server
+   * The jwToken for the server.
    * @return token
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "eyJ0eXAiOiJKV1QiLCJraWQiOiI0MWM1MDFlNC03NGY3LTQwYjctYmMxMi1lZWIzMTAzNThlZDkiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJpb25vc2Nsb3VkIiwiaWF0IjoxNjAyNDg5NTkzMDcxLCJzZXJ2ZXIiOnsidXVpZCI6IjMwNGEwZGVlLWE3OTgtNDNhNi04MzIyLTk3M2NiYzc3Yjg4ZCIsIm5hbWUiOiJTZXJ2ZXIifX0.TND9kJd8GXM39XP5PMH_LnF_99al4MEkI_eoEowPvPztirgM50aZEdg6SuLYQzg-R7vrA7hEFaK4NJb2BUUsIZYVMhjl1QmKUE5TnP0Q2zYnIfNQNZFDu2rKrOydPCkPQwlMVvvZLeBSz7lrKYujF-qZ_yY_6SHlFtt-rg6IznRtup8AFziXtl-9cEsWU92_GCTd5LiriQrsnFAiGRbb0p2_6OYAQAH9FeWu4cxrbSwUmeR7Q4klJyZqFd0fv6UTFBtpSiyci7rsB142MXyLcqM4PrBkgd9P5OFbJYf5lbsb9pW04wLSl9rqoWGgZvWsqpuzosUkQRZt_O5yuYmT9w", value = "The jwToken for the server")
+  @ApiModelProperty(example = "eyJ0eXAiOiJKV1QiLCJraWQiOiI0MWM1MDFlNC03NGY3LTQwYjctYmMxMi1lZWIzMTAzNThlZDkiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJpb25vc2Nsb3VkIiwiaWF0IjoxNjAyNDg5NTkzMDcxLCJzZXJ2ZXIiOnsidXVpZCI6IjMwNGEwZGVlLWE3OTgtNDNhNi04MzIyLTk3M2NiYzc3Yjg4ZCIsIm5hbWUiOiJTZXJ2ZXIifX0.TND9kJd8GXM39XP5PMH_LnF_99al4MEkI_eoEowPvPztirgM50aZEdg6SuLYQzg-R7vrA7hEFaK4NJb2BUUsIZYVMhjl1QmKUE5TnP0Q2zYnIfNQNZFDu2rKrOydPCkPQwlMVvvZLeBSz7lrKYujF-qZ_yY_6SHlFtt-rg6IznRtup8AFziXtl-9cEsWU92_GCTd5LiriQrsnFAiGRbb0p2_6OYAQAH9FeWu4cxrbSwUmeR7Q4klJyZqFd0fv6UTFBtpSiyci7rsB142MXyLcqM4PrBkgd9P5OFbJYf5lbsb9pW04wLSl9rqoWGgZvWsqpuzosUkQRZt_O5yuYmT9w", value = "The jwToken for the server.")
 
   public String getToken() {
     return token;
   }
 
 
+  public void setToken(String token) {
+    this.token = token;
+  }
 
 
   @Override

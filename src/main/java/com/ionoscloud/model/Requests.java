@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * Requests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class Requests {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -67,17 +67,20 @@ public class Requests {
 
 
    /**
-   * The resource&#39;s unique identifier
+   * The resource&#39;s unique identifier.
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "requests", value = "The resource's unique identifier")
+  @ApiModelProperty(example = "requests", value = "The resource's unique identifier.")
 
   public String getId() {
     return id;
   }
 
 
+  public void setId(String id) {
+    this.id = id;
+  }
 
 
   public Requests type(Type type) {
@@ -87,11 +90,11 @@ public class Requests {
   }
 
    /**
-   * The type of object that has been created
+   * The type of object that has been created.
    * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"collection\"", value = "The type of object that has been created")
+  @ApiModelProperty(example = "\"collection\"", value = "The type of object that has been created.")
 
   public Type getType() {
     return type;
@@ -104,31 +107,37 @@ public class Requests {
 
 
    /**
-   * URL to the object representation (absolute path)
+   * URL to the object representation (absolute path).
    * @return href
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path)")
+  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path).")
 
   public URI getHref() {
     return href;
   }
 
 
+  public void setHref(URI href) {
+    this.href = href;
+  }
 
 
    /**
-   * Array of items in that collection
+   * Array of items in that collection.
    * @return items
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of items in that collection")
+  @ApiModelProperty(value = "Array of items in that collection.")
 
   public List<Request> getItems() {
     return items;
   }
 
 
+  public void setItems(List<Request> items) {
+    this.items = items;
+  }
 
 
   public Requests offset(BigDecimal offset) {
@@ -138,10 +147,10 @@ public class Requests {
   }
 
    /**
-   * the offset specified in the request (or, if none was specified, the default offset of 0)
+   * The offset specified in the request (or, if none was specified, the default offset of 0)
    * @return offset
   **/
-  @ApiModelProperty(example = "0", required = true, value = "the offset specified in the request (or, if none was specified, the default offset of 0)")
+  @ApiModelProperty(example = "0", required = true, value = "The offset specified in the request (or, if none was specified, the default offset of 0)")
 
   public BigDecimal getOffset() {
     return offset;
@@ -160,10 +169,10 @@ public class Requests {
   }
 
    /**
-   * the limit specified in the request (or, if none was specified, the default limit of 0)
+   * The limit specified in the request (if none was specified, use the endpoint&#39;s default pagination limit).
    * @return limit
   **/
-  @ApiModelProperty(example = "1000", required = true, value = "the limit specified in the request (or, if none was specified, the default limit of 0)")
+  @ApiModelProperty(example = "1000", required = true, value = "The limit specified in the request (if none was specified, use the endpoint's default pagination limit).")
 
   public BigDecimal getLimit() {
     return limit;

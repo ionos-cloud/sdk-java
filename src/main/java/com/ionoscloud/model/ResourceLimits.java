@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ResourceLimits
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class ResourceLimits {
   public static final String SERIALIZED_NAME_CORES_PER_SERVER = "coresPerServer";
@@ -126,10 +126,10 @@ public class ResourceLimits {
   }
 
    /**
-   * maximum number of cores per server
+   * The maximum number of cores per server.
    * @return coresPerServer
   **/
-  @ApiModelProperty(required = true, value = "maximum number of cores per server")
+  @ApiModelProperty(required = true, value = "The maximum number of cores per server.")
 
   public Integer getCoresPerServer() {
     return coresPerServer;
@@ -148,10 +148,10 @@ public class ResourceLimits {
   }
 
    /**
-   * maximum cores per contract
+   * The maximum number of cores per contract.
    * @return coresPerContract
   **/
-  @ApiModelProperty(required = true, value = "maximum cores per contract")
+  @ApiModelProperty(required = true, value = "The maximum number of cores per contract.")
 
   public Integer getCoresPerContract() {
     return coresPerContract;
@@ -170,10 +170,10 @@ public class ResourceLimits {
   }
 
    /**
-   * number of cores provisioned
+   * The number of cores provisioned.
    * @return coresProvisioned
   **/
-  @ApiModelProperty(required = true, value = "number of cores provisioned")
+  @ApiModelProperty(required = true, value = "The number of cores provisioned.")
 
   public Integer getCoresProvisioned() {
     return coresProvisioned;
@@ -192,10 +192,10 @@ public class ResourceLimits {
   }
 
    /**
-   * maximum ram per server
+   * The maximum RAM per server.
    * @return ramPerServer
   **/
-  @ApiModelProperty(required = true, value = "maximum ram per server")
+  @ApiModelProperty(required = true, value = "The maximum RAM per server.")
 
   public Integer getRamPerServer() {
     return ramPerServer;
@@ -214,10 +214,10 @@ public class ResourceLimits {
   }
 
    /**
-   * maximum ram per contract
+   * The maximum RAM per contract.
    * @return ramPerContract
   **/
-  @ApiModelProperty(required = true, value = "maximum ram per contract")
+  @ApiModelProperty(required = true, value = "The maximum RAM per contract.")
 
   public Integer getRamPerContract() {
     return ramPerContract;
@@ -236,10 +236,10 @@ public class ResourceLimits {
   }
 
    /**
-   * ram provisioned
+   * RAM provisioned.
    * @return ramProvisioned
   **/
-  @ApiModelProperty(required = true, value = "ram provisioned")
+  @ApiModelProperty(required = true, value = "RAM provisioned.")
 
   public Integer getRamProvisioned() {
     return ramProvisioned;
@@ -258,10 +258,10 @@ public class ResourceLimits {
   }
 
    /**
-   * hdd limit per volume
+   * HDD limit per volume.
    * @return hddLimitPerVolume
   **/
-  @ApiModelProperty(required = true, value = "hdd limit per volume")
+  @ApiModelProperty(required = true, value = "HDD limit per volume.")
 
   public Long getHddLimitPerVolume() {
     return hddLimitPerVolume;
@@ -280,10 +280,10 @@ public class ResourceLimits {
   }
 
    /**
-   * hdd limit per contract
+   * HDD limit per contract.
    * @return hddLimitPerContract
   **/
-  @ApiModelProperty(required = true, value = "hdd limit per contract")
+  @ApiModelProperty(required = true, value = "HDD limit per contract.")
 
   public Long getHddLimitPerContract() {
     return hddLimitPerContract;
@@ -302,10 +302,10 @@ public class ResourceLimits {
   }
 
    /**
-   * hdd volume provisioned
+   * HDD volume provisioned.
    * @return hddVolumeProvisioned
   **/
-  @ApiModelProperty(required = true, value = "hdd volume provisioned")
+  @ApiModelProperty(required = true, value = "HDD volume provisioned.")
 
   public Long getHddVolumeProvisioned() {
     return hddVolumeProvisioned;
@@ -324,10 +324,10 @@ public class ResourceLimits {
   }
 
    /**
-   * ssd limit per volume
+   * SSD limit per volume.
    * @return ssdLimitPerVolume
   **/
-  @ApiModelProperty(required = true, value = "ssd limit per volume")
+  @ApiModelProperty(required = true, value = "SSD limit per volume.")
 
   public Long getSsdLimitPerVolume() {
     return ssdLimitPerVolume;
@@ -346,10 +346,10 @@ public class ResourceLimits {
   }
 
    /**
-   * ssd limit per contract
+   * SSD limit per contract.
    * @return ssdLimitPerContract
   **/
-  @ApiModelProperty(required = true, value = "ssd limit per contract")
+  @ApiModelProperty(required = true, value = "SSD limit per contract.")
 
   public Long getSsdLimitPerContract() {
     return ssdLimitPerContract;
@@ -368,10 +368,10 @@ public class ResourceLimits {
   }
 
    /**
-   * ssd volume provisioned
+   * SSD volume provisioned.
    * @return ssdVolumeProvisioned
   **/
-  @ApiModelProperty(required = true, value = "ssd volume provisioned")
+  @ApiModelProperty(required = true, value = "SSD volume provisioned.")
 
   public Long getSsdVolumeProvisioned() {
     return ssdVolumeProvisioned;
@@ -390,10 +390,10 @@ public class ResourceLimits {
   }
 
    /**
-   * DAS (Direct Attached Storage) volume provisioned
+   * DAS (Direct Attached Storage) volume provisioned.
    * @return dasVolumeProvisioned
   **/
-  @ApiModelProperty(required = true, value = "DAS (Direct Attached Storage) volume provisioned")
+  @ApiModelProperty(required = true, value = "DAS (Direct Attached Storage) volume provisioned.")
 
   public Long getDasVolumeProvisioned() {
     return dasVolumeProvisioned;
@@ -412,10 +412,10 @@ public class ResourceLimits {
   }
 
    /**
-   * total reservable ip limit of the customer
+   * Total reservable IP limit for the customer.
    * @return reservableIps
   **/
-  @ApiModelProperty(required = true, value = "total reservable ip limit of the customer")
+  @ApiModelProperty(required = true, value = "Total reservable IP limit for the customer.")
 
   public Integer getReservableIps() {
     return reservableIps;
@@ -434,10 +434,10 @@ public class ResourceLimits {
   }
 
    /**
-   * reserved ips on a contract
+   * Reserved ips for the contract.
    * @return reservedIpsOnContract
   **/
-  @ApiModelProperty(required = true, value = "reserved ips on a contract")
+  @ApiModelProperty(required = true, value = "Reserved ips for the contract.")
 
   public Integer getReservedIpsOnContract() {
     return reservedIpsOnContract;
@@ -456,10 +456,10 @@ public class ResourceLimits {
   }
 
    /**
-   * reserved ips in use
+   * Reserved ips in use.
    * @return reservedIpsInUse
   **/
-  @ApiModelProperty(required = true, value = "reserved ips in use")
+  @ApiModelProperty(required = true, value = "Reserved ips in use.")
 
   public Integer getReservedIpsInUse() {
     return reservedIpsInUse;
@@ -478,10 +478,10 @@ public class ResourceLimits {
   }
 
    /**
-   * k8s clusters total limit
+   * K8s clusters total limit.
    * @return k8sClusterLimitTotal
   **/
-  @ApiModelProperty(required = true, value = "k8s clusters total limit")
+  @ApiModelProperty(required = true, value = "K8s clusters total limit.")
 
   public Integer getK8sClusterLimitTotal() {
     return k8sClusterLimitTotal;
@@ -500,10 +500,10 @@ public class ResourceLimits {
   }
 
    /**
-   * k8s clusters provisioned
+   * K8s clusters provisioned.
    * @return k8sClustersProvisioned
   **/
-  @ApiModelProperty(required = true, value = "k8s clusters provisioned")
+  @ApiModelProperty(required = true, value = "K8s clusters provisioned.")
 
   public Integer getK8sClustersProvisioned() {
     return k8sClustersProvisioned;
@@ -522,10 +522,10 @@ public class ResourceLimits {
   }
 
    /**
-   * NLB total limit
+   * NLB total limit.
    * @return nlbLimitTotal
   **/
-  @ApiModelProperty(required = true, value = "NLB total limit")
+  @ApiModelProperty(required = true, value = "NLB total limit.")
 
   public Integer getNlbLimitTotal() {
     return nlbLimitTotal;
@@ -544,10 +544,10 @@ public class ResourceLimits {
   }
 
    /**
-   * NLBs provisioned
+   * NLBs provisioned.
    * @return nlbProvisioned
   **/
-  @ApiModelProperty(required = true, value = "NLBs provisioned")
+  @ApiModelProperty(required = true, value = "NLBs provisioned.")
 
   public Integer getNlbProvisioned() {
     return nlbProvisioned;
@@ -566,10 +566,10 @@ public class ResourceLimits {
   }
 
    /**
-   * NAT gateway total limit
+   * NAT Gateway total limit.
    * @return natGatewayLimitTotal
   **/
-  @ApiModelProperty(required = true, value = "NAT gateway total limit")
+  @ApiModelProperty(required = true, value = "NAT Gateway total limit.")
 
   public Integer getNatGatewayLimitTotal() {
     return natGatewayLimitTotal;
@@ -588,10 +588,10 @@ public class ResourceLimits {
   }
 
    /**
-   * NAT gateways provisioned
+   * NAT Gateways provisioned.
    * @return natGatewayProvisioned
   **/
-  @ApiModelProperty(required = true, value = "NAT gateways provisioned")
+  @ApiModelProperty(required = true, value = "NAT Gateways provisioned.")
 
   public Integer getNatGatewayProvisioned() {
     return natGatewayProvisioned;

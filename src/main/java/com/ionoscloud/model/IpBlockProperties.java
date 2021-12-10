@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * IpBlockProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class IpBlockProperties {
   public static final String SERIALIZED_NAME_IPS = "ips";
@@ -55,17 +55,20 @@ public class IpBlockProperties {
 
 
    /**
-   * A collection of IPs associated with the IP Block
+   * Collection of IPs, associated with the IP Block.
    * @return ips
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[\"22.231.113.64\", \"22.231.113.65\", \"22.231.113.66\"]", value = "A collection of IPs associated with the IP Block")
+  @ApiModelProperty(example = "[\"22.231.113.64\", \"22.231.113.65\", \"22.231.113.66\"]", value = "Collection of IPs, associated with the IP Block.")
 
   public List<String> getIps() {
     return ips;
   }
 
 
+  public void setIps(List<String> ips) {
+    this.ips = ips;
+  }
 
 
   public IpBlockProperties location(String location) {
@@ -75,10 +78,10 @@ public class IpBlockProperties {
   }
 
    /**
-   * Location of that IP Block. Property cannot be modified after creation (disallowed in update requests)
+   * Location of that IP block. Property cannot be modified after it is created (disallowed in update requests).
    * @return location
   **/
-  @ApiModelProperty(example = "us/las", required = true, value = "Location of that IP Block. Property cannot be modified after creation (disallowed in update requests)")
+  @ApiModelProperty(example = "us/las", required = true, value = "Location of that IP block. Property cannot be modified after it is created (disallowed in update requests).")
 
   public String getLocation() {
     return location;
@@ -97,10 +100,10 @@ public class IpBlockProperties {
   }
 
    /**
-   * The size of the IP block
+   * The size of the IP block.
    * @return size
   **/
-  @ApiModelProperty(example = "5", required = true, value = "The size of the IP block")
+  @ApiModelProperty(example = "5", required = true, value = "The size of the IP block.")
 
   public Integer getSize() {
     return size;
@@ -119,11 +122,11 @@ public class IpBlockProperties {
   }
 
    /**
-   * A name of that resource
+   * The name of the  resource.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "A name of that resource")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
   public String getName() {
     return name;
@@ -136,17 +139,20 @@ public class IpBlockProperties {
 
 
    /**
-   * Read-Only attribute. Lists consumption detail of an individual ip
+   * Read-Only attribute. Lists consumption detail for an individual IP
    * @return ipConsumers
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "{ \"ipConsumers\": [ { \"ip\" : \"192.18.2.11\", \"mac\" : \"02:01:3f:52:6e:57\", \"nicId\" : \"0e8ee463-1174-46f2-87ba-a5c79c14d8e5\", \"serverId\" : \"e6a3466f-8d6e-4cb6-8001-f4e245f222b7\", \"serverName\" : \"Unnamed Server\", \"datacenterId\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fccfc\", \"datacenterName\" : \"IpConsumerDC\", \"k8sNodePoolUuid\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fcc12\", \"k8sClusterUuid\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fcc23\"} ] }", value = "Read-Only attribute. Lists consumption detail of an individual ip")
+  @ApiModelProperty(example = "{ \"ipConsumers\": [ { \"ip\" : \"192.18.2.11\", \"mac\" : \"02:01:3f:52:6e:57\", \"nicId\" : \"0e8ee463-1174-46f2-87ba-a5c79c14d8e5\", \"serverId\" : \"e6a3466f-8d6e-4cb6-8001-f4e245f222b7\", \"serverName\" : \"Unnamed Server\", \"datacenterId\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fccfc\", \"datacenterName\" : \"IpConsumerDC\", \"k8sNodePoolUuid\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fcc12\", \"k8sClusterUuid\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fcc23\"} ] }", value = "Read-Only attribute. Lists consumption detail for an individual IP")
 
   public List<IpConsumer> getIpConsumers() {
     return ipConsumers;
   }
 
 
+  public void setIpConsumers(List<IpConsumer> ipConsumers) {
+    this.ipConsumers = ipConsumers;
+  }
 
 
   @Override

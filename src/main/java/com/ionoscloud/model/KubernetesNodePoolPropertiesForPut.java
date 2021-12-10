@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * KubernetesNodePoolPropertiesForPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class KubernetesNodePoolPropertiesForPut {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -81,10 +81,11 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
    /**
-   * A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+   * A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
    * @return name
   **/
-  @ApiModelProperty(example = "k8s-node-pool", required = true, value = "A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "k8s-node-pool", value = "A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.")
 
   public String getName() {
     return name;
@@ -103,10 +104,10 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
    /**
-   * Number of nodes part of the Node Pool
+   * The number of nodes that make up the node pool.
    * @return nodeCount
   **/
-  @ApiModelProperty(example = "2", required = true, value = "Number of nodes part of the Node Pool")
+  @ApiModelProperty(example = "2", required = true, value = "The number of nodes that make up the node pool.")
 
   public Integer getNodeCount() {
     return nodeCount;
@@ -125,11 +126,11 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
    /**
-   * The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions.
+   * The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.
    * @return k8sVersion
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1.15.4", value = "The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster's nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions.")
+  @ApiModelProperty(example = "1.15.4", value = "The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster's nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.")
 
   public String getK8sVersion() {
     return k8sVersion;
@@ -233,11 +234,11 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
    /**
-   * map of labels attached to node pool
+   * map of labels attached to node pool.
    * @return labels
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "map of labels attached to node pool")
+  @ApiModelProperty(value = "map of labels attached to node pool.")
 
   public Map<String, String> getLabels() {
     return labels;
@@ -264,11 +265,11 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
    /**
-   * map of annotations attached to node pool
+   * map of annotations attached to node pool.
    * @return annotations
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "map of annotations attached to node pool")
+  @ApiModelProperty(value = "map of annotations attached to node pool.")
 
   public Map<String, String> getAnnotations() {
     return annotations;

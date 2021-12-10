@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * UserPropertiesPost
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class UserPropertiesPost {
   public static final String SERIALIZED_NAME_FIRSTNAME = "firstname";
@@ -70,11 +70,11 @@ public class UserPropertiesPost {
   }
 
    /**
-   * first name of the user
+   * The first name of the user.
    * @return firstname
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "first name of the user")
+  @ApiModelProperty(value = "The first name of the user.")
 
   public String getFirstname() {
     return firstname;
@@ -93,11 +93,11 @@ public class UserPropertiesPost {
   }
 
    /**
-   * last name of the user
+   * The last name of the user.
    * @return lastname
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "last name of the user")
+  @ApiModelProperty(value = "The last name of the user.")
 
   public String getLastname() {
     return lastname;
@@ -116,11 +116,11 @@ public class UserPropertiesPost {
   }
 
    /**
-   * email address of the user
+   * The email address of the user.
    * @return email
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "email address of the user")
+  @ApiModelProperty(value = "The email address of the user.")
 
   public String getEmail() {
     return email;
@@ -139,11 +139,11 @@ public class UserPropertiesPost {
   }
 
    /**
-   * indicates if the user has admin rights or not
+   * Indicates if the user has admin rights.
    * @return administrator
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "indicates if the user has admin rights or not")
+  @ApiModelProperty(value = "Indicates if the user has admin rights.")
 
   public Boolean getAdministrator() {
     return administrator;
@@ -162,11 +162,11 @@ public class UserPropertiesPost {
   }
 
    /**
-   * indicates if secure authentication should be forced on the user or not
+   * Indicates if secure authentication should be forced on the user.
    * @return forceSecAuth
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "indicates if secure authentication should be forced on the user or not")
+  @ApiModelProperty(value = "Indicates if secure authentication should be forced on the user.")
 
   public Boolean getForceSecAuth() {
     return forceSecAuth;
@@ -185,11 +185,11 @@ public class UserPropertiesPost {
   }
 
    /**
-   * indicates if secure authentication is active for the user or not
+   * Indicates if secure authentication is active for the user.
    * @return secAuthActive
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "indicates if secure authentication is active for the user or not")
+  @ApiModelProperty(value = "Indicates if secure authentication is active for the user.")
 
   public Boolean getSecAuthActive() {
     return secAuthActive;
@@ -208,11 +208,11 @@ public class UserPropertiesPost {
   }
 
    /**
-   * User password
+   * User password.
    * @return password
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "User password")
+  @ApiModelProperty(value = "User password.")
 
   public String getPassword() {
     return password;
@@ -231,11 +231,11 @@ public class UserPropertiesPost {
   }
 
    /**
-   * indicates if the user is active
+   * Indicates if the user is active.
    * @return active
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "indicates if the user is active")
+  @ApiModelProperty(value = "Indicates if the user is active.")
 
   public Boolean getActive() {
     return active;

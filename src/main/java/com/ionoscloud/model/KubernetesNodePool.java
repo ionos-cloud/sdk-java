@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -30,7 +30,7 @@ import java.net.URI;
 /**
  * KubernetesNodePool
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class KubernetesNodePool {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -38,11 +38,10 @@ public class KubernetesNodePool {
   private String id;
 
   /**
-   * The type of object
+   * The type of object.
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     NODEPOOL("nodepool");
 
     private String value;
@@ -61,12 +60,13 @@ public class KubernetesNodePool {
     }
 
     public static TypeEnum fromValue(String value) {
+
       for (TypeEnum b : TypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return TypeEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<TypeEnum> {
@@ -112,34 +112,43 @@ public class KubernetesNodePool {
   }
 
 
+  public void setId(String id) {
+    this.id = id;
+  }
 
 
    /**
-   * The type of object
+   * The type of object.
    * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The type of object")
+  @ApiModelProperty(value = "The type of object.")
 
   public TypeEnum getType() {
     return type;
   }
 
 
+  public void setType(TypeEnum type) {
+    this.type = type;
+  }
 
 
    /**
-   * URL to the object representation (absolute path)
+   * URL to the object representation (absolute path).
    * @return href
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path)")
+  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path).")
 
   public URI getHref() {
     return href;
   }
 
 
+  public void setHref(URI href) {
+    this.href = href;
+  }
 
 
   public KubernetesNodePool metadata(DatacenterElementMetadata metadata) {

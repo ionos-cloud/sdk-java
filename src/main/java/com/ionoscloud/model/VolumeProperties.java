@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * VolumeProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class VolumeProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -38,11 +38,10 @@ public class VolumeProperties {
   private String name;
 
   /**
-   * Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server
+   * Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server.
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     HDD("HDD"),
     
     SSD("SSD"),
@@ -51,7 +50,9 @@ public class VolumeProperties {
     
     SSD_PREMIUM("SSD Premium"),
     
-    DAS("DAS");
+    DAS("DAS"),
+    
+    ISO("ISO");
 
     private String value;
 
@@ -69,12 +70,13 @@ public class VolumeProperties {
     }
 
     public static TypeEnum fromValue(String value) {
+
       for (TypeEnum b : TypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return TypeEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<TypeEnum> {
@@ -100,11 +102,10 @@ public class VolumeProperties {
   private BigDecimal size;
 
   /**
-   * The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront. It is not available for DAS (Direct Attached Storage) and subject of availability for SSD.
+   * The availability zone in which the volume should be provisioned. The storage volume will be provisioned on as few physical storage devices as possible, but this cannot be guaranteed upfront. This is uavailable for DAS (Direct Attached Storage), and subject to availability for SSD.
    */
   @JsonAdapter(AvailabilityZoneEnum.Adapter.class)
   public enum AvailabilityZoneEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     AUTO("AUTO"),
     
     ZONE_1("ZONE_1"),
@@ -129,12 +130,13 @@ public class VolumeProperties {
     }
 
     public static AvailabilityZoneEnum fromValue(String value) {
+
       for (AvailabilityZoneEnum b : AvailabilityZoneEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return AvailabilityZoneEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<AvailabilityZoneEnum> {
@@ -163,6 +165,10 @@ public class VolumeProperties {
   @SerializedName(SERIALIZED_NAME_IMAGE_PASSWORD)
   private String imagePassword;
 
+  public static final String SERIALIZED_NAME_IMAGE_ALIAS = "imageAlias";
+  @SerializedName(SERIALIZED_NAME_IMAGE_ALIAS)
+  private String imageAlias;
+
   public static final String SERIALIZED_NAME_SSH_KEYS = "sshKeys";
   @SerializedName(SERIALIZED_NAME_SSH_KEYS)
   private List<String> sshKeys = null;
@@ -172,10 +178,11 @@ public class VolumeProperties {
    */
   @JsonAdapter(BusEnum.Adapter.class)
   public enum BusEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     VIRTIO("VIRTIO"),
     
-    IDE("IDE");
+    IDE("IDE"),
+    
+    UNKNOWN("UNKNOWN");
 
     private String value;
 
@@ -193,12 +200,13 @@ public class VolumeProperties {
     }
 
     public static BusEnum fromValue(String value) {
+
       for (BusEnum b : BusEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return BusEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<BusEnum> {
@@ -220,11 +228,10 @@ public class VolumeProperties {
   private BusEnum bus;
 
   /**
-   * OS type of this volume
+   * OS type for this volume.
    */
   @JsonAdapter(LicenceTypeEnum.Adapter.class)
   public enum LicenceTypeEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     UNKNOWN("UNKNOWN"),
     
     WINDOWS("WINDOWS"),
@@ -251,12 +258,13 @@ public class VolumeProperties {
     }
 
     public static LicenceTypeEnum fromValue(String value) {
+
       for (LicenceTypeEnum b : LicenceTypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return LicenceTypeEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<LicenceTypeEnum> {
@@ -325,11 +333,11 @@ public class VolumeProperties {
   }
 
    /**
-   * A name of that resource
+   * The name of the  resource.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "A name of that resource")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
   public String getName() {
     return name;
@@ -348,11 +356,11 @@ public class VolumeProperties {
   }
 
    /**
-   * Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server
+   * Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server.
    * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "HDD", value = "Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server")
+  @ApiModelProperty(example = "HDD", value = "Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server.")
 
   public TypeEnum getType() {
     return type;
@@ -371,10 +379,10 @@ public class VolumeProperties {
   }
 
    /**
-   * The size of the volume in GB
+   * The size of the volume in GB.
    * @return size
   **/
-  @ApiModelProperty(example = "100.0", required = true, value = "The size of the volume in GB")
+  @ApiModelProperty(example = "100.0", required = true, value = "The size of the volume in GB.")
 
   public BigDecimal getSize() {
     return size;
@@ -393,11 +401,11 @@ public class VolumeProperties {
   }
 
    /**
-   * The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront. It is not available for DAS (Direct Attached Storage) and subject of availability for SSD.
+   * The availability zone in which the volume should be provisioned. The storage volume will be provisioned on as few physical storage devices as possible, but this cannot be guaranteed upfront. This is uavailable for DAS (Direct Attached Storage), and subject to availability for SSD.
    * @return availabilityZone
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "AUTO", value = "The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront. It is not available for DAS (Direct Attached Storage) and subject of availability for SSD.")
+  @ApiModelProperty(example = "AUTO", value = "The availability zone in which the volume should be provisioned. The storage volume will be provisioned on as few physical storage devices as possible, but this cannot be guaranteed upfront. This is uavailable for DAS (Direct Attached Storage), and subject to availability for SSD.")
 
   public AvailabilityZoneEnum getAvailabilityZone() {
     return availabilityZone;
@@ -416,11 +424,11 @@ public class VolumeProperties {
   }
 
    /**
-   * Image or snapshot ID to be used as template for this volume
+   * Image or snapshot ID to be used as template for this volume.
    * @return image
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "d6ad1576-fde9-4696-aa41-1ebd75bdaf49", value = "Image or snapshot ID to be used as template for this volume")
+  @ApiModelProperty(example = "d6ad1576-fde9-4696-aa41-1ebd75bdaf49", value = "Image or snapshot ID to be used as template for this volume.")
 
   public String getImage() {
     return image;
@@ -439,11 +447,11 @@ public class VolumeProperties {
   }
 
    /**
-   * Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9
+   * Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9.
    * @return imagePassword
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "mypass123", value = "Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9")
+  @ApiModelProperty(example = "mypass123", value = "Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9.")
 
   public String getImagePassword() {
     return imagePassword;
@@ -452,6 +460,29 @@ public class VolumeProperties {
 
   public void setImagePassword(String imagePassword) {
     this.imagePassword = imagePassword;
+  }
+
+
+  public VolumeProperties imageAlias(String imageAlias) {
+    
+    this.imageAlias = imageAlias;
+    return this;
+  }
+
+   /**
+   * Get imageAlias
+   * @return imageAlias
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getImageAlias() {
+    return imageAlias;
+  }
+
+
+  public void setImageAlias(String imageAlias) {
+    this.imageAlias = imageAlias;
   }
 
 
@@ -510,17 +541,20 @@ public class VolumeProperties {
 
 
    /**
-   * OS type of this volume
+   * OS type for this volume.
    * @return licenceType
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "LINUX", value = "OS type of this volume")
+  @ApiModelProperty(example = "LINUX", value = "OS type for this volume.")
 
   public LicenceTypeEnum getLicenceType() {
     return licenceType;
   }
 
 
+  public void setLicenceType(LicenceTypeEnum licenceType) {
+    this.licenceType = licenceType;
+  }
 
 
   public VolumeProperties cpuHotPlug(Boolean cpuHotPlug) {
@@ -530,11 +564,11 @@ public class VolumeProperties {
   }
 
    /**
-   * Is capable of CPU hot plug (no reboot required)
+   * Hot-plug capable CPU (no reboot required).
    * @return cpuHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of CPU hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable CPU (no reboot required).")
 
   public Boolean getCpuHotPlug() {
     return cpuHotPlug;
@@ -553,11 +587,11 @@ public class VolumeProperties {
   }
 
    /**
-   * Is capable of memory hot plug (no reboot required)
+   * Hot-plug capable RAM (no reboot required).
    * @return ramHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of memory hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable RAM (no reboot required).")
 
   public Boolean getRamHotPlug() {
     return ramHotPlug;
@@ -576,11 +610,11 @@ public class VolumeProperties {
   }
 
    /**
-   * Is capable of nic hot plug (no reboot required)
+   * Hot-plug capable NIC (no reboot required).
    * @return nicHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of nic hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable NIC (no reboot required).")
 
   public Boolean getNicHotPlug() {
     return nicHotPlug;
@@ -599,11 +633,11 @@ public class VolumeProperties {
   }
 
    /**
-   * Is capable of nic hot unplug (no reboot required)
+   * Hot-unplug capable NIC (no reboot required).
    * @return nicHotUnplug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of nic hot unplug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable NIC (no reboot required).")
 
   public Boolean getNicHotUnplug() {
     return nicHotUnplug;
@@ -622,11 +656,11 @@ public class VolumeProperties {
   }
 
    /**
-   * Is capable of Virt-IO drive hot plug (no reboot required)
+   * Hot-plug capable Virt-IO drive (no reboot required).
    * @return discVirtioHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of Virt-IO drive hot plug (no reboot required)")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable Virt-IO drive (no reboot required).")
 
   public Boolean getDiscVirtioHotPlug() {
     return discVirtioHotPlug;
@@ -645,11 +679,11 @@ public class VolumeProperties {
   }
 
    /**
-   * Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines.
+   * Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.
    * @return discVirtioHotUnplug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines.")
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.")
 
   public Boolean getDiscVirtioHotUnplug() {
     return discVirtioHotUnplug;
@@ -662,31 +696,37 @@ public class VolumeProperties {
 
 
    /**
-   * The Logical Unit Number of the storage volume. Null for volumes not mounted to any VM
+   * The Logical Unit Number of the storage volume. Null for volumes, not mounted to a VM.
    * @return deviceNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "3", value = "The Logical Unit Number of the storage volume. Null for volumes not mounted to any VM")
+  @ApiModelProperty(example = "3", value = "The Logical Unit Number of the storage volume. Null for volumes, not mounted to a VM.")
 
   public Long getDeviceNumber() {
     return deviceNumber;
   }
 
 
+  public void setDeviceNumber(Long deviceNumber) {
+    this.deviceNumber = deviceNumber;
+  }
 
 
    /**
-   * The PCI slot number of the storage volume. Null for volumes not mounted to any VM
+   * The PCI slot number of the storage volume. Null for volumes, not mounted to a VM.
    * @return pciSlot
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "7", value = "The PCI slot number of the storage volume. Null for volumes not mounted to any VM")
+  @ApiModelProperty(example = "7", value = "The PCI slot number of the storage volume. Null for volumes, not mounted to a VM.")
 
   public Integer getPciSlot() {
     return pciSlot;
   }
 
 
+  public void setPciSlot(Integer pciSlot) {
+    this.pciSlot = pciSlot;
+  }
 
 
   public VolumeProperties backupunitId(String backupunitId) {
@@ -696,11 +736,11 @@ public class VolumeProperties {
   }
 
    /**
-   * The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; in conjunction with this property.
+   * The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; in conjunction with this property.
    * @return backupunitId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "25f67991-0f51-4efc-a8ad-ef1fb31a481c", value = "The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either 'public image' or 'imageAlias' in conjunction with this property.")
+  @ApiModelProperty(example = "25f67991-0f51-4efc-a8ad-ef1fb31a481c", value = "The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either 'public image' or 'imageAlias' in conjunction with this property.")
 
   public String getBackupunitId() {
     return backupunitId;
@@ -719,11 +759,11 @@ public class VolumeProperties {
   }
 
    /**
-   * The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; that has cloud-init compatibility in conjunction with this property.
+   * The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; that has cloud-init compatibility in conjunction with this property.
    * @return userData
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either 'public image' or 'imageAlias' that has cloud-init compatibility in conjunction with this property.")
+  @ApiModelProperty(value = "The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either 'public image' or 'imageAlias' that has cloud-init compatibility in conjunction with this property.")
 
   public String getUserData() {
     return userData;
@@ -744,7 +784,7 @@ public class VolumeProperties {
       return false;
     }
     VolumeProperties volumeProperties = (VolumeProperties) o;
-    return Objects.equals(this.name, volumeProperties.name) && Objects.equals(this.type, volumeProperties.type) && Objects.equals(this.size, volumeProperties.size) && Objects.equals(this.availabilityZone, volumeProperties.availabilityZone) && Objects.equals(this.image, volumeProperties.image) && Objects.equals(this.imagePassword, volumeProperties.imagePassword) && Objects.equals(this.sshKeys, volumeProperties.sshKeys) && Objects.equals(this.bus, volumeProperties.bus) && Objects.equals(this.licenceType, volumeProperties.licenceType) && Objects.equals(this.cpuHotPlug, volumeProperties.cpuHotPlug) && Objects.equals(this.ramHotPlug, volumeProperties.ramHotPlug) && Objects.equals(this.nicHotPlug, volumeProperties.nicHotPlug) && Objects.equals(this.nicHotUnplug, volumeProperties.nicHotUnplug) && Objects.equals(this.discVirtioHotPlug, volumeProperties.discVirtioHotPlug) && Objects.equals(this.discVirtioHotUnplug, volumeProperties.discVirtioHotUnplug) && Objects.equals(this.deviceNumber, volumeProperties.deviceNumber) && Objects.equals(this.pciSlot, volumeProperties.pciSlot) && Objects.equals(this.backupunitId, volumeProperties.backupunitId) && Objects.equals(this.userData, volumeProperties.userData);
+    return Objects.equals(this.name, volumeProperties.name) && Objects.equals(this.type, volumeProperties.type) && Objects.equals(this.size, volumeProperties.size) && Objects.equals(this.availabilityZone, volumeProperties.availabilityZone) && Objects.equals(this.image, volumeProperties.image) && Objects.equals(this.imagePassword, volumeProperties.imagePassword) && Objects.equals(this.imageAlias, volumeProperties.imageAlias) && Objects.equals(this.sshKeys, volumeProperties.sshKeys) && Objects.equals(this.bus, volumeProperties.bus) && Objects.equals(this.licenceType, volumeProperties.licenceType) && Objects.equals(this.cpuHotPlug, volumeProperties.cpuHotPlug) && Objects.equals(this.ramHotPlug, volumeProperties.ramHotPlug) && Objects.equals(this.nicHotPlug, volumeProperties.nicHotPlug) && Objects.equals(this.nicHotUnplug, volumeProperties.nicHotUnplug) && Objects.equals(this.discVirtioHotPlug, volumeProperties.discVirtioHotPlug) && Objects.equals(this.discVirtioHotUnplug, volumeProperties.discVirtioHotUnplug) && Objects.equals(this.deviceNumber, volumeProperties.deviceNumber) && Objects.equals(this.pciSlot, volumeProperties.pciSlot) && Objects.equals(this.backupunitId, volumeProperties.backupunitId) && Objects.equals(this.userData, volumeProperties.userData);
   }
 
 
@@ -760,6 +800,7 @@ public class VolumeProperties {
     sb.append("    availabilityZone: ").append(toIndentedString(availabilityZone)).append("\n");
     sb.append("    image: ").append(toIndentedString(image)).append("\n");
     sb.append("    imagePassword: ").append(toIndentedString(imagePassword)).append("\n");
+    sb.append("    imageAlias: ").append(toIndentedString(imageAlias)).append("\n");
     sb.append("    sshKeys: ").append(toIndentedString(sshKeys)).append("\n");
     sb.append("    bus: ").append(toIndentedString(bus)).append("\n");
     sb.append("    licenceType: ").append(toIndentedString(licenceType)).append("\n");

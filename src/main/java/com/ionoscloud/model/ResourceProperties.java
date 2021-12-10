@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ResourceProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class ResourceProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -46,11 +46,11 @@ public class ResourceProperties {
   }
 
    /**
-   * name of the resource
+   * The name of the resource.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "name of the resource")
+  @ApiModelProperty(value = "The name of the resource.")
 
   public String getName() {
     return name;
@@ -69,11 +69,11 @@ public class ResourceProperties {
   }
 
    /**
-   * Boolean value representing if the resource is multi factor protected or not e.g. using two factor protection. Currently only Data Centers and Snapshots are allowed to be multi factor protected, The value of attribute if null is intentional and it means that the resource doesn&#39;t support multi factor protection at all.
+   * Boolean value representing if the resource is multi factor protected or not e.g. using two factor protection. Currently only data centers and snapshots are allowed to be multi factor protected, The value of attribute if null is intentional and it means that the resource doesn&#39;t support multi factor protection at all.
    * @return secAuthProtection
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Boolean value representing if the resource is multi factor protected or not e.g. using two factor protection. Currently only Data Centers and Snapshots are allowed to be multi factor protected, The value of attribute if null is intentional and it means that the resource doesn't support multi factor protection at all.")
+  @ApiModelProperty(example = "true", value = "Boolean value representing if the resource is multi factor protected or not e.g. using two factor protection. Currently only data centers and snapshots are allowed to be multi factor protected, The value of attribute if null is intentional and it means that the resource doesn't support multi factor protection at all.")
 
   public Boolean getSecAuthProtection() {
     return secAuthProtection;

@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * KubernetesNodePoolProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class KubernetesNodePoolProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -62,11 +62,10 @@ public class KubernetesNodePoolProperties {
   private Integer ramSize;
 
   /**
-   * The availability zone in which the target VM should exist
+   * The availability zone in which the target VM should be provisioned.
    */
   @JsonAdapter(AvailabilityZoneEnum.Adapter.class)
   public enum AvailabilityZoneEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     AUTO("AUTO"),
     
     ZONE_1("ZONE_1"),
@@ -89,12 +88,13 @@ public class KubernetesNodePoolProperties {
     }
 
     public static AvailabilityZoneEnum fromValue(String value) {
+
       for (AvailabilityZoneEnum b : AvailabilityZoneEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return AvailabilityZoneEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<AvailabilityZoneEnum> {
@@ -116,11 +116,10 @@ public class KubernetesNodePoolProperties {
   private AvailabilityZoneEnum availabilityZone;
 
   /**
-   * Hardware type of the volume
+   * The type of hardware for the volume.
    */
   @JsonAdapter(StorageTypeEnum.Adapter.class)
   public enum StorageTypeEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     HDD("HDD"),
     
     SSD("SSD");
@@ -141,12 +140,13 @@ public class KubernetesNodePoolProperties {
     }
 
     public static StorageTypeEnum fromValue(String value) {
+
       for (StorageTypeEnum b : StorageTypeEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return StorageTypeEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<StorageTypeEnum> {
@@ -203,6 +203,10 @@ public class KubernetesNodePoolProperties {
   @SerializedName(SERIALIZED_NAME_AVAILABLE_UPGRADE_VERSIONS)
   private List<String> availableUpgradeVersions = null;
 
+  public static final String SERIALIZED_NAME_GATEWAY_IP = "gatewayIp";
+  @SerializedName(SERIALIZED_NAME_GATEWAY_IP)
+  private String gatewayIp;
+
 
   public KubernetesNodePoolProperties name(String name) {
     
@@ -211,10 +215,10 @@ public class KubernetesNodePoolProperties {
   }
 
    /**
-   * A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+   * A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
    * @return name
   **/
-  @ApiModelProperty(example = "k8s-node-pool", required = true, value = "A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.")
+  @ApiModelProperty(example = "k8s-node-pool", required = true, value = "A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.")
 
   public String getName() {
     return name;
@@ -233,10 +237,10 @@ public class KubernetesNodePoolProperties {
   }
 
    /**
-   * A valid uuid of the datacenter on which user has access
+   * A valid ID of the data center, to which user has access.
    * @return datacenterId
   **/
-  @ApiModelProperty(example = "1e072e52-2ed3-492f-b6b6-c6b116907521", required = true, value = "A valid uuid of the datacenter on which user has access")
+  @ApiModelProperty(example = "1e072e52-2ed3-492f-b6b6-c6b116907521", required = true, value = "A valid ID of the data center, to which user has access.")
 
   public String getDatacenterId() {
     return datacenterId;
@@ -255,10 +259,10 @@ public class KubernetesNodePoolProperties {
   }
 
    /**
-   * Number of nodes part of the Node Pool
+   * The number of nodes that make up the node pool.
    * @return nodeCount
   **/
-  @ApiModelProperty(example = "2", required = true, value = "Number of nodes part of the Node Pool")
+  @ApiModelProperty(example = "2", required = true, value = "The number of nodes that make up the node pool.")
 
   public Integer getNodeCount() {
     return nodeCount;
@@ -277,10 +281,10 @@ public class KubernetesNodePoolProperties {
   }
 
    /**
-   * A valid cpu family name
+   * A valid CPU family name.
    * @return cpuFamily
   **/
-  @ApiModelProperty(example = "AMD_OPTERON", required = true, value = "A valid cpu family name")
+  @ApiModelProperty(example = "AMD_OPTERON", required = true, value = "A valid CPU family name.")
 
   public String getCpuFamily() {
     return cpuFamily;
@@ -299,10 +303,10 @@ public class KubernetesNodePoolProperties {
   }
 
    /**
-   * Number of cores for node
+   * The number of cores for the node.
    * @return coresCount
   **/
-  @ApiModelProperty(example = "4", required = true, value = "Number of cores for node")
+  @ApiModelProperty(example = "4", required = true, value = "The number of cores for the node.")
 
   public Integer getCoresCount() {
     return coresCount;
@@ -321,10 +325,10 @@ public class KubernetesNodePoolProperties {
   }
 
    /**
-   * RAM size for node, minimum size is 2048MB. Ram size must be set to multiple of 1024MB.
+   * The RAM size for the node. Must be set in multiples of 1024 MB, with minimum size is of 2048 MB.
    * @return ramSize
   **/
-  @ApiModelProperty(example = "2048", required = true, value = "RAM size for node, minimum size is 2048MB. Ram size must be set to multiple of 1024MB.")
+  @ApiModelProperty(example = "2048", required = true, value = "The RAM size for the node. Must be set in multiples of 1024 MB, with minimum size is of 2048 MB.")
 
   public Integer getRamSize() {
     return ramSize;
@@ -343,10 +347,10 @@ public class KubernetesNodePoolProperties {
   }
 
    /**
-   * The availability zone in which the target VM should exist
+   * The availability zone in which the target VM should be provisioned.
    * @return availabilityZone
   **/
-  @ApiModelProperty(example = "AUTO", required = true, value = "The availability zone in which the target VM should exist")
+  @ApiModelProperty(example = "AUTO", required = true, value = "The availability zone in which the target VM should be provisioned.")
 
   public AvailabilityZoneEnum getAvailabilityZone() {
     return availabilityZone;
@@ -365,10 +369,10 @@ public class KubernetesNodePoolProperties {
   }
 
    /**
-   * Hardware type of the volume
+   * The type of hardware for the volume.
    * @return storageType
   **/
-  @ApiModelProperty(example = "HDD", required = true, value = "Hardware type of the volume")
+  @ApiModelProperty(example = "HDD", required = true, value = "The type of hardware for the volume.")
 
   public StorageTypeEnum getStorageType() {
     return storageType;
@@ -409,11 +413,11 @@ public class KubernetesNodePoolProperties {
   }
 
    /**
-   * The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions.
+   * The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.
    * @return k8sVersion
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1.15.4", value = "The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster's nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions.")
+  @ApiModelProperty(example = "1.15.4", value = "The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster's nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.")
 
   public String getK8sVersion() {
     return k8sVersion;
@@ -517,11 +521,11 @@ public class KubernetesNodePoolProperties {
   }
 
    /**
-   * map of labels attached to node pool
+   * map of labels attached to node pool.
    * @return labels
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "map of labels attached to node pool")
+  @ApiModelProperty(value = "map of labels attached to node pool.")
 
   public Map<String, String> getLabels() {
     return labels;
@@ -548,11 +552,11 @@ public class KubernetesNodePoolProperties {
   }
 
    /**
-   * map of annotations attached to node pool
+   * map of annotations attached to node pool.
    * @return annotations
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "map of annotations attached to node pool")
+  @ApiModelProperty(value = "map of annotations attached to node pool.")
 
   public Map<String, String> getAnnotations() {
     return annotations;
@@ -610,11 +614,11 @@ public class KubernetesNodePoolProperties {
   }
 
    /**
-   * List of available versions for upgrading the node pool
+   * List of available versions for upgrading the node pool.
    * @return availableUpgradeVersions
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[1.16.4, 1.17.7]", value = "List of available versions for upgrading the node pool")
+  @ApiModelProperty(example = "[1.16.4, 1.17.7]", value = "List of available versions for upgrading the node pool.")
 
   public List<String> getAvailableUpgradeVersions() {
     return availableUpgradeVersions;
@@ -623,6 +627,29 @@ public class KubernetesNodePoolProperties {
 
   public void setAvailableUpgradeVersions(List<String> availableUpgradeVersions) {
     this.availableUpgradeVersions = availableUpgradeVersions;
+  }
+
+
+  public KubernetesNodePoolProperties gatewayIp(String gatewayIp) {
+    
+    this.gatewayIp = gatewayIp;
+    return this;
+  }
+
+   /**
+   * Public IP address for the gateway performing source NAT for the node pool&#39;s nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster.
+   * @return gatewayIp
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "198.51.100.100", value = "Public IP address for the gateway performing source NAT for the node pool's nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster.")
+
+  public String getGatewayIp() {
+    return gatewayIp;
+  }
+
+
+  public void setGatewayIp(String gatewayIp) {
+    this.gatewayIp = gatewayIp;
   }
 
 
@@ -635,7 +662,7 @@ public class KubernetesNodePoolProperties {
       return false;
     }
     KubernetesNodePoolProperties kubernetesNodePoolProperties = (KubernetesNodePoolProperties) o;
-    return Objects.equals(this.name, kubernetesNodePoolProperties.name) && Objects.equals(this.datacenterId, kubernetesNodePoolProperties.datacenterId) && Objects.equals(this.nodeCount, kubernetesNodePoolProperties.nodeCount) && Objects.equals(this.cpuFamily, kubernetesNodePoolProperties.cpuFamily) && Objects.equals(this.coresCount, kubernetesNodePoolProperties.coresCount) && Objects.equals(this.ramSize, kubernetesNodePoolProperties.ramSize) && Objects.equals(this.availabilityZone, kubernetesNodePoolProperties.availabilityZone) && Objects.equals(this.storageType, kubernetesNodePoolProperties.storageType) && Objects.equals(this.storageSize, kubernetesNodePoolProperties.storageSize) && Objects.equals(this.k8sVersion, kubernetesNodePoolProperties.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesNodePoolProperties.maintenanceWindow) && Objects.equals(this.autoScaling, kubernetesNodePoolProperties.autoScaling) && Objects.equals(this.lans, kubernetesNodePoolProperties.lans) && Objects.equals(this.labels, kubernetesNodePoolProperties.labels) && Objects.equals(this.annotations, kubernetesNodePoolProperties.annotations) && Objects.equals(this.publicIps, kubernetesNodePoolProperties.publicIps) && Objects.equals(this.availableUpgradeVersions, kubernetesNodePoolProperties.availableUpgradeVersions);
+    return Objects.equals(this.name, kubernetesNodePoolProperties.name) && Objects.equals(this.datacenterId, kubernetesNodePoolProperties.datacenterId) && Objects.equals(this.nodeCount, kubernetesNodePoolProperties.nodeCount) && Objects.equals(this.cpuFamily, kubernetesNodePoolProperties.cpuFamily) && Objects.equals(this.coresCount, kubernetesNodePoolProperties.coresCount) && Objects.equals(this.ramSize, kubernetesNodePoolProperties.ramSize) && Objects.equals(this.availabilityZone, kubernetesNodePoolProperties.availabilityZone) && Objects.equals(this.storageType, kubernetesNodePoolProperties.storageType) && Objects.equals(this.storageSize, kubernetesNodePoolProperties.storageSize) && Objects.equals(this.k8sVersion, kubernetesNodePoolProperties.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesNodePoolProperties.maintenanceWindow) && Objects.equals(this.autoScaling, kubernetesNodePoolProperties.autoScaling) && Objects.equals(this.lans, kubernetesNodePoolProperties.lans) && Objects.equals(this.labels, kubernetesNodePoolProperties.labels) && Objects.equals(this.annotations, kubernetesNodePoolProperties.annotations) && Objects.equals(this.publicIps, kubernetesNodePoolProperties.publicIps) && Objects.equals(this.availableUpgradeVersions, kubernetesNodePoolProperties.availableUpgradeVersions) && Objects.equals(this.gatewayIp, kubernetesNodePoolProperties.gatewayIp);
   }
 
 
@@ -662,6 +689,7 @@ public class KubernetesNodePoolProperties {
     sb.append("    annotations: ").append(toIndentedString(annotations)).append("\n");
     sb.append("    publicIps: ").append(toIndentedString(publicIps)).append("\n");
     sb.append("    availableUpgradeVersions: ").append(toIndentedString(availableUpgradeVersions)).append("\n");
+    sb.append("    gatewayIp: ").append(toIndentedString(gatewayIp)).append("\n");
     sb.append("}");
     return sb.toString();
   }

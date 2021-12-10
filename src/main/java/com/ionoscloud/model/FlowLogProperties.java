@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * FlowLogProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class FlowLogProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -39,7 +39,6 @@ public class FlowLogProperties {
    */
   @JsonAdapter(ActionEnum.Adapter.class)
   public enum ActionEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     ACCEPTED("ACCEPTED"),
     
     REJECTED("REJECTED"),
@@ -62,12 +61,13 @@ public class FlowLogProperties {
     }
 
     public static ActionEnum fromValue(String value) {
+
       for (ActionEnum b : ActionEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return ActionEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<ActionEnum> {
@@ -93,7 +93,6 @@ public class FlowLogProperties {
    */
   @JsonAdapter(DirectionEnum.Adapter.class)
   public enum DirectionEnum {
-    UNKNOWN_VALUE("UNKNOWN_VALUE"),
     INGRESS("INGRESS"),
     
     EGRESS("EGRESS"),
@@ -116,12 +115,13 @@ public class FlowLogProperties {
     }
 
     public static DirectionEnum fromValue(String value) {
+
       for (DirectionEnum b : DirectionEnum.values()) {
-        if (b.value.equals(value) || value.equals("collection")) {
+        if (b.value.equals(value)) {
           return b;
         }
       }
-      return DirectionEnum.UNKNOWN_VALUE;
+      return null;
     }
 
     public static class Adapter extends TypeAdapter<DirectionEnum> {
@@ -154,10 +154,10 @@ public class FlowLogProperties {
   }
 
    /**
-   * A name of that resource
+   * The name of the  resource.
    * @return name
   **/
-  @ApiModelProperty(example = "My resource", required = true, value = "A name of that resource")
+  @ApiModelProperty(example = "My resource", required = true, value = "The name of the  resource.")
 
   public String getName() {
     return name;

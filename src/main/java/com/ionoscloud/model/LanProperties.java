@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * LanProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class LanProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -57,11 +57,11 @@ public class LanProperties {
   }
 
    /**
-   * A name of that resource
+   * The name of the  resource.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "A name of that resource")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
   public String getName() {
     return name;
@@ -111,11 +111,11 @@ public class LanProperties {
   }
 
    /**
-   * Unique identifier of the private cross connect the given LAN is connected to if any
+   * The unique identifier of the private Cross-Connect the LAN is connected to, if any.
    * @return pcc
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec", value = "Unique identifier of the private cross connect the given LAN is connected to if any")
+  @ApiModelProperty(example = "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec", value = "The unique identifier of the private Cross-Connect the LAN is connected to, if any.")
 
   public String getPcc() {
     return pcc;
@@ -134,11 +134,11 @@ public class LanProperties {
   }
 
    /**
-   * Does this LAN faces the public Internet or not
+   * This LAN faces the public Internet.
    * @return _public
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Does this LAN faces the public Internet or not")
+  @ApiModelProperty(example = "true", value = "This LAN faces the public Internet.")
 
   public Boolean getPublic() {
     return _public;

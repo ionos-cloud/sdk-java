@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * ContractProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class ContractProperties {
   public static final String SERIALIZED_NAME_CONTRACT_NUMBER = "contractNumber";
@@ -53,59 +53,71 @@ public class ContractProperties {
 
 
    /**
-   * contract number
+   * The contract number.
    * @return contractNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "contract number")
+  @ApiModelProperty(value = "The contract number.")
 
   public Long getContractNumber() {
     return contractNumber;
   }
 
 
+  public void setContractNumber(Long contractNumber) {
+    this.contractNumber = contractNumber;
+  }
 
 
    /**
-   * owner of the contract
+   * The owner of the contract.
    * @return owner
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "owner of the contract")
+  @ApiModelProperty(value = "The owner of the contract.")
 
   public String getOwner() {
     return owner;
   }
 
 
+  public void setOwner(String owner) {
+    this.owner = owner;
+  }
 
 
    /**
-   * status of the contract
+   * The status of the contract.
    * @return status
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "status of the contract")
+  @ApiModelProperty(value = "The status of the contract.")
 
   public String getStatus() {
     return status;
   }
 
 
+  public void setStatus(String status) {
+    this.status = status;
+  }
 
 
    /**
-   * Registration domain of the contract
+   * The registration domain of the contract.
    * @return regDomain
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Registration domain of the contract")
+  @ApiModelProperty(value = "The registration domain of the contract.")
 
   public String getRegDomain() {
     return regDomain;
   }
 
 
+  public void setRegDomain(String regDomain) {
+    this.regDomain = regDomain;
+  }
 
 
   public ContractProperties resourceLimits(ResourceLimits resourceLimits) {

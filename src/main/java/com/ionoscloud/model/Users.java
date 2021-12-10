@@ -1,6 +1,6 @@
 /*
  * CLOUD API
- * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
+ * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -20,11 +20,13 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.ionoscloud.model.PaginationLinks;
 import com.ionoscloud.model.Type;
 import com.ionoscloud.model.User;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +34,7 @@ import java.util.List;
 /**
  * Users
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-05-12T07:27:29.402Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
 
 public class Users {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -51,19 +53,34 @@ public class Users {
   @SerializedName(SERIALIZED_NAME_ITEMS)
   private List<User> items = null;
 
+  public static final String SERIALIZED_NAME_OFFSET = "offset";
+  @SerializedName(SERIALIZED_NAME_OFFSET)
+  private BigDecimal offset;
+
+  public static final String SERIALIZED_NAME_LIMIT = "limit";
+  @SerializedName(SERIALIZED_NAME_LIMIT)
+  private BigDecimal limit;
+
+  public static final String SERIALIZED_NAME_LINKS = "_links";
+  @SerializedName(SERIALIZED_NAME_LINKS)
+  private PaginationLinks links;
+
 
    /**
-   * The resource&#39;s unique identifier
+   * The resource&#39;s unique identifier.
    * @return id
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The resource's unique identifier")
+  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The resource's unique identifier.")
 
   public String getId() {
     return id;
   }
 
 
+  public void setId(String id) {
+    this.id = id;
+  }
 
 
   public Users type(Type type) {
@@ -73,11 +90,11 @@ public class Users {
   }
 
    /**
-   * The type of object that has been created
+   * The type of object that has been created.
    * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"collection\"", value = "The type of object that has been created")
+  @ApiModelProperty(example = "\"collection\"", value = "The type of object that has been created.")
 
   public Type getType() {
     return type;
@@ -90,31 +107,106 @@ public class Users {
 
 
    /**
-   * URL to the object representation (absolute path)
+   * URL to the object representation (absolute path).
    * @return href
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path)")
+  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path).")
 
   public URI getHref() {
     return href;
   }
 
 
+  public void setHref(URI href) {
+    this.href = href;
+  }
 
 
    /**
-   * Array of items in that collection
+   * Array of items in that collection.
    * @return items
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of items in that collection")
+  @ApiModelProperty(value = "Array of items in that collection.")
 
   public List<User> getItems() {
     return items;
   }
 
 
+  public void setItems(List<User> items) {
+    this.items = items;
+  }
+
+
+  public Users offset(BigDecimal offset) {
+    
+    this.offset = offset;
+    return this;
+  }
+
+   /**
+   * The offset (if specified in the request).
+   * @return offset
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "0", value = "The offset (if specified in the request).")
+
+  public BigDecimal getOffset() {
+    return offset;
+  }
+
+
+  public void setOffset(BigDecimal offset) {
+    this.offset = offset;
+  }
+
+
+  public Users limit(BigDecimal limit) {
+    
+    this.limit = limit;
+    return this;
+  }
+
+   /**
+   * The limit (if specified in the request).
+   * @return limit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "1000", value = "The limit (if specified in the request).")
+
+  public BigDecimal getLimit() {
+    return limit;
+  }
+
+
+  public void setLimit(BigDecimal limit) {
+    this.limit = limit;
+  }
+
+
+  public Users links(PaginationLinks links) {
+    
+    this.links = links;
+    return this;
+  }
+
+   /**
+   * Get links
+   * @return links
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public PaginationLinks getLinks() {
+    return links;
+  }
+
+
+  public void setLinks(PaginationLinks links) {
+    this.links = links;
+  }
 
 
   @Override
@@ -126,7 +218,7 @@ public class Users {
       return false;
     }
     Users users = (Users) o;
-    return Objects.equals(this.id, users.id) && Objects.equals(this.type, users.type) && Objects.equals(this.href, users.href) && Objects.equals(this.items, users.items);
+    return Objects.equals(this.id, users.id) && Objects.equals(this.type, users.type) && Objects.equals(this.href, users.href) && Objects.equals(this.items, users.items) && Objects.equals(this.offset, users.offset) && Objects.equals(this.limit, users.limit) && Objects.equals(this.links, users.links);
   }
 
 
@@ -140,6 +232,9 @@ public class Users {
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+    sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
+    sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("}");
     return sb.toString();
   }
