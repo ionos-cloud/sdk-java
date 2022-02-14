@@ -1,6 +1,12 @@
+[![[ CI ] CloudApi V6 / Java](https://github.com/ionos-cloud/sdk-resources/actions/workflows/ci-cloudapi-v6-java.yml/badge.svg)](https://github.com/ionos-cloud/sdk-resources/actions/workflows/ci-cloudapi-v6-java.yml)
 [![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ionoscloud/ionos-cloud-sdk/badge.svg?style=plastic)](https://mvnrepository.com/artifact/com.ionoscloud/ionos-cloud-sdk)
-
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=alert_status)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=bugs)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=security_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-java&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-java)
 
 ## Overview
 
@@ -33,7 +39,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ionoscloud</groupId>
   <artifactId>ionos-cloud-sdk</artifactId>
-  <version>6.0.0-SNAPSHOT</version>
+  <version>6.0.0</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -43,7 +49,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ionoscloud:ionos-cloud-sdk:6.0.0-SNAPSHOT"
+compile "com.ionoscloud:ionos-cloud-sdk:6.0.0"
 ```
 
 #### Others
@@ -56,7 +62,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ionos-cloud-sdk-6.0.0-SNAPSHOT.jar`
+* `target/ionos-cloud-sdk-6.0.0.jar`
 * `target/lib/*.jar`
 
 
