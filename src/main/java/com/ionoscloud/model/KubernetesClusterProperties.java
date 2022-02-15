@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * KubernetesClusterProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-04T10:08:17.736Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-15T12:02:49.770Z[Etc/UTC]")
 
 public class KubernetesClusterProperties {
   

@@ -63,7 +63,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -73,7 +73,7 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ipblocksDeleteCall(String ipblockId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ipblocksDeleteCall(String ipblockId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -89,7 +89,6 @@ public class IpBlocksApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -113,11 +112,11 @@ public class IpBlocksApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ipblocksDeleteValidateBeforeCall(String ipblockId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ipblocksDeleteValidateBeforeCall(String ipblockId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'ipblockId' is set
         if (ipblockId == null) {
@@ -125,7 +124,7 @@ public class IpBlocksApi {
         }
         
 
-        okhttp3.Call localVarCall = ipblocksDeleteCall(ipblockId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = ipblocksDeleteCall(ipblockId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -137,6 +136,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -158,6 +158,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -180,7 +181,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -190,11 +191,11 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ipblocksDeleteAsync(String ipblockId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call ipblocksDeleteAsync(String ipblockId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ipblocksDeleteValidateBeforeCall(ipblockId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = ipblocksDeleteValidateBeforeCall(ipblockId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -203,7 +204,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -213,7 +214,7 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ipblocksFindByIdCall(String ipblockId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ipblocksFindByIdCall(String ipblockId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -229,7 +230,6 @@ public class IpBlocksApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -253,11 +253,11 @@ public class IpBlocksApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ipblocksFindByIdValidateBeforeCall(String ipblockId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ipblocksFindByIdValidateBeforeCall(String ipblockId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'ipblockId' is set
         if (ipblockId == null) {
@@ -265,7 +265,7 @@ public class IpBlocksApi {
         }
         
 
-        okhttp3.Call localVarCall = ipblocksFindByIdCall(ipblockId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = ipblocksFindByIdCall(ipblockId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -277,6 +277,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return IpBlock
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -298,6 +299,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;IpBlock&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -320,7 +322,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -330,11 +332,11 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ipblocksFindByIdAsync(String ipblockId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<IpBlock> _callback) throws ApiException {
+    public okhttp3.Call ipblocksFindByIdAsync(String ipblockId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<IpBlock> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ipblocksFindByIdValidateBeforeCall(ipblockId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = ipblocksFindByIdValidateBeforeCall(ipblockId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<IpBlock>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -344,7 +346,7 @@ public class IpBlocksApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 100)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -354,7 +356,7 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ipblocksGetCall(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ipblocksGetCall(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -369,17 +371,25 @@ public class IpBlocksApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
-
         if (offset != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
         }
-
         if (limit != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -401,14 +411,14 @@ public class IpBlocksApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ipblocksGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ipblocksGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = ipblocksGetCall(pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = ipblocksGetCall(pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -421,6 +431,9 @@ public class IpBlocksApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 100)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return IpBlocks
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -430,8 +443,8 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public IpBlocks ipblocksGet(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<IpBlocks> localVarResp = ipblocksGetWithHttpInfo(pretty, depth, xContractNumber, offset, limit);
+    public IpBlocks ipblocksGet(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<IpBlocks> localVarResp = ipblocksGetWithHttpInfo(pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -443,6 +456,9 @@ public class IpBlocksApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 100)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;IpBlocks&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -452,8 +468,8 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<IpBlocks> ipblocksGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = ipblocksGetValidateBeforeCall(pretty, depth, xContractNumber, offset, limit, null);
+    public ApiResponse<IpBlocks> ipblocksGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = ipblocksGetValidateBeforeCall(pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<IpBlocks>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -466,7 +482,7 @@ public class IpBlocksApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with offset for pagination) (optional, default to 100)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -476,11 +492,11 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ipblocksGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<IpBlocks> _callback) throws ApiException {
+    public okhttp3.Call ipblocksGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<IpBlocks> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ipblocksGetValidateBeforeCall(pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = ipblocksGetValidateBeforeCall(pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<IpBlocks>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -490,7 +506,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -500,7 +516,7 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ipblocksPatchCall(String ipblockId, IpBlockProperties ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ipblocksPatchCall(String ipblockId, IpBlockProperties ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = ipblock;
 
         // create path and map variables
@@ -516,7 +532,6 @@ public class IpBlocksApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -540,11 +555,11 @@ public class IpBlocksApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ipblocksPatchValidateBeforeCall(String ipblockId, IpBlockProperties ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ipblocksPatchValidateBeforeCall(String ipblockId, IpBlockProperties ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'ipblockId' is set
         if (ipblockId == null) {
@@ -557,7 +572,7 @@ public class IpBlocksApi {
         }
         
 
-        okhttp3.Call localVarCall = ipblocksPatchCall(ipblockId, ipblock, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = ipblocksPatchCall(ipblockId, ipblock, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -570,6 +585,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return IpBlock
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -592,6 +608,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;IpBlock&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -615,7 +632,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -625,11 +642,11 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ipblocksPatchAsync(String ipblockId, IpBlockProperties ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<IpBlock> _callback) throws ApiException {
+    public okhttp3.Call ipblocksPatchAsync(String ipblockId, IpBlockProperties ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<IpBlock> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ipblocksPatchValidateBeforeCall(ipblockId, ipblock, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = ipblocksPatchValidateBeforeCall(ipblockId, ipblock, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<IpBlock>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -638,7 +655,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -648,7 +665,7 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ipblocksPostCall(IpBlock ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ipblocksPostCall(IpBlock ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = ipblock;
 
         // create path and map variables
@@ -663,7 +680,6 @@ public class IpBlocksApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -687,11 +703,11 @@ public class IpBlocksApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ipblocksPostValidateBeforeCall(IpBlock ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ipblocksPostValidateBeforeCall(IpBlock ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'ipblock' is set
         if (ipblock == null) {
@@ -699,7 +715,7 @@ public class IpBlocksApi {
         }
         
 
-        okhttp3.Call localVarCall = ipblocksPostCall(ipblock, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = ipblocksPostCall(ipblock, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -711,6 +727,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return IpBlock
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -732,6 +749,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;IpBlock&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -754,7 +772,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -764,11 +782,11 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ipblocksPostAsync(IpBlock ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<IpBlock> _callback) throws ApiException {
+    public okhttp3.Call ipblocksPostAsync(IpBlock ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<IpBlock> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ipblocksPostValidateBeforeCall(ipblock, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = ipblocksPostValidateBeforeCall(ipblock, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<IpBlock>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -778,7 +796,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -788,7 +806,7 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ipblocksPutCall(String ipblockId, IpBlock ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call ipblocksPutCall(String ipblockId, IpBlock ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = ipblock;
 
         // create path and map variables
@@ -804,7 +822,6 @@ public class IpBlocksApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -828,11 +845,11 @@ public class IpBlocksApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call ipblocksPutValidateBeforeCall(String ipblockId, IpBlock ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call ipblocksPutValidateBeforeCall(String ipblockId, IpBlock ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'ipblockId' is set
         if (ipblockId == null) {
@@ -845,7 +862,7 @@ public class IpBlocksApi {
         }
         
 
-        okhttp3.Call localVarCall = ipblocksPutCall(ipblockId, ipblock, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = ipblocksPutCall(ipblockId, ipblock, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -858,6 +875,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return IpBlock
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -880,6 +898,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;IpBlock&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -903,7 +922,7 @@ public class IpBlocksApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -913,11 +932,11 @@ public class IpBlocksApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call ipblocksPutAsync(String ipblockId, IpBlock ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<IpBlock> _callback) throws ApiException {
+    public okhttp3.Call ipblocksPutAsync(String ipblockId, IpBlock ipblock, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<IpBlock> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = ipblocksPutValidateBeforeCall(ipblockId, ipblock, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = ipblocksPutValidateBeforeCall(ipblockId, ipblock, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<IpBlock>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
 }

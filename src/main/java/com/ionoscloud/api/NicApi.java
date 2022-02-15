@@ -68,7 +68,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -78,7 +78,7 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsDeleteCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsDeleteCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -96,7 +96,6 @@ public class NicApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -120,11 +119,11 @@ public class NicApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsDeleteValidateBeforeCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsDeleteValidateBeforeCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -142,7 +141,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsDeleteCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsDeleteCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -156,6 +155,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -179,6 +179,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -203,7 +204,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -213,11 +214,11 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsDeleteAsync(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsDeleteAsync(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsDeleteValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsDeleteValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -228,7 +229,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -238,7 +239,7 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFindByIdCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFindByIdCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -256,7 +257,6 @@ public class NicApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -280,11 +280,11 @@ public class NicApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFindByIdValidateBeforeCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFindByIdValidateBeforeCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -302,7 +302,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFindByIdCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFindByIdCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -316,6 +316,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Nic
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -339,6 +340,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Nic&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -363,7 +365,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -373,11 +375,11 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFindByIdAsync(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFindByIdAsync(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFindByIdValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFindByIdValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Nic>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -389,7 +391,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -399,7 +401,7 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesDeleteCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesDeleteCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -418,7 +420,6 @@ public class NicApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -442,11 +443,11 @@ public class NicApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFirewallrulesDeleteValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFirewallrulesDeleteValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -469,7 +470,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesDeleteCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesDeleteCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -484,6 +485,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -508,6 +510,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -533,7 +536,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -543,11 +546,11 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesDeleteAsync(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesDeleteAsync(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesDeleteValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesDeleteValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -559,7 +562,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -569,7 +572,7 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesFindByIdCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesFindByIdCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -588,7 +591,6 @@ public class NicApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -612,11 +614,11 @@ public class NicApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFirewallrulesFindByIdValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFirewallrulesFindByIdValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -639,7 +641,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesFindByIdCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesFindByIdCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -654,6 +656,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return FirewallRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -678,6 +681,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;FirewallRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -703,7 +707,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -713,11 +717,11 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesFindByIdAsync(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesFindByIdAsync(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesFindByIdValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesFindByIdValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<FirewallRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -730,7 +734,7 @@ public class NicApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -740,7 +744,7 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesGetCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesGetCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -758,17 +762,25 @@ public class NicApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
-
         if (offset != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
         }
-
         if (limit != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -790,11 +802,11 @@ public class NicApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFirewallrulesGetValidateBeforeCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFirewallrulesGetValidateBeforeCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -812,7 +824,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesGetCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesGetCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -828,6 +840,9 @@ public class NicApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return FirewallRules
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -837,8 +852,8 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public FirewallRules datacentersServersNicsFirewallrulesGet(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<FirewallRules> localVarResp = datacentersServersNicsFirewallrulesGetWithHttpInfo(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit);
+    public FirewallRules datacentersServersNicsFirewallrulesGet(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<FirewallRules> localVarResp = datacentersServersNicsFirewallrulesGetWithHttpInfo(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -853,6 +868,9 @@ public class NicApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;FirewallRules&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -862,8 +880,8 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<FirewallRules> datacentersServersNicsFirewallrulesGetWithHttpInfo(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesGetValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit, null);
+    public ApiResponse<FirewallRules> datacentersServersNicsFirewallrulesGetWithHttpInfo(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesGetValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<FirewallRules>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -879,7 +897,7 @@ public class NicApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -889,11 +907,11 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesGetAsync(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<FirewallRules> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesGetAsync(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<FirewallRules> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesGetValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesGetValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<FirewallRules>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -906,7 +924,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -916,7 +934,7 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesPatchCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallruleProperties firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesPatchCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallruleProperties firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = firewallrule;
 
         // create path and map variables
@@ -935,7 +953,6 @@ public class NicApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -959,11 +976,11 @@ public class NicApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFirewallrulesPatchValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallruleProperties firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFirewallrulesPatchValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallruleProperties firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -991,7 +1008,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPatchCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPatchCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1007,6 +1024,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return FirewallRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1032,6 +1050,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;FirewallRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1058,7 +1077,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1068,11 +1087,11 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesPatchAsync(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallruleProperties firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesPatchAsync(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallruleProperties firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPatchValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPatchValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<FirewallRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1084,7 +1103,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1094,7 +1113,7 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesPostCall(String datacenterId, String serverId, String nicId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesPostCall(String datacenterId, String serverId, String nicId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = firewallrule;
 
         // create path and map variables
@@ -1112,7 +1131,6 @@ public class NicApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1136,11 +1154,11 @@ public class NicApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFirewallrulesPostValidateBeforeCall(String datacenterId, String serverId, String nicId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFirewallrulesPostValidateBeforeCall(String datacenterId, String serverId, String nicId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1163,7 +1181,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPostCall(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPostCall(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1178,6 +1196,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return FirewallRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1202,6 +1221,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;FirewallRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1227,7 +1247,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1237,11 +1257,11 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesPostAsync(String datacenterId, String serverId, String nicId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesPostAsync(String datacenterId, String serverId, String nicId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPostValidateBeforeCall(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPostValidateBeforeCall(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<FirewallRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1254,7 +1274,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1264,7 +1284,7 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesPutCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesPutCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = firewallrule;
 
         // create path and map variables
@@ -1283,7 +1303,6 @@ public class NicApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1307,11 +1326,11 @@ public class NicApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFirewallrulesPutValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFirewallrulesPutValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1339,7 +1358,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPutCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPutCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1355,6 +1374,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return FirewallRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1380,6 +1400,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;FirewallRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1406,7 +1427,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1416,11 +1437,11 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesPutAsync(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesPutAsync(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPutValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPutValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<FirewallRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1432,7 +1453,7 @@ public class NicApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1442,7 +1463,7 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsGetCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsGetCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1459,17 +1480,25 @@ public class NicApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
-
         if (offset != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
         }
-
         if (limit != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -1491,11 +1520,11 @@ public class NicApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsGetValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsGetValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1508,7 +1537,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsGetCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsGetCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -1523,6 +1552,9 @@ public class NicApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return Nics
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1532,8 +1564,8 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public Nics datacentersServersNicsGet(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<Nics> localVarResp = datacentersServersNicsGetWithHttpInfo(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
+    public Nics datacentersServersNicsGet(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<Nics> localVarResp = datacentersServersNicsGetWithHttpInfo(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -1547,6 +1579,9 @@ public class NicApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;Nics&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1556,8 +1591,8 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Nics> datacentersServersNicsGetWithHttpInfo(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = datacentersServersNicsGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, null);
+    public ApiResponse<Nics> datacentersServersNicsGetWithHttpInfo(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = datacentersServersNicsGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<Nics>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1572,7 +1607,7 @@ public class NicApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1582,11 +1617,11 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsGetAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Nics> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsGetAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<Nics> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<Nics>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1598,7 +1633,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1608,7 +1643,7 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsPatchCall(String datacenterId, String serverId, String nicId, NicProperties nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsPatchCall(String datacenterId, String serverId, String nicId, NicProperties nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = nic;
 
         // create path and map variables
@@ -1626,7 +1661,6 @@ public class NicApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1650,11 +1684,11 @@ public class NicApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsPatchValidateBeforeCall(String datacenterId, String serverId, String nicId, NicProperties nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsPatchValidateBeforeCall(String datacenterId, String serverId, String nicId, NicProperties nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1677,7 +1711,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsPatchCall(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsPatchCall(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1692,6 +1726,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Nic
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1716,6 +1751,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Nic&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1741,7 +1777,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1751,11 +1787,11 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsPatchAsync(String datacenterId, String serverId, String nicId, NicProperties nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsPatchAsync(String datacenterId, String serverId, String nicId, NicProperties nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsPatchValidateBeforeCall(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsPatchValidateBeforeCall(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Nic>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1766,7 +1802,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1776,7 +1812,7 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsPostCall(String datacenterId, String serverId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsPostCall(String datacenterId, String serverId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = nic;
 
         // create path and map variables
@@ -1793,7 +1829,6 @@ public class NicApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1817,11 +1852,11 @@ public class NicApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsPostValidateBeforeCall(String datacenterId, String serverId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsPostValidateBeforeCall(String datacenterId, String serverId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1839,7 +1874,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsPostCall(datacenterId, serverId, nic, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsPostCall(datacenterId, serverId, nic, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1853,6 +1888,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Nic
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1876,6 +1912,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Nic&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1900,7 +1937,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1910,11 +1947,11 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsPostAsync(String datacenterId, String serverId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsPostAsync(String datacenterId, String serverId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsPostValidateBeforeCall(datacenterId, serverId, nic, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsPostValidateBeforeCall(datacenterId, serverId, nic, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Nic>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1926,7 +1963,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1936,7 +1973,7 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsPutCall(String datacenterId, String serverId, String nicId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsPutCall(String datacenterId, String serverId, String nicId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = nic;
 
         // create path and map variables
@@ -1954,7 +1991,6 @@ public class NicApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1978,11 +2014,11 @@ public class NicApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsPutValidateBeforeCall(String datacenterId, String serverId, String nicId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsPutValidateBeforeCall(String datacenterId, String serverId, String nicId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2005,7 +2041,7 @@ public class NicApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsPutCall(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsPutCall(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2020,6 +2056,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Nic
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2044,6 +2081,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Nic&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2069,7 +2107,7 @@ public class NicApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2079,11 +2117,11 @@ public class NicApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsPutAsync(String datacenterId, String serverId, String nicId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsPutAsync(String datacenterId, String serverId, String nicId, Nic nic, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Nic> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsPutValidateBeforeCall(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsPutValidateBeforeCall(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Nic>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
 }

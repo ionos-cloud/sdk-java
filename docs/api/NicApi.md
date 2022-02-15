@@ -149,7 +149,7 @@ public class Example {
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### HTTP request headers
 
@@ -291,7 +291,7 @@ public class Example {
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](../models/FirewallRule.md)
 
 ### HTTP request headers
 
@@ -364,7 +364,7 @@ public class Example {
 
 ### Return type
 
-[**FirewallRules**](FirewallRules.md)
+[**FirewallRules**](../models/FirewallRules.md)
 
 ### HTTP request headers
 
@@ -437,7 +437,7 @@ public class Example {
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](../models/FirewallRule.md)
 
 ### HTTP request headers
 
@@ -508,7 +508,7 @@ public class Example {
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](../models/FirewallRule.md)
 
 ### HTTP request headers
 
@@ -581,7 +581,7 @@ public class Example {
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](../models/FirewallRule.md)
 
 ### HTTP request headers
 
@@ -652,7 +652,7 @@ public class Example {
 
 ### Return type
 
-[**Nics**](Nics.md)
+[**Nics**](../models/Nics.md)
 
 ### HTTP request headers
 
@@ -723,7 +723,7 @@ public class Example {
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### HTTP request headers
 
@@ -792,7 +792,7 @@ public class Example {
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### HTTP request headers
 
@@ -863,7 +863,7 @@ public class Example {
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### HTTP request headers
 

@@ -67,7 +67,7 @@ public class Example {
 
 ### Return type
 
-[**Locations**](Locations.md)
+[**Locations**](../models/Locations.md)
 
 ### HTTP request headers
 
@@ -134,7 +134,7 @@ public class Example {
 
 ### Return type
 
-[**Location**](Location.md)
+[**Location**](../models/Location.md)
 
 ### HTTP request headers
 
@@ -197,7 +197,7 @@ public class Example {
 
 ### Return type
 
-[**Locations**](Locations.md)
+[**Locations**](../models/Locations.md)
 
 ### HTTP request headers
 

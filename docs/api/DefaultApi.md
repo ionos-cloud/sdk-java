@@ -63,7 +63,7 @@ public class Example {
 
 ### Return type
 
-[**Info**](Info.md)
+[**Info**](../models/Info.md)
 
 ### HTTP request headers
 

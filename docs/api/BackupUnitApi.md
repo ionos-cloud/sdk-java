@@ -136,7 +136,7 @@ public class Example {
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### HTTP request headers
 
@@ -199,7 +199,7 @@ public class Example {
 
 ### Return type
 
-[**BackupUnits**](BackupUnits.md)
+[**BackupUnits**](../models/BackupUnits.md)
 
 ### HTTP request headers
 
@@ -266,7 +266,7 @@ public class Example {
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### HTTP request headers
 
@@ -331,7 +331,7 @@ public class Example {
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### HTTP request headers
 
@@ -398,7 +398,7 @@ public class Example {
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### HTTP request headers
 
@@ -461,7 +461,7 @@ public class Example {
 
 ### Return type
 
-[**BackupUnitSSO**](BackupUnitSSO.md)
+[**BackupUnitSSO**](../models/BackupUnitSSO.md)
 
 ### HTTP request headers
 

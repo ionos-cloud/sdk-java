@@ -142,7 +142,7 @@ public class Example {
 
 ### Return type
 
-[**Lan**](Lan.md)
+[**Lan**](../models/Lan.md)
 
 ### HTTP request headers
 
@@ -211,7 +211,7 @@ public class Example {
 
 ### Return type
 
-[**Lans**](Lans.md)
+[**Lans**](../models/Lans.md)
 
 ### HTTP request headers
 
@@ -280,7 +280,7 @@ public class Example {
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### HTTP request headers
 
@@ -351,7 +351,7 @@ public class Example {
 
 ### Return type
 
-[**LanNics**](LanNics.md)
+[**LanNics**](../models/LanNics.md)
 
 ### HTTP request headers
 
@@ -420,7 +420,7 @@ public class Example {
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### HTTP request headers
 
@@ -489,7 +489,7 @@ public class Example {
 
 ### Return type
 
-[**Lan**](Lan.md)
+[**Lan**](../models/Lan.md)
 
 ### HTTP request headers
 
@@ -556,7 +556,7 @@ public class Example {
 
 ### Return type
 
-[**LanPost**](LanPost.md)
+[**LanPost**](../models/LanPost.md)
 
 ### HTTP request headers
 
@@ -625,7 +625,7 @@ public class Example {
 
 ### Return type
 
-[**Lan**](Lan.md)
+[**Lan**](../models/Lan.md)
 
 ### HTTP request headers
 

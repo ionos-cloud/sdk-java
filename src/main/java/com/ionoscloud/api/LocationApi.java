@@ -62,7 +62,7 @@ public class LocationApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -72,7 +72,7 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call locationsFindByRegionIdCall(String regionId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call locationsFindByRegionIdCall(String regionId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -88,7 +88,6 @@ public class LocationApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -112,11 +111,11 @@ public class LocationApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call locationsFindByRegionIdValidateBeforeCall(String regionId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call locationsFindByRegionIdValidateBeforeCall(String regionId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'regionId' is set
         if (regionId == null) {
@@ -124,7 +123,7 @@ public class LocationApi {
         }
         
 
-        okhttp3.Call localVarCall = locationsFindByRegionIdCall(regionId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = locationsFindByRegionIdCall(regionId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -136,6 +135,7 @@ public class LocationApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Locations
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -157,6 +157,7 @@ public class LocationApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Locations&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -179,7 +180,7 @@ public class LocationApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -189,11 +190,11 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call locationsFindByRegionIdAsync(String regionId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Locations> _callback) throws ApiException {
+    public okhttp3.Call locationsFindByRegionIdAsync(String regionId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Locations> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = locationsFindByRegionIdValidateBeforeCall(regionId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = locationsFindByRegionIdValidateBeforeCall(regionId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Locations>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -203,7 +204,7 @@ public class LocationApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -213,7 +214,7 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call locationsFindByRegionIdAndIdCall(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call locationsFindByRegionIdAndIdCall(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -230,7 +231,6 @@ public class LocationApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -254,11 +254,11 @@ public class LocationApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call locationsFindByRegionIdAndIdValidateBeforeCall(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call locationsFindByRegionIdAndIdValidateBeforeCall(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'regionId' is set
         if (regionId == null) {
@@ -271,7 +271,7 @@ public class LocationApi {
         }
         
 
-        okhttp3.Call localVarCall = locationsFindByRegionIdAndIdCall(regionId, locationId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = locationsFindByRegionIdAndIdCall(regionId, locationId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -284,6 +284,7 @@ public class LocationApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Location
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -306,6 +307,7 @@ public class LocationApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Location&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -329,7 +331,7 @@ public class LocationApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -339,11 +341,11 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call locationsFindByRegionIdAndIdAsync(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Location> _callback) throws ApiException {
+    public okhttp3.Call locationsFindByRegionIdAndIdAsync(String regionId, String locationId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Location> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = locationsFindByRegionIdAndIdValidateBeforeCall(regionId, locationId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = locationsFindByRegionIdAndIdValidateBeforeCall(regionId, locationId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Location>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -351,7 +353,7 @@ public class LocationApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -361,7 +363,7 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call locationsGetCall(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call locationsGetCall(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -376,9 +378,19 @@ public class LocationApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -400,14 +412,14 @@ public class LocationApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call locationsGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call locationsGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = locationsGetCall(pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = locationsGetCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -418,6 +430,9 @@ public class LocationApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return Locations
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -427,8 +442,8 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public Locations locationsGet(Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<Locations> localVarResp = locationsGetWithHttpInfo(pretty, depth, xContractNumber);
+    public Locations locationsGet(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<Locations> localVarResp = locationsGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -438,6 +453,9 @@ public class LocationApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;Locations&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -447,8 +465,8 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Locations> locationsGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = locationsGetValidateBeforeCall(pretty, depth, xContractNumber, null);
+    public ApiResponse<Locations> locationsGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = locationsGetValidateBeforeCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<Locations>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -459,7 +477,7 @@ public class LocationApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -469,11 +487,11 @@ public class LocationApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call locationsGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Locations> _callback) throws ApiException {
+    public okhttp3.Call locationsGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<Locations> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = locationsGetValidateBeforeCall(pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = locationsGetValidateBeforeCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<Locations>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
 }

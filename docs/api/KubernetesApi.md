@@ -147,7 +147,7 @@ public class Example {
 
 ### Return type
 
-[**KubernetesCluster**](KubernetesCluster.md)
+[**KubernetesCluster**](../models/KubernetesCluster.md)
 
 ### HTTP request headers
 
@@ -210,7 +210,7 @@ public class Example {
 
 ### Return type
 
-[**KubernetesClusters**](KubernetesClusters.md)
+[**KubernetesClusters**](../models/KubernetesClusters.md)
 
 ### HTTP request headers
 
@@ -275,7 +275,7 @@ public class Example {
 
 ### Return type
 
-[**KubernetesConfig**](KubernetesConfig.md)
+[**KubernetesConfig**](../models/KubernetesConfig.md)
 
 ### HTTP request headers
 
@@ -409,7 +409,7 @@ public class Example {
 
 ### Return type
 
-[**KubernetesNodePool**](KubernetesNodePool.md)
+[**KubernetesNodePool**](../models/KubernetesNodePool.md)
 
 ### HTTP request headers
 
@@ -474,7 +474,7 @@ public class Example {
 
 ### Return type
 
-[**KubernetesNodePools**](KubernetesNodePools.md)
+[**KubernetesNodePools**](../models/KubernetesNodePools.md)
 
 ### HTTP request headers
 
@@ -612,7 +612,7 @@ public class Example {
 
 ### Return type
 
-[**KubernetesNode**](KubernetesNode.md)
+[**KubernetesNode**](../models/KubernetesNode.md)
 
 ### HTTP request headers
 
@@ -679,7 +679,7 @@ public class Example {
 
 ### Return type
 
-[**KubernetesNodes**](KubernetesNodes.md)
+[**KubernetesNodes**](../models/KubernetesNodes.md)
 
 ### HTTP request headers
 
@@ -815,7 +815,7 @@ public class Example {
 
 ### Return type
 
-[**KubernetesNodePool**](KubernetesNodePool.md)
+[**KubernetesNodePool**](../models/KubernetesNodePool.md)
 
 ### HTTP request headers
 
@@ -884,7 +884,7 @@ public class Example {
 
 ### Return type
 
-[**KubernetesNodePool**](KubernetesNodePool.md)
+[**KubernetesNodePool**](../models/KubernetesNodePool.md)
 
 ### HTTP request headers
 
@@ -949,7 +949,7 @@ public class Example {
 
 ### Return type
 
-[**KubernetesCluster**](KubernetesCluster.md)
+[**KubernetesCluster**](../models/KubernetesCluster.md)
 
 ### HTTP request headers
 
@@ -1016,7 +1016,7 @@ public class Example {
 
 ### Return type
 
-[**KubernetesCluster**](KubernetesCluster.md)
+[**KubernetesCluster**](../models/KubernetesCluster.md)
 
 ### HTTP request headers
 

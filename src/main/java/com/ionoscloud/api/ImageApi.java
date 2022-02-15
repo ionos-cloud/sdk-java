@@ -63,7 +63,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -73,7 +73,7 @@ public class ImageApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call imagesDeleteCall(String imageId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call imagesDeleteCall(String imageId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -89,7 +89,6 @@ public class ImageApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -113,11 +112,11 @@ public class ImageApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call imagesDeleteValidateBeforeCall(String imageId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call imagesDeleteValidateBeforeCall(String imageId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'imageId' is set
         if (imageId == null) {
@@ -125,7 +124,7 @@ public class ImageApi {
         }
         
 
-        okhttp3.Call localVarCall = imagesDeleteCall(imageId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = imagesDeleteCall(imageId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -137,6 +136,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -158,6 +158,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -180,7 +181,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -190,11 +191,11 @@ public class ImageApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call imagesDeleteAsync(String imageId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call imagesDeleteAsync(String imageId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = imagesDeleteValidateBeforeCall(imageId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = imagesDeleteValidateBeforeCall(imageId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -203,7 +204,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -213,7 +214,7 @@ public class ImageApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call imagesFindByIdCall(String imageId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call imagesFindByIdCall(String imageId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -229,7 +230,6 @@ public class ImageApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -253,11 +253,11 @@ public class ImageApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call imagesFindByIdValidateBeforeCall(String imageId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call imagesFindByIdValidateBeforeCall(String imageId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'imageId' is set
         if (imageId == null) {
@@ -265,7 +265,7 @@ public class ImageApi {
         }
         
 
-        okhttp3.Call localVarCall = imagesFindByIdCall(imageId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = imagesFindByIdCall(imageId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -277,6 +277,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Image
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -298,6 +299,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Image&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -320,7 +322,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -330,11 +332,11 @@ public class ImageApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call imagesFindByIdAsync(String imageId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Image> _callback) throws ApiException {
+    public okhttp3.Call imagesFindByIdAsync(String imageId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Image> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = imagesFindByIdValidateBeforeCall(imageId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = imagesFindByIdValidateBeforeCall(imageId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Image>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -342,7 +344,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -352,7 +354,7 @@ public class ImageApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call imagesGetCall(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call imagesGetCall(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -367,9 +369,19 @@ public class ImageApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -391,14 +403,14 @@ public class ImageApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call imagesGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call imagesGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = imagesGetCall(pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = imagesGetCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -409,6 +421,9 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return Images
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -418,8 +433,8 @@ public class ImageApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public Images imagesGet(Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<Images> localVarResp = imagesGetWithHttpInfo(pretty, depth, xContractNumber);
+    public Images imagesGet(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<Images> localVarResp = imagesGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -429,6 +444,9 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;Images&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -438,8 +456,8 @@ public class ImageApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Images> imagesGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = imagesGetValidateBeforeCall(pretty, depth, xContractNumber, null);
+    public ApiResponse<Images> imagesGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = imagesGetValidateBeforeCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<Images>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -450,7 +468,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -460,11 +478,11 @@ public class ImageApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call imagesGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Images> _callback) throws ApiException {
+    public okhttp3.Call imagesGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<Images> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = imagesGetValidateBeforeCall(pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = imagesGetValidateBeforeCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<Images>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -474,7 +492,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -484,7 +502,7 @@ public class ImageApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call imagesPatchCall(String imageId, ImageProperties image, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call imagesPatchCall(String imageId, ImageProperties image, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = image;
 
         // create path and map variables
@@ -500,7 +518,6 @@ public class ImageApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -524,11 +541,11 @@ public class ImageApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call imagesPatchValidateBeforeCall(String imageId, ImageProperties image, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call imagesPatchValidateBeforeCall(String imageId, ImageProperties image, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'imageId' is set
         if (imageId == null) {
@@ -541,7 +558,7 @@ public class ImageApi {
         }
         
 
-        okhttp3.Call localVarCall = imagesPatchCall(imageId, image, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = imagesPatchCall(imageId, image, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -554,6 +571,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Image
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -576,6 +594,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Image&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -599,7 +618,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -609,11 +628,11 @@ public class ImageApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call imagesPatchAsync(String imageId, ImageProperties image, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Image> _callback) throws ApiException {
+    public okhttp3.Call imagesPatchAsync(String imageId, ImageProperties image, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Image> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = imagesPatchValidateBeforeCall(imageId, image, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = imagesPatchValidateBeforeCall(imageId, image, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Image>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -623,7 +642,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -633,7 +652,7 @@ public class ImageApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call imagesPutCall(String imageId, Image image, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call imagesPutCall(String imageId, Image image, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = image;
 
         // create path and map variables
@@ -649,7 +668,6 @@ public class ImageApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -673,11 +691,11 @@ public class ImageApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call imagesPutValidateBeforeCall(String imageId, Image image, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call imagesPutValidateBeforeCall(String imageId, Image image, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'imageId' is set
         if (imageId == null) {
@@ -690,7 +708,7 @@ public class ImageApi {
         }
         
 
-        okhttp3.Call localVarCall = imagesPutCall(imageId, image, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = imagesPutCall(imageId, image, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -703,6 +721,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Image
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -725,6 +744,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Image&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -748,7 +768,7 @@ public class ImageApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -758,11 +778,11 @@ public class ImageApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call imagesPutAsync(String imageId, Image image, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Image> _callback) throws ApiException {
+    public okhttp3.Call imagesPutAsync(String imageId, Image image, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Image> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = imagesPutValidateBeforeCall(imageId, image, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = imagesPutValidateBeforeCall(imageId, image, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Image>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
 }

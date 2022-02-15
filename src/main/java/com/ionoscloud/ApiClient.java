@@ -65,8 +65,10 @@ public class ApiClient {
 
     private String basePath = "https://api.ionos.com/cloudapi/v5";
     private boolean debugging = false;
-    private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
-    private Map<String, String> defaultCookieMap = new HashMap<String, String>();
+    private Map<String, String> defaultHeaderMap = new HashMap<>();
+    private Map<String, String> defaultCookieMap = new HashMap<>();
+    private final Map<String, String> defaultQueryParams = new HashMap<>();
+
     private String tempFolderPath = null;
 
     private Map<String, Authentication> authentications;
@@ -138,7 +140,7 @@ public class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("ionos-cloud-sdk-java/5.1.1");
+        setUserAgent("ionos-cloud-sdk-java/v5.2.1");
 
         authentications = new HashMap<String, Authentication>();
     }
@@ -443,6 +445,18 @@ public class ApiClient {
      */
     public ApiClient addDefaultCookie(String key, String value) {
         defaultCookieMap.put(key, value);
+        return this;
+    }
+
+    /**
+     * Add a default query parameter.
+     *
+     * @param key The param key
+     * @param value The param value
+     * @return ApiClient
+     */
+    public ApiClient addDefaultQueryParam(String key, String value) {
+        defaultQueryParams.put(key, value);
         return this;
     }
 
@@ -1197,6 +1211,13 @@ public class ApiClient {
         final StringBuilder url = new StringBuilder();
         url.append(basePath).append(path);
 
+        for (Map.Entry<String, String>  queryParam : defaultQueryParams.entrySet()) {
+            boolean contains = queryParams.stream().anyMatch(q -> q.getName().contains(queryParam.getKey()));
+            if (!contains) {
+                queryParams.add(new Pair(queryParam.getKey(), queryParam.getValue()));
+            }
+        }
+
         if (queryParams != null && !queryParams.isEmpty()) {
             // support (constant) query string in `path`, e.g. "/posts?draft=1"
             String prefix = path.contains("?") ? "&" : "?";
@@ -1367,29 +1388,54 @@ public class ApiClient {
         try {
             TrustManager[] trustManagers;
             HostnameVerifier hostnameVerifier;
-            TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
+            if (!verifyingSsl) {
+                trustManagers = new TrustManager[]{
+                        new X509TrustManager() {
+                            @Override
+                            public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
+                            }
 
-            if (sslCaCert == null) {
-                trustManagerFactory.init((KeyStore) null);
+                            @Override
+                            public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType) throws CertificateException {
+                            }
+
+                            @Override
+                            public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                                return new java.security.cert.X509Certificate[]{};
+                            }
+                        }
+                };
+                hostnameVerifier = new HostnameVerifier() {
+                    @Override
+                    public boolean verify(String hostname, SSLSession session) {
+                        return true;
+                    }
+                };
             } else {
-                char[] password = null; // Any password will work.
-                CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
-                Collection<? extends Certificate> certificates = certificateFactory.generateCertificates(sslCaCert);
-                if (certificates.isEmpty()) {
-                    throw new IllegalArgumentException("expected non-empty set of trusted certificates");
-                }
-                KeyStore caKeyStore = newEmptyKeyStore(password);
-                int index = 0;
-                for (Certificate certificate : certificates) {
-                    String certificateAlias = "ca" + Integer.toString(index++);
-                    caKeyStore.setCertificateEntry(certificateAlias, certificate);
-                }
-                trustManagerFactory.init(caKeyStore);
-            }
-            trustManagers = trustManagerFactory.getTrustManagers();
-            hostnameVerifier = OkHostnameVerifier.INSTANCE;
+                TrustManagerFactory trustManagerFactory = TrustManagerFactory.getInstance(TrustManagerFactory.getDefaultAlgorithm());
 
-            SSLContext sslContext = SSLContext.getInstance("TLSv1.2");
+                if (sslCaCert == null) {
+                    trustManagerFactory.init((KeyStore) null);
+                } else {
+                    char[] password = null; // Any password will work.
+                    CertificateFactory certificateFactory = CertificateFactory.getInstance("X.509");
+                    Collection<? extends Certificate> certificates = certificateFactory.generateCertificates(sslCaCert);
+                    if (certificates.isEmpty()) {
+                        throw new IllegalArgumentException("expected non-empty set of trusted certificates");
+                    }
+                    KeyStore caKeyStore = newEmptyKeyStore(password);
+                    int index = 0;
+                    for (Certificate certificate : certificates) {
+                        String certificateAlias = "ca" + Integer.toString(index++);
+                        caKeyStore.setCertificateEntry(certificateAlias, certificate);
+                    }
+                    trustManagerFactory.init(caKeyStore);
+                }
+                trustManagers = trustManagerFactory.getTrustManagers();
+                hostnameVerifier = OkHostnameVerifier.INSTANCE;
+            }
+
+            SSLContext sslContext = SSLContext.getInstance("TLS");
             sslContext.init(keyManagers, trustManagers, new SecureRandom());
             httpClient = httpClient.newBuilder()
                             .sslSocketFactory(sslContext.getSocketFactory(), (X509TrustManager) trustManagers[0])
@@ -1433,7 +1479,7 @@ public class ApiClient {
         Long timeoutTime = System.currentTimeMillis() + timeout;
 
         do {
-            RequestStatus request = new RequestApi().requestsStatusGet(requestId, true, 1, 1);
+            RequestStatus request = new RequestApi().requestsStatusGet(requestId, true, 1, 1, null, null, null);
 
             if (request.getMetadata().getStatus().getValue().equals("DONE")) {
                 break;

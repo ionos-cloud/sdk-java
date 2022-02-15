@@ -155,7 +155,7 @@ public class Example {
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](../models/Image.md)
 
 ### HTTP request headers
 
@@ -226,7 +226,7 @@ public class Example {
 
 ### Return type
 
-[**Cdroms**](Cdroms.md)
+[**Cdroms**](../models/Cdroms.md)
 
 ### HTTP request headers
 
@@ -295,7 +295,7 @@ public class Example {
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](../models/Image.md)
 
 ### HTTP request headers
 
@@ -429,7 +429,7 @@ public class Example {
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](../models/Server.md)
 
 ### HTTP request headers
 
@@ -500,7 +500,7 @@ public class Example {
 
 ### Return type
 
-[**Servers**](Servers.md)
+[**Servers**](../models/Servers.md)
 
 ### HTTP request headers
 
@@ -569,7 +569,7 @@ public class Example {
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](../models/Server.md)
 
 ### HTTP request headers
 
@@ -636,7 +636,7 @@ public class Example {
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](../models/Server.md)
 
 ### HTTP request headers
 
@@ -705,7 +705,7 @@ public class Example {
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](../models/Server.md)
 
 ### HTTP request headers
 
@@ -1111,7 +1111,7 @@ public class Example {
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### HTTP request headers
 
@@ -1181,7 +1181,7 @@ public class Example {
 
 ### Return type
 
-[**AttachedVolumes**](AttachedVolumes.md)
+[**AttachedVolumes**](../models/AttachedVolumes.md)
 
 ### HTTP request headers
 
@@ -1249,7 +1249,7 @@ public class Example {
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### HTTP request headers
 

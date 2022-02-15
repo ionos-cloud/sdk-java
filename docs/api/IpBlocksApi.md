@@ -135,7 +135,7 @@ public class Example {
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](../models/IpBlock.md)
 
 ### HTTP request headers
 
@@ -202,7 +202,7 @@ public class Example {
 
 ### Return type
 
-[**IpBlocks**](IpBlocks.md)
+[**IpBlocks**](../models/IpBlocks.md)
 
 ### HTTP request headers
 
@@ -269,7 +269,7 @@ public class Example {
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](../models/IpBlock.md)
 
 ### HTTP request headers
 
@@ -334,7 +334,7 @@ public class Example {
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](../models/IpBlock.md)
 
 ### HTTP request headers
 
@@ -401,7 +401,7 @@ public class Example {
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](../models/IpBlock.md)
 
 ### HTTP request headers
 

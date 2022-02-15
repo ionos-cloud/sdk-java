@@ -11072,6 +11072,7 @@ paths:
                   - UNKNOWN
                   - WINDOWS
                   - WINDOWS2016
+                  - WINDOWS2022
                   - LINUX
                   - OTHER
                   type: string
@@ -16025,6 +16026,7 @@ components:
           - UNKNOWN
           - WINDOWS
           - WINDOWS2016
+          - WINDOWS2022
           - LINUX
           - OTHER
           example: LINUX
@@ -16405,6 +16407,7 @@ components:
           - UNKNOWN
           - WINDOWS
           - WINDOWS2016
+          - WINDOWS2022
           - LINUX
           - OTHER
           example: LINUX
@@ -27562,6 +27565,7 @@ components:
     UserPropertiesPut:
       example:
         firstname: firstname
+        password: password
         administrator: true
         active: true
         forceSecAuth: true
@@ -27577,6 +27581,9 @@ components:
           type: string
         email:
           description: email address of the user
+          type: string
+        password:
+          description: password of the user
           type: string
         administrator:
           description: indicates if the user has admin rights or not
@@ -27740,6 +27747,7 @@ components:
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         properties:
           firstname: firstname
+          password: password
           administrator: true
           active: true
           forceSecAuth: true
@@ -30475,6 +30483,7 @@ components:
           - UNKNOWN
           - WINDOWS
           - WINDOWS2016
+          - WINDOWS2022
           - LINUX
           - OTHER
           example: LINUX
@@ -32897,7 +32906,6 @@ components:
             type: string
           type: array
       required:
-      - name
       - nodeCount
       type: object
     KubernetesNodePool:

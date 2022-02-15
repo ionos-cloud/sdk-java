@@ -78,11 +78,11 @@ public class Example {
 | **name** | **String**| The name of the snapshot | [optional]
 | **description** | **String**| The description of the snapshot | [optional]
 | **secAuthProtection** | **Boolean**| Flag representing if extra protection is enabled on snapshot e.g. Two Factor protection etc. | [optional]
-| **licenceType** | **String**| The OS type of this Snapshot | [optional] [enum: UNKNOWN, WINDOWS, WINDOWS2016, LINUX, OTHER]
+| **licenceType** | **String**| The OS type of this Snapshot | [optional] [enum: UNKNOWN, WINDOWS, WINDOWS2016, WINDOWS2022, LINUX, OTHER]
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](../models/Snapshot.md)
 
 ### HTTP request headers
 
@@ -216,7 +216,7 @@ public class Example {
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### HTTP request headers
 
@@ -285,7 +285,7 @@ public class Example {
 
 ### Return type
 
-[**Volumes**](Volumes.md)
+[**Volumes**](../models/Volumes.md)
 
 ### HTTP request headers
 
@@ -354,7 +354,7 @@ public class Example {
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### HTTP request headers
 
@@ -421,7 +421,7 @@ public class Example {
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### HTTP request headers
 
@@ -490,7 +490,7 @@ public class Example {
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### HTTP request headers
 

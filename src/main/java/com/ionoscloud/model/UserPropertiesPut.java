@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * UserPropertiesPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-04T10:08:17.736Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-15T12:02:49.770Z[Etc/UTC]")
 
 public class UserPropertiesPut {
   
@@ -44,6 +44,11 @@ public class UserPropertiesPut {
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
   private String email;
+
+
+  public static final String SERIALIZED_NAME_PASSWORD = "password";
+  @SerializedName(SERIALIZED_NAME_PASSWORD)
+  private String password;
 
 
   public static final String SERIALIZED_NAME_ADMINISTRATOR = "administrator";
@@ -135,6 +140,30 @@ public class UserPropertiesPut {
 
   public void setEmail(String email) {
     this.email = email;
+  }
+
+
+
+  public UserPropertiesPut password(String password) {
+    
+    this.password = password;
+    return this;
+  }
+
+   /**
+   * password of the user
+   * @return password
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "password of the user")
+
+  public String getPassword() {
+    return password;
+  }
+
+
+  public void setPassword(String password) {
+    this.password = password;
   }
 
 
@@ -243,7 +272,7 @@ public class UserPropertiesPut {
       return false;
     }
     UserPropertiesPut userPropertiesPut = (UserPropertiesPut) o;
-    return Objects.equals(this.firstname, userPropertiesPut.firstname) && Objects.equals(this.lastname, userPropertiesPut.lastname) && Objects.equals(this.email, userPropertiesPut.email) && Objects.equals(this.administrator, userPropertiesPut.administrator) && Objects.equals(this.forceSecAuth, userPropertiesPut.forceSecAuth) && Objects.equals(this.secAuthActive, userPropertiesPut.secAuthActive) && Objects.equals(this.active, userPropertiesPut.active);
+    return Objects.equals(this.firstname, userPropertiesPut.firstname) && Objects.equals(this.lastname, userPropertiesPut.lastname) && Objects.equals(this.email, userPropertiesPut.email) && Objects.equals(this.password, userPropertiesPut.password) && Objects.equals(this.administrator, userPropertiesPut.administrator) && Objects.equals(this.forceSecAuth, userPropertiesPut.forceSecAuth) && Objects.equals(this.secAuthActive, userPropertiesPut.secAuthActive) && Objects.equals(this.active, userPropertiesPut.active);
   }
 
 
@@ -259,6 +288,8 @@ public class UserPropertiesPut {
     sb.append("    lastname: ").append(toIndentedString(lastname)).append("\n");
 
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+
+    sb.append("    password: ").append(toIndentedString(password)).append("\n");
 
     sb.append("    administrator: ").append(toIndentedString(administrator)).append("\n");
 

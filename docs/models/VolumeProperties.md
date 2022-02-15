@@ -69,6 +69,7 @@
 | UNKNOWN | &quot;UNKNOWN&quot; |
 | WINDOWS | &quot;WINDOWS&quot; |
 | WINDOWS2016 | &quot;WINDOWS2016&quot; |
+| WINDOWS2022 | &quot;WINDOWS2022&quot; |
 | LINUX | &quot;LINUX&quot; |
 | OTHER | &quot;OTHER&quot; |
 

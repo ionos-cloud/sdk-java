@@ -69,7 +69,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -79,7 +79,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersCdromsDeleteCall(String datacenterId, String serverId, String cdromId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersCdromsDeleteCall(String datacenterId, String serverId, String cdromId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -97,7 +97,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -121,11 +120,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersCdromsDeleteValidateBeforeCall(String datacenterId, String serverId, String cdromId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersCdromsDeleteValidateBeforeCall(String datacenterId, String serverId, String cdromId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -143,7 +142,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersCdromsDeleteCall(datacenterId, serverId, cdromId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersCdromsDeleteCall(datacenterId, serverId, cdromId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -157,6 +156,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -180,6 +180,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -204,7 +205,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -214,11 +215,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersCdromsDeleteAsync(String datacenterId, String serverId, String cdromId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersCdromsDeleteAsync(String datacenterId, String serverId, String cdromId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersCdromsDeleteValidateBeforeCall(datacenterId, serverId, cdromId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersCdromsDeleteValidateBeforeCall(datacenterId, serverId, cdromId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -229,7 +230,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -239,7 +240,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersCdromsFindByIdCall(String datacenterId, String serverId, String cdromId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersCdromsFindByIdCall(String datacenterId, String serverId, String cdromId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -257,7 +258,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -281,11 +281,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersCdromsFindByIdValidateBeforeCall(String datacenterId, String serverId, String cdromId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersCdromsFindByIdValidateBeforeCall(String datacenterId, String serverId, String cdromId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -303,7 +303,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersCdromsFindByIdCall(datacenterId, serverId, cdromId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersCdromsFindByIdCall(datacenterId, serverId, cdromId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -317,6 +317,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Image
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -340,6 +341,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Image&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -364,7 +366,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -374,11 +376,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersCdromsFindByIdAsync(String datacenterId, String serverId, String cdromId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Image> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersCdromsFindByIdAsync(String datacenterId, String serverId, String cdromId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Image> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersCdromsFindByIdValidateBeforeCall(datacenterId, serverId, cdromId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersCdromsFindByIdValidateBeforeCall(datacenterId, serverId, cdromId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Image>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -390,7 +392,7 @@ public class ServerApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -400,7 +402,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersCdromsGetCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersCdromsGetCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -417,17 +419,25 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
-
         if (offset != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
         }
-
         if (limit != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -449,11 +459,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersCdromsGetValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersCdromsGetValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -466,7 +476,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersCdromsGetCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersCdromsGetCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -481,6 +491,9 @@ public class ServerApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return Cdroms
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -490,8 +503,8 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public Cdroms datacentersServersCdromsGet(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<Cdroms> localVarResp = datacentersServersCdromsGetWithHttpInfo(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
+    public Cdroms datacentersServersCdromsGet(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<Cdroms> localVarResp = datacentersServersCdromsGetWithHttpInfo(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -505,6 +518,9 @@ public class ServerApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;Cdroms&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -514,8 +530,8 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Cdroms> datacentersServersCdromsGetWithHttpInfo(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = datacentersServersCdromsGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, null);
+    public ApiResponse<Cdroms> datacentersServersCdromsGetWithHttpInfo(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = datacentersServersCdromsGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<Cdroms>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -530,7 +546,7 @@ public class ServerApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -540,11 +556,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersCdromsGetAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Cdroms> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersCdromsGetAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<Cdroms> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersCdromsGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersCdromsGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<Cdroms>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -555,7 +571,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -565,7 +581,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersCdromsPostCall(String datacenterId, String serverId, Image cdrom, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersCdromsPostCall(String datacenterId, String serverId, Image cdrom, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = cdrom;
 
         // create path and map variables
@@ -582,7 +598,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -606,11 +621,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersCdromsPostValidateBeforeCall(String datacenterId, String serverId, Image cdrom, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersCdromsPostValidateBeforeCall(String datacenterId, String serverId, Image cdrom, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -628,7 +643,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersCdromsPostCall(datacenterId, serverId, cdrom, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersCdromsPostCall(datacenterId, serverId, cdrom, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -642,6 +657,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Image
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -665,6 +681,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Image&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -689,7 +706,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -699,11 +716,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersCdromsPostAsync(String datacenterId, String serverId, Image cdrom, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Image> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersCdromsPostAsync(String datacenterId, String serverId, Image cdrom, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Image> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersCdromsPostValidateBeforeCall(datacenterId, serverId, cdrom, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersCdromsPostValidateBeforeCall(datacenterId, serverId, cdrom, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Image>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -713,7 +730,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -723,7 +740,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersDeleteCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersDeleteCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -740,7 +757,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -764,11 +780,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersDeleteValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersDeleteValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -781,7 +797,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersDeleteCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersDeleteCall(datacenterId, serverId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -794,6 +810,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -816,6 +833,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -839,7 +857,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -849,11 +867,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersDeleteAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersDeleteAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersDeleteValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersDeleteValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -863,7 +881,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -873,7 +891,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersFindByIdCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersFindByIdCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -890,7 +908,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -914,11 +931,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersFindByIdValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersFindByIdValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -931,7 +948,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersFindByIdCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersFindByIdCall(datacenterId, serverId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -944,6 +961,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Server
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -966,6 +984,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Server&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -989,7 +1008,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -999,11 +1018,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersFindByIdAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Server> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersFindByIdAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Server> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersFindByIdValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersFindByIdValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Server>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1015,7 +1034,7 @@ public class ServerApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1025,7 +1044,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersGetCall(String datacenterId, Boolean pretty, Integer depth, Boolean upgradeNeeded, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersGetCall(String datacenterId, Boolean pretty, Integer depth, Boolean upgradeNeeded, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1041,21 +1060,28 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
-
         if (upgradeNeeded != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("upgradeNeeded", upgradeNeeded));
         }
-
         if (offset != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
         }
-
         if (limit != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -1077,11 +1103,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Boolean upgradeNeeded, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Boolean upgradeNeeded, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1089,7 +1115,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersGetCall(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersGetCall(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -1104,6 +1130,9 @@ public class ServerApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return Servers
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1113,8 +1142,8 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public Servers datacentersServersGet(String datacenterId, Boolean pretty, Integer depth, Boolean upgradeNeeded, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<Servers> localVarResp = datacentersServersGetWithHttpInfo(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit);
+    public Servers datacentersServersGet(String datacenterId, Boolean pretty, Integer depth, Boolean upgradeNeeded, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<Servers> localVarResp = datacentersServersGetWithHttpInfo(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -1128,6 +1157,9 @@ public class ServerApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;Servers&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1137,8 +1169,8 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Servers> datacentersServersGetWithHttpInfo(String datacenterId, Boolean pretty, Integer depth, Boolean upgradeNeeded, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = datacentersServersGetValidateBeforeCall(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit, null);
+    public ApiResponse<Servers> datacentersServersGetWithHttpInfo(String datacenterId, Boolean pretty, Integer depth, Boolean upgradeNeeded, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = datacentersServersGetValidateBeforeCall(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<Servers>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1153,7 +1185,7 @@ public class ServerApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1163,11 +1195,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersGetAsync(String datacenterId, Boolean pretty, Integer depth, Boolean upgradeNeeded, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Servers> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersGetAsync(String datacenterId, Boolean pretty, Integer depth, Boolean upgradeNeeded, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<Servers> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersGetValidateBeforeCall(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersGetValidateBeforeCall(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<Servers>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1178,7 +1210,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1188,7 +1220,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersPatchCall(String datacenterId, String serverId, ServerProperties server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersPatchCall(String datacenterId, String serverId, ServerProperties server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = server;
 
         // create path and map variables
@@ -1205,7 +1237,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1229,11 +1260,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersPatchValidateBeforeCall(String datacenterId, String serverId, ServerProperties server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersPatchValidateBeforeCall(String datacenterId, String serverId, ServerProperties server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1251,7 +1282,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersPatchCall(datacenterId, serverId, server, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersPatchCall(datacenterId, serverId, server, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1265,6 +1296,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Server
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1288,6 +1320,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Server&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1312,7 +1345,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1322,11 +1355,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersPatchAsync(String datacenterId, String serverId, ServerProperties server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Server> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersPatchAsync(String datacenterId, String serverId, ServerProperties server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Server> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersPatchValidateBeforeCall(datacenterId, serverId, server, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersPatchValidateBeforeCall(datacenterId, serverId, server, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Server>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1336,7 +1369,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1346,7 +1379,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersPostCall(String datacenterId, Server server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersPostCall(String datacenterId, Server server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = server;
 
         // create path and map variables
@@ -1362,7 +1395,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1386,11 +1418,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersPostValidateBeforeCall(String datacenterId, Server server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersPostValidateBeforeCall(String datacenterId, Server server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1403,7 +1435,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersPostCall(datacenterId, server, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersPostCall(datacenterId, server, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1416,6 +1448,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Server
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1438,6 +1471,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Server&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1461,7 +1495,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1471,11 +1505,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersPostAsync(String datacenterId, Server server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Server> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersPostAsync(String datacenterId, Server server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Server> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersPostValidateBeforeCall(datacenterId, server, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersPostValidateBeforeCall(datacenterId, server, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Server>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1486,7 +1520,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1496,7 +1530,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersPutCall(String datacenterId, String serverId, Server server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersPutCall(String datacenterId, String serverId, Server server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = server;
 
         // create path and map variables
@@ -1513,7 +1547,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1537,11 +1570,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersPutValidateBeforeCall(String datacenterId, String serverId, Server server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersPutValidateBeforeCall(String datacenterId, String serverId, Server server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1559,7 +1592,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersPutCall(datacenterId, serverId, server, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersPutCall(datacenterId, serverId, server, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1573,6 +1606,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Server
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1596,6 +1630,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Server&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1620,7 +1655,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1630,11 +1665,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersPutAsync(String datacenterId, String serverId, Server server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Server> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersPutAsync(String datacenterId, String serverId, Server server, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Server> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersPutValidateBeforeCall(datacenterId, serverId, server, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersPutValidateBeforeCall(datacenterId, serverId, server, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Server>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1644,7 +1679,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1654,7 +1689,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersRebootPostCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersRebootPostCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1671,7 +1706,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1695,11 +1729,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersRebootPostValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersRebootPostValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1712,7 +1746,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersRebootPostCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersRebootPostCall(datacenterId, serverId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1725,6 +1759,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1747,6 +1782,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1770,7 +1806,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1780,11 +1816,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersRebootPostAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersRebootPostAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersRebootPostValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersRebootPostValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1794,7 +1830,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1804,7 +1840,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersStartPostCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersStartPostCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1821,7 +1857,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1845,11 +1880,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersStartPostValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersStartPostValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1862,7 +1897,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersStartPostCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersStartPostCall(datacenterId, serverId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1875,6 +1910,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1897,6 +1933,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1920,7 +1957,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1930,11 +1967,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersStartPostAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersStartPostAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersStartPostValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersStartPostValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1944,7 +1981,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1954,7 +1991,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersStopPostCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersStopPostCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1971,7 +2008,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1995,11 +2031,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersStopPostValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersStopPostValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2012,7 +2048,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersStopPostCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersStopPostCall(datacenterId, serverId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2025,6 +2061,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2047,6 +2084,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2070,7 +2108,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2080,11 +2118,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersStopPostAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersStopPostAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersStopPostValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersStopPostValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2094,7 +2132,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2104,7 +2142,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersUpgradePostCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersUpgradePostCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2121,7 +2159,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2145,11 +2182,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersUpgradePostValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersUpgradePostValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2162,7 +2199,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersUpgradePostCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersUpgradePostCall(datacenterId, serverId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2175,6 +2212,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2197,6 +2235,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2220,7 +2259,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2230,11 +2269,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersUpgradePostAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersUpgradePostAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersUpgradePostValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersUpgradePostValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2245,7 +2284,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2255,7 +2294,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersVolumesDeleteCall(String datacenterId, String serverId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersVolumesDeleteCall(String datacenterId, String serverId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2273,7 +2312,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2297,11 +2335,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersVolumesDeleteValidateBeforeCall(String datacenterId, String serverId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersVolumesDeleteValidateBeforeCall(String datacenterId, String serverId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2319,7 +2357,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersVolumesDeleteCall(datacenterId, serverId, volumeId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersVolumesDeleteCall(datacenterId, serverId, volumeId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2333,6 +2371,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Object
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2356,6 +2395,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Object&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2380,7 +2420,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2390,11 +2430,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersVolumesDeleteAsync(String datacenterId, String serverId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersVolumesDeleteAsync(String datacenterId, String serverId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Object> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersVolumesDeleteValidateBeforeCall(datacenterId, serverId, volumeId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersVolumesDeleteValidateBeforeCall(datacenterId, serverId, volumeId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Object>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2405,7 +2445,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2415,7 +2455,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersVolumesFindByIdCall(String datacenterId, String serverId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersVolumesFindByIdCall(String datacenterId, String serverId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2433,7 +2473,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2457,11 +2496,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersVolumesFindByIdValidateBeforeCall(String datacenterId, String serverId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersVolumesFindByIdValidateBeforeCall(String datacenterId, String serverId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2479,7 +2518,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersVolumesFindByIdCall(datacenterId, serverId, volumeId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersVolumesFindByIdCall(datacenterId, serverId, volumeId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2493,6 +2532,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Volume
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2516,6 +2556,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Volume&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2540,7 +2581,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2550,11 +2591,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersVolumesFindByIdAsync(String datacenterId, String serverId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Volume> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersVolumesFindByIdAsync(String datacenterId, String serverId, String volumeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Volume> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersVolumesFindByIdValidateBeforeCall(datacenterId, serverId, volumeId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersVolumesFindByIdValidateBeforeCall(datacenterId, serverId, volumeId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Volume>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2566,7 +2607,7 @@ public class ServerApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2576,7 +2617,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersVolumesGetCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersVolumesGetCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2593,17 +2634,25 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
-
         if (offset != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
         }
-
         if (limit != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -2625,11 +2674,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersVolumesGetValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersVolumesGetValidateBeforeCall(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2642,7 +2691,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersVolumesGetCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersVolumesGetCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -2657,6 +2706,9 @@ public class ServerApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return AttachedVolumes
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2666,8 +2718,8 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public AttachedVolumes datacentersServersVolumesGet(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<AttachedVolumes> localVarResp = datacentersServersVolumesGetWithHttpInfo(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
+    public AttachedVolumes datacentersServersVolumesGet(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<AttachedVolumes> localVarResp = datacentersServersVolumesGetWithHttpInfo(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -2681,6 +2733,9 @@ public class ServerApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;AttachedVolumes&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2690,8 +2745,8 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<AttachedVolumes> datacentersServersVolumesGetWithHttpInfo(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = datacentersServersVolumesGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, null);
+    public ApiResponse<AttachedVolumes> datacentersServersVolumesGetWithHttpInfo(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = datacentersServersVolumesGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<AttachedVolumes>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2706,7 +2761,7 @@ public class ServerApi {
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
      * @param offset the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) (optional, default to 0)
      * @param limit the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) (optional, default to 1000)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2716,11 +2771,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersVolumesGetAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<AttachedVolumes> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersVolumesGetAsync(String datacenterId, String serverId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<AttachedVolumes> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersVolumesGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersVolumesGetValidateBeforeCall(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<AttachedVolumes>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2731,7 +2786,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2741,7 +2796,7 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersVolumesPostCall(String datacenterId, String serverId, Volume volume, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call datacentersServersVolumesPostCall(String datacenterId, String serverId, Volume volume, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = volume;
 
         // create path and map variables
@@ -2758,7 +2813,6 @@ public class ServerApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2782,11 +2836,11 @@ public class ServerApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersVolumesPostValidateBeforeCall(String datacenterId, String serverId, Volume volume, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback _callback) throws ApiException {
+    private okhttp3.Call datacentersServersVolumesPostValidateBeforeCall(String datacenterId, String serverId, Volume volume, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2804,7 +2858,7 @@ public class ServerApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersVolumesPostCall(datacenterId, serverId, volume, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersVolumesPostCall(datacenterId, serverId, volume, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2818,6 +2872,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return Volume
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2841,6 +2896,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+     * 
      * @return ApiResponse&lt;Volume&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2865,7 +2921,7 @@ public class ServerApi {
      * @param pretty Controls whether response is pretty-printed (with indentation and new lines) (optional, default to true)
      * @param depth Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2875,11 +2931,11 @@ public class ServerApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient permissions), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersVolumesPostAsync(String datacenterId, String serverId, Volume volume, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Volume> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersVolumesPostAsync(String datacenterId, String serverId, Volume volume, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Volume> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersVolumesPostValidateBeforeCall(datacenterId, serverId, volume, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersVolumesPostValidateBeforeCall(datacenterId, serverId, volume, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Volume>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
 }

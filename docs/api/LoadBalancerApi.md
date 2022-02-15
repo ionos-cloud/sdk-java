@@ -147,7 +147,7 @@ public class Example {
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### HTTP request headers
 
@@ -218,7 +218,7 @@ public class Example {
 
 ### Return type
 
-[**BalancedNics**](BalancedNics.md)
+[**BalancedNics**](../models/BalancedNics.md)
 
 ### HTTP request headers
 
@@ -287,7 +287,7 @@ public class Example {
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### HTTP request headers
 
@@ -421,7 +421,7 @@ public class Example {
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](../models/Loadbalancer.md)
 
 ### HTTP request headers
 
@@ -490,7 +490,7 @@ public class Example {
 
 ### Return type
 
-[**Loadbalancers**](Loadbalancers.md)
+[**Loadbalancers**](../models/Loadbalancers.md)
 
 ### HTTP request headers
 
@@ -559,7 +559,7 @@ public class Example {
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](../models/Loadbalancer.md)
 
 ### HTTP request headers
 
@@ -626,7 +626,7 @@ public class Example {
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](../models/Loadbalancer.md)
 
 ### HTTP request headers
 
@@ -695,7 +695,7 @@ public class Example {
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](../models/Loadbalancer.md)
 
 ### HTTP request headers
 

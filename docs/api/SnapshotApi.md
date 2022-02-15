@@ -134,7 +134,7 @@ public class Example {
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](../models/Snapshot.md)
 
 ### HTTP request headers
 
@@ -197,7 +197,7 @@ public class Example {
 
 ### Return type
 
-[**Snapshots**](Snapshots.md)
+[**Snapshots**](../models/Snapshots.md)
 
 ### HTTP request headers
 
@@ -264,7 +264,7 @@ public class Example {
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](../models/Snapshot.md)
 
 ### HTTP request headers
 
@@ -331,7 +331,7 @@ public class Example {
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](../models/Snapshot.md)
 
 ### HTTP request headers
 

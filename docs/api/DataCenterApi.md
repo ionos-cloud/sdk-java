@@ -135,7 +135,7 @@ public class Example {
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](../models/Datacenter.md)
 
 ### HTTP request headers
 
@@ -202,7 +202,7 @@ public class Example {
 
 ### Return type
 
-[**Datacenters**](Datacenters.md)
+[**Datacenters**](../models/Datacenters.md)
 
 ### HTTP request headers
 
@@ -269,7 +269,7 @@ public class Example {
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](../models/Datacenter.md)
 
 ### HTTP request headers
 
@@ -334,7 +334,7 @@ public class Example {
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](../models/Datacenter.md)
 
 ### HTTP request headers
 
@@ -401,7 +401,7 @@ public class Example {
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](../models/Datacenter.md)
 
 ### HTTP request headers
 

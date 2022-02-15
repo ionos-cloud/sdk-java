@@ -134,7 +134,7 @@ public class Example {
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**PrivateCrossConnect**](../models/PrivateCrossConnect.md)
 
 ### HTTP request headers
 
@@ -197,7 +197,7 @@ public class Example {
 
 ### Return type
 
-[**PrivateCrossConnects**](PrivateCrossConnects.md)
+[**PrivateCrossConnects**](../models/PrivateCrossConnects.md)
 
 ### HTTP request headers
 
@@ -264,7 +264,7 @@ public class Example {
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**PrivateCrossConnect**](../models/PrivateCrossConnect.md)
 
 ### HTTP request headers
 
@@ -329,7 +329,7 @@ public class Example {
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**PrivateCrossConnect**](../models/PrivateCrossConnect.md)
 
 ### HTTP request headers
 

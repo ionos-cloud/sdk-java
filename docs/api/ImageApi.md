@@ -134,7 +134,7 @@ public class Example {
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](../models/Image.md)
 
 ### HTTP request headers
 
@@ -197,7 +197,7 @@ public class Example {
 
 ### Return type
 
-[**Images**](Images.md)
+[**Images**](../models/Images.md)
 
 ### HTTP request headers
 
@@ -264,7 +264,7 @@ public class Example {
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](../models/Image.md)
 
 ### HTTP request headers
 
@@ -331,7 +331,7 @@ public class Example {
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](../models/Image.md)
 
 ### HTTP request headers
 

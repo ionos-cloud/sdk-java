@@ -67,7 +67,7 @@ public class Example {
 
 ### Return type
 
-[**Request**](Request.md)
+[**Request**](../models/Request.md)
 
 ### HTTP request headers
 
@@ -156,7 +156,7 @@ public class Example {
 
 ### Return type
 
-[**Requests**](Requests.md)
+[**Requests**](../models/Requests.md)
 
 ### HTTP request headers
 
@@ -221,7 +221,7 @@ public class Example {
 
 ### Return type
 
-[**RequestStatus**](RequestStatus.md)
+[**RequestStatus**](../models/RequestStatus.md)
 
 ### HTTP request headers
 

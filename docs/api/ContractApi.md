@@ -63,7 +63,7 @@ public class Example {
 
 ### Return type
 
-[**Contract**](Contract.md)
+[**Contract**](../models/Contract.md)
 
 ### HTTP request headers
 

@@ -159,7 +159,7 @@ public class Example {
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](../models/Group.md)
 
 ### HTTP request headers
 
@@ -222,7 +222,7 @@ public class Example {
 
 ### Return type
 
-[**Groups**](Groups.md)
+[**Groups**](../models/Groups.md)
 
 ### HTTP request headers
 
@@ -287,7 +287,7 @@ public class Example {
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](../models/Group.md)
 
 ### HTTP request headers
 
@@ -354,7 +354,7 @@ public class Example {
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](../models/Group.md)
 
 ### HTTP request headers
 
@@ -417,7 +417,7 @@ public class Example {
 
 ### Return type
 
-[**ResourceGroups**](ResourceGroups.md)
+[**ResourceGroups**](../models/ResourceGroups.md)
 
 ### HTTP request headers
 
@@ -551,7 +551,7 @@ public class Example {
 
 ### Return type
 
-[**GroupShare**](GroupShare.md)
+[**GroupShare**](../models/GroupShare.md)
 
 ### HTTP request headers
 
@@ -616,7 +616,7 @@ public class Example {
 
 ### Return type
 
-[**GroupShares**](GroupShares.md)
+[**GroupShares**](../models/GroupShares.md)
 
 ### HTTP request headers
 
@@ -685,7 +685,7 @@ public class Example {
 
 ### Return type
 
-[**GroupShare**](GroupShare.md)
+[**GroupShare**](../models/GroupShare.md)
 
 ### HTTP request headers
 
@@ -754,7 +754,7 @@ public class Example {
 
 ### Return type
 
-[**GroupShare**](GroupShare.md)
+[**GroupShare**](../models/GroupShare.md)
 
 ### HTTP request headers
 
@@ -886,7 +886,7 @@ public class Example {
 
 ### Return type
 
-[**GroupMembers**](GroupMembers.md)
+[**GroupMembers**](../models/GroupMembers.md)
 
 ### HTTP request headers
 
@@ -953,7 +953,7 @@ public class Example {
 
 ### Return type
 
-[**User**](User.md)
+[**User**](../models/User.md)
 
 ### HTTP request headers
 
@@ -1018,7 +1018,7 @@ public class Example {
 
 ### Return type
 
-[**Resources**](Resources.md)
+[**Resources**](../models/Resources.md)
 
 ### HTTP request headers
 
@@ -1085,7 +1085,7 @@ public class Example {
 
 ### Return type
 
-[**Resource**](Resource.md)
+[**Resource**](../models/Resource.md)
 
 ### HTTP request headers
 
@@ -1148,7 +1148,7 @@ public class Example {
 
 ### Return type
 
-[**Resources**](Resources.md)
+[**Resources**](../models/Resources.md)
 
 ### HTTP request headers
 
@@ -1278,7 +1278,7 @@ public class Example {
 
 ### Return type
 
-[**User**](User.md)
+[**User**](../models/User.md)
 
 ### HTTP request headers
 
@@ -1345,7 +1345,7 @@ public class Example {
 
 ### Return type
 
-[**Users**](Users.md)
+[**Users**](../models/Users.md)
 
 ### HTTP request headers
 
@@ -1410,7 +1410,7 @@ public class Example {
 
 ### Return type
 
-[**ResourceGroups**](ResourceGroups.md)
+[**ResourceGroups**](../models/ResourceGroups.md)
 
 ### HTTP request headers
 
@@ -1475,7 +1475,7 @@ public class Example {
 
 ### Return type
 
-[**ResourcesUsers**](ResourcesUsers.md)
+[**ResourcesUsers**](../models/ResourcesUsers.md)
 
 ### HTTP request headers
 
@@ -1540,7 +1540,7 @@ public class Example {
 
 ### Return type
 
-[**User**](User.md)
+[**User**](../models/User.md)
 
 ### HTTP request headers
 
@@ -1607,7 +1607,7 @@ public class Example {
 
 ### Return type
 
-[**User**](User.md)
+[**User**](../models/User.md)
 
 ### HTTP request headers
 
@@ -1741,7 +1741,7 @@ public class Example {
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### HTTP request headers
 
@@ -1806,7 +1806,7 @@ public class Example {
 
 ### Return type
 
-[**S3Keys**](S3Keys.md)
+[**S3Keys**](../models/S3Keys.md)
 
 ### HTTP request headers
 
@@ -1871,7 +1871,7 @@ public class Example {
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### HTTP request headers
 
@@ -1940,7 +1940,7 @@ public class Example {
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### HTTP request headers
 
@@ -2003,7 +2003,7 @@ public class Example {
 
 ### Return type
 
-[**S3ObjectStorageSSO**](S3ObjectStorageSSO.md)
+[**S3ObjectStorageSSO**](../models/S3ObjectStorageSSO.md)
 
 ### HTTP request headers
 

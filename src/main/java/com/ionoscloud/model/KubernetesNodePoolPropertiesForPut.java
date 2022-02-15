@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * KubernetesNodePoolPropertiesForPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-11-04T10:08:17.736Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-15T12:02:49.770Z[Etc/UTC]")
 
 public class KubernetesNodePoolPropertiesForPut {
   
@@ -94,7 +94,8 @@ public class KubernetesNodePoolPropertiesForPut {
    * A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
    * @return name
   **/
-  @ApiModelProperty(example = "k8s-node-pool", required = true, value = "A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "k8s-node-pool", value = "A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.")
 
   public String getName() {
     return name;

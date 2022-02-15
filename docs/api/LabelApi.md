@@ -160,7 +160,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -229,7 +229,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### HTTP request headers
 
@@ -296,7 +296,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -365,7 +365,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -503,7 +503,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -574,7 +574,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### HTTP request headers
 
@@ -643,7 +643,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -714,7 +714,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -852,7 +852,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -923,7 +923,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### HTTP request headers
 
@@ -992,7 +992,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -1063,7 +1063,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -1197,7 +1197,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -1262,7 +1262,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### HTTP request headers
 
@@ -1329,7 +1329,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -1398,7 +1398,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -1463,7 +1463,7 @@ public class Example {
 
 ### Return type
 
-[**Label**](Label.md)
+[**Label**](../models/Label.md)
 
 ### HTTP request headers
 
@@ -1526,7 +1526,7 @@ public class Example {
 
 ### Return type
 
-[**Labels**](Labels.md)
+[**Labels**](../models/Labels.md)
 
 ### HTTP request headers
 
@@ -1660,7 +1660,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -1725,7 +1725,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### HTTP request headers
 
@@ -1792,7 +1792,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
@@ -1861,7 +1861,7 @@ public class Example {
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### HTTP request headers
 
