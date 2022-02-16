@@ -60,7 +60,7 @@ public class TemplatesApi {
      * Build call for templatesFindById
      * @param templateId The unique Template ID. (required)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -70,7 +70,7 @@ public class TemplatesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call templatesFindByIdCall(String templateId, Integer depth, final ApiCallback<Template> _callback) throws ApiException {
+    public okhttp3.Call templatesFindByIdCall(String templateId, Integer depth, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -102,11 +102,11 @@ public class TemplatesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call templatesFindByIdValidateBeforeCall(String templateId, Integer depth, final ApiCallback<Template> _callback) throws ApiException {
+    private okhttp3.Call templatesFindByIdValidateBeforeCall(String templateId, Integer depth, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'templateId' is set
         if (templateId == null) {
@@ -114,7 +114,7 @@ public class TemplatesApi {
         }
         
 
-        okhttp3.Call localVarCall = templatesFindByIdCall(templateId, depth, _callback);
+        okhttp3.Call localVarCall = templatesFindByIdCall(templateId, depth, callback);
         return localVarCall;
 
     }
@@ -124,6 +124,7 @@ public class TemplatesApi {
      * Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.
      * @param templateId The unique Template ID. (required)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return Template
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -143,6 +144,7 @@ public class TemplatesApi {
      * Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.
      * @param templateId The unique Template ID. (required)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return ApiResponse&lt;Template&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -163,7 +165,7 @@ public class TemplatesApi {
      * Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.
      * @param templateId The unique Template ID. (required)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -173,17 +175,17 @@ public class TemplatesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call templatesFindByIdAsync(String templateId, Integer depth, final ApiCallback<Template> _callback) throws ApiException {
+    public okhttp3.Call templatesFindByIdAsync(String templateId, Integer depth, final ApiCallback<Template> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = templatesFindByIdValidateBeforeCall(templateId, depth, _callback);
+        okhttp3.Call localVarCall = templatesFindByIdValidateBeforeCall(templateId, depth, callback);
         Type localVarReturnType = new TypeToken<Template>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
      * Build call for templatesGet
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -193,7 +195,7 @@ public class TemplatesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call templatesGetCall(Integer depth, final ApiCallback<Templates> _callback) throws ApiException {
+    public okhttp3.Call templatesGetCall(Integer depth,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -207,6 +209,17 @@ public class TemplatesApi {
 
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         final String[] localVarAccepts = {
@@ -224,14 +237,14 @@ public class TemplatesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call templatesGetValidateBeforeCall(Integer depth, final ApiCallback<Templates> _callback) throws ApiException {
+    private okhttp3.Call templatesGetValidateBeforeCall(Integer depth,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = templatesGetCall(depth, _callback);
+        okhttp3.Call localVarCall = templatesGetCall(depth,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -240,6 +253,9 @@ public class TemplatesApi {
      * List Cubes Templates
      * List all of the available Cubes Templates.  This operation is only supported for the Cubes.
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return Templates
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -249,8 +265,8 @@ public class TemplatesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public Templates templatesGet(Integer depth) throws ApiException {
-        ApiResponse<Templates> localVarResp = templatesGetWithHttpInfo(depth);
+    public Templates templatesGet(Integer depth,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<Templates> localVarResp = templatesGetWithHttpInfo(depth, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -258,6 +274,9 @@ public class TemplatesApi {
      * List Cubes Templates
      * List all of the available Cubes Templates.  This operation is only supported for the Cubes.
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;Templates&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -267,8 +286,8 @@ public class TemplatesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Templates> templatesGetWithHttpInfo(Integer depth) throws ApiException {
-        okhttp3.Call localVarCall = templatesGetValidateBeforeCall(depth, null);
+    public ApiResponse<Templates> templatesGetWithHttpInfo(Integer depth, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = templatesGetValidateBeforeCall(depth,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<Templates>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -277,7 +296,7 @@ public class TemplatesApi {
      * List Cubes Templates (asynchronously)
      * List all of the available Cubes Templates.  This operation is only supported for the Cubes.
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -287,11 +306,11 @@ public class TemplatesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call templatesGetAsync(Integer depth, final ApiCallback<Templates> _callback) throws ApiException {
+    public okhttp3.Call templatesGetAsync(Integer depth, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<Templates> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = templatesGetValidateBeforeCall(depth, _callback);
+        okhttp3.Call localVarCall = templatesGetValidateBeforeCall(depth,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<Templates>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
 }

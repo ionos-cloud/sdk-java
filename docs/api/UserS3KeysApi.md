@@ -45,7 +45,7 @@ public class Example {
     String keyId = "keyId_example"; // String | The unique ID of the S3 key.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.umUsersS3keysDelete(userId, keyId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
@@ -67,7 +67,7 @@ public class Example {
 | **keyId** | **String**| The unique ID of the S3 key. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
@@ -111,7 +111,7 @@ public class Example {
     String keyId = "keyId_example"; // String | The unique ID of the S3 key.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       S3Key result = apiInstance.umUsersS3keysFindByKeyId(userId, keyId, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -134,11 +134,11 @@ public class Example {
 | **keyId** | **String**| The unique ID of the S3 key. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### HTTP request headers
 
@@ -177,7 +177,7 @@ public class Example {
     String userId = "userId_example"; // String | The unique ID of the user.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       S3Keys result = apiInstance.umUsersS3keysGet(userId, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -199,11 +199,11 @@ public class Example {
 | **userId** | **String**| The unique ID of the user. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**S3Keys**](S3Keys.md)
+[**S3Keys**](../models/S3Keys.md)
 
 ### HTTP request headers
 
@@ -242,7 +242,7 @@ public class Example {
     String userId = "userId_example"; // String | The unique ID of the user.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       S3Key result = apiInstance.umUsersS3keysPost(userId, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -264,11 +264,11 @@ public class Example {
 | **userId** | **String**| The unique ID of the user. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### HTTP request headers
 
@@ -309,7 +309,7 @@ public class Example {
     S3Key s3Key = new S3Key(); // S3Key | The modified S3 key.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       S3Key result = apiInstance.umUsersS3keysPut(userId, keyId, s3Key, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -333,11 +333,11 @@ public class Example {
 | **s3Key** |  [**S3Key**](S3Key.md)| The modified S3 key. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### HTTP request headers
 
@@ -375,7 +375,7 @@ public class Example {
     UserS3KeysApi apiInstance = new UserS3KeysApi(defaultClient);
     String userId = "userId_example"; // String | The unique ID of the user.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       S3ObjectStorageSSO result = apiInstance.umUsersS3ssourlGet(userId, pretty, xContractNumber);
       System.out.println(result);
@@ -396,11 +396,11 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **userId** | **String**| The unique ID of the user. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**S3ObjectStorageSSO**](S3ObjectStorageSSO.md)
+[**S3ObjectStorageSSO**](../models/S3ObjectStorageSSO.md)
 
 ### HTTP request headers
 

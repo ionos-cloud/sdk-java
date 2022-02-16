@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * NetworkLoadBalancerForwardingRuleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-16T10:06:24.683Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRuleProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -39,7 +39,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   private String name;
 
   /**
-   * Algorithm for the balancing.
+   * Balancing algorithm
    */
   @JsonAdapter(AlgorithmEnum.Adapter.class)
   public enum AlgorithmEnum {
@@ -95,7 +95,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   private AlgorithmEnum algorithm;
 
   /**
-   * Protocol of the balancing.
+   * Balancing protocol
    */
   @JsonAdapter(ProtocolEnum.Adapter.class)
   public enum ProtocolEnum {
@@ -192,10 +192,10 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   }
 
    /**
-   * Algorithm for the balancing.
+   * Balancing algorithm
    * @return algorithm
   **/
-  @ApiModelProperty(example = "ROUND_ROBIN", required = true, value = "Algorithm for the balancing.")
+  @ApiModelProperty(example = "ROUND_ROBIN", required = true, value = "Balancing algorithm")
 
   public AlgorithmEnum getAlgorithm() {
     return algorithm;
@@ -214,10 +214,10 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   }
 
    /**
-   * Protocol of the balancing.
+   * Balancing protocol
    * @return protocol
   **/
-  @ApiModelProperty(example = "HTTP", required = true, value = "Protocol of the balancing.")
+  @ApiModelProperty(example = "HTTP", required = true, value = "Balancing protocol")
 
   public ProtocolEnum getProtocol() {
     return protocol;
@@ -236,10 +236,10 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   }
 
    /**
-   * Listening IP. (inbound)
+   * Listening (inbound) IP
    * @return listenerIp
   **/
-  @ApiModelProperty(example = "81.173.1.2", required = true, value = "Listening IP. (inbound)")
+  @ApiModelProperty(example = "81.173.1.2", required = true, value = "Listening (inbound) IP")
 
   public String getListenerIp() {
     return listenerIp;
@@ -258,10 +258,10 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   }
 
    /**
-   * Listening port number. (inbound) (range: 1 to 65535)
+   * Listening (inbound) port number; valid range is 1 to 65535.
    * @return listenerPort
   **/
-  @ApiModelProperty(example = "8080", required = true, value = "Listening port number. (inbound) (range: 1 to 65535)")
+  @ApiModelProperty(example = "8080", required = true, value = "Listening (inbound) port number; valid range is 1 to 65535.")
 
   public Integer getListenerPort() {
     return listenerPort;
@@ -308,10 +308,10 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   }
 
    /**
-   * Array of items in that collection.
+   * Array of items in the collection.
    * @return targets
   **/
-  @ApiModelProperty(required = true, value = "Array of items in that collection.")
+  @ApiModelProperty(required = true, value = "Array of items in the collection.")
 
   public List<NetworkLoadBalancerForwardingRuleTarget> getTargets() {
     return targets;

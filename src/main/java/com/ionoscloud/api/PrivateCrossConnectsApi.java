@@ -62,8 +62,8 @@ public class PrivateCrossConnectsApi {
      * @param pccId The unique ID of the private Cross-Connect. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -73,7 +73,7 @@ public class PrivateCrossConnectsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pccsDeleteCall(String pccId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call pccsDeleteCall(String pccId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -89,7 +89,6 @@ public class PrivateCrossConnectsApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -113,11 +112,11 @@ public class PrivateCrossConnectsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call pccsDeleteValidateBeforeCall(String pccId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call pccsDeleteValidateBeforeCall(String pccId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'pccId' is set
         if (pccId == null) {
@@ -125,7 +124,7 @@ public class PrivateCrossConnectsApi {
         }
         
 
-        okhttp3.Call localVarCall = pccsDeleteCall(pccId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = pccsDeleteCall(pccId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -136,7 +135,7 @@ public class PrivateCrossConnectsApi {
      * @param pccId The unique ID of the private Cross-Connect. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -155,7 +154,8 @@ public class PrivateCrossConnectsApi {
      * @param pccId The unique ID of the private Cross-Connect. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -176,8 +176,8 @@ public class PrivateCrossConnectsApi {
      * @param pccId The unique ID of the private Cross-Connect. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -187,10 +187,10 @@ public class PrivateCrossConnectsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pccsDeleteAsync(String pccId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call pccsDeleteAsync(String pccId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = pccsDeleteValidateBeforeCall(pccId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = pccsDeleteValidateBeforeCall(pccId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -198,8 +198,8 @@ public class PrivateCrossConnectsApi {
      * @param pccId The unique ID of the private Cross-Connect. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -209,7 +209,7 @@ public class PrivateCrossConnectsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pccsFindByIdCall(String pccId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnect> _callback) throws ApiException {
+    public okhttp3.Call pccsFindByIdCall(String pccId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -225,7 +225,6 @@ public class PrivateCrossConnectsApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -249,11 +248,11 @@ public class PrivateCrossConnectsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call pccsFindByIdValidateBeforeCall(String pccId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnect> _callback) throws ApiException {
+    private okhttp3.Call pccsFindByIdValidateBeforeCall(String pccId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'pccId' is set
         if (pccId == null) {
@@ -261,7 +260,7 @@ public class PrivateCrossConnectsApi {
         }
         
 
-        okhttp3.Call localVarCall = pccsFindByIdCall(pccId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = pccsFindByIdCall(pccId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -272,7 +271,8 @@ public class PrivateCrossConnectsApi {
      * @param pccId The unique ID of the private Cross-Connect. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return PrivateCrossConnect
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -293,7 +293,8 @@ public class PrivateCrossConnectsApi {
      * @param pccId The unique ID of the private Cross-Connect. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;PrivateCrossConnect&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -315,8 +316,8 @@ public class PrivateCrossConnectsApi {
      * @param pccId The unique ID of the private Cross-Connect. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -326,19 +327,19 @@ public class PrivateCrossConnectsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pccsFindByIdAsync(String pccId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnect> _callback) throws ApiException {
+    public okhttp3.Call pccsFindByIdAsync(String pccId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnect> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = pccsFindByIdValidateBeforeCall(pccId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = pccsFindByIdValidateBeforeCall(pccId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<PrivateCrossConnect>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
      * Build call for pccsGet
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -348,7 +349,7 @@ public class PrivateCrossConnectsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pccsGetCall(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnects> _callback) throws ApiException {
+    public okhttp3.Call pccsGetCall(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -363,9 +364,19 @@ public class PrivateCrossConnectsApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -387,14 +398,14 @@ public class PrivateCrossConnectsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call pccsGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnects> _callback) throws ApiException {
+    private okhttp3.Call pccsGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = pccsGetCall(pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = pccsGetCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -404,7 +415,10 @@ public class PrivateCrossConnectsApi {
      * List all private Cross-Connects for your account.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return PrivateCrossConnects
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -414,8 +428,8 @@ public class PrivateCrossConnectsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public PrivateCrossConnects pccsGet(Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<PrivateCrossConnects> localVarResp = pccsGetWithHttpInfo(pretty, depth, xContractNumber);
+    public PrivateCrossConnects pccsGet(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<PrivateCrossConnects> localVarResp = pccsGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -424,7 +438,10 @@ public class PrivateCrossConnectsApi {
      * List all private Cross-Connects for your account.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;PrivateCrossConnects&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -434,8 +451,8 @@ public class PrivateCrossConnectsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<PrivateCrossConnects> pccsGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = pccsGetValidateBeforeCall(pretty, depth, xContractNumber, null);
+    public ApiResponse<PrivateCrossConnects> pccsGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = pccsGetValidateBeforeCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<PrivateCrossConnects>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -445,8 +462,8 @@ public class PrivateCrossConnectsApi {
      * List all private Cross-Connects for your account.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -456,11 +473,11 @@ public class PrivateCrossConnectsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pccsGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnects> _callback) throws ApiException {
+    public okhttp3.Call pccsGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<PrivateCrossConnects> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = pccsGetValidateBeforeCall(pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = pccsGetValidateBeforeCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<PrivateCrossConnects>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -469,8 +486,8 @@ public class PrivateCrossConnectsApi {
      * @param pcc The properties of the private Cross-Connect to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -480,7 +497,7 @@ public class PrivateCrossConnectsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pccsPatchCall(String pccId, PrivateCrossConnectProperties pcc, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnect> _callback) throws ApiException {
+    public okhttp3.Call pccsPatchCall(String pccId, PrivateCrossConnectProperties pcc, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = pcc;
 
         // create path and map variables
@@ -496,7 +513,6 @@ public class PrivateCrossConnectsApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -520,11 +536,11 @@ public class PrivateCrossConnectsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call pccsPatchValidateBeforeCall(String pccId, PrivateCrossConnectProperties pcc, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnect> _callback) throws ApiException {
+    private okhttp3.Call pccsPatchValidateBeforeCall(String pccId, PrivateCrossConnectProperties pcc, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'pccId' is set
         if (pccId == null) {
@@ -537,7 +553,7 @@ public class PrivateCrossConnectsApi {
         }
         
 
-        okhttp3.Call localVarCall = pccsPatchCall(pccId, pcc, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = pccsPatchCall(pccId, pcc, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -549,7 +565,8 @@ public class PrivateCrossConnectsApi {
      * @param pcc The properties of the private Cross-Connect to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return PrivateCrossConnect
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -571,7 +588,8 @@ public class PrivateCrossConnectsApi {
      * @param pcc The properties of the private Cross-Connect to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;PrivateCrossConnect&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -594,8 +612,8 @@ public class PrivateCrossConnectsApi {
      * @param pcc The properties of the private Cross-Connect to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -605,11 +623,11 @@ public class PrivateCrossConnectsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pccsPatchAsync(String pccId, PrivateCrossConnectProperties pcc, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnect> _callback) throws ApiException {
+    public okhttp3.Call pccsPatchAsync(String pccId, PrivateCrossConnectProperties pcc, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnect> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = pccsPatchValidateBeforeCall(pccId, pcc, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = pccsPatchValidateBeforeCall(pccId, pcc, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<PrivateCrossConnect>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -617,8 +635,8 @@ public class PrivateCrossConnectsApi {
      * @param pcc The private Cross-Connect to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -628,7 +646,7 @@ public class PrivateCrossConnectsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pccsPostCall(PrivateCrossConnect pcc, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnect> _callback) throws ApiException {
+    public okhttp3.Call pccsPostCall(PrivateCrossConnect pcc, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = pcc;
 
         // create path and map variables
@@ -643,7 +661,6 @@ public class PrivateCrossConnectsApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -667,11 +684,11 @@ public class PrivateCrossConnectsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call pccsPostValidateBeforeCall(PrivateCrossConnect pcc, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnect> _callback) throws ApiException {
+    private okhttp3.Call pccsPostValidateBeforeCall(PrivateCrossConnect pcc, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'pcc' is set
         if (pcc == null) {
@@ -679,7 +696,7 @@ public class PrivateCrossConnectsApi {
         }
         
 
-        okhttp3.Call localVarCall = pccsPostCall(pcc, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = pccsPostCall(pcc, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -690,7 +707,8 @@ public class PrivateCrossConnectsApi {
      * @param pcc The private Cross-Connect to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return PrivateCrossConnect
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -711,7 +729,8 @@ public class PrivateCrossConnectsApi {
      * @param pcc The private Cross-Connect to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;PrivateCrossConnect&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -733,8 +752,8 @@ public class PrivateCrossConnectsApi {
      * @param pcc The private Cross-Connect to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -744,11 +763,11 @@ public class PrivateCrossConnectsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call pccsPostAsync(PrivateCrossConnect pcc, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnect> _callback) throws ApiException {
+    public okhttp3.Call pccsPostAsync(PrivateCrossConnect pcc, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<PrivateCrossConnect> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = pccsPostValidateBeforeCall(pcc, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = pccsPostValidateBeforeCall(pcc, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<PrivateCrossConnect>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
 }

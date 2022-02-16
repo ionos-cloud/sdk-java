@@ -43,7 +43,7 @@ public class Example {
     String snapshotId = "snapshotId_example"; // String | The unique ID of the snapshot.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.snapshotsDelete(snapshotId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
@@ -64,7 +64,7 @@ public class Example {
 | **snapshotId** | **String**| The unique ID of the snapshot. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
@@ -107,7 +107,7 @@ public class Example {
     String snapshotId = "snapshotId_example"; // String | The unique ID of the snapshot.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       Snapshot result = apiInstance.snapshotsFindById(snapshotId, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -129,11 +129,11 @@ public class Example {
 | **snapshotId** | **String**| The unique ID of the snapshot. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](../models/Snapshot.md)
 
 ### HTTP request headers
 
@@ -171,7 +171,7 @@ public class Example {
     SnapshotsApi apiInstance = new SnapshotsApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       Snapshots result = apiInstance.snapshotsGet(pretty, depth, xContractNumber);
       System.out.println(result);
@@ -192,11 +192,11 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**Snapshots**](Snapshots.md)
+[**Snapshots**](../models/Snapshots.md)
 
 ### HTTP request headers
 
@@ -236,7 +236,7 @@ public class Example {
     SnapshotProperties snapshot = new SnapshotProperties(); // SnapshotProperties | The properties of the snapshot to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       Snapshot result = apiInstance.snapshotsPatch(snapshotId, snapshot, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -259,11 +259,11 @@ public class Example {
 | **snapshot** |  [**SnapshotProperties**](SnapshotProperties.md)| The properties of the snapshot to be updated. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](../models/Snapshot.md)
 
 ### HTTP request headers
 
@@ -303,7 +303,7 @@ public class Example {
     Snapshot snapshot = new Snapshot(); // Snapshot | The modified snapshot
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       Snapshot result = apiInstance.snapshotsPut(snapshotId, snapshot, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -326,11 +326,11 @@ public class Example {
 | **snapshot** |  [**Snapshot**](Snapshot.md)| The modified snapshot |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](../models/Snapshot.md)
 
 ### HTTP request headers
 

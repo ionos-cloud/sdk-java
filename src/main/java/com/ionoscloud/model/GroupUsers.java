@@ -33,7 +33,7 @@ import java.util.List;
  * Collection of the groups the user is a member of.
  */
 @ApiModel(description = "Collection of the groups the user is a member of.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-16T10:06:24.683Z[Etc/UTC]")
 
 public class GroupUsers {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -111,11 +111,11 @@ public class GroupUsers {
 
 
    /**
-   * Array of items in that collection.
+   * Array of items in the collection.
    * @return items
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of items in that collection.")
+  @ApiModelProperty(value = "Array of items in the collection.")
 
   public List<Group> getItems() {
     return items;

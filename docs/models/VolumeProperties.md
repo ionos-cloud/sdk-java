@@ -14,7 +14,7 @@
 | **imagePassword** | **String** | Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9. |  [optional] |
 | **imageAlias** | **String** |  |  [optional] |
 | **sshKeys** | **List&lt;String&gt;** | Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation. |  [optional] |
-| **bus** | [**BusEnum**](#BusEnum) | The bus type of the volume. Default is VIRTIO |  [optional] |
+| **bus** | [**BusEnum**](#BusEnum) | The bus type for this volume; default is VIRTIO. |  [optional] |
 | **licenceType** | [**LicenceTypeEnum**](#LicenceTypeEnum) | OS type for this volume. |  [optional] [readonly] |
 | **cpuHotPlug** | **Boolean** | Hot-plug capable CPU (no reboot required). |  [optional] |
 | **ramHotPlug** | **Boolean** | Hot-plug capable RAM (no reboot required). |  [optional] |
@@ -26,6 +26,7 @@
 | **pciSlot** | **Integer** | The PCI slot number of the storage volume. Null for volumes, not mounted to a VM. |  [optional] [readonly] |
 | **backupunitId** | **String** | The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; in conjunction with this property. |  [optional] |
 | **userData** | **String** | The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; that has cloud-init compatibility in conjunction with this property. |  [optional] |
+| **bootServer** | **String** | The UUID of the attached server. |  [optional] [readonly] |
 
 
 
@@ -70,6 +71,7 @@
 | UNKNOWN | &quot;UNKNOWN&quot; |
 | WINDOWS | &quot;WINDOWS&quot; |
 | WINDOWS2016 | &quot;WINDOWS2016&quot; |
+| WINDOWS2022 | &quot;WINDOWS2022&quot; |
 | LINUX | &quot;LINUX&quot; |
 | OTHER | &quot;OTHER&quot; |
 

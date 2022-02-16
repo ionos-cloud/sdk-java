@@ -69,8 +69,8 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -80,7 +80,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sDeleteCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call k8sDeleteCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -96,7 +96,6 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -120,11 +119,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sDeleteValidateBeforeCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call k8sDeleteValidateBeforeCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -132,7 +131,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sDeleteCall(k8sClusterId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sDeleteCall(k8sClusterId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -143,7 +142,7 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -162,7 +161,8 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -183,8 +183,8 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -194,10 +194,10 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sDeleteAsync(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call k8sDeleteAsync(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sDeleteValidateBeforeCall(k8sClusterId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = k8sDeleteValidateBeforeCall(k8sClusterId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -205,8 +205,8 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -216,7 +216,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sFindByClusterIdCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> _callback) throws ApiException {
+    public okhttp3.Call k8sFindByClusterIdCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -232,7 +232,6 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -256,11 +255,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sFindByClusterIdValidateBeforeCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> _callback) throws ApiException {
+    private okhttp3.Call k8sFindByClusterIdValidateBeforeCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -268,7 +267,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sFindByClusterIdCall(k8sClusterId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sFindByClusterIdCall(k8sClusterId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -279,7 +278,8 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return KubernetesCluster
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -300,7 +300,8 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;KubernetesCluster&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -322,8 +323,8 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -333,19 +334,19 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sFindByClusterIdAsync(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> _callback) throws ApiException {
+    public okhttp3.Call k8sFindByClusterIdAsync(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sFindByClusterIdValidateBeforeCall(k8sClusterId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sFindByClusterIdValidateBeforeCall(k8sClusterId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<KubernetesCluster>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
      * Build call for k8sGet
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -355,7 +356,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sGetCall(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesClusters> _callback) throws ApiException {
+    public okhttp3.Call k8sGetCall(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -370,9 +371,19 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -394,14 +405,14 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesClusters> _callback) throws ApiException {
+    private okhttp3.Call k8sGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = k8sGetCall(pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sGetCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -411,7 +422,10 @@ public class KubernetesApi {
      * List all available Kubernetes clusters.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return KubernetesClusters
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -421,8 +435,8 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public KubernetesClusters k8sGet(Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<KubernetesClusters> localVarResp = k8sGetWithHttpInfo(pretty, depth, xContractNumber);
+    public KubernetesClusters k8sGet(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<KubernetesClusters> localVarResp = k8sGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -431,7 +445,10 @@ public class KubernetesApi {
      * List all available Kubernetes clusters.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;KubernetesClusters&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -441,8 +458,8 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<KubernetesClusters> k8sGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = k8sGetValidateBeforeCall(pretty, depth, xContractNumber, null);
+    public ApiResponse<KubernetesClusters> k8sGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = k8sGetValidateBeforeCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<KubernetesClusters>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -452,8 +469,8 @@ public class KubernetesApi {
      * List all available Kubernetes clusters.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -463,11 +480,11 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesClusters> _callback) throws ApiException {
+    public okhttp3.Call k8sGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<KubernetesClusters> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sGetValidateBeforeCall(pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sGetValidateBeforeCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<KubernetesClusters>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -475,8 +492,8 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -486,7 +503,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sKubeconfigGetCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call k8sKubeconfigGetCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -502,9 +519,19 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -526,11 +553,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sKubeconfigGetValidateBeforeCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<String> _callback) throws ApiException {
+    private okhttp3.Call k8sKubeconfigGetValidateBeforeCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -538,7 +565,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sKubeconfigGetCall(k8sClusterId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sKubeconfigGetCall(k8sClusterId, pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -549,7 +576,10 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -559,8 +589,8 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public String k8sKubeconfigGet(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<String> localVarResp = k8sKubeconfigGetWithHttpInfo(k8sClusterId, pretty, depth, xContractNumber);
+    public String k8sKubeconfigGet(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<String> localVarResp = k8sKubeconfigGetWithHttpInfo(k8sClusterId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -570,7 +600,10 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -580,8 +613,8 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> k8sKubeconfigGetWithHttpInfo(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = k8sKubeconfigGetValidateBeforeCall(k8sClusterId, pretty, depth, xContractNumber, null);
+    public ApiResponse<String> k8sKubeconfigGetWithHttpInfo(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = k8sKubeconfigGetValidateBeforeCall(k8sClusterId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -592,8 +625,8 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -603,11 +636,11 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sKubeconfigGetAsync(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call k8sKubeconfigGetAsync(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<String> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sKubeconfigGetValidateBeforeCall(k8sClusterId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sKubeconfigGetValidateBeforeCall(k8sClusterId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -616,8 +649,8 @@ public class KubernetesApi {
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -627,7 +660,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsDeleteCall(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsDeleteCall(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -644,7 +677,6 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -668,11 +700,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sNodepoolsDeleteValidateBeforeCall(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call k8sNodepoolsDeleteValidateBeforeCall(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -685,7 +717,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sNodepoolsDeleteCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsDeleteCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -697,7 +729,7 @@ public class KubernetesApi {
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -717,7 +749,8 @@ public class KubernetesApi {
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -739,8 +772,8 @@ public class KubernetesApi {
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -750,10 +783,10 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsDeleteAsync(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsDeleteAsync(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sNodepoolsDeleteValidateBeforeCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsDeleteValidateBeforeCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -762,8 +795,8 @@ public class KubernetesApi {
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -773,7 +806,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsFindByIdCall(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePool> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsFindByIdCall(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -790,7 +823,6 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -814,11 +846,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sNodepoolsFindByIdValidateBeforeCall(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePool> _callback) throws ApiException {
+    private okhttp3.Call k8sNodepoolsFindByIdValidateBeforeCall(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -831,7 +863,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sNodepoolsFindByIdCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsFindByIdCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -843,7 +875,8 @@ public class KubernetesApi {
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return KubernetesNodePool
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -865,7 +898,8 @@ public class KubernetesApi {
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;KubernetesNodePool&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -888,8 +922,8 @@ public class KubernetesApi {
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -899,11 +933,11 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsFindByIdAsync(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePool> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsFindByIdAsync(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePool> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sNodepoolsFindByIdValidateBeforeCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsFindByIdValidateBeforeCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<KubernetesNodePool>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -911,8 +945,8 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -922,7 +956,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsGetCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePools> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsGetCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -938,9 +972,19 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -962,11 +1006,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sNodepoolsGetValidateBeforeCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePools> _callback) throws ApiException {
+    private okhttp3.Call k8sNodepoolsGetValidateBeforeCall(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -974,7 +1018,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sNodepoolsGetCall(k8sClusterId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsGetCall(k8sClusterId, pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -985,7 +1029,10 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return KubernetesNodePools
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -995,8 +1042,8 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public KubernetesNodePools k8sNodepoolsGet(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<KubernetesNodePools> localVarResp = k8sNodepoolsGetWithHttpInfo(k8sClusterId, pretty, depth, xContractNumber);
+    public KubernetesNodePools k8sNodepoolsGet(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<KubernetesNodePools> localVarResp = k8sNodepoolsGetWithHttpInfo(k8sClusterId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -1006,7 +1053,10 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;KubernetesNodePools&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1016,8 +1066,8 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<KubernetesNodePools> k8sNodepoolsGetWithHttpInfo(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = k8sNodepoolsGetValidateBeforeCall(k8sClusterId, pretty, depth, xContractNumber, null);
+    public ApiResponse<KubernetesNodePools> k8sNodepoolsGetWithHttpInfo(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = k8sNodepoolsGetValidateBeforeCall(k8sClusterId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<KubernetesNodePools>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1028,8 +1078,8 @@ public class KubernetesApi {
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1039,11 +1089,11 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsGetAsync(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePools> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsGetAsync(String k8sClusterId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<KubernetesNodePools> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sNodepoolsGetValidateBeforeCall(k8sClusterId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsGetValidateBeforeCall(k8sClusterId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<KubernetesNodePools>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1053,8 +1103,8 @@ public class KubernetesApi {
      * @param nodeId The unique ID of the Kubernetes node. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1064,7 +1114,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsNodesDeleteCall(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsNodesDeleteCall(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1082,7 +1132,6 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1106,11 +1155,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sNodepoolsNodesDeleteValidateBeforeCall(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call k8sNodepoolsNodesDeleteValidateBeforeCall(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -1128,7 +1177,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sNodepoolsNodesDeleteCall(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsNodesDeleteCall(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1141,7 +1190,7 @@ public class KubernetesApi {
      * @param nodeId The unique ID of the Kubernetes node. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1162,7 +1211,8 @@ public class KubernetesApi {
      * @param nodeId The unique ID of the Kubernetes node. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1185,8 +1235,8 @@ public class KubernetesApi {
      * @param nodeId The unique ID of the Kubernetes node. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1196,10 +1246,10 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsNodesDeleteAsync(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsNodesDeleteAsync(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sNodepoolsNodesDeleteValidateBeforeCall(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsNodesDeleteValidateBeforeCall(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -1209,8 +1259,8 @@ public class KubernetesApi {
      * @param nodeId The unique ID of the Kubernetes node. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1220,7 +1270,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsNodesFindByIdCall(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNode> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsNodesFindByIdCall(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1238,7 +1288,6 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1262,11 +1311,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sNodepoolsNodesFindByIdValidateBeforeCall(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNode> _callback) throws ApiException {
+    private okhttp3.Call k8sNodepoolsNodesFindByIdValidateBeforeCall(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -1284,7 +1333,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sNodepoolsNodesFindByIdCall(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsNodesFindByIdCall(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1297,7 +1346,8 @@ public class KubernetesApi {
      * @param nodeId The unique ID of the Kubernetes node. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return KubernetesNode
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1320,7 +1370,8 @@ public class KubernetesApi {
      * @param nodeId The unique ID of the Kubernetes node. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;KubernetesNode&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1344,8 +1395,8 @@ public class KubernetesApi {
      * @param nodeId The unique ID of the Kubernetes node. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1355,11 +1406,11 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsNodesFindByIdAsync(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNode> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsNodesFindByIdAsync(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNode> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sNodepoolsNodesFindByIdValidateBeforeCall(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsNodesFindByIdValidateBeforeCall(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<KubernetesNode>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1368,8 +1419,8 @@ public class KubernetesApi {
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1379,7 +1430,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsNodesGetCall(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodes> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsNodesGetCall(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1396,9 +1447,19 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -1420,11 +1481,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sNodepoolsNodesGetValidateBeforeCall(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodes> _callback) throws ApiException {
+    private okhttp3.Call k8sNodepoolsNodesGetValidateBeforeCall(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -1437,7 +1498,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sNodepoolsNodesGetCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsNodesGetCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -1449,7 +1510,10 @@ public class KubernetesApi {
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return KubernetesNodes
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1459,8 +1523,8 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public KubernetesNodes k8sNodepoolsNodesGet(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<KubernetesNodes> localVarResp = k8sNodepoolsNodesGetWithHttpInfo(k8sClusterId, nodepoolId, pretty, depth, xContractNumber);
+    public KubernetesNodes k8sNodepoolsNodesGet(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<KubernetesNodes> localVarResp = k8sNodepoolsNodesGetWithHttpInfo(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -1471,7 +1535,10 @@ public class KubernetesApi {
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;KubernetesNodes&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1481,8 +1548,8 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<KubernetesNodes> k8sNodepoolsNodesGetWithHttpInfo(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = k8sNodepoolsNodesGetValidateBeforeCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, null);
+    public ApiResponse<KubernetesNodes> k8sNodepoolsNodesGetWithHttpInfo(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = k8sNodepoolsNodesGetValidateBeforeCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<KubernetesNodes>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1494,8 +1561,8 @@ public class KubernetesApi {
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1505,11 +1572,11 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsNodesGetAsync(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodes> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsNodesGetAsync(String k8sClusterId, String nodepoolId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<KubernetesNodes> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sNodepoolsNodesGetValidateBeforeCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsNodesGetValidateBeforeCall(k8sClusterId, nodepoolId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<KubernetesNodes>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1519,8 +1586,8 @@ public class KubernetesApi {
      * @param nodeId The unique ID of the Kubernetes node. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1530,7 +1597,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsNodesReplacePostCall(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsNodesReplacePostCall(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1548,7 +1615,6 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1572,11 +1638,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sNodepoolsNodesReplacePostValidateBeforeCall(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call k8sNodepoolsNodesReplacePostValidateBeforeCall(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -1594,7 +1660,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sNodepoolsNodesReplacePostCall(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsNodesReplacePostCall(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1607,7 +1673,7 @@ public class KubernetesApi {
      * @param nodeId The unique ID of the Kubernetes node. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1628,7 +1694,8 @@ public class KubernetesApi {
      * @param nodeId The unique ID of the Kubernetes node. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1651,8 +1718,8 @@ public class KubernetesApi {
      * @param nodeId The unique ID of the Kubernetes node. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1662,10 +1729,10 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsNodesReplacePostAsync(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsNodesReplacePostAsync(String k8sClusterId, String nodepoolId, String nodeId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sNodepoolsNodesReplacePostValidateBeforeCall(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsNodesReplacePostValidateBeforeCall(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -1674,8 +1741,8 @@ public class KubernetesApi {
      * @param kubernetesNodePool The Kubernetes node pool to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1685,7 +1752,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsPostCall(String k8sClusterId, KubernetesNodePoolForPost kubernetesNodePool, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePool> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsPostCall(String k8sClusterId, KubernetesNodePoolForPost kubernetesNodePool, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = kubernetesNodePool;
 
         // create path and map variables
@@ -1701,7 +1768,6 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1725,11 +1791,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sNodepoolsPostValidateBeforeCall(String k8sClusterId, KubernetesNodePoolForPost kubernetesNodePool, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePool> _callback) throws ApiException {
+    private okhttp3.Call k8sNodepoolsPostValidateBeforeCall(String k8sClusterId, KubernetesNodePoolForPost kubernetesNodePool, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -1742,7 +1808,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sNodepoolsPostCall(k8sClusterId, kubernetesNodePool, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsPostCall(k8sClusterId, kubernetesNodePool, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1754,7 +1820,8 @@ public class KubernetesApi {
      * @param kubernetesNodePool The Kubernetes node pool to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return KubernetesNodePool
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1776,7 +1843,8 @@ public class KubernetesApi {
      * @param kubernetesNodePool The Kubernetes node pool to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;KubernetesNodePool&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1799,8 +1867,8 @@ public class KubernetesApi {
      * @param kubernetesNodePool The Kubernetes node pool to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1810,11 +1878,11 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsPostAsync(String k8sClusterId, KubernetesNodePoolForPost kubernetesNodePool, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePool> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsPostAsync(String k8sClusterId, KubernetesNodePoolForPost kubernetesNodePool, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePool> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sNodepoolsPostValidateBeforeCall(k8sClusterId, kubernetesNodePool, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsPostValidateBeforeCall(k8sClusterId, kubernetesNodePool, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<KubernetesNodePool>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1824,8 +1892,8 @@ public class KubernetesApi {
      * @param kubernetesNodePool Details of the Kubernetes Node Pool (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1835,7 +1903,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsPutCall(String k8sClusterId, String nodepoolId, KubernetesNodePoolForPut kubernetesNodePool, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePool> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsPutCall(String k8sClusterId, String nodepoolId, KubernetesNodePoolForPut kubernetesNodePool, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = kubernetesNodePool;
 
         // create path and map variables
@@ -1852,7 +1920,6 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1876,11 +1943,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sNodepoolsPutValidateBeforeCall(String k8sClusterId, String nodepoolId, KubernetesNodePoolForPut kubernetesNodePool, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePool> _callback) throws ApiException {
+    private okhttp3.Call k8sNodepoolsPutValidateBeforeCall(String k8sClusterId, String nodepoolId, KubernetesNodePoolForPut kubernetesNodePool, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -1898,7 +1965,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sNodepoolsPutCall(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsPutCall(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1911,7 +1978,8 @@ public class KubernetesApi {
      * @param kubernetesNodePool Details of the Kubernetes Node Pool (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return KubernetesNodePool
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1934,7 +2002,8 @@ public class KubernetesApi {
      * @param kubernetesNodePool Details of the Kubernetes Node Pool (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;KubernetesNodePool&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1958,8 +2027,8 @@ public class KubernetesApi {
      * @param kubernetesNodePool Details of the Kubernetes Node Pool (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1969,11 +2038,11 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sNodepoolsPutAsync(String k8sClusterId, String nodepoolId, KubernetesNodePoolForPut kubernetesNodePool, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePool> _callback) throws ApiException {
+    public okhttp3.Call k8sNodepoolsPutAsync(String k8sClusterId, String nodepoolId, KubernetesNodePoolForPut kubernetesNodePool, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesNodePool> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sNodepoolsPutValidateBeforeCall(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sNodepoolsPutValidateBeforeCall(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<KubernetesNodePool>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1981,8 +2050,8 @@ public class KubernetesApi {
      * @param kubernetesCluster The Kubernetes cluster to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1992,7 +2061,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sPostCall(KubernetesClusterForPost kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> _callback) throws ApiException {
+    public okhttp3.Call k8sPostCall(KubernetesClusterForPost kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = kubernetesCluster;
 
         // create path and map variables
@@ -2007,7 +2076,6 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2031,11 +2099,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sPostValidateBeforeCall(KubernetesClusterForPost kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> _callback) throws ApiException {
+    private okhttp3.Call k8sPostValidateBeforeCall(KubernetesClusterForPost kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'kubernetesCluster' is set
         if (kubernetesCluster == null) {
@@ -2043,7 +2111,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sPostCall(kubernetesCluster, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sPostCall(kubernetesCluster, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2054,7 +2122,8 @@ public class KubernetesApi {
      * @param kubernetesCluster The Kubernetes cluster to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return KubernetesCluster
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2075,7 +2144,8 @@ public class KubernetesApi {
      * @param kubernetesCluster The Kubernetes cluster to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;KubernetesCluster&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2097,8 +2167,8 @@ public class KubernetesApi {
      * @param kubernetesCluster The Kubernetes cluster to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2108,11 +2178,11 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sPostAsync(KubernetesClusterForPost kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> _callback) throws ApiException {
+    public okhttp3.Call k8sPostAsync(KubernetesClusterForPost kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sPostValidateBeforeCall(kubernetesCluster, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sPostValidateBeforeCall(kubernetesCluster, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<KubernetesCluster>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2121,8 +2191,8 @@ public class KubernetesApi {
      * @param kubernetesCluster The modified Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2132,7 +2202,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sPutCall(String k8sClusterId, KubernetesClusterForPut kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> _callback) throws ApiException {
+    public okhttp3.Call k8sPutCall(String k8sClusterId, KubernetesClusterForPut kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = kubernetesCluster;
 
         // create path and map variables
@@ -2148,7 +2218,6 @@ public class KubernetesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2172,11 +2241,11 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sPutValidateBeforeCall(String k8sClusterId, KubernetesClusterForPut kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> _callback) throws ApiException {
+    private okhttp3.Call k8sPutValidateBeforeCall(String k8sClusterId, KubernetesClusterForPut kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'k8sClusterId' is set
         if (k8sClusterId == null) {
@@ -2189,7 +2258,7 @@ public class KubernetesApi {
         }
         
 
-        okhttp3.Call localVarCall = k8sPutCall(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sPutCall(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2201,7 +2270,8 @@ public class KubernetesApi {
      * @param kubernetesCluster The modified Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return KubernetesCluster
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2223,7 +2293,8 @@ public class KubernetesApi {
      * @param kubernetesCluster The modified Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;KubernetesCluster&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2246,8 +2317,8 @@ public class KubernetesApi {
      * @param kubernetesCluster The modified Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2257,16 +2328,16 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sPutAsync(String k8sClusterId, KubernetesClusterForPut kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> _callback) throws ApiException {
+    public okhttp3.Call k8sPutAsync(String k8sClusterId, KubernetesClusterForPut kubernetesCluster, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<KubernetesCluster> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sPutValidateBeforeCall(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = k8sPutValidateBeforeCall(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<KubernetesCluster>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
      * Build call for k8sVersionsDefaultGet
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2276,7 +2347,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sVersionsDefaultGetCall(final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call k8sVersionsDefaultGetCall( String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2288,6 +2359,18 @@ public class KubernetesApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
+        }
+
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -2303,14 +2386,14 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sVersionsDefaultGetValidateBeforeCall(final ApiCallback<String> _callback) throws ApiException {
+    private okhttp3.Call k8sVersionsDefaultGetValidateBeforeCall( String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = k8sVersionsDefaultGetCall(_callback);
+        okhttp3.Call localVarCall = k8sVersionsDefaultGetCall( orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -2318,6 +2401,9 @@ public class KubernetesApi {
     /**
      * Retrieve current default Kubernetes version
      * Retrieve current default Kubernetes version for clusters and nodepools.
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return String
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2327,14 +2413,17 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public String k8sVersionsDefaultGet() throws ApiException {
-        ApiResponse<String> localVarResp = k8sVersionsDefaultGetWithHttpInfo();
+    public String k8sVersionsDefaultGet( String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<String> localVarResp = k8sVersionsDefaultGetWithHttpInfo(orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
     /**
      * Retrieve current default Kubernetes version
      * Retrieve current default Kubernetes version for clusters and nodepools.
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2344,8 +2433,8 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<String> k8sVersionsDefaultGetWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = k8sVersionsDefaultGetValidateBeforeCall(null);
+    public ApiResponse<String> k8sVersionsDefaultGetWithHttpInfo(String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = k8sVersionsDefaultGetValidateBeforeCall( orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2353,7 +2442,7 @@ public class KubernetesApi {
     /**
      * Retrieve current default Kubernetes version (asynchronously)
      * Retrieve current default Kubernetes version for clusters and nodepools.
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2363,16 +2452,16 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sVersionsDefaultGetAsync(final ApiCallback<String> _callback) throws ApiException {
+    public okhttp3.Call k8sVersionsDefaultGetAsync(String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<String> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sVersionsDefaultGetValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = k8sVersionsDefaultGetValidateBeforeCall( orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<String>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
      * Build call for k8sVersionsGet
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2382,7 +2471,7 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sVersionsGetCall(final ApiCallback<List<String>> _callback) throws ApiException {
+    public okhttp3.Call k8sVersionsGetCall( String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2394,6 +2483,18 @@ public class KubernetesApi {
         Map<String, String> localVarCookieParams = new HashMap<String, String>();
         Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
+        }
+
         final String[] localVarAccepts = {
             "application/json"
         };
@@ -2409,14 +2510,14 @@ public class KubernetesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call k8sVersionsGetValidateBeforeCall(final ApiCallback<List<String>> _callback) throws ApiException {
+    private okhttp3.Call k8sVersionsGetValidateBeforeCall( String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = k8sVersionsGetCall(_callback);
+        okhttp3.Call localVarCall = k8sVersionsGetCall( orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -2424,6 +2525,9 @@ public class KubernetesApi {
     /**
      * List Kubernetes versions
      * List available Kubernetes versions.
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return List&lt;String&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2433,14 +2537,17 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public List<String> k8sVersionsGet() throws ApiException {
-        ApiResponse<List<String>> localVarResp = k8sVersionsGetWithHttpInfo();
+    public List<String> k8sVersionsGet( String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<List<String>> localVarResp = k8sVersionsGetWithHttpInfo(orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
     /**
      * List Kubernetes versions
      * List available Kubernetes versions.
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;List&lt;String&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2450,8 +2557,8 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<String>> k8sVersionsGetWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = k8sVersionsGetValidateBeforeCall(null);
+    public ApiResponse<List<String>> k8sVersionsGetWithHttpInfo(String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = k8sVersionsGetValidateBeforeCall( orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2459,7 +2566,7 @@ public class KubernetesApi {
     /**
      * List Kubernetes versions (asynchronously)
      * List available Kubernetes versions.
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2469,11 +2576,11 @@ public class KubernetesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 401 (auth error), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type), 422 (validation error), 500 (server error), 503 (maintenance) </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call k8sVersionsGetAsync(final ApiCallback<List<String>> _callback) throws ApiException {
+    public okhttp3.Call k8sVersionsGetAsync(String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<List<String>> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = k8sVersionsGetValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = k8sVersionsGetValidateBeforeCall( orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<List<String>>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
 }

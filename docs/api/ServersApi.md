@@ -62,7 +62,7 @@ public class Example {
     String cdromId = "cdromId_example"; // String | The unique ID of the CD-ROM.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.datacentersServersCdromsDelete(datacenterId, serverId, cdromId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
@@ -85,7 +85,7 @@ public class Example {
 | **cdromId** | **String**| The unique ID of the CD-ROM. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
@@ -130,7 +130,7 @@ public class Example {
     String cdromId = "cdromId_example"; // String | The unique ID of the CD-ROM.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       Image result = apiInstance.datacentersServersCdromsFindById(datacenterId, serverId, cdromId, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -154,11 +154,11 @@ public class Example {
 | **cdromId** | **String**| The unique ID of the CD-ROM. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](../models/Image.md)
 
 ### HTTP request headers
 
@@ -198,8 +198,8 @@ public class Example {
     String serverId = "serverId_example"; // String | The unique ID of the server.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-    Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+    Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
     try {
       Cdroms result = apiInstance.datacentersServersCdromsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
@@ -223,13 +223,13 @@ public class Example {
 | **serverId** | **String**| The unique ID of the server. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
-| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [optional] [default to 0]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
+| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0]
 | **limit** | **Integer**| The maximum number of elements to return (use together with offset for pagination). | [optional] [default to 1000]
 
 ### Return type
 
-[**Cdroms**](Cdroms.md)
+[**Cdroms**](../models/Cdroms.md)
 
 ### HTTP request headers
 
@@ -270,7 +270,7 @@ public class Example {
     Image cdrom = new Image(); // Image | The CD-ROM to be attached.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       Image result = apiInstance.datacentersServersCdromsPost(datacenterId, serverId, cdrom, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -294,11 +294,11 @@ public class Example {
 | **cdrom** |  [**Image**](Image.md)| The CD-ROM to be attached. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](../models/Image.md)
 
 ### HTTP request headers
 
@@ -338,7 +338,7 @@ public class Example {
     String serverId = "serverId_example"; // String | The unique ID of the server.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.datacentersServersDelete(datacenterId, serverId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
@@ -360,7 +360,7 @@ public class Example {
 | **serverId** | **String**| The unique ID of the server. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
@@ -404,7 +404,7 @@ public class Example {
     String serverId = "serverId_example"; // String | The unique ID of the server.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       Server result = apiInstance.datacentersServersFindById(datacenterId, serverId, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -427,11 +427,11 @@ public class Example {
 | **serverId** | **String**| The unique ID of the server. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](../models/Server.md)
 
 ### HTTP request headers
 
@@ -471,8 +471,8 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Boolean upgradeNeeded = true; // Boolean | Filter servers that can or that cannot be upgraded.
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-    Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+    Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
     try {
       Servers result = apiInstance.datacentersServersGet(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit);
@@ -496,13 +496,13 @@ public class Example {
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
 | **upgradeNeeded** | **Boolean**| Filter servers that can or that cannot be upgraded. | [optional]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
-| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [optional] [default to 0]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
+| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0]
 | **limit** | **Integer**| The maximum number of elements to return (use together with offset for pagination). | [optional] [default to 1000]
 
 ### Return type
 
-[**Servers**](Servers.md)
+[**Servers**](../models/Servers.md)
 
 ### HTTP request headers
 
@@ -543,7 +543,7 @@ public class Example {
     ServerProperties server = new ServerProperties(); // ServerProperties | The properties of the server to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       Server result = apiInstance.datacentersServersPatch(datacenterId, serverId, server, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -567,11 +567,11 @@ public class Example {
 | **server** |  [**ServerProperties**](ServerProperties.md)| The properties of the server to be updated. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](../models/Server.md)
 
 ### HTTP request headers
 
@@ -611,7 +611,7 @@ public class Example {
     Server server = new Server(); // Server | The server to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       Server result = apiInstance.datacentersServersPost(datacenterId, server, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -634,11 +634,11 @@ public class Example {
 | **server** |  [**Server**](Server.md)| The server to create. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](../models/Server.md)
 
 ### HTTP request headers
 
@@ -679,7 +679,7 @@ public class Example {
     Server server = new Server(); // Server | The modified server
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       Server result = apiInstance.datacentersServersPut(datacenterId, serverId, server, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -703,11 +703,11 @@ public class Example {
 | **server** |  [**Server**](Server.md)| The modified server |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**Server**](Server.md)
+[**Server**](../models/Server.md)
 
 ### HTTP request headers
 
@@ -747,7 +747,7 @@ public class Example {
     String serverId = "serverId_example"; // String | The unique ID of the server.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.datacentersServersRebootPost(datacenterId, serverId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
@@ -769,7 +769,7 @@ public class Example {
 | **serverId** | **String**| The unique ID of the server. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
@@ -813,7 +813,7 @@ public class Example {
     String serverId = "serverId_example"; // String | The unique ID of the server.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       RemoteConsoleUrl result = apiInstance.datacentersServersRemoteConsoleGet(datacenterId, serverId, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -836,11 +836,11 @@ public class Example {
 | **serverId** | **String**| The unique ID of the server. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**RemoteConsoleUrl**](RemoteConsoleUrl.md)
+[**RemoteConsoleUrl**](../models/RemoteConsoleUrl.md)
 
 ### HTTP request headers
 
@@ -880,7 +880,7 @@ public class Example {
     String serverId = "serverId_example"; // String | The unique ID of the server.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.datacentersServersResumePost(datacenterId, serverId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
@@ -902,7 +902,7 @@ public class Example {
 | **serverId** | **String**| The unique ID of the server. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
@@ -946,7 +946,7 @@ public class Example {
     String serverId = "serverId_example"; // String | The unique ID of the server.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.datacentersServersStartPost(datacenterId, serverId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
@@ -968,7 +968,7 @@ public class Example {
 | **serverId** | **String**| The unique ID of the server. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
@@ -1012,7 +1012,7 @@ public class Example {
     String serverId = "serverId_example"; // String | The unique ID of the server.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.datacentersServersStopPost(datacenterId, serverId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
@@ -1034,7 +1034,7 @@ public class Example {
 | **serverId** | **String**| The unique ID of the server. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
@@ -1078,7 +1078,7 @@ public class Example {
     String serverId = "serverId_example"; // String | The unique ID of the server.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.datacentersServersSuspendPost(datacenterId, serverId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
@@ -1100,7 +1100,7 @@ public class Example {
 | **serverId** | **String**| The unique ID of the server. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
@@ -1144,7 +1144,7 @@ public class Example {
     String serverId = "serverId_example"; // String | The unique ID of the server.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       Token result = apiInstance.datacentersServersTokenGet(datacenterId, serverId, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -1167,11 +1167,11 @@ public class Example {
 | **serverId** | **String**| The unique ID of the server. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**Token**](Token.md)
+[**Token**](../models/Token.md)
 
 ### HTTP request headers
 
@@ -1211,7 +1211,7 @@ public class Example {
     String serverId = "serverId_example"; // String | The unique ID of the server.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.datacentersServersUpgradePost(datacenterId, serverId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
@@ -1233,7 +1233,7 @@ public class Example {
 | **serverId** | **String**| The unique ID of the server. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
@@ -1278,7 +1278,7 @@ public class Example {
     String volumeId = "volumeId_example"; // String | The unique ID of the volume.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.datacentersServersVolumesDelete(datacenterId, serverId, volumeId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
@@ -1301,7 +1301,7 @@ public class Example {
 | **volumeId** | **String**| The unique ID of the volume. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
@@ -1346,7 +1346,7 @@ public class Example {
     String volumeId = "volumeId_example"; // String | The unique ID of the volume.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       Volume result = apiInstance.datacentersServersVolumesFindById(datacenterId, serverId, volumeId, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -1370,11 +1370,11 @@ public class Example {
 | **volumeId** | **String**| The unique ID of the volume. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### HTTP request headers
 
@@ -1413,8 +1413,8 @@ public class Example {
     String serverId = "serverId_example"; // String | The unique ID of the server.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-    Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+    Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
     try {
       AttachedVolumes result = apiInstance.datacentersServersVolumesGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit);
@@ -1438,13 +1438,13 @@ public class Example {
 | **serverId** | **String**| The unique ID of the server. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
-| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [optional] [default to 0]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
+| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0]
 | **limit** | **Integer**| The maximum number of elements to return (use together with offset for pagination). | [optional] [default to 1000]
 
 ### Return type
 
-[**AttachedVolumes**](AttachedVolumes.md)
+[**AttachedVolumes**](../models/AttachedVolumes.md)
 
 ### HTTP request headers
 
@@ -1484,7 +1484,7 @@ public class Example {
     Volume volume = new Volume(); // Volume | The volume to be attached (or created and attached).
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       Volume result = apiInstance.datacentersServersVolumesPost(datacenterId, serverId, volume, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -1508,11 +1508,11 @@ public class Example {
 | **volume** |  [**Volume**](Volume.md)| The volume to be attached (or created and attached). |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### HTTP request headers
 

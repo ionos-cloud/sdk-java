@@ -45,7 +45,7 @@ public class Example {
     String backupunitId = "backupunitId_example"; // String | The unique ID of the backup unit.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.backupunitsDelete(backupunitId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
@@ -66,7 +66,7 @@ public class Example {
 | **backupunitId** | **String**| The unique ID of the backup unit. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
@@ -109,7 +109,7 @@ public class Example {
     String backupunitId = "backupunitId_example"; // String | The unique ID of the backup unit.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       BackupUnit result = apiInstance.backupunitsFindById(backupunitId, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -131,11 +131,11 @@ public class Example {
 | **backupunitId** | **String**| The unique ID of the backup unit. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### HTTP request headers
 
@@ -173,7 +173,7 @@ public class Example {
     BackupUnitsApi apiInstance = new BackupUnitsApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       BackupUnits result = apiInstance.backupunitsGet(pretty, depth, xContractNumber);
       System.out.println(result);
@@ -194,11 +194,11 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**BackupUnits**](BackupUnits.md)
+[**BackupUnits**](../models/BackupUnits.md)
 
 ### HTTP request headers
 
@@ -238,7 +238,7 @@ public class Example {
     BackupUnitProperties backupUnit = new BackupUnitProperties(); // BackupUnitProperties | The properties of the backup unit to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       BackupUnit result = apiInstance.backupunitsPatch(backupunitId, backupUnit, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -261,11 +261,11 @@ public class Example {
 | **backupUnit** |  [**BackupUnitProperties**](BackupUnitProperties.md)| The properties of the backup unit to be updated. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### HTTP request headers
 
@@ -304,7 +304,7 @@ public class Example {
     BackupUnit backupUnit = new BackupUnit(); // BackupUnit | The backup unit to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       BackupUnit result = apiInstance.backupunitsPost(backupUnit, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -326,11 +326,11 @@ public class Example {
 | **backupUnit** |  [**BackupUnit**](BackupUnit.md)| The backup unit to create. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### HTTP request headers
 
@@ -370,7 +370,7 @@ public class Example {
     BackupUnit backupUnit = new BackupUnit(); // BackupUnit | The modified backup unit.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       BackupUnit result = apiInstance.backupunitsPut(backupunitId, backupUnit, pretty, depth, xContractNumber);
       System.out.println(result);
@@ -393,11 +393,11 @@ public class Example {
 | **backupUnit** |  [**BackupUnit**](BackupUnit.md)| The modified backup unit. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### HTTP request headers
 
@@ -435,7 +435,7 @@ public class Example {
     BackupUnitsApi apiInstance = new BackupUnitsApi(defaultClient);
     String backupunitId = "backupunitId_example"; // String | The unique ID of the backup unit.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
-    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+    Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       BackupUnitSSO result = apiInstance.backupunitsSsourlGet(backupunitId, pretty, xContractNumber);
       System.out.println(result);
@@ -456,11 +456,11 @@ public class Example {
 | ------------- | ------------- | ------------- | ------------- |
 | **backupunitId** | **String**| The unique ID of the backup unit. |
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional]
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
 
 ### Return type
 
-[**BackupUnitSSO**](BackupUnitSSO.md)
+[**BackupUnitSSO**](../models/BackupUnitSSO.md)
 
 ### HTTP request headers
 

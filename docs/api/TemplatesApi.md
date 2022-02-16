@@ -62,7 +62,7 @@ public class Example {
 
 ### Return type
 
-[**Template**](Template.md)
+[**Template**](../models/Template.md)
 
 ### HTTP request headers
 
@@ -121,7 +121,7 @@ public class Example {
 
 ### Return type
 
-[**Templates**](Templates.md)
+[**Templates**](../models/Templates.md)
 
 ### HTTP request headers
 

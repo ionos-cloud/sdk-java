@@ -72,8 +72,8 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -83,7 +83,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsDeleteCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call umGroupsDeleteCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -99,7 +99,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -123,11 +122,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsDeleteValidateBeforeCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call umGroupsDeleteValidateBeforeCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
@@ -135,7 +134,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umGroupsDeleteCall(groupId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsDeleteCall(groupId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -146,7 +145,7 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -165,7 +164,8 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -186,8 +186,8 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -197,10 +197,10 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsDeleteAsync(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call umGroupsDeleteAsync(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsDeleteValidateBeforeCall(groupId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = umGroupsDeleteValidateBeforeCall(groupId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -208,8 +208,8 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -219,7 +219,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsFindByIdCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Group> _callback) throws ApiException {
+    public okhttp3.Call umGroupsFindByIdCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -235,7 +235,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -259,11 +258,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsFindByIdValidateBeforeCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Group> _callback) throws ApiException {
+    private okhttp3.Call umGroupsFindByIdValidateBeforeCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
@@ -271,7 +270,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umGroupsFindByIdCall(groupId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsFindByIdCall(groupId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -282,7 +281,8 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return Group
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -303,7 +303,8 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Group&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -325,8 +326,8 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -336,19 +337,19 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsFindByIdAsync(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Group> _callback) throws ApiException {
+    public okhttp3.Call umGroupsFindByIdAsync(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Group> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsFindByIdValidateBeforeCall(groupId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsFindByIdValidateBeforeCall(groupId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Group>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
      * Build call for umGroupsGet
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -358,7 +359,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsGetCall(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Groups> _callback) throws ApiException {
+    public okhttp3.Call umGroupsGetCall(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -373,9 +374,19 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -397,14 +408,14 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Groups> _callback) throws ApiException {
+    private okhttp3.Call umGroupsGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = umGroupsGetCall(pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsGetCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -414,7 +425,10 @@ public class UserManagementApi {
      * List all the available user groups.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return Groups
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -424,8 +438,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public Groups umGroupsGet(Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<Groups> localVarResp = umGroupsGetWithHttpInfo(pretty, depth, xContractNumber);
+    public Groups umGroupsGet(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<Groups> localVarResp = umGroupsGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -434,7 +448,10 @@ public class UserManagementApi {
      * List all the available user groups.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;Groups&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -444,8 +461,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Groups> umGroupsGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = umGroupsGetValidateBeforeCall(pretty, depth, xContractNumber, null);
+    public ApiResponse<Groups> umGroupsGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = umGroupsGetValidateBeforeCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<Groups>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -455,8 +472,8 @@ public class UserManagementApi {
      * List all the available user groups.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -466,11 +483,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Groups> _callback) throws ApiException {
+    public okhttp3.Call umGroupsGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<Groups> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsGetValidateBeforeCall(pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsGetValidateBeforeCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<Groups>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -478,8 +495,8 @@ public class UserManagementApi {
      * @param group The group to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -489,7 +506,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsPostCall(Group group, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Group> _callback) throws ApiException {
+    public okhttp3.Call umGroupsPostCall(Group group, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = group;
 
         // create path and map variables
@@ -504,7 +521,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -528,11 +544,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsPostValidateBeforeCall(Group group, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Group> _callback) throws ApiException {
+    private okhttp3.Call umGroupsPostValidateBeforeCall(Group group, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'group' is set
         if (group == null) {
@@ -540,7 +556,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umGroupsPostCall(group, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsPostCall(group, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -551,7 +567,8 @@ public class UserManagementApi {
      * @param group The group to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return Group
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -572,7 +589,8 @@ public class UserManagementApi {
      * @param group The group to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Group&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -594,8 +612,8 @@ public class UserManagementApi {
      * @param group The group to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -605,11 +623,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsPostAsync(Group group, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Group> _callback) throws ApiException {
+    public okhttp3.Call umGroupsPostAsync(Group group, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Group> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsPostValidateBeforeCall(group, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsPostValidateBeforeCall(group, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Group>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -618,8 +636,8 @@ public class UserManagementApi {
      * @param group The modified group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -629,7 +647,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsPutCall(String groupId, Group group, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Group> _callback) throws ApiException {
+    public okhttp3.Call umGroupsPutCall(String groupId, Group group, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = group;
 
         // create path and map variables
@@ -645,7 +663,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -669,11 +686,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsPutValidateBeforeCall(String groupId, Group group, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Group> _callback) throws ApiException {
+    private okhttp3.Call umGroupsPutValidateBeforeCall(String groupId, Group group, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
@@ -686,7 +703,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umGroupsPutCall(groupId, group, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsPutCall(groupId, group, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -698,7 +715,8 @@ public class UserManagementApi {
      * @param group The modified group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return Group
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -720,7 +738,8 @@ public class UserManagementApi {
      * @param group The modified group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Group&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -743,8 +762,8 @@ public class UserManagementApi {
      * @param group The modified group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -754,11 +773,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsPutAsync(String groupId, Group group, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Group> _callback) throws ApiException {
+    public okhttp3.Call umGroupsPutAsync(String groupId, Group group, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Group> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsPutValidateBeforeCall(groupId, group, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsPutValidateBeforeCall(groupId, group, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Group>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -766,8 +785,8 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -777,7 +796,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsResourcesGetCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<ResourceGroups> _callback) throws ApiException {
+    public okhttp3.Call umGroupsResourcesGetCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -793,9 +812,19 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -817,11 +846,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsResourcesGetValidateBeforeCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<ResourceGroups> _callback) throws ApiException {
+    private okhttp3.Call umGroupsResourcesGetValidateBeforeCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
@@ -829,7 +858,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umGroupsResourcesGetCall(groupId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsResourcesGetCall(groupId, pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -840,7 +869,10 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ResourceGroups
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -850,8 +882,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ResourceGroups umGroupsResourcesGet(String groupId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<ResourceGroups> localVarResp = umGroupsResourcesGetWithHttpInfo(groupId, pretty, depth, xContractNumber);
+    public ResourceGroups umGroupsResourcesGet(String groupId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<ResourceGroups> localVarResp = umGroupsResourcesGetWithHttpInfo(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -861,7 +893,10 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;ResourceGroups&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -871,8 +906,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ResourceGroups> umGroupsResourcesGetWithHttpInfo(String groupId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = umGroupsResourcesGetValidateBeforeCall(groupId, pretty, depth, xContractNumber, null);
+    public ApiResponse<ResourceGroups> umGroupsResourcesGetWithHttpInfo(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = umGroupsResourcesGetValidateBeforeCall(groupId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<ResourceGroups>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -883,8 +918,8 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -894,11 +929,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsResourcesGetAsync(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<ResourceGroups> _callback) throws ApiException {
+    public okhttp3.Call umGroupsResourcesGetAsync(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<ResourceGroups> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsResourcesGetValidateBeforeCall(groupId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsResourcesGetValidateBeforeCall(groupId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<ResourceGroups>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -907,8 +942,8 @@ public class UserManagementApi {
      * @param resourceId The unique ID of the resource. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -918,7 +953,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsSharesDeleteCall(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call umGroupsSharesDeleteCall(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -935,7 +970,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -959,11 +993,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsSharesDeleteValidateBeforeCall(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call umGroupsSharesDeleteValidateBeforeCall(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
@@ -976,7 +1010,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umGroupsSharesDeleteCall(groupId, resourceId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsSharesDeleteCall(groupId, resourceId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -988,7 +1022,7 @@ public class UserManagementApi {
      * @param resourceId The unique ID of the resource. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1008,7 +1042,8 @@ public class UserManagementApi {
      * @param resourceId The unique ID of the resource. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1030,8 +1065,8 @@ public class UserManagementApi {
      * @param resourceId The unique ID of the resource. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1041,10 +1076,10 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsSharesDeleteAsync(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call umGroupsSharesDeleteAsync(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsSharesDeleteValidateBeforeCall(groupId, resourceId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = umGroupsSharesDeleteValidateBeforeCall(groupId, resourceId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -1053,8 +1088,8 @@ public class UserManagementApi {
      * @param resourceId The unique ID of the resource. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1064,7 +1099,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsSharesFindByResourceIdCall(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> _callback) throws ApiException {
+    public okhttp3.Call umGroupsSharesFindByResourceIdCall(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1081,7 +1116,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1105,11 +1139,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsSharesFindByResourceIdValidateBeforeCall(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> _callback) throws ApiException {
+    private okhttp3.Call umGroupsSharesFindByResourceIdValidateBeforeCall(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
@@ -1122,7 +1156,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umGroupsSharesFindByResourceIdCall(groupId, resourceId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsSharesFindByResourceIdCall(groupId, resourceId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1134,7 +1168,8 @@ public class UserManagementApi {
      * @param resourceId The unique ID of the resource. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return GroupShare
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1156,7 +1191,8 @@ public class UserManagementApi {
      * @param resourceId The unique ID of the resource. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;GroupShare&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1179,8 +1215,8 @@ public class UserManagementApi {
      * @param resourceId The unique ID of the resource. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1190,11 +1226,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsSharesFindByResourceIdAsync(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> _callback) throws ApiException {
+    public okhttp3.Call umGroupsSharesFindByResourceIdAsync(String groupId, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsSharesFindByResourceIdValidateBeforeCall(groupId, resourceId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsSharesFindByResourceIdValidateBeforeCall(groupId, resourceId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<GroupShare>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1202,8 +1238,8 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1213,7 +1249,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsSharesGetCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShares> _callback) throws ApiException {
+    public okhttp3.Call umGroupsSharesGetCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1229,9 +1265,19 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -1253,11 +1299,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsSharesGetValidateBeforeCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShares> _callback) throws ApiException {
+    private okhttp3.Call umGroupsSharesGetValidateBeforeCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
@@ -1265,7 +1311,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umGroupsSharesGetCall(groupId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsSharesGetCall(groupId, pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -1276,7 +1322,10 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return GroupShares
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1286,8 +1335,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public GroupShares umGroupsSharesGet(String groupId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<GroupShares> localVarResp = umGroupsSharesGetWithHttpInfo(groupId, pretty, depth, xContractNumber);
+    public GroupShares umGroupsSharesGet(String groupId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<GroupShares> localVarResp = umGroupsSharesGetWithHttpInfo(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -1297,7 +1346,10 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;GroupShares&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1307,8 +1359,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GroupShares> umGroupsSharesGetWithHttpInfo(String groupId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = umGroupsSharesGetValidateBeforeCall(groupId, pretty, depth, xContractNumber, null);
+    public ApiResponse<GroupShares> umGroupsSharesGetWithHttpInfo(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = umGroupsSharesGetValidateBeforeCall(groupId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<GroupShares>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1319,8 +1371,8 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1330,11 +1382,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsSharesGetAsync(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShares> _callback) throws ApiException {
+    public okhttp3.Call umGroupsSharesGetAsync(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<GroupShares> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsSharesGetValidateBeforeCall(groupId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsSharesGetValidateBeforeCall(groupId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<GroupShares>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1344,8 +1396,8 @@ public class UserManagementApi {
      * @param resource The resource to add. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1355,7 +1407,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsSharesPostCall(String groupId, String resourceId, GroupShare resource, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> _callback) throws ApiException {
+    public okhttp3.Call umGroupsSharesPostCall(String groupId, String resourceId, GroupShare resource, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = resource;
 
         // create path and map variables
@@ -1372,7 +1424,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1396,11 +1447,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsSharesPostValidateBeforeCall(String groupId, String resourceId, GroupShare resource, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> _callback) throws ApiException {
+    private okhttp3.Call umGroupsSharesPostValidateBeforeCall(String groupId, String resourceId, GroupShare resource, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
@@ -1418,7 +1469,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umGroupsSharesPostCall(groupId, resourceId, resource, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsSharesPostCall(groupId, resourceId, resource, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1431,7 +1482,8 @@ public class UserManagementApi {
      * @param resource The resource to add. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return GroupShare
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1454,7 +1506,8 @@ public class UserManagementApi {
      * @param resource The resource to add. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;GroupShare&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1478,8 +1531,8 @@ public class UserManagementApi {
      * @param resource The resource to add. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1489,11 +1542,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsSharesPostAsync(String groupId, String resourceId, GroupShare resource, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> _callback) throws ApiException {
+    public okhttp3.Call umGroupsSharesPostAsync(String groupId, String resourceId, GroupShare resource, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsSharesPostValidateBeforeCall(groupId, resourceId, resource, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsSharesPostValidateBeforeCall(groupId, resourceId, resource, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<GroupShare>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1503,8 +1556,8 @@ public class UserManagementApi {
      * @param resource The modified resource (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1514,7 +1567,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsSharesPutCall(String groupId, String resourceId, GroupShare resource, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> _callback) throws ApiException {
+    public okhttp3.Call umGroupsSharesPutCall(String groupId, String resourceId, GroupShare resource, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = resource;
 
         // create path and map variables
@@ -1531,7 +1584,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1555,11 +1607,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsSharesPutValidateBeforeCall(String groupId, String resourceId, GroupShare resource, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> _callback) throws ApiException {
+    private okhttp3.Call umGroupsSharesPutValidateBeforeCall(String groupId, String resourceId, GroupShare resource, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
@@ -1577,7 +1629,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umGroupsSharesPutCall(groupId, resourceId, resource, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsSharesPutCall(groupId, resourceId, resource, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1590,7 +1642,8 @@ public class UserManagementApi {
      * @param resource The modified resource (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return GroupShare
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1613,7 +1666,8 @@ public class UserManagementApi {
      * @param resource The modified resource (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;GroupShare&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1637,8 +1691,8 @@ public class UserManagementApi {
      * @param resource The modified resource (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1648,11 +1702,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsSharesPutAsync(String groupId, String resourceId, GroupShare resource, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> _callback) throws ApiException {
+    public okhttp3.Call umGroupsSharesPutAsync(String groupId, String resourceId, GroupShare resource, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupShare> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsSharesPutValidateBeforeCall(groupId, resourceId, resource, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsSharesPutValidateBeforeCall(groupId, resourceId, resource, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<GroupShare>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1661,8 +1715,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1672,7 +1726,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsUsersDeleteCall(String groupId, String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call umGroupsUsersDeleteCall(String groupId, String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1689,7 +1743,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1713,11 +1766,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsUsersDeleteValidateBeforeCall(String groupId, String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call umGroupsUsersDeleteValidateBeforeCall(String groupId, String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
@@ -1730,7 +1783,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umGroupsUsersDeleteCall(groupId, userId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsUsersDeleteCall(groupId, userId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1742,7 +1795,7 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1762,7 +1815,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1784,8 +1838,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1795,10 +1849,10 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsUsersDeleteAsync(String groupId, String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call umGroupsUsersDeleteAsync(String groupId, String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsUsersDeleteValidateBeforeCall(groupId, userId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = umGroupsUsersDeleteValidateBeforeCall(groupId, userId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -1806,8 +1860,8 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1817,7 +1871,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsUsersGetCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupMembers> _callback) throws ApiException {
+    public okhttp3.Call umGroupsUsersGetCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1833,9 +1887,19 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -1857,11 +1921,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsUsersGetValidateBeforeCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupMembers> _callback) throws ApiException {
+    private okhttp3.Call umGroupsUsersGetValidateBeforeCall(String groupId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
@@ -1869,7 +1933,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umGroupsUsersGetCall(groupId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsUsersGetCall(groupId, pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -1880,7 +1944,10 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return GroupMembers
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1890,8 +1957,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public GroupMembers umGroupsUsersGet(String groupId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<GroupMembers> localVarResp = umGroupsUsersGetWithHttpInfo(groupId, pretty, depth, xContractNumber);
+    public GroupMembers umGroupsUsersGet(String groupId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<GroupMembers> localVarResp = umGroupsUsersGetWithHttpInfo(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -1901,7 +1968,10 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;GroupMembers&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1911,8 +1981,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<GroupMembers> umGroupsUsersGetWithHttpInfo(String groupId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = umGroupsUsersGetValidateBeforeCall(groupId, pretty, depth, xContractNumber, null);
+    public ApiResponse<GroupMembers> umGroupsUsersGetWithHttpInfo(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = umGroupsUsersGetValidateBeforeCall(groupId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<GroupMembers>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1923,8 +1993,8 @@ public class UserManagementApi {
      * @param groupId The unique ID of the group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1934,11 +2004,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsUsersGetAsync(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<GroupMembers> _callback) throws ApiException {
+    public okhttp3.Call umGroupsUsersGetAsync(String groupId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<GroupMembers> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsUsersGetValidateBeforeCall(groupId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsUsersGetValidateBeforeCall(groupId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<GroupMembers>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1947,8 +2017,8 @@ public class UserManagementApi {
      * @param user The user to add. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1958,7 +2028,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsUsersPostCall(String groupId, User user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    public okhttp3.Call umGroupsUsersPostCall(String groupId, User user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = user;
 
         // create path and map variables
@@ -1974,7 +2044,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1998,11 +2067,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umGroupsUsersPostValidateBeforeCall(String groupId, User user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    private okhttp3.Call umGroupsUsersPostValidateBeforeCall(String groupId, User user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'groupId' is set
         if (groupId == null) {
@@ -2015,7 +2084,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umGroupsUsersPostCall(groupId, user, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsUsersPostCall(groupId, user, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2027,7 +2096,8 @@ public class UserManagementApi {
      * @param user The user to add. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return User
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2049,7 +2119,8 @@ public class UserManagementApi {
      * @param user The user to add. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;User&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2072,8 +2143,8 @@ public class UserManagementApi {
      * @param user The user to add. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2083,11 +2154,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umGroupsUsersPostAsync(String groupId, User user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    public okhttp3.Call umGroupsUsersPostAsync(String groupId, User user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umGroupsUsersPostValidateBeforeCall(groupId, user, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umGroupsUsersPostValidateBeforeCall(groupId, user, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<User>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2095,8 +2166,8 @@ public class UserManagementApi {
      * @param resourceType The resource type (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2106,7 +2177,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umResourcesFindByTypeCall(String resourceType, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Resources> _callback) throws ApiException {
+    public okhttp3.Call umResourcesFindByTypeCall(String resourceType, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2122,7 +2193,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2146,11 +2216,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umResourcesFindByTypeValidateBeforeCall(String resourceType, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Resources> _callback) throws ApiException {
+    private okhttp3.Call umResourcesFindByTypeValidateBeforeCall(String resourceType, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'resourceType' is set
         if (resourceType == null) {
@@ -2158,7 +2228,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umResourcesFindByTypeCall(resourceType, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umResourcesFindByTypeCall(resourceType, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2169,7 +2239,8 @@ public class UserManagementApi {
      * @param resourceType The resource type (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return Resources
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2190,7 +2261,8 @@ public class UserManagementApi {
      * @param resourceType The resource type (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Resources&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2212,8 +2284,8 @@ public class UserManagementApi {
      * @param resourceType The resource type (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2223,11 +2295,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umResourcesFindByTypeAsync(String resourceType, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Resources> _callback) throws ApiException {
+    public okhttp3.Call umResourcesFindByTypeAsync(String resourceType, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Resources> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umResourcesFindByTypeValidateBeforeCall(resourceType, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umResourcesFindByTypeValidateBeforeCall(resourceType, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Resources>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2236,8 +2308,8 @@ public class UserManagementApi {
      * @param resourceId The resource ID (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2247,7 +2319,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umResourcesFindByTypeAndIdCall(String resourceType, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Resource> _callback) throws ApiException {
+    public okhttp3.Call umResourcesFindByTypeAndIdCall(String resourceType, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2264,7 +2336,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2288,11 +2359,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umResourcesFindByTypeAndIdValidateBeforeCall(String resourceType, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Resource> _callback) throws ApiException {
+    private okhttp3.Call umResourcesFindByTypeAndIdValidateBeforeCall(String resourceType, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'resourceType' is set
         if (resourceType == null) {
@@ -2305,7 +2376,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umResourcesFindByTypeAndIdCall(resourceType, resourceId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umResourcesFindByTypeAndIdCall(resourceType, resourceId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2317,7 +2388,8 @@ public class UserManagementApi {
      * @param resourceId The resource ID (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return Resource
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2339,7 +2411,8 @@ public class UserManagementApi {
      * @param resourceId The resource ID (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Resource&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2362,8 +2435,8 @@ public class UserManagementApi {
      * @param resourceId The resource ID (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2373,19 +2446,19 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umResourcesFindByTypeAndIdAsync(String resourceType, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Resource> _callback) throws ApiException {
+    public okhttp3.Call umResourcesFindByTypeAndIdAsync(String resourceType, String resourceId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Resource> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umResourcesFindByTypeAndIdValidateBeforeCall(resourceType, resourceId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umResourcesFindByTypeAndIdValidateBeforeCall(resourceType, resourceId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<Resource>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
      * Build call for umResourcesGet
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2395,7 +2468,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umResourcesGetCall(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Resources> _callback) throws ApiException {
+    public okhttp3.Call umResourcesGetCall(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2410,9 +2483,19 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -2434,14 +2517,14 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umResourcesGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Resources> _callback) throws ApiException {
+    private okhttp3.Call umResourcesGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = umResourcesGetCall(pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umResourcesGetCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -2451,7 +2534,10 @@ public class UserManagementApi {
      * List all the available resources.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return Resources
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2461,8 +2547,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public Resources umResourcesGet(Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<Resources> localVarResp = umResourcesGetWithHttpInfo(pretty, depth, xContractNumber);
+    public Resources umResourcesGet(Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<Resources> localVarResp = umResourcesGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -2471,7 +2557,10 @@ public class UserManagementApi {
      * List all the available resources.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;Resources&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2481,8 +2570,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Resources> umResourcesGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = umResourcesGetValidateBeforeCall(pretty, depth, xContractNumber, null);
+    public ApiResponse<Resources> umResourcesGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = umResourcesGetValidateBeforeCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<Resources>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2492,8 +2581,8 @@ public class UserManagementApi {
      * List all the available resources.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2503,11 +2592,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umResourcesGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Resources> _callback) throws ApiException {
+    public okhttp3.Call umResourcesGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<Resources> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umResourcesGetValidateBeforeCall(pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umResourcesGetValidateBeforeCall(pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<Resources>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2515,8 +2604,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2526,7 +2615,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersDeleteCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call umUsersDeleteCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2542,7 +2631,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2566,11 +2654,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umUsersDeleteValidateBeforeCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call umUsersDeleteValidateBeforeCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'userId' is set
         if (userId == null) {
@@ -2578,7 +2666,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umUsersDeleteCall(userId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umUsersDeleteCall(userId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2589,7 +2677,7 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2608,7 +2696,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2629,8 +2718,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2640,10 +2729,10 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersDeleteAsync(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call umUsersDeleteAsync(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umUsersDeleteValidateBeforeCall(userId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = umUsersDeleteValidateBeforeCall(userId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -2651,8 +2740,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2662,7 +2751,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersFindByIdCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    public okhttp3.Call umUsersFindByIdCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2678,7 +2767,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2702,11 +2790,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umUsersFindByIdValidateBeforeCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    private okhttp3.Call umUsersFindByIdValidateBeforeCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'userId' is set
         if (userId == null) {
@@ -2714,7 +2802,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umUsersFindByIdCall(userId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umUsersFindByIdCall(userId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2725,7 +2813,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return User
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2746,7 +2835,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;User&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2768,8 +2858,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2779,21 +2869,21 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersFindByIdAsync(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    public okhttp3.Call umUsersFindByIdAsync(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umUsersFindByIdValidateBeforeCall(userId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umUsersFindByIdValidateBeforeCall(userId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<User>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
      * Build call for umUsersGet
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination). (optional, default to 100)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2803,7 +2893,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersGetCall(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Users> _callback) throws ApiException {
+    public okhttp3.Call umUsersGetCall(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2818,17 +2908,25 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
-
         if (offset != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
         }
-
         if (limit != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -2850,14 +2948,14 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umUsersGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Users> _callback) throws ApiException {
+    private okhttp3.Call umUsersGetValidateBeforeCall(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
 
-        okhttp3.Call localVarCall = umUsersGetCall(pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = umUsersGetCall(pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -2867,9 +2965,12 @@ public class UserManagementApi {
      * List all the users in your account.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination). (optional, default to 100)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return Users
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2879,8 +2980,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public Users umUsersGet(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<Users> localVarResp = umUsersGetWithHttpInfo(pretty, depth, xContractNumber, offset, limit);
+    public Users umUsersGet(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<Users> localVarResp = umUsersGetWithHttpInfo(pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -2889,9 +2990,12 @@ public class UserManagementApi {
      * List all the users in your account.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination). (optional, default to 100)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;Users&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2901,8 +3005,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<Users> umUsersGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = umUsersGetValidateBeforeCall(pretty, depth, xContractNumber, offset, limit, null);
+    public ApiResponse<Users> umUsersGetWithHttpInfo(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = umUsersGetValidateBeforeCall(pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<Users>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2912,10 +3016,10 @@ public class UserManagementApi {
      * List all the users in your account.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination). (optional, default to 100)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2925,11 +3029,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<Users> _callback) throws ApiException {
+    public okhttp3.Call umUsersGetAsync(Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<Users> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umUsersGetValidateBeforeCall(pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = umUsersGetValidateBeforeCall(pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<Users>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2937,8 +3041,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2948,7 +3052,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersGroupsGetCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<ResourceGroups> _callback) throws ApiException {
+    public okhttp3.Call umUsersGroupsGetCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2964,9 +3068,19 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -2988,11 +3102,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umUsersGroupsGetValidateBeforeCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<ResourceGroups> _callback) throws ApiException {
+    private okhttp3.Call umUsersGroupsGetValidateBeforeCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'userId' is set
         if (userId == null) {
@@ -3000,7 +3114,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umUsersGroupsGetCall(userId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umUsersGroupsGetCall(userId, pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -3011,7 +3125,10 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ResourceGroups
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3021,8 +3138,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ResourceGroups umUsersGroupsGet(String userId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<ResourceGroups> localVarResp = umUsersGroupsGetWithHttpInfo(userId, pretty, depth, xContractNumber);
+    public ResourceGroups umUsersGroupsGet(String userId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<ResourceGroups> localVarResp = umUsersGroupsGetWithHttpInfo(userId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -3032,7 +3149,10 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;ResourceGroups&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3042,8 +3162,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ResourceGroups> umUsersGroupsGetWithHttpInfo(String userId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = umUsersGroupsGetValidateBeforeCall(userId, pretty, depth, xContractNumber, null);
+    public ApiResponse<ResourceGroups> umUsersGroupsGetWithHttpInfo(String userId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = umUsersGroupsGetValidateBeforeCall(userId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<ResourceGroups>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -3054,8 +3174,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -3065,11 +3185,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersGroupsGetAsync(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<ResourceGroups> _callback) throws ApiException {
+    public okhttp3.Call umUsersGroupsGetAsync(String userId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<ResourceGroups> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umUsersGroupsGetValidateBeforeCall(userId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umUsersGroupsGetValidateBeforeCall(userId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<ResourceGroups>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -3077,8 +3197,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -3088,7 +3208,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersOwnsGetCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<ResourcesUsers> _callback) throws ApiException {
+    public okhttp3.Call umUsersOwnsGetCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -3104,9 +3224,19 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -3128,11 +3258,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umUsersOwnsGetValidateBeforeCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<ResourcesUsers> _callback) throws ApiException {
+    private okhttp3.Call umUsersOwnsGetValidateBeforeCall(String userId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'userId' is set
         if (userId == null) {
@@ -3140,7 +3270,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umUsersOwnsGetCall(userId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umUsersOwnsGetCall(userId, pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -3151,7 +3281,10 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ResourcesUsers
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3161,8 +3294,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ResourcesUsers umUsersOwnsGet(String userId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<ResourcesUsers> localVarResp = umUsersOwnsGetWithHttpInfo(userId, pretty, depth, xContractNumber);
+    public ResourcesUsers umUsersOwnsGet(String userId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<ResourcesUsers> localVarResp = umUsersOwnsGetWithHttpInfo(userId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -3172,7 +3305,10 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;ResourcesUsers&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3182,8 +3318,8 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<ResourcesUsers> umUsersOwnsGetWithHttpInfo(String userId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = umUsersOwnsGetValidateBeforeCall(userId, pretty, depth, xContractNumber, null);
+    public ApiResponse<ResourcesUsers> umUsersOwnsGetWithHttpInfo(String userId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = umUsersOwnsGetValidateBeforeCall(userId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<ResourcesUsers>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -3194,8 +3330,8 @@ public class UserManagementApi {
      * @param userId The unique ID of the user. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -3205,11 +3341,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersOwnsGetAsync(String userId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<ResourcesUsers> _callback) throws ApiException {
+    public okhttp3.Call umUsersOwnsGetAsync(String userId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<ResourcesUsers> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umUsersOwnsGetValidateBeforeCall(userId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umUsersOwnsGetValidateBeforeCall(userId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<ResourcesUsers>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -3217,8 +3353,8 @@ public class UserManagementApi {
      * @param user The user to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -3228,7 +3364,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersPostCall(UserPost user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    public okhttp3.Call umUsersPostCall(UserPost user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = user;
 
         // create path and map variables
@@ -3243,7 +3379,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -3267,11 +3402,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umUsersPostValidateBeforeCall(UserPost user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    private okhttp3.Call umUsersPostValidateBeforeCall(UserPost user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'user' is set
         if (user == null) {
@@ -3279,7 +3414,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umUsersPostCall(user, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umUsersPostCall(user, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -3290,7 +3425,8 @@ public class UserManagementApi {
      * @param user The user to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return User
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3311,7 +3447,8 @@ public class UserManagementApi {
      * @param user The user to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;User&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3333,8 +3470,8 @@ public class UserManagementApi {
      * @param user The user to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -3344,11 +3481,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersPostAsync(UserPost user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    public okhttp3.Call umUsersPostAsync(UserPost user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umUsersPostValidateBeforeCall(user, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umUsersPostValidateBeforeCall(user, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<User>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -3357,8 +3494,8 @@ public class UserManagementApi {
      * @param user The modified user (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -3368,7 +3505,7 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersPutCall(String userId, UserPut user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    public okhttp3.Call umUsersPutCall(String userId, UserPut user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = user;
 
         // create path and map variables
@@ -3384,7 +3521,6 @@ public class UserManagementApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -3408,11 +3544,11 @@ public class UserManagementApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call umUsersPutValidateBeforeCall(String userId, UserPut user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    private okhttp3.Call umUsersPutValidateBeforeCall(String userId, UserPut user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'userId' is set
         if (userId == null) {
@@ -3425,7 +3561,7 @@ public class UserManagementApi {
         }
         
 
-        okhttp3.Call localVarCall = umUsersPutCall(userId, user, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umUsersPutCall(userId, user, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -3437,7 +3573,8 @@ public class UserManagementApi {
      * @param user The modified user (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return User
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3459,7 +3596,8 @@ public class UserManagementApi {
      * @param user The modified user (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;User&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3482,8 +3620,8 @@ public class UserManagementApi {
      * @param user The modified user (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -3493,11 +3631,11 @@ public class UserManagementApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call umUsersPutAsync(String userId, UserPut user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> _callback) throws ApiException {
+    public okhttp3.Call umUsersPutAsync(String userId, UserPut user, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<User> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = umUsersPutValidateBeforeCall(userId, user, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = umUsersPutValidateBeforeCall(userId, user, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<User>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
 }

@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * NetworkLoadBalancerForwardingRuleTargetHealthCheck
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-16T10:06:24.683Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRuleTargetHealthCheck {
   public static final String SERIALIZED_NAME_CHECK = "check";
@@ -50,11 +50,11 @@ public class NetworkLoadBalancerForwardingRuleTargetHealthCheck {
   }
 
    /**
-   * Check specifies whether the target VM&#39;s health is checked. If turned off, a target VM is always considered available. If turned on, the target VM is available when accepting periodic TCP connections, to ensure that it is really able to serve requests. The address and port to send the tests to are those of the target VM. The health check only consists of a connection attempt.
+   * Makes the target available only if it accepts periodic health check TCP connection attempts; when turned off, the target is considered always available. The health check only consists of a connection attempt to the address and port of the target.
    * @return check
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Check specifies whether the target VM's health is checked. If turned off, a target VM is always considered available. If turned on, the target VM is available when accepting periodic TCP connections, to ensure that it is really able to serve requests. The address and port to send the tests to are those of the target VM. The health check only consists of a connection attempt.")
+  @ApiModelProperty(value = "Makes the target available only if it accepts periodic health check TCP connection attempts; when turned off, the target is considered always available. The health check only consists of a connection attempt to the address and port of the target.")
 
   public Boolean getCheck() {
     return check;
@@ -73,11 +73,11 @@ public class NetworkLoadBalancerForwardingRuleTargetHealthCheck {
   }
 
    /**
-   * CheckInterval determines the duration (in milliseconds) between consecutive health checks. If unspecified a default of 2000 ms is used.
+   * The interval in milliseconds between consecutive health checks; default is 2000.
    * @return checkInterval
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2000", value = "CheckInterval determines the duration (in milliseconds) between consecutive health checks. If unspecified a default of 2000 ms is used.")
+  @ApiModelProperty(example = "2000", value = "The interval in milliseconds between consecutive health checks; default is 2000.")
 
   public Integer getCheckInterval() {
     return checkInterval;
@@ -96,11 +96,11 @@ public class NetworkLoadBalancerForwardingRuleTargetHealthCheck {
   }
 
    /**
-   * Maintenance specifies if a target VM should be marked as down, even if it is not.
+   * Maintenance mode prevents the target from receiving balanced traffic.
    * @return maintenance
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Maintenance specifies if a target VM should be marked as down, even if it is not.")
+  @ApiModelProperty(value = "Maintenance mode prevents the target from receiving balanced traffic.")
 
   public Boolean getMaintenance() {
     return maintenance;

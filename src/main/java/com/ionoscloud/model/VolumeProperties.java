@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * VolumeProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-16T10:06:24.683Z[Etc/UTC]")
 
 public class VolumeProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -174,7 +174,7 @@ public class VolumeProperties {
   private List<String> sshKeys = null;
 
   /**
-   * The bus type of the volume. Default is VIRTIO
+   * The bus type for this volume; default is VIRTIO.
    */
   @JsonAdapter(BusEnum.Adapter.class)
   public enum BusEnum {
@@ -237,6 +237,8 @@ public class VolumeProperties {
     WINDOWS("WINDOWS"),
     
     WINDOWS2016("WINDOWS2016"),
+    
+    WINDOWS2022("WINDOWS2022"),
     
     LINUX("LINUX"),
     
@@ -324,6 +326,10 @@ public class VolumeProperties {
   public static final String SERIALIZED_NAME_USER_DATA = "userData";
   @SerializedName(SERIALIZED_NAME_USER_DATA)
   private String userData;
+
+  public static final String SERIALIZED_NAME_BOOT_SERVER = "bootServer";
+  @SerializedName(SERIALIZED_NAME_BOOT_SERVER)
+  private String bootServer;
 
 
   public VolumeProperties name(String name) {
@@ -524,11 +530,11 @@ public class VolumeProperties {
   }
 
    /**
-   * The bus type of the volume. Default is VIRTIO
+   * The bus type for this volume; default is VIRTIO.
    * @return bus
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "VIRTIO", value = "The bus type of the volume. Default is VIRTIO")
+  @ApiModelProperty(example = "VIRTIO", value = "The bus type for this volume; default is VIRTIO.")
 
   public BusEnum getBus() {
     return bus;
@@ -775,6 +781,23 @@ public class VolumeProperties {
   }
 
 
+   /**
+   * The UUID of the attached server.
+   * @return bootServer
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "25f67991-0f51-4efc-a8ad-ef1fb31a481c", value = "The UUID of the attached server.")
+
+  public String getBootServer() {
+    return bootServer;
+  }
+
+
+  public void setBootServer(String bootServer) {
+    this.bootServer = bootServer;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -784,7 +807,7 @@ public class VolumeProperties {
       return false;
     }
     VolumeProperties volumeProperties = (VolumeProperties) o;
-    return Objects.equals(this.name, volumeProperties.name) && Objects.equals(this.type, volumeProperties.type) && Objects.equals(this.size, volumeProperties.size) && Objects.equals(this.availabilityZone, volumeProperties.availabilityZone) && Objects.equals(this.image, volumeProperties.image) && Objects.equals(this.imagePassword, volumeProperties.imagePassword) && Objects.equals(this.imageAlias, volumeProperties.imageAlias) && Objects.equals(this.sshKeys, volumeProperties.sshKeys) && Objects.equals(this.bus, volumeProperties.bus) && Objects.equals(this.licenceType, volumeProperties.licenceType) && Objects.equals(this.cpuHotPlug, volumeProperties.cpuHotPlug) && Objects.equals(this.ramHotPlug, volumeProperties.ramHotPlug) && Objects.equals(this.nicHotPlug, volumeProperties.nicHotPlug) && Objects.equals(this.nicHotUnplug, volumeProperties.nicHotUnplug) && Objects.equals(this.discVirtioHotPlug, volumeProperties.discVirtioHotPlug) && Objects.equals(this.discVirtioHotUnplug, volumeProperties.discVirtioHotUnplug) && Objects.equals(this.deviceNumber, volumeProperties.deviceNumber) && Objects.equals(this.pciSlot, volumeProperties.pciSlot) && Objects.equals(this.backupunitId, volumeProperties.backupunitId) && Objects.equals(this.userData, volumeProperties.userData);
+    return Objects.equals(this.name, volumeProperties.name) && Objects.equals(this.type, volumeProperties.type) && Objects.equals(this.size, volumeProperties.size) && Objects.equals(this.availabilityZone, volumeProperties.availabilityZone) && Objects.equals(this.image, volumeProperties.image) && Objects.equals(this.imagePassword, volumeProperties.imagePassword) && Objects.equals(this.imageAlias, volumeProperties.imageAlias) && Objects.equals(this.sshKeys, volumeProperties.sshKeys) && Objects.equals(this.bus, volumeProperties.bus) && Objects.equals(this.licenceType, volumeProperties.licenceType) && Objects.equals(this.cpuHotPlug, volumeProperties.cpuHotPlug) && Objects.equals(this.ramHotPlug, volumeProperties.ramHotPlug) && Objects.equals(this.nicHotPlug, volumeProperties.nicHotPlug) && Objects.equals(this.nicHotUnplug, volumeProperties.nicHotUnplug) && Objects.equals(this.discVirtioHotPlug, volumeProperties.discVirtioHotPlug) && Objects.equals(this.discVirtioHotUnplug, volumeProperties.discVirtioHotUnplug) && Objects.equals(this.deviceNumber, volumeProperties.deviceNumber) && Objects.equals(this.pciSlot, volumeProperties.pciSlot) && Objects.equals(this.backupunitId, volumeProperties.backupunitId) && Objects.equals(this.userData, volumeProperties.userData) && Objects.equals(this.bootServer, volumeProperties.bootServer);
   }
 
 
@@ -814,6 +837,7 @@ public class VolumeProperties {
     sb.append("    pciSlot: ").append(toIndentedString(pciSlot)).append("\n");
     sb.append("    backupunitId: ").append(toIndentedString(backupunitId)).append("\n");
     sb.append("    userData: ").append(toIndentedString(userData)).append("\n");
+    sb.append("    bootServer: ").append(toIndentedString(bootServer)).append("\n");
     sb.append("}");
     return sb.toString();
   }

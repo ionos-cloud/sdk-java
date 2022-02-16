@@ -25,11 +25,12 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * NicProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-16T10:06:24.683Z[Etc/UTC]")
 
 public class NicProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -57,7 +58,7 @@ public class NicProperties {
   private Boolean firewallActive;
 
   /**
-   * The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is taken.
+   * The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is used.
    */
   @JsonAdapter(FirewallTypeEnum.Adapter.class)
   public enum FirewallTypeEnum {
@@ -265,11 +266,11 @@ public class NicProperties {
   }
 
    /**
-   * The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is taken.
+   * The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is used.
    * @return firewallType
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "INGRESS", value = "The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is taken.")
+  @ApiModelProperty(example = "INGRESS", value = "The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is used.")
 
   public FirewallTypeEnum getFirewallType() {
     return firewallType;
@@ -282,11 +283,11 @@ public class NicProperties {
 
 
    /**
-   * The Logical Unit Number (LUN) of the storage volume. Null if this NIC was create from CloudAPI and no DCD changes were done on the Datacenter.
+   * The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.
    * @return deviceNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "3", value = "The Logical Unit Number (LUN) of the storage volume. Null if this NIC was create from CloudAPI and no DCD changes were done on the Datacenter.")
+  @ApiModelProperty(example = "3", value = "The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.")
 
   public Integer getDeviceNumber() {
     return deviceNumber;
@@ -299,11 +300,11 @@ public class NicProperties {
 
 
    /**
-   * The PCI slot number of the NIC.
+   * The PCI slot number for the NIC.
    * @return pciSlot
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "7", value = "The PCI slot number of the NIC.")
+  @ApiModelProperty(example = "7", value = "The PCI slot number for the NIC.")
 
   public Integer getPciSlot() {
     return pciSlot;

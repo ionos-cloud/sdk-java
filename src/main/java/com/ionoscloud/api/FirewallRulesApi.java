@@ -65,8 +65,8 @@ public class FirewallRulesApi {
      * @param firewallruleId The unique ID of the firewall rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -76,7 +76,7 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesDeleteCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesDeleteCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -95,7 +95,6 @@ public class FirewallRulesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -119,11 +118,11 @@ public class FirewallRulesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFirewallrulesDeleteValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFirewallrulesDeleteValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -146,7 +145,7 @@ public class FirewallRulesApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesDeleteCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesDeleteCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -160,7 +159,7 @@ public class FirewallRulesApi {
      * @param firewallruleId The unique ID of the firewall rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -182,7 +181,8 @@ public class FirewallRulesApi {
      * @param firewallruleId The unique ID of the firewall rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -206,8 +206,8 @@ public class FirewallRulesApi {
      * @param firewallruleId The unique ID of the firewall rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -217,10 +217,10 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesDeleteAsync(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesDeleteAsync(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesDeleteValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesDeleteValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -231,8 +231,8 @@ public class FirewallRulesApi {
      * @param firewallruleId The unique ID of the firewall rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -242,7 +242,7 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesFindByIdCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesFindByIdCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -261,7 +261,6 @@ public class FirewallRulesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -285,11 +284,11 @@ public class FirewallRulesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFirewallrulesFindByIdValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFirewallrulesFindByIdValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -312,7 +311,7 @@ public class FirewallRulesApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesFindByIdCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesFindByIdCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -326,7 +325,8 @@ public class FirewallRulesApi {
      * @param firewallruleId The unique ID of the firewall rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return FirewallRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -350,7 +350,8 @@ public class FirewallRulesApi {
      * @param firewallruleId The unique ID of the firewall rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;FirewallRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -375,8 +376,8 @@ public class FirewallRulesApi {
      * @param firewallruleId The unique ID of the firewall rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -386,11 +387,11 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesFindByIdAsync(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesFindByIdAsync(String datacenterId, String serverId, String nicId, String firewallruleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesFindByIdValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesFindByIdValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<FirewallRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -400,10 +401,10 @@ public class FirewallRulesApi {
      * @param nicId The unique ID of the NIC. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -413,7 +414,7 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesGetCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<FirewallRules> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesGetCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -431,17 +432,25 @@ public class FirewallRulesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
-
         if (offset != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
         }
-
         if (limit != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -463,11 +472,11 @@ public class FirewallRulesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFirewallrulesGetValidateBeforeCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<FirewallRules> _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFirewallrulesGetValidateBeforeCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -485,7 +494,7 @@ public class FirewallRulesApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesGetCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesGetCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -498,9 +507,12 @@ public class FirewallRulesApi {
      * @param nicId The unique ID of the NIC. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return FirewallRules
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -510,8 +522,8 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public FirewallRules datacentersServersNicsFirewallrulesGet(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<FirewallRules> localVarResp = datacentersServersNicsFirewallrulesGetWithHttpInfo(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit);
+    public FirewallRules datacentersServersNicsFirewallrulesGet(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<FirewallRules> localVarResp = datacentersServersNicsFirewallrulesGetWithHttpInfo(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -523,9 +535,12 @@ public class FirewallRulesApi {
      * @param nicId The unique ID of the NIC. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;FirewallRules&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -535,8 +550,8 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<FirewallRules> datacentersServersNicsFirewallrulesGetWithHttpInfo(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesGetValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit, null);
+    public ApiResponse<FirewallRules> datacentersServersNicsFirewallrulesGetWithHttpInfo(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesGetValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<FirewallRules>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -549,10 +564,10 @@ public class FirewallRulesApi {
      * @param nicId The unique ID of the NIC. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -562,11 +577,11 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesGetAsync(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<FirewallRules> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesGetAsync(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<FirewallRules> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesGetValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesGetValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<FirewallRules>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -578,8 +593,8 @@ public class FirewallRulesApi {
      * @param firewallrule The properties of the firewall rule to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -589,7 +604,7 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesPatchCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallruleProperties firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesPatchCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallruleProperties firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = firewallrule;
 
         // create path and map variables
@@ -608,7 +623,6 @@ public class FirewallRulesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -632,11 +646,11 @@ public class FirewallRulesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFirewallrulesPatchValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallruleProperties firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFirewallrulesPatchValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallruleProperties firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -664,7 +678,7 @@ public class FirewallRulesApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPatchCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPatchCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -679,7 +693,8 @@ public class FirewallRulesApi {
      * @param firewallrule The properties of the firewall rule to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return FirewallRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -704,7 +719,8 @@ public class FirewallRulesApi {
      * @param firewallrule The properties of the firewall rule to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;FirewallRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -730,8 +746,8 @@ public class FirewallRulesApi {
      * @param firewallrule The properties of the firewall rule to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -741,11 +757,11 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesPatchAsync(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallruleProperties firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesPatchAsync(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallruleProperties firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPatchValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPatchValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<FirewallRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -756,8 +772,8 @@ public class FirewallRulesApi {
      * @param firewallrule The firewall rule to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -767,7 +783,7 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesPostCall(String datacenterId, String serverId, String nicId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesPostCall(String datacenterId, String serverId, String nicId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = firewallrule;
 
         // create path and map variables
@@ -785,7 +801,6 @@ public class FirewallRulesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -809,11 +824,11 @@ public class FirewallRulesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFirewallrulesPostValidateBeforeCall(String datacenterId, String serverId, String nicId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFirewallrulesPostValidateBeforeCall(String datacenterId, String serverId, String nicId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -836,7 +851,7 @@ public class FirewallRulesApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPostCall(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPostCall(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -850,7 +865,8 @@ public class FirewallRulesApi {
      * @param firewallrule The firewall rule to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return FirewallRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -874,7 +890,8 @@ public class FirewallRulesApi {
      * @param firewallrule The firewall rule to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;FirewallRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -899,8 +916,8 @@ public class FirewallRulesApi {
      * @param firewallrule The firewall rule to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -910,11 +927,11 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesPostAsync(String datacenterId, String serverId, String nicId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesPostAsync(String datacenterId, String serverId, String nicId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPostValidateBeforeCall(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPostValidateBeforeCall(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<FirewallRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -926,8 +943,8 @@ public class FirewallRulesApi {
      * @param firewallrule The modified firewall rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -937,7 +954,7 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesPutCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesPutCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = firewallrule;
 
         // create path and map variables
@@ -956,7 +973,6 @@ public class FirewallRulesApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -980,11 +996,11 @@ public class FirewallRulesApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFirewallrulesPutValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFirewallrulesPutValidateBeforeCall(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1012,7 +1028,7 @@ public class FirewallRulesApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPutCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPutCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1027,7 +1043,8 @@ public class FirewallRulesApi {
      * @param firewallrule The modified firewall rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return FirewallRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1052,7 +1069,8 @@ public class FirewallRulesApi {
      * @param firewallrule The modified firewall rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;FirewallRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1078,8 +1096,8 @@ public class FirewallRulesApi {
      * @param firewallrule The modified firewall rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1089,11 +1107,11 @@ public class FirewallRulesApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFirewallrulesPutAsync(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFirewallrulesPutAsync(String datacenterId, String serverId, String nicId, String firewallruleId, FirewallRule firewallrule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FirewallRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPutValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFirewallrulesPutValidateBeforeCall(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<FirewallRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
 }

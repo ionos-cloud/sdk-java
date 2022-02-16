@@ -72,8 +72,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -83,7 +83,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersDeleteCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersDeleteCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -100,7 +100,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -124,11 +123,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersDeleteValidateBeforeCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersDeleteValidateBeforeCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -141,7 +140,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersDeleteCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersDeleteCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -153,7 +152,7 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -173,7 +172,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -195,8 +195,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -206,10 +206,10 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersDeleteAsync(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersDeleteAsync(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersDeleteValidateBeforeCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersDeleteValidateBeforeCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -218,8 +218,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -229,7 +229,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFindByNetworkLoadBalancerIdCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFindByNetworkLoadBalancerIdCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -246,7 +246,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -270,11 +269,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersFindByNetworkLoadBalancerIdValidateBeforeCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersFindByNetworkLoadBalancerIdValidateBeforeCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -287,7 +286,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFindByNetworkLoadBalancerIdCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFindByNetworkLoadBalancerIdCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -299,7 +298,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NetworkLoadBalancer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -321,7 +321,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NetworkLoadBalancer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -344,8 +345,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -355,11 +356,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFindByNetworkLoadBalancerIdAsync(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFindByNetworkLoadBalancerIdAsync(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFindByNetworkLoadBalancerIdValidateBeforeCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFindByNetworkLoadBalancerIdValidateBeforeCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NetworkLoadBalancer>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -369,8 +370,8 @@ public class NetworkLoadBalancersApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -380,7 +381,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsDeleteCall(String datacenterId, String networkLoadBalancerId, String flowLogId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsDeleteCall(String datacenterId, String networkLoadBalancerId, String flowLogId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -398,7 +399,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -422,11 +422,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersFlowlogsDeleteValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String flowLogId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersFlowlogsDeleteValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String flowLogId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -444,7 +444,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsDeleteCall(datacenterId, networkLoadBalancerId, flowLogId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsDeleteCall(datacenterId, networkLoadBalancerId, flowLogId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -457,7 +457,7 @@ public class NetworkLoadBalancersApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -478,7 +478,8 @@ public class NetworkLoadBalancersApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -501,8 +502,8 @@ public class NetworkLoadBalancersApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -512,10 +513,10 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsDeleteAsync(String datacenterId, String networkLoadBalancerId, String flowLogId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsDeleteAsync(String datacenterId, String networkLoadBalancerId, String flowLogId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsDeleteValidateBeforeCall(datacenterId, networkLoadBalancerId, flowLogId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsDeleteValidateBeforeCall(datacenterId, networkLoadBalancerId, flowLogId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -525,8 +526,8 @@ public class NetworkLoadBalancersApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -536,7 +537,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsFindByFlowLogIdCall(String datacenterId, String networkLoadBalancerId, String flowLogId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsFindByFlowLogIdCall(String datacenterId, String networkLoadBalancerId, String flowLogId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -554,7 +555,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -578,11 +578,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersFlowlogsFindByFlowLogIdValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String flowLogId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersFlowlogsFindByFlowLogIdValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String flowLogId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -600,7 +600,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsFindByFlowLogIdCall(datacenterId, networkLoadBalancerId, flowLogId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsFindByFlowLogIdCall(datacenterId, networkLoadBalancerId, flowLogId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -613,7 +613,8 @@ public class NetworkLoadBalancersApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -636,7 +637,8 @@ public class NetworkLoadBalancersApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -660,8 +662,8 @@ public class NetworkLoadBalancersApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -671,11 +673,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsFindByFlowLogIdAsync(String datacenterId, String networkLoadBalancerId, String flowLogId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsFindByFlowLogIdAsync(String datacenterId, String networkLoadBalancerId, String flowLogId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsFindByFlowLogIdValidateBeforeCall(datacenterId, networkLoadBalancerId, flowLogId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsFindByFlowLogIdValidateBeforeCall(datacenterId, networkLoadBalancerId, flowLogId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -684,8 +686,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -695,7 +697,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsGetCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLogs> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsGetCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -712,9 +714,19 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -736,11 +748,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersFlowlogsGetValidateBeforeCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLogs> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersFlowlogsGetValidateBeforeCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -753,7 +765,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsGetCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsGetCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -765,7 +777,10 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return FlowLogs
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -775,8 +790,8 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public FlowLogs datacentersNetworkloadbalancersFlowlogsGet(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<FlowLogs> localVarResp = datacentersNetworkloadbalancersFlowlogsGetWithHttpInfo(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber);
+    public FlowLogs datacentersNetworkloadbalancersFlowlogsGet(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<FlowLogs> localVarResp = datacentersNetworkloadbalancersFlowlogsGetWithHttpInfo(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -787,7 +802,10 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;FlowLogs&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -797,8 +815,8 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<FlowLogs> datacentersNetworkloadbalancersFlowlogsGetWithHttpInfo(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsGetValidateBeforeCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, null);
+    public ApiResponse<FlowLogs> datacentersNetworkloadbalancersFlowlogsGetWithHttpInfo(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsGetValidateBeforeCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<FlowLogs>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -810,8 +828,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -821,11 +839,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsGetAsync(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLogs> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsGetAsync(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<FlowLogs> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsGetValidateBeforeCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsGetValidateBeforeCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<FlowLogs>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -836,8 +854,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerFlowLogProperties The properties of the Flow Log to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -847,7 +865,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsPatchCall(String datacenterId, String networkLoadBalancerId, String flowLogId, FlowLogProperties networkLoadBalancerFlowLogProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsPatchCall(String datacenterId, String networkLoadBalancerId, String flowLogId, FlowLogProperties networkLoadBalancerFlowLogProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = networkLoadBalancerFlowLogProperties;
 
         // create path and map variables
@@ -865,7 +883,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -889,11 +906,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersFlowlogsPatchValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String flowLogId, FlowLogProperties networkLoadBalancerFlowLogProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersFlowlogsPatchValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String flowLogId, FlowLogProperties networkLoadBalancerFlowLogProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -916,7 +933,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsPatchCall(datacenterId, networkLoadBalancerId, flowLogId, networkLoadBalancerFlowLogProperties, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsPatchCall(datacenterId, networkLoadBalancerId, flowLogId, networkLoadBalancerFlowLogProperties, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -930,7 +947,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerFlowLogProperties The properties of the Flow Log to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -954,7 +972,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerFlowLogProperties The properties of the Flow Log to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -979,8 +998,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerFlowLogProperties The properties of the Flow Log to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -990,11 +1009,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsPatchAsync(String datacenterId, String networkLoadBalancerId, String flowLogId, FlowLogProperties networkLoadBalancerFlowLogProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsPatchAsync(String datacenterId, String networkLoadBalancerId, String flowLogId, FlowLogProperties networkLoadBalancerFlowLogProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsPatchValidateBeforeCall(datacenterId, networkLoadBalancerId, flowLogId, networkLoadBalancerFlowLogProperties, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsPatchValidateBeforeCall(datacenterId, networkLoadBalancerId, flowLogId, networkLoadBalancerFlowLogProperties, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1004,8 +1023,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerFlowLog The Flow Log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1015,7 +1034,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsPostCall(String datacenterId, String networkLoadBalancerId, FlowLog networkLoadBalancerFlowLog, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsPostCall(String datacenterId, String networkLoadBalancerId, FlowLog networkLoadBalancerFlowLog, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = networkLoadBalancerFlowLog;
 
         // create path and map variables
@@ -1032,7 +1051,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1056,11 +1074,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersFlowlogsPostValidateBeforeCall(String datacenterId, String networkLoadBalancerId, FlowLog networkLoadBalancerFlowLog, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersFlowlogsPostValidateBeforeCall(String datacenterId, String networkLoadBalancerId, FlowLog networkLoadBalancerFlowLog, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1078,7 +1096,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsPostCall(datacenterId, networkLoadBalancerId, networkLoadBalancerFlowLog, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsPostCall(datacenterId, networkLoadBalancerId, networkLoadBalancerFlowLog, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1091,7 +1109,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerFlowLog The Flow Log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1114,7 +1133,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerFlowLog The Flow Log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1138,8 +1158,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerFlowLog The Flow Log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1149,11 +1169,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsPostAsync(String datacenterId, String networkLoadBalancerId, FlowLog networkLoadBalancerFlowLog, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsPostAsync(String datacenterId, String networkLoadBalancerId, FlowLog networkLoadBalancerFlowLog, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsPostValidateBeforeCall(datacenterId, networkLoadBalancerId, networkLoadBalancerFlowLog, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsPostValidateBeforeCall(datacenterId, networkLoadBalancerId, networkLoadBalancerFlowLog, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1164,8 +1184,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerFlowLog The modified NLB Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1175,7 +1195,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsPutCall(String datacenterId, String networkLoadBalancerId, String flowLogId, FlowLogPut networkLoadBalancerFlowLog, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsPutCall(String datacenterId, String networkLoadBalancerId, String flowLogId, FlowLogPut networkLoadBalancerFlowLog, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = networkLoadBalancerFlowLog;
 
         // create path and map variables
@@ -1193,7 +1213,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1217,11 +1236,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersFlowlogsPutValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String flowLogId, FlowLogPut networkLoadBalancerFlowLog, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersFlowlogsPutValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String flowLogId, FlowLogPut networkLoadBalancerFlowLog, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1244,7 +1263,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsPutCall(datacenterId, networkLoadBalancerId, flowLogId, networkLoadBalancerFlowLog, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsPutCall(datacenterId, networkLoadBalancerId, flowLogId, networkLoadBalancerFlowLog, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1258,7 +1277,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerFlowLog The modified NLB Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1282,7 +1302,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerFlowLog The modified NLB Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1307,8 +1328,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerFlowLog The modified NLB Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1318,11 +1339,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsPutAsync(String datacenterId, String networkLoadBalancerId, String flowLogId, FlowLogPut networkLoadBalancerFlowLog, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersFlowlogsPutAsync(String datacenterId, String networkLoadBalancerId, String flowLogId, FlowLogPut networkLoadBalancerFlowLog, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<FlowLog> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsPutValidateBeforeCall(datacenterId, networkLoadBalancerId, flowLogId, networkLoadBalancerFlowLog, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersFlowlogsPutValidateBeforeCall(datacenterId, networkLoadBalancerId, flowLogId, networkLoadBalancerFlowLog, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1332,8 +1353,8 @@ public class NetworkLoadBalancersApi {
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1343,7 +1364,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesDeleteCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesDeleteCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1361,7 +1382,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1385,11 +1405,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersForwardingrulesDeleteValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersForwardingrulesDeleteValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1407,7 +1427,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesDeleteCall(datacenterId, networkLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesDeleteCall(datacenterId, networkLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1420,7 +1440,7 @@ public class NetworkLoadBalancersApi {
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1441,7 +1461,8 @@ public class NetworkLoadBalancersApi {
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1464,8 +1485,8 @@ public class NetworkLoadBalancersApi {
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1475,10 +1496,10 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesDeleteAsync(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesDeleteAsync(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesDeleteValidateBeforeCall(datacenterId, networkLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesDeleteValidateBeforeCall(datacenterId, networkLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -1488,8 +1509,8 @@ public class NetworkLoadBalancersApi {
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1499,7 +1520,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleIdCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleIdCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1517,7 +1538,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1541,11 +1561,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleIdValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleIdValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1563,7 +1583,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleIdCall(datacenterId, networkLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleIdCall(datacenterId, networkLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1576,7 +1596,8 @@ public class NetworkLoadBalancersApi {
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NetworkLoadBalancerForwardingRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1599,7 +1620,8 @@ public class NetworkLoadBalancersApi {
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NetworkLoadBalancerForwardingRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1623,8 +1645,8 @@ public class NetworkLoadBalancersApi {
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1634,11 +1656,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleIdAsync(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleIdAsync(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleIdValidateBeforeCall(datacenterId, networkLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleIdValidateBeforeCall(datacenterId, networkLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NetworkLoadBalancerForwardingRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1647,8 +1669,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1658,7 +1680,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesGetCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRules> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesGetCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1675,9 +1697,19 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -1699,11 +1731,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersForwardingrulesGetValidateBeforeCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRules> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersForwardingrulesGetValidateBeforeCall(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1716,7 +1748,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesGetCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesGetCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -1728,7 +1760,10 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return NetworkLoadBalancerForwardingRules
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1738,8 +1773,8 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public NetworkLoadBalancerForwardingRules datacentersNetworkloadbalancersForwardingrulesGet(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<NetworkLoadBalancerForwardingRules> localVarResp = datacentersNetworkloadbalancersForwardingrulesGetWithHttpInfo(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber);
+    public NetworkLoadBalancerForwardingRules datacentersNetworkloadbalancersForwardingrulesGet(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<NetworkLoadBalancerForwardingRules> localVarResp = datacentersNetworkloadbalancersForwardingrulesGetWithHttpInfo(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -1750,7 +1785,10 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;NetworkLoadBalancerForwardingRules&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1760,8 +1798,8 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NetworkLoadBalancerForwardingRules> datacentersNetworkloadbalancersForwardingrulesGetWithHttpInfo(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesGetValidateBeforeCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, null);
+    public ApiResponse<NetworkLoadBalancerForwardingRules> datacentersNetworkloadbalancersForwardingrulesGetWithHttpInfo(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesGetValidateBeforeCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<NetworkLoadBalancerForwardingRules>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1773,8 +1811,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1784,11 +1822,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesGetAsync(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRules> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesGetAsync(String datacenterId, String networkLoadBalancerId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<NetworkLoadBalancerForwardingRules> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesGetValidateBeforeCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesGetValidateBeforeCall(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<NetworkLoadBalancerForwardingRules>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1799,8 +1837,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerForwardingRuleProperties The properties of the forwarding rule to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1810,7 +1848,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPatchCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, NetworkLoadBalancerForwardingRuleProperties networkLoadBalancerForwardingRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPatchCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, NetworkLoadBalancerForwardingRuleProperties networkLoadBalancerForwardingRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = networkLoadBalancerForwardingRuleProperties;
 
         // create path and map variables
@@ -1828,7 +1866,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1852,11 +1889,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPatchValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, NetworkLoadBalancerForwardingRuleProperties networkLoadBalancerForwardingRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPatchValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, NetworkLoadBalancerForwardingRuleProperties networkLoadBalancerForwardingRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1879,7 +1916,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesPatchCall(datacenterId, networkLoadBalancerId, forwardingRuleId, networkLoadBalancerForwardingRuleProperties, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesPatchCall(datacenterId, networkLoadBalancerId, forwardingRuleId, networkLoadBalancerForwardingRuleProperties, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1893,7 +1930,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerForwardingRuleProperties The properties of the forwarding rule to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NetworkLoadBalancerForwardingRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1917,7 +1955,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerForwardingRuleProperties The properties of the forwarding rule to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NetworkLoadBalancerForwardingRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1942,8 +1981,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerForwardingRuleProperties The properties of the forwarding rule to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1953,11 +1992,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPatchAsync(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, NetworkLoadBalancerForwardingRuleProperties networkLoadBalancerForwardingRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPatchAsync(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, NetworkLoadBalancerForwardingRuleProperties networkLoadBalancerForwardingRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesPatchValidateBeforeCall(datacenterId, networkLoadBalancerId, forwardingRuleId, networkLoadBalancerForwardingRuleProperties, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesPatchValidateBeforeCall(datacenterId, networkLoadBalancerId, forwardingRuleId, networkLoadBalancerForwardingRuleProperties, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NetworkLoadBalancerForwardingRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1967,8 +2006,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerForwardingRule The forwarding rule to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1978,7 +2017,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPostCall(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerForwardingRule networkLoadBalancerForwardingRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPostCall(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerForwardingRule networkLoadBalancerForwardingRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = networkLoadBalancerForwardingRule;
 
         // create path and map variables
@@ -1995,7 +2034,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2019,11 +2057,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPostValidateBeforeCall(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerForwardingRule networkLoadBalancerForwardingRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPostValidateBeforeCall(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerForwardingRule networkLoadBalancerForwardingRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2041,7 +2079,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesPostCall(datacenterId, networkLoadBalancerId, networkLoadBalancerForwardingRule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesPostCall(datacenterId, networkLoadBalancerId, networkLoadBalancerForwardingRule, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2054,7 +2092,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerForwardingRule The forwarding rule to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NetworkLoadBalancerForwardingRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2077,7 +2116,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerForwardingRule The forwarding rule to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NetworkLoadBalancerForwardingRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2101,8 +2141,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerForwardingRule The forwarding rule to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2112,11 +2152,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPostAsync(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerForwardingRule networkLoadBalancerForwardingRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPostAsync(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerForwardingRule networkLoadBalancerForwardingRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesPostValidateBeforeCall(datacenterId, networkLoadBalancerId, networkLoadBalancerForwardingRule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesPostValidateBeforeCall(datacenterId, networkLoadBalancerId, networkLoadBalancerForwardingRule, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NetworkLoadBalancerForwardingRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2127,8 +2167,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerForwardingRule The modified NLB forwarding rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2138,7 +2178,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPutCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, NetworkLoadBalancerForwardingRulePut networkLoadBalancerForwardingRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPutCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, NetworkLoadBalancerForwardingRulePut networkLoadBalancerForwardingRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = networkLoadBalancerForwardingRule;
 
         // create path and map variables
@@ -2156,7 +2196,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2180,11 +2219,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPutValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, NetworkLoadBalancerForwardingRulePut networkLoadBalancerForwardingRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPutValidateBeforeCall(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, NetworkLoadBalancerForwardingRulePut networkLoadBalancerForwardingRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2207,7 +2246,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesPutCall(datacenterId, networkLoadBalancerId, forwardingRuleId, networkLoadBalancerForwardingRule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesPutCall(datacenterId, networkLoadBalancerId, forwardingRuleId, networkLoadBalancerForwardingRule, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2221,7 +2260,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerForwardingRule The modified NLB forwarding rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NetworkLoadBalancerForwardingRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2245,7 +2285,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerForwardingRule The modified NLB forwarding rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NetworkLoadBalancerForwardingRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2270,8 +2311,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerForwardingRule The modified NLB forwarding rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2281,11 +2322,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPutAsync(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, NetworkLoadBalancerForwardingRulePut networkLoadBalancerForwardingRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersForwardingrulesPutAsync(String datacenterId, String networkLoadBalancerId, String forwardingRuleId, NetworkLoadBalancerForwardingRulePut networkLoadBalancerForwardingRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancerForwardingRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesPutValidateBeforeCall(datacenterId, networkLoadBalancerId, forwardingRuleId, networkLoadBalancerForwardingRule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersForwardingrulesPutValidateBeforeCall(datacenterId, networkLoadBalancerId, forwardingRuleId, networkLoadBalancerForwardingRule, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NetworkLoadBalancerForwardingRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2293,10 +2334,10 @@ public class NetworkLoadBalancersApi {
      * @param datacenterId The unique ID of the data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2306,7 +2347,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersGetCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<NetworkLoadBalancers> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersGetCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2322,17 +2363,25 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
-
         if (offset != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
         }
-
         if (limit != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -2354,11 +2403,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<NetworkLoadBalancers> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2366,7 +2415,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersGetCall(datacenterId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersGetCall(datacenterId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -2377,9 +2426,12 @@ public class NetworkLoadBalancersApi {
      * @param datacenterId The unique ID of the data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return NetworkLoadBalancers
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2389,8 +2441,8 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public NetworkLoadBalancers datacentersNetworkloadbalancersGet(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<NetworkLoadBalancers> localVarResp = datacentersNetworkloadbalancersGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber, offset, limit);
+    public NetworkLoadBalancers datacentersNetworkloadbalancersGet(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<NetworkLoadBalancers> localVarResp = datacentersNetworkloadbalancersGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -2400,9 +2452,12 @@ public class NetworkLoadBalancersApi {
      * @param datacenterId The unique ID of the data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;NetworkLoadBalancers&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2412,8 +2467,8 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NetworkLoadBalancers> datacentersNetworkloadbalancersGetWithHttpInfo(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersGetValidateBeforeCall(datacenterId, pretty, depth, xContractNumber, offset, limit, null);
+    public ApiResponse<NetworkLoadBalancers> datacentersNetworkloadbalancersGetWithHttpInfo(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersGetValidateBeforeCall(datacenterId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<NetworkLoadBalancers>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2424,10 +2479,10 @@ public class NetworkLoadBalancersApi {
      * @param datacenterId The unique ID of the data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2437,11 +2492,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersGetAsync(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, final ApiCallback<NetworkLoadBalancers> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersGetAsync(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<NetworkLoadBalancers> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersGetValidateBeforeCall(datacenterId, pretty, depth, xContractNumber, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersGetValidateBeforeCall(datacenterId, pretty, depth, xContractNumber, offset, limit,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<NetworkLoadBalancers>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2451,8 +2506,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerProperties The properties of the Network Load Balancer to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2462,7 +2517,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersPatchCall(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerProperties networkLoadBalancerProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersPatchCall(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerProperties networkLoadBalancerProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = networkLoadBalancerProperties;
 
         // create path and map variables
@@ -2479,7 +2534,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2503,11 +2557,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersPatchValidateBeforeCall(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerProperties networkLoadBalancerProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersPatchValidateBeforeCall(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerProperties networkLoadBalancerProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2525,7 +2579,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersPatchCall(datacenterId, networkLoadBalancerId, networkLoadBalancerProperties, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersPatchCall(datacenterId, networkLoadBalancerId, networkLoadBalancerProperties, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2538,7 +2592,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerProperties The properties of the Network Load Balancer to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NetworkLoadBalancer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2561,7 +2616,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerProperties The properties of the Network Load Balancer to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NetworkLoadBalancer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2585,8 +2641,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancerProperties The properties of the Network Load Balancer to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2596,11 +2652,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersPatchAsync(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerProperties networkLoadBalancerProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersPatchAsync(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerProperties networkLoadBalancerProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersPatchValidateBeforeCall(datacenterId, networkLoadBalancerId, networkLoadBalancerProperties, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersPatchValidateBeforeCall(datacenterId, networkLoadBalancerId, networkLoadBalancerProperties, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NetworkLoadBalancer>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2609,8 +2665,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancer The Network Load Balancer to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2620,7 +2676,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersPostCall(String datacenterId, NetworkLoadBalancer networkLoadBalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersPostCall(String datacenterId, NetworkLoadBalancer networkLoadBalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = networkLoadBalancer;
 
         // create path and map variables
@@ -2636,7 +2692,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2660,11 +2715,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersPostValidateBeforeCall(String datacenterId, NetworkLoadBalancer networkLoadBalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersPostValidateBeforeCall(String datacenterId, NetworkLoadBalancer networkLoadBalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2677,7 +2732,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersPostCall(datacenterId, networkLoadBalancer, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersPostCall(datacenterId, networkLoadBalancer, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2689,7 +2744,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancer The Network Load Balancer to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NetworkLoadBalancer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2711,7 +2767,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancer The Network Load Balancer to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NetworkLoadBalancer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2734,8 +2791,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancer The Network Load Balancer to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2745,11 +2802,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersPostAsync(String datacenterId, NetworkLoadBalancer networkLoadBalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersPostAsync(String datacenterId, NetworkLoadBalancer networkLoadBalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersPostValidateBeforeCall(datacenterId, networkLoadBalancer, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersPostValidateBeforeCall(datacenterId, networkLoadBalancer, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NetworkLoadBalancer>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2759,8 +2816,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancer The modified Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2770,7 +2827,7 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersPutCall(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerPut networkLoadBalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersPutCall(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerPut networkLoadBalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = networkLoadBalancer;
 
         // create path and map variables
@@ -2787,7 +2844,6 @@ public class NetworkLoadBalancersApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2811,11 +2867,11 @@ public class NetworkLoadBalancersApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNetworkloadbalancersPutValidateBeforeCall(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerPut networkLoadBalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> _callback) throws ApiException {
+    private okhttp3.Call datacentersNetworkloadbalancersPutValidateBeforeCall(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerPut networkLoadBalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2833,7 +2889,7 @@ public class NetworkLoadBalancersApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersPutCall(datacenterId, networkLoadBalancerId, networkLoadBalancer, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersPutCall(datacenterId, networkLoadBalancerId, networkLoadBalancer, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2846,7 +2902,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancer The modified Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NetworkLoadBalancer
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2869,7 +2926,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancer The modified Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NetworkLoadBalancer&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2893,8 +2951,8 @@ public class NetworkLoadBalancersApi {
      * @param networkLoadBalancer The modified Network Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2904,11 +2962,11 @@ public class NetworkLoadBalancersApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNetworkloadbalancersPutAsync(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerPut networkLoadBalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> _callback) throws ApiException {
+    public okhttp3.Call datacentersNetworkloadbalancersPutAsync(String datacenterId, String networkLoadBalancerId, NetworkLoadBalancerPut networkLoadBalancer, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NetworkLoadBalancer> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNetworkloadbalancersPutValidateBeforeCall(datacenterId, networkLoadBalancerId, networkLoadBalancer, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNetworkloadbalancersPutValidateBeforeCall(datacenterId, networkLoadBalancerId, networkLoadBalancer, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NetworkLoadBalancer>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
 }

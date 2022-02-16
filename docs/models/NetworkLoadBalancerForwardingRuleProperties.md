@@ -7,12 +7,12 @@
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
 | **name** | **String** | The name of the Network Load Balancer forwarding rule. |  |
-| **algorithm** | [**AlgorithmEnum**](#AlgorithmEnum) | Algorithm for the balancing. |  |
-| **protocol** | [**ProtocolEnum**](#ProtocolEnum) | Protocol of the balancing. |  |
-| **listenerIp** | **String** | Listening IP. (inbound) |  |
-| **listenerPort** | **Integer** | Listening port number. (inbound) (range: 1 to 65535) |  |
+| **algorithm** | [**AlgorithmEnum**](#AlgorithmEnum) | Balancing algorithm |  |
+| **protocol** | [**ProtocolEnum**](#ProtocolEnum) | Balancing protocol |  |
+| **listenerIp** | **String** | Listening (inbound) IP |  |
+| **listenerPort** | **Integer** | Listening (inbound) port number; valid range is 1 to 65535. |  |
 | **healthCheck** | [**NetworkLoadBalancerForwardingRuleHealthCheck**](NetworkLoadBalancerForwardingRuleHealthCheck.md) |  |  [optional] |
-| **targets** | [**List&lt;NetworkLoadBalancerForwardingRuleTarget&gt;**](NetworkLoadBalancerForwardingRuleTarget.md) | Array of items in that collection. |  |
+| **targets** | [**List&lt;NetworkLoadBalancerForwardingRuleTarget&gt;**](NetworkLoadBalancerForwardingRuleTarget.md) | Array of items in the collection. |  |
 
 
 

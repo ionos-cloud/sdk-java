@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * Requests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-16T10:06:24.683Z[Etc/UTC]")
 
 public class Requests {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -124,11 +124,11 @@ public class Requests {
 
 
    /**
-   * Array of items in that collection.
+   * Array of items in the collection.
    * @return items
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of items in that collection.")
+  @ApiModelProperty(value = "Array of items in the collection.")
 
   public List<Request> getItems() {
     return items;
@@ -147,10 +147,10 @@ public class Requests {
   }
 
    /**
-   * The offset specified in the request (or, if none was specified, the default offset of 0)
+   * The offset, specified in the request (if not is specified, 0 is used by default).
    * @return offset
   **/
-  @ApiModelProperty(example = "0", required = true, value = "The offset specified in the request (or, if none was specified, the default offset of 0)")
+  @ApiModelProperty(example = "0", required = true, value = "The offset, specified in the request (if not is specified, 0 is used by default).")
 
   public BigDecimal getOffset() {
     return offset;
@@ -169,10 +169,10 @@ public class Requests {
   }
 
    /**
-   * The limit specified in the request (if none was specified, use the endpoint&#39;s default pagination limit).
+   * The limit, specified in the request (if not specified, the endpoint&#39;s default pagination limit is used).
    * @return limit
   **/
-  @ApiModelProperty(example = "1000", required = true, value = "The limit specified in the request (if none was specified, use the endpoint's default pagination limit).")
+  @ApiModelProperty(example = "1000", required = true, value = "The limit, specified in the request (if not specified, the endpoint's default pagination limit is used).")
 
   public BigDecimal getLimit() {
     return limit;

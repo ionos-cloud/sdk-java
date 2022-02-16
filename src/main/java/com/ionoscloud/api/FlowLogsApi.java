@@ -66,7 +66,7 @@ public class FlowLogsApi {
      * @param flowlogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -76,7 +76,7 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFlowlogsDeleteCall(String datacenterId, String serverId, String nicId, String flowlogId, Boolean pretty, Integer depth, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFlowlogsDeleteCall(String datacenterId, String serverId, String nicId, String flowlogId, Boolean pretty, Integer depth, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -95,7 +95,6 @@ public class FlowLogsApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -115,11 +114,11 @@ public class FlowLogsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFlowlogsDeleteValidateBeforeCall(String datacenterId, String serverId, String nicId, String flowlogId, Boolean pretty, Integer depth, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFlowlogsDeleteValidateBeforeCall(String datacenterId, String serverId, String nicId, String flowlogId, Boolean pretty, Integer depth, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -142,7 +141,7 @@ public class FlowLogsApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsDeleteCall(datacenterId, serverId, nicId, flowlogId, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsDeleteCall(datacenterId, serverId, nicId, flowlogId, pretty, depth, callback);
         return localVarCall;
 
     }
@@ -177,6 +176,7 @@ public class FlowLogsApi {
      * @param flowlogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -200,7 +200,7 @@ public class FlowLogsApi {
      * @param flowlogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -210,10 +210,10 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFlowlogsDeleteAsync(String datacenterId, String serverId, String nicId, String flowlogId, Boolean pretty, Integer depth, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFlowlogsDeleteAsync(String datacenterId, String serverId, String nicId, String flowlogId, Boolean pretty, Integer depth, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsDeleteValidateBeforeCall(datacenterId, serverId, nicId, flowlogId, pretty, depth, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsDeleteValidateBeforeCall(datacenterId, serverId, nicId, flowlogId, pretty, depth, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -224,7 +224,7 @@ public class FlowLogsApi {
      * @param flowlogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -234,7 +234,7 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFlowlogsFindByIdCall(String datacenterId, String serverId, String nicId, String flowlogId, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFlowlogsFindByIdCall(String datacenterId, String serverId, String nicId, String flowlogId, Boolean pretty, Integer depth, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -253,7 +253,6 @@ public class FlowLogsApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -273,11 +272,11 @@ public class FlowLogsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFlowlogsFindByIdValidateBeforeCall(String datacenterId, String serverId, String nicId, String flowlogId, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFlowlogsFindByIdValidateBeforeCall(String datacenterId, String serverId, String nicId, String flowlogId, Boolean pretty, Integer depth, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -300,7 +299,7 @@ public class FlowLogsApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsFindByIdCall(datacenterId, serverId, nicId, flowlogId, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsFindByIdCall(datacenterId, serverId, nicId, flowlogId, pretty, depth, callback);
         return localVarCall;
 
     }
@@ -314,6 +313,7 @@ public class FlowLogsApi {
      * @param flowlogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -337,6 +337,7 @@ public class FlowLogsApi {
      * @param flowlogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -361,7 +362,7 @@ public class FlowLogsApi {
      * @param flowlogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -371,11 +372,11 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFlowlogsFindByIdAsync(String datacenterId, String serverId, String nicId, String flowlogId, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFlowlogsFindByIdAsync(String datacenterId, String serverId, String nicId, String flowlogId, Boolean pretty, Integer depth, final ApiCallback<FlowLog> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsFindByIdValidateBeforeCall(datacenterId, serverId, nicId, flowlogId, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsFindByIdValidateBeforeCall(datacenterId, serverId, nicId, flowlogId, pretty, depth, callback);
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -385,9 +386,9 @@ public class FlowLogsApi {
      * @param nicId The unique ID of the NIC. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -397,7 +398,7 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFlowlogsGetCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer offset, Integer limit, final ApiCallback<FlowLogs> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFlowlogsGetCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -415,17 +416,25 @@ public class FlowLogsApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
-
         if (offset != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
         }
-
         if (limit != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         final String[] localVarAccepts = {
@@ -443,11 +452,11 @@ public class FlowLogsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFlowlogsGetValidateBeforeCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer offset, Integer limit, final ApiCallback<FlowLogs> _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFlowlogsGetValidateBeforeCall(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer offset, Integer limit,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -465,7 +474,7 @@ public class FlowLogsApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsGetCall(datacenterId, serverId, nicId, pretty, depth, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsGetCall(datacenterId, serverId, nicId, pretty, depth, offset, limit,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -478,8 +487,11 @@ public class FlowLogsApi {
      * @param nicId The unique ID of the NIC. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return FlowLogs
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -489,8 +501,8 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public FlowLogs datacentersServersNicsFlowlogsGet(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<FlowLogs> localVarResp = datacentersServersNicsFlowlogsGetWithHttpInfo(datacenterId, serverId, nicId, pretty, depth, offset, limit);
+    public FlowLogs datacentersServersNicsFlowlogsGet(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<FlowLogs> localVarResp = datacentersServersNicsFlowlogsGetWithHttpInfo(datacenterId, serverId, nicId, pretty, depth, offset, limit, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -502,8 +514,11 @@ public class FlowLogsApi {
      * @param nicId The unique ID of the NIC. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;FlowLogs&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -513,8 +528,8 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<FlowLogs> datacentersServersNicsFlowlogsGetWithHttpInfo(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsGetValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, offset, limit, null);
+    public ApiResponse<FlowLogs> datacentersServersNicsFlowlogsGetWithHttpInfo(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsGetValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, offset, limit,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<FlowLogs>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -527,9 +542,9 @@ public class FlowLogsApi {
      * @param nicId The unique ID of the NIC. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -539,11 +554,11 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFlowlogsGetAsync(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer offset, Integer limit, final ApiCallback<FlowLogs> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFlowlogsGetAsync(String datacenterId, String serverId, String nicId, Boolean pretty, Integer depth, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<FlowLogs> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsGetValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsGetValidateBeforeCall(datacenterId, serverId, nicId, pretty, depth, offset, limit,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<FlowLogs>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -555,7 +570,7 @@ public class FlowLogsApi {
      * @param flowlog The Flow Log record to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -565,7 +580,7 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFlowlogsPatchCall(String datacenterId, String serverId, String nicId, String flowlogId, FlowLogProperties flowlog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFlowlogsPatchCall(String datacenterId, String serverId, String nicId, String flowlogId, FlowLogProperties flowlog, Boolean pretty, Integer depth, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = flowlog;
 
         // create path and map variables
@@ -584,7 +599,6 @@ public class FlowLogsApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -604,11 +618,11 @@ public class FlowLogsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFlowlogsPatchValidateBeforeCall(String datacenterId, String serverId, String nicId, String flowlogId, FlowLogProperties flowlog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFlowlogsPatchValidateBeforeCall(String datacenterId, String serverId, String nicId, String flowlogId, FlowLogProperties flowlog, Boolean pretty, Integer depth, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -636,7 +650,7 @@ public class FlowLogsApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsPatchCall(datacenterId, serverId, nicId, flowlogId, flowlog, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsPatchCall(datacenterId, serverId, nicId, flowlogId, flowlog, pretty, depth, callback);
         return localVarCall;
 
     }
@@ -651,6 +665,7 @@ public class FlowLogsApi {
      * @param flowlog The Flow Log record to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -675,6 +690,7 @@ public class FlowLogsApi {
      * @param flowlog The Flow Log record to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -700,7 +716,7 @@ public class FlowLogsApi {
      * @param flowlog The Flow Log record to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -710,11 +726,11 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFlowlogsPatchAsync(String datacenterId, String serverId, String nicId, String flowlogId, FlowLogProperties flowlog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFlowlogsPatchAsync(String datacenterId, String serverId, String nicId, String flowlogId, FlowLogProperties flowlog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsPatchValidateBeforeCall(datacenterId, serverId, nicId, flowlogId, flowlog, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsPatchValidateBeforeCall(datacenterId, serverId, nicId, flowlogId, flowlog, pretty, depth, callback);
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -725,7 +741,7 @@ public class FlowLogsApi {
      * @param flowlog The Flow Log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -735,7 +751,7 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFlowlogsPostCall(String datacenterId, String serverId, String nicId, FlowLog flowlog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFlowlogsPostCall(String datacenterId, String serverId, String nicId, FlowLog flowlog, Boolean pretty, Integer depth, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = flowlog;
 
         // create path and map variables
@@ -753,7 +769,6 @@ public class FlowLogsApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -773,11 +788,11 @@ public class FlowLogsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFlowlogsPostValidateBeforeCall(String datacenterId, String serverId, String nicId, FlowLog flowlog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFlowlogsPostValidateBeforeCall(String datacenterId, String serverId, String nicId, FlowLog flowlog, Boolean pretty, Integer depth, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -800,7 +815,7 @@ public class FlowLogsApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsPostCall(datacenterId, serverId, nicId, flowlog, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsPostCall(datacenterId, serverId, nicId, flowlog, pretty, depth, callback);
         return localVarCall;
 
     }
@@ -814,6 +829,7 @@ public class FlowLogsApi {
      * @param flowlog The Flow Log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -837,6 +853,7 @@ public class FlowLogsApi {
      * @param flowlog The Flow Log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -861,7 +878,7 @@ public class FlowLogsApi {
      * @param flowlog The Flow Log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -871,11 +888,11 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFlowlogsPostAsync(String datacenterId, String serverId, String nicId, FlowLog flowlog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFlowlogsPostAsync(String datacenterId, String serverId, String nicId, FlowLog flowlog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsPostValidateBeforeCall(datacenterId, serverId, nicId, flowlog, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsPostValidateBeforeCall(datacenterId, serverId, nicId, flowlog, pretty, depth, callback);
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -887,7 +904,7 @@ public class FlowLogsApi {
      * @param flowlog The modified Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -897,7 +914,7 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFlowlogsPutCall(String datacenterId, String serverId, String nicId, String flowlogId, FlowLogPut flowlog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFlowlogsPutCall(String datacenterId, String serverId, String nicId, String flowlogId, FlowLogPut flowlog, Boolean pretty, Integer depth, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = flowlog;
 
         // create path and map variables
@@ -916,7 +933,6 @@ public class FlowLogsApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -936,11 +952,11 @@ public class FlowLogsApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersServersNicsFlowlogsPutValidateBeforeCall(String datacenterId, String serverId, String nicId, String flowlogId, FlowLogPut flowlog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    private okhttp3.Call datacentersServersNicsFlowlogsPutValidateBeforeCall(String datacenterId, String serverId, String nicId, String flowlogId, FlowLogPut flowlog, Boolean pretty, Integer depth, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -968,7 +984,7 @@ public class FlowLogsApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsPutCall(datacenterId, serverId, nicId, flowlogId, flowlog, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsPutCall(datacenterId, serverId, nicId, flowlogId, flowlog, pretty, depth, callback);
         return localVarCall;
 
     }
@@ -983,6 +999,7 @@ public class FlowLogsApi {
      * @param flowlog The modified Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1007,6 +1024,7 @@ public class FlowLogsApi {
      * @param flowlog The modified Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1032,7 +1050,7 @@ public class FlowLogsApi {
      * @param flowlog The modified Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1042,11 +1060,11 @@ public class FlowLogsApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersServersNicsFlowlogsPutAsync(String datacenterId, String serverId, String nicId, String flowlogId, FlowLogPut flowlog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersServersNicsFlowlogsPutAsync(String datacenterId, String serverId, String nicId, String flowlogId, FlowLogPut flowlog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsPutValidateBeforeCall(datacenterId, serverId, nicId, flowlogId, flowlog, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersServersNicsFlowlogsPutValidateBeforeCall(datacenterId, serverId, nicId, flowlogId, flowlog, pretty, depth, callback);
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
 }

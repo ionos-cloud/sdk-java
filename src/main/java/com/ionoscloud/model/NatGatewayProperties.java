@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * NatGatewayProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-16T10:06:24.683Z[Etc/UTC]")
 
 public class NatGatewayProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -110,11 +110,11 @@ public class NatGatewayProperties {
   }
 
    /**
-   * Collection of LANs connected to the NAT Gateway. IPs must contain valid subnet mask. If user will not provide any IP then system will generate an IP with /24 subnet.
+   * Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.
    * @return lans
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Collection of LANs connected to the NAT Gateway. IPs must contain valid subnet mask. If user will not provide any IP then system will generate an IP with /24 subnet.")
+  @ApiModelProperty(value = "Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.")
 
   public List<NatGatewayLanProperties> getLans() {
     return lans;

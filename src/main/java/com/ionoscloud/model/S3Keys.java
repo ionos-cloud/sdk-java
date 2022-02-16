@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * S3Keys
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-16T10:06:24.683Z[Etc/UTC]")
 
 public class S3Keys {
   public static final String SERIALIZED_NAME_ID = "id";
@@ -110,11 +110,11 @@ public class S3Keys {
 
 
    /**
-   * Array of items in that collection.
+   * Array of items in the collection.
    * @return items
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of items in that collection.")
+  @ApiModelProperty(value = "Array of items in the collection.")
 
   public List<S3Key> getItems() {
     return items;

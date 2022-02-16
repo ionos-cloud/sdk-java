@@ -23,11 +23,12 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * FirewallruleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-16T10:06:24.683Z[Etc/UTC]")
 
 public class FirewallruleProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -119,7 +120,7 @@ public class FirewallruleProperties {
   private Integer portRangeEnd;
 
   /**
-   * The type of firewall rule. If not specified, the default INGRESS value is taken.
+   * The type of the firewall rule. If not specified, the default INGRESS value is used.
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
@@ -392,11 +393,11 @@ public class FirewallruleProperties {
   }
 
    /**
-   * The type of firewall rule. If not specified, the default INGRESS value is taken.
+   * The type of the firewall rule. If not specified, the default INGRESS value is used.
    * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "INGRESS", value = "The type of firewall rule. If not specified, the default INGRESS value is taken.")
+  @ApiModelProperty(example = "INGRESS", value = "The type of the firewall rule. If not specified, the default INGRESS value is used.")
 
   public TypeEnum getType() {
     return type;

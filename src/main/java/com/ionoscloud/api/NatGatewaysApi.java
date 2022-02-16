@@ -72,8 +72,8 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -83,7 +83,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysDeleteCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysDeleteCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -100,7 +100,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -124,11 +123,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysDeleteValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysDeleteValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -141,7 +140,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysDeleteCall(datacenterId, natGatewayId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysDeleteCall(datacenterId, natGatewayId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -153,7 +152,7 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -173,7 +172,8 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -195,8 +195,8 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -206,10 +206,10 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysDeleteAsync(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysDeleteAsync(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysDeleteValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysDeleteValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -218,8 +218,8 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -229,7 +229,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFindByNatGatewayIdCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFindByNatGatewayIdCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -246,7 +246,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -270,11 +269,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFindByNatGatewayIdValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFindByNatGatewayIdValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -287,7 +286,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFindByNatGatewayIdCall(datacenterId, natGatewayId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFindByNatGatewayIdCall(datacenterId, natGatewayId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -299,7 +298,8 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NatGateway
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -321,7 +321,8 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NatGateway&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -344,8 +345,8 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -355,11 +356,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFindByNatGatewayIdAsync(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFindByNatGatewayIdAsync(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFindByNatGatewayIdValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFindByNatGatewayIdValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NatGateway>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -369,7 +370,7 @@ public class NatGatewaysApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -379,7 +380,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsDeleteCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsDeleteCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -397,7 +398,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -417,11 +417,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFlowlogsDeleteValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFlowlogsDeleteValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -439,7 +439,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsDeleteCall(datacenterId, natGatewayId, flowLogId, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsDeleteCall(datacenterId, natGatewayId, flowLogId, pretty, depth, callback);
         return localVarCall;
 
     }
@@ -472,6 +472,7 @@ public class NatGatewaysApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -494,7 +495,7 @@ public class NatGatewaysApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -504,10 +505,10 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsDeleteAsync(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsDeleteAsync(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsDeleteValidateBeforeCall(datacenterId, natGatewayId, flowLogId, pretty, depth, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsDeleteValidateBeforeCall(datacenterId, natGatewayId, flowLogId, pretty, depth, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -517,7 +518,7 @@ public class NatGatewaysApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -527,7 +528,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsFindByFlowLogIdCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsFindByFlowLogIdCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -545,7 +546,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -565,11 +565,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFlowlogsFindByFlowLogIdValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFlowlogsFindByFlowLogIdValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -587,7 +587,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsFindByFlowLogIdCall(datacenterId, natGatewayId, flowLogId, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsFindByFlowLogIdCall(datacenterId, natGatewayId, flowLogId, pretty, depth, callback);
         return localVarCall;
 
     }
@@ -600,6 +600,7 @@ public class NatGatewaysApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -622,6 +623,7 @@ public class NatGatewaysApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -645,7 +647,7 @@ public class NatGatewaysApi {
      * @param flowLogId The unique ID of the Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -655,11 +657,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsFindByFlowLogIdAsync(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsFindByFlowLogIdAsync(String datacenterId, String natGatewayId, String flowLogId, Boolean pretty, Integer depth, final ApiCallback<FlowLog> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsFindByFlowLogIdValidateBeforeCall(datacenterId, natGatewayId, flowLogId, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsFindByFlowLogIdValidateBeforeCall(datacenterId, natGatewayId, flowLogId, pretty, depth, callback);
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -668,9 +670,9 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -680,7 +682,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsGetCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit, final ApiCallback<FlowLogs> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsGetCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -697,17 +699,25 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
-
         if (offset != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("offset", offset));
         }
-
         if (limit != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("limit", limit));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         final String[] localVarAccepts = {
@@ -725,11 +735,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFlowlogsGetValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit, final ApiCallback<FlowLogs> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFlowlogsGetValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -742,7 +752,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsGetCall(datacenterId, natGatewayId, pretty, depth, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsGetCall(datacenterId, natGatewayId, pretty, depth, offset, limit,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -754,8 +764,11 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return FlowLogs
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -765,8 +778,8 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public FlowLogs datacentersNatgatewaysFlowlogsGet(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit) throws ApiException {
-        ApiResponse<FlowLogs> localVarResp = datacentersNatgatewaysFlowlogsGetWithHttpInfo(datacenterId, natGatewayId, pretty, depth, offset, limit);
+    public FlowLogs datacentersNatgatewaysFlowlogsGet(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<FlowLogs> localVarResp = datacentersNatgatewaysFlowlogsGetWithHttpInfo(datacenterId, natGatewayId, pretty, depth, offset, limit, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -777,8 +790,11 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;FlowLogs&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -788,8 +804,8 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<FlowLogs> datacentersNatgatewaysFlowlogsGetWithHttpInfo(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit) throws ApiException {
-        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsGetValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, offset, limit, null);
+    public ApiResponse<FlowLogs> datacentersNatgatewaysFlowlogsGetWithHttpInfo(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsGetValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, offset, limit,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<FlowLogs>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -801,9 +817,9 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param offset The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional, default to 0)
+     * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
      * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -813,11 +829,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsGetAsync(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit, final ApiCallback<FlowLogs> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsGetAsync(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer offset, Integer limit, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<FlowLogs> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsGetValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, offset, limit, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsGetValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, offset, limit,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<FlowLogs>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -828,7 +844,7 @@ public class NatGatewaysApi {
      * @param natGatewayFlowLogProperties The properties of the Flow Log to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -838,7 +854,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsPatchCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogProperties natGatewayFlowLogProperties, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsPatchCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogProperties natGatewayFlowLogProperties, Boolean pretty, Integer depth, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = natGatewayFlowLogProperties;
 
         // create path and map variables
@@ -856,7 +872,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -876,11 +891,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFlowlogsPatchValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogProperties natGatewayFlowLogProperties, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFlowlogsPatchValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogProperties natGatewayFlowLogProperties, Boolean pretty, Integer depth, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -903,7 +918,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsPatchCall(datacenterId, natGatewayId, flowLogId, natGatewayFlowLogProperties, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsPatchCall(datacenterId, natGatewayId, flowLogId, natGatewayFlowLogProperties, pretty, depth, callback);
         return localVarCall;
 
     }
@@ -917,6 +932,7 @@ public class NatGatewaysApi {
      * @param natGatewayFlowLogProperties The properties of the Flow Log to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -940,6 +956,7 @@ public class NatGatewaysApi {
      * @param natGatewayFlowLogProperties The properties of the Flow Log to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -964,7 +981,7 @@ public class NatGatewaysApi {
      * @param natGatewayFlowLogProperties The properties of the Flow Log to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -974,11 +991,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsPatchAsync(String datacenterId, String natGatewayId, String flowLogId, FlowLogProperties natGatewayFlowLogProperties, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsPatchAsync(String datacenterId, String natGatewayId, String flowLogId, FlowLogProperties natGatewayFlowLogProperties, Boolean pretty, Integer depth, final ApiCallback<FlowLog> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsPatchValidateBeforeCall(datacenterId, natGatewayId, flowLogId, natGatewayFlowLogProperties, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsPatchValidateBeforeCall(datacenterId, natGatewayId, flowLogId, natGatewayFlowLogProperties, pretty, depth, callback);
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -988,7 +1005,7 @@ public class NatGatewaysApi {
      * @param natGatewayFlowLog The Flow Log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -998,7 +1015,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsPostCall(String datacenterId, String natGatewayId, FlowLog natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsPostCall(String datacenterId, String natGatewayId, FlowLog natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = natGatewayFlowLog;
 
         // create path and map variables
@@ -1015,7 +1032,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1035,11 +1051,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFlowlogsPostValidateBeforeCall(String datacenterId, String natGatewayId, FlowLog natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFlowlogsPostValidateBeforeCall(String datacenterId, String natGatewayId, FlowLog natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1057,7 +1073,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsPostCall(datacenterId, natGatewayId, natGatewayFlowLog, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsPostCall(datacenterId, natGatewayId, natGatewayFlowLog, pretty, depth, callback);
         return localVarCall;
 
     }
@@ -1070,6 +1086,7 @@ public class NatGatewaysApi {
      * @param natGatewayFlowLog The Flow Log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1092,6 +1109,7 @@ public class NatGatewaysApi {
      * @param natGatewayFlowLog The Flow Log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1115,7 +1133,7 @@ public class NatGatewaysApi {
      * @param natGatewayFlowLog The Flow Log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1125,11 +1143,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsPostAsync(String datacenterId, String natGatewayId, FlowLog natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsPostAsync(String datacenterId, String natGatewayId, FlowLog natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsPostValidateBeforeCall(datacenterId, natGatewayId, natGatewayFlowLog, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsPostValidateBeforeCall(datacenterId, natGatewayId, natGatewayFlowLog, pretty, depth, callback);
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1140,7 +1158,7 @@ public class NatGatewaysApi {
      * @param natGatewayFlowLog The modified NAT Gateway Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback Callback for upload/download progress
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1150,7 +1168,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsPutCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogPut natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsPutCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogPut natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = natGatewayFlowLog;
 
         // create path and map variables
@@ -1168,7 +1186,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1188,11 +1205,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysFlowlogsPutValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogPut natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysFlowlogsPutValidateBeforeCall(String datacenterId, String natGatewayId, String flowLogId, FlowLogPut natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1215,7 +1232,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsPutCall(datacenterId, natGatewayId, flowLogId, natGatewayFlowLog, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsPutCall(datacenterId, natGatewayId, flowLogId, natGatewayFlowLog, pretty, depth, callback);
         return localVarCall;
 
     }
@@ -1229,6 +1246,7 @@ public class NatGatewaysApi {
      * @param natGatewayFlowLog The modified NAT Gateway Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return FlowLog
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1252,6 +1270,7 @@ public class NatGatewaysApi {
      * @param natGatewayFlowLog The modified NAT Gateway Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+     * 
      * @return ApiResponse&lt;FlowLog&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1276,7 +1295,7 @@ public class NatGatewaysApi {
      * @param natGatewayFlowLog The modified NAT Gateway Flow Log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1286,11 +1305,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysFlowlogsPutAsync(String datacenterId, String natGatewayId, String flowLogId, FlowLogPut natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysFlowlogsPutAsync(String datacenterId, String natGatewayId, String flowLogId, FlowLogPut natGatewayFlowLog, Boolean pretty, Integer depth, final ApiCallback<FlowLog> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsPutValidateBeforeCall(datacenterId, natGatewayId, flowLogId, natGatewayFlowLog, pretty, depth, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysFlowlogsPutValidateBeforeCall(datacenterId, natGatewayId, flowLogId, natGatewayFlowLog, pretty, depth, callback);
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1298,8 +1317,8 @@ public class NatGatewaysApi {
      * @param datacenterId The unique ID of the data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1309,7 +1328,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysGetCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateways> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysGetCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1325,9 +1344,19 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -1349,11 +1378,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateways> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysGetValidateBeforeCall(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1361,7 +1390,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysGetCall(datacenterId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysGetCall(datacenterId, pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -1372,7 +1401,10 @@ public class NatGatewaysApi {
      * @param datacenterId The unique ID of the data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return NatGateways
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1382,8 +1414,8 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public NatGateways datacentersNatgatewaysGet(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<NatGateways> localVarResp = datacentersNatgatewaysGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber);
+    public NatGateways datacentersNatgatewaysGet(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<NatGateways> localVarResp = datacentersNatgatewaysGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -1393,7 +1425,10 @@ public class NatGatewaysApi {
      * @param datacenterId The unique ID of the data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;NatGateways&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1403,8 +1438,8 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NatGateways> datacentersNatgatewaysGetWithHttpInfo(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = datacentersNatgatewaysGetValidateBeforeCall(datacenterId, pretty, depth, xContractNumber, null);
+    public ApiResponse<NatGateways> datacentersNatgatewaysGetWithHttpInfo(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = datacentersNatgatewaysGetValidateBeforeCall(datacenterId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<NatGateways>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -1415,8 +1450,8 @@ public class NatGatewaysApi {
      * @param datacenterId The unique ID of the data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1426,11 +1461,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysGetAsync(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateways> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysGetAsync(String datacenterId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<NatGateways> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysGetValidateBeforeCall(datacenterId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysGetValidateBeforeCall(datacenterId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<NatGateways>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1440,8 +1475,8 @@ public class NatGatewaysApi {
      * @param natGatewayProperties The properties of the NAT Gateway to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1451,7 +1486,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysPatchCall(String datacenterId, String natGatewayId, NatGatewayProperties natGatewayProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysPatchCall(String datacenterId, String natGatewayId, NatGatewayProperties natGatewayProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = natGatewayProperties;
 
         // create path and map variables
@@ -1468,7 +1503,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1492,11 +1526,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysPatchValidateBeforeCall(String datacenterId, String natGatewayId, NatGatewayProperties natGatewayProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysPatchValidateBeforeCall(String datacenterId, String natGatewayId, NatGatewayProperties natGatewayProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1514,7 +1548,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysPatchCall(datacenterId, natGatewayId, natGatewayProperties, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysPatchCall(datacenterId, natGatewayId, natGatewayProperties, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1527,7 +1561,8 @@ public class NatGatewaysApi {
      * @param natGatewayProperties The properties of the NAT Gateway to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NatGateway
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1550,7 +1585,8 @@ public class NatGatewaysApi {
      * @param natGatewayProperties The properties of the NAT Gateway to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NatGateway&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1574,8 +1610,8 @@ public class NatGatewaysApi {
      * @param natGatewayProperties The properties of the NAT Gateway to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1585,11 +1621,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysPatchAsync(String datacenterId, String natGatewayId, NatGatewayProperties natGatewayProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysPatchAsync(String datacenterId, String natGatewayId, NatGatewayProperties natGatewayProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysPatchValidateBeforeCall(datacenterId, natGatewayId, natGatewayProperties, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysPatchValidateBeforeCall(datacenterId, natGatewayId, natGatewayProperties, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NatGateway>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1598,8 +1634,8 @@ public class NatGatewaysApi {
      * @param natGateway The NAT Gateway to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1609,7 +1645,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysPostCall(String datacenterId, NatGateway natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysPostCall(String datacenterId, NatGateway natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = natGateway;
 
         // create path and map variables
@@ -1625,7 +1661,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1649,11 +1684,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysPostValidateBeforeCall(String datacenterId, NatGateway natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysPostValidateBeforeCall(String datacenterId, NatGateway natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1666,7 +1701,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysPostCall(datacenterId, natGateway, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysPostCall(datacenterId, natGateway, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1678,7 +1713,8 @@ public class NatGatewaysApi {
      * @param natGateway The NAT Gateway to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NatGateway
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1700,7 +1736,8 @@ public class NatGatewaysApi {
      * @param natGateway The NAT Gateway to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NatGateway&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1723,8 +1760,8 @@ public class NatGatewaysApi {
      * @param natGateway The NAT Gateway to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1734,11 +1771,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysPostAsync(String datacenterId, NatGateway natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysPostAsync(String datacenterId, NatGateway natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysPostValidateBeforeCall(datacenterId, natGateway, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysPostValidateBeforeCall(datacenterId, natGateway, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NatGateway>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1748,8 +1785,8 @@ public class NatGatewaysApi {
      * @param natGateway The modified NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1759,7 +1796,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysPutCall(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysPutCall(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = natGateway;
 
         // create path and map variables
@@ -1776,7 +1813,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1800,11 +1836,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysPutValidateBeforeCall(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysPutValidateBeforeCall(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1822,7 +1858,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysPutCall(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysPutCall(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1835,7 +1871,8 @@ public class NatGatewaysApi {
      * @param natGateway The modified NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NatGateway
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1858,7 +1895,8 @@ public class NatGatewaysApi {
      * @param natGateway The modified NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NatGateway&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1882,8 +1920,8 @@ public class NatGatewaysApi {
      * @param natGateway The modified NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -1893,11 +1931,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysPutAsync(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysPutAsync(String datacenterId, String natGatewayId, NatGatewayPut natGateway, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGateway> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysPutValidateBeforeCall(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysPutValidateBeforeCall(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NatGateway>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -1907,8 +1945,8 @@ public class NatGatewaysApi {
      * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -1918,7 +1956,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesDeleteCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesDeleteCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -1936,7 +1974,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -1960,11 +1997,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysRulesDeleteValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysRulesDeleteValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -1982,7 +2019,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysRulesDeleteCall(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysRulesDeleteCall(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -1995,7 +2032,7 @@ public class NatGatewaysApi {
      * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2016,7 +2053,8 @@ public class NatGatewaysApi {
      * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;Void&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2039,8 +2077,8 @@ public class NatGatewaysApi {
      * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2050,10 +2088,10 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesDeleteAsync(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesDeleteAsync(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<Void> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysRulesDeleteValidateBeforeCall(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber, _callback);
-        localVarApiClient.executeAsync(localVarCall, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysRulesDeleteValidateBeforeCall(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber, callback);
+        localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
     /**
@@ -2063,8 +2101,8 @@ public class NatGatewaysApi {
      * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2074,7 +2112,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesFindByNatGatewayRuleIdCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesFindByNatGatewayRuleIdCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2092,7 +2130,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2116,11 +2153,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysRulesFindByNatGatewayRuleIdValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysRulesFindByNatGatewayRuleIdValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2138,7 +2175,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysRulesFindByNatGatewayRuleIdCall(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysRulesFindByNatGatewayRuleIdCall(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2151,7 +2188,8 @@ public class NatGatewaysApi {
      * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NatGatewayRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2174,7 +2212,8 @@ public class NatGatewaysApi {
      * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NatGatewayRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2198,8 +2237,8 @@ public class NatGatewaysApi {
      * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2209,11 +2248,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesFindByNatGatewayRuleIdAsync(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesFindByNatGatewayRuleIdAsync(String datacenterId, String natGatewayId, String natGatewayRuleId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysRulesFindByNatGatewayRuleIdValidateBeforeCall(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysRulesFindByNatGatewayRuleIdValidateBeforeCall(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NatGatewayRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2222,8 +2261,8 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2233,7 +2272,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesGetCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRules> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesGetCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = null;
 
         // create path and map variables
@@ -2250,9 +2289,19 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
+        }
+        if (orderBy != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("orderBy", orderBy));
+        }
+        if (maxResults != null) {
+            localVarQueryParams.addAll(localVarApiClient.parameterToPair("maxResults", maxResults));
+        }
+        if (filters != null) {
+            filters.forEach((key, value) -> {
+                localVarQueryParams.add(new Pair(String.format("filter.%s", key), value));
+            });
         }
 
         if (xContractNumber != null) {
@@ -2274,11 +2323,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysRulesGetValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRules> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysRulesGetValidateBeforeCall(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults , Map<String, String> filters,final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2291,7 +2340,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysRulesGetCall(datacenterId, natGatewayId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysRulesGetCall(datacenterId, natGatewayId, pretty, depth, xContractNumber,  orderBy, maxResults, filters,callback);
         return localVarCall;
 
     }
@@ -2303,7 +2352,10 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return NatGatewayRules
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2313,8 +2365,8 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public NatGatewayRules datacentersNatgatewaysRulesGet(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        ApiResponse<NatGatewayRules> localVarResp = datacentersNatgatewaysRulesGetWithHttpInfo(datacenterId, natGatewayId, pretty, depth, xContractNumber);
+    public NatGatewayRules datacentersNatgatewaysRulesGet(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber,  String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        ApiResponse<NatGatewayRules> localVarResp = datacentersNatgatewaysRulesGetWithHttpInfo(datacenterId, natGatewayId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
         return localVarResp.getData();
     }
 
@@ -2325,7 +2377,10 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
+     * @param maxResults - Limits the number of results returned.
+     * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
      * @return ApiResponse&lt;NatGatewayRules&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2335,8 +2390,8 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<NatGatewayRules> datacentersNatgatewaysRulesGetWithHttpInfo(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber) throws ApiException {
-        okhttp3.Call localVarCall = datacentersNatgatewaysRulesGetValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, xContractNumber, null);
+    public ApiResponse<NatGatewayRules> datacentersNatgatewaysRulesGetWithHttpInfo(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters) throws ApiException {
+        okhttp3.Call localVarCall = datacentersNatgatewaysRulesGetValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, null);
         Type localVarReturnType = new TypeToken<NatGatewayRules>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
@@ -2348,8 +2403,8 @@ public class NatGatewaysApi {
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2359,11 +2414,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesGetAsync(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRules> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesGetAsync(String datacenterId, String natGatewayId, Boolean pretty, Integer depth, Integer xContractNumber, String orderBy, Integer maxResults, Map<String, String> filters,final ApiCallback<NatGatewayRules> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysRulesGetValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysRulesGetValidateBeforeCall(datacenterId, natGatewayId, pretty, depth, xContractNumber,  orderBy, maxResults, filters, callback);
         Type localVarReturnType = new TypeToken<NatGatewayRules>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2374,8 +2429,8 @@ public class NatGatewaysApi {
      * @param natGatewayRuleProperties The properties of the NAT Gateway rule to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2385,7 +2440,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesPatchCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRuleProperties natGatewayRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesPatchCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRuleProperties natGatewayRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = natGatewayRuleProperties;
 
         // create path and map variables
@@ -2403,7 +2458,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2427,11 +2481,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PATCH", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysRulesPatchValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRuleProperties natGatewayRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysRulesPatchValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRuleProperties natGatewayRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2454,7 +2508,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysRulesPatchCall(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRuleProperties, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysRulesPatchCall(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRuleProperties, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2468,7 +2522,8 @@ public class NatGatewaysApi {
      * @param natGatewayRuleProperties The properties of the NAT Gateway rule to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NatGatewayRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2492,7 +2547,8 @@ public class NatGatewaysApi {
      * @param natGatewayRuleProperties The properties of the NAT Gateway rule to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NatGatewayRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2517,8 +2573,8 @@ public class NatGatewaysApi {
      * @param natGatewayRuleProperties The properties of the NAT Gateway rule to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2528,11 +2584,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesPatchAsync(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRuleProperties natGatewayRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesPatchAsync(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRuleProperties natGatewayRuleProperties, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysRulesPatchValidateBeforeCall(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRuleProperties, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysRulesPatchValidateBeforeCall(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRuleProperties, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NatGatewayRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2542,8 +2598,8 @@ public class NatGatewaysApi {
      * @param natGatewayRule The NAT Gateway rule to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2553,7 +2609,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesPostCall(String datacenterId, String natGatewayId, NatGatewayRule natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesPostCall(String datacenterId, String natGatewayId, NatGatewayRule natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = natGatewayRule;
 
         // create path and map variables
@@ -2570,7 +2626,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2594,11 +2649,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysRulesPostValidateBeforeCall(String datacenterId, String natGatewayId, NatGatewayRule natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysRulesPostValidateBeforeCall(String datacenterId, String natGatewayId, NatGatewayRule natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2616,7 +2671,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysRulesPostCall(datacenterId, natGatewayId, natGatewayRule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysRulesPostCall(datacenterId, natGatewayId, natGatewayRule, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2629,7 +2684,8 @@ public class NatGatewaysApi {
      * @param natGatewayRule The NAT Gateway rule to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NatGatewayRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2652,7 +2708,8 @@ public class NatGatewaysApi {
      * @param natGatewayRule The NAT Gateway rule to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NatGatewayRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2676,8 +2733,8 @@ public class NatGatewaysApi {
      * @param natGatewayRule The NAT Gateway rule to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2687,11 +2744,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesPostAsync(String datacenterId, String natGatewayId, NatGatewayRule natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesPostAsync(String datacenterId, String natGatewayId, NatGatewayRule natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysRulesPostValidateBeforeCall(datacenterId, natGatewayId, natGatewayRule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysRulesPostValidateBeforeCall(datacenterId, natGatewayId, natGatewayRule, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NatGatewayRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
     /**
@@ -2702,8 +2759,8 @@ public class NatGatewaysApi {
      * @param natGatewayRule The modified NAT Gateway rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback Callback for upload/download progress
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
      * @http.response.details
@@ -2713,7 +2770,7 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesPutCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRulePut natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesPutCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRulePut natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback ) throws ApiException {
         Object localVarPostBody = natGatewayRule;
 
         // create path and map variables
@@ -2731,7 +2788,6 @@ public class NatGatewaysApi {
         if (pretty != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("pretty", pretty));
         }
-
         if (depth != null) {
             localVarQueryParams.addAll(localVarApiClient.parameterToPair("depth", depth));
         }
@@ -2755,11 +2811,11 @@ public class NatGatewaysApi {
         localVarHeaderParams.put("Content-Type", localVarContentType);
 
         String[] localVarAuthNames = new String[] { "Basic Authentication", "Token Authentication" };
-        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
+        return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, callback);
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call datacentersNatgatewaysRulesPutValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRulePut natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
+    private okhttp3.Call datacentersNatgatewaysRulesPutValidateBeforeCall(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRulePut natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback callback) throws ApiException {
         
         // verify the required parameter 'datacenterId' is set
         if (datacenterId == null) {
@@ -2782,7 +2838,7 @@ public class NatGatewaysApi {
         }
         
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysRulesPutCall(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysRulesPutCall(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRule, pretty, depth, xContractNumber, callback);
         return localVarCall;
 
     }
@@ -2796,7 +2852,8 @@ public class NatGatewaysApi {
      * @param natGatewayRule The modified NAT Gateway rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return NatGatewayRule
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2820,7 +2877,8 @@ public class NatGatewaysApi {
      * @param natGatewayRule The modified NAT Gateway rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * 
      * @return ApiResponse&lt;NatGatewayRule&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2845,8 +2903,8 @@ public class NatGatewaysApi {
      * @param natGatewayRule The modified NAT Gateway rule. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
-     * @param xContractNumber Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-     * @param _callback The callback to be executed when the API call finishes
+     * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+     * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      * @http.response.details
@@ -2856,11 +2914,11 @@ public class NatGatewaysApi {
         <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call datacentersNatgatewaysRulesPutAsync(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRulePut natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> _callback) throws ApiException {
+    public okhttp3.Call datacentersNatgatewaysRulesPutAsync(String datacenterId, String natGatewayId, String natGatewayRuleId, NatGatewayRulePut natGatewayRule, Boolean pretty, Integer depth, Integer xContractNumber, final ApiCallback<NatGatewayRule> callback) throws ApiException {
 
-        okhttp3.Call localVarCall = datacentersNatgatewaysRulesPutValidateBeforeCall(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRule, pretty, depth, xContractNumber, _callback);
+        okhttp3.Call localVarCall = datacentersNatgatewaysRulesPutValidateBeforeCall(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRule, pretty, depth, xContractNumber, callback);
         Type localVarReturnType = new TypeToken<NatGatewayRule>(){}.getType();
-        localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
+        localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
 }

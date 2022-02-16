@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * NetworkLoadBalancerForwardingRuleTarget
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-16T10:06:24.683Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRuleTarget {
   public static final String SERIALIZED_NAME_IP = "ip";
@@ -55,10 +55,10 @@ public class NetworkLoadBalancerForwardingRuleTarget {
   }
 
    /**
-   * IP of a balanced target VM
+   * The IP of the balanced target VM.
    * @return ip
   **/
-  @ApiModelProperty(example = "22.231.2.2", required = true, value = "IP of a balanced target VM")
+  @ApiModelProperty(example = "22.231.2.2", required = true, value = "The IP of the balanced target VM.")
 
   public String getIp() {
     return ip;
@@ -77,10 +77,10 @@ public class NetworkLoadBalancerForwardingRuleTarget {
   }
 
    /**
-   * Port of the balanced target service. (range: 1 to 65535)
+   * The port of the balanced target service; valid range is 1 to 65535.
    * @return port
   **/
-  @ApiModelProperty(example = "8080", required = true, value = "Port of the balanced target service. (range: 1 to 65535)")
+  @ApiModelProperty(example = "8080", required = true, value = "The port of the balanced target service; valid range is 1 to 65535.")
 
   public Integer getPort() {
     return port;
@@ -99,10 +99,10 @@ public class NetworkLoadBalancerForwardingRuleTarget {
   }
 
    /**
-   * Weight parameter is used to adjust the target VM&#39;s weight relative to other target VMs. All target VMs will receive a load proportional to their weight relative to the sum of all weights, so the higher the weight, the higher the load. The default weight is 1, and the maximal value is 256. A value of 0 means the target VM will not participate in load-balancing but will still accept persistent connections. If this parameter is used to distribute the load according to target VM&#39;s capacity, it is recommended to start with values which can both grow and shrink, for instance between 10 and 100 to leave enough room above and below for later adjustments.
+   * Traffic is distributed in proportion to target weight, relative to the combined weight of all targets. A target with higher weight receives a greater share of traffic. Valid range is 0 to 256 and default is 1. Targets with weight of 0 do not participate in load balancing but still accept persistent connections. It is best to assign weights in the middle of the range to leave room for later adjustments.
    * @return weight
   **/
-  @ApiModelProperty(example = "123", required = true, value = "Weight parameter is used to adjust the target VM's weight relative to other target VMs. All target VMs will receive a load proportional to their weight relative to the sum of all weights, so the higher the weight, the higher the load. The default weight is 1, and the maximal value is 256. A value of 0 means the target VM will not participate in load-balancing but will still accept persistent connections. If this parameter is used to distribute the load according to target VM's capacity, it is recommended to start with values which can both grow and shrink, for instance between 10 and 100 to leave enough room above and below for later adjustments.")
+  @ApiModelProperty(example = "123", required = true, value = "Traffic is distributed in proportion to target weight, relative to the combined weight of all targets. A target with higher weight receives a greater share of traffic. Valid range is 0 to 256 and default is 1. Targets with weight of 0 do not participate in load balancing but still accept persistent connections. It is best to assign weights in the middle of the range to leave room for later adjustments.")
 
   public Integer getWeight() {
     return weight;

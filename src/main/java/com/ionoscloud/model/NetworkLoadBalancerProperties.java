@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * NetworkLoadBalancerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-12-10T13:39:44.583Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-16T10:06:24.683Z[Etc/UTC]")
 
 public class NetworkLoadBalancerProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -112,11 +112,11 @@ public class NetworkLoadBalancerProperties {
   }
 
    /**
-   * Collection of IP addresses of the Network Load Balancer. (Inbound and outbound) IP of the listenerLan must be a customer reserved IP for the public Load Balancer and private IP for the private Load balancer.
+   * Collection of the Network Load Balancer IP addresses. (Inbound and outbound) IPs of the listenerLan must be customer-reserved IPs for public Load Balancers, and private IPs for private Load Balancers.
    * @return ips
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[81.173.1.2, 22.231.2.2, 22.231.2.3]", value = "Collection of IP addresses of the Network Load Balancer. (Inbound and outbound) IP of the listenerLan must be a customer reserved IP for the public Load Balancer and private IP for the private Load balancer.")
+  @ApiModelProperty(example = "[81.173.1.2, 22.231.2.2, 22.231.2.3]", value = "Collection of the Network Load Balancer IP addresses. (Inbound and outbound) IPs of the listenerLan must be customer-reserved IPs for public Load Balancers, and private IPs for private Load Balancers.")
 
   public List<String> getIps() {
     return ips;
@@ -165,11 +165,11 @@ public class NetworkLoadBalancerProperties {
   }
 
    /**
-   * Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain valid subnet mask. If user will not provide any IP then the system will generate one IP with /24 subnet.
+   * Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.
    * @return lbPrivateIps
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[81.173.1.5/24, 22.231.2.5/24]", value = "Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain valid subnet mask. If user will not provide any IP then the system will generate one IP with /24 subnet.")
+  @ApiModelProperty(example = "[81.173.1.5/24, 22.231.2.5/24]", value = "Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.")
 
   public List<String> getLbPrivateIps() {
     return lbPrivateIps;
