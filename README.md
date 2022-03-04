@@ -15,7 +15,7 @@ The SDK for Java wraps the IONOS Cloud API. All API operations are performed ove
 
 ## Getting Started
 
-### Instalation
+### Installation
 
 To install the API client library to your local Maven repository, simply execute:
 
@@ -119,4 +119,4 @@ The IONOS Cloud SDK for JAVA aims to offer access to all resources in the IONOS 
 	Bugs & feature requests can be open on the repository issues: https://github.com/ionos-cloud/sdk-java/issues/new/choose
 
  - Can I contribute to the Java SDK?
-    Pur SDKs are automatically generated using OpenAPI Generator and don’t support manual changes. If you need changes please open an issue and we’ll try to take care of it.
+    Our SDKs are automatically generated using OpenAPI Generator and don’t support manual changes. If you need changes please open an issue and we’ll try to take care of it.
