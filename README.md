@@ -15,7 +15,7 @@ The SDK for Java wraps the IONOS Cloud API. All API operations are performed ove
 
 ## Getting Started
 
-### Instalation
+### Installation
 
 To install the API client library to your local Maven repository, simply execute:
 
@@ -39,7 +39,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.ionoscloud</groupId>
   <artifactId>ionos-cloud-sdk</artifactId>
-  <version>6.0.0</version>
+  <version>v6.0.1</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -49,7 +49,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.ionoscloud:ionos-cloud-sdk:6.0.0"
+compile "com.ionoscloud:ionos-cloud-sdk:v6.0.1"
 ```
 
 #### Others
@@ -75,7 +75,7 @@ import com.ionoscloud.ApiException;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
-import com.ionoscloud.api.DataCenterApi;
+import com.ionoscloud.api.DataCentersApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -87,7 +87,7 @@ public class Example {
     basicAuthentication.setPassword("YOUR PASSWORD");
 
 
-    DataCenterApi apiInstance = new DataCenterApi(defaultClient);
+    DataCentersApi apiInstance = new DataCentersApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
@@ -97,7 +97,7 @@ public class Example {
       Datacenters result = apiInstance.datacentersGet(pretty, depth, xContractNumber, offset, limit);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling DataCenterApi#datacentersGet");
+      System.err.println("Exception when calling DataCentersApi#datacentersGet");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -119,4 +119,4 @@ The IONOS Cloud SDK for JAVA aims to offer access to all resources in the IONOS 
 	Bugs & feature requests can be open on the repository issues: https://github.com/ionos-cloud/sdk-java/issues/new/choose
 
  - Can I contribute to the Java SDK?
-    Pur SDKs are automatically generated using OpenAPI Generator and don’t support manual changes. If you need changes please open an issue and we’ll try to take care of it.
+    Our SDKs are automatically generated using OpenAPI Generator and don’t support manual changes. If you need changes please open an issue and we’ll try to take care of it.
