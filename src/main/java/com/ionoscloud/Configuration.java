@@ -13,8 +13,16 @@
 
 package com.ionoscloud;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-16T10:06:24.683Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-16T09:00:27.688Z[Etc/UTC]")
 public class Configuration {
+    public static final String IONOS_USERNAME_ENV_VAR = "IONOS_USERNAME";
+    public static final String IONOS_PASSWORD_ENV_VAR = "IONOS_PASSWORD";
+    public static final String IONOS_TOKEN_ENV_VAR    = "IONOS_TOKEN";
+    public static final String IONOS_API_URL_ENV_VAR  = "IONOS_API_URL";
+
+    public static final String DEFAULT_IONOS_SERVER_URL = "https://api.ionos.com/cloudapi/v6";
+    public static final String DEFAULT_IONOS_BASE_PATH  = "/cloudapi/v6";
+
     private static ApiClient defaultApiClient = new ApiClient();
 
     /**

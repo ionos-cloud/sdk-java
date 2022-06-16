@@ -8,7 +8,7 @@ info:
     \ volumes, configuring networks, and so on."
   title: CLOUD API
   version: "6.0"
-  x-sdk-patch-level: 4
+  x-sdk-patch-level: 5
 servers:
 - url: https://api.ionos.com/cloudapi/v6
 tags:
@@ -1579,6 +1579,7 @@ paths:
             (maintenance).'
       security:
       - Basic Authentication: []
+      - Token Authentication: []
       summary: List attached volumes
       tags:
       - Servers
@@ -1681,6 +1682,7 @@ paths:
             (maintenance).'
       security:
       - Basic Authentication: []
+      - Token Authentication: []
       summary: Attach volumes
       tags:
       - Servers
@@ -12325,7 +12327,6 @@ paths:
       summary: List Application Load Balancers
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-accepts: application/json
     post:
       description: Create an Application Load Balancer within the datacenter.
@@ -12418,7 +12419,6 @@ paths:
       summary: Create Application Load Balancers
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancer
       x-contentType: application/json
       x-accepts: application/json
@@ -12510,7 +12510,6 @@ paths:
       summary: Delete Application Load Balancers
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-accepts: application/json
     get:
       description: Retrieve the properties of the specified Application Load Balancer
@@ -12598,7 +12597,6 @@ paths:
       summary: Retrieve Application Load Balancers
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-accepts: application/json
     patch:
       description: Update the properties of the specified Application Load Balancer
@@ -12693,7 +12691,6 @@ paths:
       summary: Partially modify Application Load Balancers
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerProperties
       x-contentType: '*/*'
       x-accepts: application/json
@@ -12790,7 +12787,6 @@ paths:
       summary: Modify Application Load Balancers
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancer
       x-contentType: application/json
       x-accepts: application/json
@@ -12880,7 +12876,6 @@ paths:
       summary: List ALB forwarding rules
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-accepts: application/json
     post:
       description: Create a forwarding rule for the Application Load Balancer.
@@ -12979,7 +12974,6 @@ paths:
       summary: Create ALB forwarding rules
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerForwardingRule
       x-contentType: application/json
       x-accepts: application/json
@@ -13077,7 +13071,6 @@ paths:
       summary: Delete ALB forwarding rules
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-accepts: application/json
     get:
       description: Retrieve the specified Application Load Balancer forwarding rule.
@@ -13170,7 +13163,6 @@ paths:
       summary: Retrieve ALB forwarding rules
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-accepts: application/json
     patch:
       description: Update the properties of the specified Application Load Balancer
@@ -13271,7 +13263,6 @@ paths:
       summary: Partially modify ALB forwarding rules
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerForwardingRuleProperties
       x-contentType: '*/*'
       x-accepts: application/json
@@ -13373,7 +13364,6 @@ paths:
       summary: Modify ALB forwarding rules
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerForwardingRule
       x-contentType: application/json
       x-accepts: application/json
@@ -13463,7 +13453,6 @@ paths:
       summary: List ALB Flow Logs
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-accepts: application/json
     post:
       description: Add a new Flow Log for the Application Load Balancer.
@@ -13562,7 +13551,6 @@ paths:
       summary: Create ALB Flow Logs
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerFlowLog
       x-contentType: application/json
       x-accepts: application/json
@@ -13660,7 +13648,6 @@ paths:
       summary: Delete ALB Flow Logs
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-accepts: application/json
     get:
       description: Retrieve the specified Application Load Balancer Flow Log.
@@ -13753,7 +13740,6 @@ paths:
       summary: Retrieve ALB Flow Logs
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-accepts: application/json
     patch:
       description: Update the properties of the specified Application Load Balancer
@@ -13854,7 +13840,6 @@ paths:
       summary: Partially modify ALB Flow Logs
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerFlowLogProperties
       x-contentType: '*/*'
       x-accepts: application/json
@@ -13956,7 +13941,6 @@ paths:
       summary: Modify ALB Flow Logs
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerFlowLog
       x-contentType: application/json
       x-accepts: application/json
@@ -14053,7 +14037,6 @@ paths:
       summary: List target groups
       tags:
       - Target groups
-      x-prerelease: true
       x-accepts: application/json
     post:
       description: Create a target group.
@@ -14140,7 +14123,6 @@ paths:
       summary: Create target groups
       tags:
       - Target groups
-      x-prerelease: true
       x-codegen-request-body-name: targetGroup
       x-contentType: application/json
       x-accepts: application/json
@@ -14226,7 +14208,6 @@ paths:
       summary: Remove target groups
       tags:
       - Target groups
-      x-prerelease: true
       x-accepts: application/json
     get:
       description: Retrieve the properties of the specified target group.
@@ -14307,7 +14288,6 @@ paths:
       summary: Retrieve target groups
       tags:
       - Target groups
-      x-prerelease: true
       x-accepts: application/json
     patch:
       description: Update the properties of the specified target group.
@@ -14395,7 +14375,6 @@ paths:
       summary: Partially modify target groups
       tags:
       - Target groups
-      x-prerelease: true
       x-codegen-request-body-name: targetGroupProperties
       x-contentType: '*/*'
       x-accepts: application/json
@@ -14485,7 +14464,6 @@ paths:
       summary: Modify target groups
       tags:
       - Target groups
-      x-prerelease: true
       x-codegen-request-body-name: targetGroup
       x-contentType: application/json
       x-accepts: application/json
@@ -45028,6 +45006,7 @@ components:
           description: The indicator if the cluster is public or private. Be aware
             that setting it to false is currently in beta phase.
           type: boolean
+          x-prerelease: true
         apiSubnetAllowList:
           description: 'Access to the K8s API server is restricted to these CIDRs.
             Traffic, internal to the cluster, is not affected by this restriction.
@@ -46123,6 +46102,7 @@ components:
           description: The indicator if the cluster is public or private. Be aware
             that setting it to false is currently in beta phase.
           type: boolean
+          x-prerelease: true
         apiSubnetAllowList:
           description: 'Access to the K8s API server is restricted to these CIDRs.
             Traffic, internal to the cluster, is not affected by this restriction.
@@ -46348,6 +46328,7 @@ components:
             the node pool belongs to a private cluster.
           example: 198.51.100.100
           type: string
+          x-prerelease: true
       required:
       - availabilityZone
       - coresCount
@@ -46495,6 +46476,7 @@ components:
             the node pool belongs to a private cluster.
           example: 198.51.100.100
           type: string
+          x-prerelease: true
       required:
       - availabilityZone
       - coresCount
@@ -48855,7 +48837,6 @@ components:
       - name
       - targetLan
       type: object
-      x-prerelease: true
     ApplicationLoadBalancerEntities:
       example:
         forwardingrules:
@@ -48884,9 +48865,8 @@ components:
             properties:
               protocol: HTTP
               listenerIp: 81.173.1.2
-              healthCheck:
-                clientTimeout: 50
               name: My Application Load Balancer forwarding rule
+              clientTimeout: 50
               listenerPort: 8080
               serverCertificates:
               - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -48945,9 +48925,8 @@ components:
             properties:
               protocol: HTTP
               listenerIp: 81.173.1.2
-              healthCheck:
-                clientTimeout: 50
               name: My Application Load Balancer forwarding rule
+              clientTimeout: 50
               listenerPort: 8080
               serverCertificates:
               - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -48995,7 +48974,6 @@ components:
         forwardingrules:
           $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRules'
       type: object
-      x-prerelease: true
     ApplicationLoadBalancer:
       example:
         metadata:
@@ -49034,9 +49012,8 @@ components:
               properties:
                 protocol: HTTP
                 listenerIp: 81.173.1.2
-                healthCheck:
-                  clientTimeout: 50
                 name: My Application Load Balancer forwarding rule
+                clientTimeout: 50
                 listenerPort: 8080
                 serverCertificates:
                 - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -49095,9 +49072,8 @@ components:
               properties:
                 protocol: HTTP
                 listenerIp: 81.173.1.2
-                healthCheck:
-                  clientTimeout: 50
                 name: My Application Load Balancer forwarding rule
+                clientTimeout: 50
                 listenerPort: 8080
                 serverCertificates:
                 - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -49182,7 +49158,6 @@ components:
       required:
       - properties
       type: object
-      x-prerelease: true
     ApplicationLoadBalancers:
       example:
         offset: 0
@@ -49231,9 +49206,8 @@ components:
                 properties:
                   protocol: HTTP
                   listenerIp: 81.173.1.2
-                  healthCheck:
-                    clientTimeout: 50
                   name: My Application Load Balancer forwarding rule
+                  clientTimeout: 50
                   listenerPort: 8080
                   serverCertificates:
                   - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -49292,9 +49266,8 @@ components:
                 properties:
                   protocol: HTTP
                   listenerIp: 81.173.1.2
-                  healthCheck:
-                    clientTimeout: 50
                   name: My Application Load Balancer forwarding rule
+                  clientTimeout: 50
                   listenerPort: 8080
                   serverCertificates:
                   - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -49388,9 +49361,8 @@ components:
                 properties:
                   protocol: HTTP
                   listenerIp: 81.173.1.2
-                  healthCheck:
-                    clientTimeout: 50
                   name: My Application Load Balancer forwarding rule
+                  clientTimeout: 50
                   listenerPort: 8080
                   serverCertificates:
                   - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -49449,9 +49421,8 @@ components:
                 properties:
                   protocol: HTTP
                   listenerIp: 81.173.1.2
-                  healthCheck:
-                    clientTimeout: 50
                   name: My Application Load Balancer forwarding rule
+                  clientTimeout: 50
                   listenerPort: 8080
                   serverCertificates:
                   - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -49544,7 +49515,6 @@ components:
         _links:
           $ref: '#/components/schemas/PaginationLinks'
       type: object
-      x-prerelease: true
     NetworkLoadBalancerPut:
       example:
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -49623,7 +49593,6 @@ components:
       required:
       - properties
       type: object
-      x-prerelease: true
     NetworkLoadBalancerForwardingRule:
       example:
         metadata:
@@ -50048,9 +50017,8 @@ components:
         properties:
           protocol: HTTP
           listenerIp: 81.173.1.2
-          healthCheck:
-            clientTimeout: 50
           name: My Application Load Balancer forwarding rule
+          clientTimeout: 50
           listenerPort: 8080
           serverCertificates:
           - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -50119,7 +50087,6 @@ components:
       required:
       - properties
       type: object
-      x-prerelease: true
     ApplicationLoadBalancerForwardingRules:
       example:
         offset: 0
@@ -50147,9 +50114,8 @@ components:
           properties:
             protocol: HTTP
             listenerIp: 81.173.1.2
-            healthCheck:
-              clientTimeout: 50
             name: My Application Load Balancer forwarding rule
+            clientTimeout: 50
             listenerPort: 8080
             serverCertificates:
             - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -50208,9 +50174,8 @@ components:
           properties:
             protocol: HTTP
             listenerIp: 81.173.1.2
-            healthCheck:
-              clientTimeout: 50
             name: My Application Load Balancer forwarding rule
+            clientTimeout: 50
             listenerPort: 8080
             serverCertificates:
             - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -50289,14 +50254,12 @@ components:
         _links:
           $ref: '#/components/schemas/PaginationLinks'
       type: object
-      x-prerelease: true
     ApplicationLoadBalancerForwardingRuleProperties:
       example:
         protocol: HTTP
         listenerIp: 81.173.1.2
-        healthCheck:
-          clientTimeout: 50
         name: My Application Load Balancer forwarding rule
+        clientTimeout: 50
         listenerPort: 8080
         serverCertificates:
         - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -50360,8 +50323,12 @@ components:
           example: 8080
           format: int32
           type: integer
-        healthCheck:
-          $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRuleHealthCheck'
+        clientTimeout:
+          description: The maximum time in milliseconds to wait for the client to
+            acknowledge or send data; default is 50,000 (50 seconds).
+          example: 50
+          format: int32
+          type: integer
         serverCertificates:
           description: Array of items in the collection.
           example:
@@ -50385,19 +50352,6 @@ components:
       - name
       - protocol
       type: object
-      x-prerelease: true
-    ApplicationLoadBalancerForwardingRuleHealthCheck:
-      example:
-        clientTimeout: 50
-      properties:
-        clientTimeout:
-          description: The maximum time in milliseconds to wait for the client to
-            acknowledge or send data; default is 50,000 (50 seconds).
-          example: 50
-          format: int32
-          type: integer
-      type: object
-      x-prerelease: true
     ApplicationLoadBalancerHttpRule:
       example:
         targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
@@ -50481,7 +50435,6 @@ components:
       - name
       - type
       type: object
-      x-prerelease: true
     ApplicationLoadBalancerHttpRuleCondition:
       example:
         condition: STARTS_WITH
@@ -50535,7 +50488,6 @@ components:
       - condition
       - type
       type: object
-      x-prerelease: true
     TargetGroup:
       example:
         metadata:
@@ -50553,10 +50505,9 @@ components:
         properties:
           protocol: HTTP
           healthCheck:
+            checkInterval: 2000
             retries: 3
-            targetTimeout: 50000
             checkTimeout: 2000
-            connectTimeout: 5000
           name: My target group
           httpHealthCheck:
             path: /monitoring
@@ -50566,19 +50517,15 @@ components:
             response: "200"
             negate: false
           targets:
-          - port: 8080
+          - healthCheckEnabled: true
+            port: 8080
+            maintenanceEnabled: true
             ip: 22.231.2.2
-            healthCheck:
-              checkInterval: 2000
-              check: true
-              maintenance: true
             weight: 123
-          - port: 8080
+          - healthCheckEnabled: true
+            port: 8080
+            maintenanceEnabled: true
             ip: 22.231.2.2
-            healthCheck:
-              checkInterval: 2000
-              check: true
-              maintenance: true
             weight: 123
           algorithm: ROUND_ROBIN
       properties:
@@ -50606,7 +50553,6 @@ components:
       required:
       - properties
       type: object
-      x-prerelease: true
     TargetGroups:
       example:
         offset: 0
@@ -50634,10 +50580,9 @@ components:
           properties:
             protocol: HTTP
             healthCheck:
+              checkInterval: 2000
               retries: 3
-              targetTimeout: 50000
               checkTimeout: 2000
-              connectTimeout: 5000
             name: My target group
             httpHealthCheck:
               path: /monitoring
@@ -50647,19 +50592,15 @@ components:
               response: "200"
               negate: false
             targets:
-            - port: 8080
+            - healthCheckEnabled: true
+              port: 8080
+              maintenanceEnabled: true
               ip: 22.231.2.2
-              healthCheck:
-                checkInterval: 2000
-                check: true
-                maintenance: true
               weight: 123
-            - port: 8080
+            - healthCheckEnabled: true
+              port: 8080
+              maintenanceEnabled: true
               ip: 22.231.2.2
-              healthCheck:
-                checkInterval: 2000
-                check: true
-                maintenance: true
               weight: 123
             algorithm: ROUND_ROBIN
         - metadata:
@@ -50677,10 +50618,9 @@ components:
           properties:
             protocol: HTTP
             healthCheck:
+              checkInterval: 2000
               retries: 3
-              targetTimeout: 50000
               checkTimeout: 2000
-              connectTimeout: 5000
             name: My target group
             httpHealthCheck:
               path: /monitoring
@@ -50690,19 +50630,15 @@ components:
               response: "200"
               negate: false
             targets:
-            - port: 8080
+            - healthCheckEnabled: true
+              port: 8080
+              maintenanceEnabled: true
               ip: 22.231.2.2
-              healthCheck:
-                checkInterval: 2000
-                check: true
-                maintenance: true
               weight: 123
-            - port: 8080
+            - healthCheckEnabled: true
+              port: 8080
+              maintenanceEnabled: true
               ip: 22.231.2.2
-              healthCheck:
-                checkInterval: 2000
-                check: true
-                maintenance: true
               weight: 123
             algorithm: ROUND_ROBIN
       properties:
@@ -50742,7 +50678,6 @@ components:
         _links:
           $ref: '#/components/schemas/PaginationLinks'
       type: object
-      x-prerelease: true
     TargetGroupPut:
       example:
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -50751,10 +50686,9 @@ components:
         properties:
           protocol: HTTP
           healthCheck:
+            checkInterval: 2000
             retries: 3
-            targetTimeout: 50000
             checkTimeout: 2000
-            connectTimeout: 5000
           name: My target group
           httpHealthCheck:
             path: /monitoring
@@ -50764,19 +50698,15 @@ components:
             response: "200"
             negate: false
           targets:
-          - port: 8080
+          - healthCheckEnabled: true
+            port: 8080
+            maintenanceEnabled: true
             ip: 22.231.2.2
-            healthCheck:
-              checkInterval: 2000
-              check: true
-              maintenance: true
             weight: 123
-          - port: 8080
+          - healthCheckEnabled: true
+            port: 8080
+            maintenanceEnabled: true
             ip: 22.231.2.2
-            healthCheck:
-              checkInterval: 2000
-              check: true
-              maintenance: true
             weight: 123
           algorithm: ROUND_ROBIN
       properties:
@@ -50802,15 +50732,13 @@ components:
       required:
       - properties
       type: object
-      x-prerelease: true
     TargetGroupProperties:
       example:
         protocol: HTTP
         healthCheck:
+          checkInterval: 2000
           retries: 3
-          targetTimeout: 50000
           checkTimeout: 2000
-          connectTimeout: 5000
         name: My target group
         httpHealthCheck:
           path: /monitoring
@@ -50820,19 +50748,15 @@ components:
           response: "200"
           negate: false
         targets:
-        - port: 8080
+        - healthCheckEnabled: true
+          port: 8080
+          maintenanceEnabled: true
           ip: 22.231.2.2
-          healthCheck:
-            checkInterval: 2000
-            check: true
-            maintenance: true
           weight: 123
-        - port: 8080
+        - healthCheckEnabled: true
+          port: 8080
+          maintenanceEnabled: true
           ip: 22.231.2.2
-          healthCheck:
-            checkInterval: 2000
-            check: true
-            maintenance: true
           weight: 123
         algorithm: ROUND_ROBIN
       properties:
@@ -50869,13 +50793,11 @@ components:
       - name
       - protocol
       type: object
-      x-prerelease: true
     TargetGroupHealthCheck:
       example:
+        checkInterval: 2000
         retries: 3
-        targetTimeout: 50000
         checkTimeout: 2000
-        connectTimeout: 5000
       properties:
         checkTimeout:
           description: The maximum time in milliseconds to wait for a target to respond
@@ -50884,16 +50806,10 @@ components:
           example: 2000
           format: int32
           type: integer
-        connectTimeout:
-          description: The maximum time in milliseconds to wait for a connection attempt
-            to a target to succeed; default is 5000 (five seconds).
-          example: 5000
-          format: int32
-          type: integer
-        targetTimeout:
-          description: The maximum time in milliseconds for a target to remain inactive;
-            default is 50,000 (50 seconds).
-          example: 50000
+        checkInterval:
+          description: The interval in milliseconds between consecutive health checks;
+            default is 2000.
+          example: 2000
           format: int32
           type: integer
         retries:
@@ -50904,7 +50820,6 @@ components:
           format: int32
           type: integer
       type: object
-      x-prerelease: true
     TargetGroupHttpHealthCheck:
       example:
         path: /monitoring
@@ -50955,15 +50870,12 @@ components:
       - matchType
       - response
       type: object
-      x-prerelease: true
     TargetGroupTarget:
       example:
+        healthCheckEnabled: true
         port: 8080
+        maintenanceEnabled: true
         ip: 22.231.2.2
-        healthCheck:
-          checkInterval: 2000
-          check: true
-          maintenance: true
         weight: 123
       properties:
         ip:
@@ -50986,38 +50898,21 @@ components:
           example: 123
           format: int32
           type: integer
-        healthCheck:
-          $ref: '#/components/schemas/TargetGroupTargetHealthCheck'
+        healthCheckEnabled:
+          description: When the health check is enabled, the target is available only
+            when it accepts regular TCP or HTTP connection attempts for state checking.
+            The state check consists of one connection attempt with the target's address
+            and port. The default value is 'TRUE'.
+          type: boolean
+        maintenanceEnabled:
+          description: When the maintenance mode is enabled, the target is prevented
+            from receiving traffic; the default value is 'FALSE'.
+          type: boolean
       required:
       - ip
       - port
       - weight
       type: object
-      x-prerelease: true
-    TargetGroupTargetHealthCheck:
-      example:
-        checkInterval: 2000
-        check: true
-        maintenance: true
-      properties:
-        check:
-          description: Makes the target available only if it accepts periodic health
-            check TCP connection attempts; when turned off, the target is considered
-            always available. The health check only consists of a connection attempt
-            to the address and port of the target. Default is True.
-          type: boolean
-        checkInterval:
-          description: The interval in milliseconds between consecutive health checks;
-            default is 2000.
-          example: 2000
-          format: int32
-          type: integer
-        maintenance:
-          description: Maintenance mode prevents the target from receiving balanced
-            traffic.
-          type: boolean
-      type: object
-      x-prerelease: true
     Templates:
       example:
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -51091,9 +50986,8 @@ components:
         properties:
           protocol: HTTP
           listenerIp: 81.173.1.2
-          healthCheck:
-            clientTimeout: 50
           name: My Application Load Balancer forwarding rule
+          clientTimeout: 50
           listenerPort: 8080
           serverCertificates:
           - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -51160,7 +51054,6 @@ components:
       required:
       - properties
       type: object
-      x-prerelease: true
     Template:
       example:
         metadata:

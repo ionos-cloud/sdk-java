@@ -1408,6 +1408,7 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+
     ServersApi apiInstance = new ServersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String serverId = "serverId_example"; // String | The unique ID of the server.
@@ -1477,6 +1478,7 @@ public class Example {
     HttpBasicAuth basicAuthentication = (HttpBasicAuth) defaultClient.getAuthentication("Basic Authentication");
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
+
 
     ServersApi apiInstance = new ServersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.

@@ -28,7 +28,7 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * UserMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-02-16T10:06:24.683Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-16T09:00:27.688Z[Etc/UTC]")
 
 public class UserMetadata {
   public static final String SERIALIZED_NAME_ETAG = "etag";

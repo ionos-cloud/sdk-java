@@ -140,7 +140,7 @@ public class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("ionos-cloud-sdk-java/v6.0.1");
+        setUserAgent("ionos-cloud-sdk-java/v6.1.0");
 
         authentications = new HashMap<String, Authentication>();
     }
