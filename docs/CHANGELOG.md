@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 6.1.0 \(June 16th, 2022\)
+
+### Enhancements:
+
+* added Application Load Balancer and Target Group, 18 new models and 2 new apis
+* added Token Authentication
+
 ## v5.1.0-SNAPSHOT - May 11, 2021
 
 * Aligning with the latest Ionos Cloud Api changes
