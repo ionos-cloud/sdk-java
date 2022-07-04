@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 6.1.2 \(July 4th, 2022\)
+
+### Features
+* added new optional query parameter to **datacentersServersDelete** method: `deleteVolumes` *(If true, all attached storage volumes will also be deleted)*
+* new parameter on **VolumeProperties** model: `bootOrder` *(determines whether the volume will be used as a boot volume)*
+
+## 6.1.1 \(July 3rd, 2022\)
+* ❗ Important: This release is unusable, due to some private Kubernetes parameters that are not available at the moment of the release.
+
 ## 6.1.0 \(June 16th, 2022\)
 
 ### Enhancements:
