@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * KubernetesClusterProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T09:11:50.011Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
 
 public class KubernetesClusterProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -53,22 +53,6 @@ public class KubernetesClusterProperties {
   public static final String SERIALIZED_NAME_VIABLE_NODE_POOL_VERSIONS = "viableNodePoolVersions";
   @SerializedName(SERIALIZED_NAME_VIABLE_NODE_POOL_VERSIONS)
   private List<String> viableNodePoolVersions = null;
-
-  public static final String SERIALIZED_NAME_PUBLIC = "public";
-  @SerializedName(SERIALIZED_NAME_PUBLIC)
-  private Boolean _public = true;
-
-  public static final String SERIALIZED_NAME_LOCATION = "location";
-  @SerializedName(SERIALIZED_NAME_LOCATION)
-  private String location;
-
-  public static final String SERIALIZED_NAME_NAT_GATEWAY_IP = "natGatewayIp";
-  @SerializedName(SERIALIZED_NAME_NAT_GATEWAY_IP)
-  private String natGatewayIp;
-
-  public static final String SERIALIZED_NAME_NODE_SUBNET = "nodeSubnet";
-  @SerializedName(SERIALIZED_NAME_NODE_SUBNET)
-  private String nodeSubnet;
 
   public static final String SERIALIZED_NAME_API_SUBNET_ALLOW_LIST = "apiSubnetAllowList";
   @SerializedName(SERIALIZED_NAME_API_SUBNET_ALLOW_LIST)
@@ -209,98 +193,6 @@ public class KubernetesClusterProperties {
   }
 
 
-  public KubernetesClusterProperties _public(Boolean _public) {
-    
-    this._public = _public;
-    return this;
-  }
-
-   /**
-   * The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.
-   * @return _public
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.")
-
-  public Boolean getPublic() {
-    return _public;
-  }
-
-
-  public void setPublic(Boolean _public) {
-    this._public = _public;
-  }
-
-
-  public KubernetesClusterProperties location(String location) {
-    
-    this.location = location;
-    return this;
-  }
-
-   /**
-   * The location of the cluster if the cluster is private. This property is immutable. The location must be enabled for your contract or you must have a Datacenter within that location. This attribute is mandatory if the cluster is private.
-   * @return location
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "de/fra", value = "The location of the cluster if the cluster is private. This property is immutable. The location must be enabled for your contract or you must have a Datacenter within that location. This attribute is mandatory if the cluster is private.")
-
-  public String getLocation() {
-    return location;
-  }
-
-
-  public void setLocation(String location) {
-    this.location = location;
-  }
-
-
-  public KubernetesClusterProperties natGatewayIp(String natGatewayIp) {
-    
-    this.natGatewayIp = natGatewayIp;
-    return this;
-  }
-
-   /**
-   * The nat gateway IP of the cluster if the cluster is private.
-   * @return natGatewayIp
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "198.51.100.100", value = "The nat gateway IP of the cluster if the cluster is private.")
-
-  public String getNatGatewayIp() {
-    return natGatewayIp;
-  }
-
-
-  public void setNatGatewayIp(String natGatewayIp) {
-    this.natGatewayIp = natGatewayIp;
-  }
-
-
-  public KubernetesClusterProperties nodeSubnet(String nodeSubnet) {
-    
-    this.nodeSubnet = nodeSubnet;
-    return this;
-  }
-
-   /**
-   * The node subnet of the cluster if the cluster is private.
-   * @return nodeSubnet
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "192.168.0.0/16", value = "The node subnet of the cluster if the cluster is private.")
-
-  public String getNodeSubnet() {
-    return nodeSubnet;
-  }
-
-
-  public void setNodeSubnet(String nodeSubnet) {
-    this.nodeSubnet = nodeSubnet;
-  }
-
-
   public KubernetesClusterProperties apiSubnetAllowList(List<String> apiSubnetAllowList) {
     
     this.apiSubnetAllowList = apiSubnetAllowList;
@@ -372,7 +264,7 @@ public class KubernetesClusterProperties {
       return false;
     }
     KubernetesClusterProperties kubernetesClusterProperties = (KubernetesClusterProperties) o;
-    return Objects.equals(this.name, kubernetesClusterProperties.name) && Objects.equals(this.k8sVersion, kubernetesClusterProperties.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesClusterProperties.maintenanceWindow) && Objects.equals(this.availableUpgradeVersions, kubernetesClusterProperties.availableUpgradeVersions) && Objects.equals(this.viableNodePoolVersions, kubernetesClusterProperties.viableNodePoolVersions) && Objects.equals(this._public, kubernetesClusterProperties._public) && Objects.equals(this.location, kubernetesClusterProperties.location) && Objects.equals(this.natGatewayIp, kubernetesClusterProperties.natGatewayIp) && Objects.equals(this.nodeSubnet, kubernetesClusterProperties.nodeSubnet) && Objects.equals(this.apiSubnetAllowList, kubernetesClusterProperties.apiSubnetAllowList) && Objects.equals(this.s3Buckets, kubernetesClusterProperties.s3Buckets);
+    return Objects.equals(this.name, kubernetesClusterProperties.name) && Objects.equals(this.k8sVersion, kubernetesClusterProperties.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesClusterProperties.maintenanceWindow) && Objects.equals(this.availableUpgradeVersions, kubernetesClusterProperties.availableUpgradeVersions) && Objects.equals(this.viableNodePoolVersions, kubernetesClusterProperties.viableNodePoolVersions) && Objects.equals(this.apiSubnetAllowList, kubernetesClusterProperties.apiSubnetAllowList) && Objects.equals(this.s3Buckets, kubernetesClusterProperties.s3Buckets);
   }
 
 
@@ -387,10 +279,6 @@ public class KubernetesClusterProperties {
     sb.append("    maintenanceWindow: ").append(toIndentedString(maintenanceWindow)).append("\n");
     sb.append("    availableUpgradeVersions: ").append(toIndentedString(availableUpgradeVersions)).append("\n");
     sb.append("    viableNodePoolVersions: ").append(toIndentedString(viableNodePoolVersions)).append("\n");
-    sb.append("    _public: ").append(toIndentedString(_public)).append("\n");
-    sb.append("    location: ").append(toIndentedString(location)).append("\n");
-    sb.append("    natGatewayIp: ").append(toIndentedString(natGatewayIp)).append("\n");
-    sb.append("    nodeSubnet: ").append(toIndentedString(nodeSubnet)).append("\n");
     sb.append("    apiSubnetAllowList: ").append(toIndentedString(apiSubnetAllowList)).append("\n");
     sb.append("    s3Buckets: ").append(toIndentedString(s3Buckets)).append("\n");
     sb.append("}");
