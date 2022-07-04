@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * VolumeProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-16T09:00:27.688Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T09:11:50.011Z[Etc/UTC]")
 
 public class VolumeProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -330,6 +330,60 @@ public class VolumeProperties {
   public static final String SERIALIZED_NAME_BOOT_SERVER = "bootServer";
   @SerializedName(SERIALIZED_NAME_BOOT_SERVER)
   private String bootServer;
+
+  /**
+   * Determines whether the volume will be used as a boot volume. Set to &#x60;NONE&#x60;, the volume will not be used as boot volume. Set to &#x60;PRIMARY&#x60;, the volume will be used as boot volume and all other volumes must be set to &#x60;NONE&#x60;. Set to &#x60;AUTO&#x60; or &#x60;null&#x60; requires all volumes to be set to &#x60;AUTO&#x60; or &#x60;null&#x60;; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.
+   */
+  @JsonAdapter(BootOrderEnum.Adapter.class)
+  public enum BootOrderEnum {
+    AUTO("AUTO"),
+    
+    NONE("NONE"),
+    
+    PRIMARY("PRIMARY");
+
+    private String value;
+
+    BootOrderEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static BootOrderEnum fromValue(String value) {
+
+      for (BootOrderEnum b : BootOrderEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<BootOrderEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final BootOrderEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public BootOrderEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return BootOrderEnum.fromValue(value);
+      }
+    }
+  }
+
+  public static final String SERIALIZED_NAME_BOOT_ORDER = "bootOrder";
+  @SerializedName(SERIALIZED_NAME_BOOT_ORDER)
+  private BootOrderEnum bootOrder = BootOrderEnum.AUTO;
 
 
   public VolumeProperties name(String name) {
@@ -798,6 +852,29 @@ public class VolumeProperties {
   }
 
 
+  public VolumeProperties bootOrder(BootOrderEnum bootOrder) {
+    
+    this.bootOrder = bootOrder;
+    return this;
+  }
+
+   /**
+   * Determines whether the volume will be used as a boot volume. Set to &#x60;NONE&#x60;, the volume will not be used as boot volume. Set to &#x60;PRIMARY&#x60;, the volume will be used as boot volume and all other volumes must be set to &#x60;NONE&#x60;. Set to &#x60;AUTO&#x60; or &#x60;null&#x60; requires all volumes to be set to &#x60;AUTO&#x60; or &#x60;null&#x60;; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.
+   * @return bootOrder
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "AUTO", value = "Determines whether the volume will be used as a boot volume. Set to `NONE`, the volume will not be used as boot volume. Set to `PRIMARY`, the volume will be used as boot volume and all other volumes must be set to `NONE`. Set to `AUTO` or `null` requires all volumes to be set to `AUTO` or `null`; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.")
+
+  public BootOrderEnum getBootOrder() {
+    return bootOrder;
+  }
+
+
+  public void setBootOrder(BootOrderEnum bootOrder) {
+    this.bootOrder = bootOrder;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -807,7 +884,7 @@ public class VolumeProperties {
       return false;
     }
     VolumeProperties volumeProperties = (VolumeProperties) o;
-    return Objects.equals(this.name, volumeProperties.name) && Objects.equals(this.type, volumeProperties.type) && Objects.equals(this.size, volumeProperties.size) && Objects.equals(this.availabilityZone, volumeProperties.availabilityZone) && Objects.equals(this.image, volumeProperties.image) && Objects.equals(this.imagePassword, volumeProperties.imagePassword) && Objects.equals(this.imageAlias, volumeProperties.imageAlias) && Objects.equals(this.sshKeys, volumeProperties.sshKeys) && Objects.equals(this.bus, volumeProperties.bus) && Objects.equals(this.licenceType, volumeProperties.licenceType) && Objects.equals(this.cpuHotPlug, volumeProperties.cpuHotPlug) && Objects.equals(this.ramHotPlug, volumeProperties.ramHotPlug) && Objects.equals(this.nicHotPlug, volumeProperties.nicHotPlug) && Objects.equals(this.nicHotUnplug, volumeProperties.nicHotUnplug) && Objects.equals(this.discVirtioHotPlug, volumeProperties.discVirtioHotPlug) && Objects.equals(this.discVirtioHotUnplug, volumeProperties.discVirtioHotUnplug) && Objects.equals(this.deviceNumber, volumeProperties.deviceNumber) && Objects.equals(this.pciSlot, volumeProperties.pciSlot) && Objects.equals(this.backupunitId, volumeProperties.backupunitId) && Objects.equals(this.userData, volumeProperties.userData) && Objects.equals(this.bootServer, volumeProperties.bootServer);
+    return Objects.equals(this.name, volumeProperties.name) && Objects.equals(this.type, volumeProperties.type) && Objects.equals(this.size, volumeProperties.size) && Objects.equals(this.availabilityZone, volumeProperties.availabilityZone) && Objects.equals(this.image, volumeProperties.image) && Objects.equals(this.imagePassword, volumeProperties.imagePassword) && Objects.equals(this.imageAlias, volumeProperties.imageAlias) && Objects.equals(this.sshKeys, volumeProperties.sshKeys) && Objects.equals(this.bus, volumeProperties.bus) && Objects.equals(this.licenceType, volumeProperties.licenceType) && Objects.equals(this.cpuHotPlug, volumeProperties.cpuHotPlug) && Objects.equals(this.ramHotPlug, volumeProperties.ramHotPlug) && Objects.equals(this.nicHotPlug, volumeProperties.nicHotPlug) && Objects.equals(this.nicHotUnplug, volumeProperties.nicHotUnplug) && Objects.equals(this.discVirtioHotPlug, volumeProperties.discVirtioHotPlug) && Objects.equals(this.discVirtioHotUnplug, volumeProperties.discVirtioHotUnplug) && Objects.equals(this.deviceNumber, volumeProperties.deviceNumber) && Objects.equals(this.pciSlot, volumeProperties.pciSlot) && Objects.equals(this.backupunitId, volumeProperties.backupunitId) && Objects.equals(this.userData, volumeProperties.userData) && Objects.equals(this.bootServer, volumeProperties.bootServer) && Objects.equals(this.bootOrder, volumeProperties.bootOrder);
   }
 
 
@@ -838,6 +915,7 @@ public class VolumeProperties {
     sb.append("    backupunitId: ").append(toIndentedString(backupunitId)).append("\n");
     sb.append("    userData: ").append(toIndentedString(userData)).append("\n");
     sb.append("    bootServer: ").append(toIndentedString(bootServer)).append("\n");
+    sb.append("    bootOrder: ").append(toIndentedString(bootOrder)).append("\n");
     sb.append("}");
     return sb.toString();
   }

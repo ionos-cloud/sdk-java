@@ -29,7 +29,7 @@ import java.io.IOException;
 /**
  * Contract
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-16T09:00:27.688Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T09:11:50.011Z[Etc/UTC]")
 
 public class Contract {
   public static final String SERIALIZED_NAME_TYPE = "type";

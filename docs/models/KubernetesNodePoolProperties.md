@@ -23,7 +23,6 @@
 | **annotations** | **Map&lt;String, String&gt;** | map of annotations attached to node pool. |  [optional] |
 | **publicIps** | **List&lt;String&gt;** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one more IP than maximum number possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1 when auto scaling is used). The extra IP is used when the nodes are rebuilt. |  [optional] |
 | **availableUpgradeVersions** | **List&lt;String&gt;** | List of available versions for upgrading the node pool. |  [optional] |
-| **gatewayIp** | **String** | Public IP address for the gateway performing source NAT for the node pool&#39;s nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster. |  [optional] |
 
 
 

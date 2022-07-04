@@ -34,7 +34,7 @@ import java.util.Map;
 /**
  * KubernetesNodePoolProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-16T09:00:27.688Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T09:11:50.011Z[Etc/UTC]")
 
 public class KubernetesNodePoolProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
@@ -202,10 +202,6 @@ public class KubernetesNodePoolProperties {
   public static final String SERIALIZED_NAME_AVAILABLE_UPGRADE_VERSIONS = "availableUpgradeVersions";
   @SerializedName(SERIALIZED_NAME_AVAILABLE_UPGRADE_VERSIONS)
   private List<String> availableUpgradeVersions = null;
-
-  public static final String SERIALIZED_NAME_GATEWAY_IP = "gatewayIp";
-  @SerializedName(SERIALIZED_NAME_GATEWAY_IP)
-  private String gatewayIp;
 
 
   public KubernetesNodePoolProperties name(String name) {
@@ -630,29 +626,6 @@ public class KubernetesNodePoolProperties {
   }
 
 
-  public KubernetesNodePoolProperties gatewayIp(String gatewayIp) {
-    
-    this.gatewayIp = gatewayIp;
-    return this;
-  }
-
-   /**
-   * Public IP address for the gateway performing source NAT for the node pool&#39;s nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster.
-   * @return gatewayIp
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "198.51.100.100", value = "Public IP address for the gateway performing source NAT for the node pool's nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster.")
-
-  public String getGatewayIp() {
-    return gatewayIp;
-  }
-
-
-  public void setGatewayIp(String gatewayIp) {
-    this.gatewayIp = gatewayIp;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -662,7 +635,7 @@ public class KubernetesNodePoolProperties {
       return false;
     }
     KubernetesNodePoolProperties kubernetesNodePoolProperties = (KubernetesNodePoolProperties) o;
-    return Objects.equals(this.name, kubernetesNodePoolProperties.name) && Objects.equals(this.datacenterId, kubernetesNodePoolProperties.datacenterId) && Objects.equals(this.nodeCount, kubernetesNodePoolProperties.nodeCount) && Objects.equals(this.cpuFamily, kubernetesNodePoolProperties.cpuFamily) && Objects.equals(this.coresCount, kubernetesNodePoolProperties.coresCount) && Objects.equals(this.ramSize, kubernetesNodePoolProperties.ramSize) && Objects.equals(this.availabilityZone, kubernetesNodePoolProperties.availabilityZone) && Objects.equals(this.storageType, kubernetesNodePoolProperties.storageType) && Objects.equals(this.storageSize, kubernetesNodePoolProperties.storageSize) && Objects.equals(this.k8sVersion, kubernetesNodePoolProperties.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesNodePoolProperties.maintenanceWindow) && Objects.equals(this.autoScaling, kubernetesNodePoolProperties.autoScaling) && Objects.equals(this.lans, kubernetesNodePoolProperties.lans) && Objects.equals(this.labels, kubernetesNodePoolProperties.labels) && Objects.equals(this.annotations, kubernetesNodePoolProperties.annotations) && Objects.equals(this.publicIps, kubernetesNodePoolProperties.publicIps) && Objects.equals(this.availableUpgradeVersions, kubernetesNodePoolProperties.availableUpgradeVersions) && Objects.equals(this.gatewayIp, kubernetesNodePoolProperties.gatewayIp);
+    return Objects.equals(this.name, kubernetesNodePoolProperties.name) && Objects.equals(this.datacenterId, kubernetesNodePoolProperties.datacenterId) && Objects.equals(this.nodeCount, kubernetesNodePoolProperties.nodeCount) && Objects.equals(this.cpuFamily, kubernetesNodePoolProperties.cpuFamily) && Objects.equals(this.coresCount, kubernetesNodePoolProperties.coresCount) && Objects.equals(this.ramSize, kubernetesNodePoolProperties.ramSize) && Objects.equals(this.availabilityZone, kubernetesNodePoolProperties.availabilityZone) && Objects.equals(this.storageType, kubernetesNodePoolProperties.storageType) && Objects.equals(this.storageSize, kubernetesNodePoolProperties.storageSize) && Objects.equals(this.k8sVersion, kubernetesNodePoolProperties.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesNodePoolProperties.maintenanceWindow) && Objects.equals(this.autoScaling, kubernetesNodePoolProperties.autoScaling) && Objects.equals(this.lans, kubernetesNodePoolProperties.lans) && Objects.equals(this.labels, kubernetesNodePoolProperties.labels) && Objects.equals(this.annotations, kubernetesNodePoolProperties.annotations) && Objects.equals(this.publicIps, kubernetesNodePoolProperties.publicIps) && Objects.equals(this.availableUpgradeVersions, kubernetesNodePoolProperties.availableUpgradeVersions);
   }
 
 
@@ -689,7 +662,6 @@ public class KubernetesNodePoolProperties {
     sb.append("    annotations: ").append(toIndentedString(annotations)).append("\n");
     sb.append("    publicIps: ").append(toIndentedString(publicIps)).append("\n");
     sb.append("    availableUpgradeVersions: ").append(toIndentedString(availableUpgradeVersions)).append("\n");
-    sb.append("    gatewayIp: ").append(toIndentedString(gatewayIp)).append("\n");
     sb.append("}");
     return sb.toString();
   }
