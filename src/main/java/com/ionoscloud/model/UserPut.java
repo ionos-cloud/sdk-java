@@ -28,17 +28,20 @@ import java.io.IOException;
 /**
  * UserPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class UserPut {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private UserPropertiesPut properties;
 
+  
 
   public UserPut id(String id) {
     
@@ -61,6 +64,7 @@ public class UserPut {
   public void setId(String id) {
     this.id = id;
   }
+
 
 
   public UserPut properties(UserPropertiesPut properties) {
@@ -104,7 +108,9 @@ public class UserPut {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserPut {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
     sb.append("}");
     return sb.toString();

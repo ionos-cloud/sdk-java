@@ -30,21 +30,25 @@ import java.io.IOException;
 /**
  * ServerEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class ServerEntities {
+  
   public static final String SERIALIZED_NAME_CDROMS = "cdroms";
   @SerializedName(SERIALIZED_NAME_CDROMS)
   private Cdroms cdroms;
+
 
   public static final String SERIALIZED_NAME_VOLUMES = "volumes";
   @SerializedName(SERIALIZED_NAME_VOLUMES)
   private AttachedVolumes volumes;
 
+
   public static final String SERIALIZED_NAME_NICS = "nics";
   @SerializedName(SERIALIZED_NAME_NICS)
   private Nics nics;
 
+  
 
   public ServerEntities cdroms(Cdroms cdroms) {
     
@@ -69,6 +73,7 @@ public class ServerEntities {
   }
 
 
+
   public ServerEntities volumes(AttachedVolumes volumes) {
     
     this.volumes = volumes;
@@ -90,6 +95,7 @@ public class ServerEntities {
   public void setVolumes(AttachedVolumes volumes) {
     this.volumes = volumes;
   }
+
 
 
   public ServerEntities nics(Nics nics) {
@@ -134,8 +140,11 @@ public class ServerEntities {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServerEntities {\n");
+    
     sb.append("    cdroms: ").append(toIndentedString(cdroms)).append("\n");
+
     sb.append("    volumes: ").append(toIndentedString(volumes)).append("\n");
+
     sb.append("    nics: ").append(toIndentedString(nics)).append("\n");
     sb.append("}");
     return sb.toString();

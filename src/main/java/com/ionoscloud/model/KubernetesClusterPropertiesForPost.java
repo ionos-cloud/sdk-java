@@ -31,29 +31,35 @@ import java.util.List;
 /**
  * KubernetesClusterPropertiesForPost
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class KubernetesClusterPropertiesForPost {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_K8S_VERSION = "k8sVersion";
   @SerializedName(SERIALIZED_NAME_K8S_VERSION)
   private String k8sVersion;
 
+
   public static final String SERIALIZED_NAME_MAINTENANCE_WINDOW = "maintenanceWindow";
   @SerializedName(SERIALIZED_NAME_MAINTENANCE_WINDOW)
   private KubernetesMaintenanceWindow maintenanceWindow;
+
 
   public static final String SERIALIZED_NAME_API_SUBNET_ALLOW_LIST = "apiSubnetAllowList";
   @SerializedName(SERIALIZED_NAME_API_SUBNET_ALLOW_LIST)
   private List<String> apiSubnetAllowList = null;
 
+
   public static final String SERIALIZED_NAME_S3_BUCKETS = "s3Buckets";
   @SerializedName(SERIALIZED_NAME_S3_BUCKETS)
   private List<S3Bucket> s3Buckets = null;
 
+  
 
   public KubernetesClusterPropertiesForPost name(String name) {
     
@@ -75,6 +81,7 @@ public class KubernetesClusterPropertiesForPost {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public KubernetesClusterPropertiesForPost k8sVersion(String k8sVersion) {
@@ -100,6 +107,7 @@ public class KubernetesClusterPropertiesForPost {
   }
 
 
+
   public KubernetesClusterPropertiesForPost maintenanceWindow(KubernetesMaintenanceWindow maintenanceWindow) {
     
     this.maintenanceWindow = maintenanceWindow;
@@ -121,6 +129,7 @@ public class KubernetesClusterPropertiesForPost {
   public void setMaintenanceWindow(KubernetesMaintenanceWindow maintenanceWindow) {
     this.maintenanceWindow = maintenanceWindow;
   }
+
 
 
   public KubernetesClusterPropertiesForPost apiSubnetAllowList(List<String> apiSubnetAllowList) {
@@ -152,6 +161,7 @@ public class KubernetesClusterPropertiesForPost {
   public void setApiSubnetAllowList(List<String> apiSubnetAllowList) {
     this.apiSubnetAllowList = apiSubnetAllowList;
   }
+
 
 
   public KubernetesClusterPropertiesForPost s3Buckets(List<S3Bucket> s3Buckets) {
@@ -194,7 +204,7 @@ public class KubernetesClusterPropertiesForPost {
       return false;
     }
     KubernetesClusterPropertiesForPost kubernetesClusterPropertiesForPost = (KubernetesClusterPropertiesForPost) o;
-    return Objects.equals(this.name, kubernetesClusterPropertiesForPost.name) && Objects.equals(this.k8sVersion, kubernetesClusterPropertiesForPost.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesClusterPropertiesForPost.maintenanceWindow) && Objects.equals(this.apiSubnetAllowList, kubernetesClusterPropertiesForPost.apiSubnetAllowList) && Objects.equals(this.s3Buckets, kubernetesClusterPropertiesForPost.s3Buckets);
+    return Objects.equals(this.name, kubernetesClusterPropertiesForPost.name) && Objects.equals(this.k8sVersion, kubernetesClusterPropertiesForPost.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesClusterPropertiesForPost.maintenanceWindow) && true && true && true && true && Objects.equals(this.apiSubnetAllowList, kubernetesClusterPropertiesForPost.apiSubnetAllowList) && Objects.equals(this.s3Buckets, kubernetesClusterPropertiesForPost.s3Buckets);
   }
 
 
@@ -204,10 +214,15 @@ public class KubernetesClusterPropertiesForPost {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesClusterPropertiesForPost {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    k8sVersion: ").append(toIndentedString(k8sVersion)).append("\n");
+
     sb.append("    maintenanceWindow: ").append(toIndentedString(maintenanceWindow)).append("\n");
+
     sb.append("    apiSubnetAllowList: ").append(toIndentedString(apiSubnetAllowList)).append("\n");
+
     sb.append("    s3Buckets: ").append(toIndentedString(s3Buckets)).append("\n");
     sb.append("}");
     return sb.toString();

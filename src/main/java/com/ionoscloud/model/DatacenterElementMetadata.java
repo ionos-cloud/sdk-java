@@ -28,36 +28,44 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * DatacenterElementMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class DatacenterElementMetadata {
+  
   public static final String SERIALIZED_NAME_ETAG = "etag";
   @SerializedName(SERIALIZED_NAME_ETAG)
   private String etag;
+
 
   public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
   @SerializedName(SERIALIZED_NAME_CREATED_DATE)
   private OffsetDateTime createdDate;
 
+
   public static final String SERIALIZED_NAME_CREATED_BY = "createdBy";
   @SerializedName(SERIALIZED_NAME_CREATED_BY)
   private String createdBy;
+
 
   public static final String SERIALIZED_NAME_CREATED_BY_USER_ID = "createdByUserId";
   @SerializedName(SERIALIZED_NAME_CREATED_BY_USER_ID)
   private String createdByUserId;
 
+
   public static final String SERIALIZED_NAME_LAST_MODIFIED_DATE = "lastModifiedDate";
   @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_DATE)
   private OffsetDateTime lastModifiedDate;
+
 
   public static final String SERIALIZED_NAME_LAST_MODIFIED_BY = "lastModifiedBy";
   @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_BY)
   private String lastModifiedBy;
 
+
   public static final String SERIALIZED_NAME_LAST_MODIFIED_BY_USER_ID = "lastModifiedByUserId";
   @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_BY_USER_ID)
   private String lastModifiedByUserId;
+
 
   /**
    * State of the resource. *AVAILABLE* There are no pending modification requests for this item; *BUSY* There is at least one modification request pending and all following requests will be queued; *INACTIVE* Resource has been de-provisioned; *DEPLOYING* Resource state DEPLOYING - relevant for Kubernetes cluster/nodepool; *ACTIVE* Resource state ACTIVE - relevant for Kubernetes cluster/nodepool; *FAILED* Resource state FAILED - relevant for Kubernetes cluster/nodepool; *SUSPENDED* Resource state SUSPENDED - relevant for Kubernetes cluster/nodepool; *FAILED_SUSPENDED* Resource state FAILED_SUSPENDED - relevant for Kubernetes cluster; *UPDATING* Resource state UPDATING - relevant for Kubernetes cluster/nodepool; *FAILED_UPDATING* Resource state FAILED_UPDATING - relevant for Kubernetes cluster/nodepool; *DESTROYING* Resource state DESTROYING - relevant for Kubernetes cluster; *FAILED_DESTROYING* Resource state FAILED_DESTROYING - relevant for Kubernetes cluster/nodepool; *TERMINATED* Resource state TERMINATED - relevant for Kubernetes cluster/nodepool.
@@ -133,6 +141,7 @@ public class DatacenterElementMetadata {
   @SerializedName(SERIALIZED_NAME_STATE)
   private StateEnum state;
 
+  
 
    /**
    * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
@@ -149,6 +158,7 @@ public class DatacenterElementMetadata {
   public void setEtag(String etag) {
     this.etag = etag;
   }
+
 
 
    /**
@@ -168,6 +178,7 @@ public class DatacenterElementMetadata {
   }
 
 
+
    /**
    * The user who created the resource.
    * @return createdBy
@@ -183,6 +194,7 @@ public class DatacenterElementMetadata {
   public void setCreatedBy(String createdBy) {
     this.createdBy = createdBy;
   }
+
 
 
    /**
@@ -202,6 +214,7 @@ public class DatacenterElementMetadata {
   }
 
 
+
    /**
    * The last time the resource was modified.
    * @return lastModifiedDate
@@ -217,6 +230,7 @@ public class DatacenterElementMetadata {
   public void setLastModifiedDate(OffsetDateTime lastModifiedDate) {
     this.lastModifiedDate = lastModifiedDate;
   }
+
 
 
    /**
@@ -236,6 +250,7 @@ public class DatacenterElementMetadata {
   }
 
 
+
    /**
    * The unique ID of the user who last modified the resource.
    * @return lastModifiedByUserId
@@ -251,6 +266,7 @@ public class DatacenterElementMetadata {
   public void setLastModifiedByUserId(String lastModifiedByUserId) {
     this.lastModifiedByUserId = lastModifiedByUserId;
   }
+
 
 
    /**
@@ -289,13 +305,21 @@ public class DatacenterElementMetadata {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DatacenterElementMetadata {\n");
+    
     sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
+
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
+
     sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
+
     sb.append("    createdByUserId: ").append(toIndentedString(createdByUserId)).append("\n");
+
     sb.append("    lastModifiedDate: ").append(toIndentedString(lastModifiedDate)).append("\n");
+
     sb.append("    lastModifiedBy: ").append(toIndentedString(lastModifiedBy)).append("\n");
+
     sb.append("    lastModifiedByUserId: ").append(toIndentedString(lastModifiedByUserId)).append("\n");
+
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("}");
     return sb.toString();

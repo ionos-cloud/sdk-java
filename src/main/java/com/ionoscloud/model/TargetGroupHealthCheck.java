@@ -27,21 +27,25 @@ import java.io.IOException;
 /**
  * TargetGroupHealthCheck
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class TargetGroupHealthCheck {
+  
   public static final String SERIALIZED_NAME_CHECK_TIMEOUT = "checkTimeout";
   @SerializedName(SERIALIZED_NAME_CHECK_TIMEOUT)
   private Integer checkTimeout;
+
 
   public static final String SERIALIZED_NAME_CHECK_INTERVAL = "checkInterval";
   @SerializedName(SERIALIZED_NAME_CHECK_INTERVAL)
   private Integer checkInterval;
 
+
   public static final String SERIALIZED_NAME_RETRIES = "retries";
   @SerializedName(SERIALIZED_NAME_RETRIES)
   private Integer retries;
 
+  
 
   public TargetGroupHealthCheck checkTimeout(Integer checkTimeout) {
     
@@ -66,6 +70,7 @@ public class TargetGroupHealthCheck {
   }
 
 
+
   public TargetGroupHealthCheck checkInterval(Integer checkInterval) {
     
     this.checkInterval = checkInterval;
@@ -87,6 +92,7 @@ public class TargetGroupHealthCheck {
   public void setCheckInterval(Integer checkInterval) {
     this.checkInterval = checkInterval;
   }
+
 
 
   public TargetGroupHealthCheck retries(Integer retries) {
@@ -131,8 +137,11 @@ public class TargetGroupHealthCheck {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TargetGroupHealthCheck {\n");
+    
     sb.append("    checkTimeout: ").append(toIndentedString(checkTimeout)).append("\n");
+
     sb.append("    checkInterval: ").append(toIndentedString(checkInterval)).append("\n");
+
     sb.append("    retries: ").append(toIndentedString(retries)).append("\n");
     sb.append("}");
     return sb.toString();

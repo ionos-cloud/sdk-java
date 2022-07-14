@@ -27,9 +27,10 @@ import java.io.IOException;
 /**
  * KubernetesMaintenanceWindow
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class KubernetesMaintenanceWindow {
+  
   /**
    * The day of the week for a maintenance window.
    */
@@ -92,10 +93,12 @@ public class KubernetesMaintenanceWindow {
   @SerializedName(SERIALIZED_NAME_DAY_OF_THE_WEEK)
   private DayOfTheWeekEnum dayOfTheWeek;
 
+
   public static final String SERIALIZED_NAME_TIME = "time";
   @SerializedName(SERIALIZED_NAME_TIME)
   private String time;
 
+  
 
   public KubernetesMaintenanceWindow dayOfTheWeek(DayOfTheWeekEnum dayOfTheWeek) {
     
@@ -117,6 +120,7 @@ public class KubernetesMaintenanceWindow {
   public void setDayOfTheWeek(DayOfTheWeekEnum dayOfTheWeek) {
     this.dayOfTheWeek = dayOfTheWeek;
   }
+
 
 
   public KubernetesMaintenanceWindow time(String time) {
@@ -160,7 +164,9 @@ public class KubernetesMaintenanceWindow {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesMaintenanceWindow {\n");
+    
     sb.append("    dayOfTheWeek: ").append(toIndentedString(dayOfTheWeek)).append("\n");
+
     sb.append("    time: ").append(toIndentedString(time)).append("\n");
     sb.append("}");
     return sb.toString();

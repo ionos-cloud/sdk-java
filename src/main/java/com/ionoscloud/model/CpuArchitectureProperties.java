@@ -27,25 +27,30 @@ import java.io.IOException;
 /**
  * CpuArchitectureProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class CpuArchitectureProperties {
+  
   public static final String SERIALIZED_NAME_CPU_FAMILY = "cpuFamily";
   @SerializedName(SERIALIZED_NAME_CPU_FAMILY)
   private String cpuFamily;
+
 
   public static final String SERIALIZED_NAME_MAX_CORES = "maxCores";
   @SerializedName(SERIALIZED_NAME_MAX_CORES)
   private Integer maxCores;
 
+
   public static final String SERIALIZED_NAME_MAX_RAM = "maxRam";
   @SerializedName(SERIALIZED_NAME_MAX_RAM)
   private Integer maxRam;
+
 
   public static final String SERIALIZED_NAME_VENDOR = "vendor";
   @SerializedName(SERIALIZED_NAME_VENDOR)
   private String vendor;
 
+  
 
   public CpuArchitectureProperties cpuFamily(String cpuFamily) {
     
@@ -68,6 +73,7 @@ public class CpuArchitectureProperties {
   public void setCpuFamily(String cpuFamily) {
     this.cpuFamily = cpuFamily;
   }
+
 
 
   public CpuArchitectureProperties maxCores(Integer maxCores) {
@@ -93,6 +99,7 @@ public class CpuArchitectureProperties {
   }
 
 
+
   public CpuArchitectureProperties maxRam(Integer maxRam) {
     
     this.maxRam = maxRam;
@@ -114,6 +121,7 @@ public class CpuArchitectureProperties {
   public void setMaxRam(Integer maxRam) {
     this.maxRam = maxRam;
   }
+
 
 
   public CpuArchitectureProperties vendor(String vendor) {
@@ -158,9 +166,13 @@ public class CpuArchitectureProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class CpuArchitectureProperties {\n");
+    
     sb.append("    cpuFamily: ").append(toIndentedString(cpuFamily)).append("\n");
+
     sb.append("    maxCores: ").append(toIndentedString(maxCores)).append("\n");
+
     sb.append("    maxRam: ").append(toIndentedString(maxRam)).append("\n");
+
     sb.append("    vendor: ").append(toIndentedString(vendor)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -30,21 +30,25 @@ import java.util.List;
 /**
  * KubernetesNodePoolLan
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class KubernetesNodePoolLan {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private Integer id;
+
 
   public static final String SERIALIZED_NAME_DHCP = "dhcp";
   @SerializedName(SERIALIZED_NAME_DHCP)
   private Boolean dhcp;
 
+
   public static final String SERIALIZED_NAME_ROUTES = "routes";
   @SerializedName(SERIALIZED_NAME_ROUTES)
   private List<KubernetesNodePoolLanRoutes> routes = null;
 
+  
 
   public KubernetesNodePoolLan id(Integer id) {
     
@@ -68,6 +72,7 @@ public class KubernetesNodePoolLan {
   }
 
 
+
   public KubernetesNodePoolLan dhcp(Boolean dhcp) {
     
     this.dhcp = dhcp;
@@ -89,6 +94,7 @@ public class KubernetesNodePoolLan {
   public void setDhcp(Boolean dhcp) {
     this.dhcp = dhcp;
   }
+
 
 
   public KubernetesNodePoolLan routes(List<KubernetesNodePoolLanRoutes> routes) {
@@ -141,8 +147,11 @@ public class KubernetesNodePoolLan {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodePoolLan {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    dhcp: ").append(toIndentedString(dhcp)).append("\n");
+
     sb.append("    routes: ").append(toIndentedString(routes)).append("\n");
     sb.append("}");
     return sb.toString();

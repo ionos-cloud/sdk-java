@@ -28,21 +28,25 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * LoadbalancerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class LoadbalancerProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_IP = "ip";
   @SerializedName(SERIALIZED_NAME_IP)
   private String ip;
 
+
   public static final String SERIALIZED_NAME_DHCP = "dhcp";
   @SerializedName(SERIALIZED_NAME_DHCP)
   private Boolean dhcp;
 
+  
 
   public LoadbalancerProperties name(String name) {
     
@@ -67,6 +71,7 @@ public class LoadbalancerProperties {
   }
 
 
+
   public LoadbalancerProperties ip(String ip) {
     
     this.ip = ip;
@@ -88,6 +93,7 @@ public class LoadbalancerProperties {
   public void setIp(String ip) {
     this.ip = ip;
   }
+
 
 
   public LoadbalancerProperties dhcp(Boolean dhcp) {
@@ -132,8 +138,11 @@ public class LoadbalancerProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LoadbalancerProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    ip: ").append(toIndentedString(ip)).append("\n");
+
     sb.append("    dhcp: ").append(toIndentedString(dhcp)).append("\n");
     sb.append("}");
     return sb.toString();

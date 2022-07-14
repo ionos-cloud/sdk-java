@@ -40104,6 +40104,7 @@ components:
             createInternetAccess: true
             createBackupUnit: true
             createK8sCluster: true
+            manageDbaas: true
             accessAndManageMonitoring: true
             reserveIp: true
             createDataCenter: true
@@ -40136,6 +40137,7 @@ components:
             createInternetAccess: true
             createBackupUnit: true
             createK8sCluster: true
+            manageDbaas: true
             accessAndManageMonitoring: true
             reserveIp: true
             createDataCenter: true
@@ -40195,6 +40197,7 @@ components:
           createInternetAccess: true
           createBackupUnit: true
           createK8sCluster: true
+          manageDbaas: true
           accessAndManageMonitoring: true
           reserveIp: true
           createDataCenter: true
@@ -40294,6 +40297,7 @@ components:
             createInternetAccess: true
             createBackupUnit: true
             createK8sCluster: true
+            manageDbaas: true
             accessAndManageMonitoring: true
             reserveIp: true
             createDataCenter: true
@@ -40326,6 +40330,7 @@ components:
             createInternetAccess: true
             createBackupUnit: true
             createK8sCluster: true
+            manageDbaas: true
             accessAndManageMonitoring: true
             reserveIp: true
             createDataCenter: true
@@ -40776,6 +40781,7 @@ components:
                 createInternetAccess: true
                 createBackupUnit: true
                 createK8sCluster: true
+                manageDbaas: true
                 accessAndManageMonitoring: true
                 reserveIp: true
                 createDataCenter: true
@@ -40808,6 +40814,7 @@ components:
                 createInternetAccess: true
                 createBackupUnit: true
                 createK8sCluster: true
+                manageDbaas: true
                 accessAndManageMonitoring: true
                 reserveIp: true
                 createDataCenter: true
@@ -40976,6 +40983,7 @@ components:
               createInternetAccess: true
               createBackupUnit: true
               createK8sCluster: true
+              manageDbaas: true
               accessAndManageMonitoring: true
               reserveIp: true
               createDataCenter: true
@@ -41008,6 +41016,7 @@ components:
               createInternetAccess: true
               createBackupUnit: true
               createK8sCluster: true
+              manageDbaas: true
               accessAndManageMonitoring: true
               reserveIp: true
               createDataCenter: true
@@ -41062,6 +41071,7 @@ components:
         createInternetAccess: true
         createBackupUnit: true
         createK8sCluster: true
+        manageDbaas: true
         accessAndManageMonitoring: true
         reserveIp: true
         createDataCenter: true
@@ -41114,6 +41124,9 @@ components:
           type: boolean
         accessAndManageCertificates:
           description: Privilege for a group to access and manage certificates.
+          type: boolean
+        manageDbaas:
+          description: Privilege for a group to manage DBaaS related functionality.
           type: boolean
       type: object
     GroupShare:
@@ -44177,6 +44190,7 @@ components:
                   createInternetAccess: true
                   createBackupUnit: true
                   createK8sCluster: true
+                  manageDbaas: true
                   accessAndManageMonitoring: true
                   reserveIp: true
                   createDataCenter: true
@@ -44209,6 +44223,7 @@ components:
                   createInternetAccess: true
                   createBackupUnit: true
                   createK8sCluster: true
+                  manageDbaas: true
                   accessAndManageMonitoring: true
                   reserveIp: true
                   createDataCenter: true
@@ -44314,6 +44329,7 @@ components:
                   createInternetAccess: true
                   createBackupUnit: true
                   createK8sCluster: true
+                  manageDbaas: true
                   accessAndManageMonitoring: true
                   reserveIp: true
                   createDataCenter: true
@@ -44346,6 +44362,7 @@ components:
                   createInternetAccess: true
                   createBackupUnit: true
                   createK8sCluster: true
+                  manageDbaas: true
                   accessAndManageMonitoring: true
                   reserveIp: true
                   createDataCenter: true
@@ -45010,6 +45027,7 @@ components:
         viableNodePoolVersions:
         - 1.17.7
         - 1.18.2
+        public: true
         apiSubnetAllowList:
         - 1.2.3.4/32
         - 2002::1234:abcd:ffff:c0a8:101/64
@@ -45022,7 +45040,10 @@ components:
         s3Buckets:
         - name: name
         - name: name
+        nodeSubnet: 192.168.0.0/16
+        location: de/fra
         k8sVersion: 1.15.4
+        natGatewayIp: 198.51.100.100
       properties:
         name:
           description: A Kubernetes cluster name. Valid Kubernetes cluster name must
@@ -45057,6 +45078,30 @@ components:
           items:
             type: string
           type: array
+        public:
+          default: true
+          description: The indicator if the cluster is public or private. Be aware
+            that setting it to false is currently in beta phase.
+          type: boolean
+          x-prerelease: true
+        location:
+          description: The location of the cluster if the cluster is private. This
+            property is immutable. The location must be enabled for your contract
+            or you must have a Datacenter within that location. This attribute is
+            mandatory if the cluster is private.
+          example: de/fra
+          type: string
+          x-prerelease: true
+        natGatewayIp:
+          description: The nat gateway IP of the cluster if the cluster is private.
+          example: 198.51.100.100
+          type: string
+          x-prerelease: true
+        nodeSubnet:
+          description: The node subnet of the cluster if the cluster is private.
+          example: 192.168.0.0/16
+          type: string
+          x-prerelease: true
         apiSubnetAllowList:
           description: 'Access to the K8s API server is restricted to these CIDRs.
             Traffic, internal to the cluster, is not affected by this restriction.
@@ -45217,6 +45262,7 @@ components:
           viableNodePoolVersions:
           - 1.17.7
           - 1.18.2
+          public: true
           apiSubnetAllowList:
           - 1.2.3.4/32
           - 2002::1234:abcd:ffff:c0a8:101/64
@@ -45229,7 +45275,10 @@ components:
           s3Buckets:
           - name: name
           - name: name
+          nodeSubnet: 192.168.0.0/16
+          location: de/fra
           k8sVersion: 1.15.4
+          natGatewayIp: 198.51.100.100
       properties:
         id:
           description: The resource's unique identifier.
@@ -45391,6 +45440,7 @@ components:
           maintenanceWindow:
             dayOfTheWeek: Monday
             time: 13:00:00
+          public: true
           apiSubnetAllowList:
           - 1.2.3.4/32
           - 2002::1234:abcd:ffff:c0a8:101/64
@@ -45400,7 +45450,10 @@ components:
           s3Buckets:
           - name: name
           - name: name
+          nodeSubnet: 192.168.0.0/16
+          location: de/fra
           k8sVersion: 1.15.4
+          natGatewayIp: 198.51.100.100
       properties:
         id:
           description: The resource's unique identifier.
@@ -45861,6 +45914,7 @@ components:
             viableNodePoolVersions:
             - 1.17.7
             - 1.18.2
+            public: true
             apiSubnetAllowList:
             - 1.2.3.4/32
             - 2002::1234:abcd:ffff:c0a8:101/64
@@ -45873,7 +45927,10 @@ components:
             s3Buckets:
             - name: name
             - name: name
+            nodeSubnet: 192.168.0.0/16
+            location: de/fra
             k8sVersion: 1.15.4
+            natGatewayIp: 198.51.100.100
         - metadata:
             createdByUserId: user@example.com
             createdDate: 2015-12-04T14:34:09.809Z
@@ -46009,6 +46066,7 @@ components:
             viableNodePoolVersions:
             - 1.17.7
             - 1.18.2
+            public: true
             apiSubnetAllowList:
             - 1.2.3.4/32
             - 2002::1234:abcd:ffff:c0a8:101/64
@@ -46021,7 +46079,10 @@ components:
             s3Buckets:
             - name: name
             - name: name
+            nodeSubnet: 192.168.0.0/16
+            location: de/fra
             k8sVersion: 1.15.4
+            natGatewayIp: 198.51.100.100
       properties:
         id:
           description: A unique representation of the Kubernetes cluster as a resource
@@ -46103,6 +46164,7 @@ components:
         maintenanceWindow:
           dayOfTheWeek: Monday
           time: 13:00:00
+        public: true
         apiSubnetAllowList:
         - 1.2.3.4/32
         - 2002::1234:abcd:ffff:c0a8:101/64
@@ -46112,7 +46174,10 @@ components:
         s3Buckets:
         - name: name
         - name: name
+        nodeSubnet: 192.168.0.0/16
+        location: de/fra
         k8sVersion: 1.15.4
+        natGatewayIp: 198.51.100.100
       properties:
         name:
           description: A Kubernetes cluster name. Valid Kubernetes cluster name must
@@ -46130,6 +46195,30 @@ components:
           type: string
         maintenanceWindow:
           $ref: '#/components/schemas/KubernetesMaintenanceWindow'
+        public:
+          default: true
+          description: The indicator if the cluster is public or private. Be aware
+            that setting it to false is currently in beta phase.
+          type: boolean
+          x-prerelease: true
+        location:
+          description: The location of the cluster if the cluster is private. This
+            property is immutable. The location must be enabled for your contract
+            or you must have a Datacenter within that location. This attribute is
+            mandatory if the cluster is private.
+          example: de/fra
+          type: string
+          x-prerelease: true
+        natGatewayIp:
+          description: The nat gateway IP of the cluster if the cluster is private.
+          example: 198.51.100.100
+          type: string
+          x-prerelease: true
+        nodeSubnet:
+          description: The node subnet of the cluster if the cluster is private.
+          example: 192.168.0.0/16
+          type: string
+          x-prerelease: true
         apiSubnetAllowList:
           description: 'Access to the K8s API server is restricted to these CIDRs.
             Traffic, internal to the cluster, is not affected by this restriction.

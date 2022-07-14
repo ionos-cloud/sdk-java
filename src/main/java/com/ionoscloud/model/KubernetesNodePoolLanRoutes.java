@@ -27,17 +27,20 @@ import java.io.IOException;
 /**
  * KubernetesNodePoolLanRoutes
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class KubernetesNodePoolLanRoutes {
+  
   public static final String SERIALIZED_NAME_NETWORK = "network";
   @SerializedName(SERIALIZED_NAME_NETWORK)
   private String network;
+
 
   public static final String SERIALIZED_NAME_GATEWAY_IP = "gatewayIp";
   @SerializedName(SERIALIZED_NAME_GATEWAY_IP)
   private String gatewayIp;
 
+  
 
   public KubernetesNodePoolLanRoutes network(String network) {
     
@@ -60,6 +63,7 @@ public class KubernetesNodePoolLanRoutes {
   public void setNetwork(String network) {
     this.network = network;
   }
+
 
 
   public KubernetesNodePoolLanRoutes gatewayIp(String gatewayIp) {
@@ -104,7 +108,9 @@ public class KubernetesNodePoolLanRoutes {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodePoolLanRoutes {\n");
+    
     sb.append("    network: ").append(toIndentedString(network)).append("\n");
+
     sb.append("    gatewayIp: ").append(toIndentedString(gatewayIp)).append("\n");
     sb.append("}");
     return sb.toString();

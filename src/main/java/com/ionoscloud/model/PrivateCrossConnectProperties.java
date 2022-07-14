@@ -31,25 +31,30 @@ import java.util.List;
 /**
  * PrivateCrossConnectProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class PrivateCrossConnectProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
+
   public static final String SERIALIZED_NAME_PEERS = "peers";
   @SerializedName(SERIALIZED_NAME_PEERS)
   private List<Peer> peers = null;
+
 
   public static final String SERIALIZED_NAME_CONNECTABLE_DATACENTERS = "connectableDatacenters";
   @SerializedName(SERIALIZED_NAME_CONNECTABLE_DATACENTERS)
   private List<ConnectableDatacenter> connectableDatacenters = null;
 
+  
 
   public PrivateCrossConnectProperties name(String name) {
     
@@ -72,6 +77,7 @@ public class PrivateCrossConnectProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public PrivateCrossConnectProperties description(String description) {
@@ -97,6 +103,7 @@ public class PrivateCrossConnectProperties {
   }
 
 
+
    /**
    * Read-Only attribute. Lists LAN&#39;s joined to this private Cross-Connect.
    * @return peers
@@ -112,6 +119,7 @@ public class PrivateCrossConnectProperties {
   public void setPeers(List<Peer> peers) {
     this.peers = peers;
   }
+
 
 
    /**
@@ -150,9 +158,13 @@ public class PrivateCrossConnectProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class PrivateCrossConnectProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+
     sb.append("    peers: ").append(toIndentedString(peers)).append("\n");
+
     sb.append("    connectableDatacenters: ").append(toIndentedString(connectableDatacenters)).append("\n");
     sb.append("}");
     return sb.toString();

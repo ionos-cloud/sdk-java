@@ -27,17 +27,20 @@ import java.io.IOException;
 /**
  * GroupShareProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class GroupShareProperties {
+  
   public static final String SERIALIZED_NAME_EDIT_PRIVILEGE = "editPrivilege";
   @SerializedName(SERIALIZED_NAME_EDIT_PRIVILEGE)
   private Boolean editPrivilege;
+
 
   public static final String SERIALIZED_NAME_SHARE_PRIVILEGE = "sharePrivilege";
   @SerializedName(SERIALIZED_NAME_SHARE_PRIVILEGE)
   private Boolean sharePrivilege;
 
+  
 
   public GroupShareProperties editPrivilege(Boolean editPrivilege) {
     
@@ -60,6 +63,7 @@ public class GroupShareProperties {
   public void setEditPrivilege(Boolean editPrivilege) {
     this.editPrivilege = editPrivilege;
   }
+
 
 
   public GroupShareProperties sharePrivilege(Boolean sharePrivilege) {
@@ -104,7 +108,9 @@ public class GroupShareProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GroupShareProperties {\n");
+    
     sb.append("    editPrivilege: ").append(toIndentedString(editPrivilege)).append("\n");
+
     sb.append("    sharePrivilege: ").append(toIndentedString(sharePrivilege)).append("\n");
     sb.append("}");
     return sb.toString();

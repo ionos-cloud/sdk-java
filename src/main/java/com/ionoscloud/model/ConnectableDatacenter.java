@@ -27,21 +27,25 @@ import java.io.IOException;
 /**
  * ConnectableDatacenter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class ConnectableDatacenter {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
+
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
   private String location;
 
+  
 
   public ConnectableDatacenter id(String id) {
     
@@ -66,6 +70,7 @@ public class ConnectableDatacenter {
   }
 
 
+
   public ConnectableDatacenter name(String name) {
     
     this.name = name;
@@ -87,6 +92,7 @@ public class ConnectableDatacenter {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public ConnectableDatacenter location(String location) {
@@ -131,8 +137,11 @@ public class ConnectableDatacenter {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ConnectableDatacenter {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
     sb.append("}");
     return sb.toString();

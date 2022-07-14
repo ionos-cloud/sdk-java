@@ -13,7 +13,7 @@
 
 package com.ionoscloud;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 public class Configuration {
     public static final String IONOS_USERNAME_ENV_VAR = "IONOS_USERNAME";
     public static final String IONOS_PASSWORD_ENV_VAR = "IONOS_PASSWORD";

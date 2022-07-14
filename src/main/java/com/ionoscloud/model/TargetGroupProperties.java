@@ -32,12 +32,14 @@ import java.util.List;
 /**
  * TargetGroupProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class TargetGroupProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   /**
    * Balancing algorithm
@@ -95,6 +97,7 @@ public class TargetGroupProperties {
   @SerializedName(SERIALIZED_NAME_ALGORITHM)
   private AlgorithmEnum algorithm;
 
+
   /**
    * Balancing protocol
    */
@@ -145,18 +148,22 @@ public class TargetGroupProperties {
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
   private ProtocolEnum protocol;
 
+
   public static final String SERIALIZED_NAME_TARGETS = "targets";
   @SerializedName(SERIALIZED_NAME_TARGETS)
   private List<TargetGroupTarget> targets = null;
+
 
   public static final String SERIALIZED_NAME_HEALTH_CHECK = "healthCheck";
   @SerializedName(SERIALIZED_NAME_HEALTH_CHECK)
   private TargetGroupHealthCheck healthCheck;
 
+
   public static final String SERIALIZED_NAME_HTTP_HEALTH_CHECK = "httpHealthCheck";
   @SerializedName(SERIALIZED_NAME_HTTP_HEALTH_CHECK)
   private TargetGroupHttpHealthCheck httpHealthCheck;
 
+  
 
   public TargetGroupProperties name(String name) {
     
@@ -178,6 +185,7 @@ public class TargetGroupProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public TargetGroupProperties algorithm(AlgorithmEnum algorithm) {
@@ -202,6 +210,7 @@ public class TargetGroupProperties {
   }
 
 
+
   public TargetGroupProperties protocol(ProtocolEnum protocol) {
     
     this.protocol = protocol;
@@ -222,6 +231,7 @@ public class TargetGroupProperties {
   public void setProtocol(ProtocolEnum protocol) {
     this.protocol = protocol;
   }
+
 
 
   public TargetGroupProperties targets(List<TargetGroupTarget> targets) {
@@ -255,6 +265,7 @@ public class TargetGroupProperties {
   }
 
 
+
   public TargetGroupProperties healthCheck(TargetGroupHealthCheck healthCheck) {
     
     this.healthCheck = healthCheck;
@@ -276,6 +287,7 @@ public class TargetGroupProperties {
   public void setHealthCheck(TargetGroupHealthCheck healthCheck) {
     this.healthCheck = healthCheck;
   }
+
 
 
   public TargetGroupProperties httpHealthCheck(TargetGroupHttpHealthCheck httpHealthCheck) {
@@ -320,11 +332,17 @@ public class TargetGroupProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TargetGroupProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    algorithm: ").append(toIndentedString(algorithm)).append("\n");
+
     sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
+
     sb.append("    targets: ").append(toIndentedString(targets)).append("\n");
+
     sb.append("    healthCheck: ").append(toIndentedString(healthCheck)).append("\n");
+
     sb.append("    httpHealthCheck: ").append(toIndentedString(httpHealthCheck)).append("\n");
     sb.append("}");
     return sb.toString();

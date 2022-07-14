@@ -29,25 +29,30 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * RequestMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class RequestMetadata {
+  
   public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
   @SerializedName(SERIALIZED_NAME_CREATED_DATE)
   private OffsetDateTime createdDate;
+
 
   public static final String SERIALIZED_NAME_CREATED_BY = "createdBy";
   @SerializedName(SERIALIZED_NAME_CREATED_BY)
   private String createdBy;
 
+
   public static final String SERIALIZED_NAME_ETAG = "etag";
   @SerializedName(SERIALIZED_NAME_ETAG)
   private String etag;
+
 
   public static final String SERIALIZED_NAME_REQUEST_STATUS = "requestStatus";
   @SerializedName(SERIALIZED_NAME_REQUEST_STATUS)
   private RequestStatus requestStatus;
 
+  
 
    /**
    * The last time the resource was created.
@@ -64,6 +69,7 @@ public class RequestMetadata {
   public void setCreatedDate(OffsetDateTime createdDate) {
     this.createdDate = createdDate;
   }
+
 
 
    /**
@@ -83,6 +89,7 @@ public class RequestMetadata {
   }
 
 
+
    /**
    * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
    * @return etag
@@ -98,6 +105,7 @@ public class RequestMetadata {
   public void setEtag(String etag) {
     this.etag = etag;
   }
+
 
 
   public RequestMetadata requestStatus(RequestStatus requestStatus) {
@@ -142,9 +150,13 @@ public class RequestMetadata {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RequestMetadata {\n");
+    
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
+
     sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
+
     sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
+
     sb.append("    requestStatus: ").append(toIndentedString(requestStatus)).append("\n");
     sb.append("}");
     return sb.toString();

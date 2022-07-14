@@ -31,12 +31,14 @@ import java.util.UUID;
 /**
  * ApplicationLoadBalancerForwardingRuleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class ApplicationLoadBalancerForwardingRuleProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   /**
    * Balancing protocol
@@ -88,26 +90,32 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
   private ProtocolEnum protocol;
 
+
   public static final String SERIALIZED_NAME_LISTENER_IP = "listenerIp";
   @SerializedName(SERIALIZED_NAME_LISTENER_IP)
   private String listenerIp;
+
 
   public static final String SERIALIZED_NAME_LISTENER_PORT = "listenerPort";
   @SerializedName(SERIALIZED_NAME_LISTENER_PORT)
   private Integer listenerPort;
 
+
   public static final String SERIALIZED_NAME_CLIENT_TIMEOUT = "clientTimeout";
   @SerializedName(SERIALIZED_NAME_CLIENT_TIMEOUT)
   private Integer clientTimeout;
+
 
   public static final String SERIALIZED_NAME_SERVER_CERTIFICATES = "serverCertificates";
   @SerializedName(SERIALIZED_NAME_SERVER_CERTIFICATES)
   private List<UUID> serverCertificates = null;
 
+
   public static final String SERIALIZED_NAME_HTTP_RULES = "httpRules";
   @SerializedName(SERIALIZED_NAME_HTTP_RULES)
   private List<ApplicationLoadBalancerHttpRule> httpRules = null;
 
+  
 
   public ApplicationLoadBalancerForwardingRuleProperties name(String name) {
     
@@ -129,6 +137,7 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public ApplicationLoadBalancerForwardingRuleProperties protocol(ProtocolEnum protocol) {
@@ -153,6 +162,7 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
   }
 
 
+
   public ApplicationLoadBalancerForwardingRuleProperties listenerIp(String listenerIp) {
     
     this.listenerIp = listenerIp;
@@ -173,6 +183,7 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
   public void setListenerIp(String listenerIp) {
     this.listenerIp = listenerIp;
   }
+
 
 
   public ApplicationLoadBalancerForwardingRuleProperties listenerPort(Integer listenerPort) {
@@ -197,6 +208,7 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
   }
 
 
+
   public ApplicationLoadBalancerForwardingRuleProperties clientTimeout(Integer clientTimeout) {
     
     this.clientTimeout = clientTimeout;
@@ -218,6 +230,7 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
   public void setClientTimeout(Integer clientTimeout) {
     this.clientTimeout = clientTimeout;
   }
+
 
 
   public ApplicationLoadBalancerForwardingRuleProperties serverCertificates(List<UUID> serverCertificates) {
@@ -249,6 +262,7 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
   public void setServerCertificates(List<UUID> serverCertificates) {
     this.serverCertificates = serverCertificates;
   }
+
 
 
   public ApplicationLoadBalancerForwardingRuleProperties httpRules(List<ApplicationLoadBalancerHttpRule> httpRules) {
@@ -301,12 +315,19 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApplicationLoadBalancerForwardingRuleProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
+
     sb.append("    listenerIp: ").append(toIndentedString(listenerIp)).append("\n");
+
     sb.append("    listenerPort: ").append(toIndentedString(listenerPort)).append("\n");
+
     sb.append("    clientTimeout: ").append(toIndentedString(clientTimeout)).append("\n");
+
     sb.append("    serverCertificates: ").append(toIndentedString(serverCertificates)).append("\n");
+
     sb.append("    httpRules: ").append(toIndentedString(httpRules)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -29,17 +29,20 @@ import java.io.IOException;
 /**
  * NatGatewayEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class NatGatewayEntities {
+  
   public static final String SERIALIZED_NAME_RULES = "rules";
   @SerializedName(SERIALIZED_NAME_RULES)
   private NatGatewayRules rules;
+
 
   public static final String SERIALIZED_NAME_FLOWLOGS = "flowlogs";
   @SerializedName(SERIALIZED_NAME_FLOWLOGS)
   private FlowLogs flowlogs;
 
+  
 
   public NatGatewayEntities rules(NatGatewayRules rules) {
     
@@ -62,6 +65,7 @@ public class NatGatewayEntities {
   public void setRules(NatGatewayRules rules) {
     this.rules = rules;
   }
+
 
 
   public NatGatewayEntities flowlogs(FlowLogs flowlogs) {
@@ -106,7 +110,9 @@ public class NatGatewayEntities {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NatGatewayEntities {\n");
+    
     sb.append("    rules: ").append(toIndentedString(rules)).append("\n");
+
     sb.append("    flowlogs: ").append(toIndentedString(flowlogs)).append("\n");
     sb.append("}");
     return sb.toString();

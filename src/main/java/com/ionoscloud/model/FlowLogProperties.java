@@ -27,12 +27,14 @@ import java.io.IOException;
 /**
  * FlowLogProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class FlowLogProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   /**
    * Specifies the traffic action pattern.
@@ -88,6 +90,7 @@ public class FlowLogProperties {
   @SerializedName(SERIALIZED_NAME_ACTION)
   private ActionEnum action;
 
+
   /**
    * Specifies the traffic direction pattern.
    */
@@ -142,10 +145,12 @@ public class FlowLogProperties {
   @SerializedName(SERIALIZED_NAME_DIRECTION)
   private DirectionEnum direction;
 
+
   public static final String SERIALIZED_NAME_BUCKET = "bucket";
   @SerializedName(SERIALIZED_NAME_BUCKET)
   private String bucket;
 
+  
 
   public FlowLogProperties name(String name) {
     
@@ -167,6 +172,7 @@ public class FlowLogProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public FlowLogProperties action(ActionEnum action) {
@@ -191,6 +197,7 @@ public class FlowLogProperties {
   }
 
 
+
   public FlowLogProperties direction(DirectionEnum direction) {
     
     this.direction = direction;
@@ -211,6 +218,7 @@ public class FlowLogProperties {
   public void setDirection(DirectionEnum direction) {
     this.direction = direction;
   }
+
 
 
   public FlowLogProperties bucket(String bucket) {
@@ -254,9 +262,13 @@ public class FlowLogProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class FlowLogProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
+
     sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
+
     sb.append("    bucket: ").append(toIndentedString(bucket)).append("\n");
     sb.append("}");
     return sb.toString();

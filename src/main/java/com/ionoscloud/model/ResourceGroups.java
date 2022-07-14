@@ -33,25 +33,30 @@ import java.util.List;
  * Resources assigned to this group.
  */
 @ApiModel(description = "Resources assigned to this group.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class ResourceGroups {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private Type type;
 
+
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
   private List<Resource> items = null;
 
+  
 
    /**
    * The resource&#39;s unique identifier.
@@ -68,6 +73,7 @@ public class ResourceGroups {
   public void setId(String id) {
     this.id = id;
   }
+
 
 
   public ResourceGroups type(Type type) {
@@ -93,6 +99,7 @@ public class ResourceGroups {
   }
 
 
+
    /**
    * URL to the object representation (absolute path).
    * @return href
@@ -108,6 +115,7 @@ public class ResourceGroups {
   public void setHref(URI href) {
     this.href = href;
   }
+
 
 
    /**
@@ -146,9 +154,13 @@ public class ResourceGroups {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResourceGroups {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
     sb.append("}");
     return sb.toString();

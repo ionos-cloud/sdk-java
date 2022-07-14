@@ -31,37 +31,45 @@ import java.util.List;
 /**
  * KubernetesClusterProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class KubernetesClusterProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_K8S_VERSION = "k8sVersion";
   @SerializedName(SERIALIZED_NAME_K8S_VERSION)
   private String k8sVersion;
 
+
   public static final String SERIALIZED_NAME_MAINTENANCE_WINDOW = "maintenanceWindow";
   @SerializedName(SERIALIZED_NAME_MAINTENANCE_WINDOW)
   private KubernetesMaintenanceWindow maintenanceWindow;
+
 
   public static final String SERIALIZED_NAME_AVAILABLE_UPGRADE_VERSIONS = "availableUpgradeVersions";
   @SerializedName(SERIALIZED_NAME_AVAILABLE_UPGRADE_VERSIONS)
   private List<String> availableUpgradeVersions = null;
 
+
   public static final String SERIALIZED_NAME_VIABLE_NODE_POOL_VERSIONS = "viableNodePoolVersions";
   @SerializedName(SERIALIZED_NAME_VIABLE_NODE_POOL_VERSIONS)
   private List<String> viableNodePoolVersions = null;
+
 
   public static final String SERIALIZED_NAME_API_SUBNET_ALLOW_LIST = "apiSubnetAllowList";
   @SerializedName(SERIALIZED_NAME_API_SUBNET_ALLOW_LIST)
   private List<String> apiSubnetAllowList = null;
 
+
   public static final String SERIALIZED_NAME_S3_BUCKETS = "s3Buckets";
   @SerializedName(SERIALIZED_NAME_S3_BUCKETS)
   private List<S3Bucket> s3Buckets = null;
 
+  
 
   public KubernetesClusterProperties name(String name) {
     
@@ -83,6 +91,7 @@ public class KubernetesClusterProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public KubernetesClusterProperties k8sVersion(String k8sVersion) {
@@ -108,6 +117,7 @@ public class KubernetesClusterProperties {
   }
 
 
+
   public KubernetesClusterProperties maintenanceWindow(KubernetesMaintenanceWindow maintenanceWindow) {
     
     this.maintenanceWindow = maintenanceWindow;
@@ -129,6 +139,7 @@ public class KubernetesClusterProperties {
   public void setMaintenanceWindow(KubernetesMaintenanceWindow maintenanceWindow) {
     this.maintenanceWindow = maintenanceWindow;
   }
+
 
 
   public KubernetesClusterProperties availableUpgradeVersions(List<String> availableUpgradeVersions) {
@@ -162,6 +173,7 @@ public class KubernetesClusterProperties {
   }
 
 
+
   public KubernetesClusterProperties viableNodePoolVersions(List<String> viableNodePoolVersions) {
     
     this.viableNodePoolVersions = viableNodePoolVersions;
@@ -193,6 +205,7 @@ public class KubernetesClusterProperties {
   }
 
 
+
   public KubernetesClusterProperties apiSubnetAllowList(List<String> apiSubnetAllowList) {
     
     this.apiSubnetAllowList = apiSubnetAllowList;
@@ -222,6 +235,7 @@ public class KubernetesClusterProperties {
   public void setApiSubnetAllowList(List<String> apiSubnetAllowList) {
     this.apiSubnetAllowList = apiSubnetAllowList;
   }
+
 
 
   public KubernetesClusterProperties s3Buckets(List<S3Bucket> s3Buckets) {
@@ -264,7 +278,7 @@ public class KubernetesClusterProperties {
       return false;
     }
     KubernetesClusterProperties kubernetesClusterProperties = (KubernetesClusterProperties) o;
-    return Objects.equals(this.name, kubernetesClusterProperties.name) && Objects.equals(this.k8sVersion, kubernetesClusterProperties.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesClusterProperties.maintenanceWindow) && Objects.equals(this.availableUpgradeVersions, kubernetesClusterProperties.availableUpgradeVersions) && Objects.equals(this.viableNodePoolVersions, kubernetesClusterProperties.viableNodePoolVersions) && Objects.equals(this.apiSubnetAllowList, kubernetesClusterProperties.apiSubnetAllowList) && Objects.equals(this.s3Buckets, kubernetesClusterProperties.s3Buckets);
+    return Objects.equals(this.name, kubernetesClusterProperties.name) && Objects.equals(this.k8sVersion, kubernetesClusterProperties.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesClusterProperties.maintenanceWindow) && Objects.equals(this.availableUpgradeVersions, kubernetesClusterProperties.availableUpgradeVersions) && Objects.equals(this.viableNodePoolVersions, kubernetesClusterProperties.viableNodePoolVersions) && true && true && true && true && Objects.equals(this.apiSubnetAllowList, kubernetesClusterProperties.apiSubnetAllowList) && Objects.equals(this.s3Buckets, kubernetesClusterProperties.s3Buckets);
   }
 
 
@@ -274,12 +288,19 @@ public class KubernetesClusterProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesClusterProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    k8sVersion: ").append(toIndentedString(k8sVersion)).append("\n");
+
     sb.append("    maintenanceWindow: ").append(toIndentedString(maintenanceWindow)).append("\n");
+
     sb.append("    availableUpgradeVersions: ").append(toIndentedString(availableUpgradeVersions)).append("\n");
+
     sb.append("    viableNodePoolVersions: ").append(toIndentedString(viableNodePoolVersions)).append("\n");
+
     sb.append("    apiSubnetAllowList: ").append(toIndentedString(apiSubnetAllowList)).append("\n");
+
     sb.append("    s3Buckets: ").append(toIndentedString(s3Buckets)).append("\n");
     sb.append("}");
     return sb.toString();

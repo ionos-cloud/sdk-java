@@ -27,61 +27,80 @@ import java.io.IOException;
 /**
  * GroupProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class GroupProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_CREATE_DATA_CENTER = "createDataCenter";
   @SerializedName(SERIALIZED_NAME_CREATE_DATA_CENTER)
   private Boolean createDataCenter;
 
+
   public static final String SERIALIZED_NAME_CREATE_SNAPSHOT = "createSnapshot";
   @SerializedName(SERIALIZED_NAME_CREATE_SNAPSHOT)
   private Boolean createSnapshot;
+
 
   public static final String SERIALIZED_NAME_RESERVE_IP = "reserveIp";
   @SerializedName(SERIALIZED_NAME_RESERVE_IP)
   private Boolean reserveIp;
 
+
   public static final String SERIALIZED_NAME_ACCESS_ACTIVITY_LOG = "accessActivityLog";
   @SerializedName(SERIALIZED_NAME_ACCESS_ACTIVITY_LOG)
   private Boolean accessActivityLog;
+
 
   public static final String SERIALIZED_NAME_CREATE_PCC = "createPcc";
   @SerializedName(SERIALIZED_NAME_CREATE_PCC)
   private Boolean createPcc;
 
+
   public static final String SERIALIZED_NAME_S3_PRIVILEGE = "s3Privilege";
   @SerializedName(SERIALIZED_NAME_S3_PRIVILEGE)
   private Boolean s3Privilege;
+
 
   public static final String SERIALIZED_NAME_CREATE_BACKUP_UNIT = "createBackupUnit";
   @SerializedName(SERIALIZED_NAME_CREATE_BACKUP_UNIT)
   private Boolean createBackupUnit;
 
+
   public static final String SERIALIZED_NAME_CREATE_INTERNET_ACCESS = "createInternetAccess";
   @SerializedName(SERIALIZED_NAME_CREATE_INTERNET_ACCESS)
   private Boolean createInternetAccess;
+
 
   public static final String SERIALIZED_NAME_CREATE_K8S_CLUSTER = "createK8sCluster";
   @SerializedName(SERIALIZED_NAME_CREATE_K8S_CLUSTER)
   private Boolean createK8sCluster;
 
+
   public static final String SERIALIZED_NAME_CREATE_FLOW_LOG = "createFlowLog";
   @SerializedName(SERIALIZED_NAME_CREATE_FLOW_LOG)
   private Boolean createFlowLog;
+
 
   public static final String SERIALIZED_NAME_ACCESS_AND_MANAGE_MONITORING = "accessAndManageMonitoring";
   @SerializedName(SERIALIZED_NAME_ACCESS_AND_MANAGE_MONITORING)
   private Boolean accessAndManageMonitoring;
 
+
   public static final String SERIALIZED_NAME_ACCESS_AND_MANAGE_CERTIFICATES = "accessAndManageCertificates";
   @SerializedName(SERIALIZED_NAME_ACCESS_AND_MANAGE_CERTIFICATES)
   private Boolean accessAndManageCertificates;
 
+
+  public static final String SERIALIZED_NAME_MANAGE_DBAAS = "manageDbaas";
+  @SerializedName(SERIALIZED_NAME_MANAGE_DBAAS)
+  private Boolean manageDbaas;
+
+  
 
   public GroupProperties name(String name) {
     
@@ -104,6 +123,7 @@ public class GroupProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public GroupProperties createDataCenter(Boolean createDataCenter) {
@@ -129,6 +149,7 @@ public class GroupProperties {
   }
 
 
+
   public GroupProperties createSnapshot(Boolean createSnapshot) {
     
     this.createSnapshot = createSnapshot;
@@ -150,6 +171,7 @@ public class GroupProperties {
   public void setCreateSnapshot(Boolean createSnapshot) {
     this.createSnapshot = createSnapshot;
   }
+
 
 
   public GroupProperties reserveIp(Boolean reserveIp) {
@@ -175,6 +197,7 @@ public class GroupProperties {
   }
 
 
+
   public GroupProperties accessActivityLog(Boolean accessActivityLog) {
     
     this.accessActivityLog = accessActivityLog;
@@ -196,6 +219,7 @@ public class GroupProperties {
   public void setAccessActivityLog(Boolean accessActivityLog) {
     this.accessActivityLog = accessActivityLog;
   }
+
 
 
   public GroupProperties createPcc(Boolean createPcc) {
@@ -221,6 +245,7 @@ public class GroupProperties {
   }
 
 
+
   public GroupProperties s3Privilege(Boolean s3Privilege) {
     
     this.s3Privilege = s3Privilege;
@@ -242,6 +267,7 @@ public class GroupProperties {
   public void setS3Privilege(Boolean s3Privilege) {
     this.s3Privilege = s3Privilege;
   }
+
 
 
   public GroupProperties createBackupUnit(Boolean createBackupUnit) {
@@ -267,6 +293,7 @@ public class GroupProperties {
   }
 
 
+
   public GroupProperties createInternetAccess(Boolean createInternetAccess) {
     
     this.createInternetAccess = createInternetAccess;
@@ -288,6 +315,7 @@ public class GroupProperties {
   public void setCreateInternetAccess(Boolean createInternetAccess) {
     this.createInternetAccess = createInternetAccess;
   }
+
 
 
   public GroupProperties createK8sCluster(Boolean createK8sCluster) {
@@ -313,6 +341,7 @@ public class GroupProperties {
   }
 
 
+
   public GroupProperties createFlowLog(Boolean createFlowLog) {
     
     this.createFlowLog = createFlowLog;
@@ -334,6 +363,7 @@ public class GroupProperties {
   public void setCreateFlowLog(Boolean createFlowLog) {
     this.createFlowLog = createFlowLog;
   }
+
 
 
   public GroupProperties accessAndManageMonitoring(Boolean accessAndManageMonitoring) {
@@ -359,6 +389,7 @@ public class GroupProperties {
   }
 
 
+
   public GroupProperties accessAndManageCertificates(Boolean accessAndManageCertificates) {
     
     this.accessAndManageCertificates = accessAndManageCertificates;
@@ -382,6 +413,30 @@ public class GroupProperties {
   }
 
 
+
+  public GroupProperties manageDbaas(Boolean manageDbaas) {
+    
+    this.manageDbaas = manageDbaas;
+    return this;
+  }
+
+   /**
+   * Privilege for a group to manage DBaaS related functionality.
+   * @return manageDbaas
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Privilege for a group to manage DBaaS related functionality.")
+
+  public Boolean getManageDbaas() {
+    return manageDbaas;
+  }
+
+
+  public void setManageDbaas(Boolean manageDbaas) {
+    this.manageDbaas = manageDbaas;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -391,7 +446,7 @@ public class GroupProperties {
       return false;
     }
     GroupProperties groupProperties = (GroupProperties) o;
-    return Objects.equals(this.name, groupProperties.name) && Objects.equals(this.createDataCenter, groupProperties.createDataCenter) && Objects.equals(this.createSnapshot, groupProperties.createSnapshot) && Objects.equals(this.reserveIp, groupProperties.reserveIp) && Objects.equals(this.accessActivityLog, groupProperties.accessActivityLog) && Objects.equals(this.createPcc, groupProperties.createPcc) && Objects.equals(this.s3Privilege, groupProperties.s3Privilege) && Objects.equals(this.createBackupUnit, groupProperties.createBackupUnit) && Objects.equals(this.createInternetAccess, groupProperties.createInternetAccess) && Objects.equals(this.createK8sCluster, groupProperties.createK8sCluster) && Objects.equals(this.createFlowLog, groupProperties.createFlowLog) && Objects.equals(this.accessAndManageMonitoring, groupProperties.accessAndManageMonitoring) && Objects.equals(this.accessAndManageCertificates, groupProperties.accessAndManageCertificates);
+    return Objects.equals(this.name, groupProperties.name) && Objects.equals(this.createDataCenter, groupProperties.createDataCenter) && Objects.equals(this.createSnapshot, groupProperties.createSnapshot) && Objects.equals(this.reserveIp, groupProperties.reserveIp) && Objects.equals(this.accessActivityLog, groupProperties.accessActivityLog) && Objects.equals(this.createPcc, groupProperties.createPcc) && Objects.equals(this.s3Privilege, groupProperties.s3Privilege) && Objects.equals(this.createBackupUnit, groupProperties.createBackupUnit) && Objects.equals(this.createInternetAccess, groupProperties.createInternetAccess) && Objects.equals(this.createK8sCluster, groupProperties.createK8sCluster) && Objects.equals(this.createFlowLog, groupProperties.createFlowLog) && Objects.equals(this.accessAndManageMonitoring, groupProperties.accessAndManageMonitoring) && Objects.equals(this.accessAndManageCertificates, groupProperties.accessAndManageCertificates) && Objects.equals(this.manageDbaas, groupProperties.manageDbaas);
   }
 
 
@@ -401,19 +456,34 @@ public class GroupProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class GroupProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    createDataCenter: ").append(toIndentedString(createDataCenter)).append("\n");
+
     sb.append("    createSnapshot: ").append(toIndentedString(createSnapshot)).append("\n");
+
     sb.append("    reserveIp: ").append(toIndentedString(reserveIp)).append("\n");
+
     sb.append("    accessActivityLog: ").append(toIndentedString(accessActivityLog)).append("\n");
+
     sb.append("    createPcc: ").append(toIndentedString(createPcc)).append("\n");
+
     sb.append("    s3Privilege: ").append(toIndentedString(s3Privilege)).append("\n");
+
     sb.append("    createBackupUnit: ").append(toIndentedString(createBackupUnit)).append("\n");
+
     sb.append("    createInternetAccess: ").append(toIndentedString(createInternetAccess)).append("\n");
+
     sb.append("    createK8sCluster: ").append(toIndentedString(createK8sCluster)).append("\n");
+
     sb.append("    createFlowLog: ").append(toIndentedString(createFlowLog)).append("\n");
+
     sb.append("    accessAndManageMonitoring: ").append(toIndentedString(accessAndManageMonitoring)).append("\n");
+
     sb.append("    accessAndManageCertificates: ").append(toIndentedString(accessAndManageCertificates)).append("\n");
+
+    sb.append("    manageDbaas: ").append(toIndentedString(manageDbaas)).append("\n");
     sb.append("}");
     return sb.toString();
   }

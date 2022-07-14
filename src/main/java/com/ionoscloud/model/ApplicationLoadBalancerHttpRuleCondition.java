@@ -27,9 +27,10 @@ import java.io.IOException;
 /**
  * ApplicationLoadBalancerHttpRuleCondition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class ApplicationLoadBalancerHttpRuleCondition {
+  
   /**
    * Type of the HTTP rule condition.
    */
@@ -92,6 +93,7 @@ public class ApplicationLoadBalancerHttpRuleCondition {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private TypeEnum type;
 
+
   /**
    * Matching rule for the HTTP rule condition attribute; mandatory for HEADER, PATH, QUERY, METHOD, HOST, and COOKIE types; must be null when type is SOURCE_IP.
    */
@@ -152,18 +154,22 @@ public class ApplicationLoadBalancerHttpRuleCondition {
   @SerializedName(SERIALIZED_NAME_CONDITION)
   private ConditionEnum condition;
 
+
   public static final String SERIALIZED_NAME_NEGATE = "negate";
   @SerializedName(SERIALIZED_NAME_NEGATE)
   private Boolean negate;
+
 
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
   private String key;
 
+
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
   private String value;
 
+  
 
   public ApplicationLoadBalancerHttpRuleCondition type(TypeEnum type) {
     
@@ -187,6 +193,7 @@ public class ApplicationLoadBalancerHttpRuleCondition {
   }
 
 
+
   public ApplicationLoadBalancerHttpRuleCondition condition(ConditionEnum condition) {
     
     this.condition = condition;
@@ -207,6 +214,7 @@ public class ApplicationLoadBalancerHttpRuleCondition {
   public void setCondition(ConditionEnum condition) {
     this.condition = condition;
   }
+
 
 
   public ApplicationLoadBalancerHttpRuleCondition negate(Boolean negate) {
@@ -232,6 +240,7 @@ public class ApplicationLoadBalancerHttpRuleCondition {
   }
 
 
+
   public ApplicationLoadBalancerHttpRuleCondition key(String key) {
     
     this.key = key;
@@ -253,6 +262,7 @@ public class ApplicationLoadBalancerHttpRuleCondition {
   public void setKey(String key) {
     this.key = key;
   }
+
 
 
   public ApplicationLoadBalancerHttpRuleCondition value(String value) {
@@ -297,10 +307,15 @@ public class ApplicationLoadBalancerHttpRuleCondition {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApplicationLoadBalancerHttpRuleCondition {\n");
+    
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    condition: ").append(toIndentedString(condition)).append("\n");
+
     sb.append("    negate: ").append(toIndentedString(negate)).append("\n");
+
     sb.append("    key: ").append(toIndentedString(key)).append("\n");
+
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();

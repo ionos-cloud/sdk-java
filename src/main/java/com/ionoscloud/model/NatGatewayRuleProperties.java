@@ -30,37 +30,45 @@ import java.io.IOException;
 /**
  * NatGatewayRuleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class NatGatewayRuleProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private NatGatewayRuleType type;
 
+
   public static final String SERIALIZED_NAME_PROTOCOL = "protocol";
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
   private NatGatewayRuleProtocol protocol;
+
 
   public static final String SERIALIZED_NAME_SOURCE_SUBNET = "sourceSubnet";
   @SerializedName(SERIALIZED_NAME_SOURCE_SUBNET)
   private String sourceSubnet;
 
+
   public static final String SERIALIZED_NAME_PUBLIC_IP = "publicIp";
   @SerializedName(SERIALIZED_NAME_PUBLIC_IP)
   private String publicIp;
+
 
   public static final String SERIALIZED_NAME_TARGET_SUBNET = "targetSubnet";
   @SerializedName(SERIALIZED_NAME_TARGET_SUBNET)
   private String targetSubnet;
 
+
   public static final String SERIALIZED_NAME_TARGET_PORT_RANGE = "targetPortRange";
   @SerializedName(SERIALIZED_NAME_TARGET_PORT_RANGE)
   private TargetPortRange targetPortRange;
 
+  
 
   public NatGatewayRuleProperties name(String name) {
     
@@ -82,6 +90,7 @@ public class NatGatewayRuleProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public NatGatewayRuleProperties type(NatGatewayRuleType type) {
@@ -107,6 +116,7 @@ public class NatGatewayRuleProperties {
   }
 
 
+
   public NatGatewayRuleProperties protocol(NatGatewayRuleProtocol protocol) {
     
     this.protocol = protocol;
@@ -128,6 +138,7 @@ public class NatGatewayRuleProperties {
   public void setProtocol(NatGatewayRuleProtocol protocol) {
     this.protocol = protocol;
   }
+
 
 
   public NatGatewayRuleProperties sourceSubnet(String sourceSubnet) {
@@ -152,6 +163,7 @@ public class NatGatewayRuleProperties {
   }
 
 
+
   public NatGatewayRuleProperties publicIp(String publicIp) {
     
     this.publicIp = publicIp;
@@ -172,6 +184,7 @@ public class NatGatewayRuleProperties {
   public void setPublicIp(String publicIp) {
     this.publicIp = publicIp;
   }
+
 
 
   public NatGatewayRuleProperties targetSubnet(String targetSubnet) {
@@ -195,6 +208,7 @@ public class NatGatewayRuleProperties {
   public void setTargetSubnet(String targetSubnet) {
     this.targetSubnet = targetSubnet;
   }
+
 
 
   public NatGatewayRuleProperties targetPortRange(TargetPortRange targetPortRange) {
@@ -239,12 +253,19 @@ public class NatGatewayRuleProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NatGatewayRuleProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
+
     sb.append("    sourceSubnet: ").append(toIndentedString(sourceSubnet)).append("\n");
+
     sb.append("    publicIp: ").append(toIndentedString(publicIp)).append("\n");
+
     sb.append("    targetSubnet: ").append(toIndentedString(targetSubnet)).append("\n");
+
     sb.append("    targetPortRange: ").append(toIndentedString(targetPortRange)).append("\n");
     sb.append("}");
     return sb.toString();

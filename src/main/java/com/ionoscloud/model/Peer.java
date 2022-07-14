@@ -27,29 +27,35 @@ import java.io.IOException;
 /**
  * Peer
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class Peer {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
+
   public static final String SERIALIZED_NAME_DATACENTER_ID = "datacenterId";
   @SerializedName(SERIALIZED_NAME_DATACENTER_ID)
   private String datacenterId;
+
 
   public static final String SERIALIZED_NAME_DATACENTER_NAME = "datacenterName";
   @SerializedName(SERIALIZED_NAME_DATACENTER_NAME)
   private String datacenterName;
 
+
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
   private String location;
 
+  
 
   public Peer id(String id) {
     
@@ -72,6 +78,7 @@ public class Peer {
   public void setId(String id) {
     this.id = id;
   }
+
 
 
   public Peer name(String name) {
@@ -97,6 +104,7 @@ public class Peer {
   }
 
 
+
   public Peer datacenterId(String datacenterId) {
     
     this.datacenterId = datacenterId;
@@ -120,6 +128,7 @@ public class Peer {
   }
 
 
+
   public Peer datacenterName(String datacenterName) {
     
     this.datacenterName = datacenterName;
@@ -141,6 +150,7 @@ public class Peer {
   public void setDatacenterName(String datacenterName) {
     this.datacenterName = datacenterName;
   }
+
 
 
   public Peer location(String location) {
@@ -185,10 +195,15 @@ public class Peer {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Peer {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    datacenterId: ").append(toIndentedString(datacenterId)).append("\n");
+
     sb.append("    datacenterName: ").append(toIndentedString(datacenterName)).append("\n");
+
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
     sb.append("}");
     return sb.toString();

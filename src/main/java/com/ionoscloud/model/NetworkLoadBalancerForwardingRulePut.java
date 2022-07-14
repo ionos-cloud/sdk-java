@@ -30,25 +30,30 @@ import java.net.URI;
 /**
  * NetworkLoadBalancerForwardingRulePut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRulePut {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private Type type;
 
+
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
 
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private NetworkLoadBalancerForwardingRuleProperties properties;
 
+  
 
    /**
    * The resource&#39;s unique identifier.
@@ -65,6 +70,7 @@ public class NetworkLoadBalancerForwardingRulePut {
   public void setId(String id) {
     this.id = id;
   }
+
 
 
   public NetworkLoadBalancerForwardingRulePut type(Type type) {
@@ -90,6 +96,7 @@ public class NetworkLoadBalancerForwardingRulePut {
   }
 
 
+
    /**
    * URL to the object representation (absolute path).
    * @return href
@@ -105,6 +112,7 @@ public class NetworkLoadBalancerForwardingRulePut {
   public void setHref(URI href) {
     this.href = href;
   }
+
 
 
   public NetworkLoadBalancerForwardingRulePut properties(NetworkLoadBalancerForwardingRuleProperties properties) {
@@ -148,9 +156,13 @@ public class NetworkLoadBalancerForwardingRulePut {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NetworkLoadBalancerForwardingRulePut {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -28,25 +28,30 @@ import java.io.IOException;
 /**
  * NetworkLoadBalancerForwardingRuleTarget
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRuleTarget {
+  
   public static final String SERIALIZED_NAME_IP = "ip";
   @SerializedName(SERIALIZED_NAME_IP)
   private String ip;
+
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
   private Integer port;
 
+
   public static final String SERIALIZED_NAME_WEIGHT = "weight";
   @SerializedName(SERIALIZED_NAME_WEIGHT)
   private Integer weight;
+
 
   public static final String SERIALIZED_NAME_HEALTH_CHECK = "healthCheck";
   @SerializedName(SERIALIZED_NAME_HEALTH_CHECK)
   private NetworkLoadBalancerForwardingRuleTargetHealthCheck healthCheck;
 
+  
 
   public NetworkLoadBalancerForwardingRuleTarget ip(String ip) {
     
@@ -68,6 +73,7 @@ public class NetworkLoadBalancerForwardingRuleTarget {
   public void setIp(String ip) {
     this.ip = ip;
   }
+
 
 
   public NetworkLoadBalancerForwardingRuleTarget port(Integer port) {
@@ -92,6 +98,7 @@ public class NetworkLoadBalancerForwardingRuleTarget {
   }
 
 
+
   public NetworkLoadBalancerForwardingRuleTarget weight(Integer weight) {
     
     this.weight = weight;
@@ -112,6 +119,7 @@ public class NetworkLoadBalancerForwardingRuleTarget {
   public void setWeight(Integer weight) {
     this.weight = weight;
   }
+
 
 
   public NetworkLoadBalancerForwardingRuleTarget healthCheck(NetworkLoadBalancerForwardingRuleTargetHealthCheck healthCheck) {
@@ -156,9 +164,13 @@ public class NetworkLoadBalancerForwardingRuleTarget {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NetworkLoadBalancerForwardingRuleTarget {\n");
+    
     sb.append("    ip: ").append(toIndentedString(ip)).append("\n");
+
     sb.append("    port: ").append(toIndentedString(port)).append("\n");
+
     sb.append("    weight: ").append(toIndentedString(weight)).append("\n");
+
     sb.append("    healthCheck: ").append(toIndentedString(healthCheck)).append("\n");
     sb.append("}");
     return sb.toString();

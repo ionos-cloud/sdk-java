@@ -28,13 +28,15 @@ import java.io.IOException;
 /**
  * LanEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class LanEntities {
+  
   public static final String SERIALIZED_NAME_NICS = "nics";
   @SerializedName(SERIALIZED_NAME_NICS)
   private LanNics nics;
 
+  
 
   public LanEntities nics(LanNics nics) {
     
@@ -78,6 +80,7 @@ public class LanEntities {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LanEntities {\n");
+    
     sb.append("    nics: ").append(toIndentedString(nics)).append("\n");
     sb.append("}");
     return sb.toString();

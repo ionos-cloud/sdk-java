@@ -30,12 +30,14 @@ import java.util.List;
 /**
  * ApplicationLoadBalancerHttpRule
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class ApplicationLoadBalancerHttpRule {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   /**
    * Type of the HTTP rule.
@@ -91,17 +93,21 @@ public class ApplicationLoadBalancerHttpRule {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private TypeEnum type;
 
+
   public static final String SERIALIZED_NAME_TARGET_GROUP = "targetGroup";
   @SerializedName(SERIALIZED_NAME_TARGET_GROUP)
   private String targetGroup;
+
 
   public static final String SERIALIZED_NAME_DROP_QUERY = "dropQuery";
   @SerializedName(SERIALIZED_NAME_DROP_QUERY)
   private Boolean dropQuery;
 
+
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
   private String location;
+
 
   /**
    * Valid only for REDIRECT and STATIC actions. For REDIRECT actions, default is 301 and possible values are 301, 302, 303, 307, and 308. For STATIC actions, default is 503 and valid range is 200 to 599.
@@ -167,18 +173,22 @@ public class ApplicationLoadBalancerHttpRule {
   @SerializedName(SERIALIZED_NAME_STATUS_CODE)
   private StatusCodeEnum statusCode;
 
+
   public static final String SERIALIZED_NAME_RESPONSE_MESSAGE = "responseMessage";
   @SerializedName(SERIALIZED_NAME_RESPONSE_MESSAGE)
   private String responseMessage;
+
 
   public static final String SERIALIZED_NAME_CONTENT_TYPE = "contentType";
   @SerializedName(SERIALIZED_NAME_CONTENT_TYPE)
   private String contentType;
 
+
   public static final String SERIALIZED_NAME_CONDITIONS = "conditions";
   @SerializedName(SERIALIZED_NAME_CONDITIONS)
   private List<ApplicationLoadBalancerHttpRuleCondition> conditions = null;
 
+  
 
   public ApplicationLoadBalancerHttpRule name(String name) {
     
@@ -202,6 +212,7 @@ public class ApplicationLoadBalancerHttpRule {
   }
 
 
+
   public ApplicationLoadBalancerHttpRule type(TypeEnum type) {
     
     this.type = type;
@@ -222,6 +233,7 @@ public class ApplicationLoadBalancerHttpRule {
   public void setType(TypeEnum type) {
     this.type = type;
   }
+
 
 
   public ApplicationLoadBalancerHttpRule targetGroup(String targetGroup) {
@@ -247,6 +259,7 @@ public class ApplicationLoadBalancerHttpRule {
   }
 
 
+
   public ApplicationLoadBalancerHttpRule dropQuery(Boolean dropQuery) {
     
     this.dropQuery = dropQuery;
@@ -268,6 +281,7 @@ public class ApplicationLoadBalancerHttpRule {
   public void setDropQuery(Boolean dropQuery) {
     this.dropQuery = dropQuery;
   }
+
 
 
   public ApplicationLoadBalancerHttpRule location(String location) {
@@ -293,6 +307,7 @@ public class ApplicationLoadBalancerHttpRule {
   }
 
 
+
   public ApplicationLoadBalancerHttpRule statusCode(StatusCodeEnum statusCode) {
     
     this.statusCode = statusCode;
@@ -314,6 +329,7 @@ public class ApplicationLoadBalancerHttpRule {
   public void setStatusCode(StatusCodeEnum statusCode) {
     this.statusCode = statusCode;
   }
+
 
 
   public ApplicationLoadBalancerHttpRule responseMessage(String responseMessage) {
@@ -339,6 +355,7 @@ public class ApplicationLoadBalancerHttpRule {
   }
 
 
+
   public ApplicationLoadBalancerHttpRule contentType(String contentType) {
     
     this.contentType = contentType;
@@ -360,6 +377,7 @@ public class ApplicationLoadBalancerHttpRule {
   public void setContentType(String contentType) {
     this.contentType = contentType;
   }
+
 
 
   public ApplicationLoadBalancerHttpRule conditions(List<ApplicationLoadBalancerHttpRuleCondition> conditions) {
@@ -412,14 +430,23 @@ public class ApplicationLoadBalancerHttpRule {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApplicationLoadBalancerHttpRule {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    targetGroup: ").append(toIndentedString(targetGroup)).append("\n");
+
     sb.append("    dropQuery: ").append(toIndentedString(dropQuery)).append("\n");
+
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
+
     sb.append("    statusCode: ").append(toIndentedString(statusCode)).append("\n");
+
     sb.append("    responseMessage: ").append(toIndentedString(responseMessage)).append("\n");
+
     sb.append("    contentType: ").append(toIndentedString(contentType)).append("\n");
+
     sb.append("    conditions: ").append(toIndentedString(conditions)).append("\n");
     sb.append("}");
     return sb.toString();

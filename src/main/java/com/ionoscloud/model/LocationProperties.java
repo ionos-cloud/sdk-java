@@ -30,25 +30,30 @@ import java.util.List;
 /**
  * LocationProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class LocationProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_FEATURES = "features";
   @SerializedName(SERIALIZED_NAME_FEATURES)
   private List<String> features = null;
 
+
   public static final String SERIALIZED_NAME_IMAGE_ALIASES = "imageAliases";
   @SerializedName(SERIALIZED_NAME_IMAGE_ALIASES)
   private List<String> imageAliases = null;
+
 
   public static final String SERIALIZED_NAME_CPU_ARCHITECTURE = "cpuArchitecture";
   @SerializedName(SERIALIZED_NAME_CPU_ARCHITECTURE)
   private List<CpuArchitectureProperties> cpuArchitecture = null;
 
+  
 
   public LocationProperties name(String name) {
     
@@ -73,6 +78,7 @@ public class LocationProperties {
   }
 
 
+
    /**
    * List of features supported by the location
    * @return features
@@ -90,6 +96,7 @@ public class LocationProperties {
   }
 
 
+
    /**
    * List of image aliases available for the location
    * @return imageAliases
@@ -105,6 +112,7 @@ public class LocationProperties {
   public void setImageAliases(List<String> imageAliases) {
     this.imageAliases = imageAliases;
   }
+
 
 
    /**
@@ -143,9 +151,13 @@ public class LocationProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LocationProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    features: ").append(toIndentedString(features)).append("\n");
+
     sb.append("    imageAliases: ").append(toIndentedString(imageAliases)).append("\n");
+
     sb.append("    cpuArchitecture: ").append(toIndentedString(cpuArchitecture)).append("\n");
     sb.append("}");
     return sb.toString();

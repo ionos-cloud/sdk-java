@@ -28,12 +28,14 @@ import java.io.IOException;
 /**
  * RequestTarget
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class RequestTarget {
+  
   public static final String SERIALIZED_NAME_TARGET = "target";
   @SerializedName(SERIALIZED_NAME_TARGET)
   private ResourceReference target;
+
 
   /**
    * Gets or Sets status
@@ -91,6 +93,7 @@ public class RequestTarget {
   @SerializedName(SERIALIZED_NAME_STATUS)
   private StatusEnum status;
 
+  
 
   public RequestTarget target(ResourceReference target) {
     
@@ -113,6 +116,7 @@ public class RequestTarget {
   public void setTarget(ResourceReference target) {
     this.target = target;
   }
+
 
 
   public RequestTarget status(StatusEnum status) {
@@ -157,7 +161,9 @@ public class RequestTarget {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class RequestTarget {\n");
+    
     sb.append("    target: ").append(toIndentedString(target)).append("\n");
+
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();

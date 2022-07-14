@@ -31,12 +31,14 @@ import java.util.List;
 /**
  * Labels
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class Labels {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   /**
    * The type of resource within a collection.
@@ -88,14 +90,17 @@ public class Labels {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private TypeEnum type;
 
+
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
   private List<Label> items = null;
 
+  
 
    /**
    * A unique representation of the label as a resource collection.
@@ -112,6 +117,7 @@ public class Labels {
   public void setId(String id) {
     this.id = id;
   }
+
 
 
    /**
@@ -131,6 +137,7 @@ public class Labels {
   }
 
 
+
    /**
    * URL to the collection representation (absolute path).
    * @return href
@@ -146,6 +153,7 @@ public class Labels {
   public void setHref(URI href) {
     this.href = href;
   }
+
 
 
    /**
@@ -184,9 +192,13 @@ public class Labels {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Labels {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
     sb.append("}");
     return sb.toString();

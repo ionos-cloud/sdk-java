@@ -27,13 +27,15 @@ import java.io.IOException;
 /**
  * BackupUnitSSO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class BackupUnitSSO {
+  
   public static final String SERIALIZED_NAME_SSO_URL = "ssoUrl";
   @SerializedName(SERIALIZED_NAME_SSO_URL)
   private String ssoUrl;
 
+  
 
    /**
    * The backup unit single sign on url
@@ -71,6 +73,7 @@ public class BackupUnitSSO {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class BackupUnitSSO {\n");
+    
     sb.append("    ssoUrl: ").append(toIndentedString(ssoUrl)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -28,13 +28,15 @@ import java.io.IOException;
 /**
  * ApplicationLoadBalancerEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class ApplicationLoadBalancerEntities {
+  
   public static final String SERIALIZED_NAME_FORWARDINGRULES = "forwardingrules";
   @SerializedName(SERIALIZED_NAME_FORWARDINGRULES)
   private ApplicationLoadBalancerForwardingRules forwardingrules;
 
+  
 
   public ApplicationLoadBalancerEntities forwardingrules(ApplicationLoadBalancerForwardingRules forwardingrules) {
     
@@ -78,6 +80,7 @@ public class ApplicationLoadBalancerEntities {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApplicationLoadBalancerEntities {\n");
+    
     sb.append("    forwardingrules: ").append(toIndentedString(forwardingrules)).append("\n");
     sb.append("}");
     return sb.toString();

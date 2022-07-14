@@ -28,29 +28,35 @@ import java.io.IOException;
 /**
  * ContractProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class ContractProperties {
+  
   public static final String SERIALIZED_NAME_CONTRACT_NUMBER = "contractNumber";
   @SerializedName(SERIALIZED_NAME_CONTRACT_NUMBER)
   private Long contractNumber;
+
 
   public static final String SERIALIZED_NAME_OWNER = "owner";
   @SerializedName(SERIALIZED_NAME_OWNER)
   private String owner;
 
+
   public static final String SERIALIZED_NAME_STATUS = "status";
   @SerializedName(SERIALIZED_NAME_STATUS)
   private String status;
+
 
   public static final String SERIALIZED_NAME_REG_DOMAIN = "regDomain";
   @SerializedName(SERIALIZED_NAME_REG_DOMAIN)
   private String regDomain;
 
+
   public static final String SERIALIZED_NAME_RESOURCE_LIMITS = "resourceLimits";
   @SerializedName(SERIALIZED_NAME_RESOURCE_LIMITS)
   private ResourceLimits resourceLimits;
 
+  
 
    /**
    * The contract number.
@@ -67,6 +73,7 @@ public class ContractProperties {
   public void setContractNumber(Long contractNumber) {
     this.contractNumber = contractNumber;
   }
+
 
 
    /**
@@ -86,6 +93,7 @@ public class ContractProperties {
   }
 
 
+
    /**
    * The status of the contract.
    * @return status
@@ -103,6 +111,7 @@ public class ContractProperties {
   }
 
 
+
    /**
    * The registration domain of the contract.
    * @return regDomain
@@ -118,6 +127,7 @@ public class ContractProperties {
   public void setRegDomain(String regDomain) {
     this.regDomain = regDomain;
   }
+
 
 
   public ContractProperties resourceLimits(ResourceLimits resourceLimits) {
@@ -162,10 +172,15 @@ public class ContractProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class ContractProperties {\n");
+    
     sb.append("    contractNumber: ").append(toIndentedString(contractNumber)).append("\n");
+
     sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
+
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+
     sb.append("    regDomain: ").append(toIndentedString(regDomain)).append("\n");
+
     sb.append("    resourceLimits: ").append(toIndentedString(resourceLimits)).append("\n");
     sb.append("}");
     return sb.toString();

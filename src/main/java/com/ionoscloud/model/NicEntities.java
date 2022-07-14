@@ -29,17 +29,20 @@ import java.io.IOException;
 /**
  * NicEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class NicEntities {
+  
   public static final String SERIALIZED_NAME_FLOWLOGS = "flowlogs";
   @SerializedName(SERIALIZED_NAME_FLOWLOGS)
   private FlowLogs flowlogs;
+
 
   public static final String SERIALIZED_NAME_FIREWALLRULES = "firewallrules";
   @SerializedName(SERIALIZED_NAME_FIREWALLRULES)
   private FirewallRules firewallrules;
 
+  
 
   public NicEntities flowlogs(FlowLogs flowlogs) {
     
@@ -62,6 +65,7 @@ public class NicEntities {
   public void setFlowlogs(FlowLogs flowlogs) {
     this.flowlogs = flowlogs;
   }
+
 
 
   public NicEntities firewallrules(FirewallRules firewallrules) {
@@ -106,7 +110,9 @@ public class NicEntities {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NicEntities {\n");
+    
     sb.append("    flowlogs: ").append(toIndentedString(flowlogs)).append("\n");
+
     sb.append("    firewallrules: ").append(toIndentedString(firewallrules)).append("\n");
     sb.append("}");
     return sb.toString();

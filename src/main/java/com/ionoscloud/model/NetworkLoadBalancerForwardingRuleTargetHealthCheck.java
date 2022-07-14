@@ -27,21 +27,25 @@ import java.io.IOException;
 /**
  * NetworkLoadBalancerForwardingRuleTargetHealthCheck
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRuleTargetHealthCheck {
+  
   public static final String SERIALIZED_NAME_CHECK = "check";
   @SerializedName(SERIALIZED_NAME_CHECK)
   private Boolean check;
+
 
   public static final String SERIALIZED_NAME_CHECK_INTERVAL = "checkInterval";
   @SerializedName(SERIALIZED_NAME_CHECK_INTERVAL)
   private Integer checkInterval;
 
+
   public static final String SERIALIZED_NAME_MAINTENANCE = "maintenance";
   @SerializedName(SERIALIZED_NAME_MAINTENANCE)
   private Boolean maintenance;
 
+  
 
   public NetworkLoadBalancerForwardingRuleTargetHealthCheck check(Boolean check) {
     
@@ -66,6 +70,7 @@ public class NetworkLoadBalancerForwardingRuleTargetHealthCheck {
   }
 
 
+
   public NetworkLoadBalancerForwardingRuleTargetHealthCheck checkInterval(Integer checkInterval) {
     
     this.checkInterval = checkInterval;
@@ -87,6 +92,7 @@ public class NetworkLoadBalancerForwardingRuleTargetHealthCheck {
   public void setCheckInterval(Integer checkInterval) {
     this.checkInterval = checkInterval;
   }
+
 
 
   public NetworkLoadBalancerForwardingRuleTargetHealthCheck maintenance(Boolean maintenance) {
@@ -131,8 +137,11 @@ public class NetworkLoadBalancerForwardingRuleTargetHealthCheck {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NetworkLoadBalancerForwardingRuleTargetHealthCheck {\n");
+    
     sb.append("    check: ").append(toIndentedString(check)).append("\n");
+
     sb.append("    checkInterval: ").append(toIndentedString(checkInterval)).append("\n");
+
     sb.append("    maintenance: ").append(toIndentedString(maintenance)).append("\n");
     sb.append("}");
     return sb.toString();

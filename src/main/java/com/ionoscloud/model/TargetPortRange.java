@@ -27,17 +27,20 @@ import java.io.IOException;
 /**
  * TargetPortRange
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class TargetPortRange {
+  
   public static final String SERIALIZED_NAME_START = "start";
   @SerializedName(SERIALIZED_NAME_START)
   private Integer start;
+
 
   public static final String SERIALIZED_NAME_END = "end";
   @SerializedName(SERIALIZED_NAME_END)
   private Integer end;
 
+  
 
   public TargetPortRange start(Integer start) {
     
@@ -60,6 +63,7 @@ public class TargetPortRange {
   public void setStart(Integer start) {
     this.start = start;
   }
+
 
 
   public TargetPortRange end(Integer end) {
@@ -104,7 +108,9 @@ public class TargetPortRange {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TargetPortRange {\n");
+    
     sb.append("    start: ").append(toIndentedString(start)).append("\n");
+
     sb.append("    end: ").append(toIndentedString(end)).append("\n");
     sb.append("}");
     return sb.toString();

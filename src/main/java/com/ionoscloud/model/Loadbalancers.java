@@ -34,37 +34,45 @@ import java.util.List;
 /**
  * Loadbalancers
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class Loadbalancers {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)
   private Type type;
 
+
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
   private List<Loadbalancer> items = null;
 
+
   public static final String SERIALIZED_NAME_OFFSET = "offset";
   @SerializedName(SERIALIZED_NAME_OFFSET)
   private BigDecimal offset;
+
 
   public static final String SERIALIZED_NAME_LIMIT = "limit";
   @SerializedName(SERIALIZED_NAME_LIMIT)
   private BigDecimal limit;
 
+
   public static final String SERIALIZED_NAME_LINKS = "_links";
   @SerializedName(SERIALIZED_NAME_LINKS)
   private PaginationLinks links;
 
+  
 
    /**
    * The resource&#39;s unique identifier.
@@ -81,6 +89,7 @@ public class Loadbalancers {
   public void setId(String id) {
     this.id = id;
   }
+
 
 
   public Loadbalancers type(Type type) {
@@ -106,6 +115,7 @@ public class Loadbalancers {
   }
 
 
+
    /**
    * URL to the object representation (absolute path).
    * @return href
@@ -123,6 +133,7 @@ public class Loadbalancers {
   }
 
 
+
    /**
    * Array of items in the collection.
    * @return items
@@ -138,6 +149,7 @@ public class Loadbalancers {
   public void setItems(List<Loadbalancer> items) {
     this.items = items;
   }
+
 
 
   public Loadbalancers offset(BigDecimal offset) {
@@ -163,6 +175,7 @@ public class Loadbalancers {
   }
 
 
+
   public Loadbalancers limit(BigDecimal limit) {
     
     this.limit = limit;
@@ -184,6 +197,7 @@ public class Loadbalancers {
   public void setLimit(BigDecimal limit) {
     this.limit = limit;
   }
+
 
 
   public Loadbalancers links(PaginationLinks links) {
@@ -228,12 +242,19 @@ public class Loadbalancers {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class Loadbalancers {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
+
     sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+
     sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
+
     sb.append("    links: ").append(toIndentedString(links)).append("\n");
     sb.append("}");
     return sb.toString();

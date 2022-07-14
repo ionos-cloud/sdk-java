@@ -27,17 +27,20 @@ import java.io.IOException;
 /**
  * LabelResourceProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class LabelResourceProperties {
+  
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
   private String key;
+
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
   private String value;
 
+  
 
   public LabelResourceProperties key(String key) {
     
@@ -60,6 +63,7 @@ public class LabelResourceProperties {
   public void setKey(String key) {
     this.key = key;
   }
+
 
 
   public LabelResourceProperties value(String value) {
@@ -104,7 +108,9 @@ public class LabelResourceProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LabelResourceProperties {\n");
+    
     sb.append("    key: ").append(toIndentedString(key)).append("\n");
+
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();

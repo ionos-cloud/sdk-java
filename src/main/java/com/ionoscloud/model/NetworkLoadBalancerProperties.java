@@ -29,29 +29,35 @@ import java.util.List;
 /**
  * NetworkLoadBalancerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class NetworkLoadBalancerProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_LISTENER_LAN = "listenerLan";
   @SerializedName(SERIALIZED_NAME_LISTENER_LAN)
   private Integer listenerLan;
 
+
   public static final String SERIALIZED_NAME_IPS = "ips";
   @SerializedName(SERIALIZED_NAME_IPS)
   private List<String> ips = null;
+
 
   public static final String SERIALIZED_NAME_TARGET_LAN = "targetLan";
   @SerializedName(SERIALIZED_NAME_TARGET_LAN)
   private Integer targetLan;
 
+
   public static final String SERIALIZED_NAME_LB_PRIVATE_IPS = "lbPrivateIps";
   @SerializedName(SERIALIZED_NAME_LB_PRIVATE_IPS)
   private List<String> lbPrivateIps = null;
 
+  
 
   public NetworkLoadBalancerProperties name(String name) {
     
@@ -75,6 +81,7 @@ public class NetworkLoadBalancerProperties {
   }
 
 
+
   public NetworkLoadBalancerProperties listenerLan(Integer listenerLan) {
     
     this.listenerLan = listenerLan;
@@ -95,6 +102,7 @@ public class NetworkLoadBalancerProperties {
   public void setListenerLan(Integer listenerLan) {
     this.listenerLan = listenerLan;
   }
+
 
 
   public NetworkLoadBalancerProperties ips(List<String> ips) {
@@ -128,6 +136,7 @@ public class NetworkLoadBalancerProperties {
   }
 
 
+
   public NetworkLoadBalancerProperties targetLan(Integer targetLan) {
     
     this.targetLan = targetLan;
@@ -148,6 +157,7 @@ public class NetworkLoadBalancerProperties {
   public void setTargetLan(Integer targetLan) {
     this.targetLan = targetLan;
   }
+
 
 
   public NetworkLoadBalancerProperties lbPrivateIps(List<String> lbPrivateIps) {
@@ -200,10 +210,15 @@ public class NetworkLoadBalancerProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NetworkLoadBalancerProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    listenerLan: ").append(toIndentedString(listenerLan)).append("\n");
+
     sb.append("    ips: ").append(toIndentedString(ips)).append("\n");
+
     sb.append("    targetLan: ").append(toIndentedString(targetLan)).append("\n");
+
     sb.append("    lbPrivateIps: ").append(toIndentedString(lbPrivateIps)).append("\n");
     sb.append("}");
     return sb.toString();

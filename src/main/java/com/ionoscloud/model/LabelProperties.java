@@ -27,29 +27,35 @@ import java.io.IOException;
 /**
  * LabelProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class LabelProperties {
+  
   public static final String SERIALIZED_NAME_KEY = "key";
   @SerializedName(SERIALIZED_NAME_KEY)
   private String key;
+
 
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
   private String value;
 
+
   public static final String SERIALIZED_NAME_RESOURCE_ID = "resourceId";
   @SerializedName(SERIALIZED_NAME_RESOURCE_ID)
   private String resourceId;
+
 
   public static final String SERIALIZED_NAME_RESOURCE_TYPE = "resourceType";
   @SerializedName(SERIALIZED_NAME_RESOURCE_TYPE)
   private String resourceType;
 
+
   public static final String SERIALIZED_NAME_RESOURCE_HREF = "resourceHref";
   @SerializedName(SERIALIZED_NAME_RESOURCE_HREF)
   private String resourceHref;
 
+  
 
   public LabelProperties key(String key) {
     
@@ -72,6 +78,7 @@ public class LabelProperties {
   public void setKey(String key) {
     this.key = key;
   }
+
 
 
   public LabelProperties value(String value) {
@@ -97,6 +104,7 @@ public class LabelProperties {
   }
 
 
+
   public LabelProperties resourceId(String resourceId) {
     
     this.resourceId = resourceId;
@@ -120,6 +128,7 @@ public class LabelProperties {
   }
 
 
+
   public LabelProperties resourceType(String resourceType) {
     
     this.resourceType = resourceType;
@@ -141,6 +150,7 @@ public class LabelProperties {
   public void setResourceType(String resourceType) {
     this.resourceType = resourceType;
   }
+
 
 
   public LabelProperties resourceHref(String resourceHref) {
@@ -185,10 +195,15 @@ public class LabelProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LabelProperties {\n");
+    
     sb.append("    key: ").append(toIndentedString(key)).append("\n");
+
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
+
     sb.append("    resourceId: ").append(toIndentedString(resourceId)).append("\n");
+
     sb.append("    resourceType: ").append(toIndentedString(resourceType)).append("\n");
+
     sb.append("    resourceHref: ").append(toIndentedString(resourceHref)).append("\n");
     sb.append("}");
     return sb.toString();

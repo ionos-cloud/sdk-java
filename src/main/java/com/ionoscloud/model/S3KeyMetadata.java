@@ -28,17 +28,20 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * S3KeyMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class S3KeyMetadata {
+  
   public static final String SERIALIZED_NAME_ETAG = "etag";
   @SerializedName(SERIALIZED_NAME_ETAG)
   private String etag;
+
 
   public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
   @SerializedName(SERIALIZED_NAME_CREATED_DATE)
   private OffsetDateTime createdDate;
 
+  
 
    /**
    * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
@@ -55,6 +58,7 @@ public class S3KeyMetadata {
   public void setEtag(String etag) {
     this.etag = etag;
   }
+
 
 
    /**
@@ -93,7 +97,9 @@ public class S3KeyMetadata {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class S3KeyMetadata {\n");
+    
     sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
+
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("}");
     return sb.toString();

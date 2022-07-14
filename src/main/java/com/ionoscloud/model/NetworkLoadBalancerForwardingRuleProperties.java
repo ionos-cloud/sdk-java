@@ -31,12 +31,14 @@ import java.util.List;
 /**
  * NetworkLoadBalancerForwardingRuleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRuleProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   /**
    * Balancing algorithm
@@ -94,6 +96,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   @SerializedName(SERIALIZED_NAME_ALGORITHM)
   private AlgorithmEnum algorithm;
 
+
   /**
    * Balancing protocol
    */
@@ -146,22 +149,27 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
   private ProtocolEnum protocol;
 
+
   public static final String SERIALIZED_NAME_LISTENER_IP = "listenerIp";
   @SerializedName(SERIALIZED_NAME_LISTENER_IP)
   private String listenerIp;
+
 
   public static final String SERIALIZED_NAME_LISTENER_PORT = "listenerPort";
   @SerializedName(SERIALIZED_NAME_LISTENER_PORT)
   private Integer listenerPort;
 
+
   public static final String SERIALIZED_NAME_HEALTH_CHECK = "healthCheck";
   @SerializedName(SERIALIZED_NAME_HEALTH_CHECK)
   private NetworkLoadBalancerForwardingRuleHealthCheck healthCheck;
+
 
   public static final String SERIALIZED_NAME_TARGETS = "targets";
   @SerializedName(SERIALIZED_NAME_TARGETS)
   private List<NetworkLoadBalancerForwardingRuleTarget> targets = new ArrayList<NetworkLoadBalancerForwardingRuleTarget>();
 
+  
 
   public NetworkLoadBalancerForwardingRuleProperties name(String name) {
     
@@ -183,6 +191,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public NetworkLoadBalancerForwardingRuleProperties algorithm(AlgorithmEnum algorithm) {
@@ -207,6 +216,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   }
 
 
+
   public NetworkLoadBalancerForwardingRuleProperties protocol(ProtocolEnum protocol) {
     
     this.protocol = protocol;
@@ -227,6 +237,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   public void setProtocol(ProtocolEnum protocol) {
     this.protocol = protocol;
   }
+
 
 
   public NetworkLoadBalancerForwardingRuleProperties listenerIp(String listenerIp) {
@@ -251,6 +262,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   }
 
 
+
   public NetworkLoadBalancerForwardingRuleProperties listenerPort(Integer listenerPort) {
     
     this.listenerPort = listenerPort;
@@ -271,6 +283,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   public void setListenerPort(Integer listenerPort) {
     this.listenerPort = listenerPort;
   }
+
 
 
   public NetworkLoadBalancerForwardingRuleProperties healthCheck(NetworkLoadBalancerForwardingRuleHealthCheck healthCheck) {
@@ -294,6 +307,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   public void setHealthCheck(NetworkLoadBalancerForwardingRuleHealthCheck healthCheck) {
     this.healthCheck = healthCheck;
   }
+
 
 
   public NetworkLoadBalancerForwardingRuleProperties targets(List<NetworkLoadBalancerForwardingRuleTarget> targets) {
@@ -342,12 +356,19 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NetworkLoadBalancerForwardingRuleProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    algorithm: ").append(toIndentedString(algorithm)).append("\n");
+
     sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
+
     sb.append("    listenerIp: ").append(toIndentedString(listenerIp)).append("\n");
+
     sb.append("    listenerPort: ").append(toIndentedString(listenerPort)).append("\n");
+
     sb.append("    healthCheck: ").append(toIndentedString(healthCheck)).append("\n");
+
     sb.append("    targets: ").append(toIndentedString(targets)).append("\n");
     sb.append("}");
     return sb.toString();

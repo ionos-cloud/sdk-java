@@ -28,25 +28,30 @@ import java.math.BigDecimal;
 /**
  * TemplateProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class TemplateProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_CORES = "cores";
   @SerializedName(SERIALIZED_NAME_CORES)
   private BigDecimal cores;
 
+
   public static final String SERIALIZED_NAME_RAM = "ram";
   @SerializedName(SERIALIZED_NAME_RAM)
   private BigDecimal ram;
+
 
   public static final String SERIALIZED_NAME_STORAGE_SIZE = "storageSize";
   @SerializedName(SERIALIZED_NAME_STORAGE_SIZE)
   private BigDecimal storageSize;
 
+  
 
   public TemplateProperties name(String name) {
     
@@ -68,6 +73,7 @@ public class TemplateProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public TemplateProperties cores(BigDecimal cores) {
@@ -92,6 +98,7 @@ public class TemplateProperties {
   }
 
 
+
   public TemplateProperties ram(BigDecimal ram) {
     
     this.ram = ram;
@@ -112,6 +119,7 @@ public class TemplateProperties {
   public void setRam(BigDecimal ram) {
     this.ram = ram;
   }
+
 
 
   public TemplateProperties storageSize(BigDecimal storageSize) {
@@ -155,9 +163,13 @@ public class TemplateProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    cores: ").append(toIndentedString(cores)).append("\n");
+
     sb.append("    ram: ").append(toIndentedString(ram)).append("\n");
+
     sb.append("    storageSize: ").append(toIndentedString(storageSize)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -30,25 +30,30 @@ import java.util.List;
 /**
  * LanProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class LanProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_IP_FAILOVER = "ipFailover";
   @SerializedName(SERIALIZED_NAME_IP_FAILOVER)
   private List<IPFailover> ipFailover = null;
 
+
   public static final String SERIALIZED_NAME_PCC = "pcc";
   @SerializedName(SERIALIZED_NAME_PCC)
   private String pcc;
+
 
   public static final String SERIALIZED_NAME_PUBLIC = "public";
   @SerializedName(SERIALIZED_NAME_PUBLIC)
   private Boolean _public;
 
+  
 
   public LanProperties name(String name) {
     
@@ -71,6 +76,7 @@ public class LanProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public LanProperties ipFailover(List<IPFailover> ipFailover) {
@@ -104,6 +110,7 @@ public class LanProperties {
   }
 
 
+
   public LanProperties pcc(String pcc) {
     
     this.pcc = pcc;
@@ -125,6 +132,7 @@ public class LanProperties {
   public void setPcc(String pcc) {
     this.pcc = pcc;
   }
+
 
 
   public LanProperties _public(Boolean _public) {
@@ -169,9 +177,13 @@ public class LanProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class LanProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    ipFailover: ").append(toIndentedString(ipFailover)).append("\n");
+
     sb.append("    pcc: ").append(toIndentedString(pcc)).append("\n");
+
     sb.append("    _public: ").append(toIndentedString(_public)).append("\n");
     sb.append("}");
     return sb.toString();

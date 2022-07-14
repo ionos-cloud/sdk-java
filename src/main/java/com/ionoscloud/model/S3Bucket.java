@@ -27,13 +27,15 @@ import java.io.IOException;
 /**
  * S3Bucket
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class S3Bucket {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
+  
 
   public S3Bucket name(String name) {
     
@@ -76,6 +78,7 @@ public class S3Bucket {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class S3Bucket {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();

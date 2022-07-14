@@ -27,25 +27,30 @@ import java.io.IOException;
 /**
  * NetworkLoadBalancerForwardingRuleHealthCheck
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRuleHealthCheck {
+  
   public static final String SERIALIZED_NAME_CLIENT_TIMEOUT = "clientTimeout";
   @SerializedName(SERIALIZED_NAME_CLIENT_TIMEOUT)
   private Integer clientTimeout;
+
 
   public static final String SERIALIZED_NAME_CONNECT_TIMEOUT = "connectTimeout";
   @SerializedName(SERIALIZED_NAME_CONNECT_TIMEOUT)
   private Integer connectTimeout;
 
+
   public static final String SERIALIZED_NAME_TARGET_TIMEOUT = "targetTimeout";
   @SerializedName(SERIALIZED_NAME_TARGET_TIMEOUT)
   private Integer targetTimeout;
+
 
   public static final String SERIALIZED_NAME_RETRIES = "retries";
   @SerializedName(SERIALIZED_NAME_RETRIES)
   private Integer retries;
 
+  
 
   public NetworkLoadBalancerForwardingRuleHealthCheck clientTimeout(Integer clientTimeout) {
     
@@ -68,6 +73,7 @@ public class NetworkLoadBalancerForwardingRuleHealthCheck {
   public void setClientTimeout(Integer clientTimeout) {
     this.clientTimeout = clientTimeout;
   }
+
 
 
   public NetworkLoadBalancerForwardingRuleHealthCheck connectTimeout(Integer connectTimeout) {
@@ -93,6 +99,7 @@ public class NetworkLoadBalancerForwardingRuleHealthCheck {
   }
 
 
+
   public NetworkLoadBalancerForwardingRuleHealthCheck targetTimeout(Integer targetTimeout) {
     
     this.targetTimeout = targetTimeout;
@@ -114,6 +121,7 @@ public class NetworkLoadBalancerForwardingRuleHealthCheck {
   public void setTargetTimeout(Integer targetTimeout) {
     this.targetTimeout = targetTimeout;
   }
+
 
 
   public NetworkLoadBalancerForwardingRuleHealthCheck retries(Integer retries) {
@@ -158,9 +166,13 @@ public class NetworkLoadBalancerForwardingRuleHealthCheck {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NetworkLoadBalancerForwardingRuleHealthCheck {\n");
+    
     sb.append("    clientTimeout: ").append(toIndentedString(clientTimeout)).append("\n");
+
     sb.append("    connectTimeout: ").append(toIndentedString(connectTimeout)).append("\n");
+
     sb.append("    targetTimeout: ").append(toIndentedString(targetTimeout)).append("\n");
+
     sb.append("    retries: ").append(toIndentedString(retries)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -28,20 +28,24 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * KubernetesNodeMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class KubernetesNodeMetadata {
+  
   public static final String SERIALIZED_NAME_ETAG = "etag";
   @SerializedName(SERIALIZED_NAME_ETAG)
   private String etag;
+
 
   public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
   @SerializedName(SERIALIZED_NAME_CREATED_DATE)
   private OffsetDateTime createdDate;
 
+
   public static final String SERIALIZED_NAME_LAST_MODIFIED_DATE = "lastModifiedDate";
   @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_DATE)
   private OffsetDateTime lastModifiedDate;
+
 
   /**
    * State of the resource.
@@ -103,10 +107,12 @@ public class KubernetesNodeMetadata {
   @SerializedName(SERIALIZED_NAME_STATE)
   private StateEnum state;
 
+
   public static final String SERIALIZED_NAME_LAST_SOFTWARE_UPDATED_DATE = "lastSoftwareUpdatedDate";
   @SerializedName(SERIALIZED_NAME_LAST_SOFTWARE_UPDATED_DATE)
   private OffsetDateTime lastSoftwareUpdatedDate;
 
+  
 
    /**
    * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
@@ -123,6 +129,7 @@ public class KubernetesNodeMetadata {
   public void setEtag(String etag) {
     this.etag = etag;
   }
+
 
 
    /**
@@ -142,6 +149,7 @@ public class KubernetesNodeMetadata {
   }
 
 
+
    /**
    * The last time the resource was modified.
    * @return lastModifiedDate
@@ -159,6 +167,7 @@ public class KubernetesNodeMetadata {
   }
 
 
+
    /**
    * State of the resource.
    * @return state
@@ -174,6 +183,7 @@ public class KubernetesNodeMetadata {
   public void setState(StateEnum state) {
     this.state = state;
   }
+
 
 
    /**
@@ -212,10 +222,15 @@ public class KubernetesNodeMetadata {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodeMetadata {\n");
+    
     sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
+
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
+
     sb.append("    lastModifiedDate: ").append(toIndentedString(lastModifiedDate)).append("\n");
+
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
+
     sb.append("    lastSoftwareUpdatedDate: ").append(toIndentedString(lastSoftwareUpdatedDate)).append("\n");
     sb.append("}");
     return sb.toString();

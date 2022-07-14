@@ -27,41 +27,50 @@ import java.io.IOException;
 /**
  * UserPropertiesPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class UserPropertiesPut {
+  
   public static final String SERIALIZED_NAME_FIRSTNAME = "firstname";
   @SerializedName(SERIALIZED_NAME_FIRSTNAME)
   private String firstname;
+
 
   public static final String SERIALIZED_NAME_LASTNAME = "lastname";
   @SerializedName(SERIALIZED_NAME_LASTNAME)
   private String lastname;
 
+
   public static final String SERIALIZED_NAME_EMAIL = "email";
   @SerializedName(SERIALIZED_NAME_EMAIL)
   private String email;
+
 
   public static final String SERIALIZED_NAME_PASSWORD = "password";
   @SerializedName(SERIALIZED_NAME_PASSWORD)
   private String password;
 
+
   public static final String SERIALIZED_NAME_ADMINISTRATOR = "administrator";
   @SerializedName(SERIALIZED_NAME_ADMINISTRATOR)
   private Boolean administrator;
+
 
   public static final String SERIALIZED_NAME_FORCE_SEC_AUTH = "forceSecAuth";
   @SerializedName(SERIALIZED_NAME_FORCE_SEC_AUTH)
   private Boolean forceSecAuth;
 
+
   public static final String SERIALIZED_NAME_SEC_AUTH_ACTIVE = "secAuthActive";
   @SerializedName(SERIALIZED_NAME_SEC_AUTH_ACTIVE)
   private Boolean secAuthActive;
+
 
   public static final String SERIALIZED_NAME_ACTIVE = "active";
   @SerializedName(SERIALIZED_NAME_ACTIVE)
   private Boolean active;
 
+  
 
   public UserPropertiesPut firstname(String firstname) {
     
@@ -84,6 +93,7 @@ public class UserPropertiesPut {
   public void setFirstname(String firstname) {
     this.firstname = firstname;
   }
+
 
 
   public UserPropertiesPut lastname(String lastname) {
@@ -109,6 +119,7 @@ public class UserPropertiesPut {
   }
 
 
+
   public UserPropertiesPut email(String email) {
     
     this.email = email;
@@ -130,6 +141,7 @@ public class UserPropertiesPut {
   public void setEmail(String email) {
     this.email = email;
   }
+
 
 
   public UserPropertiesPut password(String password) {
@@ -155,6 +167,7 @@ public class UserPropertiesPut {
   }
 
 
+
   public UserPropertiesPut administrator(Boolean administrator) {
     
     this.administrator = administrator;
@@ -176,6 +189,7 @@ public class UserPropertiesPut {
   public void setAdministrator(Boolean administrator) {
     this.administrator = administrator;
   }
+
 
 
   public UserPropertiesPut forceSecAuth(Boolean forceSecAuth) {
@@ -201,6 +215,7 @@ public class UserPropertiesPut {
   }
 
 
+
   public UserPropertiesPut secAuthActive(Boolean secAuthActive) {
     
     this.secAuthActive = secAuthActive;
@@ -222,6 +237,7 @@ public class UserPropertiesPut {
   public void setSecAuthActive(Boolean secAuthActive) {
     this.secAuthActive = secAuthActive;
   }
+
 
 
   public UserPropertiesPut active(Boolean active) {
@@ -266,13 +282,21 @@ public class UserPropertiesPut {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserPropertiesPut {\n");
+    
     sb.append("    firstname: ").append(toIndentedString(firstname)).append("\n");
+
     sb.append("    lastname: ").append(toIndentedString(lastname)).append("\n");
+
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
+
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
+
     sb.append("    administrator: ").append(toIndentedString(administrator)).append("\n");
+
     sb.append("    forceSecAuth: ").append(toIndentedString(forceSecAuth)).append("\n");
+
     sb.append("    secAuthActive: ").append(toIndentedString(secAuthActive)).append("\n");
+
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
     sb.append("}");
     return sb.toString();

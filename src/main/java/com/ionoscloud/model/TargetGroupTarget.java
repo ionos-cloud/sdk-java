@@ -27,29 +27,35 @@ import java.io.IOException;
 /**
  * TargetGroupTarget
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class TargetGroupTarget {
+  
   public static final String SERIALIZED_NAME_IP = "ip";
   @SerializedName(SERIALIZED_NAME_IP)
   private String ip;
+
 
   public static final String SERIALIZED_NAME_PORT = "port";
   @SerializedName(SERIALIZED_NAME_PORT)
   private Integer port;
 
+
   public static final String SERIALIZED_NAME_WEIGHT = "weight";
   @SerializedName(SERIALIZED_NAME_WEIGHT)
   private Integer weight;
+
 
   public static final String SERIALIZED_NAME_HEALTH_CHECK_ENABLED = "healthCheckEnabled";
   @SerializedName(SERIALIZED_NAME_HEALTH_CHECK_ENABLED)
   private Boolean healthCheckEnabled;
 
+
   public static final String SERIALIZED_NAME_MAINTENANCE_ENABLED = "maintenanceEnabled";
   @SerializedName(SERIALIZED_NAME_MAINTENANCE_ENABLED)
   private Boolean maintenanceEnabled;
 
+  
 
   public TargetGroupTarget ip(String ip) {
     
@@ -71,6 +77,7 @@ public class TargetGroupTarget {
   public void setIp(String ip) {
     this.ip = ip;
   }
+
 
 
   public TargetGroupTarget port(Integer port) {
@@ -95,6 +102,7 @@ public class TargetGroupTarget {
   }
 
 
+
   public TargetGroupTarget weight(Integer weight) {
     
     this.weight = weight;
@@ -115,6 +123,7 @@ public class TargetGroupTarget {
   public void setWeight(Integer weight) {
     this.weight = weight;
   }
+
 
 
   public TargetGroupTarget healthCheckEnabled(Boolean healthCheckEnabled) {
@@ -138,6 +147,7 @@ public class TargetGroupTarget {
   public void setHealthCheckEnabled(Boolean healthCheckEnabled) {
     this.healthCheckEnabled = healthCheckEnabled;
   }
+
 
 
   public TargetGroupTarget maintenanceEnabled(Boolean maintenanceEnabled) {
@@ -182,10 +192,15 @@ public class TargetGroupTarget {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TargetGroupTarget {\n");
+    
     sb.append("    ip: ").append(toIndentedString(ip)).append("\n");
+
     sb.append("    port: ").append(toIndentedString(port)).append("\n");
+
     sb.append("    weight: ").append(toIndentedString(weight)).append("\n");
+
     sb.append("    healthCheckEnabled: ").append(toIndentedString(healthCheckEnabled)).append("\n");
+
     sb.append("    maintenanceEnabled: ").append(toIndentedString(maintenanceEnabled)).append("\n");
     sb.append("}");
     return sb.toString();

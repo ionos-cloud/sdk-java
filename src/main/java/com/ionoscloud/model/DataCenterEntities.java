@@ -33,33 +33,40 @@ import java.io.IOException;
 /**
  * DataCenterEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class DataCenterEntities {
+  
   public static final String SERIALIZED_NAME_SERVERS = "servers";
   @SerializedName(SERIALIZED_NAME_SERVERS)
   private Servers servers;
+
 
   public static final String SERIALIZED_NAME_VOLUMES = "volumes";
   @SerializedName(SERIALIZED_NAME_VOLUMES)
   private Volumes volumes;
 
+
   public static final String SERIALIZED_NAME_LOADBALANCERS = "loadbalancers";
   @SerializedName(SERIALIZED_NAME_LOADBALANCERS)
   private Loadbalancers loadbalancers;
+
 
   public static final String SERIALIZED_NAME_LANS = "lans";
   @SerializedName(SERIALIZED_NAME_LANS)
   private Lans lans;
 
+
   public static final String SERIALIZED_NAME_NETWORKLOADBALANCERS = "networkloadbalancers";
   @SerializedName(SERIALIZED_NAME_NETWORKLOADBALANCERS)
   private NetworkLoadBalancers networkloadbalancers;
+
 
   public static final String SERIALIZED_NAME_NATGATEWAYS = "natgateways";
   @SerializedName(SERIALIZED_NAME_NATGATEWAYS)
   private NatGateways natgateways;
 
+  
 
   public DataCenterEntities servers(Servers servers) {
     
@@ -82,6 +89,7 @@ public class DataCenterEntities {
   public void setServers(Servers servers) {
     this.servers = servers;
   }
+
 
 
   public DataCenterEntities volumes(Volumes volumes) {
@@ -107,6 +115,7 @@ public class DataCenterEntities {
   }
 
 
+
   public DataCenterEntities loadbalancers(Loadbalancers loadbalancers) {
     
     this.loadbalancers = loadbalancers;
@@ -128,6 +137,7 @@ public class DataCenterEntities {
   public void setLoadbalancers(Loadbalancers loadbalancers) {
     this.loadbalancers = loadbalancers;
   }
+
 
 
   public DataCenterEntities lans(Lans lans) {
@@ -153,6 +163,7 @@ public class DataCenterEntities {
   }
 
 
+
   public DataCenterEntities networkloadbalancers(NetworkLoadBalancers networkloadbalancers) {
     
     this.networkloadbalancers = networkloadbalancers;
@@ -174,6 +185,7 @@ public class DataCenterEntities {
   public void setNetworkloadbalancers(NetworkLoadBalancers networkloadbalancers) {
     this.networkloadbalancers = networkloadbalancers;
   }
+
 
 
   public DataCenterEntities natgateways(NatGateways natgateways) {
@@ -218,11 +230,17 @@ public class DataCenterEntities {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class DataCenterEntities {\n");
+    
     sb.append("    servers: ").append(toIndentedString(servers)).append("\n");
+
     sb.append("    volumes: ").append(toIndentedString(volumes)).append("\n");
+
     sb.append("    loadbalancers: ").append(toIndentedString(loadbalancers)).append("\n");
+
     sb.append("    lans: ").append(toIndentedString(lans)).append("\n");
+
     sb.append("    networkloadbalancers: ").append(toIndentedString(networkloadbalancers)).append("\n");
+
     sb.append("    natgateways: ").append(toIndentedString(natgateways)).append("\n");
     sb.append("}");
     return sb.toString();

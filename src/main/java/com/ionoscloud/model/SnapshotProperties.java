@@ -28,68 +28,84 @@ import java.math.BigDecimal;
 /**
  * SnapshotProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class SnapshotProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
   @SerializedName(SERIALIZED_NAME_DESCRIPTION)
   private String description;
 
+
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
   private String location;
+
 
   public static final String SERIALIZED_NAME_SIZE = "size";
   @SerializedName(SERIALIZED_NAME_SIZE)
   private BigDecimal size;
 
+
   public static final String SERIALIZED_NAME_SEC_AUTH_PROTECTION = "secAuthProtection";
   @SerializedName(SERIALIZED_NAME_SEC_AUTH_PROTECTION)
   private Boolean secAuthProtection;
+
 
   public static final String SERIALIZED_NAME_CPU_HOT_PLUG = "cpuHotPlug";
   @SerializedName(SERIALIZED_NAME_CPU_HOT_PLUG)
   private Boolean cpuHotPlug;
 
+
   public static final String SERIALIZED_NAME_CPU_HOT_UNPLUG = "cpuHotUnplug";
   @SerializedName(SERIALIZED_NAME_CPU_HOT_UNPLUG)
   private Boolean cpuHotUnplug;
+
 
   public static final String SERIALIZED_NAME_RAM_HOT_PLUG = "ramHotPlug";
   @SerializedName(SERIALIZED_NAME_RAM_HOT_PLUG)
   private Boolean ramHotPlug;
 
+
   public static final String SERIALIZED_NAME_RAM_HOT_UNPLUG = "ramHotUnplug";
   @SerializedName(SERIALIZED_NAME_RAM_HOT_UNPLUG)
   private Boolean ramHotUnplug;
+
 
   public static final String SERIALIZED_NAME_NIC_HOT_PLUG = "nicHotPlug";
   @SerializedName(SERIALIZED_NAME_NIC_HOT_PLUG)
   private Boolean nicHotPlug;
 
+
   public static final String SERIALIZED_NAME_NIC_HOT_UNPLUG = "nicHotUnplug";
   @SerializedName(SERIALIZED_NAME_NIC_HOT_UNPLUG)
   private Boolean nicHotUnplug;
+
 
   public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG = "discVirtioHotPlug";
   @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG)
   private Boolean discVirtioHotPlug;
 
+
   public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG = "discVirtioHotUnplug";
   @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG)
   private Boolean discVirtioHotUnplug;
+
 
   public static final String SERIALIZED_NAME_DISC_SCSI_HOT_PLUG = "discScsiHotPlug";
   @SerializedName(SERIALIZED_NAME_DISC_SCSI_HOT_PLUG)
   private Boolean discScsiHotPlug;
 
+
   public static final String SERIALIZED_NAME_DISC_SCSI_HOT_UNPLUG = "discScsiHotUnplug";
   @SerializedName(SERIALIZED_NAME_DISC_SCSI_HOT_UNPLUG)
   private Boolean discScsiHotUnplug;
+
 
   /**
    * OS type of this snapshot
@@ -151,6 +167,7 @@ public class SnapshotProperties {
   @SerializedName(SERIALIZED_NAME_LICENCE_TYPE)
   private LicenceTypeEnum licenceType;
 
+  
 
   public SnapshotProperties name(String name) {
     
@@ -173,6 +190,7 @@ public class SnapshotProperties {
   public void setName(String name) {
     this.name = name;
   }
+
 
 
   public SnapshotProperties description(String description) {
@@ -198,6 +216,7 @@ public class SnapshotProperties {
   }
 
 
+
    /**
    * Location of that image/snapshot. 
    * @return location
@@ -215,6 +234,7 @@ public class SnapshotProperties {
   }
 
 
+
    /**
    * The size of the image in GB.
    * @return size
@@ -230,6 +250,7 @@ public class SnapshotProperties {
   public void setSize(BigDecimal size) {
     this.size = size;
   }
+
 
 
   public SnapshotProperties secAuthProtection(Boolean secAuthProtection) {
@@ -255,6 +276,7 @@ public class SnapshotProperties {
   }
 
 
+
   public SnapshotProperties cpuHotPlug(Boolean cpuHotPlug) {
     
     this.cpuHotPlug = cpuHotPlug;
@@ -276,6 +298,7 @@ public class SnapshotProperties {
   public void setCpuHotPlug(Boolean cpuHotPlug) {
     this.cpuHotPlug = cpuHotPlug;
   }
+
 
 
   public SnapshotProperties cpuHotUnplug(Boolean cpuHotUnplug) {
@@ -301,6 +324,7 @@ public class SnapshotProperties {
   }
 
 
+
   public SnapshotProperties ramHotPlug(Boolean ramHotPlug) {
     
     this.ramHotPlug = ramHotPlug;
@@ -322,6 +346,7 @@ public class SnapshotProperties {
   public void setRamHotPlug(Boolean ramHotPlug) {
     this.ramHotPlug = ramHotPlug;
   }
+
 
 
   public SnapshotProperties ramHotUnplug(Boolean ramHotUnplug) {
@@ -347,6 +372,7 @@ public class SnapshotProperties {
   }
 
 
+
   public SnapshotProperties nicHotPlug(Boolean nicHotPlug) {
     
     this.nicHotPlug = nicHotPlug;
@@ -368,6 +394,7 @@ public class SnapshotProperties {
   public void setNicHotPlug(Boolean nicHotPlug) {
     this.nicHotPlug = nicHotPlug;
   }
+
 
 
   public SnapshotProperties nicHotUnplug(Boolean nicHotUnplug) {
@@ -393,6 +420,7 @@ public class SnapshotProperties {
   }
 
 
+
   public SnapshotProperties discVirtioHotPlug(Boolean discVirtioHotPlug) {
     
     this.discVirtioHotPlug = discVirtioHotPlug;
@@ -414,6 +442,7 @@ public class SnapshotProperties {
   public void setDiscVirtioHotPlug(Boolean discVirtioHotPlug) {
     this.discVirtioHotPlug = discVirtioHotPlug;
   }
+
 
 
   public SnapshotProperties discVirtioHotUnplug(Boolean discVirtioHotUnplug) {
@@ -439,6 +468,7 @@ public class SnapshotProperties {
   }
 
 
+
   public SnapshotProperties discScsiHotPlug(Boolean discScsiHotPlug) {
     
     this.discScsiHotPlug = discScsiHotPlug;
@@ -462,6 +492,7 @@ public class SnapshotProperties {
   }
 
 
+
   public SnapshotProperties discScsiHotUnplug(Boolean discScsiHotUnplug) {
     
     this.discScsiHotUnplug = discScsiHotUnplug;
@@ -483,6 +514,7 @@ public class SnapshotProperties {
   public void setDiscScsiHotUnplug(Boolean discScsiHotUnplug) {
     this.discScsiHotUnplug = discScsiHotUnplug;
   }
+
 
 
   public SnapshotProperties licenceType(LicenceTypeEnum licenceType) {
@@ -527,21 +559,37 @@ public class SnapshotProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class SnapshotProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
+
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
+
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
+
     sb.append("    secAuthProtection: ").append(toIndentedString(secAuthProtection)).append("\n");
+
     sb.append("    cpuHotPlug: ").append(toIndentedString(cpuHotPlug)).append("\n");
+
     sb.append("    cpuHotUnplug: ").append(toIndentedString(cpuHotUnplug)).append("\n");
+
     sb.append("    ramHotPlug: ").append(toIndentedString(ramHotPlug)).append("\n");
+
     sb.append("    ramHotUnplug: ").append(toIndentedString(ramHotUnplug)).append("\n");
+
     sb.append("    nicHotPlug: ").append(toIndentedString(nicHotPlug)).append("\n");
+
     sb.append("    nicHotUnplug: ").append(toIndentedString(nicHotUnplug)).append("\n");
+
     sb.append("    discVirtioHotPlug: ").append(toIndentedString(discVirtioHotPlug)).append("\n");
+
     sb.append("    discVirtioHotUnplug: ").append(toIndentedString(discVirtioHotUnplug)).append("\n");
+
     sb.append("    discScsiHotPlug: ").append(toIndentedString(discScsiHotPlug)).append("\n");
+
     sb.append("    discScsiHotUnplug: ").append(toIndentedString(discScsiHotUnplug)).append("\n");
+
     sb.append("    licenceType: ").append(toIndentedString(licenceType)).append("\n");
     sb.append("}");
     return sb.toString();

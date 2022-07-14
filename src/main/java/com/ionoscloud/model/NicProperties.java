@@ -30,32 +30,39 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * NicProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class NicProperties {
+  
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
 
   public static final String SERIALIZED_NAME_MAC = "mac";
   @SerializedName(SERIALIZED_NAME_MAC)
   private String mac;
 
+
   public static final String SERIALIZED_NAME_IPS = "ips";
   @SerializedName(SERIALIZED_NAME_IPS)
   private List<String> ips = null;
+
 
   public static final String SERIALIZED_NAME_DHCP = "dhcp";
   @SerializedName(SERIALIZED_NAME_DHCP)
   private Boolean dhcp;
 
+
   public static final String SERIALIZED_NAME_LAN = "lan";
   @SerializedName(SERIALIZED_NAME_LAN)
   private Integer lan;
 
+
   public static final String SERIALIZED_NAME_FIREWALL_ACTIVE = "firewallActive";
   @SerializedName(SERIALIZED_NAME_FIREWALL_ACTIVE)
   private Boolean firewallActive;
+
 
   /**
    * The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is used.
@@ -111,14 +118,17 @@ public class NicProperties {
   @SerializedName(SERIALIZED_NAME_FIREWALL_TYPE)
   private FirewallTypeEnum firewallType;
 
+
   public static final String SERIALIZED_NAME_DEVICE_NUMBER = "deviceNumber";
   @SerializedName(SERIALIZED_NAME_DEVICE_NUMBER)
   private Integer deviceNumber;
+
 
   public static final String SERIALIZED_NAME_PCI_SLOT = "pciSlot";
   @SerializedName(SERIALIZED_NAME_PCI_SLOT)
   private Integer pciSlot;
 
+  
 
   public NicProperties name(String name) {
     
@@ -143,6 +153,7 @@ public class NicProperties {
   }
 
 
+
    /**
    * The MAC address of the NIC.
    * @return mac
@@ -158,6 +169,7 @@ public class NicProperties {
   public void setMac(String mac) {
     this.mac = mac;
   }
+
 
 
   public NicProperties ips(List<String> ips) {
@@ -191,6 +203,7 @@ public class NicProperties {
   }
 
 
+
   public NicProperties dhcp(Boolean dhcp) {
     
     this.dhcp = dhcp;
@@ -214,6 +227,7 @@ public class NicProperties {
   }
 
 
+
   public NicProperties lan(Integer lan) {
     
     this.lan = lan;
@@ -234,6 +248,7 @@ public class NicProperties {
   public void setLan(Integer lan) {
     this.lan = lan;
   }
+
 
 
   public NicProperties firewallActive(Boolean firewallActive) {
@@ -259,6 +274,7 @@ public class NicProperties {
   }
 
 
+
   public NicProperties firewallType(FirewallTypeEnum firewallType) {
     
     this.firewallType = firewallType;
@@ -282,6 +298,7 @@ public class NicProperties {
   }
 
 
+
    /**
    * The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.
    * @return deviceNumber
@@ -297,6 +314,7 @@ public class NicProperties {
   public void setDeviceNumber(Integer deviceNumber) {
     this.deviceNumber = deviceNumber;
   }
+
 
 
    /**
@@ -335,14 +353,23 @@ public class NicProperties {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class NicProperties {\n");
+    
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
     sb.append("    mac: ").append(toIndentedString(mac)).append("\n");
+
     sb.append("    ips: ").append(toIndentedString(ips)).append("\n");
+
     sb.append("    dhcp: ").append(toIndentedString(dhcp)).append("\n");
+
     sb.append("    lan: ").append(toIndentedString(lan)).append("\n");
+
     sb.append("    firewallActive: ").append(toIndentedString(firewallActive)).append("\n");
+
     sb.append("    firewallType: ").append(toIndentedString(firewallType)).append("\n");
+
     sb.append("    deviceNumber: ").append(toIndentedString(deviceNumber)).append("\n");
+
     sb.append("    pciSlot: ").append(toIndentedString(pciSlot)).append("\n");
     sb.append("}");
     return sb.toString();

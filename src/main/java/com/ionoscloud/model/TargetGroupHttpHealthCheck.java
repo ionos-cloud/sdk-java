@@ -27,12 +27,14 @@ import java.io.IOException;
 /**
  * TargetGroupHttpHealthCheck
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class TargetGroupHttpHealthCheck {
+  
   public static final String SERIALIZED_NAME_PATH = "path";
   @SerializedName(SERIALIZED_NAME_PATH)
   private String path;
+
 
   /**
    * The method for the HTTP health check.
@@ -96,6 +98,7 @@ public class TargetGroupHttpHealthCheck {
   @SerializedName(SERIALIZED_NAME_METHOD)
   private MethodEnum method;
 
+
   /**
    * 
    */
@@ -148,18 +151,22 @@ public class TargetGroupHttpHealthCheck {
   @SerializedName(SERIALIZED_NAME_MATCH_TYPE)
   private MatchTypeEnum matchType;
 
+
   public static final String SERIALIZED_NAME_RESPONSE = "response";
   @SerializedName(SERIALIZED_NAME_RESPONSE)
   private String response;
+
 
   public static final String SERIALIZED_NAME_REGEX = "regex";
   @SerializedName(SERIALIZED_NAME_REGEX)
   private Boolean regex;
 
+
   public static final String SERIALIZED_NAME_NEGATE = "negate";
   @SerializedName(SERIALIZED_NAME_NEGATE)
   private Boolean negate;
 
+  
 
   public TargetGroupHttpHealthCheck path(String path) {
     
@@ -182,6 +189,7 @@ public class TargetGroupHttpHealthCheck {
   public void setPath(String path) {
     this.path = path;
   }
+
 
 
   public TargetGroupHttpHealthCheck method(MethodEnum method) {
@@ -207,6 +215,7 @@ public class TargetGroupHttpHealthCheck {
   }
 
 
+
   public TargetGroupHttpHealthCheck matchType(MatchTypeEnum matchType) {
     
     this.matchType = matchType;
@@ -227,6 +236,7 @@ public class TargetGroupHttpHealthCheck {
   public void setMatchType(MatchTypeEnum matchType) {
     this.matchType = matchType;
   }
+
 
 
   public TargetGroupHttpHealthCheck response(String response) {
@@ -251,6 +261,7 @@ public class TargetGroupHttpHealthCheck {
   }
 
 
+
   public TargetGroupHttpHealthCheck regex(Boolean regex) {
     
     this.regex = regex;
@@ -272,6 +283,7 @@ public class TargetGroupHttpHealthCheck {
   public void setRegex(Boolean regex) {
     this.regex = regex;
   }
+
 
 
   public TargetGroupHttpHealthCheck negate(Boolean negate) {
@@ -316,11 +328,17 @@ public class TargetGroupHttpHealthCheck {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class TargetGroupHttpHealthCheck {\n");
+    
     sb.append("    path: ").append(toIndentedString(path)).append("\n");
+
     sb.append("    method: ").append(toIndentedString(method)).append("\n");
+
     sb.append("    matchType: ").append(toIndentedString(matchType)).append("\n");
+
     sb.append("    response: ").append(toIndentedString(response)).append("\n");
+
     sb.append("    regex: ").append(toIndentedString(regex)).append("\n");
+
     sb.append("    negate: ").append(toIndentedString(negate)).append("\n");
     sb.append("}");
     return sb.toString();

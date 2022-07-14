@@ -31,12 +31,14 @@ import java.net.URI;
 /**
  * KubernetesClusterForPost
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-04T14:02:16.072Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
 
 public class KubernetesClusterForPost {
+  
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
 
   /**
    * The type of object.
@@ -88,22 +90,27 @@ public class KubernetesClusterForPost {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private TypeEnum type;
 
+
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
   private DatacenterElementMetadata metadata;
 
+
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private KubernetesClusterPropertiesForPost properties;
+
 
   public static final String SERIALIZED_NAME_ENTITIES = "entities";
   @SerializedName(SERIALIZED_NAME_ENTITIES)
   private KubernetesClusterEntities entities;
 
+  
 
    /**
    * The resource&#39;s unique identifier.
@@ -120,6 +127,7 @@ public class KubernetesClusterForPost {
   public void setId(String id) {
     this.id = id;
   }
+
 
 
    /**
@@ -139,6 +147,7 @@ public class KubernetesClusterForPost {
   }
 
 
+
    /**
    * URL to the object representation (absolute path).
    * @return href
@@ -154,6 +163,7 @@ public class KubernetesClusterForPost {
   public void setHref(URI href) {
     this.href = href;
   }
+
 
 
   public KubernetesClusterForPost metadata(DatacenterElementMetadata metadata) {
@@ -179,6 +189,7 @@ public class KubernetesClusterForPost {
   }
 
 
+
   public KubernetesClusterForPost properties(KubernetesClusterPropertiesForPost properties) {
     
     this.properties = properties;
@@ -199,6 +210,7 @@ public class KubernetesClusterForPost {
   public void setProperties(KubernetesClusterPropertiesForPost properties) {
     this.properties = properties;
   }
+
 
 
   public KubernetesClusterForPost entities(KubernetesClusterEntities entities) {
@@ -243,11 +255,17 @@ public class KubernetesClusterForPost {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesClusterForPost {\n");
+    
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
+
     sb.append("    entities: ").append(toIndentedString(entities)).append("\n");
     sb.append("}");
     return sb.toString();
