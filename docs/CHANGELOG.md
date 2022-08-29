@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 6.1.4 \(August 29th, 2022\)
+* changed manageDbaas to manageDDaaS on GroupProperties
+
+## 6.1.3 \(July 14th, 2022\)
+* added manageDbaas to GroupProperties
 ## 6.1.2 \(July 4th, 2022\)
 
 ### Features
