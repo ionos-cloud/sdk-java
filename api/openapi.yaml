@@ -40104,11 +40104,11 @@ components:
             createInternetAccess: true
             createBackupUnit: true
             createK8sCluster: true
-            manageDbaas: true
             accessAndManageMonitoring: true
             reserveIp: true
             createDataCenter: true
             accessAndManageCertificates: true
+            manageDBaaS: true
             accessActivityLog: true
             name: My resource
             createSnapshot: true
@@ -40137,11 +40137,11 @@ components:
             createInternetAccess: true
             createBackupUnit: true
             createK8sCluster: true
-            manageDbaas: true
             accessAndManageMonitoring: true
             reserveIp: true
             createDataCenter: true
             accessAndManageCertificates: true
+            manageDBaaS: true
             accessActivityLog: true
             name: My resource
             createSnapshot: true
@@ -40197,11 +40197,11 @@ components:
           createInternetAccess: true
           createBackupUnit: true
           createK8sCluster: true
-          manageDbaas: true
           accessAndManageMonitoring: true
           reserveIp: true
           createDataCenter: true
           accessAndManageCertificates: true
+          manageDBaaS: true
           accessActivityLog: true
           name: My resource
           createSnapshot: true
@@ -40297,11 +40297,11 @@ components:
             createInternetAccess: true
             createBackupUnit: true
             createK8sCluster: true
-            manageDbaas: true
             accessAndManageMonitoring: true
             reserveIp: true
             createDataCenter: true
             accessAndManageCertificates: true
+            manageDBaaS: true
             accessActivityLog: true
             name: My resource
             createSnapshot: true
@@ -40330,11 +40330,11 @@ components:
             createInternetAccess: true
             createBackupUnit: true
             createK8sCluster: true
-            manageDbaas: true
             accessAndManageMonitoring: true
             reserveIp: true
             createDataCenter: true
             accessAndManageCertificates: true
+            manageDBaaS: true
             accessActivityLog: true
             name: My resource
             createSnapshot: true
@@ -40781,11 +40781,11 @@ components:
                 createInternetAccess: true
                 createBackupUnit: true
                 createK8sCluster: true
-                manageDbaas: true
                 accessAndManageMonitoring: true
                 reserveIp: true
                 createDataCenter: true
                 accessAndManageCertificates: true
+                manageDBaaS: true
                 accessActivityLog: true
                 name: My resource
                 createSnapshot: true
@@ -40814,11 +40814,11 @@ components:
                 createInternetAccess: true
                 createBackupUnit: true
                 createK8sCluster: true
-                manageDbaas: true
                 accessAndManageMonitoring: true
                 reserveIp: true
                 createDataCenter: true
                 accessAndManageCertificates: true
+                manageDBaaS: true
                 accessActivityLog: true
                 name: My resource
                 createSnapshot: true
@@ -40983,11 +40983,11 @@ components:
               createInternetAccess: true
               createBackupUnit: true
               createK8sCluster: true
-              manageDbaas: true
               accessAndManageMonitoring: true
               reserveIp: true
               createDataCenter: true
               accessAndManageCertificates: true
+              manageDBaaS: true
               accessActivityLog: true
               name: My resource
               createSnapshot: true
@@ -41016,11 +41016,11 @@ components:
               createInternetAccess: true
               createBackupUnit: true
               createK8sCluster: true
-              manageDbaas: true
               accessAndManageMonitoring: true
               reserveIp: true
               createDataCenter: true
               accessAndManageCertificates: true
+              manageDBaaS: true
               accessActivityLog: true
               name: My resource
               createSnapshot: true
@@ -41071,11 +41071,11 @@ components:
         createInternetAccess: true
         createBackupUnit: true
         createK8sCluster: true
-        manageDbaas: true
         accessAndManageMonitoring: true
         reserveIp: true
         createDataCenter: true
         accessAndManageCertificates: true
+        manageDBaaS: true
         accessActivityLog: true
         name: My resource
         createSnapshot: true
@@ -41125,7 +41125,7 @@ components:
         accessAndManageCertificates:
           description: Privilege for a group to access and manage certificates.
           type: boolean
-        manageDbaas:
+        manageDBaaS:
           description: Privilege for a group to manage DBaaS related functionality.
           type: boolean
       type: object
@@ -44190,11 +44190,11 @@ components:
                   createInternetAccess: true
                   createBackupUnit: true
                   createK8sCluster: true
-                  manageDbaas: true
                   accessAndManageMonitoring: true
                   reserveIp: true
                   createDataCenter: true
                   accessAndManageCertificates: true
+                  manageDBaaS: true
                   accessActivityLog: true
                   name: My resource
                   createSnapshot: true
@@ -44223,11 +44223,11 @@ components:
                   createInternetAccess: true
                   createBackupUnit: true
                   createK8sCluster: true
-                  manageDbaas: true
                   accessAndManageMonitoring: true
                   reserveIp: true
                   createDataCenter: true
                   accessAndManageCertificates: true
+                  manageDBaaS: true
                   accessActivityLog: true
                   name: My resource
                   createSnapshot: true
@@ -44329,11 +44329,11 @@ components:
                   createInternetAccess: true
                   createBackupUnit: true
                   createK8sCluster: true
-                  manageDbaas: true
                   accessAndManageMonitoring: true
                   reserveIp: true
                   createDataCenter: true
                   accessAndManageCertificates: true
+                  manageDBaaS: true
                   accessActivityLog: true
                   name: My resource
                   createSnapshot: true
@@ -44362,11 +44362,11 @@ components:
                   createInternetAccess: true
                   createBackupUnit: true
                   createK8sCluster: true
-                  manageDbaas: true
                   accessAndManageMonitoring: true
                   reserveIp: true
                   createDataCenter: true
                   accessAndManageCertificates: true
+                  manageDBaaS: true
                   accessActivityLog: true
                   name: My resource
                   createSnapshot: true

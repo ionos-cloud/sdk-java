@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * GroupProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-07-14T13:53:14.995Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-29T14:47:41.954Z[Etc/UTC]")
 
 public class GroupProperties {
   
@@ -96,9 +96,9 @@ public class GroupProperties {
   private Boolean accessAndManageCertificates;
 
 
-  public static final String SERIALIZED_NAME_MANAGE_DBAAS = "manageDbaas";
-  @SerializedName(SERIALIZED_NAME_MANAGE_DBAAS)
-  private Boolean manageDbaas;
+  public static final String SERIALIZED_NAME_MANAGE_D_BAA_S = "manageDBaaS";
+  @SerializedName(SERIALIZED_NAME_MANAGE_D_BAA_S)
+  private Boolean manageDBaaS;
 
   
 
@@ -414,26 +414,26 @@ public class GroupProperties {
 
 
 
-  public GroupProperties manageDbaas(Boolean manageDbaas) {
+  public GroupProperties manageDBaaS(Boolean manageDBaaS) {
     
-    this.manageDbaas = manageDbaas;
+    this.manageDBaaS = manageDBaaS;
     return this;
   }
 
    /**
    * Privilege for a group to manage DBaaS related functionality.
-   * @return manageDbaas
+   * @return manageDBaaS
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "Privilege for a group to manage DBaaS related functionality.")
 
-  public Boolean getManageDbaas() {
-    return manageDbaas;
+  public Boolean getManageDBaaS() {
+    return manageDBaaS;
   }
 
 
-  public void setManageDbaas(Boolean manageDbaas) {
-    this.manageDbaas = manageDbaas;
+  public void setManageDBaaS(Boolean manageDBaaS) {
+    this.manageDBaaS = manageDBaaS;
   }
 
 
@@ -446,7 +446,7 @@ public class GroupProperties {
       return false;
     }
     GroupProperties groupProperties = (GroupProperties) o;
-    return Objects.equals(this.name, groupProperties.name) && Objects.equals(this.createDataCenter, groupProperties.createDataCenter) && Objects.equals(this.createSnapshot, groupProperties.createSnapshot) && Objects.equals(this.reserveIp, groupProperties.reserveIp) && Objects.equals(this.accessActivityLog, groupProperties.accessActivityLog) && Objects.equals(this.createPcc, groupProperties.createPcc) && Objects.equals(this.s3Privilege, groupProperties.s3Privilege) && Objects.equals(this.createBackupUnit, groupProperties.createBackupUnit) && Objects.equals(this.createInternetAccess, groupProperties.createInternetAccess) && Objects.equals(this.createK8sCluster, groupProperties.createK8sCluster) && Objects.equals(this.createFlowLog, groupProperties.createFlowLog) && Objects.equals(this.accessAndManageMonitoring, groupProperties.accessAndManageMonitoring) && Objects.equals(this.accessAndManageCertificates, groupProperties.accessAndManageCertificates) && Objects.equals(this.manageDbaas, groupProperties.manageDbaas);
+    return Objects.equals(this.name, groupProperties.name) && Objects.equals(this.createDataCenter, groupProperties.createDataCenter) && Objects.equals(this.createSnapshot, groupProperties.createSnapshot) && Objects.equals(this.reserveIp, groupProperties.reserveIp) && Objects.equals(this.accessActivityLog, groupProperties.accessActivityLog) && Objects.equals(this.createPcc, groupProperties.createPcc) && Objects.equals(this.s3Privilege, groupProperties.s3Privilege) && Objects.equals(this.createBackupUnit, groupProperties.createBackupUnit) && Objects.equals(this.createInternetAccess, groupProperties.createInternetAccess) && Objects.equals(this.createK8sCluster, groupProperties.createK8sCluster) && Objects.equals(this.createFlowLog, groupProperties.createFlowLog) && Objects.equals(this.accessAndManageMonitoring, groupProperties.accessAndManageMonitoring) && Objects.equals(this.accessAndManageCertificates, groupProperties.accessAndManageCertificates) && Objects.equals(this.manageDBaaS, groupProperties.manageDBaaS);
   }
 
 
@@ -483,7 +483,7 @@ public class GroupProperties {
 
     sb.append("    accessAndManageCertificates: ").append(toIndentedString(accessAndManageCertificates)).append("\n");
 
-    sb.append("    manageDbaas: ").append(toIndentedString(manageDbaas)).append("\n");
+    sb.append("    manageDBaaS: ").append(toIndentedString(manageDBaaS)).append("\n");
     sb.append("}");
     return sb.toString();
   }
