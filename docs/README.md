@@ -81,10 +81,11 @@ Then manually install the following JARs:
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
-import com.ionoscloud.api.DataCenterApi;
+import com.ionoscloud.api.DataCentersApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -96,17 +97,19 @@ public class Example {
     basicAuthentication.setPassword("YOUR PASSWORD");
 
 
-    DataCenterApi apiInstance = new DataCenterApi(defaultClient);
+    DataCentersApi apiInstance = new DataCentersApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether response is pretty-printed (with indentation and new lines)
     Integer depth = 0; // Integer | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
     Integer offset = 0; // Integer | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
     Integer limit = 1000; // Integer | the maximum number of elements to return (use together with <code>offset</code> for pagination)
     try {
-      Datacenters result = apiInstance.datacentersGet(pretty, depth, xContractNumber, offset, limit);
-      System.out.println(result);
+      ApiResponse<Datacenters> result = apiInstance.datacentersGetWithHttpInfo(pretty, depth, xContractNumber, offset, limit, null, null, null);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
-      System.err.println("Exception when calling DataCenterApi#datacentersGet");
+      System.err.println("Exception when calling DataCentersApi#datacentersGet");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
