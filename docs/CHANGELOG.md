@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 6.1.5 \(February 8th, 2023\)
+* implement a builder pattern for the methods: by using the builder, the query parameters (depth, pretty, maxResults etc) will no longer be required
+
 ## 6.1.4 \(August 29th, 2022\)
 * changed manageDbaas to manageDBaaS on GroupProperties
 
