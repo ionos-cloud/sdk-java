@@ -32,6 +32,25 @@ Delete Network Load Balancers
 
 Remove the specified Network Load Balancer from the data center.
 
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+null (empty response body)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
 ### Example
 ```java
 // Import classes:
@@ -60,6 +79,7 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.datacentersNetworkloadbalancersDelete(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber);
+      System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersDelete");
       System.err.println("Status code: " + e.getCode());
@@ -70,25 +90,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-null (empty response body)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        apiInstance.datacentersNetworkloadbalancersDelete(datacenterId, networkLoadBalancerId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersDelete");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersFindByNetworkLoadBalancerId"></a>
 # **datacentersNetworkloadbalancersFindByNetworkLoadBalancerId**
@@ -97,6 +118,25 @@ null (empty response body)
 Retrieve Network Load Balancers
 
 Retrieve the properties of the specified Network Load Balancer within the data center.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**NetworkLoadBalancer**](../models/NetworkLoadBalancer.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -137,25 +177,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**NetworkLoadBalancer**](../models/NetworkLoadBalancer.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        NetworkLoadBalancer result = apiInstance.datacentersNetworkloadbalancersFindByNetworkLoadBalancerId(datacenterId, networkLoadBalancerId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersFindByNetworkLoadBalancerId");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersFlowlogsDelete"></a>
 # **datacentersNetworkloadbalancersFlowlogsDelete**
@@ -164,6 +205,26 @@ public class Example {
 Delete NLB Flow Logs
 
 Delete the specified Network Load Balancer Flow Log.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **flowLogId** | **String**| The unique ID of the Flow Log. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+null (empty response body)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -194,6 +255,7 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.datacentersNetworkloadbalancersFlowlogsDelete(datacenterId, networkLoadBalancerId, flowLogId, pretty, depth, xContractNumber);
+      System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersFlowlogsDelete");
       System.err.println("Status code: " + e.getCode());
@@ -204,26 +266,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **flowLogId** | **String**| The unique ID of the Flow Log. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-null (empty response body)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        apiInstance.datacentersNetworkloadbalancersFlowlogsDelete(datacenterId, networkLoadBalancerId, flowLogId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersFlowlogsDelete");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersFlowlogsFindByFlowLogId"></a>
 # **datacentersNetworkloadbalancersFlowlogsFindByFlowLogId**
@@ -232,6 +294,26 @@ null (empty response body)
 Retrieve NLB Flow Logs
 
 Retrieve the specified Network Load Balancer Flow Log.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **flowLogId** | **String**| The unique ID of the Flow Log. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**FlowLog**](../models/FlowLog.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -273,26 +355,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **flowLogId** | **String**| The unique ID of the Flow Log. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**FlowLog**](../models/FlowLog.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        FlowLog result = apiInstance.datacentersNetworkloadbalancersFlowlogsFindByFlowLogId(datacenterId, networkLoadBalancerId, flowLogId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersFlowlogsFindByFlowLogId");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersFlowlogsGet"></a>
 # **datacentersNetworkloadbalancersFlowlogsGet**
@@ -301,6 +383,28 @@ public class Example {
 List NLB Flow Logs
 
 List all the Flow Logs for the specified Network Load Balancer.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**FlowLogs**](../models/FlowLogs.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -328,8 +432,11 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      FlowLogs result = apiInstance.datacentersNetworkloadbalancersFlowlogsGet(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber);
+      FlowLogs result = apiInstance.datacentersNetworkloadbalancersFlowlogsGet(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersFlowlogsGet");
@@ -341,25 +448,29 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**FlowLogs**](../models/FlowLogs.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        FlowLogs result = apiInstance.datacentersNetworkloadbalancersFlowlogsGet(datacenterId, networkLoadBalancerId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersFlowlogsGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersFlowlogsPatch"></a>
 # **datacentersNetworkloadbalancersFlowlogsPatch**
@@ -368,6 +479,27 @@ public class Example {
 Partially modify NLB Flow Logs
 
 Update the properties of the specified Network Load Balancer Flow Log.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **flowLogId** | **String**| The unique ID of the Flow Log. ||
+| **networkLoadBalancerFlowLogProperties** |  [**FlowLogProperties**](../models/FlowLogProperties.md)| The properties of the Flow Log to be updated. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**FlowLog**](../models/FlowLog.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -410,27 +542,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **flowLogId** | **String**| The unique ID of the Flow Log. |
-| **networkLoadBalancerFlowLogProperties** |  [**FlowLogProperties**](FlowLogProperties.md)| The properties of the Flow Log to be updated. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**FlowLog**](../models/FlowLog.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        FlowLog result = apiInstance.datacentersNetworkloadbalancersFlowlogsPatch(datacenterId, networkLoadBalancerId, flowLogId, networkLoadBalancerFlowLogProperties)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersFlowlogsPatch");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersFlowlogsPost"></a>
 # **datacentersNetworkloadbalancersFlowlogsPost**
@@ -439,6 +570,26 @@ public class Example {
 Create NLB Flow Logs
 
 Add a new Flow Log for the Network Load Balancer.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **networkLoadBalancerFlowLog** |  [**FlowLog**](../models/FlowLog.md)| The Flow Log to create. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**FlowLog**](../models/FlowLog.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -480,26 +631,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **networkLoadBalancerFlowLog** |  [**FlowLog**](FlowLog.md)| The Flow Log to create. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**FlowLog**](../models/FlowLog.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        FlowLog result = apiInstance.datacentersNetworkloadbalancersFlowlogsPost(datacenterId, networkLoadBalancerId, networkLoadBalancerFlowLog)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersFlowlogsPost");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersFlowlogsPut"></a>
 # **datacentersNetworkloadbalancersFlowlogsPut**
@@ -508,6 +659,27 @@ public class Example {
 Modify NLB Flow Logs
 
 Modify the specified Network Load Balancer Flow Log.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **flowLogId** | **String**| The unique ID of the Flow Log. ||
+| **networkLoadBalancerFlowLog** |  [**FlowLogPut**](../models/FlowLogPut.md)| The modified NLB Flow Log. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**FlowLog**](../models/FlowLog.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -550,27 +722,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **flowLogId** | **String**| The unique ID of the Flow Log. |
-| **networkLoadBalancerFlowLog** |  [**FlowLogPut**](FlowLogPut.md)| The modified NLB Flow Log. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**FlowLog**](../models/FlowLog.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        FlowLog result = apiInstance.datacentersNetworkloadbalancersFlowlogsPut(datacenterId, networkLoadBalancerId, flowLogId, networkLoadBalancerFlowLog)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersFlowlogsPut");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersForwardingrulesDelete"></a>
 # **datacentersNetworkloadbalancersForwardingrulesDelete**
@@ -579,6 +750,26 @@ public class Example {
 Delete NLB forwarding rules
 
 Delete the specified Network Load Balancer forwarding rule.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **forwardingRuleId** | **String**| The unique ID of the forwarding rule. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+null (empty response body)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -609,6 +800,7 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.datacentersNetworkloadbalancersForwardingrulesDelete(datacenterId, networkLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber);
+      System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersForwardingrulesDelete");
       System.err.println("Status code: " + e.getCode());
@@ -619,26 +811,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **forwardingRuleId** | **String**| The unique ID of the forwarding rule. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-null (empty response body)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        apiInstance.datacentersNetworkloadbalancersForwardingrulesDelete(datacenterId, networkLoadBalancerId, forwardingRuleId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersForwardingrulesDelete");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId"></a>
 # **datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId**
@@ -647,6 +839,26 @@ null (empty response body)
 Retrieve NLB forwarding rules
 
 Retrieve the specified Network Load Balance forwarding rule.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **forwardingRuleId** | **String**| The unique ID of the forwarding rule. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**NetworkLoadBalancerForwardingRule**](../models/NetworkLoadBalancerForwardingRule.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -688,26 +900,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **forwardingRuleId** | **String**| The unique ID of the forwarding rule. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**NetworkLoadBalancerForwardingRule**](../models/NetworkLoadBalancerForwardingRule.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        NetworkLoadBalancerForwardingRule result = apiInstance.datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId(datacenterId, networkLoadBalancerId, forwardingRuleId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersForwardingrulesGet"></a>
 # **datacentersNetworkloadbalancersForwardingrulesGet**
@@ -716,6 +928,28 @@ public class Example {
 List NLB forwarding rules
 
 List the forwarding rules for the specified Network Load Balancer.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**NetworkLoadBalancerForwardingRules**](../models/NetworkLoadBalancerForwardingRules.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -743,8 +977,11 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      NetworkLoadBalancerForwardingRules result = apiInstance.datacentersNetworkloadbalancersForwardingrulesGet(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber);
+      NetworkLoadBalancerForwardingRules result = apiInstance.datacentersNetworkloadbalancersForwardingrulesGet(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersForwardingrulesGet");
@@ -756,25 +993,29 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**NetworkLoadBalancerForwardingRules**](../models/NetworkLoadBalancerForwardingRules.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        NetworkLoadBalancerForwardingRules result = apiInstance.datacentersNetworkloadbalancersForwardingrulesGet(datacenterId, networkLoadBalancerId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersForwardingrulesGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersForwardingrulesPatch"></a>
 # **datacentersNetworkloadbalancersForwardingrulesPatch**
@@ -783,6 +1024,27 @@ public class Example {
 Partially modify NLB forwarding rules
 
 Update the properties of the specified Network Load Balancer forwarding rule.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **forwardingRuleId** | **String**| The unique ID of the forwarding rule. ||
+| **networkLoadBalancerForwardingRuleProperties** |  [**NetworkLoadBalancerForwardingRuleProperties**](../models/NetworkLoadBalancerForwardingRuleProperties.md)| The properties of the forwarding rule to be updated. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**NetworkLoadBalancerForwardingRule**](../models/NetworkLoadBalancerForwardingRule.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -825,27 +1087,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **forwardingRuleId** | **String**| The unique ID of the forwarding rule. |
-| **networkLoadBalancerForwardingRuleProperties** |  [**NetworkLoadBalancerForwardingRuleProperties**](NetworkLoadBalancerForwardingRuleProperties.md)| The properties of the forwarding rule to be updated. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**NetworkLoadBalancerForwardingRule**](../models/NetworkLoadBalancerForwardingRule.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        NetworkLoadBalancerForwardingRule result = apiInstance.datacentersNetworkloadbalancersForwardingrulesPatch(datacenterId, networkLoadBalancerId, forwardingRuleId, networkLoadBalancerForwardingRuleProperties)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersForwardingrulesPatch");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersForwardingrulesPost"></a>
 # **datacentersNetworkloadbalancersForwardingrulesPost**
@@ -854,6 +1115,26 @@ public class Example {
 Create NLB forwarding rules
 
 Create a forwarding rule for the specified Network Load Balancer.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **networkLoadBalancerForwardingRule** |  [**NetworkLoadBalancerForwardingRule**](../models/NetworkLoadBalancerForwardingRule.md)| The forwarding rule to create. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**NetworkLoadBalancerForwardingRule**](../models/NetworkLoadBalancerForwardingRule.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -895,26 +1176,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **networkLoadBalancerForwardingRule** |  [**NetworkLoadBalancerForwardingRule**](NetworkLoadBalancerForwardingRule.md)| The forwarding rule to create. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**NetworkLoadBalancerForwardingRule**](../models/NetworkLoadBalancerForwardingRule.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        NetworkLoadBalancerForwardingRule result = apiInstance.datacentersNetworkloadbalancersForwardingrulesPost(datacenterId, networkLoadBalancerId, networkLoadBalancerForwardingRule)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersForwardingrulesPost");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersForwardingrulesPut"></a>
 # **datacentersNetworkloadbalancersForwardingrulesPut**
@@ -923,6 +1204,27 @@ public class Example {
 Modify NLB forwarding rules
 
 Modify the specified Network Load Balancer forwarding rule.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **forwardingRuleId** | **String**| The unique ID of the forwarding rule. ||
+| **networkLoadBalancerForwardingRule** |  [**NetworkLoadBalancerForwardingRulePut**](../models/NetworkLoadBalancerForwardingRulePut.md)| The modified NLB forwarding rule. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**NetworkLoadBalancerForwardingRule**](../models/NetworkLoadBalancerForwardingRule.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -965,27 +1267,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **forwardingRuleId** | **String**| The unique ID of the forwarding rule. |
-| **networkLoadBalancerForwardingRule** |  [**NetworkLoadBalancerForwardingRulePut**](NetworkLoadBalancerForwardingRulePut.md)| The modified NLB forwarding rule. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**NetworkLoadBalancerForwardingRule**](../models/NetworkLoadBalancerForwardingRule.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        NetworkLoadBalancerForwardingRule result = apiInstance.datacentersNetworkloadbalancersForwardingrulesPut(datacenterId, networkLoadBalancerId, forwardingRuleId, networkLoadBalancerForwardingRule)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersForwardingrulesPut");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersGet"></a>
 # **datacentersNetworkloadbalancersGet**
@@ -994,6 +1295,29 @@ public class Example {
 List Network Load Balancers
 
 List all the Network Load Balancers within the data center.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0]|
+| **limit** | **Integer**| The maximum number of elements to return (use together with offset for pagination). | [optional] [default to 1000]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**NetworkLoadBalancers**](../models/NetworkLoadBalancers.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -1022,8 +1346,11 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      NetworkLoadBalancers result = apiInstance.datacentersNetworkloadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
+      NetworkLoadBalancers result = apiInstance.datacentersNetworkloadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersGet");
@@ -1035,26 +1362,31 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0]
-| **limit** | **Integer**| The maximum number of elements to return (use together with offset for pagination). | [optional] [default to 1000]
-
-### Return type
-
-[**NetworkLoadBalancers**](../models/NetworkLoadBalancers.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        NetworkLoadBalancers result = apiInstance.datacentersNetworkloadbalancersGet(datacenterId)
+                .pretty(true)
+                .depth(0)
+                .offset(0)
+                .limit(1000)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersPatch"></a>
 # **datacentersNetworkloadbalancersPatch**
@@ -1063,6 +1395,26 @@ public class Example {
 Partially modify Network Load Balancers
 
 Update the properties of the specified Network Load Balancer within the data center.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **networkLoadBalancerProperties** |  [**NetworkLoadBalancerProperties**](../models/NetworkLoadBalancerProperties.md)| The properties of the Network Load Balancer to be updated. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**NetworkLoadBalancer**](../models/NetworkLoadBalancer.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -1104,26 +1456,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **networkLoadBalancerProperties** |  [**NetworkLoadBalancerProperties**](NetworkLoadBalancerProperties.md)| The properties of the Network Load Balancer to be updated. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**NetworkLoadBalancer**](../models/NetworkLoadBalancer.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        NetworkLoadBalancer result = apiInstance.datacentersNetworkloadbalancersPatch(datacenterId, networkLoadBalancerId, networkLoadBalancerProperties)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersPatch");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersPost"></a>
 # **datacentersNetworkloadbalancersPost**
@@ -1132,6 +1484,25 @@ public class Example {
 Create Network Load Balancers
 
 Create a Network Load Balancer within the data center.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancer** |  [**NetworkLoadBalancer**](../models/NetworkLoadBalancer.md)| The Network Load Balancer to create. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**NetworkLoadBalancer**](../models/NetworkLoadBalancer.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -1172,25 +1543,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancer** |  [**NetworkLoadBalancer**](NetworkLoadBalancer.md)| The Network Load Balancer to create. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**NetworkLoadBalancer**](../models/NetworkLoadBalancer.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        NetworkLoadBalancer result = apiInstance.datacentersNetworkloadbalancersPost(datacenterId, networkLoadBalancer)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersPost");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersNetworkloadbalancersPut"></a>
 # **datacentersNetworkloadbalancersPut**
@@ -1199,6 +1571,26 @@ public class Example {
 Modify Network Load Balancers
 
 Modify the properties of the specified Network Load Balancer within the data center.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. ||
+| **networkLoadBalancer** |  [**NetworkLoadBalancerPut**](../models/NetworkLoadBalancerPut.md)| The modified Network Load Balancer. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**NetworkLoadBalancer**](../models/NetworkLoadBalancer.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -1240,24 +1632,24 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **networkLoadBalancerId** | **String**| The unique ID of the Network Load Balancer. |
-| **networkLoadBalancer** |  [**NetworkLoadBalancerPut**](NetworkLoadBalancerPut.md)| The modified Network Load Balancer. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**NetworkLoadBalancer**](../models/NetworkLoadBalancer.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        NetworkLoadBalancer result = apiInstance.datacentersNetworkloadbalancersPut(datacenterId, networkLoadBalancerId, networkLoadBalancer)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling NetworkLoadBalancersApi#datacentersNetworkloadbalancersPut");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 

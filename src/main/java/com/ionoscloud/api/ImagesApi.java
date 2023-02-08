@@ -193,6 +193,125 @@ public class ImagesApi {
         localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
+
+    public class APIimagesDeleteRequest {
+        private final String imageId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIimagesDeleteRequest(String imageId) {
+            this.imageId = imageId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIimagesDeleteRequest
+         */
+        public APIimagesDeleteRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIimagesDeleteRequest
+         */
+        public APIimagesDeleteRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIimagesDeleteRequest
+         */
+        public APIimagesDeleteRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for imagesDelete
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return imagesDeleteCall(imageId, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute imagesDelete request
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public void execute() throws ApiException {
+        imagesDeleteWithHttpInfo(imageId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute imagesDelete request with HTTP info returned
+         * @return ApiResponse&lt;Void&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Void> executeWithHttpInfo() throws ApiException {
+            return imagesDeleteWithHttpInfo(imageId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute imagesDelete request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Void> callback) throws ApiException {
+            return imagesDeleteAsync(imageId, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Delete images
+     * Delete the specified image; this operation is only supported for private images.
+     * @param imageId The unique ID of the image. (required)
+     * @return APIimagesDeleteRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIimagesDeleteRequest imagesDelete(String imageId) {
+        return new APIimagesDeleteRequest(imageId);
+    }
     /**
      * Build call for imagesFindById
      * @param imageId The unique ID of the image. (required)
@@ -333,6 +452,127 @@ public class ImagesApi {
         Type localVarReturnType = new TypeToken<Image>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIimagesFindByIdRequest {
+        private final String imageId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIimagesFindByIdRequest(String imageId) {
+            this.imageId = imageId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIimagesFindByIdRequest
+         */
+        public APIimagesFindByIdRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIimagesFindByIdRequest
+         */
+        public APIimagesFindByIdRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIimagesFindByIdRequest
+         */
+        public APIimagesFindByIdRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for imagesFindById
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return imagesFindByIdCall(imageId, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute imagesFindById request
+         * @return Image
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public Image execute() throws ApiException {
+        ApiResponse<Image> localVarResp = imagesFindByIdWithHttpInfo(imageId, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute imagesFindById request with HTTP info returned
+         * @return ApiResponse&lt;Image&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Image> executeWithHttpInfo() throws ApiException {
+            return imagesFindByIdWithHttpInfo(imageId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute imagesFindById request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Image> callback) throws ApiException {
+            return imagesFindByIdAsync(imageId, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Retrieve images
+     * Retrieve the properties of the specified image.
+     * @param imageId The unique ID of the image. (required)
+     * @return APIimagesFindByIdRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIimagesFindByIdRequest imagesFindById(String imageId) {
+        return new APIimagesFindByIdRequest(imageId);
     }
     /**
      * Build call for imagesGet
@@ -479,6 +719,158 @@ public class ImagesApi {
         Type localVarReturnType = new TypeToken<Images>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIimagesGetRequest {
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+        private String orderBy;
+        private Integer maxResults;
+        private Map<String, String> filters;
+
+        private APIimagesGetRequest() {
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIimagesGetRequest
+         */
+        public APIimagesGetRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIimagesGetRequest
+         */
+        public APIimagesGetRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIimagesGetRequest
+         */
+        public APIimagesGetRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+        * Set orderBy
+        * @param orderBy Orders the response based on a property.
+        * @return APIimagesGetRequest
+        */
+        public APIimagesGetRequest orderBy(String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+        * Set maxResults
+        * @param maxResults Limits the number of items in a response.
+        * @return APIimagesGetRequest
+        */
+        public APIimagesGetRequest maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+        * Set filters
+        * @param filters Filters the response based on a property.
+        * @return APIimagesGetRequest
+        */
+        public APIimagesGetRequest filters(Map<String, String> filters) {
+            this.filters = filters;
+            return this;
+        }
+
+
+        /**
+         * Build call for imagesGet
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return imagesGetCall(pretty, depth, xContractNumber, orderBy, maxResults, filters, callback);
+        }
+
+        /**
+         * Execute imagesGet request
+         * @return Images
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public Images execute() throws ApiException {
+        ApiResponse<Images> localVarResp = imagesGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute imagesGet request with HTTP info returned
+         * @return ApiResponse&lt;Images&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Images> executeWithHttpInfo() throws ApiException {
+            return imagesGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
+        }
+
+        /**
+         * Execute imagesGet request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Images> callback) throws ApiException {
+            return imagesGetAsync(pretty, depth, xContractNumber, orderBy, maxResults, filters, callback);
+        }
+    }
+
+    /**
+     * List images
+     * List all the images within the data center.
+     * @return APIimagesGetRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIimagesGetRequest imagesGet() {
+        return new APIimagesGetRequest();
     }
     /**
      * Build call for imagesPatch
@@ -630,6 +1022,130 @@ public class ImagesApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
+
+    public class APIimagesPatchRequest {
+        private final String imageId;
+        private final ImageProperties image;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIimagesPatchRequest(String imageId, ImageProperties image) {
+            this.imageId = imageId;
+            this.image = image;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIimagesPatchRequest
+         */
+        public APIimagesPatchRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIimagesPatchRequest
+         */
+        public APIimagesPatchRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIimagesPatchRequest
+         */
+        public APIimagesPatchRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for imagesPatch
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return imagesPatchCall(imageId, image, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute imagesPatch request
+         * @return Image
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public Image execute() throws ApiException {
+        ApiResponse<Image> localVarResp = imagesPatchWithHttpInfo(imageId, image, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute imagesPatch request with HTTP info returned
+         * @return ApiResponse&lt;Image&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Image> executeWithHttpInfo() throws ApiException {
+            return imagesPatchWithHttpInfo(imageId, image, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute imagesPatch request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Image> callback) throws ApiException {
+            return imagesPatchAsync(imageId, image, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Partially modify images
+     * Update the properties of the specified image.
+     * @param imageId The unique ID of the image. (required)
+     * @param image The image properties to be updated. (required)
+     * @return APIimagesPatchRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIimagesPatchRequest imagesPatch(String imageId, ImageProperties image) {
+        return new APIimagesPatchRequest(imageId, image);
+    }
     /**
      * Build call for imagesPut
      * @param imageId The unique ID of the image. (required)
@@ -779,5 +1295,129 @@ public class ImagesApi {
         Type localVarReturnType = new TypeToken<Image>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIimagesPutRequest {
+        private final String imageId;
+        private final Image image;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIimagesPutRequest(String imageId, Image image) {
+            this.imageId = imageId;
+            this.image = image;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIimagesPutRequest
+         */
+        public APIimagesPutRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIimagesPutRequest
+         */
+        public APIimagesPutRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIimagesPutRequest
+         */
+        public APIimagesPutRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for imagesPut
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return imagesPutCall(imageId, image, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute imagesPut request
+         * @return Image
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public Image execute() throws ApiException {
+        ApiResponse<Image> localVarResp = imagesPutWithHttpInfo(imageId, image, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute imagesPut request with HTTP info returned
+         * @return ApiResponse&lt;Image&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Image> executeWithHttpInfo() throws ApiException {
+            return imagesPutWithHttpInfo(imageId, image, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute imagesPut request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Image> callback) throws ApiException {
+            return imagesPutAsync(imageId, image, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Modify images
+     * Modify the properties of the specified image.
+     * @param imageId The unique ID of the image. (required)
+     * @param image The modified image (required)
+     * @return APIimagesPutRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIimagesPutRequest imagesPut(String imageId, Image image) {
+        return new APIimagesPutRequest(imageId, image);
     }
 }

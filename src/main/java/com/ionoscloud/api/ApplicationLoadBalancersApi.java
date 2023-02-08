@@ -212,6 +212,128 @@ public class ApplicationLoadBalancersApi {
         localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
+
+    public class APIdatacentersApplicationloadbalancersDeleteRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersDeleteRequest(String datacenterId, String applicationLoadBalancerId) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersDeleteRequest
+         */
+        public APIdatacentersApplicationloadbalancersDeleteRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersDeleteRequest
+         */
+        public APIdatacentersApplicationloadbalancersDeleteRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersDeleteRequest
+         */
+        public APIdatacentersApplicationloadbalancersDeleteRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersDelete
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersDeleteCall(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersDelete request
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public void execute() throws ApiException {
+        datacentersApplicationloadbalancersDeleteWithHttpInfo(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersDelete request with HTTP info returned
+         * @return ApiResponse&lt;Void&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Void> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersDeleteWithHttpInfo(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersDelete request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Void> callback) throws ApiException {
+            return datacentersApplicationloadbalancersDeleteAsync(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Delete Application Load Balancers
+     * Remove the specified Application Load Balancer from the data center..
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @return APIdatacentersApplicationloadbalancersDeleteRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersDeleteRequest datacentersApplicationloadbalancersDelete(String datacenterId, String applicationLoadBalancerId) {
+        return new APIdatacentersApplicationloadbalancersDeleteRequest(datacenterId, applicationLoadBalancerId);
+    }
     /**
      * Build call for datacentersApplicationloadbalancersFindByApplicationLoadBalancerId
      * @param datacenterId The unique ID of the data center. (required)
@@ -362,6 +484,130 @@ public class ApplicationLoadBalancersApi {
         Type localVarReturnType = new TypeToken<ApplicationLoadBalancer>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersApplicationloadbalancersFindByApplicationLoadBalancerIdRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersFindByApplicationLoadBalancerIdRequest(String datacenterId, String applicationLoadBalancerId) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersFindByApplicationLoadBalancerIdRequest
+         */
+        public APIdatacentersApplicationloadbalancersFindByApplicationLoadBalancerIdRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersFindByApplicationLoadBalancerIdRequest
+         */
+        public APIdatacentersApplicationloadbalancersFindByApplicationLoadBalancerIdRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersFindByApplicationLoadBalancerIdRequest
+         */
+        public APIdatacentersApplicationloadbalancersFindByApplicationLoadBalancerIdRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersFindByApplicationLoadBalancerId
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersFindByApplicationLoadBalancerIdCall(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFindByApplicationLoadBalancerId request
+         * @return ApplicationLoadBalancer
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApplicationLoadBalancer execute() throws ApiException {
+        ApiResponse<ApplicationLoadBalancer> localVarResp = datacentersApplicationloadbalancersFindByApplicationLoadBalancerIdWithHttpInfo(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFindByApplicationLoadBalancerId request with HTTP info returned
+         * @return ApiResponse&lt;ApplicationLoadBalancer&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<ApplicationLoadBalancer> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersFindByApplicationLoadBalancerIdWithHttpInfo(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFindByApplicationLoadBalancerId request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<ApplicationLoadBalancer> callback) throws ApiException {
+            return datacentersApplicationloadbalancersFindByApplicationLoadBalancerIdAsync(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Retrieve Application Load Balancers
+     * Retrieve the properties of the specified Application Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @return APIdatacentersApplicationloadbalancersFindByApplicationLoadBalancerIdRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersFindByApplicationLoadBalancerIdRequest datacentersApplicationloadbalancersFindByApplicationLoadBalancerId(String datacenterId, String applicationLoadBalancerId) {
+        return new APIdatacentersApplicationloadbalancersFindByApplicationLoadBalancerIdRequest(datacenterId, applicationLoadBalancerId);
     }
     /**
      * Build call for datacentersApplicationloadbalancersFlowlogsDelete
@@ -518,6 +764,131 @@ public class ApplicationLoadBalancersApi {
         okhttp3.Call localVarCall = datacentersApplicationloadbalancersFlowlogsDeleteValidateBeforeCall(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber, callback);
         localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersApplicationloadbalancersFlowlogsDeleteRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private final String flowLogId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersFlowlogsDeleteRequest(String datacenterId, String applicationLoadBalancerId, String flowLogId) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+            this.flowLogId = flowLogId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsDeleteRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsDeleteRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsDeleteRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsDeleteRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsDeleteRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsDeleteRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersFlowlogsDelete
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsDeleteCall(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsDelete request
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public void execute() throws ApiException {
+        datacentersApplicationloadbalancersFlowlogsDeleteWithHttpInfo(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsDelete request with HTTP info returned
+         * @return ApiResponse&lt;Void&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Void> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsDeleteWithHttpInfo(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsDelete request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Void> callback) throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsDeleteAsync(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Delete ALB Flow Logs
+     * Delete the specified Application Load Balancer Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @return APIdatacentersApplicationloadbalancersFlowlogsDeleteRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersFlowlogsDeleteRequest datacentersApplicationloadbalancersFlowlogsDelete(String datacenterId, String applicationLoadBalancerId, String flowLogId) {
+        return new APIdatacentersApplicationloadbalancersFlowlogsDeleteRequest(datacenterId, applicationLoadBalancerId, flowLogId);
     }
     /**
      * Build call for datacentersApplicationloadbalancersFlowlogsFindByFlowLogId
@@ -679,6 +1050,133 @@ public class ApplicationLoadBalancersApi {
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersApplicationloadbalancersFlowlogsFindByFlowLogIdRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private final String flowLogId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersFlowlogsFindByFlowLogIdRequest(String datacenterId, String applicationLoadBalancerId, String flowLogId) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+            this.flowLogId = flowLogId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsFindByFlowLogIdRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsFindByFlowLogIdRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsFindByFlowLogIdRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsFindByFlowLogIdRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsFindByFlowLogIdRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsFindByFlowLogIdRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersFlowlogsFindByFlowLogId
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsFindByFlowLogIdCall(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsFindByFlowLogId request
+         * @return FlowLog
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public FlowLog execute() throws ApiException {
+        ApiResponse<FlowLog> localVarResp = datacentersApplicationloadbalancersFlowlogsFindByFlowLogIdWithHttpInfo(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsFindByFlowLogId request with HTTP info returned
+         * @return ApiResponse&lt;FlowLog&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<FlowLog> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsFindByFlowLogIdWithHttpInfo(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsFindByFlowLogId request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<FlowLog> callback) throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsFindByFlowLogIdAsync(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Retrieve ALB Flow Logs
+     * Retrieve the specified Application Load Balancer Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @return APIdatacentersApplicationloadbalancersFlowlogsFindByFlowLogIdRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersFlowlogsFindByFlowLogIdRequest datacentersApplicationloadbalancersFlowlogsFindByFlowLogId(String datacenterId, String applicationLoadBalancerId, String flowLogId) {
+        return new APIdatacentersApplicationloadbalancersFlowlogsFindByFlowLogIdRequest(datacenterId, applicationLoadBalancerId, flowLogId);
     }
     /**
      * Build call for datacentersApplicationloadbalancersFlowlogsGet
@@ -845,6 +1343,164 @@ public class ApplicationLoadBalancersApi {
         Type localVarReturnType = new TypeToken<FlowLogs>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersApplicationloadbalancersFlowlogsGetRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+        private String orderBy;
+        private Integer maxResults;
+        private Map<String, String> filters;
+
+        private APIdatacentersApplicationloadbalancersFlowlogsGetRequest(String datacenterId, String applicationLoadBalancerId) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsGetRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsGetRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsGetRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsGetRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsGetRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsGetRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+        * Set orderBy
+        * @param orderBy Orders the response based on a property.
+        * @return APIdatacentersApplicationloadbalancersFlowlogsGetRequest
+        */
+        public APIdatacentersApplicationloadbalancersFlowlogsGetRequest orderBy(String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+        * Set maxResults
+        * @param maxResults Limits the number of items in a response.
+        * @return APIdatacentersApplicationloadbalancersFlowlogsGetRequest
+        */
+        public APIdatacentersApplicationloadbalancersFlowlogsGetRequest maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+        * Set filters
+        * @param filters Filters the response based on a property.
+        * @return APIdatacentersApplicationloadbalancersFlowlogsGetRequest
+        */
+        public APIdatacentersApplicationloadbalancersFlowlogsGetRequest filters(Map<String, String> filters) {
+            this.filters = filters;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersFlowlogsGet
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsGetCall(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsGet request
+         * @return FlowLogs
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public FlowLogs execute() throws ApiException {
+        ApiResponse<FlowLogs> localVarResp = datacentersApplicationloadbalancersFlowlogsGetWithHttpInfo(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsGet request with HTTP info returned
+         * @return ApiResponse&lt;FlowLogs&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<FlowLogs> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsGetWithHttpInfo(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsGet request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<FlowLogs> callback) throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsGetAsync(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters, callback);
+        }
+    }
+
+    /**
+     * List ALB Flow Logs
+     * List the Flow Logs for the specified Application Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @return APIdatacentersApplicationloadbalancersFlowlogsGetRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersFlowlogsGetRequest datacentersApplicationloadbalancersFlowlogsGet(String datacenterId, String applicationLoadBalancerId) {
+        return new APIdatacentersApplicationloadbalancersFlowlogsGetRequest(datacenterId, applicationLoadBalancerId);
     }
     /**
      * Build call for datacentersApplicationloadbalancersFlowlogsPatch
@@ -1016,6 +1672,136 @@ public class ApplicationLoadBalancersApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
+
+    public class APIdatacentersApplicationloadbalancersFlowlogsPatchRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private final String flowLogId;
+        private final FlowLogProperties applicationLoadBalancerFlowLogProperties;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersFlowlogsPatchRequest(String datacenterId, String applicationLoadBalancerId, String flowLogId, FlowLogProperties applicationLoadBalancerFlowLogProperties) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+            this.flowLogId = flowLogId;
+            this.applicationLoadBalancerFlowLogProperties = applicationLoadBalancerFlowLogProperties;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsPatchRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsPatchRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsPatchRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsPatchRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsPatchRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsPatchRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersFlowlogsPatch
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsPatchCall(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLogProperties, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsPatch request
+         * @return FlowLog
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public FlowLog execute() throws ApiException {
+        ApiResponse<FlowLog> localVarResp = datacentersApplicationloadbalancersFlowlogsPatchWithHttpInfo(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLogProperties, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsPatch request with HTTP info returned
+         * @return ApiResponse&lt;FlowLog&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<FlowLog> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsPatchWithHttpInfo(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLogProperties, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsPatch request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<FlowLog> callback) throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsPatchAsync(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLogProperties, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Partially modify ALB Flow Logs
+     * Update the properties of the specified Application Load Balancer Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param applicationLoadBalancerFlowLogProperties The properties of the ALB Flow Log to be updated. (required)
+     * @return APIdatacentersApplicationloadbalancersFlowlogsPatchRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersFlowlogsPatchRequest datacentersApplicationloadbalancersFlowlogsPatch(String datacenterId, String applicationLoadBalancerId, String flowLogId, FlowLogProperties applicationLoadBalancerFlowLogProperties) {
+        return new APIdatacentersApplicationloadbalancersFlowlogsPatchRequest(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLogProperties);
+    }
     /**
      * Build call for datacentersApplicationloadbalancersFlowlogsPost
      * @param datacenterId The unique ID of the data center. (required)
@@ -1175,6 +1961,133 @@ public class ApplicationLoadBalancersApi {
         Type localVarReturnType = new TypeToken<FlowLog>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersApplicationloadbalancersFlowlogsPostRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private final FlowLog applicationLoadBalancerFlowLog;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersFlowlogsPostRequest(String datacenterId, String applicationLoadBalancerId, FlowLog applicationLoadBalancerFlowLog) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+            this.applicationLoadBalancerFlowLog = applicationLoadBalancerFlowLog;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsPostRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsPostRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsPostRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsPostRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsPostRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsPostRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersFlowlogsPost
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsPostCall(datacenterId, applicationLoadBalancerId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsPost request
+         * @return FlowLog
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public FlowLog execute() throws ApiException {
+        ApiResponse<FlowLog> localVarResp = datacentersApplicationloadbalancersFlowlogsPostWithHttpInfo(datacenterId, applicationLoadBalancerId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsPost request with HTTP info returned
+         * @return ApiResponse&lt;FlowLog&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<FlowLog> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsPostWithHttpInfo(datacenterId, applicationLoadBalancerId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsPost request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<FlowLog> callback) throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsPostAsync(datacenterId, applicationLoadBalancerId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Create ALB Flow Logs
+     * Add a new Flow Log for the Application Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @param applicationLoadBalancerFlowLog The Flow Log to create. (required)
+     * @return APIdatacentersApplicationloadbalancersFlowlogsPostRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersFlowlogsPostRequest datacentersApplicationloadbalancersFlowlogsPost(String datacenterId, String applicationLoadBalancerId, FlowLog applicationLoadBalancerFlowLog) {
+        return new APIdatacentersApplicationloadbalancersFlowlogsPostRequest(datacenterId, applicationLoadBalancerId, applicationLoadBalancerFlowLog);
     }
     /**
      * Build call for datacentersApplicationloadbalancersFlowlogsPut
@@ -1346,6 +2259,136 @@ public class ApplicationLoadBalancersApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
+
+    public class APIdatacentersApplicationloadbalancersFlowlogsPutRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private final String flowLogId;
+        private final FlowLogPut applicationLoadBalancerFlowLog;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersFlowlogsPutRequest(String datacenterId, String applicationLoadBalancerId, String flowLogId, FlowLogPut applicationLoadBalancerFlowLog) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+            this.flowLogId = flowLogId;
+            this.applicationLoadBalancerFlowLog = applicationLoadBalancerFlowLog;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsPutRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsPutRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsPutRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsPutRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersFlowlogsPutRequest
+         */
+        public APIdatacentersApplicationloadbalancersFlowlogsPutRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersFlowlogsPut
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsPutCall(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsPut request
+         * @return FlowLog
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public FlowLog execute() throws ApiException {
+        ApiResponse<FlowLog> localVarResp = datacentersApplicationloadbalancersFlowlogsPutWithHttpInfo(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsPut request with HTTP info returned
+         * @return ApiResponse&lt;FlowLog&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<FlowLog> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsPutWithHttpInfo(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersFlowlogsPut request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<FlowLog> callback) throws ApiException {
+            return datacentersApplicationloadbalancersFlowlogsPutAsync(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Modify ALB Flow Logs
+     * Modify the specified Application Load Balancer Flow Log.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param applicationLoadBalancerFlowLog The modified ALB Flow Log. (required)
+     * @return APIdatacentersApplicationloadbalancersFlowlogsPutRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersFlowlogsPutRequest datacentersApplicationloadbalancersFlowlogsPut(String datacenterId, String applicationLoadBalancerId, String flowLogId, FlowLogPut applicationLoadBalancerFlowLog) {
+        return new APIdatacentersApplicationloadbalancersFlowlogsPutRequest(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLog);
+    }
     /**
      * Build call for datacentersApplicationloadbalancersForwardingrulesDelete
      * @param datacenterId The unique ID of the data center. (required)
@@ -1501,6 +2544,131 @@ public class ApplicationLoadBalancersApi {
         okhttp3.Call localVarCall = datacentersApplicationloadbalancersForwardingrulesDeleteValidateBeforeCall(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, callback);
         localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersApplicationloadbalancersForwardingrulesDeleteRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private final String forwardingRuleId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersForwardingrulesDeleteRequest(String datacenterId, String applicationLoadBalancerId, String forwardingRuleId) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+            this.forwardingRuleId = forwardingRuleId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesDeleteRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesDeleteRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesDeleteRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesDeleteRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesDeleteRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesDeleteRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersForwardingrulesDelete
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesDeleteCall(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesDelete request
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public void execute() throws ApiException {
+        datacentersApplicationloadbalancersForwardingrulesDeleteWithHttpInfo(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesDelete request with HTTP info returned
+         * @return ApiResponse&lt;Void&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Void> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesDeleteWithHttpInfo(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesDelete request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Void> callback) throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesDeleteAsync(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Delete ALB forwarding rules
+     * Delete the specified Application Load Balancer forwarding rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @param forwardingRuleId The unique ID of the forwarding rule. (required)
+     * @return APIdatacentersApplicationloadbalancersForwardingrulesDeleteRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersForwardingrulesDeleteRequest datacentersApplicationloadbalancersForwardingrulesDelete(String datacenterId, String applicationLoadBalancerId, String forwardingRuleId) {
+        return new APIdatacentersApplicationloadbalancersForwardingrulesDeleteRequest(datacenterId, applicationLoadBalancerId, forwardingRuleId);
     }
     /**
      * Build call for datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId
@@ -1662,6 +2830,133 @@ public class ApplicationLoadBalancersApi {
         Type localVarReturnType = new TypeToken<ApplicationLoadBalancerForwardingRule>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private final String forwardingRuleId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdRequest(String datacenterId, String applicationLoadBalancerId, String forwardingRuleId) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+            this.forwardingRuleId = forwardingRuleId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdCall(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId request
+         * @return ApplicationLoadBalancerForwardingRule
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApplicationLoadBalancerForwardingRule execute() throws ApiException {
+        ApiResponse<ApplicationLoadBalancerForwardingRule> localVarResp = datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdWithHttpInfo(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId request with HTTP info returned
+         * @return ApiResponse&lt;ApplicationLoadBalancerForwardingRule&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<ApplicationLoadBalancerForwardingRule> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdWithHttpInfo(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<ApplicationLoadBalancerForwardingRule> callback) throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdAsync(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Retrieve ALB forwarding rules
+     * Retrieve the specified Application Load Balancer forwarding rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @param forwardingRuleId The unique ID of the forwarding rule. (required)
+     * @return APIdatacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdRequest datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId(String datacenterId, String applicationLoadBalancerId, String forwardingRuleId) {
+        return new APIdatacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdRequest(datacenterId, applicationLoadBalancerId, forwardingRuleId);
     }
     /**
      * Build call for datacentersApplicationloadbalancersForwardingrulesGet
@@ -1828,6 +3123,164 @@ public class ApplicationLoadBalancersApi {
         Type localVarReturnType = new TypeToken<ApplicationLoadBalancerForwardingRules>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersApplicationloadbalancersForwardingrulesGetRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+        private String orderBy;
+        private Integer maxResults;
+        private Map<String, String> filters;
+
+        private APIdatacentersApplicationloadbalancersForwardingrulesGetRequest(String datacenterId, String applicationLoadBalancerId) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesGetRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesGetRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesGetRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesGetRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesGetRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesGetRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+        * Set orderBy
+        * @param orderBy Orders the response based on a property.
+        * @return APIdatacentersApplicationloadbalancersForwardingrulesGetRequest
+        */
+        public APIdatacentersApplicationloadbalancersForwardingrulesGetRequest orderBy(String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+        * Set maxResults
+        * @param maxResults Limits the number of items in a response.
+        * @return APIdatacentersApplicationloadbalancersForwardingrulesGetRequest
+        */
+        public APIdatacentersApplicationloadbalancersForwardingrulesGetRequest maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+        * Set filters
+        * @param filters Filters the response based on a property.
+        * @return APIdatacentersApplicationloadbalancersForwardingrulesGetRequest
+        */
+        public APIdatacentersApplicationloadbalancersForwardingrulesGetRequest filters(Map<String, String> filters) {
+            this.filters = filters;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersForwardingrulesGet
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesGetCall(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesGet request
+         * @return ApplicationLoadBalancerForwardingRules
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApplicationLoadBalancerForwardingRules execute() throws ApiException {
+        ApiResponse<ApplicationLoadBalancerForwardingRules> localVarResp = datacentersApplicationloadbalancersForwardingrulesGetWithHttpInfo(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesGet request with HTTP info returned
+         * @return ApiResponse&lt;ApplicationLoadBalancerForwardingRules&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<ApplicationLoadBalancerForwardingRules> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesGetWithHttpInfo(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesGet request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<ApplicationLoadBalancerForwardingRules> callback) throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesGetAsync(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters, callback);
+        }
+    }
+
+    /**
+     * List ALB forwarding rules
+     * List the forwarding rules for the specified Application Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @return APIdatacentersApplicationloadbalancersForwardingrulesGetRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersForwardingrulesGetRequest datacentersApplicationloadbalancersForwardingrulesGet(String datacenterId, String applicationLoadBalancerId) {
+        return new APIdatacentersApplicationloadbalancersForwardingrulesGetRequest(datacenterId, applicationLoadBalancerId);
     }
     /**
      * Build call for datacentersApplicationloadbalancersForwardingrulesPatch
@@ -1999,6 +3452,136 @@ public class ApplicationLoadBalancersApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
+
+    public class APIdatacentersApplicationloadbalancersForwardingrulesPatchRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private final String forwardingRuleId;
+        private final ApplicationLoadBalancerForwardingRuleProperties applicationLoadBalancerForwardingRuleProperties;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersForwardingrulesPatchRequest(String datacenterId, String applicationLoadBalancerId, String forwardingRuleId, ApplicationLoadBalancerForwardingRuleProperties applicationLoadBalancerForwardingRuleProperties) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+            this.forwardingRuleId = forwardingRuleId;
+            this.applicationLoadBalancerForwardingRuleProperties = applicationLoadBalancerForwardingRuleProperties;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesPatchRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesPatchRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesPatchRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesPatchRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesPatchRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesPatchRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersForwardingrulesPatch
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesPatchCall(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRuleProperties, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesPatch request
+         * @return ApplicationLoadBalancerForwardingRule
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApplicationLoadBalancerForwardingRule execute() throws ApiException {
+        ApiResponse<ApplicationLoadBalancerForwardingRule> localVarResp = datacentersApplicationloadbalancersForwardingrulesPatchWithHttpInfo(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRuleProperties, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesPatch request with HTTP info returned
+         * @return ApiResponse&lt;ApplicationLoadBalancerForwardingRule&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<ApplicationLoadBalancerForwardingRule> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesPatchWithHttpInfo(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRuleProperties, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesPatch request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<ApplicationLoadBalancerForwardingRule> callback) throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesPatchAsync(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRuleProperties, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Partially modify ALB forwarding rules
+     * Update the properties of the specified Application Load Balancer forwarding rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @param forwardingRuleId The unique ID of the forwarding rule. (required)
+     * @param applicationLoadBalancerForwardingRuleProperties The properties of the forwarding rule to be updated. (required)
+     * @return APIdatacentersApplicationloadbalancersForwardingrulesPatchRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersForwardingrulesPatchRequest datacentersApplicationloadbalancersForwardingrulesPatch(String datacenterId, String applicationLoadBalancerId, String forwardingRuleId, ApplicationLoadBalancerForwardingRuleProperties applicationLoadBalancerForwardingRuleProperties) {
+        return new APIdatacentersApplicationloadbalancersForwardingrulesPatchRequest(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRuleProperties);
+    }
     /**
      * Build call for datacentersApplicationloadbalancersForwardingrulesPost
      * @param datacenterId The unique ID of the data center. (required)
@@ -2158,6 +3741,133 @@ public class ApplicationLoadBalancersApi {
         Type localVarReturnType = new TypeToken<ApplicationLoadBalancerForwardingRule>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersApplicationloadbalancersForwardingrulesPostRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private final ApplicationLoadBalancerForwardingRule applicationLoadBalancerForwardingRule;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersForwardingrulesPostRequest(String datacenterId, String applicationLoadBalancerId, ApplicationLoadBalancerForwardingRule applicationLoadBalancerForwardingRule) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+            this.applicationLoadBalancerForwardingRule = applicationLoadBalancerForwardingRule;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesPostRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesPostRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesPostRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesPostRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesPostRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesPostRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersForwardingrulesPost
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesPostCall(datacenterId, applicationLoadBalancerId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesPost request
+         * @return ApplicationLoadBalancerForwardingRule
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApplicationLoadBalancerForwardingRule execute() throws ApiException {
+        ApiResponse<ApplicationLoadBalancerForwardingRule> localVarResp = datacentersApplicationloadbalancersForwardingrulesPostWithHttpInfo(datacenterId, applicationLoadBalancerId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesPost request with HTTP info returned
+         * @return ApiResponse&lt;ApplicationLoadBalancerForwardingRule&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<ApplicationLoadBalancerForwardingRule> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesPostWithHttpInfo(datacenterId, applicationLoadBalancerId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesPost request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<ApplicationLoadBalancerForwardingRule> callback) throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesPostAsync(datacenterId, applicationLoadBalancerId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Create ALB forwarding rules
+     * Create a forwarding rule for the Application Load Balancer.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @param applicationLoadBalancerForwardingRule The forwarding rule to create. (required)
+     * @return APIdatacentersApplicationloadbalancersForwardingrulesPostRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersForwardingrulesPostRequest datacentersApplicationloadbalancersForwardingrulesPost(String datacenterId, String applicationLoadBalancerId, ApplicationLoadBalancerForwardingRule applicationLoadBalancerForwardingRule) {
+        return new APIdatacentersApplicationloadbalancersForwardingrulesPostRequest(datacenterId, applicationLoadBalancerId, applicationLoadBalancerForwardingRule);
     }
     /**
      * Build call for datacentersApplicationloadbalancersForwardingrulesPut
@@ -2329,6 +4039,136 @@ public class ApplicationLoadBalancersApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
+
+    public class APIdatacentersApplicationloadbalancersForwardingrulesPutRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private final String forwardingRuleId;
+        private final ApplicationLoadBalancerForwardingRulePut applicationLoadBalancerForwardingRule;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersForwardingrulesPutRequest(String datacenterId, String applicationLoadBalancerId, String forwardingRuleId, ApplicationLoadBalancerForwardingRulePut applicationLoadBalancerForwardingRule) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+            this.forwardingRuleId = forwardingRuleId;
+            this.applicationLoadBalancerForwardingRule = applicationLoadBalancerForwardingRule;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesPutRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesPutRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesPutRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesPutRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersForwardingrulesPutRequest
+         */
+        public APIdatacentersApplicationloadbalancersForwardingrulesPutRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersForwardingrulesPut
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesPutCall(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesPut request
+         * @return ApplicationLoadBalancerForwardingRule
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApplicationLoadBalancerForwardingRule execute() throws ApiException {
+        ApiResponse<ApplicationLoadBalancerForwardingRule> localVarResp = datacentersApplicationloadbalancersForwardingrulesPutWithHttpInfo(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesPut request with HTTP info returned
+         * @return ApiResponse&lt;ApplicationLoadBalancerForwardingRule&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<ApplicationLoadBalancerForwardingRule> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesPutWithHttpInfo(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersForwardingrulesPut request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<ApplicationLoadBalancerForwardingRule> callback) throws ApiException {
+            return datacentersApplicationloadbalancersForwardingrulesPutAsync(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Modify ALB forwarding rules
+     * Modify the specified Application Load Balancer forwarding rule.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @param forwardingRuleId The unique ID of the forwarding rule. (required)
+     * @param applicationLoadBalancerForwardingRule The modified ALB forwarding rule. (required)
+     * @return APIdatacentersApplicationloadbalancersForwardingrulesPutRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersForwardingrulesPutRequest datacentersApplicationloadbalancersForwardingrulesPut(String datacenterId, String applicationLoadBalancerId, String forwardingRuleId, ApplicationLoadBalancerForwardingRulePut applicationLoadBalancerForwardingRule) {
+        return new APIdatacentersApplicationloadbalancersForwardingrulesPutRequest(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRule);
+    }
     /**
      * Build call for datacentersApplicationloadbalancersGet
      * @param datacenterId The unique ID of the data center. (required)
@@ -2499,6 +4339,183 @@ public class ApplicationLoadBalancersApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
+
+    public class APIdatacentersApplicationloadbalancersGetRequest {
+        private final String datacenterId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+        private Integer offset;
+        private Integer limit;
+        private String orderBy;
+        private Integer maxResults;
+        private Map<String, String> filters;
+
+        private APIdatacentersApplicationloadbalancersGetRequest(String datacenterId) {
+            this.datacenterId = datacenterId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersGetRequest
+         */
+        public APIdatacentersApplicationloadbalancersGetRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersGetRequest
+         */
+        public APIdatacentersApplicationloadbalancersGetRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersGetRequest
+         */
+        public APIdatacentersApplicationloadbalancersGetRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+        /**
+         * Set offset
+         * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersGetRequest
+         */
+        public APIdatacentersApplicationloadbalancersGetRequest offset(Integer offset) {
+            this.offset = offset;
+            return this;
+        }
+
+        /**
+         * Set limit
+         * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
+         * @return APIdatacentersApplicationloadbalancersGetRequest
+         */
+        public APIdatacentersApplicationloadbalancersGetRequest limit(Integer limit) {
+            this.limit = limit;
+            return this;
+        }
+
+
+        /**
+        * Set orderBy
+        * @param orderBy Orders the response based on a property.
+        * @return APIdatacentersApplicationloadbalancersGetRequest
+        */
+        public APIdatacentersApplicationloadbalancersGetRequest orderBy(String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+        * Set maxResults
+        * @param maxResults Limits the number of items in a response.
+        * @return APIdatacentersApplicationloadbalancersGetRequest
+        */
+        public APIdatacentersApplicationloadbalancersGetRequest maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+        * Set filters
+        * @param filters Filters the response based on a property.
+        * @return APIdatacentersApplicationloadbalancersGetRequest
+        */
+        public APIdatacentersApplicationloadbalancersGetRequest filters(Map<String, String> filters) {
+            this.filters = filters;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersGet
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersGetCall(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersGet request
+         * @return ApplicationLoadBalancers
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApplicationLoadBalancers execute() throws ApiException {
+        ApiResponse<ApplicationLoadBalancers> localVarResp = datacentersApplicationloadbalancersGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersGet request with HTTP info returned
+         * @return ApiResponse&lt;ApplicationLoadBalancers&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<ApplicationLoadBalancers> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersGet request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<ApplicationLoadBalancers> callback) throws ApiException {
+            return datacentersApplicationloadbalancersGetAsync(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters, callback);
+        }
+    }
+
+    /**
+     * List Application Load Balancers
+     * List all Application Load Balancers within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @return APIdatacentersApplicationloadbalancersGetRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersGetRequest datacentersApplicationloadbalancersGet(String datacenterId) {
+        return new APIdatacentersApplicationloadbalancersGetRequest(datacenterId);
+    }
     /**
      * Build call for datacentersApplicationloadbalancersPatch
      * @param datacenterId The unique ID of the data center. (required)
@@ -2659,6 +4676,133 @@ public class ApplicationLoadBalancersApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
+
+    public class APIdatacentersApplicationloadbalancersPatchRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private final ApplicationLoadBalancerProperties applicationLoadBalancerProperties;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersPatchRequest(String datacenterId, String applicationLoadBalancerId, ApplicationLoadBalancerProperties applicationLoadBalancerProperties) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+            this.applicationLoadBalancerProperties = applicationLoadBalancerProperties;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersPatchRequest
+         */
+        public APIdatacentersApplicationloadbalancersPatchRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersPatchRequest
+         */
+        public APIdatacentersApplicationloadbalancersPatchRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersPatchRequest
+         */
+        public APIdatacentersApplicationloadbalancersPatchRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersPatch
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersPatchCall(datacenterId, applicationLoadBalancerId, applicationLoadBalancerProperties, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersPatch request
+         * @return ApplicationLoadBalancer
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApplicationLoadBalancer execute() throws ApiException {
+        ApiResponse<ApplicationLoadBalancer> localVarResp = datacentersApplicationloadbalancersPatchWithHttpInfo(datacenterId, applicationLoadBalancerId, applicationLoadBalancerProperties, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersPatch request with HTTP info returned
+         * @return ApiResponse&lt;ApplicationLoadBalancer&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<ApplicationLoadBalancer> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersPatchWithHttpInfo(datacenterId, applicationLoadBalancerId, applicationLoadBalancerProperties, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersPatch request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<ApplicationLoadBalancer> callback) throws ApiException {
+            return datacentersApplicationloadbalancersPatchAsync(datacenterId, applicationLoadBalancerId, applicationLoadBalancerProperties, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Partially modify Application Load Balancers
+     * Update the properties of the specified Application Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @param applicationLoadBalancerProperties The Application Load Balancer properties to be updated. (required)
+     * @return APIdatacentersApplicationloadbalancersPatchRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersPatchRequest datacentersApplicationloadbalancersPatch(String datacenterId, String applicationLoadBalancerId, ApplicationLoadBalancerProperties applicationLoadBalancerProperties) {
+        return new APIdatacentersApplicationloadbalancersPatchRequest(datacenterId, applicationLoadBalancerId, applicationLoadBalancerProperties);
+    }
     /**
      * Build call for datacentersApplicationloadbalancersPost
      * @param datacenterId The unique ID of the data center. (required)
@@ -2808,6 +4952,130 @@ public class ApplicationLoadBalancersApi {
         Type localVarReturnType = new TypeToken<ApplicationLoadBalancer>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersApplicationloadbalancersPostRequest {
+        private final String datacenterId;
+        private final ApplicationLoadBalancer applicationLoadBalancer;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersPostRequest(String datacenterId, ApplicationLoadBalancer applicationLoadBalancer) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancer = applicationLoadBalancer;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersPostRequest
+         */
+        public APIdatacentersApplicationloadbalancersPostRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersPostRequest
+         */
+        public APIdatacentersApplicationloadbalancersPostRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersPostRequest
+         */
+        public APIdatacentersApplicationloadbalancersPostRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersPost
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersPostCall(datacenterId, applicationLoadBalancer, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersPost request
+         * @return ApplicationLoadBalancer
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApplicationLoadBalancer execute() throws ApiException {
+        ApiResponse<ApplicationLoadBalancer> localVarResp = datacentersApplicationloadbalancersPostWithHttpInfo(datacenterId, applicationLoadBalancer, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersPost request with HTTP info returned
+         * @return ApiResponse&lt;ApplicationLoadBalancer&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<ApplicationLoadBalancer> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersPostWithHttpInfo(datacenterId, applicationLoadBalancer, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersPost request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<ApplicationLoadBalancer> callback) throws ApiException {
+            return datacentersApplicationloadbalancersPostAsync(datacenterId, applicationLoadBalancer, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Create Application Load Balancers
+     * Create an Application Load Balancer within the datacenter.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancer The Application Load Balancer to create. (required)
+     * @return APIdatacentersApplicationloadbalancersPostRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersPostRequest datacentersApplicationloadbalancersPost(String datacenterId, ApplicationLoadBalancer applicationLoadBalancer) {
+        return new APIdatacentersApplicationloadbalancersPostRequest(datacenterId, applicationLoadBalancer);
     }
     /**
      * Build call for datacentersApplicationloadbalancersPut
@@ -2968,5 +5236,132 @@ public class ApplicationLoadBalancersApi {
         Type localVarReturnType = new TypeToken<ApplicationLoadBalancer>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersApplicationloadbalancersPutRequest {
+        private final String datacenterId;
+        private final String applicationLoadBalancerId;
+        private final ApplicationLoadBalancerPut applicationLoadBalancer;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersApplicationloadbalancersPutRequest(String datacenterId, String applicationLoadBalancerId, ApplicationLoadBalancerPut applicationLoadBalancer) {
+            this.datacenterId = datacenterId;
+            this.applicationLoadBalancerId = applicationLoadBalancerId;
+            this.applicationLoadBalancer = applicationLoadBalancer;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersApplicationloadbalancersPutRequest
+         */
+        public APIdatacentersApplicationloadbalancersPutRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersApplicationloadbalancersPutRequest
+         */
+        public APIdatacentersApplicationloadbalancersPutRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersApplicationloadbalancersPutRequest
+         */
+        public APIdatacentersApplicationloadbalancersPutRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersApplicationloadbalancersPut
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersApplicationloadbalancersPutCall(datacenterId, applicationLoadBalancerId, applicationLoadBalancer, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersPut request
+         * @return ApplicationLoadBalancer
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApplicationLoadBalancer execute() throws ApiException {
+        ApiResponse<ApplicationLoadBalancer> localVarResp = datacentersApplicationloadbalancersPutWithHttpInfo(datacenterId, applicationLoadBalancerId, applicationLoadBalancer, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersPut request with HTTP info returned
+         * @return ApiResponse&lt;ApplicationLoadBalancer&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<ApplicationLoadBalancer> executeWithHttpInfo() throws ApiException {
+            return datacentersApplicationloadbalancersPutWithHttpInfo(datacenterId, applicationLoadBalancerId, applicationLoadBalancer, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersApplicationloadbalancersPut request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<ApplicationLoadBalancer> callback) throws ApiException {
+            return datacentersApplicationloadbalancersPutAsync(datacenterId, applicationLoadBalancerId, applicationLoadBalancer, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Modify Application Load Balancers
+     * Modify the properties of the specified Application Load Balancer within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
+     * @param applicationLoadBalancer The modified Application Load Balancer. (required)
+     * @return APIdatacentersApplicationloadbalancersPutRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersApplicationloadbalancersPutRequest datacentersApplicationloadbalancersPut(String datacenterId, String applicationLoadBalancerId, ApplicationLoadBalancerPut applicationLoadBalancer) {
+        return new APIdatacentersApplicationloadbalancersPutRequest(datacenterId, applicationLoadBalancerId, applicationLoadBalancer);
     }
 }

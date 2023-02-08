@@ -201,4 +201,156 @@ public class ContractResourcesApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
+
+    public class APIcontractsGetRequest {
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+        private String orderBy;
+        private Integer maxResults;
+        private Map<String, String> filters;
+
+        private APIcontractsGetRequest() {
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIcontractsGetRequest
+         */
+        public APIcontractsGetRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIcontractsGetRequest
+         */
+        public APIcontractsGetRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIcontractsGetRequest
+         */
+        public APIcontractsGetRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+        * Set orderBy
+        * @param orderBy Orders the response based on a property.
+        * @return APIcontractsGetRequest
+        */
+        public APIcontractsGetRequest orderBy(String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+        * Set maxResults
+        * @param maxResults Limits the number of items in a response.
+        * @return APIcontractsGetRequest
+        */
+        public APIcontractsGetRequest maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+        * Set filters
+        * @param filters Filters the response based on a property.
+        * @return APIcontractsGetRequest
+        */
+        public APIcontractsGetRequest filters(Map<String, String> filters) {
+            this.filters = filters;
+            return this;
+        }
+
+
+        /**
+         * Build call for contractsGet
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return contractsGetCall(pretty, depth, xContractNumber, orderBy, maxResults, filters, callback);
+        }
+
+        /**
+         * Execute contractsGet request
+         * @return Contracts
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public Contracts execute() throws ApiException {
+        ApiResponse<Contracts> localVarResp = contractsGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute contractsGet request with HTTP info returned
+         * @return ApiResponse&lt;Contracts&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Contracts> executeWithHttpInfo() throws ApiException {
+            return contractsGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
+        }
+
+        /**
+         * Execute contractsGet request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Contracts> callback) throws ApiException {
+            return contractsGetAsync(pretty, depth, xContractNumber, orderBy, maxResults, filters, callback);
+        }
+    }
+
+    /**
+     * Retrieve contracts
+     * Retrieve the properties of the user&#39;s contract. In this version, the resource became a collection.
+     * @return APIcontractsGetRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIcontractsGetRequest contractsGet() {
+        return new APIcontractsGetRequest();
+    }
 }

@@ -198,6 +198,127 @@ public class RequestsApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
+
+    public class APIrequestsFindByIdRequest {
+        private final String requestId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIrequestsFindByIdRequest(String requestId) {
+            this.requestId = requestId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIrequestsFindByIdRequest
+         */
+        public APIrequestsFindByIdRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIrequestsFindByIdRequest
+         */
+        public APIrequestsFindByIdRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIrequestsFindByIdRequest
+         */
+        public APIrequestsFindByIdRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for requestsFindById
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return requestsFindByIdCall(requestId, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute requestsFindById request
+         * @return Request
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public Request execute() throws ApiException {
+        ApiResponse<Request> localVarResp = requestsFindByIdWithHttpInfo(requestId, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute requestsFindById request with HTTP info returned
+         * @return ApiResponse&lt;Request&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Request> executeWithHttpInfo() throws ApiException {
+            return requestsFindByIdWithHttpInfo(requestId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute requestsFindById request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Request> callback) throws ApiException {
+            return requestsFindByIdAsync(requestId, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Retrieve requests
+     * Retrieve the properties of the specified request.
+     * @param requestId The unique ID of the request. (required)
+     * @return APIrequestsFindByIdRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIrequestsFindByIdRequest requestsFindById(String requestId) {
+        return new APIrequestsFindByIdRequest(requestId);
+    }
     /**
      * Build call for requestsGet
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -435,6 +556,301 @@ public class RequestsApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
+
+    public class APIrequestsGetRequest {
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+        private String filterStatus;
+        private String filterCreatedAfter;
+        private String filterCreatedBefore;
+        private String filterCreatedDate;
+        private String filterCreatedBy;
+        private String filterEtag;
+        private String filterRequestStatus;
+        private String filterMethod;
+        private String filterHeaders;
+        private String filterBody;
+        private String filterUrl;
+        private Integer offset;
+        private Integer limit;
+        private String orderBy;
+        private Integer maxResults;
+        private Map<String, String> filters;
+
+        private APIrequestsGetRequest() {
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+        /**
+         * Set filterStatus
+         * @param filterStatus Filter the list by request status [QUEUED, RUNNING, DONE, FAILED]. Filter is not affected by the depth query parameter. (optional)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest filterStatus(String filterStatus) {
+            this.filterStatus = filterStatus;
+            return this;
+        }
+
+        /**
+         * Set filterCreatedAfter
+         * @param filterCreatedAfter Filter the list to only include the requests created after the date, specified in the yyyy-MM-dd HH:mm:ss format. Filter is not affected by the depth query parameter. (optional)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest filterCreatedAfter(String filterCreatedAfter) {
+            this.filterCreatedAfter = filterCreatedAfter;
+            return this;
+        }
+
+        /**
+         * Set filterCreatedBefore
+         * @param filterCreatedBefore Filter the list to only include the requests created before the date, specified in the yyyy-MM-dd HH:mm:ss format. Filter is not affected by the depth query parameter. (optional)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest filterCreatedBefore(String filterCreatedBefore) {
+            this.filterCreatedBefore = filterCreatedBefore;
+            return this;
+        }
+
+        /**
+         * Set filterCreatedDate
+         * @param filterCreatedDate Filter the list to only include the requests that contain the createdDate, specified in the yyyy-MM-dd HH:mm:ss format. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. (optional)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest filterCreatedDate(String filterCreatedDate) {
+            this.filterCreatedDate = filterCreatedDate;
+            return this;
+        }
+
+        /**
+         * Set filterCreatedBy
+         * @param filterCreatedBy Filter the list to only include the requests that contain the createdBy, specified in the yyyy-MM-dd HH:mm:ss format. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest filterCreatedBy(String filterCreatedBy) {
+            this.filterCreatedBy = filterCreatedBy;
+            return this;
+        }
+
+        /**
+         * Set filterEtag
+         * @param filterEtag Filter the list to only include the requests that contain the specified etag. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest filterEtag(String filterEtag) {
+            this.filterEtag = filterEtag;
+            return this;
+        }
+
+        /**
+         * Set filterRequestStatus
+         * @param filterRequestStatus Filter the list to only include the requests that contain the specified requestStatus. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest filterRequestStatus(String filterRequestStatus) {
+            this.filterRequestStatus = filterRequestStatus;
+            return this;
+        }
+
+        /**
+         * Set filterMethod
+         * @param filterMethod Filter the list to only include the requests that contain the specified method. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest filterMethod(String filterMethod) {
+            this.filterMethod = filterMethod;
+            return this;
+        }
+
+        /**
+         * Set filterHeaders
+         * @param filterHeaders Filter the list to only include the requests that contain the specified headers. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest filterHeaders(String filterHeaders) {
+            this.filterHeaders = filterHeaders;
+            return this;
+        }
+
+        /**
+         * Set filterBody
+         * @param filterBody Filter the list to only include the requests that contain the specified body. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest filterBody(String filterBody) {
+            this.filterBody = filterBody;
+            return this;
+        }
+
+        /**
+         * Set filterUrl
+         * @param filterUrl Filter the list to only include the requests that contain the specified URL. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest filterUrl(String filterUrl) {
+            this.filterUrl = filterUrl;
+            return this;
+        }
+
+        /**
+         * Set offset
+         * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest offset(Integer offset) {
+            this.offset = offset;
+            return this;
+        }
+
+        /**
+         * Set limit
+         * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
+         * @return APIrequestsGetRequest
+         */
+        public APIrequestsGetRequest limit(Integer limit) {
+            this.limit = limit;
+            return this;
+        }
+
+
+        /**
+        * Set orderBy
+        * @param orderBy Orders the response based on a property.
+        * @return APIrequestsGetRequest
+        */
+        public APIrequestsGetRequest orderBy(String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+        * Set maxResults
+        * @param maxResults Limits the number of items in a response.
+        * @return APIrequestsGetRequest
+        */
+        public APIrequestsGetRequest maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+        * Set filters
+        * @param filters Filters the response based on a property.
+        * @return APIrequestsGetRequest
+        */
+        public APIrequestsGetRequest filters(Map<String, String> filters) {
+            this.filters = filters;
+            return this;
+        }
+
+
+        /**
+         * Build call for requestsGet
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return requestsGetCall(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterCreatedDate, filterCreatedBy, filterEtag, filterRequestStatus, filterMethod, filterHeaders, filterBody, filterUrl, offset, limit, orderBy, maxResults, filters, callback);
+        }
+
+        /**
+         * Execute requestsGet request
+         * @return Requests
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public Requests execute() throws ApiException {
+        ApiResponse<Requests> localVarResp = requestsGetWithHttpInfo(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterCreatedDate, filterCreatedBy, filterEtag, filterRequestStatus, filterMethod, filterHeaders, filterBody, filterUrl, offset, limit, orderBy, maxResults, filters);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute requestsGet request with HTTP info returned
+         * @return ApiResponse&lt;Requests&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Requests> executeWithHttpInfo() throws ApiException {
+            return requestsGetWithHttpInfo(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterCreatedDate, filterCreatedBy, filterEtag, filterRequestStatus, filterMethod, filterHeaders, filterBody, filterUrl, offset, limit, orderBy, maxResults, filters);
+        }
+
+        /**
+         * Execute requestsGet request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Requests> callback) throws ApiException {
+            return requestsGetAsync(pretty, depth, xContractNumber, filterStatus, filterCreatedAfter, filterCreatedBefore, filterCreatedDate, filterCreatedBy, filterEtag, filterRequestStatus, filterMethod, filterHeaders, filterBody, filterUrl, offset, limit, orderBy, maxResults, filters, callback);
+        }
+    }
+
+    /**
+     * List requests
+     * List all API requests.
+     * @return APIrequestsGetRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIrequestsGetRequest requestsGet() {
+        return new APIrequestsGetRequest();
+    }
     /**
      * Build call for requestsStatusGet
      * @param requestId The unique ID of the request. (required)
@@ -590,5 +1006,160 @@ public class RequestsApi {
         Type localVarReturnType = new TypeToken<RequestStatus>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIrequestsStatusGetRequest {
+        private final String requestId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+        private String orderBy;
+        private Integer maxResults;
+        private Map<String, String> filters;
+
+        private APIrequestsStatusGetRequest(String requestId) {
+            this.requestId = requestId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIrequestsStatusGetRequest
+         */
+        public APIrequestsStatusGetRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIrequestsStatusGetRequest
+         */
+        public APIrequestsStatusGetRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIrequestsStatusGetRequest
+         */
+        public APIrequestsStatusGetRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+        * Set orderBy
+        * @param orderBy Orders the response based on a property.
+        * @return APIrequestsStatusGetRequest
+        */
+        public APIrequestsStatusGetRequest orderBy(String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+        * Set maxResults
+        * @param maxResults Limits the number of items in a response.
+        * @return APIrequestsStatusGetRequest
+        */
+        public APIrequestsStatusGetRequest maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+        * Set filters
+        * @param filters Filters the response based on a property.
+        * @return APIrequestsStatusGetRequest
+        */
+        public APIrequestsStatusGetRequest filters(Map<String, String> filters) {
+            this.filters = filters;
+            return this;
+        }
+
+
+        /**
+         * Build call for requestsStatusGet
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return requestsStatusGetCall(requestId, pretty, depth, xContractNumber, orderBy, maxResults, filters, callback);
+        }
+
+        /**
+         * Execute requestsStatusGet request
+         * @return RequestStatus
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public RequestStatus execute() throws ApiException {
+        ApiResponse<RequestStatus> localVarResp = requestsStatusGetWithHttpInfo(requestId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute requestsStatusGet request with HTTP info returned
+         * @return ApiResponse&lt;RequestStatus&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<RequestStatus> executeWithHttpInfo() throws ApiException {
+            return requestsStatusGetWithHttpInfo(requestId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+        }
+
+        /**
+         * Execute requestsStatusGet request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<RequestStatus> callback) throws ApiException {
+            return requestsStatusGetAsync(requestId, pretty, depth, xContractNumber, orderBy, maxResults, filters, callback);
+        }
+    }
+
+    /**
+     * Retrieve request status
+     * Retrieve the status of the specified request.
+     * @param requestId The unique ID of the request. (required)
+     * @return APIrequestsStatusGetRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIrequestsStatusGetRequest requestsStatusGet(String requestId) {
+        return new APIrequestsStatusGetRequest(requestId);
     }
 }

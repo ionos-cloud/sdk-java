@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * ServerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-29T14:52:45.187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
 
 public class ServerProperties {
   
@@ -433,7 +433,7 @@ public class ServerProperties {
       return false;
     }
     ServerProperties serverProperties = (ServerProperties) o;
-    return Objects.equals(this.templateUuid, serverProperties.templateUuid) && Objects.equals(this.name, serverProperties.name) && Objects.equals(this.cores, serverProperties.cores) && Objects.equals(this.ram, serverProperties.ram) && Objects.equals(this.availabilityZone, serverProperties.availabilityZone) && Objects.equals(this.vmState, serverProperties.vmState) && Objects.equals(this.bootCdrom, serverProperties.bootCdrom) && Objects.equals(this.bootVolume, serverProperties.bootVolume) && Objects.equals(this.cpuFamily, serverProperties.cpuFamily) && Objects.equals(this.type, serverProperties.type);
+    return Objects.equals(this.templateUuid, serverProperties.templateUuid) && Objects.equals(this.name, serverProperties.name) && Objects.equals(this.cores, serverProperties.cores) && Objects.equals(this.ram, serverProperties.ram) && true && Objects.equals(this.availabilityZone, serverProperties.availabilityZone) && Objects.equals(this.vmState, serverProperties.vmState) && Objects.equals(this.bootCdrom, serverProperties.bootCdrom) && Objects.equals(this.bootVolume, serverProperties.bootVolume) && Objects.equals(this.cpuFamily, serverProperties.cpuFamily) && Objects.equals(this.type, serverProperties.type);
   }
 
 

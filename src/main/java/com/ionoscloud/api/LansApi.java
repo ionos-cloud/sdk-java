@@ -206,6 +206,128 @@ public class LansApi {
         localVarApiClient.executeAsync(localVarCall, callback);
         return localVarCall;
     }
+
+    public class APIdatacentersLansDeleteRequest {
+        private final String datacenterId;
+        private final String lanId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersLansDeleteRequest(String datacenterId, String lanId) {
+            this.datacenterId = datacenterId;
+            this.lanId = lanId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersLansDeleteRequest
+         */
+        public APIdatacentersLansDeleteRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersLansDeleteRequest
+         */
+        public APIdatacentersLansDeleteRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersLansDeleteRequest
+         */
+        public APIdatacentersLansDeleteRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersLansDelete
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersLansDeleteCall(datacenterId, lanId, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersLansDelete request
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public void execute() throws ApiException {
+        datacentersLansDeleteWithHttpInfo(datacenterId, lanId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersLansDelete request with HTTP info returned
+         * @return ApiResponse&lt;Void&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Void> executeWithHttpInfo() throws ApiException {
+            return datacentersLansDeleteWithHttpInfo(datacenterId, lanId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersLansDelete request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Void> callback) throws ApiException {
+            return datacentersLansDeleteAsync(datacenterId, lanId, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Delete LANs
+     * Delete the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @return APIdatacentersLansDeleteRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersLansDeleteRequest datacentersLansDelete(String datacenterId, String lanId) {
+        return new APIdatacentersLansDeleteRequest(datacenterId, lanId);
+    }
     /**
      * Build call for datacentersLansFindById
      * @param datacenterId The unique ID of the data center. (required)
@@ -356,6 +478,130 @@ public class LansApi {
         Type localVarReturnType = new TypeToken<Lan>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersLansFindByIdRequest {
+        private final String datacenterId;
+        private final String lanId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersLansFindByIdRequest(String datacenterId, String lanId) {
+            this.datacenterId = datacenterId;
+            this.lanId = lanId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersLansFindByIdRequest
+         */
+        public APIdatacentersLansFindByIdRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersLansFindByIdRequest
+         */
+        public APIdatacentersLansFindByIdRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersLansFindByIdRequest
+         */
+        public APIdatacentersLansFindByIdRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersLansFindById
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersLansFindByIdCall(datacenterId, lanId, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersLansFindById request
+         * @return Lan
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public Lan execute() throws ApiException {
+        ApiResponse<Lan> localVarResp = datacentersLansFindByIdWithHttpInfo(datacenterId, lanId, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersLansFindById request with HTTP info returned
+         * @return ApiResponse&lt;Lan&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Lan> executeWithHttpInfo() throws ApiException {
+            return datacentersLansFindByIdWithHttpInfo(datacenterId, lanId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersLansFindById request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Lan> callback) throws ApiException {
+            return datacentersLansFindByIdAsync(datacenterId, lanId, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Retrieve LANs
+     * Retrieve the properties of the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @return APIdatacentersLansFindByIdRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersLansFindByIdRequest datacentersLansFindById(String datacenterId, String lanId) {
+        return new APIdatacentersLansFindByIdRequest(datacenterId, lanId);
     }
     /**
      * Build call for datacentersLansGet
@@ -527,6 +773,183 @@ public class LansApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
+
+    public class APIdatacentersLansGetRequest {
+        private final String datacenterId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+        private Integer offset;
+        private Integer limit;
+        private String orderBy;
+        private Integer maxResults;
+        private Map<String, String> filters;
+
+        private APIdatacentersLansGetRequest(String datacenterId) {
+            this.datacenterId = datacenterId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersLansGetRequest
+         */
+        public APIdatacentersLansGetRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersLansGetRequest
+         */
+        public APIdatacentersLansGetRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersLansGetRequest
+         */
+        public APIdatacentersLansGetRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+        /**
+         * Set offset
+         * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
+         * @return APIdatacentersLansGetRequest
+         */
+        public APIdatacentersLansGetRequest offset(Integer offset) {
+            this.offset = offset;
+            return this;
+        }
+
+        /**
+         * Set limit
+         * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
+         * @return APIdatacentersLansGetRequest
+         */
+        public APIdatacentersLansGetRequest limit(Integer limit) {
+            this.limit = limit;
+            return this;
+        }
+
+
+        /**
+        * Set orderBy
+        * @param orderBy Orders the response based on a property.
+        * @return APIdatacentersLansGetRequest
+        */
+        public APIdatacentersLansGetRequest orderBy(String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+        * Set maxResults
+        * @param maxResults Limits the number of items in a response.
+        * @return APIdatacentersLansGetRequest
+        */
+        public APIdatacentersLansGetRequest maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+        * Set filters
+        * @param filters Filters the response based on a property.
+        * @return APIdatacentersLansGetRequest
+        */
+        public APIdatacentersLansGetRequest filters(Map<String, String> filters) {
+            this.filters = filters;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersLansGet
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersLansGetCall(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters, callback);
+        }
+
+        /**
+         * Execute datacentersLansGet request
+         * @return Lans
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public Lans execute() throws ApiException {
+        ApiResponse<Lans> localVarResp = datacentersLansGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersLansGet request with HTTP info returned
+         * @return ApiResponse&lt;Lans&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Lans> executeWithHttpInfo() throws ApiException {
+            return datacentersLansGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+        }
+
+        /**
+         * Execute datacentersLansGet request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Lans> callback) throws ApiException {
+            return datacentersLansGetAsync(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters, callback);
+        }
+    }
+
+    /**
+     * List LANs
+     * List all LANs within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @return APIdatacentersLansGetRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersLansGetRequest datacentersLansGet(String datacenterId) {
+        return new APIdatacentersLansGetRequest(datacenterId);
+    }
     /**
      * Build call for datacentersLansNicsFindById
      * @param datacenterId The unique ID of the data center. (required)
@@ -687,6 +1110,133 @@ public class LansApi {
         Type localVarReturnType = new TypeToken<Nic>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersLansNicsFindByIdRequest {
+        private final String datacenterId;
+        private final String lanId;
+        private final String nicId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersLansNicsFindByIdRequest(String datacenterId, String lanId, String nicId) {
+            this.datacenterId = datacenterId;
+            this.lanId = lanId;
+            this.nicId = nicId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersLansNicsFindByIdRequest
+         */
+        public APIdatacentersLansNicsFindByIdRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersLansNicsFindByIdRequest
+         */
+        public APIdatacentersLansNicsFindByIdRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersLansNicsFindByIdRequest
+         */
+        public APIdatacentersLansNicsFindByIdRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersLansNicsFindById
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersLansNicsFindByIdCall(datacenterId, lanId, nicId, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersLansNicsFindById request
+         * @return Nic
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public Nic execute() throws ApiException {
+        ApiResponse<Nic> localVarResp = datacentersLansNicsFindByIdWithHttpInfo(datacenterId, lanId, nicId, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersLansNicsFindById request with HTTP info returned
+         * @return ApiResponse&lt;Nic&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Nic> executeWithHttpInfo() throws ApiException {
+            return datacentersLansNicsFindByIdWithHttpInfo(datacenterId, lanId, nicId, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersLansNicsFindById request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Nic> callback) throws ApiException {
+            return datacentersLansNicsFindByIdAsync(datacenterId, lanId, nicId, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Retrieve attached NICs
+     * Retrieve the properties of the NIC, attached to the specified LAN.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param nicId The unique ID of the NIC. (required)
+     * @return APIdatacentersLansNicsFindByIdRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersLansNicsFindByIdRequest datacentersLansNicsFindById(String datacenterId, String lanId, String nicId) {
+        return new APIdatacentersLansNicsFindByIdRequest(datacenterId, lanId, nicId);
     }
     /**
      * Build call for datacentersLansNicsGet
@@ -868,6 +1418,186 @@ public class LansApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
+
+    public class APIdatacentersLansNicsGetRequest {
+        private final String datacenterId;
+        private final String lanId;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+        private Integer offset;
+        private Integer limit;
+        private String orderBy;
+        private Integer maxResults;
+        private Map<String, String> filters;
+
+        private APIdatacentersLansNicsGetRequest(String datacenterId, String lanId) {
+            this.datacenterId = datacenterId;
+            this.lanId = lanId;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersLansNicsGetRequest
+         */
+        public APIdatacentersLansNicsGetRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersLansNicsGetRequest
+         */
+        public APIdatacentersLansNicsGetRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersLansNicsGetRequest
+         */
+        public APIdatacentersLansNicsGetRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+        /**
+         * Set offset
+         * @param offset The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). (optional, default to 0)
+         * @return APIdatacentersLansNicsGetRequest
+         */
+        public APIdatacentersLansNicsGetRequest offset(Integer offset) {
+            this.offset = offset;
+            return this;
+        }
+
+        /**
+         * Set limit
+         * @param limit The maximum number of elements to return (use together with offset for pagination). (optional, default to 1000)
+         * @return APIdatacentersLansNicsGetRequest
+         */
+        public APIdatacentersLansNicsGetRequest limit(Integer limit) {
+            this.limit = limit;
+            return this;
+        }
+
+
+        /**
+        * Set orderBy
+        * @param orderBy Orders the response based on a property.
+        * @return APIdatacentersLansNicsGetRequest
+        */
+        public APIdatacentersLansNicsGetRequest orderBy(String orderBy) {
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+        * Set maxResults
+        * @param maxResults Limits the number of items in a response.
+        * @return APIdatacentersLansNicsGetRequest
+        */
+        public APIdatacentersLansNicsGetRequest maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+        * Set filters
+        * @param filters Filters the response based on a property.
+        * @return APIdatacentersLansNicsGetRequest
+        */
+        public APIdatacentersLansNicsGetRequest filters(Map<String, String> filters) {
+            this.filters = filters;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersLansNicsGet
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersLansNicsGetCall(datacenterId, lanId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters, callback);
+        }
+
+        /**
+         * Execute datacentersLansNicsGet request
+         * @return LanNics
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public LanNics execute() throws ApiException {
+        ApiResponse<LanNics> localVarResp = datacentersLansNicsGetWithHttpInfo(datacenterId, lanId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersLansNicsGet request with HTTP info returned
+         * @return ApiResponse&lt;LanNics&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<LanNics> executeWithHttpInfo() throws ApiException {
+            return datacentersLansNicsGetWithHttpInfo(datacenterId, lanId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+        }
+
+        /**
+         * Execute datacentersLansNicsGet request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<LanNics> callback) throws ApiException {
+            return datacentersLansNicsGetAsync(datacenterId, lanId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters, callback);
+        }
+    }
+
+    /**
+     * List LAN members
+     * List all NICs, attached to the specified LAN.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @return APIdatacentersLansNicsGetRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 200 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersLansNicsGetRequest datacentersLansNicsGet(String datacenterId, String lanId) {
+        return new APIdatacentersLansNicsGetRequest(datacenterId, lanId);
+    }
     /**
      * Build call for datacentersLansNicsPost
      * @param datacenterId The unique ID of the data center. (required)
@@ -1027,6 +1757,133 @@ public class LansApi {
         Type localVarReturnType = new TypeToken<Nic>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersLansNicsPostRequest {
+        private final String datacenterId;
+        private final String lanId;
+        private final Nic nic;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersLansNicsPostRequest(String datacenterId, String lanId, Nic nic) {
+            this.datacenterId = datacenterId;
+            this.lanId = lanId;
+            this.nic = nic;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersLansNicsPostRequest
+         */
+        public APIdatacentersLansNicsPostRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersLansNicsPostRequest
+         */
+        public APIdatacentersLansNicsPostRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersLansNicsPostRequest
+         */
+        public APIdatacentersLansNicsPostRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersLansNicsPost
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersLansNicsPostCall(datacenterId, lanId, nic, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersLansNicsPost request
+         * @return Nic
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public Nic execute() throws ApiException {
+        ApiResponse<Nic> localVarResp = datacentersLansNicsPostWithHttpInfo(datacenterId, lanId, nic, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersLansNicsPost request with HTTP info returned
+         * @return ApiResponse&lt;Nic&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Nic> executeWithHttpInfo() throws ApiException {
+            return datacentersLansNicsPostWithHttpInfo(datacenterId, lanId, nic, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersLansNicsPost request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Nic> callback) throws ApiException {
+            return datacentersLansNicsPostAsync(datacenterId, lanId, nic, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Attach NICs
+     * Attach an existing NIC to the specified LAN.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param nic The NIC to be attached. (required)
+     * @return APIdatacentersLansNicsPostRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersLansNicsPostRequest datacentersLansNicsPost(String datacenterId, String lanId, Nic nic) {
+        return new APIdatacentersLansNicsPostRequest(datacenterId, lanId, nic);
     }
     /**
      * Build call for datacentersLansPatch
@@ -1188,6 +2045,133 @@ public class LansApi {
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
     }
+
+    public class APIdatacentersLansPatchRequest {
+        private final String datacenterId;
+        private final String lanId;
+        private final LanProperties lan;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersLansPatchRequest(String datacenterId, String lanId, LanProperties lan) {
+            this.datacenterId = datacenterId;
+            this.lanId = lanId;
+            this.lan = lan;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersLansPatchRequest
+         */
+        public APIdatacentersLansPatchRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersLansPatchRequest
+         */
+        public APIdatacentersLansPatchRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersLansPatchRequest
+         */
+        public APIdatacentersLansPatchRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersLansPatch
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersLansPatchCall(datacenterId, lanId, lan, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersLansPatch request
+         * @return Lan
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public Lan execute() throws ApiException {
+        ApiResponse<Lan> localVarResp = datacentersLansPatchWithHttpInfo(datacenterId, lanId, lan, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersLansPatch request with HTTP info returned
+         * @return ApiResponse&lt;Lan&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Lan> executeWithHttpInfo() throws ApiException {
+            return datacentersLansPatchWithHttpInfo(datacenterId, lanId, lan, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersLansPatch request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Lan> callback) throws ApiException {
+            return datacentersLansPatchAsync(datacenterId, lanId, lan, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Partially modify LANs
+     * Update the properties of the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param lan The properties of the LAN to be updated. (required)
+     * @return APIdatacentersLansPatchRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersLansPatchRequest datacentersLansPatch(String datacenterId, String lanId, LanProperties lan) {
+        return new APIdatacentersLansPatchRequest(datacenterId, lanId, lan);
+    }
     /**
      * Build call for datacentersLansPost
      * @param datacenterId The unique ID of the data center. (required)
@@ -1337,6 +2321,130 @@ public class LansApi {
         Type localVarReturnType = new TypeToken<LanPost>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersLansPostRequest {
+        private final String datacenterId;
+        private final LanPost lan;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersLansPostRequest(String datacenterId, LanPost lan) {
+            this.datacenterId = datacenterId;
+            this.lan = lan;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersLansPostRequest
+         */
+        public APIdatacentersLansPostRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersLansPostRequest
+         */
+        public APIdatacentersLansPostRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersLansPostRequest
+         */
+        public APIdatacentersLansPostRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersLansPost
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersLansPostCall(datacenterId, lan, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersLansPost request
+         * @return LanPost
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public LanPost execute() throws ApiException {
+        ApiResponse<LanPost> localVarResp = datacentersLansPostWithHttpInfo(datacenterId, lan, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersLansPost request with HTTP info returned
+         * @return ApiResponse&lt;LanPost&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<LanPost> executeWithHttpInfo() throws ApiException {
+            return datacentersLansPostWithHttpInfo(datacenterId, lan, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersLansPost request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<LanPost> callback) throws ApiException {
+            return datacentersLansPostAsync(datacenterId, lan, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Create LANs
+     * Create a LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lan The LAN to create. (required)
+     * @return APIdatacentersLansPostRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersLansPostRequest datacentersLansPost(String datacenterId, LanPost lan) {
+        return new APIdatacentersLansPostRequest(datacenterId, lan);
     }
     /**
      * Build call for datacentersLansPut
@@ -1497,5 +2605,132 @@ public class LansApi {
         Type localVarReturnType = new TypeToken<Lan>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, callback);
         return localVarCall;
+    }
+
+    public class APIdatacentersLansPutRequest {
+        private final String datacenterId;
+        private final String lanId;
+        private final Lan lan;
+        private Boolean pretty;
+        private Integer depth;
+        private Integer xContractNumber;
+
+        private APIdatacentersLansPutRequest(String datacenterId, String lanId, Lan lan) {
+            this.datacenterId = datacenterId;
+            this.lanId = lanId;
+            this.lan = lan;
+        }
+
+        /**
+         * Set pretty
+         * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
+         * @return APIdatacentersLansPutRequest
+         */
+        public APIdatacentersLansPutRequest pretty(Boolean pretty) {
+            this.pretty = pretty;
+            return this;
+        }
+
+        /**
+         * Set depth
+         * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
+         * @return APIdatacentersLansPutRequest
+         */
+        public APIdatacentersLansPutRequest depth(Integer depth) {
+            this.depth = depth;
+            return this;
+        }
+
+        /**
+         * Set xContractNumber
+         * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+         * @return APIdatacentersLansPutRequest
+         */
+        public APIdatacentersLansPutRequest xContractNumber(Integer xContractNumber) {
+            this.xContractNumber = xContractNumber;
+            return this;
+        }
+
+
+        /**
+         * Build call for datacentersLansPut
+         * @param callback ApiCallback API callback
+         * @return Call to execute
+         * @throws ApiException If fail to serialize the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call buildCall(final ApiCallback callback) throws ApiException {
+            return datacentersLansPutCall(datacenterId, lanId, lan, pretty, depth, xContractNumber, callback);
+        }
+
+        /**
+         * Execute datacentersLansPut request
+         * @return Lan
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public Lan execute() throws ApiException {
+        ApiResponse<Lan> localVarResp = datacentersLansPutWithHttpInfo(datacenterId, lanId, lan, pretty, depth, xContractNumber);
+            return localVarResp.getData();
+        }
+
+        /**
+         * Execute datacentersLansPut request with HTTP info returned
+         * @return ApiResponse&lt;Lan&gt;
+         * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public ApiResponse<Lan> executeWithHttpInfo() throws ApiException {
+            return datacentersLansPutWithHttpInfo(datacenterId, lanId, lan, pretty, depth, xContractNumber);
+        }
+
+        /**
+         * Execute datacentersLansPut request (asynchronously)
+         * @param callback The callback to be executed when the API call finishes
+         * @return The request call
+         * @throws ApiException If fail to process the API call, e.g. serializing the request body object
+         * @http.response.details
+         <table summary="Response Details" border="1">
+            <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+            <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+            <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+         </table>
+         */
+        public okhttp3.Call executeAsync(final ApiCallback<Lan> callback) throws ApiException {
+            return datacentersLansPutAsync(datacenterId, lanId, lan, pretty, depth, xContractNumber, callback);
+        }
+    }
+
+    /**
+     * Modify LANs
+     * Modify the properties of the specified LAN within the data center.
+     * @param datacenterId The unique ID of the data center. (required)
+     * @param lanId The unique ID of the LAN. (required)
+     * @param lan The modified LAN (required)
+     * @return APIdatacentersLansPutRequest
+     * @http.response.details
+     <table summary="Response Details" border="1">
+        <tr><td> Status Code </td><td> Description </td><td> Response Headers </td></tr>
+        <tr><td> 202 </td><td> Successful operation </td><td>  * X-RateLimit-Remaining - The number of requests that can still be made without triggering a failure response. <br>  * X-RateLimit-Limit - The average number of requests per minute allowed. <br>  * X-RateLimit-Burst - The maximum number of concurrent API requests allowed. <br>  * Location - Callback URL to poll async operation status. <br>  </td></tr>
+        <tr><td> 0 </td><td> Any erroneous status code: 400 (parse error), 401 (auth error), 402 (trial access), 403 (insufficient privileges), 404 (not found), 405 (unsupported HTTP method), 415 (unsupported content type, 422 (validation error), 429 (request rate limit exceeded), 500 (server error), or 503 (maintenance). </td><td>  -  </td></tr>
+     </table>
+     */
+    public APIdatacentersLansPutRequest datacentersLansPut(String datacenterId, String lanId, Lan lan) {
+        return new APIdatacentersLansPutRequest(datacenterId, lanId, lan);
     }
 }

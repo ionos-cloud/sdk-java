@@ -23860,6 +23860,7 @@ components:
           href: <RESOURCE-URI>
           type: nic
           properties:
+            vnet: "null"
             name: My resource
             lan: 2
             pciSlot: 7
@@ -23987,6 +23988,7 @@ components:
           href: <RESOURCE-URI>
           type: nic
           properties:
+            vnet: "null"
             name: My resource
             lan: 2
             pciSlot: 7
@@ -24670,6 +24672,7 @@ components:
                   href: <RESOURCE-URI>
                   type: nic
                   properties:
+                    vnet: "null"
                     name: My resource
                     lan: 2
                     pciSlot: 7
@@ -24797,6 +24800,7 @@ components:
                   href: <RESOURCE-URI>
                   type: nic
                   properties:
+                    vnet: "null"
                     name: My resource
                     lan: 2
                     pciSlot: 7
@@ -24823,6 +24827,7 @@ components:
                 href: <RESOURCE-URI>
                 type: resource
               name: My resource
+              placementGroupId: "null"
               cpuFamily: AMD_OPTERON
               type: CUBE
               availabilityZone: AUTO
@@ -25129,6 +25134,7 @@ components:
                   href: <RESOURCE-URI>
                   type: nic
                   properties:
+                    vnet: "null"
                     name: My resource
                     lan: 2
                     pciSlot: 7
@@ -25256,6 +25262,7 @@ components:
                   href: <RESOURCE-URI>
                   type: nic
                   properties:
+                    vnet: "null"
                     name: My resource
                     lan: 2
                     pciSlot: 7
@@ -25282,6 +25289,7 @@ components:
                 href: <RESOURCE-URI>
                 type: resource
               name: My resource
+              placementGroupId: "null"
               cpuFamily: AMD_OPTERON
               type: CUBE
               availabilityZone: AUTO
@@ -25520,6 +25528,7 @@ components:
                   href: <RESOURCE-URI>
                   type: nic
                   properties:
+                    vnet: "null"
                     name: My resource
                     lan: 2
                     pciSlot: 7
@@ -25647,6 +25656,7 @@ components:
                   href: <RESOURCE-URI>
                   type: nic
                   properties:
+                    vnet: "null"
                     name: My resource
                     lan: 2
                     pciSlot: 7
@@ -25807,6 +25817,7 @@ components:
                   href: <RESOURCE-URI>
                   type: nic
                   properties:
+                    vnet: "null"
                     name: My resource
                     lan: 2
                     pciSlot: 7
@@ -25934,6 +25945,7 @@ components:
                   href: <RESOURCE-URI>
                   type: nic
                   properties:
+                    vnet: "null"
                     name: My resource
                     lan: 2
                     pciSlot: 7
@@ -26364,6 +26376,7 @@ components:
                   href: <RESOURCE-URI>
                   type: nic
                   properties:
+                    vnet: "null"
                     name: My resource
                     lan: 2
                     pciSlot: 7
@@ -26491,6 +26504,7 @@ components:
                   href: <RESOURCE-URI>
                   type: nic
                   properties:
+                    vnet: "null"
                     name: My resource
                     lan: 2
                     pciSlot: 7
@@ -26646,6 +26660,7 @@ components:
                   href: <RESOURCE-URI>
                   type: nic
                   properties:
+                    vnet: "null"
                     name: My resource
                     lan: 2
                     pciSlot: 7
@@ -26773,6 +26788,7 @@ components:
                   href: <RESOURCE-URI>
                   type: nic
                   properties:
+                    vnet: "null"
                     name: My resource
                     lan: 2
                     pciSlot: 7
@@ -27512,6 +27528,7 @@ components:
                     href: <RESOURCE-URI>
                     type: nic
                     properties:
+                      vnet: "null"
                       name: My resource
                       lan: 2
                       pciSlot: 7
@@ -27639,6 +27656,7 @@ components:
                     href: <RESOURCE-URI>
                     type: nic
                     properties:
+                      vnet: "null"
                       name: My resource
                       lan: 2
                       pciSlot: 7
@@ -27665,6 +27683,7 @@ components:
                   href: <RESOURCE-URI>
                   type: resource
                 name: My resource
+                placementGroupId: "null"
                 cpuFamily: AMD_OPTERON
                 type: CUBE
                 availabilityZone: AUTO
@@ -27971,6 +27990,7 @@ components:
                     href: <RESOURCE-URI>
                     type: nic
                     properties:
+                      vnet: "null"
                       name: My resource
                       lan: 2
                       pciSlot: 7
@@ -28098,6 +28118,7 @@ components:
                     href: <RESOURCE-URI>
                     type: nic
                     properties:
+                      vnet: "null"
                       name: My resource
                       lan: 2
                       pciSlot: 7
@@ -28124,6 +28145,7 @@ components:
                   href: <RESOURCE-URI>
                   type: resource
                 name: My resource
+                placementGroupId: "null"
                 cpuFamily: AMD_OPTERON
                 type: CUBE
                 availabilityZone: AUTO
@@ -28362,6 +28384,7 @@ components:
                     href: <RESOURCE-URI>
                     type: nic
                     properties:
+                      vnet: "null"
                       name: My resource
                       lan: 2
                       pciSlot: 7
@@ -28489,6 +28512,7 @@ components:
                     href: <RESOURCE-URI>
                     type: nic
                     properties:
+                      vnet: "null"
                       name: My resource
                       lan: 2
                       pciSlot: 7
@@ -28649,6 +28673,7 @@ components:
                     href: <RESOURCE-URI>
                     type: nic
                     properties:
+                      vnet: "null"
                       name: My resource
                       lan: 2
                       pciSlot: 7
@@ -28776,6 +28801,7 @@ components:
                     href: <RESOURCE-URI>
                     type: nic
                     properties:
+                      vnet: "null"
                       name: My resource
                       lan: 2
                       pciSlot: 7
@@ -29206,6 +29232,7 @@ components:
                     href: <RESOURCE-URI>
                     type: nic
                     properties:
+                      vnet: "null"
                       name: My resource
                       lan: 2
                       pciSlot: 7
@@ -29333,6 +29360,7 @@ components:
                     href: <RESOURCE-URI>
                     type: nic
                     properties:
+                      vnet: "null"
                       name: My resource
                       lan: 2
                       pciSlot: 7
@@ -29488,6 +29516,7 @@ components:
                     href: <RESOURCE-URI>
                     type: nic
                     properties:
+                      vnet: "null"
                       name: My resource
                       lan: 2
                       pciSlot: 7
@@ -29615,6 +29644,7 @@ components:
                     href: <RESOURCE-URI>
                     type: nic
                     properties:
+                      vnet: "null"
                       name: My resource
                       lan: 2
                       pciSlot: 7
@@ -30336,6 +30366,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -30463,6 +30494,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -30489,6 +30521,7 @@ components:
                     href: <RESOURCE-URI>
                     type: resource
                   name: My resource
+                  placementGroupId: "null"
                   cpuFamily: AMD_OPTERON
                   type: CUBE
                   availabilityZone: AUTO
@@ -30795,6 +30828,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -30922,6 +30956,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -30948,6 +30983,7 @@ components:
                     href: <RESOURCE-URI>
                     type: resource
                   name: My resource
+                  placementGroupId: "null"
                   cpuFamily: AMD_OPTERON
                   type: CUBE
                   availabilityZone: AUTO
@@ -31186,6 +31222,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -31313,6 +31350,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -31473,6 +31511,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -31600,6 +31639,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -32030,6 +32070,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -32157,6 +32198,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -32312,6 +32354,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -32439,6 +32482,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -33121,6 +33165,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -33248,6 +33293,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -33274,6 +33320,7 @@ components:
                     href: <RESOURCE-URI>
                     type: resource
                   name: My resource
+                  placementGroupId: "null"
                   cpuFamily: AMD_OPTERON
                   type: CUBE
                   availabilityZone: AUTO
@@ -33580,6 +33627,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -33707,6 +33755,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -33733,6 +33782,7 @@ components:
                     href: <RESOURCE-URI>
                     type: resource
                   name: My resource
+                  placementGroupId: "null"
                   cpuFamily: AMD_OPTERON
                   type: CUBE
                   availabilityZone: AUTO
@@ -33971,6 +34021,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -34098,6 +34149,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -34258,6 +34310,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -34385,6 +34438,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -34815,6 +34869,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -34942,6 +34997,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -35097,6 +35153,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -35224,6 +35281,7 @@ components:
                       href: <RESOURCE-URI>
                       type: nic
                       properties:
+                        vnet: "null"
                         name: My resource
                         lan: 2
                         pciSlot: 7
@@ -35872,6 +35930,7 @@ components:
             href: <RESOURCE-URI>
             type: nic
             properties:
+              vnet: "null"
               name: My resource
               lan: 2
               pciSlot: 7
@@ -35999,6 +36058,7 @@ components:
             href: <RESOURCE-URI>
             type: nic
             properties:
+              vnet: "null"
               name: My resource
               lan: 2
               pciSlot: 7
@@ -36142,6 +36202,7 @@ components:
           href: <RESOURCE-URI>
           type: nic
           properties:
+            vnet: "null"
             name: My resource
             lan: 2
             pciSlot: 7
@@ -36269,6 +36330,7 @@ components:
           href: <RESOURCE-URI>
           type: nic
           properties:
+            vnet: "null"
             name: My resource
             lan: 2
             pciSlot: 7
@@ -36484,6 +36546,7 @@ components:
               href: <RESOURCE-URI>
               type: nic
               properties:
+                vnet: "null"
                 name: My resource
                 lan: 2
                 pciSlot: 7
@@ -36611,6 +36674,7 @@ components:
               href: <RESOURCE-URI>
               type: nic
               properties:
+                vnet: "null"
                 name: My resource
                 lan: 2
                 pciSlot: 7
@@ -36800,6 +36864,7 @@ components:
               href: <RESOURCE-URI>
               type: nic
               properties:
+                vnet: "null"
                 name: My resource
                 lan: 2
                 pciSlot: 7
@@ -36927,6 +36992,7 @@ components:
               href: <RESOURCE-URI>
               type: nic
               properties:
+                vnet: "null"
                 name: My resource
                 lan: 2
                 pciSlot: 7
@@ -37126,6 +37192,7 @@ components:
                 href: <RESOURCE-URI>
                 type: nic
                 properties:
+                  vnet: "null"
                   name: My resource
                   lan: 2
                   pciSlot: 7
@@ -37253,6 +37320,7 @@ components:
                 href: <RESOURCE-URI>
                 type: nic
                 properties:
+                  vnet: "null"
                   name: My resource
                   lan: 2
                   pciSlot: 7
@@ -37413,6 +37481,7 @@ components:
                 href: <RESOURCE-URI>
                 type: nic
                 properties:
+                  vnet: "null"
                   name: My resource
                   lan: 2
                   pciSlot: 7
@@ -37540,6 +37609,7 @@ components:
                 href: <RESOURCE-URI>
                 type: nic
                 properties:
+                  vnet: "null"
                   name: My resource
                   lan: 2
                   pciSlot: 7
@@ -37737,6 +37807,7 @@ components:
               href: <RESOURCE-URI>
               type: nic
               properties:
+                vnet: "null"
                 name: My resource
                 lan: 2
                 pciSlot: 7
@@ -37864,6 +37935,7 @@ components:
               href: <RESOURCE-URI>
               type: nic
               properties:
+                vnet: "null"
                 name: My resource
                 lan: 2
                 pciSlot: 7
@@ -38038,6 +38110,7 @@ components:
             href: <RESOURCE-URI>
             type: nic
             properties:
+              vnet: "null"
               name: My resource
               lan: 2
               pciSlot: 7
@@ -38165,6 +38238,7 @@ components:
             href: <RESOURCE-URI>
             type: nic
             properties:
+              vnet: "null"
               name: My resource
               lan: 2
               pciSlot: 7
@@ -38351,6 +38425,7 @@ components:
                 href: <RESOURCE-URI>
                 type: nic
                 properties:
+                  vnet: "null"
                   name: My resource
                   lan: 2
                   pciSlot: 7
@@ -38478,6 +38553,7 @@ components:
                 href: <RESOURCE-URI>
                 type: nic
                 properties:
+                  vnet: "null"
                   name: My resource
                   lan: 2
                   pciSlot: 7
@@ -38633,6 +38709,7 @@ components:
                 href: <RESOURCE-URI>
                 type: nic
                 properties:
+                  vnet: "null"
                   name: My resource
                   lan: 2
                   pciSlot: 7
@@ -38760,6 +38837,7 @@ components:
                 href: <RESOURCE-URI>
                 type: nic
                 properties:
+                  vnet: "null"
                   name: My resource
                   lan: 2
                   pciSlot: 7
@@ -38931,6 +39009,7 @@ components:
         href: <RESOURCE-URI>
         type: nic
         properties:
+          vnet: "null"
           name: My resource
           lan: 2
           pciSlot: 7
@@ -39081,6 +39160,7 @@ components:
       type: object
     NicProperties:
       example:
+        vnet: "null"
         name: My resource
         lan: 2
         pciSlot: 7
@@ -39150,6 +39230,11 @@ components:
           format: int32
           readOnly: true
           type: integer
+        vnet:
+          description: The vnet ID that belongs to this NIC; Requires system privileges
+          example: "null"
+          type: string
+          x-internal: true
       required:
       - lan
       type: object
@@ -39281,6 +39366,7 @@ components:
           href: <RESOURCE-URI>
           type: nic
           properties:
+            vnet: "null"
             name: My resource
             lan: 2
             pciSlot: 7
@@ -39408,6 +39494,7 @@ components:
           href: <RESOURCE-URI>
           type: nic
           properties:
+            vnet: "null"
             name: My resource
             lan: 2
             pciSlot: 7
@@ -39459,6 +39546,7 @@ components:
         href: <RESOURCE-URI>
         type: nic
         properties:
+          vnet: "null"
           name: My resource
           lan: 2
           pciSlot: 7
@@ -39810,6 +39898,7 @@ components:
             href: <RESOURCE-URI>
             type: nic
             properties:
+              vnet: "null"
               name: My resource
               lan: 2
               pciSlot: 7
@@ -39937,6 +40026,7 @@ components:
             href: <RESOURCE-URI>
             type: nic
             properties:
+              vnet: "null"
               name: My resource
               lan: 2
               pciSlot: 7
@@ -39969,6 +40059,7 @@ components:
           href: <RESOURCE-URI>
           type: resource
         name: My resource
+        placementGroupId: "null"
         cpuFamily: AMD_OPTERON
         type: CUBE
         availabilityZone: AUTO
@@ -39999,6 +40090,12 @@ components:
           example: 4096
           format: int32
           type: integer
+        placementGroupId:
+          description: The placement group ID that belongs to this server; Requires
+            system privileges
+          example: "null"
+          type: string
+          x-internal: true
         availabilityZone:
           description: The availability zone in which the server should be provisioned.
           enum:
@@ -42704,6 +42801,7 @@ components:
               href: <RESOURCE-URI>
               type: nic
               properties:
+                vnet: "null"
                 name: My resource
                 lan: 2
                 pciSlot: 7
@@ -42831,6 +42929,7 @@ components:
               href: <RESOURCE-URI>
               type: nic
               properties:
+                vnet: "null"
                 name: My resource
                 lan: 2
                 pciSlot: 7
@@ -42857,6 +42956,7 @@ components:
             href: <RESOURCE-URI>
             type: resource
           name: My resource
+          placementGroupId: "null"
           cpuFamily: AMD_OPTERON
           type: CUBE
           availabilityZone: AUTO
@@ -43202,6 +43302,7 @@ components:
                 href: <RESOURCE-URI>
                 type: nic
                 properties:
+                  vnet: "null"
                   name: My resource
                   lan: 2
                   pciSlot: 7
@@ -43329,6 +43430,7 @@ components:
                 href: <RESOURCE-URI>
                 type: nic
                 properties:
+                  vnet: "null"
                   name: My resource
                   lan: 2
                   pciSlot: 7
@@ -43355,6 +43457,7 @@ components:
               href: <RESOURCE-URI>
               type: resource
             name: My resource
+            placementGroupId: "null"
             cpuFamily: AMD_OPTERON
             type: CUBE
             availabilityZone: AUTO
@@ -43661,6 +43764,7 @@ components:
                 href: <RESOURCE-URI>
                 type: nic
                 properties:
+                  vnet: "null"
                   name: My resource
                   lan: 2
                   pciSlot: 7
@@ -43788,6 +43892,7 @@ components:
                 href: <RESOURCE-URI>
                 type: nic
                 properties:
+                  vnet: "null"
                   name: My resource
                   lan: 2
                   pciSlot: 7
@@ -43814,6 +43919,7 @@ components:
               href: <RESOURCE-URI>
               type: resource
             name: My resource
+            placementGroupId: "null"
             cpuFamily: AMD_OPTERON
             type: CUBE
             availabilityZone: AUTO

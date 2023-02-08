@@ -23,6 +23,25 @@ Delete LANs
 
 Delete the specified LAN within the data center.
 
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **lanId** | **String**| The unique ID of the LAN. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+null (empty response body)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
 ### Example
 ```java
 // Import classes:
@@ -51,6 +70,7 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.datacentersLansDelete(datacenterId, lanId, pretty, depth, xContractNumber);
+      System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LansApi#datacentersLansDelete");
       System.err.println("Status code: " + e.getCode());
@@ -61,25 +81,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **lanId** | **String**| The unique ID of the LAN. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-null (empty response body)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        apiInstance.datacentersLansDelete(datacenterId, lanId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling LansApi#datacentersLansDelete");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersLansFindById"></a>
 # **datacentersLansFindById**
@@ -88,6 +109,25 @@ null (empty response body)
 Retrieve LANs
 
 Retrieve the properties of the specified LAN within the data center.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **lanId** | **String**| The unique ID of the LAN. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**Lan**](../models/Lan.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -128,25 +168,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **lanId** | **String**| The unique ID of the LAN. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Lan**](../models/Lan.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        Lan result = apiInstance.datacentersLansFindById(datacenterId, lanId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling LansApi#datacentersLansFindById");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersLansGet"></a>
 # **datacentersLansGet**
@@ -155,6 +196,29 @@ public class Example {
 List LANs
 
 List all LANs within the data center.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0]|
+| **limit** | **Integer**| The maximum number of elements to return (use together with offset for pagination). | [optional] [default to 1000]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**Lans**](../models/Lans.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -183,8 +247,11 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Lans result = apiInstance.datacentersLansGet(datacenterId, pretty, depth, xContractNumber, offset, limit);
+      Lans result = apiInstance.datacentersLansGet(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LansApi#datacentersLansGet");
@@ -196,26 +263,31 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0]
-| **limit** | **Integer**| The maximum number of elements to return (use together with offset for pagination). | [optional] [default to 1000]
-
-### Return type
-
-[**Lans**](../models/Lans.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        Lans result = apiInstance.datacentersLansGet(datacenterId)
+                .pretty(true)
+                .depth(0)
+                .offset(0)
+                .limit(1000)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling LansApi#datacentersLansGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersLansNicsFindById"></a>
 # **datacentersLansNicsFindById**
@@ -224,6 +296,26 @@ public class Example {
 Retrieve attached NICs
 
 Retrieve the properties of the NIC, attached to the specified LAN.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **lanId** | **String**| The unique ID of the LAN. ||
+| **nicId** | **String**| The unique ID of the NIC. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**Nic**](../models/Nic.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -265,26 +357,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **lanId** | **String**| The unique ID of the LAN. |
-| **nicId** | **String**| The unique ID of the NIC. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Nic**](../models/Nic.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        Nic result = apiInstance.datacentersLansNicsFindById(datacenterId, lanId, nicId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling LansApi#datacentersLansNicsFindById");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersLansNicsGet"></a>
 # **datacentersLansNicsGet**
@@ -293,6 +385,30 @@ public class Example {
 List LAN members
 
 List all NICs, attached to the specified LAN.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **lanId** | **String**| The unique ID of the LAN. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0]|
+| **limit** | **Integer**| The maximum number of elements to return (use together with offset for pagination). | [optional] [default to 1000]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**LanNics**](../models/LanNics.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -322,8 +438,11 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      LanNics result = apiInstance.datacentersLansNicsGet(datacenterId, lanId, pretty, depth, xContractNumber, offset, limit);
+      LanNics result = apiInstance.datacentersLansNicsGet(datacenterId, lanId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling LansApi#datacentersLansNicsGet");
@@ -335,27 +454,31 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **lanId** | **String**| The unique ID of the LAN. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0]
-| **limit** | **Integer**| The maximum number of elements to return (use together with offset for pagination). | [optional] [default to 1000]
-
-### Return type
-
-[**LanNics**](../models/LanNics.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        LanNics result = apiInstance.datacentersLansNicsGet(datacenterId, lanId)
+                .pretty(true)
+                .depth(0)
+                .offset(0)
+                .limit(1000)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling LansApi#datacentersLansNicsGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersLansNicsPost"></a>
 # **datacentersLansNicsPost**
@@ -364,6 +487,26 @@ public class Example {
 Attach NICs
 
 Attach an existing NIC to the specified LAN.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **lanId** | **String**| The unique ID of the LAN. ||
+| **nic** |  [**Nic**](../models/Nic.md)| The NIC to be attached. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**Nic**](../models/Nic.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -405,26 +548,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **lanId** | **String**| The unique ID of the LAN. |
-| **nic** |  [**Nic**](Nic.md)| The NIC to be attached. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Nic**](../models/Nic.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        Nic result = apiInstance.datacentersLansNicsPost(datacenterId, lanId, nic)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling LansApi#datacentersLansNicsPost");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersLansPatch"></a>
 # **datacentersLansPatch**
@@ -433,6 +576,26 @@ public class Example {
 Partially modify LANs
 
 Update the properties of the specified LAN within the data center.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **lanId** | **String**| The unique ID of the LAN. ||
+| **lan** |  [**LanProperties**](../models/LanProperties.md)| The properties of the LAN to be updated. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**Lan**](../models/Lan.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -474,26 +637,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **lanId** | **String**| The unique ID of the LAN. |
-| **lan** |  [**LanProperties**](LanProperties.md)| The properties of the LAN to be updated. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Lan**](../models/Lan.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        Lan result = apiInstance.datacentersLansPatch(datacenterId, lanId, lan)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling LansApi#datacentersLansPatch");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersLansPost"></a>
 # **datacentersLansPost**
@@ -502,6 +665,25 @@ public class Example {
 Create LANs
 
 Create a LAN within the data center.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **lan** |  [**LanPost**](../models/LanPost.md)| The LAN to create. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**LanPost**](../models/LanPost.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -542,25 +724,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **lan** |  [**LanPost**](LanPost.md)| The LAN to create. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**LanPost**](../models/LanPost.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        LanPost result = apiInstance.datacentersLansPost(datacenterId, lan)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling LansApi#datacentersLansPost");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="datacentersLansPut"></a>
 # **datacentersLansPut**
@@ -569,6 +752,26 @@ public class Example {
 Modify LANs
 
 Modify the properties of the specified LAN within the data center.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **String**| The unique ID of the data center. ||
+| **lanId** | **String**| The unique ID of the LAN. ||
+| **lan** |  [**Lan**](../models/Lan.md)| The modified LAN ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**Lan**](../models/Lan.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -610,24 +813,24 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **datacenterId** | **String**| The unique ID of the data center. |
-| **lanId** | **String**| The unique ID of the LAN. |
-| **lan** |  [**Lan**](Lan.md)| The modified LAN |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Lan**](../models/Lan.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        Lan result = apiInstance.datacentersLansPut(datacenterId, lanId, lan)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling LansApi#datacentersLansPut");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 

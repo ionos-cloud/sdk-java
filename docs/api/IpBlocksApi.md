@@ -20,6 +20,24 @@ Delete IP blocks
 
 Remove the specified IP block.
 
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ipblockId** | **String**| The unique ID of the IP block. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+null (empty response body)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
 ### Example
 ```java
 // Import classes:
@@ -47,6 +65,7 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.ipblocksDelete(ipblockId, pretty, depth, xContractNumber);
+      System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksDelete");
       System.err.println("Status code: " + e.getCode());
@@ -57,24 +76,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **ipblockId** | **String**| The unique ID of the IP block. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-null (empty response body)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        apiInstance.ipblocksDelete(ipblockId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling IpBlocksApi#ipblocksDelete");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="ipblocksFindById"></a>
 # **ipblocksFindById**
@@ -83,6 +104,24 @@ null (empty response body)
 Retrieve IP blocks
 
 Retrieve the properties of the specified IP block.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ipblockId** | **String**| The unique ID of the IP block. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**IpBlock**](../models/IpBlock.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -122,24 +161,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **ipblockId** | **String**| The unique ID of the IP block. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**IpBlock**](../models/IpBlock.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        IpBlock result = apiInstance.ipblocksFindById(ipblockId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling IpBlocksApi#ipblocksFindById");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="ipblocksGet"></a>
 # **ipblocksGet**
@@ -148,6 +189,28 @@ public class Example {
 List IP blocks 
 
 List all reserved IP blocks.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0]|
+| **limit** | **Integer**| The maximum number of elements to return (use together with offset for pagination). | [optional] [default to 100]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**IpBlocks**](../models/IpBlocks.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -175,8 +238,11 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 100; // Integer | The maximum number of elements to return (use together with offset for pagination).
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      IpBlocks result = apiInstance.ipblocksGet(pretty, depth, xContractNumber, offset, limit);
+      IpBlocks result = apiInstance.ipblocksGet(pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling IpBlocksApi#ipblocksGet");
@@ -188,25 +254,31 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0]
-| **limit** | **Integer**| The maximum number of elements to return (use together with offset for pagination). | [optional] [default to 100]
-
-### Return type
-
-[**IpBlocks**](../models/IpBlocks.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        IpBlocks result = apiInstance.ipblocksGet()
+                .pretty(true)
+                .depth(0)
+                .offset(0)
+                .limit(100)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling IpBlocksApi#ipblocksGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="ipblocksPatch"></a>
 # **ipblocksPatch**
@@ -215,6 +287,25 @@ public class Example {
 Partially modify IP blocks
 
 Update the properties of the specified IP block.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ipblockId** | **String**| The unique ID of the IP block. ||
+| **ipblock** |  [**IpBlockProperties**](../models/IpBlockProperties.md)| The properties of the IP block to be updated. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**IpBlock**](../models/IpBlock.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -255,25 +346,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **ipblockId** | **String**| The unique ID of the IP block. |
-| **ipblock** |  [**IpBlockProperties**](IpBlockProperties.md)| The properties of the IP block to be updated. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**IpBlock**](../models/IpBlock.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        IpBlock result = apiInstance.ipblocksPatch(ipblockId, ipblock)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling IpBlocksApi#ipblocksPatch");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="ipblocksPost"></a>
 # **ipblocksPost**
@@ -282,6 +374,24 @@ public class Example {
 Reserve IP blocks
 
 Reserve a new IP block.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ipblock** |  [**IpBlock**](../models/IpBlock.md)| The IP block to be reserved. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**IpBlock**](../models/IpBlock.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -321,24 +431,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **ipblock** |  [**IpBlock**](IpBlock.md)| The IP block to be reserved. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**IpBlock**](../models/IpBlock.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        IpBlock result = apiInstance.ipblocksPost(ipblock)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling IpBlocksApi#ipblocksPost");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="ipblocksPut"></a>
 # **ipblocksPut**
@@ -347,6 +459,25 @@ public class Example {
 Modify IP blocks
 
 Modify the properties of the specified IP block.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ipblockId** | **String**| The unique ID of the IP block. ||
+| **ipblock** |  [**IpBlock**](../models/IpBlock.md)| The modified IP block. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**IpBlock**](../models/IpBlock.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -387,23 +518,24 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **ipblockId** | **String**| The unique ID of the IP block. |
-| **ipblock** |  [**IpBlock**](IpBlock.md)| The modified IP block. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**IpBlock**](../models/IpBlock.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        IpBlock result = apiInstance.ipblocksPut(ipblockId, ipblock)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling IpBlocksApi#ipblocksPut");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 

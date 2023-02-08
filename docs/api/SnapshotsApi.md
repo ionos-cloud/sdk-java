@@ -19,6 +19,24 @@ Delete snapshots
 
 Deletes the specified snapshot.
 
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **snapshotId** | **String**| The unique ID of the snapshot. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+null (empty response body)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
 ### Example
 ```java
 // Import classes:
@@ -46,6 +64,7 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.snapshotsDelete(snapshotId, pretty, depth, xContractNumber);
+      System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SnapshotsApi#snapshotsDelete");
       System.err.println("Status code: " + e.getCode());
@@ -56,24 +75,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **snapshotId** | **String**| The unique ID of the snapshot. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-null (empty response body)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        apiInstance.snapshotsDelete(snapshotId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling SnapshotsApi#snapshotsDelete");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="snapshotsFindById"></a>
 # **snapshotsFindById**
@@ -82,6 +103,24 @@ null (empty response body)
 Retrieve snapshots by ID
 
 Retrieve the properties of the specified snapshot.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **snapshotId** | **String**| The unique ID of the snapshot. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**Snapshot**](../models/Snapshot.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -121,24 +160,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **snapshotId** | **String**| The unique ID of the snapshot. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Snapshot**](../models/Snapshot.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        Snapshot result = apiInstance.snapshotsFindById(snapshotId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling SnapshotsApi#snapshotsFindById");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="snapshotsGet"></a>
 # **snapshotsGet**
@@ -147,6 +188,26 @@ public class Example {
 List snapshots
 
 List all available snapshots.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**Snapshots**](../models/Snapshots.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -172,8 +233,11 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Snapshots result = apiInstance.snapshotsGet(pretty, depth, xContractNumber);
+      Snapshots result = apiInstance.snapshotsGet(pretty, depth, xContractNumber, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling SnapshotsApi#snapshotsGet");
@@ -185,23 +249,29 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Snapshots**](../models/Snapshots.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        Snapshots result = apiInstance.snapshotsGet()
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling SnapshotsApi#snapshotsGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="snapshotsPatch"></a>
 # **snapshotsPatch**
@@ -210,6 +280,25 @@ public class Example {
 Partially modify snapshots
 
 Update the properties of the specified snapshot.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **snapshotId** | **String**| The unique ID of the snapshot. ||
+| **snapshot** |  [**SnapshotProperties**](../models/SnapshotProperties.md)| The properties of the snapshot to be updated. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**Snapshot**](../models/Snapshot.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -250,25 +339,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **snapshotId** | **String**| The unique ID of the snapshot. |
-| **snapshot** |  [**SnapshotProperties**](SnapshotProperties.md)| The properties of the snapshot to be updated. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Snapshot**](../models/Snapshot.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        Snapshot result = apiInstance.snapshotsPatch(snapshotId, snapshot)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling SnapshotsApi#snapshotsPatch");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="snapshotsPut"></a>
 # **snapshotsPut**
@@ -277,6 +367,25 @@ public class Example {
 Modify snapshots
 
 Modify the properties of the specified snapshot.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **snapshotId** | **String**| The unique ID of the snapshot. ||
+| **snapshot** |  [**Snapshot**](../models/Snapshot.md)| The modified snapshot ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**Snapshot**](../models/Snapshot.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -317,23 +426,24 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **snapshotId** | **String**| The unique ID of the snapshot. |
-| **snapshot** |  [**Snapshot**](Snapshot.md)| The modified snapshot |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Snapshot**](../models/Snapshot.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        Snapshot result = apiInstance.snapshotsPut(snapshotId, snapshot)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling SnapshotsApi#snapshotsPut");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 

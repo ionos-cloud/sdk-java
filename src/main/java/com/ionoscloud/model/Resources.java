@@ -33,7 +33,7 @@ import java.util.List;
  * Collection to represent the resource.
  */
 @ApiModel(description = "Collection to represent the resource.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-29T14:52:45.187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
 
 public class Resources {
   

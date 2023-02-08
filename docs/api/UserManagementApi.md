@@ -38,6 +38,24 @@ Delete groups
 
 Remove the specified group.
 
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **groupId** | **String**| The unique ID of the group. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+null (empty response body)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
 ### Example
 ```java
 // Import classes:
@@ -65,6 +83,7 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.umGroupsDelete(groupId, pretty, depth, xContractNumber);
+      System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsDelete");
       System.err.println("Status code: " + e.getCode());
@@ -75,24 +94,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The unique ID of the group. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-null (empty response body)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        apiInstance.umGroupsDelete(groupId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsDelete");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umGroupsFindById"></a>
 # **umGroupsFindById**
@@ -101,6 +122,24 @@ null (empty response body)
 Retrieve groups
 
 Retrieve a group by the group ID. This value is in the response body when the group is created, and in the list of the groups, returned by GET.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **groupId** | **String**| The unique ID of the group. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**Group**](../models/Group.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -140,24 +179,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The unique ID of the group. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Group**](../models/Group.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        Group result = apiInstance.umGroupsFindById(groupId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsFindById");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umGroupsGet"></a>
 # **umGroupsGet**
@@ -166,6 +207,26 @@ public class Example {
 List all groups
 
 List all the available user groups.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**Groups**](../models/Groups.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -191,8 +252,11 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Groups result = apiInstance.umGroupsGet(pretty, depth, xContractNumber);
+      Groups result = apiInstance.umGroupsGet(pretty, depth, xContractNumber, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsGet");
@@ -204,23 +268,29 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Groups**](../models/Groups.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        Groups result = apiInstance.umGroupsGet()
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umGroupsPost"></a>
 # **umGroupsPost**
@@ -229,6 +299,24 @@ public class Example {
 Create groups
 
 Create a group.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **group** |  [**Group**](../models/Group.md)| The group to create. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**Group**](../models/Group.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -268,24 +356,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **group** |  [**Group**](Group.md)| The group to create. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Group**](../models/Group.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        Group result = apiInstance.umGroupsPost(group)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsPost");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umGroupsPut"></a>
 # **umGroupsPut**
@@ -294,6 +384,25 @@ public class Example {
 Modify groups
 
 Modify the properties of the specified group.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **groupId** | **String**| The unique ID of the group. ||
+| **group** |  [**Group**](../models/Group.md)| The modified group. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**Group**](../models/Group.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -334,25 +443,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The unique ID of the group. |
-| **group** |  [**Group**](Group.md)| The modified group. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Group**](../models/Group.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        Group result = apiInstance.umGroupsPut(groupId, group)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsPut");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umGroupsResourcesGet"></a>
 # **umGroupsResourcesGet**
@@ -361,6 +471,27 @@ public class Example {
 Retrieve group resources
 
 List the resources assigned to the group, by group ID.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **groupId** | **String**| The unique ID of the group. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**ResourceGroups**](../models/ResourceGroups.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -387,8 +518,11 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      ResourceGroups result = apiInstance.umGroupsResourcesGet(groupId, pretty, depth, xContractNumber);
+      ResourceGroups result = apiInstance.umGroupsResourcesGet(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsResourcesGet");
@@ -400,24 +534,29 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The unique ID of the group. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**ResourceGroups**](../models/ResourceGroups.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        ResourceGroups result = apiInstance.umGroupsResourcesGet(groupId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsResourcesGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umGroupsSharesDelete"></a>
 # **umGroupsSharesDelete**
@@ -426,6 +565,25 @@ public class Example {
 Remove group shares
 
 Remove the specified share from the group.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **groupId** | **String**| The unique ID of the group. ||
+| **resourceId** | **String**| The unique ID of the resource. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+null (empty response body)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -455,6 +613,7 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.umGroupsSharesDelete(groupId, resourceId, pretty, depth, xContractNumber);
+      System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsSharesDelete");
       System.err.println("Status code: " + e.getCode());
@@ -465,25 +624,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The unique ID of the group. |
-| **resourceId** | **String**| The unique ID of the resource. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-null (empty response body)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        apiInstance.umGroupsSharesDelete(groupId, resourceId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsSharesDelete");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umGroupsSharesFindByResourceId"></a>
 # **umGroupsSharesFindByResourceId**
@@ -492,6 +652,25 @@ null (empty response body)
 Retrieve group shares
 
 Retrieve the properties of the specified group share.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **groupId** | **String**| The unique ID of the group. ||
+| **resourceId** | **String**| The unique ID of the resource. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**GroupShare**](../models/GroupShare.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -532,25 +711,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The unique ID of the group. |
-| **resourceId** | **String**| The unique ID of the resource. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**GroupShare**](../models/GroupShare.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        GroupShare result = apiInstance.umGroupsSharesFindByResourceId(groupId, resourceId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsSharesFindByResourceId");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umGroupsSharesGet"></a>
 # **umGroupsSharesGet**
@@ -559,6 +739,27 @@ public class Example {
 List group shares 
 
 List all shares and share privileges for the specified group.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **groupId** | **String**| The unique ID of the group. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**GroupShares**](../models/GroupShares.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -585,8 +786,11 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      GroupShares result = apiInstance.umGroupsSharesGet(groupId, pretty, depth, xContractNumber);
+      GroupShares result = apiInstance.umGroupsSharesGet(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsSharesGet");
@@ -598,24 +802,29 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The unique ID of the group. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**GroupShares**](../models/GroupShares.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        GroupShares result = apiInstance.umGroupsSharesGet(groupId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsSharesGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umGroupsSharesPost"></a>
 # **umGroupsSharesPost**
@@ -624,6 +833,26 @@ public class Example {
 Add group shares
 
 Add the specified share to the group.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **groupId** | **String**| The unique ID of the group. ||
+| **resourceId** | **String**| The unique ID of the resource. ||
+| **resource** |  [**GroupShare**](../models/GroupShare.md)| The resource to add. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**GroupShare**](../models/GroupShare.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -665,26 +894,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The unique ID of the group. |
-| **resourceId** | **String**| The unique ID of the resource. |
-| **resource** |  [**GroupShare**](GroupShare.md)| The resource to add. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**GroupShare**](../models/GroupShare.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        GroupShare result = apiInstance.umGroupsSharesPost(groupId, resourceId, resource)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsSharesPost");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umGroupsSharesPut"></a>
 # **umGroupsSharesPut**
@@ -693,6 +922,26 @@ public class Example {
 Modify group share privileges
 
 Modify share permissions for the specified group. With an empty body, no updates are performed, and the current share permissions for the group are returned with response code 200.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **groupId** | **String**| The unique ID of the group. ||
+| **resourceId** | **String**| The unique ID of the resource. ||
+| **resource** |  [**GroupShare**](../models/GroupShare.md)| The modified resource ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**GroupShare**](../models/GroupShare.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -734,26 +983,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The unique ID of the group. |
-| **resourceId** | **String**| The unique ID of the resource. |
-| **resource** |  [**GroupShare**](GroupShare.md)| The modified resource |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**GroupShare**](../models/GroupShare.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        GroupShare result = apiInstance.umGroupsSharesPut(groupId, resourceId, resource)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsSharesPut");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umGroupsUsersDelete"></a>
 # **umGroupsUsersDelete**
@@ -762,6 +1011,25 @@ public class Example {
 Remove users from groups
 
 Remove the specified user from the group.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **groupId** | **String**| The unique ID of the group. ||
+| **userId** | **String**| The unique ID of the user. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+null (empty response body)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -791,6 +1059,7 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.umGroupsUsersDelete(groupId, userId, pretty, depth, xContractNumber);
+      System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsUsersDelete");
       System.err.println("Status code: " + e.getCode());
@@ -801,25 +1070,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The unique ID of the group. |
-| **userId** | **String**| The unique ID of the user. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-null (empty response body)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        apiInstance.umGroupsUsersDelete(groupId, userId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsUsersDelete");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umGroupsUsersGet"></a>
 # **umGroupsUsersGet**
@@ -828,6 +1098,27 @@ null (empty response body)
 List group members
 
 List all members of the specified user group.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **groupId** | **String**| The unique ID of the group. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**GroupMembers**](../models/GroupMembers.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -854,8 +1145,11 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      GroupMembers result = apiInstance.umGroupsUsersGet(groupId, pretty, depth, xContractNumber);
+      GroupMembers result = apiInstance.umGroupsUsersGet(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsUsersGet");
@@ -867,24 +1161,29 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The unique ID of the group. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**GroupMembers**](../models/GroupMembers.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        GroupMembers result = apiInstance.umGroupsUsersGet(groupId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsUsersGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umGroupsUsersPost"></a>
 # **umGroupsUsersPost**
@@ -893,6 +1192,25 @@ public class Example {
 Add group members
 
 Add an existing user to the specified group. 
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **groupId** | **String**| The unique ID of the group. ||
+| **user** |  [**User**](../models/User.md)| The user to add. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**User**](../models/User.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -933,25 +1251,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **groupId** | **String**| The unique ID of the group. |
-| **user** |  [**User**](User.md)| The user to add. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**User**](../models/User.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        User result = apiInstance.umGroupsUsersPost(groupId, user)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umGroupsUsersPost");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umResourcesFindByType"></a>
 # **umResourcesFindByType**
@@ -960,6 +1279,24 @@ public class Example {
 List resources by type
 
 List all resources of the specified type.  Resource types are: {datacenter, snapshot, image, ipblock, pcc, backupunit, k8s}  Resource types are in the list of resources, returned by GET.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **resourceType** | **String**| The resource type ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**Resources**](../models/Resources.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -999,24 +1336,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **resourceType** | **String**| The resource type |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Resources**](../models/Resources.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        Resources result = apiInstance.umResourcesFindByType(resourceType)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umResourcesFindByType");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umResourcesFindByTypeAndId"></a>
 # **umResourcesFindByTypeAndId**
@@ -1025,6 +1364,25 @@ public class Example {
 Retrieve resources by type
 
 Retrieve a resource by the resource type and resource ID.  Resource types are: {datacenter, snapshot, image, ipblock, pcc, backupunit, k8s}  Resource types are in the list of resources, returned by GET.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **resourceType** | **String**| The resource type ||
+| **resourceId** | **String**| The resource ID ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**Resource**](../models/Resource.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -1065,25 +1423,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **resourceType** | **String**| The resource type |
-| **resourceId** | **String**| The resource ID |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Resource**](../models/Resource.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        Resource result = apiInstance.umResourcesFindByTypeAndId(resourceType, resourceId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umResourcesFindByTypeAndId");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umResourcesGet"></a>
 # **umResourcesGet**
@@ -1092,6 +1451,26 @@ public class Example {
 List all resources
 
 List all the available resources.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**Resources**](../models/Resources.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -1117,8 +1496,11 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Resources result = apiInstance.umResourcesGet(pretty, depth, xContractNumber);
+      Resources result = apiInstance.umResourcesGet(pretty, depth, xContractNumber, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umResourcesGet");
@@ -1130,23 +1512,29 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**Resources**](../models/Resources.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        Resources result = apiInstance.umResourcesGet()
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umResourcesGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umUsersDelete"></a>
 # **umUsersDelete**
@@ -1155,6 +1543,24 @@ public class Example {
 Delete users
 
 Delete the specified user.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| The unique ID of the user. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+null (empty response body)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -1183,6 +1589,7 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
       apiInstance.umUsersDelete(userId, pretty, depth, xContractNumber);
+      System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersDelete");
       System.err.println("Status code: " + e.getCode());
@@ -1193,24 +1600,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| The unique ID of the user. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-null (empty response body)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        apiInstance.umUsersDelete(userId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umUsersDelete");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umUsersFindById"></a>
 # **umUsersFindById**
@@ -1219,6 +1628,24 @@ null (empty response body)
 Retrieve users
 
 Retrieve user properties by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| The unique ID of the user. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**User**](../models/User.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -1258,24 +1685,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| The unique ID of the user. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**User**](../models/User.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        User result = apiInstance.umUsersFindById(userId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umUsersFindById");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umUsersGet"></a>
 # **umUsersGet**
@@ -1284,6 +1713,28 @@ public class Example {
 List all users 
 
 List all the users in your account.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0]|
+| **limit** | **Integer**| The maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination). | [optional] [default to 100]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**Users**](../models/Users.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -1311,8 +1762,11 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 100; // Integer | The maximum number of elements to return (use together with <code>offset</code> for pagination).
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Users result = apiInstance.umUsersGet(pretty, depth, xContractNumber, offset, limit);
+      Users result = apiInstance.umUsersGet(pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersGet");
@@ -1324,25 +1778,31 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-| **offset** | **Integer**| The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional] [default to 0]
-| **limit** | **Integer**| The maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination). | [optional] [default to 100]
-
-### Return type
-
-[**Users**](../models/Users.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        Users result = apiInstance.umUsersGet()
+                .pretty(true)
+                .depth(0)
+                .offset(0)
+                .limit(100)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umUsersGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umUsersGroupsGet"></a>
 # **umUsersGroupsGet**
@@ -1351,6 +1811,27 @@ public class Example {
 Retrieve group resources by user ID
 
 Retrieve group resources of the user by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| The unique ID of the user. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**ResourceGroups**](../models/ResourceGroups.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -1377,8 +1858,11 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      ResourceGroups result = apiInstance.umUsersGroupsGet(userId, pretty, depth, xContractNumber);
+      ResourceGroups result = apiInstance.umUsersGroupsGet(userId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersGroupsGet");
@@ -1390,24 +1874,29 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| The unique ID of the user. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**ResourceGroups**](../models/ResourceGroups.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        ResourceGroups result = apiInstance.umUsersGroupsGet(userId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umUsersGroupsGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umUsersOwnsGet"></a>
 # **umUsersOwnsGet**
@@ -1416,6 +1905,27 @@ public class Example {
 Retrieve user resources by user ID
 
 Retrieve own resources of the user by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| The unique ID of the user. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+| orderBy | String | Sorts the results alphanumerically in ascending order based on the specified property. | [optional] |
+| maxResults | Integer | Limits the number of results returned. | [optional] |
+| filters | Map<String, String> | Limit results to those containing a matching value for a specific property. | [optional] |
+
+### Return type
+
+[**ResourcesUsers**](../models/ResourcesUsers.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -1442,8 +1952,11 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+        String orderBy = "orderBy_example"; // String | Order by field
+        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      ResourcesUsers result = apiInstance.umUsersOwnsGet(userId, pretty, depth, xContractNumber);
+      ResourcesUsers result = apiInstance.umUsersOwnsGet(userId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
       System.out.println(result);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersOwnsGet");
@@ -1455,24 +1968,29 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| The unique ID of the user. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**ResourcesUsers**](../models/ResourcesUsers.md)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
+```java
+    try {
+        ResourcesUsers result = apiInstance.umUsersOwnsGet(userId)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .orderBy("orderBy_example")
+                .maxResults(5)
+                .filters(filters)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umUsersOwnsGet");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umUsersPost"></a>
 # **umUsersPost**
@@ -1481,6 +1999,24 @@ public class Example {
 Create users
 
 Create a user.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **user** |  [**UserPost**](../models/UserPost.md)| The user to create. ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**User**](../models/User.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -1520,24 +2056,26 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **user** |  [**UserPost**](UserPost.md)| The user to create. |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**User**](../models/User.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        User result = apiInstance.umUsersPost(user)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umUsersPost");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 
 <a name="umUsersPut"></a>
 # **umUsersPut**
@@ -1546,6 +2084,25 @@ public class Example {
 Modify users
 
 Modify the properties of the specified user.
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userId** | **String**| The unique ID of the user. ||
+| **user** |  [**UserPut**](../models/UserPut.md)| The modified user ||
+| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
+| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
+| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
+
+### Return type
+
+[**User**](../models/User.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
 
 ### Example
 ```java
@@ -1586,23 +2143,24 @@ public class Example {
   }
 }
 ```
+⚠️ **Note**: for the example above, you need to provide all parameters to the method call. Null values will resolve to the API defaults.
 
-### Parameters
+For convenience, you can alternatively use a builder, which allows to omit optional parameters:
 
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **userId** | **String**| The unique ID of the user. |
-| **user** |  [**UserPut**](UserPut.md)| The modified user |
-| **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]
-| **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]
-| **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]
-
-### Return type
-
-[**User**](../models/User.md)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
+```java
+    try {
+        User result = apiInstance.umUsersPut(userId, user)
+                .pretty(true)
+                .depth(0)
+                .xContractNumber(56)
+                .execute();
+        System.out.println(result);
+    } catch (ApiException e) {
+        System.err.println("Exception when calling UserManagementApi#umUsersPut");
+        System.err.println("Status code: " + e.getCode());
+        System.err.println("Reason: " + e.getResponseBody());
+        System.err.println("Response headers: " + e.getResponseHeaders());
+        e.printStackTrace();
+    }
+```
 

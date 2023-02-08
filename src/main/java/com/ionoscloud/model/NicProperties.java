@@ -30,7 +30,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * NicProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-08-29T14:52:45.187Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
 
 public class NicProperties {
   
@@ -343,7 +343,7 @@ public class NicProperties {
       return false;
     }
     NicProperties nicProperties = (NicProperties) o;
-    return Objects.equals(this.name, nicProperties.name) && Objects.equals(this.mac, nicProperties.mac) && Objects.equals(this.ips, nicProperties.ips) && Objects.equals(this.dhcp, nicProperties.dhcp) && Objects.equals(this.lan, nicProperties.lan) && Objects.equals(this.firewallActive, nicProperties.firewallActive) && Objects.equals(this.firewallType, nicProperties.firewallType) && Objects.equals(this.deviceNumber, nicProperties.deviceNumber) && Objects.equals(this.pciSlot, nicProperties.pciSlot);
+    return Objects.equals(this.name, nicProperties.name) && Objects.equals(this.mac, nicProperties.mac) && Objects.equals(this.ips, nicProperties.ips) && Objects.equals(this.dhcp, nicProperties.dhcp) && Objects.equals(this.lan, nicProperties.lan) && Objects.equals(this.firewallActive, nicProperties.firewallActive) && Objects.equals(this.firewallType, nicProperties.firewallType) && Objects.equals(this.deviceNumber, nicProperties.deviceNumber) && Objects.equals(this.pciSlot, nicProperties.pciSlot) && true;
   }
 
 
