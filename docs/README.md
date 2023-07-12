@@ -2,8 +2,13 @@
 
 [![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ionoscloud/ionos-cloud-sdk/badge.svg?style=plastic)](https://mvnrepository.com/artifact/com.ionoscloud/ionos-cloud-sdk)
 
-**NOTE:
-_Please consider using SDK Java v6 releases that are using IONOS Cloud API Version 6, the latest stable API version. New features and improvements will be integrated in IONOS Cloud API Version 6._**
+**IMPORTANT NOTE**: 
+
+The Java SDK v5 is deprecated and no longer maintained. Please upgrade to v6, which uses the latest stable API version. 
+
+The Java SDK **v5 will reach End of Life by September 30, 2023**. After this date, the v5 API will not be accessible. If you require any assistance, please contact our support team.
+
+---
 
 ## Overview
 
