@@ -30,72 +30,30 @@ import java.net.URI;
 /**
  * RequestStatus
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class RequestStatus {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
-
-
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
   @SerializedName(SERIALIZED_NAME_METADATA)
   private RequestStatusMetadata metadata;
 
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
+
   
-
-   /**
-   * The resource&#39;s unique identifier.
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The resource's unique identifier.")
-
-  public String getId() {
-    return id;
-  }
-
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-
-  public RequestStatus type(Type type) {
-    
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * The type of object that has been created.
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"request-status\"", value = "The type of object that has been created.")
-
-  public Type getType() {
-    return type;
-  }
-
-
-  public void setType(Type type) {
-    this.type = type;
-  }
-
-
 
    /**
    * URL to the object representation (absolute path).
@@ -111,6 +69,24 @@ public class RequestStatus {
 
   public void setHref(URI href) {
     this.href = href;
+  }
+
+
+
+   /**
+   * The resource&#39;s unique identifier.
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The resource's unique identifier.")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
   }
 
 
@@ -138,6 +114,30 @@ public class RequestStatus {
   }
 
 
+
+  public RequestStatus type(Type type) {
+    
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * The type of object that has been created.
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "\"request-status\"", value = "The type of object that has been created.")
+
+  public Type getType() {
+    return type;
+  }
+
+
+  public void setType(Type type) {
+    this.type = type;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -147,7 +147,7 @@ public class RequestStatus {
       return false;
     }
     RequestStatus requestStatus = (RequestStatus) o;
-    return Objects.equals(this.id, requestStatus.id) && Objects.equals(this.type, requestStatus.type) && Objects.equals(this.href, requestStatus.href) && Objects.equals(this.metadata, requestStatus.metadata);
+    return Objects.equals(this.href, requestStatus.href) && Objects.equals(this.id, requestStatus.id) && Objects.equals(this.metadata, requestStatus.metadata) && Objects.equals(this.type, requestStatus.type);
   }
 
 
@@ -158,13 +158,13 @@ public class RequestStatus {
     StringBuilder sb = new StringBuilder();
     sb.append("class RequestStatus {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -180,5 +180,14 @@ public class RequestStatus {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// RequestStatus instantiates a new RequestStatus object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public RequestStatus() {
+
 }
 
+
+}

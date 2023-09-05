@@ -32,23 +32,23 @@ import java.net.URI;
 /**
  * Lan
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class Lan {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
+  public static final String SERIALIZED_NAME_ENTITIES = "entities";
+  @SerializedName(SERIALIZED_NAME_ENTITIES)
+  private LanEntities entities;
 
 
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
@@ -61,50 +61,32 @@ public class Lan {
   private LanProperties properties;
 
 
-  public static final String SERIALIZED_NAME_ENTITIES = "entities";
-  @SerializedName(SERIALIZED_NAME_ENTITIES)
-  private LanEntities entities;
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
 
   
 
-   /**
-   * The resource&#39;s unique identifier.
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "5", value = "The resource's unique identifier.")
-
-  public String getId() {
-    return id;
-  }
-
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-
-  public Lan type(Type type) {
+  public Lan entities(LanEntities entities) {
     
-    this.type = type;
+    this.entities = entities;
     return this;
   }
 
    /**
-   * The type of object that has been created.
-   * @return type
+   * Get entities
+   * @return entities
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"lan\"", value = "The type of object that has been created.")
+  @ApiModelProperty(value = "")
 
-  public Type getType() {
-    return type;
+  public LanEntities getEntities() {
+    return entities;
   }
 
 
-  public void setType(Type type) {
-    this.type = type;
+  public void setEntities(LanEntities entities) {
+    this.entities = entities;
   }
 
 
@@ -123,6 +105,24 @@ public class Lan {
 
   public void setHref(URI href) {
     this.href = href;
+  }
+
+
+
+   /**
+   * The resource&#39;s unique identifier.
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "5", value = "The resource's unique identifier.")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
   }
 
 
@@ -174,26 +174,26 @@ public class Lan {
 
 
 
-  public Lan entities(LanEntities entities) {
+  public Lan type(Type type) {
     
-    this.entities = entities;
+    this.type = type;
     return this;
   }
 
    /**
-   * Get entities
-   * @return entities
+   * The type of object that has been created.
+   * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "\"lan\"", value = "The type of object that has been created.")
 
-  public LanEntities getEntities() {
-    return entities;
+  public Type getType() {
+    return type;
   }
 
 
-  public void setEntities(LanEntities entities) {
-    this.entities = entities;
+  public void setType(Type type) {
+    this.type = type;
   }
 
 
@@ -206,7 +206,7 @@ public class Lan {
       return false;
     }
     Lan lan = (Lan) o;
-    return Objects.equals(this.id, lan.id) && Objects.equals(this.type, lan.type) && Objects.equals(this.href, lan.href) && Objects.equals(this.metadata, lan.metadata) && Objects.equals(this.properties, lan.properties) && Objects.equals(this.entities, lan.entities);
+    return Objects.equals(this.entities, lan.entities) && Objects.equals(this.href, lan.href) && Objects.equals(this.id, lan.id) && Objects.equals(this.metadata, lan.metadata) && Objects.equals(this.properties, lan.properties) && Objects.equals(this.type, lan.type);
   }
 
 
@@ -217,17 +217,17 @@ public class Lan {
     StringBuilder sb = new StringBuilder();
     sb.append("class Lan {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    entities: ").append(toIndentedString(entities)).append("\n");
 
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
 
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
 
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
 
-    sb.append("    entities: ").append(toIndentedString(entities)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -243,5 +243,17 @@ public class Lan {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// Lan instantiates a new Lan object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public Lan(LanProperties Properties) {
+
+	this.properties = Properties;
 }
 
+public Lan() {
+}
+
+}

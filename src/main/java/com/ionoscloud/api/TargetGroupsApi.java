@@ -131,8 +131,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Remove target groups
-     * Remove the specified target group.
+     * Delete a Target Group by ID
+     * Deletes the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -150,8 +150,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Remove target groups
-     * Remove the specified target group.
+     * Delete a Target Group by ID
+     * Deletes the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -172,8 +172,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Remove target groups (asynchronously)
-     * Remove the specified target group.
+     * Delete a Target Group by ID (asynchronously)
+     * Deletes the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -299,8 +299,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Remove target groups
-     * Remove the specified target group.
+     * Delete a Target Group by ID
+     * Deletes the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @return APItargetGroupsDeleteRequest
      * @http.response.details
@@ -386,8 +386,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Retrieve target groups
-     * Retrieve the properties of the specified target group.
+     * Get a Target Group by ID
+     * Retrieves the properties of the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -408,8 +408,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Retrieve target groups
-     * Retrieve the properties of the specified target group.
+     * Get a Target Group by ID
+     * Retrieves the properties of the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -431,8 +431,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Retrieve target groups (asynchronously)
-     * Retrieve the properties of the specified target group.
+     * Get a Target Group by ID (asynchronously)
+     * Retrieves the properties of the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -561,8 +561,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Retrieve target groups
-     * Retrieve the properties of the specified target group.
+     * Get a Target Group by ID
+     * Retrieves the properties of the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @return APItargetgroupsFindByTargetGroupIdRequest
      * @http.response.details
@@ -660,8 +660,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * List target groups
-     * List all target groups.
+     * Get Target Groups
+     * Lists target groups.  A target group is a set of one or more registered targets. You must specify an IP address, a port number, and a weight for each target. Any object with an IP address in your VDC can be a target, for example, a VM, another load balancer, etc. You can register a target with multiple target groups.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -685,8 +685,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * List target groups
-     * List all target groups.
+     * Get Target Groups
+     * Lists target groups.  A target group is a set of one or more registered targets. You must specify an IP address, a port number, and a weight for each target. Any object with an IP address in your VDC can be a target, for example, a VM, another load balancer, etc. You can register a target with multiple target groups.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -711,8 +711,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * List target groups (asynchronously)
-     * List all target groups.
+     * Get Target Groups (asynchronously)
+     * Lists target groups.  A target group is a set of one or more registered targets. You must specify an IP address, a port number, and a weight for each target. Any object with an IP address in your VDC can be a target, for example, a VM, another load balancer, etc. You can register a target with multiple target groups.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -896,8 +896,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * List target groups
-     * List all target groups.
+     * Get Target Groups
+     * Lists target groups.  A target group is a set of one or more registered targets. You must specify an IP address, a port number, and a weight for each target. Any object with an IP address in your VDC can be a target, for example, a VM, another load balancer, etc. You can register a target with multiple target groups.
      * @return APItargetgroupsGetRequest
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -988,8 +988,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Partially modify target groups
-     * Update the properties of the specified target group.
+     * Partially Modify a Target Group by ID
+     * Updates the properties of the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param targetGroupProperties The target group properties to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1011,8 +1011,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Partially modify target groups
-     * Update the properties of the specified target group.
+     * Partially Modify a Target Group by ID
+     * Updates the properties of the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param targetGroupProperties The target group properties to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1035,8 +1035,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Partially modify target groups (asynchronously)
-     * Update the properties of the specified target group.
+     * Partially Modify a Target Group by ID (asynchronously)
+     * Updates the properties of the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param targetGroupProperties The target group properties to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1168,8 +1168,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Partially modify target groups
-     * Update the properties of the specified target group.
+     * Partially Modify a Target Group by ID
+     * Updates the properties of the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param targetGroupProperties The target group properties to be updated. (required)
      * @return APItargetgroupsPatchRequest
@@ -1255,8 +1255,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Create target groups
-     * Create a target group.
+     * Create a Target Group
+     * Creates a target group.
      * @param targetGroup The target group to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -1277,8 +1277,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Create target groups
-     * Create a target group.
+     * Create a Target Group
+     * Creates a target group.
      * @param targetGroup The target group to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -1300,8 +1300,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Create target groups (asynchronously)
-     * Create a target group.
+     * Create a Target Group (asynchronously)
+     * Creates a target group.
      * @param targetGroup The target group to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -1430,8 +1430,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Create target groups
-     * Create a target group.
+     * Create a Target Group
+     * Creates a target group.
      * @param targetGroup The target group to create. (required)
      * @return APItargetgroupsPostRequest
      * @http.response.details
@@ -1523,8 +1523,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Modify target groups
-     * Modify the properties of the specified target group.
+     * Modify a Target Group by ID
+     * Modifies the properties of the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param targetGroup The modified target group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1546,8 +1546,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Modify target groups
-     * Modify the properties of the specified target group.
+     * Modify a Target Group by ID
+     * Modifies the properties of the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param targetGroup The modified target group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1570,8 +1570,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Modify target groups (asynchronously)
-     * Modify the properties of the specified target group.
+     * Modify a Target Group by ID (asynchronously)
+     * Modifies the properties of the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param targetGroup The modified target group. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1703,8 +1703,8 @@ public class TargetGroupsApi {
     }
 
     /**
-     * Modify target groups
-     * Modify the properties of the specified target group.
+     * Modify a Target Group by ID
+     * Modifies the properties of the target group specified by its ID.
      * @param targetGroupId The unique ID of the target group. (required)
      * @param targetGroup The modified target group. (required)
      * @return APItargetgroupsPutRequest

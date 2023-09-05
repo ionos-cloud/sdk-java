@@ -28,30 +28,10 @@ import java.io.IOException;
 /**
  * ServerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class ServerProperties {
   
-  public static final String SERIALIZED_NAME_TEMPLATE_UUID = "templateUuid";
-  @SerializedName(SERIALIZED_NAME_TEMPLATE_UUID)
-  private String templateUuid;
-
-
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
-
-
-  public static final String SERIALIZED_NAME_CORES = "cores";
-  @SerializedName(SERIALIZED_NAME_CORES)
-  private Integer cores;
-
-
-  public static final String SERIALIZED_NAME_RAM = "ram";
-  @SerializedName(SERIALIZED_NAME_RAM)
-  private Integer ram;
-
-
   /**
    * The availability zone in which the server should be provisioned.
    */
@@ -105,6 +85,46 @@ public class ServerProperties {
   public static final String SERIALIZED_NAME_AVAILABILITY_ZONE = "availabilityZone";
   @SerializedName(SERIALIZED_NAME_AVAILABILITY_ZONE)
   private AvailabilityZoneEnum availabilityZone;
+
+
+  public static final String SERIALIZED_NAME_BOOT_CDROM = "bootCdrom";
+  @SerializedName(SERIALIZED_NAME_BOOT_CDROM)
+  private ResourceReference bootCdrom;
+
+
+  public static final String SERIALIZED_NAME_BOOT_VOLUME = "bootVolume";
+  @SerializedName(SERIALIZED_NAME_BOOT_VOLUME)
+  private ResourceReference bootVolume;
+
+
+  public static final String SERIALIZED_NAME_CORES = "cores";
+  @SerializedName(SERIALIZED_NAME_CORES)
+  private Integer cores;
+
+
+  public static final String SERIALIZED_NAME_CPU_FAMILY = "cpuFamily";
+  @SerializedName(SERIALIZED_NAME_CPU_FAMILY)
+  private String cpuFamily;
+
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
+
+
+  public static final String SERIALIZED_NAME_RAM = "ram";
+  @SerializedName(SERIALIZED_NAME_RAM)
+  private Integer ram;
+
+
+  public static final String SERIALIZED_NAME_TEMPLATE_UUID = "templateUuid";
+  @SerializedName(SERIALIZED_NAME_TEMPLATE_UUID)
+  private String templateUuid;
+
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private String type;
 
 
   /**
@@ -171,121 +191,7 @@ public class ServerProperties {
   @SerializedName(SERIALIZED_NAME_VM_STATE)
   private VmStateEnum vmState;
 
-
-  public static final String SERIALIZED_NAME_BOOT_CDROM = "bootCdrom";
-  @SerializedName(SERIALIZED_NAME_BOOT_CDROM)
-  private ResourceReference bootCdrom;
-
-
-  public static final String SERIALIZED_NAME_BOOT_VOLUME = "bootVolume";
-  @SerializedName(SERIALIZED_NAME_BOOT_VOLUME)
-  private ResourceReference bootVolume;
-
-
-  public static final String SERIALIZED_NAME_CPU_FAMILY = "cpuFamily";
-  @SerializedName(SERIALIZED_NAME_CPU_FAMILY)
-  private String cpuFamily;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private String type;
-
   
-
-  public ServerProperties templateUuid(String templateUuid) {
-    
-    this.templateUuid = templateUuid;
-    return this;
-  }
-
-   /**
-   * The ID of the template for creating a CUBE server; the available templates for CUBE servers can be found on the templates resource.
-   * @return templateUuid
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The ID of the template for creating a CUBE server; the available templates for CUBE servers can be found on the templates resource.")
-
-  public String getTemplateUuid() {
-    return templateUuid;
-  }
-
-
-  public void setTemplateUuid(String templateUuid) {
-    this.templateUuid = templateUuid;
-  }
-
-
-
-  public ServerProperties name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * The name of the  resource.
-   * @return name
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-
-  public ServerProperties cores(Integer cores) {
-    
-    this.cores = cores;
-    return this;
-  }
-
-   /**
-   * The total number of cores for the server.
-   * @return cores
-  **/
-  @ApiModelProperty(example = "4", required = true, value = "The total number of cores for the server.")
-
-  public Integer getCores() {
-    return cores;
-  }
-
-
-  public void setCores(Integer cores) {
-    this.cores = cores;
-  }
-
-
-
-  public ServerProperties ram(Integer ram) {
-    
-    this.ram = ram;
-    return this;
-  }
-
-   /**
-   * The memory size for the server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB.
-   * @return ram
-  **/
-  @ApiModelProperty(example = "4096", required = true, value = "The memory size for the server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB.")
-
-  public Integer getRam() {
-    return ram;
-  }
-
-
-  public void setRam(Integer ram) {
-    this.ram = ram;
-  }
-
-
 
   public ServerProperties availabilityZone(AvailabilityZoneEnum availabilityZone) {
     
@@ -307,24 +213,6 @@ public class ServerProperties {
 
   public void setAvailabilityZone(AvailabilityZoneEnum availabilityZone) {
     this.availabilityZone = availabilityZone;
-  }
-
-
-
-   /**
-   * Status of the virtual machine.
-   * @return vmState
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "RUNNING", value = "Status of the virtual machine.")
-
-  public VmStateEnum getVmState() {
-    return vmState;
-  }
-
-
-  public void setVmState(VmStateEnum vmState) {
-    this.vmState = vmState;
   }
 
 
@@ -377,6 +265,30 @@ public class ServerProperties {
 
 
 
+  public ServerProperties cores(Integer cores) {
+    
+    this.cores = cores;
+    return this;
+  }
+
+   /**
+   * The total number of cores for the enterprise server.
+   * @return cores
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "4", value = "The total number of cores for the enterprise server.")
+
+  public Integer getCores() {
+    return cores;
+  }
+
+
+  public void setCores(Integer cores) {
+    this.cores = cores;
+  }
+
+
+
   public ServerProperties cpuFamily(String cpuFamily) {
     
     this.cpuFamily = cpuFamily;
@@ -384,11 +296,11 @@ public class ServerProperties {
   }
 
    /**
-   * CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource.
+   * CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource; must not be provided for CUBE servers.
    * @return cpuFamily
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "AMD_OPTERON", value = "CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource.")
+  @ApiModelProperty(example = "AMD_OPTERON", value = "CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource; must not be provided for CUBE servers.")
 
   public String getCpuFamily() {
     return cpuFamily;
@@ -401,6 +313,78 @@ public class ServerProperties {
 
 
 
+  public ServerProperties name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * The name of the  resource.
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+
+  public ServerProperties ram(Integer ram) {
+    
+    this.ram = ram;
+    return this;
+  }
+
+   /**
+   * The memory size for the enterprise server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB.
+   * @return ram
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "4096", value = "The memory size for the enterprise server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB.")
+
+  public Integer getRam() {
+    return ram;
+  }
+
+
+  public void setRam(Integer ram) {
+    this.ram = ram;
+  }
+
+
+
+  public ServerProperties templateUuid(String templateUuid) {
+    
+    this.templateUuid = templateUuid;
+    return this;
+  }
+
+   /**
+   * The ID of the template for creating a CUBE server; the available templates for CUBE servers can be found on the templates resource.
+   * @return templateUuid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The ID of the template for creating a CUBE server; the available templates for CUBE servers can be found on the templates resource.")
+
+  public String getTemplateUuid() {
+    return templateUuid;
+  }
+
+
+  public void setTemplateUuid(String templateUuid) {
+    this.templateUuid = templateUuid;
+  }
+
+
+
   public ServerProperties type(String type) {
     
     this.type = type;
@@ -408,11 +392,11 @@ public class ServerProperties {
   }
 
    /**
-   * server usages: ENTERPRISE or CUBE
+   * Server type: CUBE or ENTERPRISE.
    * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "CUBE", value = "server usages: ENTERPRISE or CUBE")
+  @ApiModelProperty(example = "CUBE", value = "Server type: CUBE or ENTERPRISE.")
 
   public String getType() {
     return type;
@@ -421,6 +405,24 @@ public class ServerProperties {
 
   public void setType(String type) {
     this.type = type;
+  }
+
+
+
+   /**
+   * Status of the virtual machine.
+   * @return vmState
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "RUNNING", value = "Status of the virtual machine.")
+
+  public VmStateEnum getVmState() {
+    return vmState;
+  }
+
+
+  public void setVmState(VmStateEnum vmState) {
+    this.vmState = vmState;
   }
 
 
@@ -433,7 +435,7 @@ public class ServerProperties {
       return false;
     }
     ServerProperties serverProperties = (ServerProperties) o;
-    return Objects.equals(this.templateUuid, serverProperties.templateUuid) && Objects.equals(this.name, serverProperties.name) && Objects.equals(this.cores, serverProperties.cores) && Objects.equals(this.ram, serverProperties.ram) && true && Objects.equals(this.availabilityZone, serverProperties.availabilityZone) && Objects.equals(this.vmState, serverProperties.vmState) && Objects.equals(this.bootCdrom, serverProperties.bootCdrom) && Objects.equals(this.bootVolume, serverProperties.bootVolume) && Objects.equals(this.cpuFamily, serverProperties.cpuFamily) && Objects.equals(this.type, serverProperties.type);
+    return Objects.equals(this.availabilityZone, serverProperties.availabilityZone) && Objects.equals(this.bootCdrom, serverProperties.bootCdrom) && Objects.equals(this.bootVolume, serverProperties.bootVolume) && Objects.equals(this.cores, serverProperties.cores) && Objects.equals(this.cpuFamily, serverProperties.cpuFamily) && Objects.equals(this.name, serverProperties.name) && true && Objects.equals(this.ram, serverProperties.ram) && Objects.equals(this.templateUuid, serverProperties.templateUuid) && Objects.equals(this.type, serverProperties.type) && Objects.equals(this.vmState, serverProperties.vmState);
   }
 
 
@@ -444,25 +446,25 @@ public class ServerProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class ServerProperties {\n");
     
-    sb.append("    templateUuid: ").append(toIndentedString(templateUuid)).append("\n");
-
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-
-    sb.append("    cores: ").append(toIndentedString(cores)).append("\n");
-
-    sb.append("    ram: ").append(toIndentedString(ram)).append("\n");
-
     sb.append("    availabilityZone: ").append(toIndentedString(availabilityZone)).append("\n");
-
-    sb.append("    vmState: ").append(toIndentedString(vmState)).append("\n");
 
     sb.append("    bootCdrom: ").append(toIndentedString(bootCdrom)).append("\n");
 
     sb.append("    bootVolume: ").append(toIndentedString(bootVolume)).append("\n");
 
+    sb.append("    cores: ").append(toIndentedString(cores)).append("\n");
+
     sb.append("    cpuFamily: ").append(toIndentedString(cpuFamily)).append("\n");
 
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
+    sb.append("    ram: ").append(toIndentedString(ram)).append("\n");
+
+    sb.append("    templateUuid: ").append(toIndentedString(templateUuid)).append("\n");
+
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
+
+    sb.append("    vmState: ").append(toIndentedString(vmState)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -478,5 +480,14 @@ public class ServerProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// ServerProperties instantiates a new ServerProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public ServerProperties() {
+
 }
 
+
+}

@@ -30,13 +30,13 @@ import java.util.List;
 /**
  * LocationProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class LocationProperties {
   
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  public static final String SERIALIZED_NAME_CPU_ARCHITECTURE = "cpuArchitecture";
+  @SerializedName(SERIALIZED_NAME_CPU_ARCHITECTURE)
+  private List<CpuArchitectureProperties> cpuArchitecture = null;
 
 
   public static final String SERIALIZED_NAME_FEATURES = "features";
@@ -49,42 +49,36 @@ public class LocationProperties {
   private List<String> imageAliases = null;
 
 
-  public static final String SERIALIZED_NAME_CPU_ARCHITECTURE = "cpuArchitecture";
-  @SerializedName(SERIALIZED_NAME_CPU_ARCHITECTURE)
-  private List<CpuArchitectureProperties> cpuArchitecture = null;
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
   
 
-  public LocationProperties name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
    /**
-   * The name of the  resource.
-   * @return name
+   * A list of available CPU types and related resources available in the location.
+   * @return cpuArchitecture
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
+  @ApiModelProperty(value = "A list of available CPU types and related resources available in the location.")
 
-  public String getName() {
-    return name;
+  public List<CpuArchitectureProperties> getCpuArchitecture() {
+    return cpuArchitecture;
   }
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setCpuArchitecture(List<CpuArchitectureProperties> cpuArchitecture) {
+    this.cpuArchitecture = cpuArchitecture;
   }
 
 
 
    /**
-   * List of features supported by the location
+   * A list of available features in the location.
    * @return features
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[SSD]", value = "List of features supported by the location")
+  @ApiModelProperty(example = "[cloud-init-private-image, ssd, vnf-nat]", value = "A list of available features in the location.")
 
   public List<String> getFeatures() {
     return features;
@@ -98,11 +92,11 @@ public class LocationProperties {
 
 
    /**
-   * List of image aliases available for the location
+   * A list of image aliases available in the location.
    * @return imageAliases
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "List of image aliases available for the location")
+  @ApiModelProperty(example = "[windows:2012r2_iso, windows:2019_iso, ubuntu:18.04_iso]", value = "A list of image aliases available in the location.")
 
   public List<String> getImageAliases() {
     return imageAliases;
@@ -115,20 +109,26 @@ public class LocationProperties {
 
 
 
+  public LocationProperties name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
    /**
-   * Array of features and CPU families available in a location
-   * @return cpuArchitecture
+   * The location name.
+   * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of features and CPU families available in a location")
+  @ApiModelProperty(example = "berlin", value = "The location name.")
 
-  public List<CpuArchitectureProperties> getCpuArchitecture() {
-    return cpuArchitecture;
+  public String getName() {
+    return name;
   }
 
 
-  public void setCpuArchitecture(List<CpuArchitectureProperties> cpuArchitecture) {
-    this.cpuArchitecture = cpuArchitecture;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -141,7 +141,7 @@ public class LocationProperties {
       return false;
     }
     LocationProperties locationProperties = (LocationProperties) o;
-    return Objects.equals(this.name, locationProperties.name) && Objects.equals(this.features, locationProperties.features) && Objects.equals(this.imageAliases, locationProperties.imageAliases) && Objects.equals(this.cpuArchitecture, locationProperties.cpuArchitecture);
+    return Objects.equals(this.cpuArchitecture, locationProperties.cpuArchitecture) && Objects.equals(this.features, locationProperties.features) && Objects.equals(this.imageAliases, locationProperties.imageAliases) && Objects.equals(this.name, locationProperties.name);
   }
 
 
@@ -152,13 +152,13 @@ public class LocationProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class LocationProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    cpuArchitecture: ").append(toIndentedString(cpuArchitecture)).append("\n");
 
     sb.append("    features: ").append(toIndentedString(features)).append("\n");
 
     sb.append("    imageAliases: ").append(toIndentedString(imageAliases)).append("\n");
 
-    sb.append("    cpuArchitecture: ").append(toIndentedString(cpuArchitecture)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -174,5 +174,14 @@ public class LocationProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// LocationProperties instantiates a new LocationProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public LocationProperties() {
+
 }
 
+
+}

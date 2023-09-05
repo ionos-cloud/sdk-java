@@ -137,8 +137,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Delete Kubernetes clusters
-     * Delete the specified Kubernetes cluster.
+     * Delete a Kubernetes Cluster by ID
+     * Deletes the K8s cluster specified  by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -156,8 +156,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Delete Kubernetes clusters
-     * Delete the specified Kubernetes cluster.
+     * Delete a Kubernetes Cluster by ID
+     * Deletes the K8s cluster specified  by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -178,8 +178,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Delete Kubernetes clusters (asynchronously)
-     * Delete the specified Kubernetes cluster.
+     * Delete a Kubernetes Cluster by ID (asynchronously)
+     * Deletes the K8s cluster specified  by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -305,8 +305,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Delete Kubernetes clusters
-     * Delete the specified Kubernetes cluster.
+     * Delete a Kubernetes Cluster by ID
+     * Deletes the K8s cluster specified  by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @return APIk8sDeleteRequest
      * @http.response.details
@@ -321,7 +321,7 @@ public class KubernetesApi {
     }
     /**
      * Build call for k8sFindByClusterId
-     * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
+     * @param k8sClusterId The unique ID of the K8s cluster to be retrieved. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -392,9 +392,9 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes clusters
-     * Retrieve the specified Kubernetes cluster.
-     * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
+     * Get a Kubernetes Cluster by ID
+     * Retrieves the K8s cluster specified by its ID.
+     * @param k8sClusterId The unique ID of the K8s cluster to be retrieved. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -414,9 +414,9 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes clusters
-     * Retrieve the specified Kubernetes cluster.
-     * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
+     * Get a Kubernetes Cluster by ID
+     * Retrieves the K8s cluster specified by its ID.
+     * @param k8sClusterId The unique ID of the K8s cluster to be retrieved. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -437,9 +437,9 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes clusters (asynchronously)
-     * Retrieve the specified Kubernetes cluster.
-     * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
+     * Get a Kubernetes Cluster by ID (asynchronously)
+     * Retrieves the K8s cluster specified by its ID.
+     * @param k8sClusterId The unique ID of the K8s cluster to be retrieved. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -567,9 +567,9 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes clusters
-     * Retrieve the specified Kubernetes cluster.
-     * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
+     * Get a Kubernetes Cluster by ID
+     * Retrieves the K8s cluster specified by its ID.
+     * @param k8sClusterId The unique ID of the K8s cluster to be retrieved. (required)
      * @return APIk8sFindByClusterIdRequest
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -658,8 +658,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes clusters
-     * List all available Kubernetes clusters.
+     * Get Kubernetes Clusters
+     * Retrieves a list of all K8s clusters provisioned under your account.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -681,8 +681,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes clusters
-     * List all available Kubernetes clusters.
+     * Get Kubernetes Clusters
+     * Retrieves a list of all K8s clusters provisioned under your account.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -705,8 +705,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes clusters (asynchronously)
-     * List all available Kubernetes clusters.
+     * Get Kubernetes Clusters (asynchronously)
+     * Retrieves a list of all K8s clusters provisioned under your account.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -866,8 +866,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes clusters
-     * List all available Kubernetes clusters.
+     * Get Kubernetes Clusters
+     * Retrieves a list of all K8s clusters provisioned under your account.
      * @return APIk8sGetRequest
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -963,8 +963,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes configuration files
-     * Retrieve a configuration file for the specified Kubernetes cluster, in YAML or JSON format as defined in the Accept header; the default Accept header is application/yaml.
+     * Get Kubernetes Configuration File
+     * Retrieves the configuration file for the specified K8s cluster. You can define the format (YAML or JSON) of the returned file in the Accept header. By default, &#39;application/yaml&#39; is specified.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -987,8 +987,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes configuration files
-     * Retrieve a configuration file for the specified Kubernetes cluster, in YAML or JSON format as defined in the Accept header; the default Accept header is application/yaml.
+     * Get Kubernetes Configuration File
+     * Retrieves the configuration file for the specified K8s cluster. You can define the format (YAML or JSON) of the returned file in the Accept header. By default, &#39;application/yaml&#39; is specified.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -1012,8 +1012,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes configuration files (asynchronously)
-     * Retrieve a configuration file for the specified Kubernetes cluster, in YAML or JSON format as defined in the Accept header; the default Accept header is application/yaml.
+     * Get Kubernetes Configuration File (asynchronously)
+     * Retrieves the configuration file for the specified K8s cluster. You can define the format (YAML or JSON) of the returned file in the Accept header. By default, &#39;application/yaml&#39; is specified.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -1176,8 +1176,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes configuration files
-     * Retrieve a configuration file for the specified Kubernetes cluster, in YAML or JSON format as defined in the Accept header; the default Accept header is application/yaml.
+     * Get Kubernetes Configuration File
+     * Retrieves the configuration file for the specified K8s cluster. You can define the format (YAML or JSON) of the returned file in the Accept header. By default, &#39;application/yaml&#39; is specified.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @return APIk8sKubeconfigGetRequest
      * @http.response.details
@@ -1270,8 +1270,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Delete Kubernetes node pools
-     * Delete the specified Kubernetes node pool.
+     * Delete a Kubernetes Node Pool by ID
+     * Deletes the K8s node pool specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1290,8 +1290,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Delete Kubernetes node pools
-     * Delete the specified Kubernetes node pool.
+     * Delete a Kubernetes Node Pool by ID
+     * Deletes the K8s node pool specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1313,8 +1313,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Delete Kubernetes node pools (asynchronously)
-     * Delete the specified Kubernetes node pool.
+     * Delete a Kubernetes Node Pool by ID (asynchronously)
+     * Deletes the K8s node pool specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1443,8 +1443,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Delete Kubernetes node pools
-     * Delete the specified Kubernetes node pool.
+     * Delete a Kubernetes Node Pool by ID
+     * Deletes the K8s node pool specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @return APIk8sNodepoolsDeleteRequest
@@ -1538,8 +1538,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes node pools
-     * Retrieve the specified Kubernetes node pool.
+     * Get a Kubernetes Node Pool by ID
+     * Retrieves the K8s node pool specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1561,8 +1561,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes node pools
-     * Retrieve the specified Kubernetes node pool.
+     * Get a Kubernetes Node Pool by ID
+     * Retrieves the K8s node pool specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1585,8 +1585,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes node pools (asynchronously)
-     * Retrieve the specified Kubernetes node pool.
+     * Get a Kubernetes Node Pool by ID (asynchronously)
+     * Retrieves the K8s node pool specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1718,8 +1718,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes node pools
-     * Retrieve the specified Kubernetes node pool.
+     * Get a Kubernetes Node Pool by ID
+     * Retrieves the K8s node pool specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @return APIk8sNodepoolsFindByIdRequest
@@ -1817,8 +1817,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes node pools
-     * List all Kubernetes node pools, included the specified Kubernetes cluster.
+     * Get Kubernetes Node Pools
+     * Retrieves a list of K8s node pools of a cluster specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -1841,8 +1841,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes node pools
-     * List all Kubernetes node pools, included the specified Kubernetes cluster.
+     * Get Kubernetes Node Pools
+     * Retrieves a list of K8s node pools of a cluster specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -1866,8 +1866,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes node pools (asynchronously)
-     * List all Kubernetes node pools, included the specified Kubernetes cluster.
+     * Get Kubernetes Node Pools (asynchronously)
+     * Retrieves a list of K8s node pools of a cluster specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -2030,8 +2030,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes node pools
-     * List all Kubernetes node pools, included the specified Kubernetes cluster.
+     * Get Kubernetes Node Pools
+     * Retrieves a list of K8s node pools of a cluster specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @return APIk8sNodepoolsGetRequest
      * @http.response.details
@@ -2131,8 +2131,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Delete Kubernetes nodes
-     * Delete the specified Kubernetes node.
+     * Delete a Kubernetes Node by ID
+     * Deletes the K8s node specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param nodeId The unique ID of the Kubernetes node. (required)
@@ -2152,8 +2152,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Delete Kubernetes nodes
-     * Delete the specified Kubernetes node.
+     * Delete a Kubernetes Node by ID
+     * Deletes the K8s node specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param nodeId The unique ID of the Kubernetes node. (required)
@@ -2176,8 +2176,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Delete Kubernetes nodes (asynchronously)
-     * Delete the specified Kubernetes node.
+     * Delete a Kubernetes Node by ID (asynchronously)
+     * Deletes the K8s node specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param nodeId The unique ID of the Kubernetes node. (required)
@@ -2309,8 +2309,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Delete Kubernetes nodes
-     * Delete the specified Kubernetes node.
+     * Delete a Kubernetes Node by ID
+     * Deletes the K8s node specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param nodeId The unique ID of the Kubernetes node. (required)
@@ -2412,8 +2412,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes nodes
-     * Retrieve the specified Kubernetes node.
+     * Get Kubernetes Node by ID
+     * Retrieves the K8s node specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param nodeId The unique ID of the Kubernetes node. (required)
@@ -2436,8 +2436,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes nodes
-     * Retrieve the specified Kubernetes node.
+     * Get Kubernetes Node by ID
+     * Retrieves the K8s node specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param nodeId The unique ID of the Kubernetes node. (required)
@@ -2461,8 +2461,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes nodes (asynchronously)
-     * Retrieve the specified Kubernetes node.
+     * Get Kubernetes Node by ID (asynchronously)
+     * Retrieves the K8s node specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param nodeId The unique ID of the Kubernetes node. (required)
@@ -2597,8 +2597,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve Kubernetes nodes
-     * Retrieve the specified Kubernetes node.
+     * Get Kubernetes Node by ID
+     * Retrieves the K8s node specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param nodeId The unique ID of the Kubernetes node. (required)
@@ -2704,8 +2704,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes nodes
-     * List all the nodes, included in the specified Kubernetes node pool.
+     * Get Kubernetes Nodes
+     * Retrieves the list of all K8s nodes of the specified node pool.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -2729,8 +2729,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes nodes
-     * List all the nodes, included in the specified Kubernetes node pool.
+     * Get Kubernetes Nodes
+     * Retrieves the list of all K8s nodes of the specified node pool.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -2755,8 +2755,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes nodes (asynchronously)
-     * List all the nodes, included in the specified Kubernetes node pool.
+     * Get Kubernetes Nodes (asynchronously)
+     * Retrieves the list of all K8s nodes of the specified node pool.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -2922,8 +2922,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes nodes
-     * List all the nodes, included in the specified Kubernetes node pool.
+     * Get Kubernetes Nodes
+     * Retrieves the list of all K8s nodes of the specified node pool.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @return APIk8sNodepoolsNodesGetRequest
@@ -3024,8 +3024,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Recreate Kubernetes nodes
-     * Recreate the specified Kubernetes node.  A new node is created and configured by Managed Kubernetes, based on the node pool template. Once the status is  \&quot;Active\&quot;, all the pods are migrated from the faulty node, which is then deleted once empty. During this operation, the node pool will have an additional billable  \&quot;Active\&quot; node.
+     * Recreate a Kubernetes Node by ID
+     * Recreates the K8s node specified by its ID.  If a node becomes unusable, Managed Kubernetes allows you to recreate it with a configuration based on the node pool template. Once the status is &#39;Active,&#39; all the pods from the failed node will be migrated to the new node. The node pool has an additional billable &#39;active&#39; node during this process.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param nodeId The unique ID of the Kubernetes node. (required)
@@ -3045,8 +3045,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Recreate Kubernetes nodes
-     * Recreate the specified Kubernetes node.  A new node is created and configured by Managed Kubernetes, based on the node pool template. Once the status is  \&quot;Active\&quot;, all the pods are migrated from the faulty node, which is then deleted once empty. During this operation, the node pool will have an additional billable  \&quot;Active\&quot; node.
+     * Recreate a Kubernetes Node by ID
+     * Recreates the K8s node specified by its ID.  If a node becomes unusable, Managed Kubernetes allows you to recreate it with a configuration based on the node pool template. Once the status is &#39;Active,&#39; all the pods from the failed node will be migrated to the new node. The node pool has an additional billable &#39;active&#39; node during this process.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param nodeId The unique ID of the Kubernetes node. (required)
@@ -3069,8 +3069,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Recreate Kubernetes nodes (asynchronously)
-     * Recreate the specified Kubernetes node.  A new node is created and configured by Managed Kubernetes, based on the node pool template. Once the status is  \&quot;Active\&quot;, all the pods are migrated from the faulty node, which is then deleted once empty. During this operation, the node pool will have an additional billable  \&quot;Active\&quot; node.
+     * Recreate a Kubernetes Node by ID (asynchronously)
+     * Recreates the K8s node specified by its ID.  If a node becomes unusable, Managed Kubernetes allows you to recreate it with a configuration based on the node pool template. Once the status is &#39;Active,&#39; all the pods from the failed node will be migrated to the new node. The node pool has an additional billable &#39;active&#39; node during this process.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param nodeId The unique ID of the Kubernetes node. (required)
@@ -3202,8 +3202,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Recreate Kubernetes nodes
-     * Recreate the specified Kubernetes node.  A new node is created and configured by Managed Kubernetes, based on the node pool template. Once the status is  \&quot;Active\&quot;, all the pods are migrated from the faulty node, which is then deleted once empty. During this operation, the node pool will have an additional billable  \&quot;Active\&quot; node.
+     * Recreate a Kubernetes Node by ID
+     * Recreates the K8s node specified by its ID.  If a node becomes unusable, Managed Kubernetes allows you to recreate it with a configuration based on the node pool template. Once the status is &#39;Active,&#39; all the pods from the failed node will be migrated to the new node. The node pool has an additional billable &#39;active&#39; node during this process.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param nodeId The unique ID of the Kubernetes node. (required)
@@ -3297,8 +3297,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Create Kubernetes node pools
-     * Create a Kubernetes node pool inside the specified Kubernetes cluster.
+     * Create a Kubernetes Node Pool
+     * Creates a node pool inside the specified K8s cluster.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param kubernetesNodePool The Kubernetes node pool to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3320,8 +3320,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Create Kubernetes node pools
-     * Create a Kubernetes node pool inside the specified Kubernetes cluster.
+     * Create a Kubernetes Node Pool
+     * Creates a node pool inside the specified K8s cluster.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param kubernetesNodePool The Kubernetes node pool to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3344,8 +3344,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Create Kubernetes node pools (asynchronously)
-     * Create a Kubernetes node pool inside the specified Kubernetes cluster.
+     * Create a Kubernetes Node Pool (asynchronously)
+     * Creates a node pool inside the specified K8s cluster.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param kubernetesNodePool The Kubernetes node pool to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3477,8 +3477,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Create Kubernetes node pools
-     * Create a Kubernetes node pool inside the specified Kubernetes cluster.
+     * Create a Kubernetes Node Pool
+     * Creates a node pool inside the specified K8s cluster.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param kubernetesNodePool The Kubernetes node pool to create. (required)
      * @return APIk8sNodepoolsPostRequest
@@ -3578,8 +3578,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Modify Kubernetes node pools
-     * Modify the specified Kubernetes node pool.
+     * Modify a Kubernetes Node Pool by ID
+     * Modifies the K8s node pool specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param kubernetesNodePool Details of the Kubernetes Node Pool (required)
@@ -3602,8 +3602,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Modify Kubernetes node pools
-     * Modify the specified Kubernetes node pool.
+     * Modify a Kubernetes Node Pool by ID
+     * Modifies the K8s node pool specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param kubernetesNodePool Details of the Kubernetes Node Pool (required)
@@ -3627,8 +3627,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Modify Kubernetes node pools (asynchronously)
-     * Modify the specified Kubernetes node pool.
+     * Modify a Kubernetes Node Pool by ID (asynchronously)
+     * Modifies the K8s node pool specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param kubernetesNodePool Details of the Kubernetes Node Pool (required)
@@ -3763,8 +3763,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Modify Kubernetes node pools
-     * Modify the specified Kubernetes node pool.
+     * Modify a Kubernetes Node Pool by ID
+     * Modifies the K8s node pool specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param nodepoolId The unique ID of the Kubernetes node pool. (required)
      * @param kubernetesNodePool Details of the Kubernetes Node Pool (required)
@@ -3851,8 +3851,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Create Kubernetes clusters
-     * Create a Kubernetes cluster.
+     * Create a Kubernetes Cluster
+     * Creates a K8s cluster provisioned under your account.
      * @param kubernetesCluster The Kubernetes cluster to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -3873,8 +3873,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Create Kubernetes clusters
-     * Create a Kubernetes cluster.
+     * Create a Kubernetes Cluster
+     * Creates a K8s cluster provisioned under your account.
      * @param kubernetesCluster The Kubernetes cluster to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -3896,8 +3896,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Create Kubernetes clusters (asynchronously)
-     * Create a Kubernetes cluster.
+     * Create a Kubernetes Cluster (asynchronously)
+     * Creates a K8s cluster provisioned under your account.
      * @param kubernetesCluster The Kubernetes cluster to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -4026,8 +4026,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Create Kubernetes clusters
-     * Create a Kubernetes cluster.
+     * Create a Kubernetes Cluster
+     * Creates a K8s cluster provisioned under your account.
      * @param kubernetesCluster The Kubernetes cluster to create. (required)
      * @return APIk8sPostRequest
      * @http.response.details
@@ -4119,8 +4119,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Modify Kubernetes clusters
-     * Modify the specified Kubernetes cluster.
+     * Modify a Kubernetes Cluster by ID
+     * Modifies the K8s cluster specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param kubernetesCluster The modified Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4142,8 +4142,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Modify Kubernetes clusters
-     * Modify the specified Kubernetes cluster.
+     * Modify a Kubernetes Cluster by ID
+     * Modifies the K8s cluster specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param kubernetesCluster The modified Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4166,8 +4166,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Modify Kubernetes clusters (asynchronously)
-     * Modify the specified Kubernetes cluster.
+     * Modify a Kubernetes Cluster by ID (asynchronously)
+     * Modifies the K8s cluster specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param kubernetesCluster The modified Kubernetes cluster. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4299,8 +4299,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Modify Kubernetes clusters
-     * Modify the specified Kubernetes cluster.
+     * Modify a Kubernetes Cluster by ID
+     * Modifies the K8s cluster specified by its ID.
      * @param k8sClusterId The unique ID of the Kubernetes cluster. (required)
      * @param kubernetesCluster The modified Kubernetes cluster. (required)
      * @return APIk8sPutRequest
@@ -4378,8 +4378,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve current default Kubernetes version
-     * Retrieve current default Kubernetes version for clusters and nodepools.
+     * Get Default Kubernetes Version
+     * Retrieves the current default K8s version to be used by the clusters and node pools.
      * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
      * @param maxResults - Limits the number of results returned.
      * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
@@ -4398,8 +4398,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve current default Kubernetes version
-     * Retrieve current default Kubernetes version for clusters and nodepools.
+     * Get Default Kubernetes Version
+     * Retrieves the current default K8s version to be used by the clusters and node pools.
      * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
      * @param maxResults - Limits the number of results returned.
      * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
@@ -4419,8 +4419,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve current default Kubernetes version (asynchronously)
-     * Retrieve current default Kubernetes version for clusters and nodepools.
+     * Get Default Kubernetes Version (asynchronously)
+     * Retrieves the current default K8s version to be used by the clusters and node pools.
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -4544,8 +4544,8 @@ public class KubernetesApi {
     }
 
     /**
-     * Retrieve current default Kubernetes version
-     * Retrieve current default Kubernetes version for clusters and nodepools.
+     * Get Default Kubernetes Version
+     * Retrieves the current default K8s version to be used by the clusters and node pools.
      * @return APIk8sVersionsDefaultGetRequest
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -4621,8 +4621,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes versions
-     * List available Kubernetes versions.
+     * Get Kubernetes Versions
+     * Lists available K8s versions.
      * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
      * @param maxResults - Limits the number of results returned.
      * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
@@ -4641,8 +4641,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes versions
-     * List available Kubernetes versions.
+     * Get Kubernetes Versions
+     * Lists available K8s versions.
      * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
      * @param maxResults - Limits the number of results returned.
      * @param filters - Filters query parameters limit results to those containing a matching value for a specific property.
@@ -4662,8 +4662,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes versions (asynchronously)
-     * List available Kubernetes versions.
+     * Get Kubernetes Versions (asynchronously)
+     * Lists available K8s versions.
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -4787,8 +4787,8 @@ public class KubernetesApi {
     }
 
     /**
-     * List Kubernetes versions
-     * List available Kubernetes versions.
+     * Get Kubernetes Versions
+     * Lists available K8s versions.
      * @return APIk8sVersionsGetRequest
      * @http.response.details
      <table summary="Response Details" border="1">

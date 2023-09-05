@@ -987,8 +987,8 @@ public class DataCentersApi {
     }
 
     /**
-     * Partially modify data centers
-     * Update the properties of the specified data center, rename it, or change the description.
+     * Partially modify a Data Center by ID
+     * Updates the properties of the specified data center, rename it, or change the description.
      * @param datacenterId The unique ID of the data center. (required)
      * @param datacenter The properties of the data center to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1010,8 +1010,8 @@ public class DataCentersApi {
     }
 
     /**
-     * Partially modify data centers
-     * Update the properties of the specified data center, rename it, or change the description.
+     * Partially modify a Data Center by ID
+     * Updates the properties of the specified data center, rename it, or change the description.
      * @param datacenterId The unique ID of the data center. (required)
      * @param datacenter The properties of the data center to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1034,8 +1034,8 @@ public class DataCentersApi {
     }
 
     /**
-     * Partially modify data centers (asynchronously)
-     * Update the properties of the specified data center, rename it, or change the description.
+     * Partially modify a Data Center by ID (asynchronously)
+     * Updates the properties of the specified data center, rename it, or change the description.
      * @param datacenterId The unique ID of the data center. (required)
      * @param datacenter The properties of the data center to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1167,8 +1167,8 @@ public class DataCentersApi {
     }
 
     /**
-     * Partially modify data centers
-     * Update the properties of the specified data center, rename it, or change the description.
+     * Partially modify a Data Center by ID
+     * Updates the properties of the specified data center, rename it, or change the description.
      * @param datacenterId The unique ID of the data center. (required)
      * @param datacenter The properties of the data center to be updated. (required)
      * @return APIdatacentersPatchRequest
@@ -1254,8 +1254,8 @@ public class DataCentersApi {
     }
 
     /**
-     * Create data centers
-     * Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
+     * Create a Data Center
+     * Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
      * @param datacenter The data center to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -1276,8 +1276,8 @@ public class DataCentersApi {
     }
 
     /**
-     * Create data centers
-     * Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
+     * Create a Data Center
+     * Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
      * @param datacenter The data center to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -1299,8 +1299,8 @@ public class DataCentersApi {
     }
 
     /**
-     * Create data centers (asynchronously)
-     * Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
+     * Create a Data Center (asynchronously)
+     * Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
      * @param datacenter The data center to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -1429,8 +1429,8 @@ public class DataCentersApi {
     }
 
     /**
-     * Create data centers
-     * Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
+     * Create a Data Center
+     * Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
      * @param datacenter The data center to create. (required)
      * @return APIdatacentersPostRequest
      * @http.response.details
@@ -1522,8 +1522,8 @@ public class DataCentersApi {
     }
 
     /**
-     * Modify data centers
-     * Modify the properties of the specified data center, rename it, or change the description.
+     * Modify a Data Center by ID
+     * Modifies the properties of the specified data center, rename it, or change the description.
      * @param datacenterId The unique ID of the data center. (required)
      * @param datacenter The modified data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1545,8 +1545,8 @@ public class DataCentersApi {
     }
 
     /**
-     * Modify data centers
-     * Modify the properties of the specified data center, rename it, or change the description.
+     * Modify a Data Center by ID
+     * Modifies the properties of the specified data center, rename it, or change the description.
      * @param datacenterId The unique ID of the data center. (required)
      * @param datacenter The modified data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1569,8 +1569,8 @@ public class DataCentersApi {
     }
 
     /**
-     * Modify data centers (asynchronously)
-     * Modify the properties of the specified data center, rename it, or change the description.
+     * Modify a Data Center by ID (asynchronously)
+     * Modifies the properties of the specified data center, rename it, or change the description.
      * @param datacenterId The unique ID of the data center. (required)
      * @param datacenter The modified data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1702,8 +1702,8 @@ public class DataCentersApi {
     }
 
     /**
-     * Modify data centers
-     * Modify the properties of the specified data center, rename it, or change the description.
+     * Modify a Data Center by ID
+     * Modifies the properties of the specified data center, rename it, or change the description.
      * @param datacenterId The unique ID of the data center. (required)
      * @param datacenter The modified data center. (required)
      * @return APIdatacentersPutRequest

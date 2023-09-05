@@ -32,17 +32,12 @@ import java.util.List;
 /**
  * TargetGroupProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class TargetGroupProperties {
   
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
-
-
   /**
-   * Balancing algorithm
+   * The balancing algorithm. A balancing algorithm consists of predefined rules with the logic that a load balancer uses to distribute network traffic between servers.  - **Round Robin**: Targets are served alternately according to their weighting.  - **Least Connection**: The target with the least active connection is served.  - **Random**: The targets are served based on a consistent pseudorandom algorithm.  - **Source IP**: It is ensured that the same client IP address reaches the same target.
    */
   @JsonAdapter(AlgorithmEnum.Adapter.class)
   public enum AlgorithmEnum {
@@ -98,8 +93,23 @@ public class TargetGroupProperties {
   private AlgorithmEnum algorithm;
 
 
+  public static final String SERIALIZED_NAME_HEALTH_CHECK = "healthCheck";
+  @SerializedName(SERIALIZED_NAME_HEALTH_CHECK)
+  private TargetGroupHealthCheck healthCheck;
+
+
+  public static final String SERIALIZED_NAME_HTTP_HEALTH_CHECK = "httpHealthCheck";
+  @SerializedName(SERIALIZED_NAME_HTTP_HEALTH_CHECK)
+  private TargetGroupHttpHealthCheck httpHealthCheck;
+
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
+
+
   /**
-   * Balancing protocol
+   * The forwarding protocol. Only the value &#39;HTTP&#39; is allowed.
    */
   @JsonAdapter(ProtocolEnum.Adapter.class)
   public enum ProtocolEnum {
@@ -153,40 +163,7 @@ public class TargetGroupProperties {
   @SerializedName(SERIALIZED_NAME_TARGETS)
   private List<TargetGroupTarget> targets = null;
 
-
-  public static final String SERIALIZED_NAME_HEALTH_CHECK = "healthCheck";
-  @SerializedName(SERIALIZED_NAME_HEALTH_CHECK)
-  private TargetGroupHealthCheck healthCheck;
-
-
-  public static final String SERIALIZED_NAME_HTTP_HEALTH_CHECK = "httpHealthCheck";
-  @SerializedName(SERIALIZED_NAME_HTTP_HEALTH_CHECK)
-  private TargetGroupHttpHealthCheck httpHealthCheck;
-
   
-
-  public TargetGroupProperties name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * The name of the target group.
-   * @return name
-  **/
-  @ApiModelProperty(example = "My target group", required = true, value = "The name of the target group.")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
 
   public TargetGroupProperties algorithm(AlgorithmEnum algorithm) {
     
@@ -195,10 +172,10 @@ public class TargetGroupProperties {
   }
 
    /**
-   * Balancing algorithm
+   * The balancing algorithm. A balancing algorithm consists of predefined rules with the logic that a load balancer uses to distribute network traffic between servers.  - **Round Robin**: Targets are served alternately according to their weighting.  - **Least Connection**: The target with the least active connection is served.  - **Random**: The targets are served based on a consistent pseudorandom algorithm.  - **Source IP**: It is ensured that the same client IP address reaches the same target.
    * @return algorithm
   **/
-  @ApiModelProperty(example = "ROUND_ROBIN", required = true, value = "Balancing algorithm")
+  @ApiModelProperty(example = "ROUND_ROBIN", required = true, value = "The balancing algorithm. A balancing algorithm consists of predefined rules with the logic that a load balancer uses to distribute network traffic between servers.  - **Round Robin**: Targets are served alternately according to their weighting.  - **Least Connection**: The target with the least active connection is served.  - **Random**: The targets are served based on a consistent pseudorandom algorithm.  - **Source IP**: It is ensured that the same client IP address reaches the same target.")
 
   public AlgorithmEnum getAlgorithm() {
     return algorithm;
@@ -207,61 +184,6 @@ public class TargetGroupProperties {
 
   public void setAlgorithm(AlgorithmEnum algorithm) {
     this.algorithm = algorithm;
-  }
-
-
-
-  public TargetGroupProperties protocol(ProtocolEnum protocol) {
-    
-    this.protocol = protocol;
-    return this;
-  }
-
-   /**
-   * Balancing protocol
-   * @return protocol
-  **/
-  @ApiModelProperty(example = "HTTP", required = true, value = "Balancing protocol")
-
-  public ProtocolEnum getProtocol() {
-    return protocol;
-  }
-
-
-  public void setProtocol(ProtocolEnum protocol) {
-    this.protocol = protocol;
-  }
-
-
-
-  public TargetGroupProperties targets(List<TargetGroupTarget> targets) {
-    
-    this.targets = targets;
-    return this;
-  }
-
-  public TargetGroupProperties addTargetsItem(TargetGroupTarget targetsItem) {
-    if (this.targets == null) {
-      this.targets = new ArrayList<TargetGroupTarget>();
-    }
-    this.targets.add(targetsItem);
-    return this;
-  }
-
-   /**
-   * Array of items in the collection.
-   * @return targets
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of items in the collection.")
-
-  public List<TargetGroupTarget> getTargets() {
-    return targets;
-  }
-
-
-  public void setTargets(List<TargetGroupTarget> targets) {
-    this.targets = targets;
   }
 
 
@@ -313,6 +235,84 @@ public class TargetGroupProperties {
   }
 
 
+
+  public TargetGroupProperties name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * The target group name.
+   * @return name
+  **/
+  @ApiModelProperty(example = "My target group", required = true, value = "The target group name.")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+
+  public TargetGroupProperties protocol(ProtocolEnum protocol) {
+    
+    this.protocol = protocol;
+    return this;
+  }
+
+   /**
+   * The forwarding protocol. Only the value &#39;HTTP&#39; is allowed.
+   * @return protocol
+  **/
+  @ApiModelProperty(example = "HTTP", required = true, value = "The forwarding protocol. Only the value 'HTTP' is allowed.")
+
+  public ProtocolEnum getProtocol() {
+    return protocol;
+  }
+
+
+  public void setProtocol(ProtocolEnum protocol) {
+    this.protocol = protocol;
+  }
+
+
+
+  public TargetGroupProperties targets(List<TargetGroupTarget> targets) {
+    
+    this.targets = targets;
+    return this;
+  }
+
+  public TargetGroupProperties addTargetsItem(TargetGroupTarget targetsItem) {
+    if (this.targets == null) {
+      this.targets = new ArrayList<TargetGroupTarget>();
+    }
+    this.targets.add(targetsItem);
+    return this;
+  }
+
+   /**
+   * Array of items in the collection.
+   * @return targets
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Array of items in the collection.")
+
+  public List<TargetGroupTarget> getTargets() {
+    return targets;
+  }
+
+
+  public void setTargets(List<TargetGroupTarget> targets) {
+    this.targets = targets;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -322,7 +322,7 @@ public class TargetGroupProperties {
       return false;
     }
     TargetGroupProperties targetGroupProperties = (TargetGroupProperties) o;
-    return Objects.equals(this.name, targetGroupProperties.name) && Objects.equals(this.algorithm, targetGroupProperties.algorithm) && Objects.equals(this.protocol, targetGroupProperties.protocol) && Objects.equals(this.targets, targetGroupProperties.targets) && Objects.equals(this.healthCheck, targetGroupProperties.healthCheck) && Objects.equals(this.httpHealthCheck, targetGroupProperties.httpHealthCheck);
+    return Objects.equals(this.algorithm, targetGroupProperties.algorithm) && Objects.equals(this.healthCheck, targetGroupProperties.healthCheck) && Objects.equals(this.httpHealthCheck, targetGroupProperties.httpHealthCheck) && Objects.equals(this.name, targetGroupProperties.name) && Objects.equals(this.protocol, targetGroupProperties.protocol) && Objects.equals(this.targets, targetGroupProperties.targets);
   }
 
 
@@ -333,17 +333,17 @@ public class TargetGroupProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class TargetGroupProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-
     sb.append("    algorithm: ").append(toIndentedString(algorithm)).append("\n");
-
-    sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
-
-    sb.append("    targets: ").append(toIndentedString(targets)).append("\n");
 
     sb.append("    healthCheck: ").append(toIndentedString(healthCheck)).append("\n");
 
     sb.append("    httpHealthCheck: ").append(toIndentedString(httpHealthCheck)).append("\n");
+
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
+    sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
+
+    sb.append("    targets: ").append(toIndentedString(targets)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -359,5 +359,19 @@ public class TargetGroupProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// TargetGroupProperties instantiates a new TargetGroupProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public TargetGroupProperties(AlgorithmEnum Algorithm, String Name, ProtocolEnum Protocol) {
+
+	this.algorithm = Algorithm;
+	this.name = Name;
+	this.protocol = Protocol;
 }
 
+public TargetGroupProperties() {
+}
+
+}

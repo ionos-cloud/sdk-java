@@ -28,35 +28,10 @@ import java.math.BigDecimal;
 /**
  * SnapshotProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class SnapshotProperties {
   
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
-
-
-  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
-  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
-  private String description;
-
-
-  public static final String SERIALIZED_NAME_LOCATION = "location";
-  @SerializedName(SERIALIZED_NAME_LOCATION)
-  private String location;
-
-
-  public static final String SERIALIZED_NAME_SIZE = "size";
-  @SerializedName(SERIALIZED_NAME_SIZE)
-  private BigDecimal size;
-
-
-  public static final String SERIALIZED_NAME_SEC_AUTH_PROTECTION = "secAuthProtection";
-  @SerializedName(SERIALIZED_NAME_SEC_AUTH_PROTECTION)
-  private Boolean secAuthProtection;
-
-
   public static final String SERIALIZED_NAME_CPU_HOT_PLUG = "cpuHotPlug";
   @SerializedName(SERIALIZED_NAME_CPU_HOT_PLUG)
   private Boolean cpuHotPlug;
@@ -67,34 +42,9 @@ public class SnapshotProperties {
   private Boolean cpuHotUnplug;
 
 
-  public static final String SERIALIZED_NAME_RAM_HOT_PLUG = "ramHotPlug";
-  @SerializedName(SERIALIZED_NAME_RAM_HOT_PLUG)
-  private Boolean ramHotPlug;
-
-
-  public static final String SERIALIZED_NAME_RAM_HOT_UNPLUG = "ramHotUnplug";
-  @SerializedName(SERIALIZED_NAME_RAM_HOT_UNPLUG)
-  private Boolean ramHotUnplug;
-
-
-  public static final String SERIALIZED_NAME_NIC_HOT_PLUG = "nicHotPlug";
-  @SerializedName(SERIALIZED_NAME_NIC_HOT_PLUG)
-  private Boolean nicHotPlug;
-
-
-  public static final String SERIALIZED_NAME_NIC_HOT_UNPLUG = "nicHotUnplug";
-  @SerializedName(SERIALIZED_NAME_NIC_HOT_UNPLUG)
-  private Boolean nicHotUnplug;
-
-
-  public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG = "discVirtioHotPlug";
-  @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG)
-  private Boolean discVirtioHotPlug;
-
-
-  public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG = "discVirtioHotUnplug";
-  @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG)
-  private Boolean discVirtioHotUnplug;
+  public static final String SERIALIZED_NAME_DESCRIPTION = "description";
+  @SerializedName(SERIALIZED_NAME_DESCRIPTION)
+  private String description;
 
 
   public static final String SERIALIZED_NAME_DISC_SCSI_HOT_PLUG = "discScsiHotPlug";
@@ -105,6 +55,16 @@ public class SnapshotProperties {
   public static final String SERIALIZED_NAME_DISC_SCSI_HOT_UNPLUG = "discScsiHotUnplug";
   @SerializedName(SERIALIZED_NAME_DISC_SCSI_HOT_UNPLUG)
   private Boolean discScsiHotUnplug;
+
+
+  public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG = "discVirtioHotPlug";
+  @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG)
+  private Boolean discVirtioHotPlug;
+
+
+  public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG = "discVirtioHotUnplug";
+  @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG)
+  private Boolean discVirtioHotUnplug;
 
 
   /**
@@ -119,6 +79,8 @@ public class SnapshotProperties {
     WINDOWS2016("WINDOWS2016"),
     
     WINDOWS2022("WINDOWS2022"),
+    
+    RHEL("RHEL"),
     
     LINUX("LINUX"),
     
@@ -167,115 +129,47 @@ public class SnapshotProperties {
   @SerializedName(SERIALIZED_NAME_LICENCE_TYPE)
   private LicenceTypeEnum licenceType;
 
+
+  public static final String SERIALIZED_NAME_LOCATION = "location";
+  @SerializedName(SERIALIZED_NAME_LOCATION)
+  private String location;
+
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
+
+
+  public static final String SERIALIZED_NAME_NIC_HOT_PLUG = "nicHotPlug";
+  @SerializedName(SERIALIZED_NAME_NIC_HOT_PLUG)
+  private Boolean nicHotPlug;
+
+
+  public static final String SERIALIZED_NAME_NIC_HOT_UNPLUG = "nicHotUnplug";
+  @SerializedName(SERIALIZED_NAME_NIC_HOT_UNPLUG)
+  private Boolean nicHotUnplug;
+
+
+  public static final String SERIALIZED_NAME_RAM_HOT_PLUG = "ramHotPlug";
+  @SerializedName(SERIALIZED_NAME_RAM_HOT_PLUG)
+  private Boolean ramHotPlug;
+
+
+  public static final String SERIALIZED_NAME_RAM_HOT_UNPLUG = "ramHotUnplug";
+  @SerializedName(SERIALIZED_NAME_RAM_HOT_UNPLUG)
+  private Boolean ramHotUnplug;
+
+
+  public static final String SERIALIZED_NAME_SEC_AUTH_PROTECTION = "secAuthProtection";
+  @SerializedName(SERIALIZED_NAME_SEC_AUTH_PROTECTION)
+  private Boolean secAuthProtection;
+
+
+  public static final String SERIALIZED_NAME_SIZE = "size";
+  @SerializedName(SERIALIZED_NAME_SIZE)
+  private BigDecimal size;
+
   
-
-  public SnapshotProperties name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * The name of the  resource.
-   * @return name
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-
-  public SnapshotProperties description(String description) {
-    
-    this.description = description;
-    return this;
-  }
-
-   /**
-   * Human-readable description.
-   * @return description
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "Image/Snapshot of Ubuntu ", value = "Human-readable description.")
-
-  public String getDescription() {
-    return description;
-  }
-
-
-  public void setDescription(String description) {
-    this.description = description;
-  }
-
-
-
-   /**
-   * Location of that image/snapshot. 
-   * @return location
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "us/las", value = "Location of that image/snapshot. ")
-
-  public String getLocation() {
-    return location;
-  }
-
-
-  public void setLocation(String location) {
-    this.location = location;
-  }
-
-
-
-   /**
-   * The size of the image in GB.
-   * @return size
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "100.0", value = "The size of the image in GB.")
-
-  public BigDecimal getSize() {
-    return size;
-  }
-
-
-  public void setSize(BigDecimal size) {
-    this.size = size;
-  }
-
-
-
-  public SnapshotProperties secAuthProtection(Boolean secAuthProtection) {
-    
-    this.secAuthProtection = secAuthProtection;
-    return this;
-  }
-
-   /**
-   * Boolean value representing if the snapshot requires extra protection, such as two-step verification.
-   * @return secAuthProtection
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Boolean value representing if the snapshot requires extra protection, such as two-step verification.")
-
-  public Boolean getSecAuthProtection() {
-    return secAuthProtection;
-  }
-
-
-  public void setSecAuthProtection(Boolean secAuthProtection) {
-    this.secAuthProtection = secAuthProtection;
-  }
-
-
 
   public SnapshotProperties cpuHotPlug(Boolean cpuHotPlug) {
     
@@ -325,146 +219,26 @@ public class SnapshotProperties {
 
 
 
-  public SnapshotProperties ramHotPlug(Boolean ramHotPlug) {
+  public SnapshotProperties description(String description) {
     
-    this.ramHotPlug = ramHotPlug;
+    this.description = description;
     return this;
   }
 
    /**
-   * Hot-plug capable RAM (no reboot required).
-   * @return ramHotPlug
+   * Human-readable description.
+   * @return description
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Hot-plug capable RAM (no reboot required).")
+  @ApiModelProperty(example = "Image/Snapshot of Ubuntu ", value = "Human-readable description.")
 
-  public Boolean getRamHotPlug() {
-    return ramHotPlug;
+  public String getDescription() {
+    return description;
   }
 
 
-  public void setRamHotPlug(Boolean ramHotPlug) {
-    this.ramHotPlug = ramHotPlug;
-  }
-
-
-
-  public SnapshotProperties ramHotUnplug(Boolean ramHotUnplug) {
-    
-    this.ramHotUnplug = ramHotUnplug;
-    return this;
-  }
-
-   /**
-   * Hot-unplug capable RAM (no reboot required).
-   * @return ramHotUnplug
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Hot-unplug capable RAM (no reboot required).")
-
-  public Boolean getRamHotUnplug() {
-    return ramHotUnplug;
-  }
-
-
-  public void setRamHotUnplug(Boolean ramHotUnplug) {
-    this.ramHotUnplug = ramHotUnplug;
-  }
-
-
-
-  public SnapshotProperties nicHotPlug(Boolean nicHotPlug) {
-    
-    this.nicHotPlug = nicHotPlug;
-    return this;
-  }
-
-   /**
-   * Hot-plug capable NIC (no reboot required).
-   * @return nicHotPlug
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Hot-plug capable NIC (no reboot required).")
-
-  public Boolean getNicHotPlug() {
-    return nicHotPlug;
-  }
-
-
-  public void setNicHotPlug(Boolean nicHotPlug) {
-    this.nicHotPlug = nicHotPlug;
-  }
-
-
-
-  public SnapshotProperties nicHotUnplug(Boolean nicHotUnplug) {
-    
-    this.nicHotUnplug = nicHotUnplug;
-    return this;
-  }
-
-   /**
-   * Hot-unplug capable NIC (no reboot required).
-   * @return nicHotUnplug
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Hot-unplug capable NIC (no reboot required).")
-
-  public Boolean getNicHotUnplug() {
-    return nicHotUnplug;
-  }
-
-
-  public void setNicHotUnplug(Boolean nicHotUnplug) {
-    this.nicHotUnplug = nicHotUnplug;
-  }
-
-
-
-  public SnapshotProperties discVirtioHotPlug(Boolean discVirtioHotPlug) {
-    
-    this.discVirtioHotPlug = discVirtioHotPlug;
-    return this;
-  }
-
-   /**
-   * Hot-plug capable Virt-IO drive (no reboot required).
-   * @return discVirtioHotPlug
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Hot-plug capable Virt-IO drive (no reboot required).")
-
-  public Boolean getDiscVirtioHotPlug() {
-    return discVirtioHotPlug;
-  }
-
-
-  public void setDiscVirtioHotPlug(Boolean discVirtioHotPlug) {
-    this.discVirtioHotPlug = discVirtioHotPlug;
-  }
-
-
-
-  public SnapshotProperties discVirtioHotUnplug(Boolean discVirtioHotUnplug) {
-    
-    this.discVirtioHotUnplug = discVirtioHotUnplug;
-    return this;
-  }
-
-   /**
-   * Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.
-   * @return discVirtioHotUnplug
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.")
-
-  public Boolean getDiscVirtioHotUnplug() {
-    return discVirtioHotUnplug;
-  }
-
-
-  public void setDiscVirtioHotUnplug(Boolean discVirtioHotUnplug) {
-    this.discVirtioHotUnplug = discVirtioHotUnplug;
+  public void setDescription(String description) {
+    this.description = description;
   }
 
 
@@ -517,6 +291,54 @@ public class SnapshotProperties {
 
 
 
+  public SnapshotProperties discVirtioHotPlug(Boolean discVirtioHotPlug) {
+    
+    this.discVirtioHotPlug = discVirtioHotPlug;
+    return this;
+  }
+
+   /**
+   * Hot-plug capable Virt-IO drive (no reboot required).
+   * @return discVirtioHotPlug
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "true", value = "Hot-plug capable Virt-IO drive (no reboot required).")
+
+  public Boolean getDiscVirtioHotPlug() {
+    return discVirtioHotPlug;
+  }
+
+
+  public void setDiscVirtioHotPlug(Boolean discVirtioHotPlug) {
+    this.discVirtioHotPlug = discVirtioHotPlug;
+  }
+
+
+
+  public SnapshotProperties discVirtioHotUnplug(Boolean discVirtioHotUnplug) {
+    
+    this.discVirtioHotUnplug = discVirtioHotUnplug;
+    return this;
+  }
+
+   /**
+   * Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.
+   * @return discVirtioHotUnplug
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.")
+
+  public Boolean getDiscVirtioHotUnplug() {
+    return discVirtioHotUnplug;
+  }
+
+
+  public void setDiscVirtioHotUnplug(Boolean discVirtioHotUnplug) {
+    this.discVirtioHotUnplug = discVirtioHotUnplug;
+  }
+
+
+
   public SnapshotProperties licenceType(LicenceTypeEnum licenceType) {
     
     this.licenceType = licenceType;
@@ -540,6 +362,186 @@ public class SnapshotProperties {
   }
 
 
+
+   /**
+   * Location of that image/snapshot. 
+   * @return location
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "us/las", value = "Location of that image/snapshot. ")
+
+  public String getLocation() {
+    return location;
+  }
+
+
+  public void setLocation(String location) {
+    this.location = location;
+  }
+
+
+
+  public SnapshotProperties name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * The name of the  resource.
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+
+  public SnapshotProperties nicHotPlug(Boolean nicHotPlug) {
+    
+    this.nicHotPlug = nicHotPlug;
+    return this;
+  }
+
+   /**
+   * Hot-plug capable NIC (no reboot required).
+   * @return nicHotPlug
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "true", value = "Hot-plug capable NIC (no reboot required).")
+
+  public Boolean getNicHotPlug() {
+    return nicHotPlug;
+  }
+
+
+  public void setNicHotPlug(Boolean nicHotPlug) {
+    this.nicHotPlug = nicHotPlug;
+  }
+
+
+
+  public SnapshotProperties nicHotUnplug(Boolean nicHotUnplug) {
+    
+    this.nicHotUnplug = nicHotUnplug;
+    return this;
+  }
+
+   /**
+   * Hot-unplug capable NIC (no reboot required).
+   * @return nicHotUnplug
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable NIC (no reboot required).")
+
+  public Boolean getNicHotUnplug() {
+    return nicHotUnplug;
+  }
+
+
+  public void setNicHotUnplug(Boolean nicHotUnplug) {
+    this.nicHotUnplug = nicHotUnplug;
+  }
+
+
+
+  public SnapshotProperties ramHotPlug(Boolean ramHotPlug) {
+    
+    this.ramHotPlug = ramHotPlug;
+    return this;
+  }
+
+   /**
+   * Hot-plug capable RAM (no reboot required).
+   * @return ramHotPlug
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "true", value = "Hot-plug capable RAM (no reboot required).")
+
+  public Boolean getRamHotPlug() {
+    return ramHotPlug;
+  }
+
+
+  public void setRamHotPlug(Boolean ramHotPlug) {
+    this.ramHotPlug = ramHotPlug;
+  }
+
+
+
+  public SnapshotProperties ramHotUnplug(Boolean ramHotUnplug) {
+    
+    this.ramHotUnplug = ramHotUnplug;
+    return this;
+  }
+
+   /**
+   * Hot-unplug capable RAM (no reboot required).
+   * @return ramHotUnplug
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable RAM (no reboot required).")
+
+  public Boolean getRamHotUnplug() {
+    return ramHotUnplug;
+  }
+
+
+  public void setRamHotUnplug(Boolean ramHotUnplug) {
+    this.ramHotUnplug = ramHotUnplug;
+  }
+
+
+
+  public SnapshotProperties secAuthProtection(Boolean secAuthProtection) {
+    
+    this.secAuthProtection = secAuthProtection;
+    return this;
+  }
+
+   /**
+   * Boolean value representing if the snapshot requires extra protection, such as two-step verification.
+   * @return secAuthProtection
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "true", value = "Boolean value representing if the snapshot requires extra protection, such as two-step verification.")
+
+  public Boolean getSecAuthProtection() {
+    return secAuthProtection;
+  }
+
+
+  public void setSecAuthProtection(Boolean secAuthProtection) {
+    this.secAuthProtection = secAuthProtection;
+  }
+
+
+
+   /**
+   * The size of the image in GB.
+   * @return size
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "100.0", value = "The size of the image in GB.")
+
+  public BigDecimal getSize() {
+    return size;
+  }
+
+
+  public void setSize(BigDecimal size) {
+    this.size = size;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -549,7 +551,7 @@ public class SnapshotProperties {
       return false;
     }
     SnapshotProperties snapshotProperties = (SnapshotProperties) o;
-    return Objects.equals(this.name, snapshotProperties.name) && Objects.equals(this.description, snapshotProperties.description) && Objects.equals(this.location, snapshotProperties.location) && Objects.equals(this.size, snapshotProperties.size) && Objects.equals(this.secAuthProtection, snapshotProperties.secAuthProtection) && Objects.equals(this.cpuHotPlug, snapshotProperties.cpuHotPlug) && Objects.equals(this.cpuHotUnplug, snapshotProperties.cpuHotUnplug) && Objects.equals(this.ramHotPlug, snapshotProperties.ramHotPlug) && Objects.equals(this.ramHotUnplug, snapshotProperties.ramHotUnplug) && Objects.equals(this.nicHotPlug, snapshotProperties.nicHotPlug) && Objects.equals(this.nicHotUnplug, snapshotProperties.nicHotUnplug) && Objects.equals(this.discVirtioHotPlug, snapshotProperties.discVirtioHotPlug) && Objects.equals(this.discVirtioHotUnplug, snapshotProperties.discVirtioHotUnplug) && Objects.equals(this.discScsiHotPlug, snapshotProperties.discScsiHotPlug) && Objects.equals(this.discScsiHotUnplug, snapshotProperties.discScsiHotUnplug) && Objects.equals(this.licenceType, snapshotProperties.licenceType);
+    return Objects.equals(this.cpuHotPlug, snapshotProperties.cpuHotPlug) && Objects.equals(this.cpuHotUnplug, snapshotProperties.cpuHotUnplug) && Objects.equals(this.description, snapshotProperties.description) && Objects.equals(this.discScsiHotPlug, snapshotProperties.discScsiHotPlug) && Objects.equals(this.discScsiHotUnplug, snapshotProperties.discScsiHotUnplug) && Objects.equals(this.discVirtioHotPlug, snapshotProperties.discVirtioHotPlug) && Objects.equals(this.discVirtioHotUnplug, snapshotProperties.discVirtioHotUnplug) && Objects.equals(this.licenceType, snapshotProperties.licenceType) && Objects.equals(this.location, snapshotProperties.location) && Objects.equals(this.name, snapshotProperties.name) && Objects.equals(this.nicHotPlug, snapshotProperties.nicHotPlug) && Objects.equals(this.nicHotUnplug, snapshotProperties.nicHotUnplug) && Objects.equals(this.ramHotPlug, snapshotProperties.ramHotPlug) && Objects.equals(this.ramHotUnplug, snapshotProperties.ramHotUnplug) && Objects.equals(this.secAuthProtection, snapshotProperties.secAuthProtection) && Objects.equals(this.size, snapshotProperties.size);
   }
 
 
@@ -560,37 +562,37 @@ public class SnapshotProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class SnapshotProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-
-    sb.append("    description: ").append(toIndentedString(description)).append("\n");
-
-    sb.append("    location: ").append(toIndentedString(location)).append("\n");
-
-    sb.append("    size: ").append(toIndentedString(size)).append("\n");
-
-    sb.append("    secAuthProtection: ").append(toIndentedString(secAuthProtection)).append("\n");
-
     sb.append("    cpuHotPlug: ").append(toIndentedString(cpuHotPlug)).append("\n");
 
     sb.append("    cpuHotUnplug: ").append(toIndentedString(cpuHotUnplug)).append("\n");
 
-    sb.append("    ramHotPlug: ").append(toIndentedString(ramHotPlug)).append("\n");
-
-    sb.append("    ramHotUnplug: ").append(toIndentedString(ramHotUnplug)).append("\n");
-
-    sb.append("    nicHotPlug: ").append(toIndentedString(nicHotPlug)).append("\n");
-
-    sb.append("    nicHotUnplug: ").append(toIndentedString(nicHotUnplug)).append("\n");
-
-    sb.append("    discVirtioHotPlug: ").append(toIndentedString(discVirtioHotPlug)).append("\n");
-
-    sb.append("    discVirtioHotUnplug: ").append(toIndentedString(discVirtioHotUnplug)).append("\n");
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
 
     sb.append("    discScsiHotPlug: ").append(toIndentedString(discScsiHotPlug)).append("\n");
 
     sb.append("    discScsiHotUnplug: ").append(toIndentedString(discScsiHotUnplug)).append("\n");
 
+    sb.append("    discVirtioHotPlug: ").append(toIndentedString(discVirtioHotPlug)).append("\n");
+
+    sb.append("    discVirtioHotUnplug: ").append(toIndentedString(discVirtioHotUnplug)).append("\n");
+
     sb.append("    licenceType: ").append(toIndentedString(licenceType)).append("\n");
+
+    sb.append("    location: ").append(toIndentedString(location)).append("\n");
+
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
+    sb.append("    nicHotPlug: ").append(toIndentedString(nicHotPlug)).append("\n");
+
+    sb.append("    nicHotUnplug: ").append(toIndentedString(nicHotUnplug)).append("\n");
+
+    sb.append("    ramHotPlug: ").append(toIndentedString(ramHotPlug)).append("\n");
+
+    sb.append("    ramHotUnplug: ").append(toIndentedString(ramHotUnplug)).append("\n");
+
+    sb.append("    secAuthProtection: ").append(toIndentedString(secAuthProtection)).append("\n");
+
+    sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -606,5 +608,14 @@ public class SnapshotProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// SnapshotProperties instantiates a new SnapshotProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public SnapshotProperties() {
+
 }
 
+
+}

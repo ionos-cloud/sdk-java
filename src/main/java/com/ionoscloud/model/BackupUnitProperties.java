@@ -27,10 +27,15 @@ import java.io.IOException;
 /**
  * BackupUnitProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class BackupUnitProperties {
   
+  public static final String SERIALIZED_NAME_EMAIL = "email";
+  @SerializedName(SERIALIZED_NAME_EMAIL)
+  private String email;
+
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
@@ -40,12 +45,31 @@ public class BackupUnitProperties {
   @SerializedName(SERIALIZED_NAME_PASSWORD)
   private String password;
 
-
-  public static final String SERIALIZED_NAME_EMAIL = "email";
-  @SerializedName(SERIALIZED_NAME_EMAIL)
-  private String email;
-
   
+
+  public BackupUnitProperties email(String email) {
+    
+    this.email = email;
+    return this;
+  }
+
+   /**
+   * The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user.
+   * @return email
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "email@email.com", value = "The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user.")
+
+  public String getEmail() {
+    return email;
+  }
+
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+
 
   public BackupUnitProperties name(String name) {
     
@@ -93,30 +117,6 @@ public class BackupUnitProperties {
   }
 
 
-
-  public BackupUnitProperties email(String email) {
-    
-    this.email = email;
-    return this;
-  }
-
-   /**
-   * The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user.
-   * @return email
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "email@email.com", value = "The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user.")
-
-  public String getEmail() {
-    return email;
-  }
-
-
-  public void setEmail(String email) {
-    this.email = email;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -126,7 +126,7 @@ public class BackupUnitProperties {
       return false;
     }
     BackupUnitProperties backupUnitProperties = (BackupUnitProperties) o;
-    return Objects.equals(this.name, backupUnitProperties.name) && Objects.equals(this.password, backupUnitProperties.password) && Objects.equals(this.email, backupUnitProperties.email);
+    return Objects.equals(this.email, backupUnitProperties.email) && Objects.equals(this.name, backupUnitProperties.name) && Objects.equals(this.password, backupUnitProperties.password);
   }
 
 
@@ -137,11 +137,11 @@ public class BackupUnitProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class BackupUnitProperties {\n");
     
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
 
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
-
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -157,5 +157,17 @@ public class BackupUnitProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// BackupUnitProperties instantiates a new BackupUnitProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public BackupUnitProperties(String Name) {
+
+	this.name = Name;
 }
 
+public BackupUnitProperties() {
+}
+
+}

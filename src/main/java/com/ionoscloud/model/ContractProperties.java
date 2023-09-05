@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * ContractProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class ContractProperties {
   
@@ -42,11 +42,6 @@ public class ContractProperties {
   private String owner;
 
 
-  public static final String SERIALIZED_NAME_STATUS = "status";
-  @SerializedName(SERIALIZED_NAME_STATUS)
-  private String status;
-
-
   public static final String SERIALIZED_NAME_REG_DOMAIN = "regDomain";
   @SerializedName(SERIALIZED_NAME_REG_DOMAIN)
   private String regDomain;
@@ -56,6 +51,11 @@ public class ContractProperties {
   @SerializedName(SERIALIZED_NAME_RESOURCE_LIMITS)
   private ResourceLimits resourceLimits;
 
+
+  public static final String SERIALIZED_NAME_STATUS = "status";
+  @SerializedName(SERIALIZED_NAME_STATUS)
+  private String status;
+
   
 
    /**
@@ -63,7 +63,7 @@ public class ContractProperties {
    * @return contractNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The contract number.")
+  @ApiModelProperty(example = "12345", value = "The contract number.")
 
   public Long getContractNumber() {
     return contractNumber;
@@ -77,11 +77,11 @@ public class ContractProperties {
 
 
    /**
-   * The owner of the contract.
+   * The contract owner&#39;s user name.
    * @return owner
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The owner of the contract.")
+  @ApiModelProperty(example = "user@example.com", value = "The contract owner's user name.")
 
   public String getOwner() {
     return owner;
@@ -95,29 +95,11 @@ public class ContractProperties {
 
 
    /**
-   * The status of the contract.
-   * @return status
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The status of the contract.")
-
-  public String getStatus() {
-    return status;
-  }
-
-
-  public void setStatus(String status) {
-    this.status = status;
-  }
-
-
-
-   /**
    * The registration domain of the contract.
    * @return regDomain
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The registration domain of the contract.")
+  @ApiModelProperty(example = "ionos.de", value = "The registration domain of the contract.")
 
   public String getRegDomain() {
     return regDomain;
@@ -153,6 +135,24 @@ public class ContractProperties {
   }
 
 
+
+   /**
+   * The contract status.
+   * @return status
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "BILLABLE", value = "The contract status.")
+
+  public String getStatus() {
+    return status;
+  }
+
+
+  public void setStatus(String status) {
+    this.status = status;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -162,7 +162,7 @@ public class ContractProperties {
       return false;
     }
     ContractProperties contractProperties = (ContractProperties) o;
-    return Objects.equals(this.contractNumber, contractProperties.contractNumber) && Objects.equals(this.owner, contractProperties.owner) && Objects.equals(this.status, contractProperties.status) && Objects.equals(this.regDomain, contractProperties.regDomain) && Objects.equals(this.resourceLimits, contractProperties.resourceLimits);
+    return Objects.equals(this.contractNumber, contractProperties.contractNumber) && Objects.equals(this.owner, contractProperties.owner) && Objects.equals(this.regDomain, contractProperties.regDomain) && Objects.equals(this.resourceLimits, contractProperties.resourceLimits) && Objects.equals(this.status, contractProperties.status);
   }
 
 
@@ -177,11 +177,11 @@ public class ContractProperties {
 
     sb.append("    owner: ").append(toIndentedString(owner)).append("\n");
 
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
-
     sb.append("    regDomain: ").append(toIndentedString(regDomain)).append("\n");
 
     sb.append("    resourceLimits: ").append(toIndentedString(resourceLimits)).append("\n");
+
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -197,5 +197,14 @@ public class ContractProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// ContractProperties instantiates a new ContractProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public ContractProperties() {
+
 }
 
+
+}

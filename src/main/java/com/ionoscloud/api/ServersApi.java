@@ -150,8 +150,8 @@ public class ServersApi {
     }
 
     /**
-     * Detach CD-ROMs
-     * Detach the specified CD-ROM from the server.
+     * Detach a CD-ROM by ID
+     * Detachs the specified CD-ROM from the server.  Detaching a CD-ROM deletes the CD-ROM. The image will not be deleted.  Note that detaching a CD-ROM leads to a reset of the server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param cdromId The unique ID of the CD-ROM. (required)
@@ -171,8 +171,8 @@ public class ServersApi {
     }
 
     /**
-     * Detach CD-ROMs
-     * Detach the specified CD-ROM from the server.
+     * Detach a CD-ROM by ID
+     * Detachs the specified CD-ROM from the server.  Detaching a CD-ROM deletes the CD-ROM. The image will not be deleted.  Note that detaching a CD-ROM leads to a reset of the server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param cdromId The unique ID of the CD-ROM. (required)
@@ -195,8 +195,8 @@ public class ServersApi {
     }
 
     /**
-     * Detach CD-ROMs (asynchronously)
-     * Detach the specified CD-ROM from the server.
+     * Detach a CD-ROM by ID (asynchronously)
+     * Detachs the specified CD-ROM from the server.  Detaching a CD-ROM deletes the CD-ROM. The image will not be deleted.  Note that detaching a CD-ROM leads to a reset of the server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param cdromId The unique ID of the CD-ROM. (required)
@@ -328,8 +328,8 @@ public class ServersApi {
     }
 
     /**
-     * Detach CD-ROMs
-     * Detach the specified CD-ROM from the server.
+     * Detach a CD-ROM by ID
+     * Detachs the specified CD-ROM from the server.  Detaching a CD-ROM deletes the CD-ROM. The image will not be deleted.  Note that detaching a CD-ROM leads to a reset of the server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param cdromId The unique ID of the CD-ROM. (required)
@@ -431,8 +431,8 @@ public class ServersApi {
     }
 
     /**
-     * Retrieve attached CD-ROMs
-     * Retrieve the properties of the CD-ROM, attached to the specified server.
+     * Get Attached CD-ROM by ID
+     * Retrieves the properties of the CD-ROM attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param cdromId The unique ID of the CD-ROM. (required)
@@ -455,8 +455,8 @@ public class ServersApi {
     }
 
     /**
-     * Retrieve attached CD-ROMs
-     * Retrieve the properties of the CD-ROM, attached to the specified server.
+     * Get Attached CD-ROM by ID
+     * Retrieves the properties of the CD-ROM attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param cdromId The unique ID of the CD-ROM. (required)
@@ -480,8 +480,8 @@ public class ServersApi {
     }
 
     /**
-     * Retrieve attached CD-ROMs (asynchronously)
-     * Retrieve the properties of the CD-ROM, attached to the specified server.
+     * Get Attached CD-ROM by ID (asynchronously)
+     * Retrieves the properties of the CD-ROM attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param cdromId The unique ID of the CD-ROM. (required)
@@ -616,8 +616,8 @@ public class ServersApi {
     }
 
     /**
-     * Retrieve attached CD-ROMs
-     * Retrieve the properties of the CD-ROM, attached to the specified server.
+     * Get Attached CD-ROM by ID
+     * Retrieves the properties of the CD-ROM attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param cdromId The unique ID of the CD-ROM. (required)
@@ -731,8 +731,8 @@ public class ServersApi {
     }
 
     /**
-     * List attached CD-ROMs 
-     * List all CD-ROMs, attached to the specified server.
+     * Get Attached CD-ROMs 
+     * Lists all CD-ROMs attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -758,8 +758,8 @@ public class ServersApi {
     }
 
     /**
-     * List attached CD-ROMs 
-     * List all CD-ROMs, attached to the specified server.
+     * Get Attached CD-ROMs 
+     * Lists all CD-ROMs attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -786,8 +786,8 @@ public class ServersApi {
     }
 
     /**
-     * List attached CD-ROMs  (asynchronously)
-     * List all CD-ROMs, attached to the specified server.
+     * Get Attached CD-ROMs  (asynchronously)
+     * Lists all CD-ROMs attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -977,8 +977,8 @@ public class ServersApi {
     }
 
     /**
-     * List attached CD-ROMs 
-     * List all CD-ROMs, attached to the specified server.
+     * Get Attached CD-ROMs 
+     * Lists all CD-ROMs attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @return APIdatacentersServersCdromsGetRequest
@@ -1078,8 +1078,8 @@ public class ServersApi {
     }
 
     /**
-     * Attach CD-ROMs
-     * Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server. 
+     * Attach a CD-ROM
+     * Attachs a CD-ROM to an existing server specified by its ID.   CD-ROMs cannot be created stand-alone like volumes. They are either attached to a server or do not exist. They always have an ISO-Image associated; empty CD-ROMs can not be provisioned. It is possible to attach up to two CD-ROMs to the same server.   Note that attaching a CD-ROM leads to a reset of the server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param cdrom The CD-ROM to be attached. (required)
@@ -1102,8 +1102,8 @@ public class ServersApi {
     }
 
     /**
-     * Attach CD-ROMs
-     * Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server. 
+     * Attach a CD-ROM
+     * Attachs a CD-ROM to an existing server specified by its ID.   CD-ROMs cannot be created stand-alone like volumes. They are either attached to a server or do not exist. They always have an ISO-Image associated; empty CD-ROMs can not be provisioned. It is possible to attach up to two CD-ROMs to the same server.   Note that attaching a CD-ROM leads to a reset of the server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param cdrom The CD-ROM to be attached. (required)
@@ -1127,8 +1127,8 @@ public class ServersApi {
     }
 
     /**
-     * Attach CD-ROMs (asynchronously)
-     * Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server. 
+     * Attach a CD-ROM (asynchronously)
+     * Attachs a CD-ROM to an existing server specified by its ID.   CD-ROMs cannot be created stand-alone like volumes. They are either attached to a server or do not exist. They always have an ISO-Image associated; empty CD-ROMs can not be provisioned. It is possible to attach up to two CD-ROMs to the same server.   Note that attaching a CD-ROM leads to a reset of the server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param cdrom The CD-ROM to be attached. (required)
@@ -1263,8 +1263,8 @@ public class ServersApi {
     }
 
     /**
-     * Attach CD-ROMs
-     * Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server. 
+     * Attach a CD-ROM
+     * Attachs a CD-ROM to an existing server specified by its ID.   CD-ROMs cannot be created stand-alone like volumes. They are either attached to a server or do not exist. They always have an ISO-Image associated; empty CD-ROMs can not be provisioned. It is possible to attach up to two CD-ROMs to the same server.   Note that attaching a CD-ROM leads to a reset of the server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param cdrom The CD-ROM to be attached. (required)
@@ -1364,7 +1364,7 @@ public class ServersApi {
 
     /**
      * Delete servers
-     * Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.
+     * Delete the specified server in your data center. The attached storage volumes will also be removed if the query parameter is set to true otherwise a separate API call must be made for these actions.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1385,7 +1385,7 @@ public class ServersApi {
 
     /**
      * Delete servers
-     * Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.
+     * Delete the specified server in your data center. The attached storage volumes will also be removed if the query parameter is set to true otherwise a separate API call must be made for these actions.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1409,7 +1409,7 @@ public class ServersApi {
 
     /**
      * Delete servers (asynchronously)
-     * Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.
+     * Delete the specified server in your data center. The attached storage volumes will also be removed if the query parameter is set to true otherwise a separate API call must be made for these actions.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1551,7 +1551,7 @@ public class ServersApi {
 
     /**
      * Delete servers
-     * Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.
+     * Delete the specified server in your data center. The attached storage volumes will also be removed if the query parameter is set to true otherwise a separate API call must be made for these actions.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @return APIdatacentersServersDeleteRequest
@@ -2571,8 +2571,8 @@ public class ServersApi {
     }
 
     /**
-     * Create servers
-     * Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
+     * Create a Server
+     * Creates a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
      * @param datacenterId The unique ID of the data center. (required)
      * @param server The server to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -2594,8 +2594,8 @@ public class ServersApi {
     }
 
     /**
-     * Create servers
-     * Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
+     * Create a Server
+     * Creates a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
      * @param datacenterId The unique ID of the data center. (required)
      * @param server The server to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -2618,8 +2618,8 @@ public class ServersApi {
     }
 
     /**
-     * Create servers (asynchronously)
-     * Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
+     * Create a Server (asynchronously)
+     * Creates a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
      * @param datacenterId The unique ID of the data center. (required)
      * @param server The server to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -2751,8 +2751,8 @@ public class ServersApi {
     }
 
     /**
-     * Create servers
-     * Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
+     * Create a Server
+     * Creates a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
      * @param datacenterId The unique ID of the data center. (required)
      * @param server The server to create. (required)
      * @return APIdatacentersServersPostRequest
@@ -2852,8 +2852,8 @@ public class ServersApi {
     }
 
     /**
-     * Modify servers
-     * Modify the properties of the specified server within the data center.  Starting with v5, the &#39;allowReboot&#39; attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, &#39;allowReboot&#39; had to be set to &#39;true&#39;; this is no longer required, the reboot will be performed automatically.
+     * Modify a Server by ID
+     * Modifies the properties of the specified server within the data center.  Starting with v5, the &#39;allowReboot&#39; attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, &#39;allowReboot&#39; had to be set to &#39;true&#39;; this is no longer required, the reboot will be performed automatically.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param server The modified server (required)
@@ -2876,8 +2876,8 @@ public class ServersApi {
     }
 
     /**
-     * Modify servers
-     * Modify the properties of the specified server within the data center.  Starting with v5, the &#39;allowReboot&#39; attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, &#39;allowReboot&#39; had to be set to &#39;true&#39;; this is no longer required, the reboot will be performed automatically.
+     * Modify a Server by ID
+     * Modifies the properties of the specified server within the data center.  Starting with v5, the &#39;allowReboot&#39; attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, &#39;allowReboot&#39; had to be set to &#39;true&#39;; this is no longer required, the reboot will be performed automatically.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param server The modified server (required)
@@ -2901,8 +2901,8 @@ public class ServersApi {
     }
 
     /**
-     * Modify servers (asynchronously)
-     * Modify the properties of the specified server within the data center.  Starting with v5, the &#39;allowReboot&#39; attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, &#39;allowReboot&#39; had to be set to &#39;true&#39;; this is no longer required, the reboot will be performed automatically.
+     * Modify a Server by ID (asynchronously)
+     * Modifies the properties of the specified server within the data center.  Starting with v5, the &#39;allowReboot&#39; attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, &#39;allowReboot&#39; had to be set to &#39;true&#39;; this is no longer required, the reboot will be performed automatically.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param server The modified server (required)
@@ -3037,8 +3037,8 @@ public class ServersApi {
     }
 
     /**
-     * Modify servers
-     * Modify the properties of the specified server within the data center.  Starting with v5, the &#39;allowReboot&#39; attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, &#39;allowReboot&#39; had to be set to &#39;true&#39;; this is no longer required, the reboot will be performed automatically.
+     * Modify a Server by ID
+     * Modifies the properties of the specified server within the data center.  Starting with v5, the &#39;allowReboot&#39; attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, &#39;allowReboot&#39; had to be set to &#39;true&#39;; this is no longer required, the reboot will be performed automatically.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param server The modified server (required)
@@ -3725,8 +3725,8 @@ public class ServersApi {
     }
 
     /**
-     * Resume Cubes instances
-     * Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.
+     * Resume a Cube Server by ID
+     * Resumes a suspended Cube Server specified by its ID.  Since the suspended instance was not deleted the allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3745,8 +3745,8 @@ public class ServersApi {
     }
 
     /**
-     * Resume Cubes instances
-     * Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.
+     * Resume a Cube Server by ID
+     * Resumes a suspended Cube Server specified by its ID.  Since the suspended instance was not deleted the allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3768,8 +3768,8 @@ public class ServersApi {
     }
 
     /**
-     * Resume Cubes instances (asynchronously)
-     * Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.
+     * Resume a Cube Server by ID (asynchronously)
+     * Resumes a suspended Cube Server specified by its ID.  Since the suspended instance was not deleted the allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3898,8 +3898,8 @@ public class ServersApi {
     }
 
     /**
-     * Resume Cubes instances
-     * Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.
+     * Resume a Cube Server by ID
+     * Resumes a suspended Cube Server specified by its ID.  Since the suspended instance was not deleted the allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @return APIdatacentersServersResumePostRequest
@@ -3993,8 +3993,8 @@ public class ServersApi {
     }
 
     /**
-     * Start servers
-     * Start the specified server within the data center; if the server&#39;s public IP address has been deallocated, a new IP address will be assigned.
+     * Start an Enterprise Server by ID
+     * Starts the Enterprise Server specified by its ID.  &gt;Note that you cannot use this method to start a Cube Server.  By starting the Enterprise Server, cores and RAM are provisioned, and the billing continues.  If the server&#39;s public IPv4 address has been deallocated, a new IPv4 address will be assigned. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4013,8 +4013,8 @@ public class ServersApi {
     }
 
     /**
-     * Start servers
-     * Start the specified server within the data center; if the server&#39;s public IP address has been deallocated, a new IP address will be assigned.
+     * Start an Enterprise Server by ID
+     * Starts the Enterprise Server specified by its ID.  &gt;Note that you cannot use this method to start a Cube Server.  By starting the Enterprise Server, cores and RAM are provisioned, and the billing continues.  If the server&#39;s public IPv4 address has been deallocated, a new IPv4 address will be assigned. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4036,8 +4036,8 @@ public class ServersApi {
     }
 
     /**
-     * Start servers (asynchronously)
-     * Start the specified server within the data center; if the server&#39;s public IP address has been deallocated, a new IP address will be assigned.
+     * Start an Enterprise Server by ID (asynchronously)
+     * Starts the Enterprise Server specified by its ID.  &gt;Note that you cannot use this method to start a Cube Server.  By starting the Enterprise Server, cores and RAM are provisioned, and the billing continues.  If the server&#39;s public IPv4 address has been deallocated, a new IPv4 address will be assigned. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4166,8 +4166,8 @@ public class ServersApi {
     }
 
     /**
-     * Start servers
-     * Start the specified server within the data center; if the server&#39;s public IP address has been deallocated, a new IP address will be assigned.
+     * Start an Enterprise Server by ID
+     * Starts the Enterprise Server specified by its ID.  &gt;Note that you cannot use this method to start a Cube Server.  By starting the Enterprise Server, cores and RAM are provisioned, and the billing continues.  If the server&#39;s public IPv4 address has been deallocated, a new IPv4 address will be assigned. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @return APIdatacentersServersStartPostRequest
@@ -4261,8 +4261,8 @@ public class ServersApi {
     }
 
     /**
-     * Stop VMs
-     * Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.
+     * Stop an Enterprise Server by ID
+     * Stops the Enterprise Server specified by its ID.   &gt;Note that you cannot use this method to stop a Cube Server.   By stopping the Enterprise Server, cores and RAM are freed and no longer charged.  Public IPv4 IPs that are not reserved are returned to the IPv4 pool. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4281,8 +4281,8 @@ public class ServersApi {
     }
 
     /**
-     * Stop VMs
-     * Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.
+     * Stop an Enterprise Server by ID
+     * Stops the Enterprise Server specified by its ID.   &gt;Note that you cannot use this method to stop a Cube Server.   By stopping the Enterprise Server, cores and RAM are freed and no longer charged.  Public IPv4 IPs that are not reserved are returned to the IPv4 pool. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4304,8 +4304,8 @@ public class ServersApi {
     }
 
     /**
-     * Stop VMs (asynchronously)
-     * Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.
+     * Stop an Enterprise Server by ID (asynchronously)
+     * Stops the Enterprise Server specified by its ID.   &gt;Note that you cannot use this method to stop a Cube Server.   By stopping the Enterprise Server, cores and RAM are freed and no longer charged.  Public IPv4 IPs that are not reserved are returned to the IPv4 pool. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4434,8 +4434,8 @@ public class ServersApi {
     }
 
     /**
-     * Stop VMs
-     * Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.
+     * Stop an Enterprise Server by ID
+     * Stops the Enterprise Server specified by its ID.   &gt;Note that you cannot use this method to stop a Cube Server.   By stopping the Enterprise Server, cores and RAM are freed and no longer charged.  Public IPv4 IPs that are not reserved are returned to the IPv4 pool. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @return APIdatacentersServersStopPostRequest
@@ -4529,8 +4529,8 @@ public class ServersApi {
     }
 
     /**
-     * Suspend Cubes instances
-     * Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.
+     * Suspend a Cube Server by ID
+     * Suspends the specified Cubes instance within the data center.   The instance is not deleted and allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4549,8 +4549,8 @@ public class ServersApi {
     }
 
     /**
-     * Suspend Cubes instances
-     * Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.
+     * Suspend a Cube Server by ID
+     * Suspends the specified Cubes instance within the data center.   The instance is not deleted and allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4572,8 +4572,8 @@ public class ServersApi {
     }
 
     /**
-     * Suspend Cubes instances (asynchronously)
-     * Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.
+     * Suspend a Cube Server by ID (asynchronously)
+     * Suspends the specified Cubes instance within the data center.   The instance is not deleted and allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4702,8 +4702,8 @@ public class ServersApi {
     }
 
     /**
-     * Suspend Cubes instances
-     * Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.
+     * Suspend a Cube Server by ID
+     * Suspends the specified Cubes instance within the data center.   The instance is not deleted and allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the &#39;Location&#39; HTTP header in the response (see &#39;Requests&#39; for more information).
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @return APIdatacentersServersSuspendPostRequest
@@ -5121,8 +5121,8 @@ public class ServersApi {
     }
 
     /**
-     * Upgrade servers
-     * Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  &#39;/datacenters/{datacenterId}/servers?upgradeNeeded&#x3D;true&#39;
+     * Upgrade a Server by ID
+     * Upgrades the server version.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -5141,8 +5141,8 @@ public class ServersApi {
     }
 
     /**
-     * Upgrade servers
-     * Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  &#39;/datacenters/{datacenterId}/servers?upgradeNeeded&#x3D;true&#39;
+     * Upgrade a Server by ID
+     * Upgrades the server version.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -5164,8 +5164,8 @@ public class ServersApi {
     }
 
     /**
-     * Upgrade servers (asynchronously)
-     * Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  &#39;/datacenters/{datacenterId}/servers?upgradeNeeded&#x3D;true&#39;
+     * Upgrade a Server by ID (asynchronously)
+     * Upgrades the server version.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -5294,8 +5294,8 @@ public class ServersApi {
     }
 
     /**
-     * Upgrade servers
-     * Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  &#39;/datacenters/{datacenterId}/servers?upgradeNeeded&#x3D;true&#39;
+     * Upgrade a Server by ID
+     * Upgrades the server version.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @return APIdatacentersServersUpgradePostRequest
@@ -5396,8 +5396,8 @@ public class ServersApi {
     }
 
     /**
-     * Detach volumes
-     * Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.
+     * Detach a Volume by ID
+     * Detachs the specified volume from the server.  Note that only the volume&#39;s connection to the specified server is disconnected. If you want to delete the volume, you must submit a separate request to perform the deletion.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param volumeId The unique ID of the volume. (required)
@@ -5417,8 +5417,8 @@ public class ServersApi {
     }
 
     /**
-     * Detach volumes
-     * Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.
+     * Detach a Volume by ID
+     * Detachs the specified volume from the server.  Note that only the volume&#39;s connection to the specified server is disconnected. If you want to delete the volume, you must submit a separate request to perform the deletion.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param volumeId The unique ID of the volume. (required)
@@ -5441,8 +5441,8 @@ public class ServersApi {
     }
 
     /**
-     * Detach volumes (asynchronously)
-     * Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.
+     * Detach a Volume by ID (asynchronously)
+     * Detachs the specified volume from the server.  Note that only the volume&#39;s connection to the specified server is disconnected. If you want to delete the volume, you must submit a separate request to perform the deletion.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param volumeId The unique ID of the volume. (required)
@@ -5574,8 +5574,8 @@ public class ServersApi {
     }
 
     /**
-     * Detach volumes
-     * Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.
+     * Detach a Volume by ID
+     * Detachs the specified volume from the server.  Note that only the volume&#39;s connection to the specified server is disconnected. If you want to delete the volume, you must submit a separate request to perform the deletion.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param volumeId The unique ID of the volume. (required)
@@ -5677,8 +5677,8 @@ public class ServersApi {
     }
 
     /**
-     * Retrieve attached volumes
-     * Retrieve the properties of the volume, attached to the specified server.
+     * Get Attached Volume by ID
+     * Retrieves the properties of the volume attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param volumeId The unique ID of the volume. (required)
@@ -5701,8 +5701,8 @@ public class ServersApi {
     }
 
     /**
-     * Retrieve attached volumes
-     * Retrieve the properties of the volume, attached to the specified server.
+     * Get Attached Volume by ID
+     * Retrieves the properties of the volume attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param volumeId The unique ID of the volume. (required)
@@ -5726,8 +5726,8 @@ public class ServersApi {
     }
 
     /**
-     * Retrieve attached volumes (asynchronously)
-     * Retrieve the properties of the volume, attached to the specified server.
+     * Get Attached Volume by ID (asynchronously)
+     * Retrieves the properties of the volume attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param volumeId The unique ID of the volume. (required)
@@ -5862,8 +5862,8 @@ public class ServersApi {
     }
 
     /**
-     * Retrieve attached volumes
-     * Retrieve the properties of the volume, attached to the specified server.
+     * Get Attached Volume by ID
+     * Retrieves the properties of the volume attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param volumeId The unique ID of the volume. (required)
@@ -5977,8 +5977,8 @@ public class ServersApi {
     }
 
     /**
-     * List attached volumes
-     * List all volumes, attached to the specified server.
+     * Get Attached Volumes
+     * Lists all volumes attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -6004,8 +6004,8 @@ public class ServersApi {
     }
 
     /**
-     * List attached volumes
-     * List all volumes, attached to the specified server.
+     * Get Attached Volumes
+     * Lists all volumes attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -6032,8 +6032,8 @@ public class ServersApi {
     }
 
     /**
-     * List attached volumes (asynchronously)
-     * List all volumes, attached to the specified server.
+     * Get Attached Volumes (asynchronously)
+     * Lists all volumes attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -6223,8 +6223,8 @@ public class ServersApi {
     }
 
     /**
-     * List attached volumes
-     * List all volumes, attached to the specified server.
+     * Get Attached Volumes
+     * Lists all volumes attached to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @return APIdatacentersServersVolumesGetRequest
@@ -6324,8 +6324,8 @@ public class ServersApi {
     }
 
     /**
-     * Attach volumes
-     * Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.
+     * Attach a Volume to a Server
+     * Attachs an existing storage volume to the specified server.  You can attach an existing volume in the VDC to a server. To move a volume from one server to another, you must first detach the volume from the first server and attach it to the second server.  It is also possible to create and attach a volume in one step by simply providing a new volume description as a payload. The only difference is the URL; see &#39;Creating a Volume&#39; for details about volumes.  Note that the combined total of attached volumes and NICs cannot exceed 24 per server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param volume The volume to be attached (or created and attached). (required)
@@ -6348,8 +6348,8 @@ public class ServersApi {
     }
 
     /**
-     * Attach volumes
-     * Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.
+     * Attach a Volume to a Server
+     * Attachs an existing storage volume to the specified server.  You can attach an existing volume in the VDC to a server. To move a volume from one server to another, you must first detach the volume from the first server and attach it to the second server.  It is also possible to create and attach a volume in one step by simply providing a new volume description as a payload. The only difference is the URL; see &#39;Creating a Volume&#39; for details about volumes.  Note that the combined total of attached volumes and NICs cannot exceed 24 per server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param volume The volume to be attached (or created and attached). (required)
@@ -6373,8 +6373,8 @@ public class ServersApi {
     }
 
     /**
-     * Attach volumes (asynchronously)
-     * Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.
+     * Attach a Volume to a Server (asynchronously)
+     * Attachs an existing storage volume to the specified server.  You can attach an existing volume in the VDC to a server. To move a volume from one server to another, you must first detach the volume from the first server and attach it to the second server.  It is also possible to create and attach a volume in one step by simply providing a new volume description as a payload. The only difference is the URL; see &#39;Creating a Volume&#39; for details about volumes.  Note that the combined total of attached volumes and NICs cannot exceed 24 per server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param volume The volume to be attached (or created and attached). (required)
@@ -6509,8 +6509,8 @@ public class ServersApi {
     }
 
     /**
-     * Attach volumes
-     * Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.
+     * Attach a Volume to a Server
+     * Attachs an existing storage volume to the specified server.  You can attach an existing volume in the VDC to a server. To move a volume from one server to another, you must first detach the volume from the first server and attach it to the second server.  It is also possible to create and attach a volume in one step by simply providing a new volume description as a payload. The only difference is the URL; see &#39;Creating a Volume&#39; for details about volumes.  Note that the combined total of attached volumes and NICs cannot exceed 24 per server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param volume The volume to be attached (or created and attached). (required)

@@ -28,13 +28,13 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * LoadbalancerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class LoadbalancerProperties {
   
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  public static final String SERIALIZED_NAME_DHCP = "dhcp";
+  @SerializedName(SERIALIZED_NAME_DHCP)
+  private Boolean dhcp;
 
 
   public static final String SERIALIZED_NAME_IP = "ip";
@@ -42,32 +42,32 @@ public class LoadbalancerProperties {
   private String ip;
 
 
-  public static final String SERIALIZED_NAME_DHCP = "dhcp";
-  @SerializedName(SERIALIZED_NAME_DHCP)
-  private Boolean dhcp;
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
   
 
-  public LoadbalancerProperties name(String name) {
+  public LoadbalancerProperties dhcp(Boolean dhcp) {
     
-    this.name = name;
+    this.dhcp = dhcp;
     return this;
   }
 
    /**
-   * The name of the  resource.
-   * @return name
+   * Indicates if the loadbalancer will reserve an IP using DHCP.
+   * @return dhcp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
+  @ApiModelProperty(example = "true", value = "Indicates if the loadbalancer will reserve an IP using DHCP.")
 
-  public String getName() {
-    return name;
+  public Boolean getDhcp() {
+    return dhcp;
   }
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setDhcp(Boolean dhcp) {
+    this.dhcp = dhcp;
   }
 
 
@@ -96,26 +96,26 @@ public class LoadbalancerProperties {
 
 
 
-  public LoadbalancerProperties dhcp(Boolean dhcp) {
+  public LoadbalancerProperties name(String name) {
     
-    this.dhcp = dhcp;
+    this.name = name;
     return this;
   }
 
    /**
-   * Indicates if the loadbalancer will reserve an IP using DHCP.
-   * @return dhcp
+   * The name of the  resource.
+   * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Indicates if the loadbalancer will reserve an IP using DHCP.")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
-  public Boolean getDhcp() {
-    return dhcp;
+  public String getName() {
+    return name;
   }
 
 
-  public void setDhcp(Boolean dhcp) {
-    this.dhcp = dhcp;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -128,7 +128,7 @@ public class LoadbalancerProperties {
       return false;
     }
     LoadbalancerProperties loadbalancerProperties = (LoadbalancerProperties) o;
-    return Objects.equals(this.name, loadbalancerProperties.name) && Objects.equals(this.ip, loadbalancerProperties.ip) && Objects.equals(this.dhcp, loadbalancerProperties.dhcp);
+    return Objects.equals(this.dhcp, loadbalancerProperties.dhcp) && Objects.equals(this.ip, loadbalancerProperties.ip) && Objects.equals(this.name, loadbalancerProperties.name);
   }
 
 
@@ -139,11 +139,11 @@ public class LoadbalancerProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class LoadbalancerProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    dhcp: ").append(toIndentedString(dhcp)).append("\n");
 
     sb.append("    ip: ").append(toIndentedString(ip)).append("\n");
 
-    sb.append("    dhcp: ").append(toIndentedString(dhcp)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -159,5 +159,14 @@ public class LoadbalancerProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// LoadbalancerProperties instantiates a new LoadbalancerProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public LoadbalancerProperties() {
+
 }
 
+
+}

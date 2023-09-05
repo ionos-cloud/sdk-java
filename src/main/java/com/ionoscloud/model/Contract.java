@@ -29,20 +29,43 @@ import java.io.IOException;
 /**
  * Contract
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class Contract {
   
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
-
-
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private ContractProperties properties;
 
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
+
   
+
+  public Contract properties(ContractProperties properties) {
+    
+    this.properties = properties;
+    return this;
+  }
+
+   /**
+   * Get properties
+   * @return properties
+  **/
+  @ApiModelProperty(required = true, value = "")
+
+  public ContractProperties getProperties() {
+    return properties;
+  }
+
+
+  public void setProperties(ContractProperties properties) {
+    this.properties = properties;
+  }
+
+
 
   public Contract type(Type type) {
     
@@ -67,29 +90,6 @@ public class Contract {
   }
 
 
-
-  public Contract properties(ContractProperties properties) {
-    
-    this.properties = properties;
-    return this;
-  }
-
-   /**
-   * Get properties
-   * @return properties
-  **/
-  @ApiModelProperty(required = true, value = "")
-
-  public ContractProperties getProperties() {
-    return properties;
-  }
-
-
-  public void setProperties(ContractProperties properties) {
-    this.properties = properties;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -99,7 +99,7 @@ public class Contract {
       return false;
     }
     Contract contract = (Contract) o;
-    return Objects.equals(this.type, contract.type) && Objects.equals(this.properties, contract.properties);
+    return Objects.equals(this.properties, contract.properties) && Objects.equals(this.type, contract.type);
   }
 
 
@@ -110,9 +110,9 @@ public class Contract {
     StringBuilder sb = new StringBuilder();
     sb.append("class Contract {\n");
     
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -128,5 +128,17 @@ public class Contract {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// Contract instantiates a new Contract object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public Contract(ContractProperties Properties) {
+
+	this.properties = Properties;
 }
 
+public Contract() {
+}
+
+}

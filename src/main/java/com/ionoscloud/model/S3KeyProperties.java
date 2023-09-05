@@ -27,38 +27,20 @@ import java.io.IOException;
 /**
  * S3KeyProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class S3KeyProperties {
   
-  public static final String SERIALIZED_NAME_SECRET_KEY = "secretKey";
-  @SerializedName(SERIALIZED_NAME_SECRET_KEY)
-  private String secretKey;
-
-
   public static final String SERIALIZED_NAME_ACTIVE = "active";
   @SerializedName(SERIALIZED_NAME_ACTIVE)
   private Boolean active;
 
+
+  public static final String SERIALIZED_NAME_SECRET_KEY = "secretKey";
+  @SerializedName(SERIALIZED_NAME_SECRET_KEY)
+  private String secretKey;
+
   
-
-   /**
-   * Secret of the S3 key.
-   * @return secretKey
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "tFVkUARsoeCdntQs2jVSyGG6TMPfPZ+ghnsWj/gG", value = "Secret of the S3 key.")
-
-  public String getSecretKey() {
-    return secretKey;
-  }
-
-
-  public void setSecretKey(String secretKey) {
-    this.secretKey = secretKey;
-  }
-
-
 
   public S3KeyProperties active(Boolean active) {
     
@@ -83,6 +65,24 @@ public class S3KeyProperties {
   }
 
 
+
+   /**
+   * Secret of the S3 key.
+   * @return secretKey
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "tFVkUARsoeCdntQs2jVSyGG6TMPfPZ+ghnsWj/gG", value = "Secret of the S3 key.")
+
+  public String getSecretKey() {
+    return secretKey;
+  }
+
+
+  public void setSecretKey(String secretKey) {
+    this.secretKey = secretKey;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -92,7 +92,7 @@ public class S3KeyProperties {
       return false;
     }
     S3KeyProperties s3KeyProperties = (S3KeyProperties) o;
-    return Objects.equals(this.secretKey, s3KeyProperties.secretKey) && Objects.equals(this.active, s3KeyProperties.active);
+    return Objects.equals(this.active, s3KeyProperties.active) && Objects.equals(this.secretKey, s3KeyProperties.secretKey);
   }
 
 
@@ -103,9 +103,9 @@ public class S3KeyProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class S3KeyProperties {\n");
     
-    sb.append("    secretKey: ").append(toIndentedString(secretKey)).append("\n");
-
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
+
+    sb.append("    secretKey: ").append(toIndentedString(secretKey)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -121,5 +121,14 @@ public class S3KeyProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// S3KeyProperties instantiates a new S3KeyProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public S3KeyProperties() {
+
 }
 
+
+}

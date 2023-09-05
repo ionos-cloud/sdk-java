@@ -1225,8 +1225,8 @@ public class SnapshotsApi {
     }
 
     /**
-     * Modify snapshots
-     * Modify the properties of the specified snapshot.
+     * Modify a Snapshot by ID
+     * Modifies the properties of the specified snapshot.
      * @param snapshotId The unique ID of the snapshot. (required)
      * @param snapshot The modified snapshot (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1248,8 +1248,8 @@ public class SnapshotsApi {
     }
 
     /**
-     * Modify snapshots
-     * Modify the properties of the specified snapshot.
+     * Modify a Snapshot by ID
+     * Modifies the properties of the specified snapshot.
      * @param snapshotId The unique ID of the snapshot. (required)
      * @param snapshot The modified snapshot (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1272,8 +1272,8 @@ public class SnapshotsApi {
     }
 
     /**
-     * Modify snapshots (asynchronously)
-     * Modify the properties of the specified snapshot.
+     * Modify a Snapshot by ID (asynchronously)
+     * Modifies the properties of the specified snapshot.
      * @param snapshotId The unique ID of the snapshot. (required)
      * @param snapshot The modified snapshot (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1405,8 +1405,8 @@ public class SnapshotsApi {
     }
 
     /**
-     * Modify snapshots
-     * Modify the properties of the specified snapshot.
+     * Modify a Snapshot by ID
+     * Modifies the properties of the specified snapshot.
      * @param snapshotId The unique ID of the snapshot. (required)
      * @param snapshot The modified snapshot (required)
      * @return APIsnapshotsPutRequest

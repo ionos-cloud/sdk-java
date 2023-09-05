@@ -30,30 +30,48 @@ import java.net.URI;
 /**
  * GroupShare
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class GroupShare {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
-
-
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
 
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private GroupShareProperties properties;
 
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
+
   
+
+   /**
+   * URL to the object representation (absolute path).
+   * @return href
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c/shares/17faab13-13abc-4efc-a8ad-ef1fb31a481b", value = "URL to the object representation (absolute path).")
+
+  public URI getHref() {
+    return href;
+  }
+
+
+  public void setHref(URI href) {
+    this.href = href;
+  }
+
+
 
    /**
    * The resource&#39;s unique identifier.
@@ -69,6 +87,29 @@ public class GroupShare {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+
+
+  public GroupShare properties(GroupShareProperties properties) {
+    
+    this.properties = properties;
+    return this;
+  }
+
+   /**
+   * Get properties
+   * @return properties
+  **/
+  @ApiModelProperty(required = true, value = "")
+
+  public GroupShareProperties getProperties() {
+    return properties;
+  }
+
+
+  public void setProperties(GroupShareProperties properties) {
+    this.properties = properties;
   }
 
 
@@ -96,47 +137,6 @@ public class GroupShare {
   }
 
 
-
-   /**
-   * URL to the object representation (absolute path).
-   * @return href
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "https://<API_HOST>/cloudapi/v6/um/groups/15f67991-0f51-4efc-a8ad-ef1fb31a480c/shares/17faab13-13abc-4efc-a8ad-ef1fb31a481b", value = "URL to the object representation (absolute path).")
-
-  public URI getHref() {
-    return href;
-  }
-
-
-  public void setHref(URI href) {
-    this.href = href;
-  }
-
-
-
-  public GroupShare properties(GroupShareProperties properties) {
-    
-    this.properties = properties;
-    return this;
-  }
-
-   /**
-   * Get properties
-   * @return properties
-  **/
-  @ApiModelProperty(required = true, value = "")
-
-  public GroupShareProperties getProperties() {
-    return properties;
-  }
-
-
-  public void setProperties(GroupShareProperties properties) {
-    this.properties = properties;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -146,7 +146,7 @@ public class GroupShare {
       return false;
     }
     GroupShare groupShare = (GroupShare) o;
-    return Objects.equals(this.id, groupShare.id) && Objects.equals(this.type, groupShare.type) && Objects.equals(this.href, groupShare.href) && Objects.equals(this.properties, groupShare.properties);
+    return Objects.equals(this.href, groupShare.href) && Objects.equals(this.id, groupShare.id) && Objects.equals(this.properties, groupShare.properties) && Objects.equals(this.type, groupShare.type);
   }
 
 
@@ -157,13 +157,13 @@ public class GroupShare {
     StringBuilder sb = new StringBuilder();
     sb.append("class GroupShare {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -179,5 +179,17 @@ public class GroupShare {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// GroupShare instantiates a new GroupShare object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public GroupShare(GroupShareProperties Properties) {
+
+	this.properties = Properties;
 }
 
+public GroupShare() {
+}
+
+}

@@ -6,38 +6,34 @@
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **name** | **String** | The name of the  resource. |  [optional] |
-| **description** | **String** | Human-readable description. |  [optional] |
-| **location** | **String** | Location of that image/snapshot.  |  [optional] [readonly] |
-| **size** | [**BigDecimal**](BigDecimal.md) | The size of the image in GB. |  [optional] [readonly] |
+| **cloudInit** | [**CloudInitEnum**](#CloudInitEnum) | Cloud init compatibility. |  [optional] |
 | **cpuHotPlug** | **Boolean** | Hot-plug capable CPU (no reboot required). |  [optional] |
 | **cpuHotUnplug** | **Boolean** | Hot-unplug capable CPU (no reboot required). |  [optional] |
-| **ramHotPlug** | **Boolean** | Hot-plug capable RAM (no reboot required). |  [optional] |
-| **ramHotUnplug** | **Boolean** | Hot-unplug capable RAM (no reboot required). |  [optional] |
-| **nicHotPlug** | **Boolean** | Hot-plug capable NIC (no reboot required). |  [optional] |
-| **nicHotUnplug** | **Boolean** | Hot-unplug capable NIC (no reboot required). |  [optional] |
-| **discVirtioHotPlug** | **Boolean** | Hot-plug capable Virt-IO drive (no reboot required). |  [optional] |
-| **discVirtioHotUnplug** | **Boolean** | Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs. |  [optional] |
+| **description** | **String** | Human-readable description. |  [optional] |
 | **discScsiHotPlug** | **Boolean** | Hot-plug capable SCSI drive (no reboot required). |  [optional] |
 | **discScsiHotUnplug** | **Boolean** | Hot-unplug capable SCSI drive (no reboot required). Not supported with Windows VMs. |  [optional] |
-| **licenceType** | [**LicenceTypeEnum**](#LicenceTypeEnum) | OS type for this image. |  |
+| **discVirtioHotPlug** | **Boolean** | Hot-plug capable Virt-IO drive (no reboot required). |  [optional] |
+| **discVirtioHotUnplug** | **Boolean** | Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs. |  [optional] |
+| **imageAliases** | **List&lt;String&gt;** | List of image aliases mapped for this image |  [optional] [readonly] |
 | **imageType** | [**ImageTypeEnum**](#ImageTypeEnum) | The image type. |  [optional] [readonly] |
+| **licenceType** | [**LicenceTypeEnum**](#LicenceTypeEnum) | The OS type of this image. |  |
+| **location** | **String** | The location of this image/snapshot. |  [optional] [readonly] |
+| **name** | **String** | The resource name. |  [optional] |
+| **nicHotPlug** | **Boolean** | Hot-plug capable NIC (no reboot required). |  [optional] |
+| **nicHotUnplug** | **Boolean** | Hot-unplug capable NIC (no reboot required). |  [optional] |
 | **_public** | **Boolean** | Indicates whether the image is part of a public repository. |  [optional] [readonly] |
-| **imageAliases** | **List&lt;String&gt;** | List of image aliases mapped for this Image |  [optional] [readonly] |
-| **cloudInit** | [**CloudInitEnum**](#CloudInitEnum) | Cloud init compatibility. |  [optional] |
+| **ramHotPlug** | **Boolean** | Hot-plug capable RAM (no reboot required). |  [optional] |
+| **ramHotUnplug** | **Boolean** | Hot-unplug capable RAM (no reboot required). |  [optional] |
+| **size** | [**BigDecimal**](BigDecimal.md) | The image size in GB. |  [optional] [readonly] |
 
 
 
-## Enum: LicenceTypeEnum
+## Enum: CloudInitEnum
 
 | Name | Value |
 | ---- | -----
-| UNKNOWN | &quot;UNKNOWN&quot; |
-| WINDOWS | &quot;WINDOWS&quot; |
-| WINDOWS2016 | &quot;WINDOWS2016&quot; |
-| WINDOWS2022 | &quot;WINDOWS2022&quot; |
-| LINUX | &quot;LINUX&quot; |
-| OTHER | &quot;OTHER&quot; |
+| NONE | &quot;NONE&quot; |
+| V1 | &quot;V1&quot; |
 
 
 
@@ -51,11 +47,16 @@
 
 
 
-## Enum: CloudInitEnum
+## Enum: LicenceTypeEnum
 
 | Name | Value |
 | ---- | -----
-| NONE | &quot;NONE&quot; |
-| V1 | &quot;V1&quot; |
+| UNKNOWN | &quot;UNKNOWN&quot; |
+| WINDOWS | &quot;WINDOWS&quot; |
+| WINDOWS2016 | &quot;WINDOWS2016&quot; |
+| WINDOWS2022 | &quot;WINDOWS2022&quot; |
+| RHEL | &quot;RHEL&quot; |
+| LINUX | &quot;LINUX&quot; |
+| OTHER | &quot;OTHER&quot; |
 
 

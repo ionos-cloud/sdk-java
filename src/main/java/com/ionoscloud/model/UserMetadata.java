@@ -28,18 +28,18 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * UserMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class UserMetadata {
   
-  public static final String SERIALIZED_NAME_ETAG = "etag";
-  @SerializedName(SERIALIZED_NAME_ETAG)
-  private String etag;
-
-
   public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
   @SerializedName(SERIALIZED_NAME_CREATED_DATE)
   private OffsetDateTime createdDate;
+
+
+  public static final String SERIALIZED_NAME_ETAG = "etag";
+  @SerializedName(SERIALIZED_NAME_ETAG)
+  private String etag;
 
 
   public static final String SERIALIZED_NAME_LAST_LOGIN = "lastLogin";
@@ -47,24 +47,6 @@ public class UserMetadata {
   private OffsetDateTime lastLogin;
 
   
-
-   /**
-   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
-   * @return etag
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
-
-  public String getEtag() {
-    return etag;
-  }
-
-
-  public void setEtag(String etag) {
-    this.etag = etag;
-  }
-
-
 
    /**
    * The time the user was created.
@@ -80,6 +62,24 @@ public class UserMetadata {
 
   public void setCreatedDate(OffsetDateTime createdDate) {
     this.createdDate = createdDate;
+  }
+
+
+
+   /**
+   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
+   * @return etag
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
+
+  public String getEtag() {
+    return etag;
+  }
+
+
+  public void setEtag(String etag) {
+    this.etag = etag;
   }
 
 
@@ -110,7 +110,7 @@ public class UserMetadata {
       return false;
     }
     UserMetadata userMetadata = (UserMetadata) o;
-    return Objects.equals(this.etag, userMetadata.etag) && Objects.equals(this.createdDate, userMetadata.createdDate) && Objects.equals(this.lastLogin, userMetadata.lastLogin);
+    return Objects.equals(this.createdDate, userMetadata.createdDate) && Objects.equals(this.etag, userMetadata.etag) && Objects.equals(this.lastLogin, userMetadata.lastLogin);
   }
 
 
@@ -121,9 +121,9 @@ public class UserMetadata {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserMetadata {\n");
     
-    sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
-
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
+
+    sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
 
     sb.append("    lastLogin: ").append(toIndentedString(lastLogin)).append("\n");
     sb.append("}");
@@ -141,5 +141,14 @@ public class UserMetadata {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// UserMetadata instantiates a new UserMetadata object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public UserMetadata() {
+
 }
 
+
+}

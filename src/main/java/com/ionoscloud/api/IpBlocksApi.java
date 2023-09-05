@@ -1254,8 +1254,8 @@ public class IpBlocksApi {
     }
 
     /**
-     * Reserve IP blocks
-     * Reserve a new IP block.
+     * Reserve a IP Block
+     * Reserves a new IP block.
      * @param ipblock The IP block to be reserved. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -1276,8 +1276,8 @@ public class IpBlocksApi {
     }
 
     /**
-     * Reserve IP blocks
-     * Reserve a new IP block.
+     * Reserve a IP Block
+     * Reserves a new IP block.
      * @param ipblock The IP block to be reserved. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -1299,8 +1299,8 @@ public class IpBlocksApi {
     }
 
     /**
-     * Reserve IP blocks (asynchronously)
-     * Reserve a new IP block.
+     * Reserve a IP Block (asynchronously)
+     * Reserves a new IP block.
      * @param ipblock The IP block to be reserved. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -1429,8 +1429,8 @@ public class IpBlocksApi {
     }
 
     /**
-     * Reserve IP blocks
-     * Reserve a new IP block.
+     * Reserve a IP Block
+     * Reserves a new IP block.
      * @param ipblock The IP block to be reserved. (required)
      * @return APIipblocksPostRequest
      * @http.response.details
@@ -1522,8 +1522,8 @@ public class IpBlocksApi {
     }
 
     /**
-     * Modify IP blocks
-     * Modify the properties of the specified IP block.
+     * Modify a IP Block by ID
+     * Modifies the properties of the specified IP block.
      * @param ipblockId The unique ID of the IP block. (required)
      * @param ipblock The modified IP block. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1545,8 +1545,8 @@ public class IpBlocksApi {
     }
 
     /**
-     * Modify IP blocks
-     * Modify the properties of the specified IP block.
+     * Modify a IP Block by ID
+     * Modifies the properties of the specified IP block.
      * @param ipblockId The unique ID of the IP block. (required)
      * @param ipblock The modified IP block. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1569,8 +1569,8 @@ public class IpBlocksApi {
     }
 
     /**
-     * Modify IP blocks (asynchronously)
-     * Modify the properties of the specified IP block.
+     * Modify a IP Block by ID (asynchronously)
+     * Modifies the properties of the specified IP block.
      * @param ipblockId The unique ID of the IP block. (required)
      * @param ipblock The modified IP block. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1702,8 +1702,8 @@ public class IpBlocksApi {
     }
 
     /**
-     * Modify IP blocks
-     * Modify the properties of the specified IP block.
+     * Modify a IP Block by ID
+     * Modifies the properties of the specified IP block.
      * @param ipblockId The unique ID of the IP block. (required)
      * @param ipblock The modified IP block. (required)
      * @return APIipblocksPutRequest

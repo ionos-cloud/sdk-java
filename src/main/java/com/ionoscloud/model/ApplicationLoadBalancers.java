@@ -34,18 +34,13 @@ import java.util.List;
 /**
  * ApplicationLoadBalancers
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class ApplicationLoadBalancers {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
+  public static final String SERIALIZED_NAME_LINKS = "_links";
+  @SerializedName(SERIALIZED_NAME_LINKS)
+  private PaginationLinks links;
 
 
   public static final String SERIALIZED_NAME_HREF = "href";
@@ -53,14 +48,14 @@ public class ApplicationLoadBalancers {
   private URI href;
 
 
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
+
+
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
   private List<ApplicationLoadBalancer> items = null;
-
-
-  public static final String SERIALIZED_NAME_OFFSET = "offset";
-  @SerializedName(SERIALIZED_NAME_OFFSET)
-  private BigDecimal offset;
 
 
   public static final String SERIALIZED_NAME_LIMIT = "limit";
@@ -68,11 +63,58 @@ public class ApplicationLoadBalancers {
   private BigDecimal limit;
 
 
-  public static final String SERIALIZED_NAME_LINKS = "_links";
-  @SerializedName(SERIALIZED_NAME_LINKS)
-  private PaginationLinks links;
+  public static final String SERIALIZED_NAME_OFFSET = "offset";
+  @SerializedName(SERIALIZED_NAME_OFFSET)
+  private BigDecimal offset;
+
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
 
   
+
+  public ApplicationLoadBalancers links(PaginationLinks links) {
+    
+    this.links = links;
+    return this;
+  }
+
+   /**
+   * Get links
+   * @return links
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public PaginationLinks getLinks() {
+    return links;
+  }
+
+
+  public void setLinks(PaginationLinks links) {
+    this.links = links;
+  }
+
+
+
+   /**
+   * The URL to the object representation (absolute path).
+   * @return href
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "<RESOURCE-URI>", value = "The URL to the object representation (absolute path).")
+
+  public URI getHref() {
+    return href;
+  }
+
+
+  public void setHref(URI href) {
+    this.href = href;
+  }
+
+
 
    /**
    * The resource&#39;s unique identifier.
@@ -92,48 +134,6 @@ public class ApplicationLoadBalancers {
 
 
 
-  public ApplicationLoadBalancers type(Type type) {
-    
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * The type of object that has been created.
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"collection\"", value = "The type of object that has been created.")
-
-  public Type getType() {
-    return type;
-  }
-
-
-  public void setType(Type type) {
-    this.type = type;
-  }
-
-
-
-   /**
-   * URL to the object representation (absolute path).
-   * @return href
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path).")
-
-  public URI getHref() {
-    return href;
-  }
-
-
-  public void setHref(URI href) {
-    this.href = href;
-  }
-
-
-
    /**
    * Array of items in the collection.
    * @return items
@@ -148,30 +148,6 @@ public class ApplicationLoadBalancers {
 
   public void setItems(List<ApplicationLoadBalancer> items) {
     this.items = items;
-  }
-
-
-
-  public ApplicationLoadBalancers offset(BigDecimal offset) {
-    
-    this.offset = offset;
-    return this;
-  }
-
-   /**
-   * The offset (if specified in the request).
-   * @return offset
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "0", value = "The offset (if specified in the request).")
-
-  public BigDecimal getOffset() {
-    return offset;
-  }
-
-
-  public void setOffset(BigDecimal offset) {
-    this.offset = offset;
   }
 
 
@@ -200,26 +176,50 @@ public class ApplicationLoadBalancers {
 
 
 
-  public ApplicationLoadBalancers links(PaginationLinks links) {
+  public ApplicationLoadBalancers offset(BigDecimal offset) {
     
-    this.links = links;
+    this.offset = offset;
     return this;
   }
 
    /**
-   * Get links
-   * @return links
+   * The offset (if specified in the request).
+   * @return offset
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "0", value = "The offset (if specified in the request).")
 
-  public PaginationLinks getLinks() {
-    return links;
+  public BigDecimal getOffset() {
+    return offset;
   }
 
 
-  public void setLinks(PaginationLinks links) {
-    this.links = links;
+  public void setOffset(BigDecimal offset) {
+    this.offset = offset;
+  }
+
+
+
+  public ApplicationLoadBalancers type(Type type) {
+    
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * The type of object that has been created.
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "\"collection\"", value = "The type of object that has been created.")
+
+  public Type getType() {
+    return type;
+  }
+
+
+  public void setType(Type type) {
+    this.type = type;
   }
 
 
@@ -232,7 +232,7 @@ public class ApplicationLoadBalancers {
       return false;
     }
     ApplicationLoadBalancers applicationLoadBalancers = (ApplicationLoadBalancers) o;
-    return Objects.equals(this.id, applicationLoadBalancers.id) && Objects.equals(this.type, applicationLoadBalancers.type) && Objects.equals(this.href, applicationLoadBalancers.href) && Objects.equals(this.items, applicationLoadBalancers.items) && Objects.equals(this.offset, applicationLoadBalancers.offset) && Objects.equals(this.limit, applicationLoadBalancers.limit) && Objects.equals(this.links, applicationLoadBalancers.links);
+    return Objects.equals(this.links, applicationLoadBalancers.links) && Objects.equals(this.href, applicationLoadBalancers.href) && Objects.equals(this.id, applicationLoadBalancers.id) && Objects.equals(this.items, applicationLoadBalancers.items) && Objects.equals(this.limit, applicationLoadBalancers.limit) && Objects.equals(this.offset, applicationLoadBalancers.offset) && Objects.equals(this.type, applicationLoadBalancers.type);
   }
 
 
@@ -243,19 +243,19 @@ public class ApplicationLoadBalancers {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApplicationLoadBalancers {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    links: ").append(toIndentedString(links)).append("\n");
 
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
 
-    sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+    sb.append("    items: ").append(toIndentedString(items)).append("\n");
 
     sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
 
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
+    sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -271,5 +271,14 @@ public class ApplicationLoadBalancers {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// ApplicationLoadBalancers instantiates a new ApplicationLoadBalancers object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public ApplicationLoadBalancers() {
+
 }
 
+
+}

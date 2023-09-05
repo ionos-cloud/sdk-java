@@ -30,30 +30,48 @@ import java.net.URI;
 /**
  * NetworkLoadBalancerForwardingRulePut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRulePut {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
-
-
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
 
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private NetworkLoadBalancerForwardingRuleProperties properties;
 
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
+
   
+
+   /**
+   * URL to the object representation (absolute path).
+   * @return href
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path).")
+
+  public URI getHref() {
+    return href;
+  }
+
+
+  public void setHref(URI href) {
+    this.href = href;
+  }
+
+
 
    /**
    * The resource&#39;s unique identifier.
@@ -69,6 +87,29 @@ public class NetworkLoadBalancerForwardingRulePut {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+
+
+  public NetworkLoadBalancerForwardingRulePut properties(NetworkLoadBalancerForwardingRuleProperties properties) {
+    
+    this.properties = properties;
+    return this;
+  }
+
+   /**
+   * Get properties
+   * @return properties
+  **/
+  @ApiModelProperty(required = true, value = "")
+
+  public NetworkLoadBalancerForwardingRuleProperties getProperties() {
+    return properties;
+  }
+
+
+  public void setProperties(NetworkLoadBalancerForwardingRuleProperties properties) {
+    this.properties = properties;
   }
 
 
@@ -96,47 +137,6 @@ public class NetworkLoadBalancerForwardingRulePut {
   }
 
 
-
-   /**
-   * URL to the object representation (absolute path).
-   * @return href
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path).")
-
-  public URI getHref() {
-    return href;
-  }
-
-
-  public void setHref(URI href) {
-    this.href = href;
-  }
-
-
-
-  public NetworkLoadBalancerForwardingRulePut properties(NetworkLoadBalancerForwardingRuleProperties properties) {
-    
-    this.properties = properties;
-    return this;
-  }
-
-   /**
-   * Get properties
-   * @return properties
-  **/
-  @ApiModelProperty(required = true, value = "")
-
-  public NetworkLoadBalancerForwardingRuleProperties getProperties() {
-    return properties;
-  }
-
-
-  public void setProperties(NetworkLoadBalancerForwardingRuleProperties properties) {
-    this.properties = properties;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -146,7 +146,7 @@ public class NetworkLoadBalancerForwardingRulePut {
       return false;
     }
     NetworkLoadBalancerForwardingRulePut networkLoadBalancerForwardingRulePut = (NetworkLoadBalancerForwardingRulePut) o;
-    return Objects.equals(this.id, networkLoadBalancerForwardingRulePut.id) && Objects.equals(this.type, networkLoadBalancerForwardingRulePut.type) && Objects.equals(this.href, networkLoadBalancerForwardingRulePut.href) && Objects.equals(this.properties, networkLoadBalancerForwardingRulePut.properties);
+    return Objects.equals(this.href, networkLoadBalancerForwardingRulePut.href) && Objects.equals(this.id, networkLoadBalancerForwardingRulePut.id) && Objects.equals(this.properties, networkLoadBalancerForwardingRulePut.properties) && Objects.equals(this.type, networkLoadBalancerForwardingRulePut.type);
   }
 
 
@@ -157,13 +157,13 @@ public class NetworkLoadBalancerForwardingRulePut {
     StringBuilder sb = new StringBuilder();
     sb.append("class NetworkLoadBalancerForwardingRulePut {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -179,5 +179,17 @@ public class NetworkLoadBalancerForwardingRulePut {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// NetworkLoadBalancerForwardingRulePut instantiates a new NetworkLoadBalancerForwardingRulePut object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public NetworkLoadBalancerForwardingRulePut(NetworkLoadBalancerForwardingRuleProperties Properties) {
+
+	this.properties = Properties;
 }
 
+public NetworkLoadBalancerForwardingRulePut() {
+}
+
+}

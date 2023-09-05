@@ -33,13 +33,38 @@ import java.util.List;
 /**
  * LabelResources
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class LabelResources {
   
+  public static final String SERIALIZED_NAME_LINKS = "_links";
+  @SerializedName(SERIALIZED_NAME_LINKS)
+  private PaginationLinks links;
+
+
+  public static final String SERIALIZED_NAME_HREF = "href";
+  @SerializedName(SERIALIZED_NAME_HREF)
+  private URI href;
+
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
+
+  public static final String SERIALIZED_NAME_ITEMS = "items";
+  @SerializedName(SERIALIZED_NAME_ITEMS)
+  private List<LabelResource> items = null;
+
+
+  public static final String SERIALIZED_NAME_LIMIT = "limit";
+  @SerializedName(SERIALIZED_NAME_LIMIT)
+  private BigDecimal limit;
+
+
+  public static final String SERIALIZED_NAME_OFFSET = "offset";
+  @SerializedName(SERIALIZED_NAME_OFFSET)
+  private BigDecimal offset;
 
 
   /**
@@ -92,65 +117,28 @@ public class LabelResources {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private TypeEnum type;
 
-
-  public static final String SERIALIZED_NAME_HREF = "href";
-  @SerializedName(SERIALIZED_NAME_HREF)
-  private URI href;
-
-
-  public static final String SERIALIZED_NAME_ITEMS = "items";
-  @SerializedName(SERIALIZED_NAME_ITEMS)
-  private List<LabelResource> items = null;
-
-
-  public static final String SERIALIZED_NAME_OFFSET = "offset";
-  @SerializedName(SERIALIZED_NAME_OFFSET)
-  private BigDecimal offset;
-
-
-  public static final String SERIALIZED_NAME_LIMIT = "limit";
-  @SerializedName(SERIALIZED_NAME_LIMIT)
-  private BigDecimal limit;
-
-
-  public static final String SERIALIZED_NAME_LINKS = "_links";
-  @SerializedName(SERIALIZED_NAME_LINKS)
-  private PaginationLinks links;
-
   
 
-   /**
-   * A unique representation of the label as a resource collection.
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "labels", value = "A unique representation of the label as a resource collection.")
-
-  public String getId() {
-    return id;
+  public LabelResources links(PaginationLinks links) {
+    
+    this.links = links;
+    return this;
   }
-
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
 
    /**
-   * The type of resource within a collection.
-   * @return type
+   * Get links
+   * @return links
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "collection", value = "The type of resource within a collection.")
+  @ApiModelProperty(value = "")
 
-  public TypeEnum getType() {
-    return type;
+  public PaginationLinks getLinks() {
+    return links;
   }
 
 
-  public void setType(TypeEnum type) {
-    this.type = type;
+  public void setLinks(PaginationLinks links) {
+    this.links = links;
   }
 
 
@@ -174,6 +162,24 @@ public class LabelResources {
 
 
    /**
+   * A unique representation of the label as a resource collection.
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "labels", value = "A unique representation of the label as a resource collection.")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+
+
+   /**
    * Array of items in the collection.
    * @return items
   **/
@@ -187,30 +193,6 @@ public class LabelResources {
 
   public void setItems(List<LabelResource> items) {
     this.items = items;
-  }
-
-
-
-  public LabelResources offset(BigDecimal offset) {
-    
-    this.offset = offset;
-    return this;
-  }
-
-   /**
-   * The offset (if specified in the request).
-   * @return offset
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "0", value = "The offset (if specified in the request).")
-
-  public BigDecimal getOffset() {
-    return offset;
-  }
-
-
-  public void setOffset(BigDecimal offset) {
-    this.offset = offset;
   }
 
 
@@ -239,26 +221,44 @@ public class LabelResources {
 
 
 
-  public LabelResources links(PaginationLinks links) {
+  public LabelResources offset(BigDecimal offset) {
     
-    this.links = links;
+    this.offset = offset;
     return this;
   }
 
    /**
-   * Get links
-   * @return links
+   * The offset (if specified in the request).
+   * @return offset
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "0", value = "The offset (if specified in the request).")
 
-  public PaginationLinks getLinks() {
-    return links;
+  public BigDecimal getOffset() {
+    return offset;
   }
 
 
-  public void setLinks(PaginationLinks links) {
-    this.links = links;
+  public void setOffset(BigDecimal offset) {
+    this.offset = offset;
+  }
+
+
+
+   /**
+   * The type of resource within a collection.
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "collection", value = "The type of resource within a collection.")
+
+  public TypeEnum getType() {
+    return type;
+  }
+
+
+  public void setType(TypeEnum type) {
+    this.type = type;
   }
 
 
@@ -271,7 +271,7 @@ public class LabelResources {
       return false;
     }
     LabelResources labelResources = (LabelResources) o;
-    return Objects.equals(this.id, labelResources.id) && Objects.equals(this.type, labelResources.type) && Objects.equals(this.href, labelResources.href) && Objects.equals(this.items, labelResources.items) && Objects.equals(this.offset, labelResources.offset) && Objects.equals(this.limit, labelResources.limit) && Objects.equals(this.links, labelResources.links);
+    return Objects.equals(this.links, labelResources.links) && Objects.equals(this.href, labelResources.href) && Objects.equals(this.id, labelResources.id) && Objects.equals(this.items, labelResources.items) && Objects.equals(this.limit, labelResources.limit) && Objects.equals(this.offset, labelResources.offset) && Objects.equals(this.type, labelResources.type);
   }
 
 
@@ -282,19 +282,19 @@ public class LabelResources {
     StringBuilder sb = new StringBuilder();
     sb.append("class LabelResources {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    links: ").append(toIndentedString(links)).append("\n");
 
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
 
-    sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+    sb.append("    items: ").append(toIndentedString(items)).append("\n");
 
     sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
 
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
+    sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -310,5 +310,14 @@ public class LabelResources {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// LabelResources instantiates a new LabelResources object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public LabelResources() {
+
 }
 
+
+}

@@ -30,17 +30,32 @@ import java.net.URI;
 /**
  * KubernetesNodePoolForPost
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class KubernetesNodePoolForPost {
   
+  public static final String SERIALIZED_NAME_HREF = "href";
+  @SerializedName(SERIALIZED_NAME_HREF)
+  private URI href;
+
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
 
 
+  public static final String SERIALIZED_NAME_METADATA = "metadata";
+  @SerializedName(SERIALIZED_NAME_METADATA)
+  private DatacenterElementMetadata metadata;
+
+
+  public static final String SERIALIZED_NAME_PROPERTIES = "properties";
+  @SerializedName(SERIALIZED_NAME_PROPERTIES)
+  private KubernetesNodePoolPropertiesForPost properties;
+
+
   /**
-   * The type of object.
+   * The object type.
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
@@ -89,22 +104,25 @@ public class KubernetesNodePoolForPost {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private TypeEnum type;
 
-
-  public static final String SERIALIZED_NAME_HREF = "href";
-  @SerializedName(SERIALIZED_NAME_HREF)
-  private URI href;
-
-
-  public static final String SERIALIZED_NAME_METADATA = "metadata";
-  @SerializedName(SERIALIZED_NAME_METADATA)
-  private DatacenterElementMetadata metadata;
-
-
-  public static final String SERIALIZED_NAME_PROPERTIES = "properties";
-  @SerializedName(SERIALIZED_NAME_PROPERTIES)
-  private KubernetesNodePoolPropertiesForPost properties;
-
   
+
+   /**
+   * The URL to the object representation (absolute path).
+   * @return href
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "https://api.ionos.com/cloudapi/v6/k8s/30f8a4f6-6515-4c34-b49d-dea807453b90/nodepools/4735f530-4279-42f3-9562-386143098038", value = "The URL to the object representation (absolute path).")
+
+  public URI getHref() {
+    return href;
+  }
+
+
+  public void setHref(URI href) {
+    this.href = href;
+  }
+
+
 
    /**
    * The resource&#39;s unique identifier.
@@ -120,42 +138,6 @@ public class KubernetesNodePoolForPost {
 
   public void setId(String id) {
     this.id = id;
-  }
-
-
-
-   /**
-   * The type of object.
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The type of object.")
-
-  public TypeEnum getType() {
-    return type;
-  }
-
-
-  public void setType(TypeEnum type) {
-    this.type = type;
-  }
-
-
-
-   /**
-   * URL to the object representation (absolute path).
-   * @return href
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path).")
-
-  public URI getHref() {
-    return href;
-  }
-
-
-  public void setHref(URI href) {
-    this.href = href;
   }
 
 
@@ -206,6 +188,24 @@ public class KubernetesNodePoolForPost {
   }
 
 
+
+   /**
+   * The object type.
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The object type.")
+
+  public TypeEnum getType() {
+    return type;
+  }
+
+
+  public void setType(TypeEnum type) {
+    this.type = type;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -215,7 +215,7 @@ public class KubernetesNodePoolForPost {
       return false;
     }
     KubernetesNodePoolForPost kubernetesNodePoolForPost = (KubernetesNodePoolForPost) o;
-    return Objects.equals(this.id, kubernetesNodePoolForPost.id) && Objects.equals(this.type, kubernetesNodePoolForPost.type) && Objects.equals(this.href, kubernetesNodePoolForPost.href) && Objects.equals(this.metadata, kubernetesNodePoolForPost.metadata) && Objects.equals(this.properties, kubernetesNodePoolForPost.properties);
+    return Objects.equals(this.href, kubernetesNodePoolForPost.href) && Objects.equals(this.id, kubernetesNodePoolForPost.id) && Objects.equals(this.metadata, kubernetesNodePoolForPost.metadata) && Objects.equals(this.properties, kubernetesNodePoolForPost.properties) && Objects.equals(this.type, kubernetesNodePoolForPost.type);
   }
 
 
@@ -226,15 +226,15 @@ public class KubernetesNodePoolForPost {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodePoolForPost {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
 
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
 
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -250,5 +250,17 @@ public class KubernetesNodePoolForPost {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// KubernetesNodePoolForPost instantiates a new KubernetesNodePoolForPost object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public KubernetesNodePoolForPost(KubernetesNodePoolPropertiesForPost Properties) {
+
+	this.properties = Properties;
 }
 
+public KubernetesNodePoolForPost() {
+}
+
+}

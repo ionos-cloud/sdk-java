@@ -29,44 +29,20 @@ import java.io.IOException;
 /**
  * NicEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class NicEntities {
   
-  public static final String SERIALIZED_NAME_FLOWLOGS = "flowlogs";
-  @SerializedName(SERIALIZED_NAME_FLOWLOGS)
-  private FlowLogs flowlogs;
-
-
   public static final String SERIALIZED_NAME_FIREWALLRULES = "firewallrules";
   @SerializedName(SERIALIZED_NAME_FIREWALLRULES)
   private FirewallRules firewallrules;
 
+
+  public static final String SERIALIZED_NAME_FLOWLOGS = "flowlogs";
+  @SerializedName(SERIALIZED_NAME_FLOWLOGS)
+  private FlowLogs flowlogs;
+
   
-
-  public NicEntities flowlogs(FlowLogs flowlogs) {
-    
-    this.flowlogs = flowlogs;
-    return this;
-  }
-
-   /**
-   * Get flowlogs
-   * @return flowlogs
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public FlowLogs getFlowlogs() {
-    return flowlogs;
-  }
-
-
-  public void setFlowlogs(FlowLogs flowlogs) {
-    this.flowlogs = flowlogs;
-  }
-
-
 
   public NicEntities firewallrules(FirewallRules firewallrules) {
     
@@ -91,6 +67,30 @@ public class NicEntities {
   }
 
 
+
+  public NicEntities flowlogs(FlowLogs flowlogs) {
+    
+    this.flowlogs = flowlogs;
+    return this;
+  }
+
+   /**
+   * Get flowlogs
+   * @return flowlogs
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public FlowLogs getFlowlogs() {
+    return flowlogs;
+  }
+
+
+  public void setFlowlogs(FlowLogs flowlogs) {
+    this.flowlogs = flowlogs;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -100,7 +100,7 @@ public class NicEntities {
       return false;
     }
     NicEntities nicEntities = (NicEntities) o;
-    return Objects.equals(this.flowlogs, nicEntities.flowlogs) && Objects.equals(this.firewallrules, nicEntities.firewallrules);
+    return Objects.equals(this.firewallrules, nicEntities.firewallrules) && Objects.equals(this.flowlogs, nicEntities.flowlogs);
   }
 
 
@@ -111,9 +111,9 @@ public class NicEntities {
     StringBuilder sb = new StringBuilder();
     sb.append("class NicEntities {\n");
     
-    sb.append("    flowlogs: ").append(toIndentedString(flowlogs)).append("\n");
-
     sb.append("    firewallrules: ").append(toIndentedString(firewallrules)).append("\n");
+
+    sb.append("    flowlogs: ").append(toIndentedString(flowlogs)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -129,5 +129,14 @@ public class NicEntities {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// NicEntities instantiates a new NicEntities object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public NicEntities() {
+
 }
 
+
+}

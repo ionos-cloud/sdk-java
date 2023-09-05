@@ -1888,8 +1888,8 @@ public class NetworkLoadBalancersApi {
     }
 
     /**
-     * Create NLB Flow Logs
-     * Add a new Flow Log for the Network Load Balancer.
+     * Create a NLB Flow Log
+     * Adds a new Flow Log for the Network Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param networkLoadBalancerFlowLog The Flow Log to create. (required)
@@ -1912,8 +1912,8 @@ public class NetworkLoadBalancersApi {
     }
 
     /**
-     * Create NLB Flow Logs
-     * Add a new Flow Log for the Network Load Balancer.
+     * Create a NLB Flow Log
+     * Adds a new Flow Log for the Network Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param networkLoadBalancerFlowLog The Flow Log to create. (required)
@@ -1937,8 +1937,8 @@ public class NetworkLoadBalancersApi {
     }
 
     /**
-     * Create NLB Flow Logs (asynchronously)
-     * Add a new Flow Log for the Network Load Balancer.
+     * Create a NLB Flow Log (asynchronously)
+     * Adds a new Flow Log for the Network Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param networkLoadBalancerFlowLog The Flow Log to create. (required)
@@ -2073,8 +2073,8 @@ public class NetworkLoadBalancersApi {
     }
 
     /**
-     * Create NLB Flow Logs
-     * Add a new Flow Log for the Network Load Balancer.
+     * Create a NLB Flow Log
+     * Adds a new Flow Log for the Network Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param networkLoadBalancerFlowLog The Flow Log to create. (required)
@@ -3668,8 +3668,8 @@ public class NetworkLoadBalancersApi {
     }
 
     /**
-     * Create NLB forwarding rules
-     * Create a forwarding rule for the specified Network Load Balancer.
+     * Create a NLB Forwarding Rule
+     * Creates a forwarding rule for the specified Network Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param networkLoadBalancerForwardingRule The forwarding rule to create. (required)
@@ -3692,8 +3692,8 @@ public class NetworkLoadBalancersApi {
     }
 
     /**
-     * Create NLB forwarding rules
-     * Create a forwarding rule for the specified Network Load Balancer.
+     * Create a NLB Forwarding Rule
+     * Creates a forwarding rule for the specified Network Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param networkLoadBalancerForwardingRule The forwarding rule to create. (required)
@@ -3717,8 +3717,8 @@ public class NetworkLoadBalancersApi {
     }
 
     /**
-     * Create NLB forwarding rules (asynchronously)
-     * Create a forwarding rule for the specified Network Load Balancer.
+     * Create a NLB Forwarding Rule (asynchronously)
+     * Creates a forwarding rule for the specified Network Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param networkLoadBalancerForwardingRule The forwarding rule to create. (required)
@@ -3853,8 +3853,8 @@ public class NetworkLoadBalancersApi {
     }
 
     /**
-     * Create NLB forwarding rules
-     * Create a forwarding rule for the specified Network Load Balancer.
+     * Create a NLB Forwarding Rule
+     * Creates a forwarding rule for the specified Network Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param networkLoadBalancerId The unique ID of the Network Load Balancer. (required)
      * @param networkLoadBalancerForwardingRule The forwarding rule to create. (required)
@@ -4882,8 +4882,8 @@ public class NetworkLoadBalancersApi {
     }
 
     /**
-     * Create Network Load Balancers
-     * Create a Network Load Balancer within the data center.
+     * Create a Network Load Balancer
+     * Creates a Network Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param networkLoadBalancer The Network Load Balancer to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4905,8 +4905,8 @@ public class NetworkLoadBalancersApi {
     }
 
     /**
-     * Create Network Load Balancers
-     * Create a Network Load Balancer within the data center.
+     * Create a Network Load Balancer
+     * Creates a Network Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param networkLoadBalancer The Network Load Balancer to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4929,8 +4929,8 @@ public class NetworkLoadBalancersApi {
     }
 
     /**
-     * Create Network Load Balancers (asynchronously)
-     * Create a Network Load Balancer within the data center.
+     * Create a Network Load Balancer (asynchronously)
+     * Creates a Network Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param networkLoadBalancer The Network Load Balancer to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -5062,8 +5062,8 @@ public class NetworkLoadBalancersApi {
     }
 
     /**
-     * Create Network Load Balancers
-     * Create a Network Load Balancer within the data center.
+     * Create a Network Load Balancer
+     * Creates a Network Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param networkLoadBalancer The Network Load Balancer to create. (required)
      * @return APIdatacentersNetworkloadbalancersPostRequest

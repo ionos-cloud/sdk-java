@@ -1843,8 +1843,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create NAT Gateway Flow Logs
-     * Add a new Flow Log for the specified NAT Gateway.
+     * Create a NAT Gateway Flow Log
+     * Adds a new Flow Log to the specified NAT Gateway.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param natGatewayFlowLog The Flow Log to create. (required)
@@ -1866,8 +1866,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create NAT Gateway Flow Logs
-     * Add a new Flow Log for the specified NAT Gateway.
+     * Create a NAT Gateway Flow Log
+     * Adds a new Flow Log to the specified NAT Gateway.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param natGatewayFlowLog The Flow Log to create. (required)
@@ -1890,8 +1890,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create NAT Gateway Flow Logs (asynchronously)
-     * Add a new Flow Log for the specified NAT Gateway.
+     * Create a NAT Gateway Flow Log (asynchronously)
+     * Adds a new Flow Log to the specified NAT Gateway.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param natGatewayFlowLog The Flow Log to create. (required)
@@ -2014,8 +2014,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create NAT Gateway Flow Logs
-     * Add a new Flow Log for the specified NAT Gateway.
+     * Create a NAT Gateway Flow Log
+     * Adds a new Flow Log to the specified NAT Gateway.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param natGatewayFlowLog The Flow Log to create. (required)
@@ -2988,8 +2988,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create NAT Gateways
-     * Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with &#39;createInternetAccess&#39; privileges.
+     * Create a NAT Gateway
+     * Creates a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with &#39;createInternetAccess&#39; privileges.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGateway The NAT Gateway to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3011,8 +3011,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create NAT Gateways
-     * Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with &#39;createInternetAccess&#39; privileges.
+     * Create a NAT Gateway
+     * Creates a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with &#39;createInternetAccess&#39; privileges.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGateway The NAT Gateway to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3035,8 +3035,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create NAT Gateways (asynchronously)
-     * Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with &#39;createInternetAccess&#39; privileges.
+     * Create a NAT Gateway (asynchronously)
+     * Creates a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with &#39;createInternetAccess&#39; privileges.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGateway The NAT Gateway to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3168,8 +3168,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create NAT Gateways
-     * Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with &#39;createInternetAccess&#39; privileges.
+     * Create a NAT Gateway
+     * Creates a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with &#39;createInternetAccess&#39; privileges.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGateway The NAT Gateway to create. (required)
      * @return APIdatacentersNatgatewaysPostRequest
@@ -4456,8 +4456,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Partially modify NAT Gateway rules
-     * Update the properties of the specified NAT Gateway rule.
+     * Partially Modify a NAT Gateway Rule by ID
+     * Updates the properties of the specified NAT Gateway rule.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
@@ -4481,8 +4481,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Partially modify NAT Gateway rules
-     * Update the properties of the specified NAT Gateway rule.
+     * Partially Modify a NAT Gateway Rule by ID
+     * Updates the properties of the specified NAT Gateway rule.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
@@ -4507,8 +4507,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Partially modify NAT Gateway rules (asynchronously)
-     * Update the properties of the specified NAT Gateway rule.
+     * Partially Modify a NAT Gateway Rule by ID (asynchronously)
+     * Updates the properties of the specified NAT Gateway rule.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
@@ -4646,8 +4646,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Partially modify NAT Gateway rules
-     * Update the properties of the specified NAT Gateway rule.
+     * Partially Modify a NAT Gateway Rule by ID
+     * Updates the properties of the specified NAT Gateway rule.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param natGatewayRuleId The unique ID of the NAT Gateway rule. (required)
@@ -4749,8 +4749,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create NAT Gateway rules
-     * Create a rule for the specified NAT Gateway.
+     * Create a NAT Gateway Rule
+     * Creates a rule for the specified NAT Gateway.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param natGatewayRule The NAT Gateway rule to create. (required)
@@ -4773,8 +4773,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create NAT Gateway rules
-     * Create a rule for the specified NAT Gateway.
+     * Create a NAT Gateway Rule
+     * Creates a rule for the specified NAT Gateway.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param natGatewayRule The NAT Gateway rule to create. (required)
@@ -4798,8 +4798,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create NAT Gateway rules (asynchronously)
-     * Create a rule for the specified NAT Gateway.
+     * Create a NAT Gateway Rule (asynchronously)
+     * Creates a rule for the specified NAT Gateway.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param natGatewayRule The NAT Gateway rule to create. (required)
@@ -4934,8 +4934,8 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Create NAT Gateway rules
-     * Create a rule for the specified NAT Gateway.
+     * Create a NAT Gateway Rule
+     * Creates a rule for the specified NAT Gateway.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
      * @param natGatewayRule The NAT Gateway rule to create. (required)
@@ -5043,7 +5043,7 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Modify NAT Gateway rules
+     * Modify a NAT Gateway Rule by ID
      * Modify the specified NAT Gateway rule.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
@@ -5068,7 +5068,7 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Modify NAT Gateway rules
+     * Modify a NAT Gateway Rule by ID
      * Modify the specified NAT Gateway rule.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
@@ -5094,7 +5094,7 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Modify NAT Gateway rules (asynchronously)
+     * Modify a NAT Gateway Rule by ID (asynchronously)
      * Modify the specified NAT Gateway rule.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)
@@ -5233,7 +5233,7 @@ public class NatGatewaysApi {
     }
 
     /**
-     * Modify NAT Gateway rules
+     * Modify a NAT Gateway Rule by ID
      * Modify the specified NAT Gateway rule.
      * @param datacenterId The unique ID of the data center. (required)
      * @param natGatewayId The unique ID of the NAT Gateway. (required)

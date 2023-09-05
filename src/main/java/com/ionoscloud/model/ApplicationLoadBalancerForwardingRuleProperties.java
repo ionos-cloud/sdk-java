@@ -31,17 +31,37 @@ import java.util.UUID;
 /**
  * ApplicationLoadBalancerForwardingRuleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class ApplicationLoadBalancerForwardingRuleProperties {
   
+  public static final String SERIALIZED_NAME_CLIENT_TIMEOUT = "clientTimeout";
+  @SerializedName(SERIALIZED_NAME_CLIENT_TIMEOUT)
+  private Integer clientTimeout;
+
+
+  public static final String SERIALIZED_NAME_HTTP_RULES = "httpRules";
+  @SerializedName(SERIALIZED_NAME_HTTP_RULES)
+  private List<ApplicationLoadBalancerHttpRule> httpRules = null;
+
+
+  public static final String SERIALIZED_NAME_LISTENER_IP = "listenerIp";
+  @SerializedName(SERIALIZED_NAME_LISTENER_IP)
+  private String listenerIp;
+
+
+  public static final String SERIALIZED_NAME_LISTENER_PORT = "listenerPort";
+  @SerializedName(SERIALIZED_NAME_LISTENER_PORT)
+  private Integer listenerPort;
+
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
 
   /**
-   * Balancing protocol
+   * The balancing protocol.
    */
   @JsonAdapter(ProtocolEnum.Adapter.class)
   public enum ProtocolEnum {
@@ -91,31 +111,113 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
   private ProtocolEnum protocol;
 
 
-  public static final String SERIALIZED_NAME_LISTENER_IP = "listenerIp";
-  @SerializedName(SERIALIZED_NAME_LISTENER_IP)
-  private String listenerIp;
-
-
-  public static final String SERIALIZED_NAME_LISTENER_PORT = "listenerPort";
-  @SerializedName(SERIALIZED_NAME_LISTENER_PORT)
-  private Integer listenerPort;
-
-
-  public static final String SERIALIZED_NAME_CLIENT_TIMEOUT = "clientTimeout";
-  @SerializedName(SERIALIZED_NAME_CLIENT_TIMEOUT)
-  private Integer clientTimeout;
-
-
   public static final String SERIALIZED_NAME_SERVER_CERTIFICATES = "serverCertificates";
   @SerializedName(SERIALIZED_NAME_SERVER_CERTIFICATES)
   private List<UUID> serverCertificates = null;
 
-
-  public static final String SERIALIZED_NAME_HTTP_RULES = "httpRules";
-  @SerializedName(SERIALIZED_NAME_HTTP_RULES)
-  private List<ApplicationLoadBalancerHttpRule> httpRules = null;
-
   
+
+  public ApplicationLoadBalancerForwardingRuleProperties clientTimeout(Integer clientTimeout) {
+    
+    this.clientTimeout = clientTimeout;
+    return this;
+  }
+
+   /**
+   * The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds).
+   * @return clientTimeout
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "50", value = "The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds).")
+
+  public Integer getClientTimeout() {
+    return clientTimeout;
+  }
+
+
+  public void setClientTimeout(Integer clientTimeout) {
+    this.clientTimeout = clientTimeout;
+  }
+
+
+
+  public ApplicationLoadBalancerForwardingRuleProperties httpRules(List<ApplicationLoadBalancerHttpRule> httpRules) {
+    
+    this.httpRules = httpRules;
+    return this;
+  }
+
+  public ApplicationLoadBalancerForwardingRuleProperties addHttpRulesItem(ApplicationLoadBalancerHttpRule httpRulesItem) {
+    if (this.httpRules == null) {
+      this.httpRules = new ArrayList<ApplicationLoadBalancerHttpRule>();
+    }
+    this.httpRules.add(httpRulesItem);
+    return this;
+  }
+
+   /**
+   * An array of items in the collection. The original order of rules is preserved during processing, except that rules of the &#39;FORWARD&#39; type are processed after the rules with other defined actions. The relative order of the &#39;FORWARD&#39; type rules is also preserved during the processing.
+   * @return httpRules
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "An array of items in the collection. The original order of rules is preserved during processing, except that rules of the 'FORWARD' type are processed after the rules with other defined actions. The relative order of the 'FORWARD' type rules is also preserved during the processing.")
+
+  public List<ApplicationLoadBalancerHttpRule> getHttpRules() {
+    return httpRules;
+  }
+
+
+  public void setHttpRules(List<ApplicationLoadBalancerHttpRule> httpRules) {
+    this.httpRules = httpRules;
+  }
+
+
+
+  public ApplicationLoadBalancerForwardingRuleProperties listenerIp(String listenerIp) {
+    
+    this.listenerIp = listenerIp;
+    return this;
+  }
+
+   /**
+   * The listening (inbound) IP.
+   * @return listenerIp
+  **/
+  @ApiModelProperty(example = "81.173.1.2", required = true, value = "The listening (inbound) IP.")
+
+  public String getListenerIp() {
+    return listenerIp;
+  }
+
+
+  public void setListenerIp(String listenerIp) {
+    this.listenerIp = listenerIp;
+  }
+
+
+
+  public ApplicationLoadBalancerForwardingRuleProperties listenerPort(Integer listenerPort) {
+    
+    this.listenerPort = listenerPort;
+    return this;
+  }
+
+   /**
+   * The listening (inbound) port number; the valid range is 1 to 65535.
+   * @return listenerPort
+  **/
+  @ApiModelProperty(example = "8080", required = true, value = "The listening (inbound) port number; the valid range is 1 to 65535.")
+
+  public Integer getListenerPort() {
+    return listenerPort;
+  }
+
+
+  public void setListenerPort(Integer listenerPort) {
+    this.listenerPort = listenerPort;
+  }
+
+
 
   public ApplicationLoadBalancerForwardingRuleProperties name(String name) {
     
@@ -147,10 +249,10 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
   }
 
    /**
-   * Balancing protocol
+   * The balancing protocol.
    * @return protocol
   **/
-  @ApiModelProperty(example = "HTTP", required = true, value = "Balancing protocol")
+  @ApiModelProperty(example = "HTTP", required = true, value = "The balancing protocol.")
 
   public ProtocolEnum getProtocol() {
     return protocol;
@@ -159,76 +261,6 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
 
   public void setProtocol(ProtocolEnum protocol) {
     this.protocol = protocol;
-  }
-
-
-
-  public ApplicationLoadBalancerForwardingRuleProperties listenerIp(String listenerIp) {
-    
-    this.listenerIp = listenerIp;
-    return this;
-  }
-
-   /**
-   * Listening (inbound) IP
-   * @return listenerIp
-  **/
-  @ApiModelProperty(example = "81.173.1.2", required = true, value = "Listening (inbound) IP")
-
-  public String getListenerIp() {
-    return listenerIp;
-  }
-
-
-  public void setListenerIp(String listenerIp) {
-    this.listenerIp = listenerIp;
-  }
-
-
-
-  public ApplicationLoadBalancerForwardingRuleProperties listenerPort(Integer listenerPort) {
-    
-    this.listenerPort = listenerPort;
-    return this;
-  }
-
-   /**
-   * Listening (inbound) port number; valid range is 1 to 65535.
-   * @return listenerPort
-  **/
-  @ApiModelProperty(example = "8080", required = true, value = "Listening (inbound) port number; valid range is 1 to 65535.")
-
-  public Integer getListenerPort() {
-    return listenerPort;
-  }
-
-
-  public void setListenerPort(Integer listenerPort) {
-    this.listenerPort = listenerPort;
-  }
-
-
-
-  public ApplicationLoadBalancerForwardingRuleProperties clientTimeout(Integer clientTimeout) {
-    
-    this.clientTimeout = clientTimeout;
-    return this;
-  }
-
-   /**
-   * The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds).
-   * @return clientTimeout
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "50", value = "The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds).")
-
-  public Integer getClientTimeout() {
-    return clientTimeout;
-  }
-
-
-  public void setClientTimeout(Integer clientTimeout) {
-    this.clientTimeout = clientTimeout;
   }
 
 
@@ -264,38 +296,6 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
   }
 
 
-
-  public ApplicationLoadBalancerForwardingRuleProperties httpRules(List<ApplicationLoadBalancerHttpRule> httpRules) {
-    
-    this.httpRules = httpRules;
-    return this;
-  }
-
-  public ApplicationLoadBalancerForwardingRuleProperties addHttpRulesItem(ApplicationLoadBalancerHttpRule httpRulesItem) {
-    if (this.httpRules == null) {
-      this.httpRules = new ArrayList<ApplicationLoadBalancerHttpRule>();
-    }
-    this.httpRules.add(httpRulesItem);
-    return this;
-  }
-
-   /**
-   * An array of items in the collection. The original order of rules is perserved during processing, except for Forward-type rules are processed after the rules with other action defined. The relative order of Forward-type rules is also preserved during the processing.
-   * @return httpRules
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "An array of items in the collection. The original order of rules is perserved during processing, except for Forward-type rules are processed after the rules with other action defined. The relative order of Forward-type rules is also preserved during the processing.")
-
-  public List<ApplicationLoadBalancerHttpRule> getHttpRules() {
-    return httpRules;
-  }
-
-
-  public void setHttpRules(List<ApplicationLoadBalancerHttpRule> httpRules) {
-    this.httpRules = httpRules;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -305,7 +305,7 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
       return false;
     }
     ApplicationLoadBalancerForwardingRuleProperties applicationLoadBalancerForwardingRuleProperties = (ApplicationLoadBalancerForwardingRuleProperties) o;
-    return Objects.equals(this.name, applicationLoadBalancerForwardingRuleProperties.name) && Objects.equals(this.protocol, applicationLoadBalancerForwardingRuleProperties.protocol) && Objects.equals(this.listenerIp, applicationLoadBalancerForwardingRuleProperties.listenerIp) && Objects.equals(this.listenerPort, applicationLoadBalancerForwardingRuleProperties.listenerPort) && Objects.equals(this.clientTimeout, applicationLoadBalancerForwardingRuleProperties.clientTimeout) && Objects.equals(this.serverCertificates, applicationLoadBalancerForwardingRuleProperties.serverCertificates) && Objects.equals(this.httpRules, applicationLoadBalancerForwardingRuleProperties.httpRules);
+    return Objects.equals(this.clientTimeout, applicationLoadBalancerForwardingRuleProperties.clientTimeout) && Objects.equals(this.httpRules, applicationLoadBalancerForwardingRuleProperties.httpRules) && Objects.equals(this.listenerIp, applicationLoadBalancerForwardingRuleProperties.listenerIp) && Objects.equals(this.listenerPort, applicationLoadBalancerForwardingRuleProperties.listenerPort) && Objects.equals(this.name, applicationLoadBalancerForwardingRuleProperties.name) && Objects.equals(this.protocol, applicationLoadBalancerForwardingRuleProperties.protocol) && Objects.equals(this.serverCertificates, applicationLoadBalancerForwardingRuleProperties.serverCertificates);
   }
 
 
@@ -316,19 +316,19 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApplicationLoadBalancerForwardingRuleProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    clientTimeout: ").append(toIndentedString(clientTimeout)).append("\n");
 
-    sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
+    sb.append("    httpRules: ").append(toIndentedString(httpRules)).append("\n");
 
     sb.append("    listenerIp: ").append(toIndentedString(listenerIp)).append("\n");
 
     sb.append("    listenerPort: ").append(toIndentedString(listenerPort)).append("\n");
 
-    sb.append("    clientTimeout: ").append(toIndentedString(clientTimeout)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
+    sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
 
     sb.append("    serverCertificates: ").append(toIndentedString(serverCertificates)).append("\n");
-
-    sb.append("    httpRules: ").append(toIndentedString(httpRules)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -344,5 +344,20 @@ public class ApplicationLoadBalancerForwardingRuleProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// ApplicationLoadBalancerForwardingRuleProperties instantiates a new ApplicationLoadBalancerForwardingRuleProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public ApplicationLoadBalancerForwardingRuleProperties(String ListenerIp, Integer ListenerPort, String Name, ProtocolEnum Protocol) {
+
+	this.listenerIp = ListenerIp;
+	this.listenerPort = ListenerPort;
+	this.name = Name;
+	this.protocol = Protocol;
 }
 
+public ApplicationLoadBalancerForwardingRuleProperties() {
+}
+
+}

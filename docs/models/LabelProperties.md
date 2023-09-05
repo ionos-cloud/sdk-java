@@ -7,9 +7,9 @@
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
 | **key** | **String** | A label key |  [optional] |
-| **value** | **String** | A label value |  [optional] |
+| **resourceHref** | **String** | URL to the Resource (absolute path) on which the label is applied. |  [optional] |
 | **resourceId** | **String** | The ID of the resource. |  [optional] |
 | **resourceType** | **String** | The type of the resource on which the label is applied. |  [optional] |
-| **resourceHref** | **String** | URL to the Resource (absolute path) on which the label is applied. |  [optional] |
+| **value** | **String** | A label value |  [optional] |
 
 

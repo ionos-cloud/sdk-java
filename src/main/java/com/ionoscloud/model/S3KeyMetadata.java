@@ -28,38 +28,20 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * S3KeyMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class S3KeyMetadata {
   
-  public static final String SERIALIZED_NAME_ETAG = "etag";
-  @SerializedName(SERIALIZED_NAME_ETAG)
-  private String etag;
-
-
   public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
   @SerializedName(SERIALIZED_NAME_CREATED_DATE)
   private OffsetDateTime createdDate;
 
+
+  public static final String SERIALIZED_NAME_ETAG = "etag";
+  @SerializedName(SERIALIZED_NAME_ETAG)
+  private String etag;
+
   
-
-   /**
-   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
-   * @return etag
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
-
-  public String getEtag() {
-    return etag;
-  }
-
-
-  public void setEtag(String etag) {
-    this.etag = etag;
-  }
-
-
 
    /**
    * The time when the S3 key was created.
@@ -78,6 +60,24 @@ public class S3KeyMetadata {
   }
 
 
+
+   /**
+   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
+   * @return etag
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
+
+  public String getEtag() {
+    return etag;
+  }
+
+
+  public void setEtag(String etag) {
+    this.etag = etag;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -87,7 +87,7 @@ public class S3KeyMetadata {
       return false;
     }
     S3KeyMetadata s3KeyMetadata = (S3KeyMetadata) o;
-    return Objects.equals(this.etag, s3KeyMetadata.etag) && Objects.equals(this.createdDate, s3KeyMetadata.createdDate);
+    return Objects.equals(this.createdDate, s3KeyMetadata.createdDate) && Objects.equals(this.etag, s3KeyMetadata.etag);
   }
 
 
@@ -98,9 +98,9 @@ public class S3KeyMetadata {
     StringBuilder sb = new StringBuilder();
     sb.append("class S3KeyMetadata {\n");
     
-    sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
-
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
+
+    sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -116,5 +116,14 @@ public class S3KeyMetadata {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// S3KeyMetadata instantiates a new S3KeyMetadata object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public S3KeyMetadata() {
+
 }
 
+
+}

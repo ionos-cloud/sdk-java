@@ -27,12 +27,83 @@ import java.io.IOException;
 /**
  * ApplicationLoadBalancerHttpRuleCondition
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class ApplicationLoadBalancerHttpRuleCondition {
   
   /**
-   * Type of the HTTP rule condition.
+   * The matching rule for the HTTP rule condition attribute; this parameter is mandatory for &#39;HEADER&#39;, &#39;PATH&#39;, &#39;QUERY&#39;, &#39;METHOD&#39;, &#39;HOST&#39;, and &#39;COOKIE&#39; types. It must be &#39;null&#39; if the type is &#39;SOURCE_IP&#39;.
+   */
+  @JsonAdapter(ConditionEnum.Adapter.class)
+  public enum ConditionEnum {
+    EXISTS("EXISTS"),
+    
+    CONTAINS("CONTAINS"),
+    
+    EQUALS("EQUALS"),
+    
+    MATCHES("MATCHES"),
+    
+    STARTS_WITH("STARTS_WITH"),
+    
+    ENDS_WITH("ENDS_WITH");
+
+    private String value;
+
+    ConditionEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ConditionEnum fromValue(String value) {
+
+      for (ConditionEnum b : ConditionEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<ConditionEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ConditionEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ConditionEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return ConditionEnum.fromValue(value);
+      }
+    }
+  }
+
+  public static final String SERIALIZED_NAME_CONDITION = "condition";
+  @SerializedName(SERIALIZED_NAME_CONDITION)
+  private ConditionEnum condition;
+
+
+  public static final String SERIALIZED_NAME_KEY = "key";
+  @SerializedName(SERIALIZED_NAME_KEY)
+  private String key;
+
+
+  public static final String SERIALIZED_NAME_NEGATE = "negate";
+  @SerializedName(SERIALIZED_NAME_NEGATE)
+  private Boolean negate;
+
+
+  /**
+   * The HTTP rule condition type.
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
@@ -94,105 +165,11 @@ public class ApplicationLoadBalancerHttpRuleCondition {
   private TypeEnum type;
 
 
-  /**
-   * Matching rule for the HTTP rule condition attribute; mandatory for HEADER, PATH, QUERY, METHOD, HOST, and COOKIE types; must be null when type is SOURCE_IP.
-   */
-  @JsonAdapter(ConditionEnum.Adapter.class)
-  public enum ConditionEnum {
-    EXISTS("EXISTS"),
-    
-    CONTAINS("CONTAINS"),
-    
-    EQUALS("EQUALS"),
-    
-    MATCHES("MATCHES"),
-    
-    STARTS_WITH("STARTS_WITH"),
-    
-    ENDS_WITH("ENDS_WITH");
-
-    private String value;
-
-    ConditionEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static ConditionEnum fromValue(String value) {
-
-      for (ConditionEnum b : ConditionEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-
-    public static class Adapter extends TypeAdapter<ConditionEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final ConditionEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public ConditionEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return ConditionEnum.fromValue(value);
-      }
-    }
-  }
-
-  public static final String SERIALIZED_NAME_CONDITION = "condition";
-  @SerializedName(SERIALIZED_NAME_CONDITION)
-  private ConditionEnum condition;
-
-
-  public static final String SERIALIZED_NAME_NEGATE = "negate";
-  @SerializedName(SERIALIZED_NAME_NEGATE)
-  private Boolean negate;
-
-
-  public static final String SERIALIZED_NAME_KEY = "key";
-  @SerializedName(SERIALIZED_NAME_KEY)
-  private String key;
-
-
   public static final String SERIALIZED_NAME_VALUE = "value";
   @SerializedName(SERIALIZED_NAME_VALUE)
   private String value;
 
   
-
-  public ApplicationLoadBalancerHttpRuleCondition type(TypeEnum type) {
-    
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * Type of the HTTP rule condition.
-   * @return type
-  **/
-  @ApiModelProperty(example = "HEADER", required = true, value = "Type of the HTTP rule condition.")
-
-  public TypeEnum getType() {
-    return type;
-  }
-
-
-  public void setType(TypeEnum type) {
-    this.type = type;
-  }
-
-
 
   public ApplicationLoadBalancerHttpRuleCondition condition(ConditionEnum condition) {
     
@@ -201,10 +178,10 @@ public class ApplicationLoadBalancerHttpRuleCondition {
   }
 
    /**
-   * Matching rule for the HTTP rule condition attribute; mandatory for HEADER, PATH, QUERY, METHOD, HOST, and COOKIE types; must be null when type is SOURCE_IP.
+   * The matching rule for the HTTP rule condition attribute; this parameter is mandatory for &#39;HEADER&#39;, &#39;PATH&#39;, &#39;QUERY&#39;, &#39;METHOD&#39;, &#39;HOST&#39;, and &#39;COOKIE&#39; types. It must be &#39;null&#39; if the type is &#39;SOURCE_IP&#39;.
    * @return condition
   **/
-  @ApiModelProperty(example = "STARTS_WITH", required = true, value = "Matching rule for the HTTP rule condition attribute; mandatory for HEADER, PATH, QUERY, METHOD, HOST, and COOKIE types; must be null when type is SOURCE_IP.")
+  @ApiModelProperty(example = "STARTS_WITH", required = true, value = "The matching rule for the HTTP rule condition attribute; this parameter is mandatory for 'HEADER', 'PATH', 'QUERY', 'METHOD', 'HOST', and 'COOKIE' types. It must be 'null' if the type is 'SOURCE_IP'.")
 
   public ConditionEnum getCondition() {
     return condition;
@@ -217,30 +194,6 @@ public class ApplicationLoadBalancerHttpRuleCondition {
 
 
 
-  public ApplicationLoadBalancerHttpRuleCondition negate(Boolean negate) {
-    
-    this.negate = negate;
-    return this;
-  }
-
-   /**
-   * Specifies whether the condition is negated or not; the default is False.
-   * @return negate
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "false", value = "Specifies whether the condition is negated or not; the default is False.")
-
-  public Boolean getNegate() {
-    return negate;
-  }
-
-
-  public void setNegate(Boolean negate) {
-    this.negate = negate;
-  }
-
-
-
   public ApplicationLoadBalancerHttpRuleCondition key(String key) {
     
     this.key = key;
@@ -248,11 +201,11 @@ public class ApplicationLoadBalancerHttpRuleCondition {
   }
 
    /**
-   * Must be null when type is PATH, METHOD, HOST, or SOURCE_IP. Key can only be set when type is COOKIES, HEADER, or QUERY.
+   * The key can only be set when the HTTP rule condition type is &#39;COOKIES&#39;, &#39;HEADER&#39;, or &#39;QUERY&#39;. For the type &#39;PATH&#39;, &#39;METHOD&#39;, &#39;HOST&#39;, or &#39;SOURCE_IP&#39; the value must be &#39;null&#39;.
    * @return key
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "forward-at", value = "Must be null when type is PATH, METHOD, HOST, or SOURCE_IP. Key can only be set when type is COOKIES, HEADER, or QUERY.")
+  @ApiModelProperty(example = "forward-at", value = "The key can only be set when the HTTP rule condition type is 'COOKIES', 'HEADER', or 'QUERY'. For the type 'PATH', 'METHOD', 'HOST', or 'SOURCE_IP' the value must be 'null'.")
 
   public String getKey() {
     return key;
@@ -265,6 +218,53 @@ public class ApplicationLoadBalancerHttpRuleCondition {
 
 
 
+  public ApplicationLoadBalancerHttpRuleCondition negate(Boolean negate) {
+    
+    this.negate = negate;
+    return this;
+  }
+
+   /**
+   * Specifies whether the condition should be negated; the default value is &#39;FALSE&#39;.
+   * @return negate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "false", value = "Specifies whether the condition should be negated; the default value is 'FALSE'.")
+
+  public Boolean getNegate() {
+    return negate;
+  }
+
+
+  public void setNegate(Boolean negate) {
+    this.negate = negate;
+  }
+
+
+
+  public ApplicationLoadBalancerHttpRuleCondition type(TypeEnum type) {
+    
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * The HTTP rule condition type.
+   * @return type
+  **/
+  @ApiModelProperty(example = "HEADER", required = true, value = "The HTTP rule condition type.")
+
+  public TypeEnum getType() {
+    return type;
+  }
+
+
+  public void setType(TypeEnum type) {
+    this.type = type;
+  }
+
+
+
   public ApplicationLoadBalancerHttpRuleCondition value(String value) {
     
     this.value = value;
@@ -272,11 +272,11 @@ public class ApplicationLoadBalancerHttpRuleCondition {
   }
 
    /**
-   * Mandatory for conditions CONTAINS, EQUALS, MATCHES, STARTS_WITH, ENDS_WITH; must be null when condition is EXISTS; should be a valid CIDR if provided and if type is SOURCE_IP.
+   * This parameter is mandatory for the conditions &#39;CONTAINS&#39;, &#39;EQUALS&#39;, &#39;MATCHES&#39;, &#39;STARTS_WITH&#39;, &#39;ENDS_WITH&#39;, or if the type is &#39;SOURCE_IP&#39;. Specify a valid CIDR. If the condition is &#39;EXISTS&#39;, the value must be &#39;null&#39;.
    * @return value
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "Friday", value = "Mandatory for conditions CONTAINS, EQUALS, MATCHES, STARTS_WITH, ENDS_WITH; must be null when condition is EXISTS; should be a valid CIDR if provided and if type is SOURCE_IP.")
+  @ApiModelProperty(example = "Friday", value = "This parameter is mandatory for the conditions 'CONTAINS', 'EQUALS', 'MATCHES', 'STARTS_WITH', 'ENDS_WITH', or if the type is 'SOURCE_IP'. Specify a valid CIDR. If the condition is 'EXISTS', the value must be 'null'.")
 
   public String getValue() {
     return value;
@@ -297,7 +297,7 @@ public class ApplicationLoadBalancerHttpRuleCondition {
       return false;
     }
     ApplicationLoadBalancerHttpRuleCondition applicationLoadBalancerHttpRuleCondition = (ApplicationLoadBalancerHttpRuleCondition) o;
-    return Objects.equals(this.type, applicationLoadBalancerHttpRuleCondition.type) && Objects.equals(this.condition, applicationLoadBalancerHttpRuleCondition.condition) && Objects.equals(this.negate, applicationLoadBalancerHttpRuleCondition.negate) && Objects.equals(this.key, applicationLoadBalancerHttpRuleCondition.key) && Objects.equals(this.value, applicationLoadBalancerHttpRuleCondition.value);
+    return Objects.equals(this.condition, applicationLoadBalancerHttpRuleCondition.condition) && Objects.equals(this.key, applicationLoadBalancerHttpRuleCondition.key) && Objects.equals(this.negate, applicationLoadBalancerHttpRuleCondition.negate) && Objects.equals(this.type, applicationLoadBalancerHttpRuleCondition.type) && Objects.equals(this.value, applicationLoadBalancerHttpRuleCondition.value);
   }
 
 
@@ -308,13 +308,13 @@ public class ApplicationLoadBalancerHttpRuleCondition {
     StringBuilder sb = new StringBuilder();
     sb.append("class ApplicationLoadBalancerHttpRuleCondition {\n");
     
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    condition: ").append(toIndentedString(condition)).append("\n");
+
+    sb.append("    key: ").append(toIndentedString(key)).append("\n");
 
     sb.append("    negate: ").append(toIndentedString(negate)).append("\n");
 
-    sb.append("    key: ").append(toIndentedString(key)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
 
     sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
@@ -332,5 +332,18 @@ public class ApplicationLoadBalancerHttpRuleCondition {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// ApplicationLoadBalancerHttpRuleCondition instantiates a new ApplicationLoadBalancerHttpRuleCondition object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public ApplicationLoadBalancerHttpRuleCondition(ConditionEnum Condition, TypeEnum Type) {
+
+	this.condition = Condition;
+	this.type = Type;
 }
 
+public ApplicationLoadBalancerHttpRuleCondition() {
+}
+
+}

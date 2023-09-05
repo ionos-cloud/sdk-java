@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * LabelProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class LabelProperties {
   
@@ -36,9 +36,9 @@ public class LabelProperties {
   private String key;
 
 
-  public static final String SERIALIZED_NAME_VALUE = "value";
-  @SerializedName(SERIALIZED_NAME_VALUE)
-  private String value;
+  public static final String SERIALIZED_NAME_RESOURCE_HREF = "resourceHref";
+  @SerializedName(SERIALIZED_NAME_RESOURCE_HREF)
+  private String resourceHref;
 
 
   public static final String SERIALIZED_NAME_RESOURCE_ID = "resourceId";
@@ -51,9 +51,9 @@ public class LabelProperties {
   private String resourceType;
 
 
-  public static final String SERIALIZED_NAME_RESOURCE_HREF = "resourceHref";
-  @SerializedName(SERIALIZED_NAME_RESOURCE_HREF)
-  private String resourceHref;
+  public static final String SERIALIZED_NAME_VALUE = "value";
+  @SerializedName(SERIALIZED_NAME_VALUE)
+  private String value;
 
   
 
@@ -81,26 +81,26 @@ public class LabelProperties {
 
 
 
-  public LabelProperties value(String value) {
+  public LabelProperties resourceHref(String resourceHref) {
     
-    this.value = value;
+    this.resourceHref = resourceHref;
     return this;
   }
 
    /**
-   * A label value
-   * @return value
+   * URL to the Resource (absolute path) on which the label is applied.
+   * @return resourceHref
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "production", value = "A label value")
+  @ApiModelProperty(example = "https://<hostname>/datacenters/700e1cab-99b2-4c30-ba8c-1d273ddba022", value = "URL to the Resource (absolute path) on which the label is applied.")
 
-  public String getValue() {
-    return value;
+  public String getResourceHref() {
+    return resourceHref;
   }
 
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setResourceHref(String resourceHref) {
+    this.resourceHref = resourceHref;
   }
 
 
@@ -153,26 +153,26 @@ public class LabelProperties {
 
 
 
-  public LabelProperties resourceHref(String resourceHref) {
+  public LabelProperties value(String value) {
     
-    this.resourceHref = resourceHref;
+    this.value = value;
     return this;
   }
 
    /**
-   * URL to the Resource (absolute path) on which the label is applied.
-   * @return resourceHref
+   * A label value
+   * @return value
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "https://<hostname>/datacenters/700e1cab-99b2-4c30-ba8c-1d273ddba022", value = "URL to the Resource (absolute path) on which the label is applied.")
+  @ApiModelProperty(example = "production", value = "A label value")
 
-  public String getResourceHref() {
-    return resourceHref;
+  public String getValue() {
+    return value;
   }
 
 
-  public void setResourceHref(String resourceHref) {
-    this.resourceHref = resourceHref;
+  public void setValue(String value) {
+    this.value = value;
   }
 
 
@@ -185,7 +185,7 @@ public class LabelProperties {
       return false;
     }
     LabelProperties labelProperties = (LabelProperties) o;
-    return Objects.equals(this.key, labelProperties.key) && Objects.equals(this.value, labelProperties.value) && Objects.equals(this.resourceId, labelProperties.resourceId) && Objects.equals(this.resourceType, labelProperties.resourceType) && Objects.equals(this.resourceHref, labelProperties.resourceHref);
+    return Objects.equals(this.key, labelProperties.key) && Objects.equals(this.resourceHref, labelProperties.resourceHref) && Objects.equals(this.resourceId, labelProperties.resourceId) && Objects.equals(this.resourceType, labelProperties.resourceType) && Objects.equals(this.value, labelProperties.value);
   }
 
 
@@ -198,13 +198,13 @@ public class LabelProperties {
     
     sb.append("    key: ").append(toIndentedString(key)).append("\n");
 
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    resourceHref: ").append(toIndentedString(resourceHref)).append("\n");
 
     sb.append("    resourceId: ").append(toIndentedString(resourceId)).append("\n");
 
     sb.append("    resourceType: ").append(toIndentedString(resourceType)).append("\n");
 
-    sb.append("    resourceHref: ").append(toIndentedString(resourceHref)).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -220,5 +220,14 @@ public class LabelProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// LabelProperties instantiates a new LabelProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public LabelProperties() {
+
 }
 
+
+}

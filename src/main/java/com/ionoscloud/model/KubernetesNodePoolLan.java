@@ -30,18 +30,23 @@ import java.util.List;
 /**
  * KubernetesNodePoolLan
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class KubernetesNodePoolLan {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private Integer id;
+  public static final String SERIALIZED_NAME_DATACENTER_ID = "datacenterId";
+  @SerializedName(SERIALIZED_NAME_DATACENTER_ID)
+  private String datacenterId;
 
 
   public static final String SERIALIZED_NAME_DHCP = "dhcp";
   @SerializedName(SERIALIZED_NAME_DHCP)
   private Boolean dhcp;
+
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private Integer id;
 
 
   public static final String SERIALIZED_NAME_ROUTES = "routes";
@@ -50,25 +55,26 @@ public class KubernetesNodePoolLan {
 
   
 
-  public KubernetesNodePoolLan id(Integer id) {
+  public KubernetesNodePoolLan datacenterId(String datacenterId) {
     
-    this.id = id;
+    this.datacenterId = datacenterId;
     return this;
   }
 
    /**
-   * The LAN ID of an existing LAN at the related datacenter
-   * @return id
+   * The datacenter ID, requires system privileges, for internal usage only
+   * @return datacenterId
   **/
-  @ApiModelProperty(example = "3", required = true, value = "The LAN ID of an existing LAN at the related datacenter")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "00000000-0000-0000-0000-000000000000", value = "The datacenter ID, requires system privileges, for internal usage only")
 
-  public Integer getId() {
-    return id;
+  public String getDatacenterId() {
+    return datacenterId;
   }
 
 
-  public void setId(Integer id) {
-    this.id = id;
+  public void setDatacenterId(String datacenterId) {
+    this.datacenterId = datacenterId;
   }
 
 
@@ -80,11 +86,11 @@ public class KubernetesNodePoolLan {
   }
 
    /**
-   * Indicates if the Kubernetes node pool LAN will reserve an IP using DHCP.
+   * Specifies whether the Kubernetes node pool LAN reserves an IP with DHCP.
    * @return dhcp
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Indicates if the Kubernetes node pool LAN will reserve an IP using DHCP.")
+  @ApiModelProperty(example = "true", value = "Specifies whether the Kubernetes node pool LAN reserves an IP with DHCP.")
 
   public Boolean getDhcp() {
     return dhcp;
@@ -93,6 +99,29 @@ public class KubernetesNodePoolLan {
 
   public void setDhcp(Boolean dhcp) {
     this.dhcp = dhcp;
+  }
+
+
+
+  public KubernetesNodePoolLan id(Integer id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * The LAN ID of an existing LAN at the related data center
+   * @return id
+  **/
+  @ApiModelProperty(example = "3", required = true, value = "The LAN ID of an existing LAN at the related data center")
+
+  public Integer getId() {
+    return id;
+  }
+
+
+  public void setId(Integer id) {
+    this.id = id;
   }
 
 
@@ -112,11 +141,11 @@ public class KubernetesNodePoolLan {
   }
 
    /**
-   * array of additional LANs attached to worker nodes
+   * The array of additional LANs attached to worker nodes.
    * @return routes
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "array of additional LANs attached to worker nodes")
+  @ApiModelProperty(value = "The array of additional LANs attached to worker nodes.")
 
   public List<KubernetesNodePoolLanRoutes> getRoutes() {
     return routes;
@@ -137,7 +166,7 @@ public class KubernetesNodePoolLan {
       return false;
     }
     KubernetesNodePoolLan kubernetesNodePoolLan = (KubernetesNodePoolLan) o;
-    return Objects.equals(this.id, kubernetesNodePoolLan.id) && Objects.equals(this.dhcp, kubernetesNodePoolLan.dhcp) && Objects.equals(this.routes, kubernetesNodePoolLan.routes);
+    return Objects.equals(this.datacenterId, kubernetesNodePoolLan.datacenterId) && Objects.equals(this.dhcp, kubernetesNodePoolLan.dhcp) && Objects.equals(this.id, kubernetesNodePoolLan.id) && Objects.equals(this.routes, kubernetesNodePoolLan.routes);
   }
 
 
@@ -148,9 +177,11 @@ public class KubernetesNodePoolLan {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodePoolLan {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    datacenterId: ").append(toIndentedString(datacenterId)).append("\n");
 
     sb.append("    dhcp: ").append(toIndentedString(dhcp)).append("\n");
+
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
 
     sb.append("    routes: ").append(toIndentedString(routes)).append("\n");
     sb.append("}");
@@ -168,5 +199,17 @@ public class KubernetesNodePoolLan {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// KubernetesNodePoolLan instantiates a new KubernetesNodePoolLan object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public KubernetesNodePoolLan(Integer Id) {
+
+	this.id = Id;
 }
 
+public KubernetesNodePoolLan() {
+}
+
+}

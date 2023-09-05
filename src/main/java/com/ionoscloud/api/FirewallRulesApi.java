@@ -1431,8 +1431,8 @@ public class FirewallRulesApi {
     }
 
     /**
-     * Create firewall rules
-     * Create a firewall rule for the specified NIC.
+     * Create a Firewall Rule
+     * Creates a firewall rule for the specified NIC.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nicId The unique ID of the NIC. (required)
@@ -1456,8 +1456,8 @@ public class FirewallRulesApi {
     }
 
     /**
-     * Create firewall rules
-     * Create a firewall rule for the specified NIC.
+     * Create a Firewall Rule
+     * Creates a firewall rule for the specified NIC.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nicId The unique ID of the NIC. (required)
@@ -1482,8 +1482,8 @@ public class FirewallRulesApi {
     }
 
     /**
-     * Create firewall rules (asynchronously)
-     * Create a firewall rule for the specified NIC.
+     * Create a Firewall Rule (asynchronously)
+     * Creates a firewall rule for the specified NIC.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nicId The unique ID of the NIC. (required)
@@ -1621,8 +1621,8 @@ public class FirewallRulesApi {
     }
 
     /**
-     * Create firewall rules
-     * Create a firewall rule for the specified NIC.
+     * Create a Firewall Rule
+     * Creates a firewall rule for the specified NIC.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nicId The unique ID of the NIC. (required)
@@ -1738,8 +1738,8 @@ public class FirewallRulesApi {
     }
 
     /**
-     * Modify firewall rules
-     * Modify the properties of the specified firewall rule.
+     * Modify a Firewall Rule
+     * Modifies the properties of the specified firewall rule.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nicId The unique ID of the NIC. (required)
@@ -1764,8 +1764,8 @@ public class FirewallRulesApi {
     }
 
     /**
-     * Modify firewall rules
-     * Modify the properties of the specified firewall rule.
+     * Modify a Firewall Rule
+     * Modifies the properties of the specified firewall rule.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nicId The unique ID of the NIC. (required)
@@ -1791,8 +1791,8 @@ public class FirewallRulesApi {
     }
 
     /**
-     * Modify firewall rules (asynchronously)
-     * Modify the properties of the specified firewall rule.
+     * Modify a Firewall Rule (asynchronously)
+     * Modifies the properties of the specified firewall rule.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nicId The unique ID of the NIC. (required)
@@ -1933,8 +1933,8 @@ public class FirewallRulesApi {
     }
 
     /**
-     * Modify firewall rules
-     * Modify the properties of the specified firewall rule.
+     * Modify a Firewall Rule
+     * Modifies the properties of the specified firewall rule.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nicId The unique ID of the NIC. (required)

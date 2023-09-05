@@ -4,18 +4,18 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**locationsFindByRegionId**](LocationsApi.md#locationsfindbyregionid) | **GET** /locations/{regionId} | List locations within regions |
-| [**locationsFindByRegionIdAndId**](LocationsApi.md#locationsfindbyregionidandid) | **GET** /locations/{regionId}/{locationId} | Retrieve specified locations |
-| [**locationsGet**](LocationsApi.md#locationsget) | **GET** /locations | List locations |
+| [**locationsFindByRegionId**](LocationsApi.md#locationsfindbyregionid) | **GET** /locations/{regionId} | Get Locations within a Region |
+| [**locationsFindByRegionIdAndId**](LocationsApi.md#locationsfindbyregionidandid) | **GET** /locations/{regionId}/{locationId} | Get Location by ID |
+| [**locationsGet**](LocationsApi.md#locationsget) | **GET** /locations | Get Locations |
 
 
 <a name="locationsFindByRegionId"></a>
 # **locationsFindByRegionId**
 > Locations locationsFindByRegionId(regionId, pretty, depth, xContractNumber)
 
-List locations within regions
+Get Locations within a Region
 
-List locations by the region ID.
+Retrieves the available locations in a region specified by its ID. The &#39;regionId&#39; consists of the two character identifier of the region (country), e.g., &#39;de&#39;.
 
 ### Parameters
 
@@ -35,11 +35,14 @@ List locations by the region ID.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the locationsFindByRegionIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use locationsFindByRegionId instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -54,6 +57,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LocationsApi apiInstance = new LocationsApi(defaultClient);
     String regionId = "regionId_example"; // String | The unique ID of the region.
@@ -61,8 +66,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Locations result = apiInstance.locationsFindByRegionId(regionId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Locations> result = apiInstance.locationsFindByRegionIdWithHttpInfo(regionId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LocationsApi#locationsFindByRegionId");
       System.err.println("Status code: " + e.getCode());
@@ -98,9 +105,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **locationsFindByRegionIdAndId**
 > Location locationsFindByRegionIdAndId(regionId, locationId, pretty, depth, xContractNumber)
 
-Retrieve specified locations
+Get Location by ID
 
-Retrieve the properties of the specified location
+Retrieves the information about the location specified by its ID. The &#39;locationId&#39; consists of the three-digit identifier of the city according to the IATA code.
 
 ### Parameters
 
@@ -121,11 +128,14 @@ Retrieve the properties of the specified location
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the locationsFindByRegionIdAndIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use locationsFindByRegionIdAndId instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -140,6 +150,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LocationsApi apiInstance = new LocationsApi(defaultClient);
     String regionId = "regionId_example"; // String | The unique ID of the region.
@@ -148,8 +160,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Location result = apiInstance.locationsFindByRegionIdAndId(regionId, locationId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Location> result = apiInstance.locationsFindByRegionIdAndIdWithHttpInfo(regionId, locationId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LocationsApi#locationsFindByRegionIdAndId");
       System.err.println("Status code: " + e.getCode());
@@ -185,9 +199,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **locationsGet**
 > Locations locationsGet(pretty, depth, xContractNumber)
 
-List locations
+Get Locations
 
-List the available locations for provisioning your virtual data centers.
+Retrieves the available physical locations where you can deploy cloud resources in a VDC.    A location is identified by a combination of the following characters:    * a two-character **regionId**, which represents a country (example: &#39;de&#39;)    * a three-character **locationId**, which represents a city. The &#39;locationId&#39; is typically based on the IATA code of the city&#39;s airport (example: &#39;txl&#39;).    &gt;Note that &#39;locations&#39; are read-only and cannot be changed.
 
 ### Parameters
 
@@ -209,11 +223,14 @@ List the available locations for provisioning your virtual data centers.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the locationsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use locationsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -228,17 +245,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LocationsApi apiInstance = new LocationsApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Locations result = apiInstance.locationsGet(pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<Locations> result = apiInstance.locationsGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LocationsApi#locationsGet");
       System.err.println("Status code: " + e.getCode());

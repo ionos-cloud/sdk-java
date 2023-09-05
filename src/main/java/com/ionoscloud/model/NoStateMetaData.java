@@ -28,20 +28,10 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * NoStateMetaData
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class NoStateMetaData {
   
-  public static final String SERIALIZED_NAME_ETAG = "etag";
-  @SerializedName(SERIALIZED_NAME_ETAG)
-  private String etag;
-
-
-  public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
-  @SerializedName(SERIALIZED_NAME_CREATED_DATE)
-  private OffsetDateTime createdDate;
-
-
   public static final String SERIALIZED_NAME_CREATED_BY = "createdBy";
   @SerializedName(SERIALIZED_NAME_CREATED_BY)
   private String createdBy;
@@ -52,9 +42,14 @@ public class NoStateMetaData {
   private String createdByUserId;
 
 
-  public static final String SERIALIZED_NAME_LAST_MODIFIED_DATE = "lastModifiedDate";
-  @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_DATE)
-  private OffsetDateTime lastModifiedDate;
+  public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
+  @SerializedName(SERIALIZED_NAME_CREATED_DATE)
+  private OffsetDateTime createdDate;
+
+
+  public static final String SERIALIZED_NAME_ETAG = "etag";
+  @SerializedName(SERIALIZED_NAME_ETAG)
+  private String etag;
 
 
   public static final String SERIALIZED_NAME_LAST_MODIFIED_BY = "lastModifiedBy";
@@ -66,43 +61,12 @@ public class NoStateMetaData {
   @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_BY_USER_ID)
   private String lastModifiedByUserId;
 
+
+  public static final String SERIALIZED_NAME_LAST_MODIFIED_DATE = "lastModifiedDate";
+  @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_DATE)
+  private OffsetDateTime lastModifiedDate;
+
   
-
-   /**
-   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
-   * @return etag
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
-
-  public String getEtag() {
-    return etag;
-  }
-
-
-  public void setEtag(String etag) {
-    this.etag = etag;
-  }
-
-
-
-   /**
-   * The time when the resource was created.
-   * @return createdDate
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The time when the resource was created.")
-
-  public OffsetDateTime getCreatedDate() {
-    return createdDate;
-  }
-
-
-  public void setCreatedDate(OffsetDateTime createdDate) {
-    this.createdDate = createdDate;
-  }
-
-
 
    /**
    * The user who has created the resource.
@@ -141,19 +105,37 @@ public class NoStateMetaData {
 
 
    /**
-   * The last time the resource was modified.
-   * @return lastModifiedDate
+   * The time when the resource was created.
+   * @return createdDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource was modified.")
+  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The time when the resource was created.")
 
-  public OffsetDateTime getLastModifiedDate() {
-    return lastModifiedDate;
+  public OffsetDateTime getCreatedDate() {
+    return createdDate;
   }
 
 
-  public void setLastModifiedDate(OffsetDateTime lastModifiedDate) {
-    this.lastModifiedDate = lastModifiedDate;
+  public void setCreatedDate(OffsetDateTime createdDate) {
+    this.createdDate = createdDate;
+  }
+
+
+
+   /**
+   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
+   * @return etag
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
+
+  public String getEtag() {
+    return etag;
+  }
+
+
+  public void setEtag(String etag) {
+    this.etag = etag;
   }
 
 
@@ -193,6 +175,24 @@ public class NoStateMetaData {
   }
 
 
+
+   /**
+   * The last time the resource was modified.
+   * @return lastModifiedDate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource was modified.")
+
+  public OffsetDateTime getLastModifiedDate() {
+    return lastModifiedDate;
+  }
+
+
+  public void setLastModifiedDate(OffsetDateTime lastModifiedDate) {
+    this.lastModifiedDate = lastModifiedDate;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -202,7 +202,7 @@ public class NoStateMetaData {
       return false;
     }
     NoStateMetaData noStateMetaData = (NoStateMetaData) o;
-    return Objects.equals(this.etag, noStateMetaData.etag) && Objects.equals(this.createdDate, noStateMetaData.createdDate) && Objects.equals(this.createdBy, noStateMetaData.createdBy) && Objects.equals(this.createdByUserId, noStateMetaData.createdByUserId) && Objects.equals(this.lastModifiedDate, noStateMetaData.lastModifiedDate) && Objects.equals(this.lastModifiedBy, noStateMetaData.lastModifiedBy) && Objects.equals(this.lastModifiedByUserId, noStateMetaData.lastModifiedByUserId);
+    return Objects.equals(this.createdBy, noStateMetaData.createdBy) && Objects.equals(this.createdByUserId, noStateMetaData.createdByUserId) && Objects.equals(this.createdDate, noStateMetaData.createdDate) && Objects.equals(this.etag, noStateMetaData.etag) && Objects.equals(this.lastModifiedBy, noStateMetaData.lastModifiedBy) && Objects.equals(this.lastModifiedByUserId, noStateMetaData.lastModifiedByUserId) && Objects.equals(this.lastModifiedDate, noStateMetaData.lastModifiedDate);
   }
 
 
@@ -213,19 +213,19 @@ public class NoStateMetaData {
     StringBuilder sb = new StringBuilder();
     sb.append("class NoStateMetaData {\n");
     
-    sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
-
-    sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
-
     sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
 
     sb.append("    createdByUserId: ").append(toIndentedString(createdByUserId)).append("\n");
 
-    sb.append("    lastModifiedDate: ").append(toIndentedString(lastModifiedDate)).append("\n");
+    sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
+
+    sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
 
     sb.append("    lastModifiedBy: ").append(toIndentedString(lastModifiedBy)).append("\n");
 
     sb.append("    lastModifiedByUserId: ").append(toIndentedString(lastModifiedByUserId)).append("\n");
+
+    sb.append("    lastModifiedDate: ").append(toIndentedString(lastModifiedDate)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -241,5 +241,14 @@ public class NoStateMetaData {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// NoStateMetaData instantiates a new NoStateMetaData object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public NoStateMetaData() {
+
 }
 
+
+}

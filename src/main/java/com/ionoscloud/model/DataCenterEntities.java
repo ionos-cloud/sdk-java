@@ -33,10 +33,30 @@ import java.io.IOException;
 /**
  * DataCenterEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class DataCenterEntities {
   
+  public static final String SERIALIZED_NAME_LANS = "lans";
+  @SerializedName(SERIALIZED_NAME_LANS)
+  private Lans lans;
+
+
+  public static final String SERIALIZED_NAME_LOADBALANCERS = "loadbalancers";
+  @SerializedName(SERIALIZED_NAME_LOADBALANCERS)
+  private Loadbalancers loadbalancers;
+
+
+  public static final String SERIALIZED_NAME_NATGATEWAYS = "natgateways";
+  @SerializedName(SERIALIZED_NAME_NATGATEWAYS)
+  private NatGateways natgateways;
+
+
+  public static final String SERIALIZED_NAME_NETWORKLOADBALANCERS = "networkloadbalancers";
+  @SerializedName(SERIALIZED_NAME_NETWORKLOADBALANCERS)
+  private NetworkLoadBalancers networkloadbalancers;
+
+
   public static final String SERIALIZED_NAME_SERVERS = "servers";
   @SerializedName(SERIALIZED_NAME_SERVERS)
   private Servers servers;
@@ -46,27 +66,103 @@ public class DataCenterEntities {
   @SerializedName(SERIALIZED_NAME_VOLUMES)
   private Volumes volumes;
 
-
-  public static final String SERIALIZED_NAME_LOADBALANCERS = "loadbalancers";
-  @SerializedName(SERIALIZED_NAME_LOADBALANCERS)
-  private Loadbalancers loadbalancers;
-
-
-  public static final String SERIALIZED_NAME_LANS = "lans";
-  @SerializedName(SERIALIZED_NAME_LANS)
-  private Lans lans;
-
-
-  public static final String SERIALIZED_NAME_NETWORKLOADBALANCERS = "networkloadbalancers";
-  @SerializedName(SERIALIZED_NAME_NETWORKLOADBALANCERS)
-  private NetworkLoadBalancers networkloadbalancers;
-
-
-  public static final String SERIALIZED_NAME_NATGATEWAYS = "natgateways";
-  @SerializedName(SERIALIZED_NAME_NATGATEWAYS)
-  private NatGateways natgateways;
-
   
+
+  public DataCenterEntities lans(Lans lans) {
+    
+    this.lans = lans;
+    return this;
+  }
+
+   /**
+   * Get lans
+   * @return lans
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Lans getLans() {
+    return lans;
+  }
+
+
+  public void setLans(Lans lans) {
+    this.lans = lans;
+  }
+
+
+
+  public DataCenterEntities loadbalancers(Loadbalancers loadbalancers) {
+    
+    this.loadbalancers = loadbalancers;
+    return this;
+  }
+
+   /**
+   * Get loadbalancers
+   * @return loadbalancers
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Loadbalancers getLoadbalancers() {
+    return loadbalancers;
+  }
+
+
+  public void setLoadbalancers(Loadbalancers loadbalancers) {
+    this.loadbalancers = loadbalancers;
+  }
+
+
+
+  public DataCenterEntities natgateways(NatGateways natgateways) {
+    
+    this.natgateways = natgateways;
+    return this;
+  }
+
+   /**
+   * Get natgateways
+   * @return natgateways
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NatGateways getNatgateways() {
+    return natgateways;
+  }
+
+
+  public void setNatgateways(NatGateways natgateways) {
+    this.natgateways = natgateways;
+  }
+
+
+
+  public DataCenterEntities networkloadbalancers(NetworkLoadBalancers networkloadbalancers) {
+    
+    this.networkloadbalancers = networkloadbalancers;
+    return this;
+  }
+
+   /**
+   * Get networkloadbalancers
+   * @return networkloadbalancers
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NetworkLoadBalancers getNetworkloadbalancers() {
+    return networkloadbalancers;
+  }
+
+
+  public void setNetworkloadbalancers(NetworkLoadBalancers networkloadbalancers) {
+    this.networkloadbalancers = networkloadbalancers;
+  }
+
+
 
   public DataCenterEntities servers(Servers servers) {
     
@@ -115,102 +211,6 @@ public class DataCenterEntities {
   }
 
 
-
-  public DataCenterEntities loadbalancers(Loadbalancers loadbalancers) {
-    
-    this.loadbalancers = loadbalancers;
-    return this;
-  }
-
-   /**
-   * Get loadbalancers
-   * @return loadbalancers
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Loadbalancers getLoadbalancers() {
-    return loadbalancers;
-  }
-
-
-  public void setLoadbalancers(Loadbalancers loadbalancers) {
-    this.loadbalancers = loadbalancers;
-  }
-
-
-
-  public DataCenterEntities lans(Lans lans) {
-    
-    this.lans = lans;
-    return this;
-  }
-
-   /**
-   * Get lans
-   * @return lans
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public Lans getLans() {
-    return lans;
-  }
-
-
-  public void setLans(Lans lans) {
-    this.lans = lans;
-  }
-
-
-
-  public DataCenterEntities networkloadbalancers(NetworkLoadBalancers networkloadbalancers) {
-    
-    this.networkloadbalancers = networkloadbalancers;
-    return this;
-  }
-
-   /**
-   * Get networkloadbalancers
-   * @return networkloadbalancers
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public NetworkLoadBalancers getNetworkloadbalancers() {
-    return networkloadbalancers;
-  }
-
-
-  public void setNetworkloadbalancers(NetworkLoadBalancers networkloadbalancers) {
-    this.networkloadbalancers = networkloadbalancers;
-  }
-
-
-
-  public DataCenterEntities natgateways(NatGateways natgateways) {
-    
-    this.natgateways = natgateways;
-    return this;
-  }
-
-   /**
-   * Get natgateways
-   * @return natgateways
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public NatGateways getNatgateways() {
-    return natgateways;
-  }
-
-
-  public void setNatgateways(NatGateways natgateways) {
-    this.natgateways = natgateways;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -220,7 +220,7 @@ public class DataCenterEntities {
       return false;
     }
     DataCenterEntities dataCenterEntities = (DataCenterEntities) o;
-    return Objects.equals(this.servers, dataCenterEntities.servers) && Objects.equals(this.volumes, dataCenterEntities.volumes) && Objects.equals(this.loadbalancers, dataCenterEntities.loadbalancers) && Objects.equals(this.lans, dataCenterEntities.lans) && Objects.equals(this.networkloadbalancers, dataCenterEntities.networkloadbalancers) && Objects.equals(this.natgateways, dataCenterEntities.natgateways);
+    return Objects.equals(this.lans, dataCenterEntities.lans) && Objects.equals(this.loadbalancers, dataCenterEntities.loadbalancers) && Objects.equals(this.natgateways, dataCenterEntities.natgateways) && Objects.equals(this.networkloadbalancers, dataCenterEntities.networkloadbalancers) && Objects.equals(this.servers, dataCenterEntities.servers) && Objects.equals(this.volumes, dataCenterEntities.volumes);
   }
 
 
@@ -231,17 +231,17 @@ public class DataCenterEntities {
     StringBuilder sb = new StringBuilder();
     sb.append("class DataCenterEntities {\n");
     
-    sb.append("    servers: ").append(toIndentedString(servers)).append("\n");
-
-    sb.append("    volumes: ").append(toIndentedString(volumes)).append("\n");
+    sb.append("    lans: ").append(toIndentedString(lans)).append("\n");
 
     sb.append("    loadbalancers: ").append(toIndentedString(loadbalancers)).append("\n");
 
-    sb.append("    lans: ").append(toIndentedString(lans)).append("\n");
+    sb.append("    natgateways: ").append(toIndentedString(natgateways)).append("\n");
 
     sb.append("    networkloadbalancers: ").append(toIndentedString(networkloadbalancers)).append("\n");
 
-    sb.append("    natgateways: ").append(toIndentedString(natgateways)).append("\n");
+    sb.append("    servers: ").append(toIndentedString(servers)).append("\n");
+
+    sb.append("    volumes: ").append(toIndentedString(volumes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -257,5 +257,14 @@ public class DataCenterEntities {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// DataCenterEntities instantiates a new DataCenterEntities object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public DataCenterEntities() {
+
 }
 
+
+}

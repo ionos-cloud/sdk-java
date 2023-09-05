@@ -31,13 +31,13 @@ import java.util.List;
 /**
  * KubernetesClusterPropertiesForPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class KubernetesClusterPropertiesForPut {
   
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  public static final String SERIALIZED_NAME_API_SUBNET_ALLOW_LIST = "apiSubnetAllowList";
+  @SerializedName(SERIALIZED_NAME_API_SUBNET_ALLOW_LIST)
+  private List<String> apiSubnetAllowList = null;
 
 
   public static final String SERIALIZED_NAME_K8S_VERSION = "k8sVersion";
@@ -50,9 +50,9 @@ public class KubernetesClusterPropertiesForPut {
   private KubernetesMaintenanceWindow maintenanceWindow;
 
 
-  public static final String SERIALIZED_NAME_API_SUBNET_ALLOW_LIST = "apiSubnetAllowList";
-  @SerializedName(SERIALIZED_NAME_API_SUBNET_ALLOW_LIST)
-  private List<String> apiSubnetAllowList = null;
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
 
   public static final String SERIALIZED_NAME_S3_BUCKETS = "s3Buckets";
@@ -61,25 +61,34 @@ public class KubernetesClusterPropertiesForPut {
 
   
 
-  public KubernetesClusterPropertiesForPut name(String name) {
+  public KubernetesClusterPropertiesForPut apiSubnetAllowList(List<String> apiSubnetAllowList) {
     
-    this.name = name;
+    this.apiSubnetAllowList = apiSubnetAllowList;
+    return this;
+  }
+
+  public KubernetesClusterPropertiesForPut addApiSubnetAllowListItem(String apiSubnetAllowListItem) {
+    if (this.apiSubnetAllowList == null) {
+      this.apiSubnetAllowList = new ArrayList<String>();
+    }
+    this.apiSubnetAllowList.add(apiSubnetAllowListItem);
     return this;
   }
 
    /**
-   * A Kubernetes cluster name. Valid Kubernetes cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
-   * @return name
+   * Access to the K8s API server is restricted to these CIDRs. Intra-cluster traffic is not affected by this restriction. If no AllowList is specified, access is not limited. If an IP is specified without a subnet mask, the default value is 32 for IPv4 and 128 for IPv6.
+   * @return apiSubnetAllowList
   **/
-  @ApiModelProperty(example = "k8s", required = true, value = "A Kubernetes cluster name. Valid Kubernetes cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "[1.2.3.4/32, 2002::1234:abcd:ffff:c0a8:101/64, 1.2.3.4, 2002::1234:abcd:ffff:c0a8:101]", value = "Access to the K8s API server is restricted to these CIDRs. Intra-cluster traffic is not affected by this restriction. If no AllowList is specified, access is not limited. If an IP is specified without a subnet mask, the default value is 32 for IPv4 and 128 for IPv6.")
 
-  public String getName() {
-    return name;
+  public List<String> getApiSubnetAllowList() {
+    return apiSubnetAllowList;
   }
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setApiSubnetAllowList(List<String> apiSubnetAllowList) {
+    this.apiSubnetAllowList = apiSubnetAllowList;
   }
 
 
@@ -91,11 +100,11 @@ public class KubernetesClusterPropertiesForPut {
   }
 
    /**
-   * The Kubernetes version the cluster is running. This imposes restrictions on what Kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.
+   * The Kubernetes version that the cluster is running. This limits which Kubernetes versions can run in a cluster&#39;s node pools. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.
    * @return k8sVersion
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1.15.4", value = "The Kubernetes version the cluster is running. This imposes restrictions on what Kubernetes versions can be run in a cluster's nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.")
+  @ApiModelProperty(example = "1.15.4", value = "The Kubernetes version that the cluster is running. This limits which Kubernetes versions can run in a cluster's node pools. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.")
 
   public String getK8sVersion() {
     return k8sVersion;
@@ -132,34 +141,25 @@ public class KubernetesClusterPropertiesForPut {
 
 
 
-  public KubernetesClusterPropertiesForPut apiSubnetAllowList(List<String> apiSubnetAllowList) {
+  public KubernetesClusterPropertiesForPut name(String name) {
     
-    this.apiSubnetAllowList = apiSubnetAllowList;
-    return this;
-  }
-
-  public KubernetesClusterPropertiesForPut addApiSubnetAllowListItem(String apiSubnetAllowListItem) {
-    if (this.apiSubnetAllowList == null) {
-      this.apiSubnetAllowList = new ArrayList<String>();
-    }
-    this.apiSubnetAllowList.add(apiSubnetAllowListItem);
+    this.name = name;
     return this;
   }
 
    /**
-   * Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6.
-   * @return apiSubnetAllowList
+   * A Kubernetes cluster name. Valid Kubernetes cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+   * @return name
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "[1.2.3.4/32, 2002::1234:abcd:ffff:c0a8:101/64, 1.2.3.4, 2002::1234:abcd:ffff:c0a8:101]", value = "Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6.")
+  @ApiModelProperty(example = "k8s", required = true, value = "A Kubernetes cluster name. Valid Kubernetes cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.")
 
-  public List<String> getApiSubnetAllowList() {
-    return apiSubnetAllowList;
+  public String getName() {
+    return name;
   }
 
 
-  public void setApiSubnetAllowList(List<String> apiSubnetAllowList) {
-    this.apiSubnetAllowList = apiSubnetAllowList;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -179,11 +179,11 @@ public class KubernetesClusterPropertiesForPut {
   }
 
    /**
-   * List of S3 bucket configured for K8s usage. For now it contains only an S3 bucket used to store K8s API audit logs
+   * List of S3 buckets configured for K8s usage. At the moment, it contains only one S3 bucket that is used to store K8s API audit logs.
    * @return s3Buckets
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "List of S3 bucket configured for K8s usage. For now it contains only an S3 bucket used to store K8s API audit logs")
+  @ApiModelProperty(value = "List of S3 buckets configured for K8s usage. At the moment, it contains only one S3 bucket that is used to store K8s API audit logs.")
 
   public List<S3Bucket> getS3Buckets() {
     return s3Buckets;
@@ -204,7 +204,7 @@ public class KubernetesClusterPropertiesForPut {
       return false;
     }
     KubernetesClusterPropertiesForPut kubernetesClusterPropertiesForPut = (KubernetesClusterPropertiesForPut) o;
-    return Objects.equals(this.name, kubernetesClusterPropertiesForPut.name) && Objects.equals(this.k8sVersion, kubernetesClusterPropertiesForPut.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesClusterPropertiesForPut.maintenanceWindow) && Objects.equals(this.apiSubnetAllowList, kubernetesClusterPropertiesForPut.apiSubnetAllowList) && Objects.equals(this.s3Buckets, kubernetesClusterPropertiesForPut.s3Buckets);
+    return Objects.equals(this.apiSubnetAllowList, kubernetesClusterPropertiesForPut.apiSubnetAllowList) && Objects.equals(this.k8sVersion, kubernetesClusterPropertiesForPut.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesClusterPropertiesForPut.maintenanceWindow) && Objects.equals(this.name, kubernetesClusterPropertiesForPut.name) && Objects.equals(this.s3Buckets, kubernetesClusterPropertiesForPut.s3Buckets);
   }
 
 
@@ -215,13 +215,13 @@ public class KubernetesClusterPropertiesForPut {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesClusterPropertiesForPut {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    apiSubnetAllowList: ").append(toIndentedString(apiSubnetAllowList)).append("\n");
 
     sb.append("    k8sVersion: ").append(toIndentedString(k8sVersion)).append("\n");
 
     sb.append("    maintenanceWindow: ").append(toIndentedString(maintenanceWindow)).append("\n");
 
-    sb.append("    apiSubnetAllowList: ").append(toIndentedString(apiSubnetAllowList)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
 
     sb.append("    s3Buckets: ").append(toIndentedString(s3Buckets)).append("\n");
     sb.append("}");
@@ -239,5 +239,17 @@ public class KubernetesClusterPropertiesForPut {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// KubernetesClusterPropertiesForPut instantiates a new KubernetesClusterPropertiesForPut object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public KubernetesClusterPropertiesForPut(String Name) {
+
+	this.name = Name;
 }
 
+public KubernetesClusterPropertiesForPut() {
+}
+
+}

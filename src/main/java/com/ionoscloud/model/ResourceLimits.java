@@ -27,18 +27,18 @@ import java.io.IOException;
 /**
  * ResourceLimits
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class ResourceLimits {
   
-  public static final String SERIALIZED_NAME_CORES_PER_SERVER = "coresPerServer";
-  @SerializedName(SERIALIZED_NAME_CORES_PER_SERVER)
-  private Integer coresPerServer;
-
-
   public static final String SERIALIZED_NAME_CORES_PER_CONTRACT = "coresPerContract";
   @SerializedName(SERIALIZED_NAME_CORES_PER_CONTRACT)
   private Integer coresPerContract;
+
+
+  public static final String SERIALIZED_NAME_CORES_PER_SERVER = "coresPerServer";
+  @SerializedName(SERIALIZED_NAME_CORES_PER_SERVER)
+  private Integer coresPerServer;
 
 
   public static final String SERIALIZED_NAME_CORES_PROVISIONED = "coresProvisioned";
@@ -46,24 +46,9 @@ public class ResourceLimits {
   private Integer coresProvisioned;
 
 
-  public static final String SERIALIZED_NAME_RAM_PER_SERVER = "ramPerServer";
-  @SerializedName(SERIALIZED_NAME_RAM_PER_SERVER)
-  private Integer ramPerServer;
-
-
-  public static final String SERIALIZED_NAME_RAM_PER_CONTRACT = "ramPerContract";
-  @SerializedName(SERIALIZED_NAME_RAM_PER_CONTRACT)
-  private Integer ramPerContract;
-
-
-  public static final String SERIALIZED_NAME_RAM_PROVISIONED = "ramProvisioned";
-  @SerializedName(SERIALIZED_NAME_RAM_PROVISIONED)
-  private Integer ramProvisioned;
-
-
-  public static final String SERIALIZED_NAME_HDD_LIMIT_PER_VOLUME = "hddLimitPerVolume";
-  @SerializedName(SERIALIZED_NAME_HDD_LIMIT_PER_VOLUME)
-  private Long hddLimitPerVolume;
+  public static final String SERIALIZED_NAME_DAS_VOLUME_PROVISIONED = "dasVolumeProvisioned";
+  @SerializedName(SERIALIZED_NAME_DAS_VOLUME_PROVISIONED)
+  private Long dasVolumeProvisioned;
 
 
   public static final String SERIALIZED_NAME_HDD_LIMIT_PER_CONTRACT = "hddLimitPerContract";
@@ -71,44 +56,14 @@ public class ResourceLimits {
   private Long hddLimitPerContract;
 
 
+  public static final String SERIALIZED_NAME_HDD_LIMIT_PER_VOLUME = "hddLimitPerVolume";
+  @SerializedName(SERIALIZED_NAME_HDD_LIMIT_PER_VOLUME)
+  private Long hddLimitPerVolume;
+
+
   public static final String SERIALIZED_NAME_HDD_VOLUME_PROVISIONED = "hddVolumeProvisioned";
   @SerializedName(SERIALIZED_NAME_HDD_VOLUME_PROVISIONED)
   private Long hddVolumeProvisioned;
-
-
-  public static final String SERIALIZED_NAME_SSD_LIMIT_PER_VOLUME = "ssdLimitPerVolume";
-  @SerializedName(SERIALIZED_NAME_SSD_LIMIT_PER_VOLUME)
-  private Long ssdLimitPerVolume;
-
-
-  public static final String SERIALIZED_NAME_SSD_LIMIT_PER_CONTRACT = "ssdLimitPerContract";
-  @SerializedName(SERIALIZED_NAME_SSD_LIMIT_PER_CONTRACT)
-  private Long ssdLimitPerContract;
-
-
-  public static final String SERIALIZED_NAME_SSD_VOLUME_PROVISIONED = "ssdVolumeProvisioned";
-  @SerializedName(SERIALIZED_NAME_SSD_VOLUME_PROVISIONED)
-  private Long ssdVolumeProvisioned;
-
-
-  public static final String SERIALIZED_NAME_DAS_VOLUME_PROVISIONED = "dasVolumeProvisioned";
-  @SerializedName(SERIALIZED_NAME_DAS_VOLUME_PROVISIONED)
-  private Long dasVolumeProvisioned;
-
-
-  public static final String SERIALIZED_NAME_RESERVABLE_IPS = "reservableIps";
-  @SerializedName(SERIALIZED_NAME_RESERVABLE_IPS)
-  private Integer reservableIps;
-
-
-  public static final String SERIALIZED_NAME_RESERVED_IPS_ON_CONTRACT = "reservedIpsOnContract";
-  @SerializedName(SERIALIZED_NAME_RESERVED_IPS_ON_CONTRACT)
-  private Integer reservedIpsOnContract;
-
-
-  public static final String SERIALIZED_NAME_RESERVED_IPS_IN_USE = "reservedIpsInUse";
-  @SerializedName(SERIALIZED_NAME_RESERVED_IPS_IN_USE)
-  private Integer reservedIpsInUse;
 
 
   public static final String SERIALIZED_NAME_K8S_CLUSTER_LIMIT_TOTAL = "k8sClusterLimitTotal";
@@ -121,6 +76,16 @@ public class ResourceLimits {
   private Integer k8sClustersProvisioned;
 
 
+  public static final String SERIALIZED_NAME_NAT_GATEWAY_LIMIT_TOTAL = "natGatewayLimitTotal";
+  @SerializedName(SERIALIZED_NAME_NAT_GATEWAY_LIMIT_TOTAL)
+  private Integer natGatewayLimitTotal;
+
+
+  public static final String SERIALIZED_NAME_NAT_GATEWAY_PROVISIONED = "natGatewayProvisioned";
+  @SerializedName(SERIALIZED_NAME_NAT_GATEWAY_PROVISIONED)
+  private Integer natGatewayProvisioned;
+
+
   public static final String SERIALIZED_NAME_NLB_LIMIT_TOTAL = "nlbLimitTotal";
   @SerializedName(SERIALIZED_NAME_NLB_LIMIT_TOTAL)
   private Integer nlbLimitTotal;
@@ -131,39 +96,51 @@ public class ResourceLimits {
   private Integer nlbProvisioned;
 
 
-  public static final String SERIALIZED_NAME_NAT_GATEWAY_LIMIT_TOTAL = "natGatewayLimitTotal";
-  @SerializedName(SERIALIZED_NAME_NAT_GATEWAY_LIMIT_TOTAL)
-  private Integer natGatewayLimitTotal;
+  public static final String SERIALIZED_NAME_RAM_PER_CONTRACT = "ramPerContract";
+  @SerializedName(SERIALIZED_NAME_RAM_PER_CONTRACT)
+  private Integer ramPerContract;
 
 
-  public static final String SERIALIZED_NAME_NAT_GATEWAY_PROVISIONED = "natGatewayProvisioned";
-  @SerializedName(SERIALIZED_NAME_NAT_GATEWAY_PROVISIONED)
-  private Integer natGatewayProvisioned;
+  public static final String SERIALIZED_NAME_RAM_PER_SERVER = "ramPerServer";
+  @SerializedName(SERIALIZED_NAME_RAM_PER_SERVER)
+  private Integer ramPerServer;
+
+
+  public static final String SERIALIZED_NAME_RAM_PROVISIONED = "ramProvisioned";
+  @SerializedName(SERIALIZED_NAME_RAM_PROVISIONED)
+  private Integer ramProvisioned;
+
+
+  public static final String SERIALIZED_NAME_RESERVABLE_IPS = "reservableIps";
+  @SerializedName(SERIALIZED_NAME_RESERVABLE_IPS)
+  private Integer reservableIps;
+
+
+  public static final String SERIALIZED_NAME_RESERVED_IPS_IN_USE = "reservedIpsInUse";
+  @SerializedName(SERIALIZED_NAME_RESERVED_IPS_IN_USE)
+  private Integer reservedIpsInUse;
+
+
+  public static final String SERIALIZED_NAME_RESERVED_IPS_ON_CONTRACT = "reservedIpsOnContract";
+  @SerializedName(SERIALIZED_NAME_RESERVED_IPS_ON_CONTRACT)
+  private Integer reservedIpsOnContract;
+
+
+  public static final String SERIALIZED_NAME_SSD_LIMIT_PER_CONTRACT = "ssdLimitPerContract";
+  @SerializedName(SERIALIZED_NAME_SSD_LIMIT_PER_CONTRACT)
+  private Long ssdLimitPerContract;
+
+
+  public static final String SERIALIZED_NAME_SSD_LIMIT_PER_VOLUME = "ssdLimitPerVolume";
+  @SerializedName(SERIALIZED_NAME_SSD_LIMIT_PER_VOLUME)
+  private Long ssdLimitPerVolume;
+
+
+  public static final String SERIALIZED_NAME_SSD_VOLUME_PROVISIONED = "ssdVolumeProvisioned";
+  @SerializedName(SERIALIZED_NAME_SSD_VOLUME_PROVISIONED)
+  private Long ssdVolumeProvisioned;
 
   
-
-  public ResourceLimits coresPerServer(Integer coresPerServer) {
-    
-    this.coresPerServer = coresPerServer;
-    return this;
-  }
-
-   /**
-   * The maximum number of cores per server.
-   * @return coresPerServer
-  **/
-  @ApiModelProperty(required = true, value = "The maximum number of cores per server.")
-
-  public Integer getCoresPerServer() {
-    return coresPerServer;
-  }
-
-
-  public void setCoresPerServer(Integer coresPerServer) {
-    this.coresPerServer = coresPerServer;
-  }
-
-
 
   public ResourceLimits coresPerContract(Integer coresPerContract) {
     
@@ -172,10 +149,10 @@ public class ResourceLimits {
   }
 
    /**
-   * The maximum number of cores per contract.
+   * The maximum number of CPU cores per contract.
    * @return coresPerContract
   **/
-  @ApiModelProperty(required = true, value = "The maximum number of cores per contract.")
+  @ApiModelProperty(example = "8", required = true, value = "The maximum number of CPU cores per contract.")
 
   public Integer getCoresPerContract() {
     return coresPerContract;
@@ -188,6 +165,29 @@ public class ResourceLimits {
 
 
 
+  public ResourceLimits coresPerServer(Integer coresPerServer) {
+    
+    this.coresPerServer = coresPerServer;
+    return this;
+  }
+
+   /**
+   * The maximum number of CPU cores per server.
+   * @return coresPerServer
+  **/
+  @ApiModelProperty(example = "4", required = true, value = "The maximum number of CPU cores per server.")
+
+  public Integer getCoresPerServer() {
+    return coresPerServer;
+  }
+
+
+  public void setCoresPerServer(Integer coresPerServer) {
+    this.coresPerServer = coresPerServer;
+  }
+
+
+
   public ResourceLimits coresProvisioned(Integer coresProvisioned) {
     
     this.coresProvisioned = coresProvisioned;
@@ -195,10 +195,10 @@ public class ResourceLimits {
   }
 
    /**
-   * The number of cores provisioned.
+   * The number of CPU cores provisioned.
    * @return coresProvisioned
   **/
-  @ApiModelProperty(required = true, value = "The number of cores provisioned.")
+  @ApiModelProperty(example = "7", required = true, value = "The number of CPU cores provisioned.")
 
   public Integer getCoresProvisioned() {
     return coresProvisioned;
@@ -211,213 +211,6 @@ public class ResourceLimits {
 
 
 
-  public ResourceLimits ramPerServer(Integer ramPerServer) {
-    
-    this.ramPerServer = ramPerServer;
-    return this;
-  }
-
-   /**
-   * The maximum RAM per server.
-   * @return ramPerServer
-  **/
-  @ApiModelProperty(required = true, value = "The maximum RAM per server.")
-
-  public Integer getRamPerServer() {
-    return ramPerServer;
-  }
-
-
-  public void setRamPerServer(Integer ramPerServer) {
-    this.ramPerServer = ramPerServer;
-  }
-
-
-
-  public ResourceLimits ramPerContract(Integer ramPerContract) {
-    
-    this.ramPerContract = ramPerContract;
-    return this;
-  }
-
-   /**
-   * The maximum RAM per contract.
-   * @return ramPerContract
-  **/
-  @ApiModelProperty(required = true, value = "The maximum RAM per contract.")
-
-  public Integer getRamPerContract() {
-    return ramPerContract;
-  }
-
-
-  public void setRamPerContract(Integer ramPerContract) {
-    this.ramPerContract = ramPerContract;
-  }
-
-
-
-  public ResourceLimits ramProvisioned(Integer ramProvisioned) {
-    
-    this.ramProvisioned = ramProvisioned;
-    return this;
-  }
-
-   /**
-   * RAM provisioned.
-   * @return ramProvisioned
-  **/
-  @ApiModelProperty(required = true, value = "RAM provisioned.")
-
-  public Integer getRamProvisioned() {
-    return ramProvisioned;
-  }
-
-
-  public void setRamProvisioned(Integer ramProvisioned) {
-    this.ramProvisioned = ramProvisioned;
-  }
-
-
-
-  public ResourceLimits hddLimitPerVolume(Long hddLimitPerVolume) {
-    
-    this.hddLimitPerVolume = hddLimitPerVolume;
-    return this;
-  }
-
-   /**
-   * HDD limit per volume.
-   * @return hddLimitPerVolume
-  **/
-  @ApiModelProperty(required = true, value = "HDD limit per volume.")
-
-  public Long getHddLimitPerVolume() {
-    return hddLimitPerVolume;
-  }
-
-
-  public void setHddLimitPerVolume(Long hddLimitPerVolume) {
-    this.hddLimitPerVolume = hddLimitPerVolume;
-  }
-
-
-
-  public ResourceLimits hddLimitPerContract(Long hddLimitPerContract) {
-    
-    this.hddLimitPerContract = hddLimitPerContract;
-    return this;
-  }
-
-   /**
-   * HDD limit per contract.
-   * @return hddLimitPerContract
-  **/
-  @ApiModelProperty(required = true, value = "HDD limit per contract.")
-
-  public Long getHddLimitPerContract() {
-    return hddLimitPerContract;
-  }
-
-
-  public void setHddLimitPerContract(Long hddLimitPerContract) {
-    this.hddLimitPerContract = hddLimitPerContract;
-  }
-
-
-
-  public ResourceLimits hddVolumeProvisioned(Long hddVolumeProvisioned) {
-    
-    this.hddVolumeProvisioned = hddVolumeProvisioned;
-    return this;
-  }
-
-   /**
-   * HDD volume provisioned.
-   * @return hddVolumeProvisioned
-  **/
-  @ApiModelProperty(required = true, value = "HDD volume provisioned.")
-
-  public Long getHddVolumeProvisioned() {
-    return hddVolumeProvisioned;
-  }
-
-
-  public void setHddVolumeProvisioned(Long hddVolumeProvisioned) {
-    this.hddVolumeProvisioned = hddVolumeProvisioned;
-  }
-
-
-
-  public ResourceLimits ssdLimitPerVolume(Long ssdLimitPerVolume) {
-    
-    this.ssdLimitPerVolume = ssdLimitPerVolume;
-    return this;
-  }
-
-   /**
-   * SSD limit per volume.
-   * @return ssdLimitPerVolume
-  **/
-  @ApiModelProperty(required = true, value = "SSD limit per volume.")
-
-  public Long getSsdLimitPerVolume() {
-    return ssdLimitPerVolume;
-  }
-
-
-  public void setSsdLimitPerVolume(Long ssdLimitPerVolume) {
-    this.ssdLimitPerVolume = ssdLimitPerVolume;
-  }
-
-
-
-  public ResourceLimits ssdLimitPerContract(Long ssdLimitPerContract) {
-    
-    this.ssdLimitPerContract = ssdLimitPerContract;
-    return this;
-  }
-
-   /**
-   * SSD limit per contract.
-   * @return ssdLimitPerContract
-  **/
-  @ApiModelProperty(required = true, value = "SSD limit per contract.")
-
-  public Long getSsdLimitPerContract() {
-    return ssdLimitPerContract;
-  }
-
-
-  public void setSsdLimitPerContract(Long ssdLimitPerContract) {
-    this.ssdLimitPerContract = ssdLimitPerContract;
-  }
-
-
-
-  public ResourceLimits ssdVolumeProvisioned(Long ssdVolumeProvisioned) {
-    
-    this.ssdVolumeProvisioned = ssdVolumeProvisioned;
-    return this;
-  }
-
-   /**
-   * SSD volume provisioned.
-   * @return ssdVolumeProvisioned
-  **/
-  @ApiModelProperty(required = true, value = "SSD volume provisioned.")
-
-  public Long getSsdVolumeProvisioned() {
-    return ssdVolumeProvisioned;
-  }
-
-
-  public void setSsdVolumeProvisioned(Long ssdVolumeProvisioned) {
-    this.ssdVolumeProvisioned = ssdVolumeProvisioned;
-  }
-
-
-
   public ResourceLimits dasVolumeProvisioned(Long dasVolumeProvisioned) {
     
     this.dasVolumeProvisioned = dasVolumeProvisioned;
@@ -425,10 +218,10 @@ public class ResourceLimits {
   }
 
    /**
-   * DAS (Direct Attached Storage) volume provisioned.
+   * The amount of DAS disk space (in MB) in a Cube server that is currently provisioned.
    * @return dasVolumeProvisioned
   **/
-  @ApiModelProperty(required = true, value = "DAS (Direct Attached Storage) volume provisioned.")
+  @ApiModelProperty(example = "51200", required = true, value = "The amount of DAS disk space (in MB) in a Cube server that is currently provisioned.")
 
   public Long getDasVolumeProvisioned() {
     return dasVolumeProvisioned;
@@ -441,71 +234,71 @@ public class ResourceLimits {
 
 
 
-  public ResourceLimits reservableIps(Integer reservableIps) {
+  public ResourceLimits hddLimitPerContract(Long hddLimitPerContract) {
     
-    this.reservableIps = reservableIps;
+    this.hddLimitPerContract = hddLimitPerContract;
     return this;
   }
 
    /**
-   * Total reservable IP limit for the customer.
-   * @return reservableIps
+   * The maximum amount of disk space (in MB) that can be provided under this contract.
+   * @return hddLimitPerContract
   **/
-  @ApiModelProperty(required = true, value = "Total reservable IP limit for the customer.")
+  @ApiModelProperty(example = "61440", required = true, value = "The maximum amount of disk space (in MB) that can be provided under this contract.")
 
-  public Integer getReservableIps() {
-    return reservableIps;
+  public Long getHddLimitPerContract() {
+    return hddLimitPerContract;
   }
 
 
-  public void setReservableIps(Integer reservableIps) {
-    this.reservableIps = reservableIps;
+  public void setHddLimitPerContract(Long hddLimitPerContract) {
+    this.hddLimitPerContract = hddLimitPerContract;
   }
 
 
 
-  public ResourceLimits reservedIpsOnContract(Integer reservedIpsOnContract) {
+  public ResourceLimits hddLimitPerVolume(Long hddLimitPerVolume) {
     
-    this.reservedIpsOnContract = reservedIpsOnContract;
+    this.hddLimitPerVolume = hddLimitPerVolume;
     return this;
   }
 
    /**
-   * Reserved ips for the contract.
-   * @return reservedIpsOnContract
+   * The maximum size (in MB) of an idividual hard disk volume.
+   * @return hddLimitPerVolume
   **/
-  @ApiModelProperty(required = true, value = "Reserved ips for the contract.")
+  @ApiModelProperty(example = "614400", required = true, value = "The maximum size (in MB) of an idividual hard disk volume.")
 
-  public Integer getReservedIpsOnContract() {
-    return reservedIpsOnContract;
+  public Long getHddLimitPerVolume() {
+    return hddLimitPerVolume;
   }
 
 
-  public void setReservedIpsOnContract(Integer reservedIpsOnContract) {
-    this.reservedIpsOnContract = reservedIpsOnContract;
+  public void setHddLimitPerVolume(Long hddLimitPerVolume) {
+    this.hddLimitPerVolume = hddLimitPerVolume;
   }
 
 
 
-  public ResourceLimits reservedIpsInUse(Integer reservedIpsInUse) {
+  public ResourceLimits hddVolumeProvisioned(Long hddVolumeProvisioned) {
     
-    this.reservedIpsInUse = reservedIpsInUse;
+    this.hddVolumeProvisioned = hddVolumeProvisioned;
     return this;
   }
 
    /**
-   * Reserved ips in use.
-   * @return reservedIpsInUse
+   * The amount of hard disk space (in MB) that is currently provisioned.
+   * @return hddVolumeProvisioned
   **/
-  @ApiModelProperty(required = true, value = "Reserved ips in use.")
+  @ApiModelProperty(example = "10240", required = true, value = "The amount of hard disk space (in MB) that is currently provisioned.")
 
-  public Integer getReservedIpsInUse() {
-    return reservedIpsInUse;
+  public Long getHddVolumeProvisioned() {
+    return hddVolumeProvisioned;
   }
 
 
-  public void setReservedIpsInUse(Integer reservedIpsInUse) {
-    this.reservedIpsInUse = reservedIpsInUse;
+  public void setHddVolumeProvisioned(Long hddVolumeProvisioned) {
+    this.hddVolumeProvisioned = hddVolumeProvisioned;
   }
 
 
@@ -517,10 +310,10 @@ public class ResourceLimits {
   }
 
    /**
-   * K8s clusters total limit.
+   * The maximum number of Kubernetes clusters that can be created under this contract.
    * @return k8sClusterLimitTotal
   **/
-  @ApiModelProperty(required = true, value = "K8s clusters total limit.")
+  @ApiModelProperty(example = "5", required = true, value = "The maximum number of Kubernetes clusters that can be created under this contract.")
 
   public Integer getK8sClusterLimitTotal() {
     return k8sClusterLimitTotal;
@@ -540,10 +333,10 @@ public class ResourceLimits {
   }
 
    /**
-   * K8s clusters provisioned.
+   * The amount of Kubernetes clusters that is currently provisioned.
    * @return k8sClustersProvisioned
   **/
-  @ApiModelProperty(required = true, value = "K8s clusters provisioned.")
+  @ApiModelProperty(example = "0", required = true, value = "The amount of Kubernetes clusters that is currently provisioned.")
 
   public Integer getK8sClustersProvisioned() {
     return k8sClustersProvisioned;
@@ -556,52 +349,6 @@ public class ResourceLimits {
 
 
 
-  public ResourceLimits nlbLimitTotal(Integer nlbLimitTotal) {
-    
-    this.nlbLimitTotal = nlbLimitTotal;
-    return this;
-  }
-
-   /**
-   * NLB total limit.
-   * @return nlbLimitTotal
-  **/
-  @ApiModelProperty(required = true, value = "NLB total limit.")
-
-  public Integer getNlbLimitTotal() {
-    return nlbLimitTotal;
-  }
-
-
-  public void setNlbLimitTotal(Integer nlbLimitTotal) {
-    this.nlbLimitTotal = nlbLimitTotal;
-  }
-
-
-
-  public ResourceLimits nlbProvisioned(Integer nlbProvisioned) {
-    
-    this.nlbProvisioned = nlbProvisioned;
-    return this;
-  }
-
-   /**
-   * NLBs provisioned.
-   * @return nlbProvisioned
-  **/
-  @ApiModelProperty(required = true, value = "NLBs provisioned.")
-
-  public Integer getNlbProvisioned() {
-    return nlbProvisioned;
-  }
-
-
-  public void setNlbProvisioned(Integer nlbProvisioned) {
-    this.nlbProvisioned = nlbProvisioned;
-  }
-
-
-
   public ResourceLimits natGatewayLimitTotal(Integer natGatewayLimitTotal) {
     
     this.natGatewayLimitTotal = natGatewayLimitTotal;
@@ -609,10 +356,10 @@ public class ResourceLimits {
   }
 
    /**
-   * NAT Gateway total limit.
+   * The NAT Gateway total limit.
    * @return natGatewayLimitTotal
   **/
-  @ApiModelProperty(required = true, value = "NAT Gateway total limit.")
+  @ApiModelProperty(example = "5", required = true, value = "The NAT Gateway total limit.")
 
   public Integer getNatGatewayLimitTotal() {
     return natGatewayLimitTotal;
@@ -632,10 +379,10 @@ public class ResourceLimits {
   }
 
    /**
-   * NAT Gateways provisioned.
+   * The NAT Gateways provisioned.
    * @return natGatewayProvisioned
   **/
-  @ApiModelProperty(required = true, value = "NAT Gateways provisioned.")
+  @ApiModelProperty(example = "0", required = true, value = "The NAT Gateways provisioned.")
 
   public Integer getNatGatewayProvisioned() {
     return natGatewayProvisioned;
@@ -644,6 +391,259 @@ public class ResourceLimits {
 
   public void setNatGatewayProvisioned(Integer natGatewayProvisioned) {
     this.natGatewayProvisioned = natGatewayProvisioned;
+  }
+
+
+
+  public ResourceLimits nlbLimitTotal(Integer nlbLimitTotal) {
+    
+    this.nlbLimitTotal = nlbLimitTotal;
+    return this;
+  }
+
+   /**
+   * The NLB total limit.
+   * @return nlbLimitTotal
+  **/
+  @ApiModelProperty(example = "5", required = true, value = "The NLB total limit.")
+
+  public Integer getNlbLimitTotal() {
+    return nlbLimitTotal;
+  }
+
+
+  public void setNlbLimitTotal(Integer nlbLimitTotal) {
+    this.nlbLimitTotal = nlbLimitTotal;
+  }
+
+
+
+  public ResourceLimits nlbProvisioned(Integer nlbProvisioned) {
+    
+    this.nlbProvisioned = nlbProvisioned;
+    return this;
+  }
+
+   /**
+   * The NLBs provisioned.
+   * @return nlbProvisioned
+  **/
+  @ApiModelProperty(example = "0", required = true, value = "The NLBs provisioned.")
+
+  public Integer getNlbProvisioned() {
+    return nlbProvisioned;
+  }
+
+
+  public void setNlbProvisioned(Integer nlbProvisioned) {
+    this.nlbProvisioned = nlbProvisioned;
+  }
+
+
+
+  public ResourceLimits ramPerContract(Integer ramPerContract) {
+    
+    this.ramPerContract = ramPerContract;
+    return this;
+  }
+
+   /**
+   * The maximum amount of RAM (in MB) that can be provisioned under this contract.
+   * @return ramPerContract
+  **/
+  @ApiModelProperty(example = "20480", required = true, value = "The maximum amount of RAM (in MB) that can be provisioned under this contract.")
+
+  public Integer getRamPerContract() {
+    return ramPerContract;
+  }
+
+
+  public void setRamPerContract(Integer ramPerContract) {
+    this.ramPerContract = ramPerContract;
+  }
+
+
+
+  public ResourceLimits ramPerServer(Integer ramPerServer) {
+    
+    this.ramPerServer = ramPerServer;
+    return this;
+  }
+
+   /**
+   * The maximum amount of RAM (in MB) that can be provisioned for a particular server under this contract.
+   * @return ramPerServer
+  **/
+  @ApiModelProperty(example = "20480", required = true, value = "The maximum amount of RAM (in MB) that can be provisioned for a particular server under this contract.")
+
+  public Integer getRamPerServer() {
+    return ramPerServer;
+  }
+
+
+  public void setRamPerServer(Integer ramPerServer) {
+    this.ramPerServer = ramPerServer;
+  }
+
+
+
+  public ResourceLimits ramProvisioned(Integer ramProvisioned) {
+    
+    this.ramProvisioned = ramProvisioned;
+    return this;
+  }
+
+   /**
+   * The amount of RAM (in MB) provisioned under this contract.
+   * @return ramProvisioned
+  **/
+  @ApiModelProperty(example = "14336", required = true, value = "The amount of RAM (in MB) provisioned under this contract.")
+
+  public Integer getRamProvisioned() {
+    return ramProvisioned;
+  }
+
+
+  public void setRamProvisioned(Integer ramProvisioned) {
+    this.ramProvisioned = ramProvisioned;
+  }
+
+
+
+  public ResourceLimits reservableIps(Integer reservableIps) {
+    
+    this.reservableIps = reservableIps;
+    return this;
+  }
+
+   /**
+   * The maximum number of static public IP addresses that can be reserved by this customer across contracts.
+   * @return reservableIps
+  **/
+  @ApiModelProperty(example = "1", required = true, value = "The maximum number of static public IP addresses that can be reserved by this customer across contracts.")
+
+  public Integer getReservableIps() {
+    return reservableIps;
+  }
+
+
+  public void setReservableIps(Integer reservableIps) {
+    this.reservableIps = reservableIps;
+  }
+
+
+
+  public ResourceLimits reservedIpsInUse(Integer reservedIpsInUse) {
+    
+    this.reservedIpsInUse = reservedIpsInUse;
+    return this;
+  }
+
+   /**
+   * The number of static public IP addresses in use.
+   * @return reservedIpsInUse
+  **/
+  @ApiModelProperty(example = "0", required = true, value = "The number of static public IP addresses in use.")
+
+  public Integer getReservedIpsInUse() {
+    return reservedIpsInUse;
+  }
+
+
+  public void setReservedIpsInUse(Integer reservedIpsInUse) {
+    this.reservedIpsInUse = reservedIpsInUse;
+  }
+
+
+
+  public ResourceLimits reservedIpsOnContract(Integer reservedIpsOnContract) {
+    
+    this.reservedIpsOnContract = reservedIpsOnContract;
+    return this;
+  }
+
+   /**
+   * The maximum number of static public IP addresses that can be reserved for this contract.
+   * @return reservedIpsOnContract
+  **/
+  @ApiModelProperty(example = "1", required = true, value = "The maximum number of static public IP addresses that can be reserved for this contract.")
+
+  public Integer getReservedIpsOnContract() {
+    return reservedIpsOnContract;
+  }
+
+
+  public void setReservedIpsOnContract(Integer reservedIpsOnContract) {
+    this.reservedIpsOnContract = reservedIpsOnContract;
+  }
+
+
+
+  public ResourceLimits ssdLimitPerContract(Long ssdLimitPerContract) {
+    
+    this.ssdLimitPerContract = ssdLimitPerContract;
+    return this;
+  }
+
+   /**
+   * The maximum amount of solid state disk space (in MB) that can be provisioned under this contract.
+   * @return ssdLimitPerContract
+  **/
+  @ApiModelProperty(example = "614400", required = true, value = "The maximum amount of solid state disk space (in MB) that can be provisioned under this contract.")
+
+  public Long getSsdLimitPerContract() {
+    return ssdLimitPerContract;
+  }
+
+
+  public void setSsdLimitPerContract(Long ssdLimitPerContract) {
+    this.ssdLimitPerContract = ssdLimitPerContract;
+  }
+
+
+
+  public ResourceLimits ssdLimitPerVolume(Long ssdLimitPerVolume) {
+    
+    this.ssdLimitPerVolume = ssdLimitPerVolume;
+    return this;
+  }
+
+   /**
+   * The maximum size (in MB) of an individual solid state disk volume.
+   * @return ssdLimitPerVolume
+  **/
+  @ApiModelProperty(example = "614400", required = true, value = "The maximum size (in MB) of an individual solid state disk volume.")
+
+  public Long getSsdLimitPerVolume() {
+    return ssdLimitPerVolume;
+  }
+
+
+  public void setSsdLimitPerVolume(Long ssdLimitPerVolume) {
+    this.ssdLimitPerVolume = ssdLimitPerVolume;
+  }
+
+
+
+  public ResourceLimits ssdVolumeProvisioned(Long ssdVolumeProvisioned) {
+    
+    this.ssdVolumeProvisioned = ssdVolumeProvisioned;
+    return this;
+  }
+
+   /**
+   * The amount of solid state disk space (in MB) that is currently provisioned.
+   * @return ssdVolumeProvisioned
+  **/
+  @ApiModelProperty(example = "204800", required = true, value = "The amount of solid state disk space (in MB) that is currently provisioned.")
+
+  public Long getSsdVolumeProvisioned() {
+    return ssdVolumeProvisioned;
+  }
+
+
+  public void setSsdVolumeProvisioned(Long ssdVolumeProvisioned) {
+    this.ssdVolumeProvisioned = ssdVolumeProvisioned;
   }
 
 
@@ -656,7 +656,7 @@ public class ResourceLimits {
       return false;
     }
     ResourceLimits resourceLimits = (ResourceLimits) o;
-    return Objects.equals(this.coresPerServer, resourceLimits.coresPerServer) && Objects.equals(this.coresPerContract, resourceLimits.coresPerContract) && Objects.equals(this.coresProvisioned, resourceLimits.coresProvisioned) && Objects.equals(this.ramPerServer, resourceLimits.ramPerServer) && Objects.equals(this.ramPerContract, resourceLimits.ramPerContract) && Objects.equals(this.ramProvisioned, resourceLimits.ramProvisioned) && Objects.equals(this.hddLimitPerVolume, resourceLimits.hddLimitPerVolume) && Objects.equals(this.hddLimitPerContract, resourceLimits.hddLimitPerContract) && Objects.equals(this.hddVolumeProvisioned, resourceLimits.hddVolumeProvisioned) && Objects.equals(this.ssdLimitPerVolume, resourceLimits.ssdLimitPerVolume) && Objects.equals(this.ssdLimitPerContract, resourceLimits.ssdLimitPerContract) && Objects.equals(this.ssdVolumeProvisioned, resourceLimits.ssdVolumeProvisioned) && Objects.equals(this.dasVolumeProvisioned, resourceLimits.dasVolumeProvisioned) && Objects.equals(this.reservableIps, resourceLimits.reservableIps) && Objects.equals(this.reservedIpsOnContract, resourceLimits.reservedIpsOnContract) && Objects.equals(this.reservedIpsInUse, resourceLimits.reservedIpsInUse) && Objects.equals(this.k8sClusterLimitTotal, resourceLimits.k8sClusterLimitTotal) && Objects.equals(this.k8sClustersProvisioned, resourceLimits.k8sClustersProvisioned) && Objects.equals(this.nlbLimitTotal, resourceLimits.nlbLimitTotal) && Objects.equals(this.nlbProvisioned, resourceLimits.nlbProvisioned) && Objects.equals(this.natGatewayLimitTotal, resourceLimits.natGatewayLimitTotal) && Objects.equals(this.natGatewayProvisioned, resourceLimits.natGatewayProvisioned);
+    return Objects.equals(this.coresPerContract, resourceLimits.coresPerContract) && Objects.equals(this.coresPerServer, resourceLimits.coresPerServer) && Objects.equals(this.coresProvisioned, resourceLimits.coresProvisioned) && Objects.equals(this.dasVolumeProvisioned, resourceLimits.dasVolumeProvisioned) && Objects.equals(this.hddLimitPerContract, resourceLimits.hddLimitPerContract) && Objects.equals(this.hddLimitPerVolume, resourceLimits.hddLimitPerVolume) && Objects.equals(this.hddVolumeProvisioned, resourceLimits.hddVolumeProvisioned) && Objects.equals(this.k8sClusterLimitTotal, resourceLimits.k8sClusterLimitTotal) && Objects.equals(this.k8sClustersProvisioned, resourceLimits.k8sClustersProvisioned) && Objects.equals(this.natGatewayLimitTotal, resourceLimits.natGatewayLimitTotal) && Objects.equals(this.natGatewayProvisioned, resourceLimits.natGatewayProvisioned) && Objects.equals(this.nlbLimitTotal, resourceLimits.nlbLimitTotal) && Objects.equals(this.nlbProvisioned, resourceLimits.nlbProvisioned) && Objects.equals(this.ramPerContract, resourceLimits.ramPerContract) && Objects.equals(this.ramPerServer, resourceLimits.ramPerServer) && Objects.equals(this.ramProvisioned, resourceLimits.ramProvisioned) && Objects.equals(this.reservableIps, resourceLimits.reservableIps) && Objects.equals(this.reservedIpsInUse, resourceLimits.reservedIpsInUse) && Objects.equals(this.reservedIpsOnContract, resourceLimits.reservedIpsOnContract) && Objects.equals(this.ssdLimitPerContract, resourceLimits.ssdLimitPerContract) && Objects.equals(this.ssdLimitPerVolume, resourceLimits.ssdLimitPerVolume) && Objects.equals(this.ssdVolumeProvisioned, resourceLimits.ssdVolumeProvisioned);
   }
 
 
@@ -667,49 +667,49 @@ public class ResourceLimits {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResourceLimits {\n");
     
-    sb.append("    coresPerServer: ").append(toIndentedString(coresPerServer)).append("\n");
-
     sb.append("    coresPerContract: ").append(toIndentedString(coresPerContract)).append("\n");
+
+    sb.append("    coresPerServer: ").append(toIndentedString(coresPerServer)).append("\n");
 
     sb.append("    coresProvisioned: ").append(toIndentedString(coresProvisioned)).append("\n");
 
-    sb.append("    ramPerServer: ").append(toIndentedString(ramPerServer)).append("\n");
-
-    sb.append("    ramPerContract: ").append(toIndentedString(ramPerContract)).append("\n");
-
-    sb.append("    ramProvisioned: ").append(toIndentedString(ramProvisioned)).append("\n");
-
-    sb.append("    hddLimitPerVolume: ").append(toIndentedString(hddLimitPerVolume)).append("\n");
+    sb.append("    dasVolumeProvisioned: ").append(toIndentedString(dasVolumeProvisioned)).append("\n");
 
     sb.append("    hddLimitPerContract: ").append(toIndentedString(hddLimitPerContract)).append("\n");
 
+    sb.append("    hddLimitPerVolume: ").append(toIndentedString(hddLimitPerVolume)).append("\n");
+
     sb.append("    hddVolumeProvisioned: ").append(toIndentedString(hddVolumeProvisioned)).append("\n");
-
-    sb.append("    ssdLimitPerVolume: ").append(toIndentedString(ssdLimitPerVolume)).append("\n");
-
-    sb.append("    ssdLimitPerContract: ").append(toIndentedString(ssdLimitPerContract)).append("\n");
-
-    sb.append("    ssdVolumeProvisioned: ").append(toIndentedString(ssdVolumeProvisioned)).append("\n");
-
-    sb.append("    dasVolumeProvisioned: ").append(toIndentedString(dasVolumeProvisioned)).append("\n");
-
-    sb.append("    reservableIps: ").append(toIndentedString(reservableIps)).append("\n");
-
-    sb.append("    reservedIpsOnContract: ").append(toIndentedString(reservedIpsOnContract)).append("\n");
-
-    sb.append("    reservedIpsInUse: ").append(toIndentedString(reservedIpsInUse)).append("\n");
 
     sb.append("    k8sClusterLimitTotal: ").append(toIndentedString(k8sClusterLimitTotal)).append("\n");
 
     sb.append("    k8sClustersProvisioned: ").append(toIndentedString(k8sClustersProvisioned)).append("\n");
 
+    sb.append("    natGatewayLimitTotal: ").append(toIndentedString(natGatewayLimitTotal)).append("\n");
+
+    sb.append("    natGatewayProvisioned: ").append(toIndentedString(natGatewayProvisioned)).append("\n");
+
     sb.append("    nlbLimitTotal: ").append(toIndentedString(nlbLimitTotal)).append("\n");
 
     sb.append("    nlbProvisioned: ").append(toIndentedString(nlbProvisioned)).append("\n");
 
-    sb.append("    natGatewayLimitTotal: ").append(toIndentedString(natGatewayLimitTotal)).append("\n");
+    sb.append("    ramPerContract: ").append(toIndentedString(ramPerContract)).append("\n");
 
-    sb.append("    natGatewayProvisioned: ").append(toIndentedString(natGatewayProvisioned)).append("\n");
+    sb.append("    ramPerServer: ").append(toIndentedString(ramPerServer)).append("\n");
+
+    sb.append("    ramProvisioned: ").append(toIndentedString(ramProvisioned)).append("\n");
+
+    sb.append("    reservableIps: ").append(toIndentedString(reservableIps)).append("\n");
+
+    sb.append("    reservedIpsInUse: ").append(toIndentedString(reservedIpsInUse)).append("\n");
+
+    sb.append("    reservedIpsOnContract: ").append(toIndentedString(reservedIpsOnContract)).append("\n");
+
+    sb.append("    ssdLimitPerContract: ").append(toIndentedString(ssdLimitPerContract)).append("\n");
+
+    sb.append("    ssdLimitPerVolume: ").append(toIndentedString(ssdLimitPerVolume)).append("\n");
+
+    sb.append("    ssdVolumeProvisioned: ").append(toIndentedString(ssdVolumeProvisioned)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -725,5 +725,38 @@ public class ResourceLimits {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// ResourceLimits instantiates a new ResourceLimits object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public ResourceLimits(Integer CoresPerContract, Integer CoresPerServer, Integer CoresProvisioned, Long DasVolumeProvisioned, Long HddLimitPerContract, Long HddLimitPerVolume, Long HddVolumeProvisioned, Integer K8sClusterLimitTotal, Integer K8sClustersProvisioned, Integer NatGatewayLimitTotal, Integer NatGatewayProvisioned, Integer NlbLimitTotal, Integer NlbProvisioned, Integer RamPerContract, Integer RamPerServer, Integer RamProvisioned, Integer ReservableIps, Integer ReservedIpsInUse, Integer ReservedIpsOnContract, Long SsdLimitPerContract, Long SsdLimitPerVolume, Long SsdVolumeProvisioned) {
+
+	this.coresPerContract = CoresPerContract;
+	this.coresPerServer = CoresPerServer;
+	this.coresProvisioned = CoresProvisioned;
+	this.dasVolumeProvisioned = DasVolumeProvisioned;
+	this.hddLimitPerContract = HddLimitPerContract;
+	this.hddLimitPerVolume = HddLimitPerVolume;
+	this.hddVolumeProvisioned = HddVolumeProvisioned;
+	this.k8sClusterLimitTotal = K8sClusterLimitTotal;
+	this.k8sClustersProvisioned = K8sClustersProvisioned;
+	this.natGatewayLimitTotal = NatGatewayLimitTotal;
+	this.natGatewayProvisioned = NatGatewayProvisioned;
+	this.nlbLimitTotal = NlbLimitTotal;
+	this.nlbProvisioned = NlbProvisioned;
+	this.ramPerContract = RamPerContract;
+	this.ramPerServer = RamPerServer;
+	this.ramProvisioned = RamProvisioned;
+	this.reservableIps = ReservableIps;
+	this.reservedIpsInUse = ReservedIpsInUse;
+	this.reservedIpsOnContract = ReservedIpsOnContract;
+	this.ssdLimitPerContract = SsdLimitPerContract;
+	this.ssdLimitPerVolume = SsdLimitPerVolume;
+	this.ssdVolumeProvisioned = SsdVolumeProvisioned;
 }
 
+public ResourceLimits() {
+}
+
+}

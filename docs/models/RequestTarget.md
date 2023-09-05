@@ -6,8 +6,8 @@
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **target** | [**ResourceReference**](ResourceReference.md) |  |  [optional] |
 | **status** | [**StatusEnum**](#StatusEnum) |  |  [optional] |
+| **target** | [**ResourceReference**](ResourceReference.md) |  |  [optional] |
 
 
 

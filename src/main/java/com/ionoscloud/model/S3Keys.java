@@ -32,30 +32,48 @@ import java.util.List;
 /**
  * S3Keys
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class S3Keys {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
-
-
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
   private List<S3Key> items = null;
 
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
+
   
+
+   /**
+   * URL to the object representation (absolute path).
+   * @return href
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "https://<API_HOST>/cloudapi/v6/um/users/9b1b4c62-1466-11e7-87d3-d7bb7dac0087/s3keys", value = "URL to the object representation (absolute path).")
+
+  public URI getHref() {
+    return href;
+  }
+
+
+  public void setHref(URI href) {
+    this.href = href;
+  }
+
+
 
    /**
    * The resource&#39;s unique identifier.
@@ -71,6 +89,24 @@ public class S3Keys {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+
+
+   /**
+   * Array of items in the collection.
+   * @return items
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Array of items in the collection.")
+
+  public List<S3Key> getItems() {
+    return items;
+  }
+
+
+  public void setItems(List<S3Key> items) {
+    this.items = items;
   }
 
 
@@ -98,42 +134,6 @@ public class S3Keys {
   }
 
 
-
-   /**
-   * URL to the object representation (absolute path).
-   * @return href
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "https://<API_HOST>/cloudapi/v6/um/users/9b1b4c62-1466-11e7-87d3-d7bb7dac0087/s3keys", value = "URL to the object representation (absolute path).")
-
-  public URI getHref() {
-    return href;
-  }
-
-
-  public void setHref(URI href) {
-    this.href = href;
-  }
-
-
-
-   /**
-   * Array of items in the collection.
-   * @return items
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of items in the collection.")
-
-  public List<S3Key> getItems() {
-    return items;
-  }
-
-
-  public void setItems(List<S3Key> items) {
-    this.items = items;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -143,7 +143,7 @@ public class S3Keys {
       return false;
     }
     S3Keys s3Keys = (S3Keys) o;
-    return Objects.equals(this.id, s3Keys.id) && Objects.equals(this.type, s3Keys.type) && Objects.equals(this.href, s3Keys.href) && Objects.equals(this.items, s3Keys.items);
+    return Objects.equals(this.href, s3Keys.href) && Objects.equals(this.id, s3Keys.id) && Objects.equals(this.items, s3Keys.items) && Objects.equals(this.type, s3Keys.type);
   }
 
 
@@ -154,13 +154,13 @@ public class S3Keys {
     StringBuilder sb = new StringBuilder();
     sb.append("class S3Keys {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -176,5 +176,14 @@ public class S3Keys {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// S3Keys instantiates a new S3Keys object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public S3Keys() {
+
 }
 
+
+}

@@ -31,13 +31,13 @@ import java.util.List;
 /**
  * PrivateCrossConnectProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class PrivateCrossConnectProperties {
   
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  public static final String SERIALIZED_NAME_CONNECTABLE_DATACENTERS = "connectableDatacenters";
+  @SerializedName(SERIALIZED_NAME_CONNECTABLE_DATACENTERS)
+  private List<ConnectableDatacenter> connectableDatacenters = null;
 
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
@@ -45,37 +45,31 @@ public class PrivateCrossConnectProperties {
   private String description;
 
 
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
+
+
   public static final String SERIALIZED_NAME_PEERS = "peers";
   @SerializedName(SERIALIZED_NAME_PEERS)
   private List<Peer> peers = null;
 
-
-  public static final String SERIALIZED_NAME_CONNECTABLE_DATACENTERS = "connectableDatacenters";
-  @SerializedName(SERIALIZED_NAME_CONNECTABLE_DATACENTERS)
-  private List<ConnectableDatacenter> connectableDatacenters = null;
-
   
 
-  public PrivateCrossConnectProperties name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
    /**
-   * The name of the  resource.
-   * @return name
+   * Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect.
+   * @return connectableDatacenters
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
+  @ApiModelProperty(example = "{ \"connectableDatacenters\": [ { \"id\": \"<dc-id>\", \"name\": \"<dc-name>\", \"location\": \"<de/fra>\"} ] }", value = "Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect.")
 
-  public String getName() {
-    return name;
+  public List<ConnectableDatacenter> getConnectableDatacenters() {
+    return connectableDatacenters;
   }
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setConnectableDatacenters(List<ConnectableDatacenter> connectableDatacenters) {
+    this.connectableDatacenters = connectableDatacenters;
   }
 
 
@@ -104,6 +98,30 @@ public class PrivateCrossConnectProperties {
 
 
 
+  public PrivateCrossConnectProperties name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * The name of the  resource.
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+
    /**
    * Read-Only attribute. Lists LAN&#39;s joined to this private Cross-Connect.
    * @return peers
@@ -121,24 +139,6 @@ public class PrivateCrossConnectProperties {
   }
 
 
-
-   /**
-   * Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect.
-   * @return connectableDatacenters
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "{ \"connectableDatacenters\": [ { \"id\": \"<dc-id>\", \"name\": \"<dc-name>\", \"location\": \"<de/fra>\"} ] }", value = "Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect.")
-
-  public List<ConnectableDatacenter> getConnectableDatacenters() {
-    return connectableDatacenters;
-  }
-
-
-  public void setConnectableDatacenters(List<ConnectableDatacenter> connectableDatacenters) {
-    this.connectableDatacenters = connectableDatacenters;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -148,7 +148,7 @@ public class PrivateCrossConnectProperties {
       return false;
     }
     PrivateCrossConnectProperties privateCrossConnectProperties = (PrivateCrossConnectProperties) o;
-    return Objects.equals(this.name, privateCrossConnectProperties.name) && Objects.equals(this.description, privateCrossConnectProperties.description) && Objects.equals(this.peers, privateCrossConnectProperties.peers) && Objects.equals(this.connectableDatacenters, privateCrossConnectProperties.connectableDatacenters);
+    return Objects.equals(this.connectableDatacenters, privateCrossConnectProperties.connectableDatacenters) && Objects.equals(this.description, privateCrossConnectProperties.description) && Objects.equals(this.name, privateCrossConnectProperties.name) && Objects.equals(this.peers, privateCrossConnectProperties.peers);
   }
 
 
@@ -159,13 +159,13 @@ public class PrivateCrossConnectProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class PrivateCrossConnectProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    connectableDatacenters: ").append(toIndentedString(connectableDatacenters)).append("\n");
 
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
 
-    sb.append("    peers: ").append(toIndentedString(peers)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
 
-    sb.append("    connectableDatacenters: ").append(toIndentedString(connectableDatacenters)).append("\n");
+    sb.append("    peers: ").append(toIndentedString(peers)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -181,5 +181,14 @@ public class PrivateCrossConnectProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// PrivateCrossConnectProperties instantiates a new PrivateCrossConnectProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public PrivateCrossConnectProperties() {
+
 }
 
+
+}

@@ -27,44 +27,20 @@ import java.io.IOException;
 /**
  * TargetPortRange
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class TargetPortRange {
   
-  public static final String SERIALIZED_NAME_START = "start";
-  @SerializedName(SERIALIZED_NAME_START)
-  private Integer start;
-
-
   public static final String SERIALIZED_NAME_END = "end";
   @SerializedName(SERIALIZED_NAME_END)
   private Integer end;
 
+
+  public static final String SERIALIZED_NAME_START = "start";
+  @SerializedName(SERIALIZED_NAME_START)
+  private Integer start;
+
   
-
-  public TargetPortRange start(Integer start) {
-    
-    this.start = start;
-    return this;
-  }
-
-   /**
-   * Target port range start associated with the NAT Gateway rule.
-   * @return start
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "10000", value = "Target port range start associated with the NAT Gateway rule.")
-
-  public Integer getStart() {
-    return start;
-  }
-
-
-  public void setStart(Integer start) {
-    this.start = start;
-  }
-
-
 
   public TargetPortRange end(Integer end) {
     
@@ -89,6 +65,30 @@ public class TargetPortRange {
   }
 
 
+
+  public TargetPortRange start(Integer start) {
+    
+    this.start = start;
+    return this;
+  }
+
+   /**
+   * Target port range start associated with the NAT Gateway rule.
+   * @return start
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "10000", value = "Target port range start associated with the NAT Gateway rule.")
+
+  public Integer getStart() {
+    return start;
+  }
+
+
+  public void setStart(Integer start) {
+    this.start = start;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -98,7 +98,7 @@ public class TargetPortRange {
       return false;
     }
     TargetPortRange targetPortRange = (TargetPortRange) o;
-    return Objects.equals(this.start, targetPortRange.start) && Objects.equals(this.end, targetPortRange.end);
+    return Objects.equals(this.end, targetPortRange.end) && Objects.equals(this.start, targetPortRange.start);
   }
 
 
@@ -109,9 +109,9 @@ public class TargetPortRange {
     StringBuilder sb = new StringBuilder();
     sb.append("class TargetPortRange {\n");
     
-    sb.append("    start: ").append(toIndentedString(start)).append("\n");
-
     sb.append("    end: ").append(toIndentedString(end)).append("\n");
+
+    sb.append("    start: ").append(toIndentedString(start)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -127,5 +127,14 @@ public class TargetPortRange {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// TargetPortRange instantiates a new TargetPortRange object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public TargetPortRange() {
+
 }
 
+
+}

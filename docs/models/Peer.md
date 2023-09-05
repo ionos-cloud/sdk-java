@@ -6,10 +6,10 @@
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **id** | **String** |  |  [optional] |
-| **name** | **String** |  |  [optional] |
 | **datacenterId** | **String** |  |  [optional] |
 | **datacenterName** | **String** |  |  [optional] |
+| **id** | **String** |  |  [optional] |
 | **location** | **String** |  |  [optional] |
+| **name** | **String** |  |  [optional] |
 
 

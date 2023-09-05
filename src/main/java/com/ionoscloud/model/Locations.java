@@ -32,30 +32,48 @@ import java.util.List;
 /**
  * Locations
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class Locations {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
-
-
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
   private List<Location> items = null;
 
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
+
   
+
+   /**
+   * URL to the object representation (absolute path).
+   * @return href
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "https://api.ionos.com/cloudapi/v6/locations", value = "URL to the object representation (absolute path).")
+
+  public URI getHref() {
+    return href;
+  }
+
+
+  public void setHref(URI href) {
+    this.href = href;
+  }
+
+
 
    /**
    * The resource&#39;s unique identifier.
@@ -71,6 +89,24 @@ public class Locations {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+
+
+   /**
+   * Array of items in the collection.
+   * @return items
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Array of items in the collection.")
+
+  public List<Location> getItems() {
+    return items;
+  }
+
+
+  public void setItems(List<Location> items) {
+    this.items = items;
   }
 
 
@@ -98,42 +134,6 @@ public class Locations {
   }
 
 
-
-   /**
-   * URL to the object representation (absolute path).
-   * @return href
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path).")
-
-  public URI getHref() {
-    return href;
-  }
-
-
-  public void setHref(URI href) {
-    this.href = href;
-  }
-
-
-
-   /**
-   * Array of items in the collection.
-   * @return items
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of items in the collection.")
-
-  public List<Location> getItems() {
-    return items;
-  }
-
-
-  public void setItems(List<Location> items) {
-    this.items = items;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -143,7 +143,7 @@ public class Locations {
       return false;
     }
     Locations locations = (Locations) o;
-    return Objects.equals(this.id, locations.id) && Objects.equals(this.type, locations.type) && Objects.equals(this.href, locations.href) && Objects.equals(this.items, locations.items);
+    return Objects.equals(this.href, locations.href) && Objects.equals(this.id, locations.id) && Objects.equals(this.items, locations.items) && Objects.equals(this.type, locations.type);
   }
 
 
@@ -154,13 +154,13 @@ public class Locations {
     StringBuilder sb = new StringBuilder();
     sb.append("class Locations {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -176,5 +176,14 @@ public class Locations {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// Locations instantiates a new Locations object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public Locations() {
+
 }
 
+
+}

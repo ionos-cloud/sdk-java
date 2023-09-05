@@ -132,8 +132,8 @@ public class DefaultApi {
     }
 
     /**
-     * Display API information
-     * Display API information
+     * Get API information
+     * Retrieves the API information such as API version.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -155,8 +155,8 @@ public class DefaultApi {
     }
 
     /**
-     * Display API information
-     * Display API information
+     * Get API information
+     * Retrieves the API information such as API version.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -179,8 +179,8 @@ public class DefaultApi {
     }
 
     /**
-     * Display API information (asynchronously)
-     * Display API information
+     * Get API information (asynchronously)
+     * Retrieves the API information such as API version.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -340,8 +340,8 @@ public class DefaultApi {
     }
 
     /**
-     * Display API information
-     * Display API information
+     * Get API information
+     * Retrieves the API information such as API version.
      * @return APIapiInfoGetRequest
      * @http.response.details
      <table summary="Response Details" border="1">

@@ -1373,8 +1373,8 @@ public class NetworkInterfacesApi {
     }
 
     /**
-     * Create NICs
-     * Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
+     * Create a NIC
+     * Adds a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nic The NIC to create. (required)
@@ -1397,8 +1397,8 @@ public class NetworkInterfacesApi {
     }
 
     /**
-     * Create NICs
-     * Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
+     * Create a NIC
+     * Adds a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nic The NIC to create. (required)
@@ -1422,8 +1422,8 @@ public class NetworkInterfacesApi {
     }
 
     /**
-     * Create NICs (asynchronously)
-     * Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
+     * Create a NIC (asynchronously)
+     * Adds a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nic The NIC to create. (required)
@@ -1558,8 +1558,8 @@ public class NetworkInterfacesApi {
     }
 
     /**
-     * Create NICs
-     * Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
+     * Create a NIC
+     * Adds a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nic The NIC to create. (required)

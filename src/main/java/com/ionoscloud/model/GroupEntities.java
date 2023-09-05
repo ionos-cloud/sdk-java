@@ -29,44 +29,20 @@ import java.io.IOException;
 /**
  * GroupEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class GroupEntities {
   
-  public static final String SERIALIZED_NAME_USERS = "users";
-  @SerializedName(SERIALIZED_NAME_USERS)
-  private GroupMembers users;
-
-
   public static final String SERIALIZED_NAME_RESOURCES = "resources";
   @SerializedName(SERIALIZED_NAME_RESOURCES)
   private ResourceGroups resources;
 
+
+  public static final String SERIALIZED_NAME_USERS = "users";
+  @SerializedName(SERIALIZED_NAME_USERS)
+  private GroupMembers users;
+
   
-
-  public GroupEntities users(GroupMembers users) {
-    
-    this.users = users;
-    return this;
-  }
-
-   /**
-   * Get users
-   * @return users
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public GroupMembers getUsers() {
-    return users;
-  }
-
-
-  public void setUsers(GroupMembers users) {
-    this.users = users;
-  }
-
-
 
   public GroupEntities resources(ResourceGroups resources) {
     
@@ -91,6 +67,30 @@ public class GroupEntities {
   }
 
 
+
+  public GroupEntities users(GroupMembers users) {
+    
+    this.users = users;
+    return this;
+  }
+
+   /**
+   * Get users
+   * @return users
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public GroupMembers getUsers() {
+    return users;
+  }
+
+
+  public void setUsers(GroupMembers users) {
+    this.users = users;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -100,7 +100,7 @@ public class GroupEntities {
       return false;
     }
     GroupEntities groupEntities = (GroupEntities) o;
-    return Objects.equals(this.users, groupEntities.users) && Objects.equals(this.resources, groupEntities.resources);
+    return Objects.equals(this.resources, groupEntities.resources) && Objects.equals(this.users, groupEntities.users);
   }
 
 
@@ -111,9 +111,9 @@ public class GroupEntities {
     StringBuilder sb = new StringBuilder();
     sb.append("class GroupEntities {\n");
     
-    sb.append("    users: ").append(toIndentedString(users)).append("\n");
-
     sb.append("    resources: ").append(toIndentedString(resources)).append("\n");
+
+    sb.append("    users: ").append(toIndentedString(users)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -129,5 +129,14 @@ public class GroupEntities {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// GroupEntities instantiates a new GroupEntities object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public GroupEntities() {
+
 }
 
+
+}

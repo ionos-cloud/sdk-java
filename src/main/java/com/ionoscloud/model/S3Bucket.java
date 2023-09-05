@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * S3Bucket
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class S3Bucket {
   
@@ -44,10 +44,10 @@ public class S3Bucket {
   }
 
    /**
-   * Name of the S3 bucket
+   * The name of the S3 bucket.
    * @return name
   **/
-  @ApiModelProperty(required = true, value = "Name of the S3 bucket")
+  @ApiModelProperty(example = "My S3 Buckets", required = true, value = "The name of the S3 bucket.")
 
   public String getName() {
     return name;
@@ -95,5 +95,17 @@ public class S3Bucket {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// S3Bucket instantiates a new S3Bucket object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public S3Bucket(String Name) {
+
+	this.name = Name;
 }
 
+public S3Bucket() {
+}
+
+}

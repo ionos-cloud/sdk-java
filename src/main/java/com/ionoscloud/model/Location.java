@@ -31,23 +31,18 @@ import java.net.URI;
 /**
  * Location
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class Location {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
-
-
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
@@ -59,7 +54,30 @@ public class Location {
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private LocationProperties properties;
 
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
+
   
+
+   /**
+   * URL to the object representation (absolute path).
+   * @return href
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "https://api.ionos.com/cloudapi/v6/locations/de", value = "URL to the object representation (absolute path).")
+
+  public URI getHref() {
+    return href;
+  }
+
+
+  public void setHref(URI href) {
+    this.href = href;
+  }
+
+
 
    /**
    * The resource&#39;s unique identifier.
@@ -75,48 +93,6 @@ public class Location {
 
   public void setId(String id) {
     this.id = id;
-  }
-
-
-
-  public Location type(Type type) {
-    
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * The type of object that has been created.
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"location\"", value = "The type of object that has been created.")
-
-  public Type getType() {
-    return type;
-  }
-
-
-  public void setType(Type type) {
-    this.type = type;
-  }
-
-
-
-   /**
-   * URL to the object representation (absolute path).
-   * @return href
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path).")
-
-  public URI getHref() {
-    return href;
-  }
-
-
-  public void setHref(URI href) {
-    this.href = href;
   }
 
 
@@ -167,6 +143,30 @@ public class Location {
   }
 
 
+
+  public Location type(Type type) {
+    
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * The type of object that has been created.
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "\"location\"", value = "The type of object that has been created.")
+
+  public Type getType() {
+    return type;
+  }
+
+
+  public void setType(Type type) {
+    this.type = type;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -176,7 +176,7 @@ public class Location {
       return false;
     }
     Location location = (Location) o;
-    return Objects.equals(this.id, location.id) && Objects.equals(this.type, location.type) && Objects.equals(this.href, location.href) && Objects.equals(this.metadata, location.metadata) && Objects.equals(this.properties, location.properties);
+    return Objects.equals(this.href, location.href) && Objects.equals(this.id, location.id) && Objects.equals(this.metadata, location.metadata) && Objects.equals(this.properties, location.properties) && Objects.equals(this.type, location.type);
   }
 
 
@@ -187,15 +187,15 @@ public class Location {
     StringBuilder sb = new StringBuilder();
     sb.append("class Location {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
 
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
 
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -211,5 +211,17 @@ public class Location {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// Location instantiates a new Location object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public Location(LocationProperties Properties) {
+
+	this.properties = Properties;
 }
 
+public Location() {
+}
+
+}

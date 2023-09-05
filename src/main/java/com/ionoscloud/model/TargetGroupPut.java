@@ -30,30 +30,48 @@ import java.net.URI;
 /**
  * TargetGroupPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class TargetGroupPut {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
-
-
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
 
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private TargetGroupProperties properties;
 
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
+
   
+
+   /**
+   * The URL to the object representation (absolute path).
+   * @return href
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "<RESOURCE-URI>", value = "The URL to the object representation (absolute path).")
+
+  public URI getHref() {
+    return href;
+  }
+
+
+  public void setHref(URI href) {
+    this.href = href;
+  }
+
+
 
    /**
    * The resource&#39;s unique identifier.
@@ -69,6 +87,29 @@ public class TargetGroupPut {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+
+
+  public TargetGroupPut properties(TargetGroupProperties properties) {
+    
+    this.properties = properties;
+    return this;
+  }
+
+   /**
+   * Get properties
+   * @return properties
+  **/
+  @ApiModelProperty(required = true, value = "")
+
+  public TargetGroupProperties getProperties() {
+    return properties;
+  }
+
+
+  public void setProperties(TargetGroupProperties properties) {
+    this.properties = properties;
   }
 
 
@@ -96,47 +137,6 @@ public class TargetGroupPut {
   }
 
 
-
-   /**
-   * URL to the object representation (absolute path).
-   * @return href
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path).")
-
-  public URI getHref() {
-    return href;
-  }
-
-
-  public void setHref(URI href) {
-    this.href = href;
-  }
-
-
-
-  public TargetGroupPut properties(TargetGroupProperties properties) {
-    
-    this.properties = properties;
-    return this;
-  }
-
-   /**
-   * Get properties
-   * @return properties
-  **/
-  @ApiModelProperty(required = true, value = "")
-
-  public TargetGroupProperties getProperties() {
-    return properties;
-  }
-
-
-  public void setProperties(TargetGroupProperties properties) {
-    this.properties = properties;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -146,7 +146,7 @@ public class TargetGroupPut {
       return false;
     }
     TargetGroupPut targetGroupPut = (TargetGroupPut) o;
-    return Objects.equals(this.id, targetGroupPut.id) && Objects.equals(this.type, targetGroupPut.type) && Objects.equals(this.href, targetGroupPut.href) && Objects.equals(this.properties, targetGroupPut.properties);
+    return Objects.equals(this.href, targetGroupPut.href) && Objects.equals(this.id, targetGroupPut.id) && Objects.equals(this.properties, targetGroupPut.properties) && Objects.equals(this.type, targetGroupPut.type);
   }
 
 
@@ -157,13 +157,13 @@ public class TargetGroupPut {
     StringBuilder sb = new StringBuilder();
     sb.append("class TargetGroupPut {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -179,5 +179,17 @@ public class TargetGroupPut {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// TargetGroupPut instantiates a new TargetGroupPut object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public TargetGroupPut(TargetGroupProperties Properties) {
+
+	this.properties = Properties;
 }
 
+public TargetGroupPut() {
+}
+
+}

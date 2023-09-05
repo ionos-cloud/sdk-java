@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * NatGatewayRuleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class NatGatewayRuleProperties {
   
@@ -39,19 +39,9 @@ public class NatGatewayRuleProperties {
   private String name;
 
 
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private NatGatewayRuleType type;
-
-
   public static final String SERIALIZED_NAME_PROTOCOL = "protocol";
   @SerializedName(SERIALIZED_NAME_PROTOCOL)
   private NatGatewayRuleProtocol protocol;
-
-
-  public static final String SERIALIZED_NAME_SOURCE_SUBNET = "sourceSubnet";
-  @SerializedName(SERIALIZED_NAME_SOURCE_SUBNET)
-  private String sourceSubnet;
 
 
   public static final String SERIALIZED_NAME_PUBLIC_IP = "publicIp";
@@ -59,14 +49,24 @@ public class NatGatewayRuleProperties {
   private String publicIp;
 
 
-  public static final String SERIALIZED_NAME_TARGET_SUBNET = "targetSubnet";
-  @SerializedName(SERIALIZED_NAME_TARGET_SUBNET)
-  private String targetSubnet;
+  public static final String SERIALIZED_NAME_SOURCE_SUBNET = "sourceSubnet";
+  @SerializedName(SERIALIZED_NAME_SOURCE_SUBNET)
+  private String sourceSubnet;
 
 
   public static final String SERIALIZED_NAME_TARGET_PORT_RANGE = "targetPortRange";
   @SerializedName(SERIALIZED_NAME_TARGET_PORT_RANGE)
   private TargetPortRange targetPortRange;
+
+
+  public static final String SERIALIZED_NAME_TARGET_SUBNET = "targetSubnet";
+  @SerializedName(SERIALIZED_NAME_TARGET_SUBNET)
+  private String targetSubnet;
+
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private NatGatewayRuleType type;
 
   
 
@@ -89,30 +89,6 @@ public class NatGatewayRuleProperties {
 
   public void setName(String name) {
     this.name = name;
-  }
-
-
-
-  public NatGatewayRuleProperties type(NatGatewayRuleType type) {
-    
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * Type of the NAT Gateway rule.
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"SNAT\"", value = "Type of the NAT Gateway rule.")
-
-  public NatGatewayRuleType getType() {
-    return type;
-  }
-
-
-  public void setType(NatGatewayRuleType type) {
-    this.type = type;
   }
 
 
@@ -141,6 +117,29 @@ public class NatGatewayRuleProperties {
 
 
 
+  public NatGatewayRuleProperties publicIp(String publicIp) {
+    
+    this.publicIp = publicIp;
+    return this;
+  }
+
+   /**
+   * Public IP address of the NAT Gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT Gateway resource
+   * @return publicIp
+  **/
+  @ApiModelProperty(example = "192.18.7.17", required = true, value = "Public IP address of the NAT Gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT Gateway resource")
+
+  public String getPublicIp() {
+    return publicIp;
+  }
+
+
+  public void setPublicIp(String publicIp) {
+    this.publicIp = publicIp;
+  }
+
+
+
   public NatGatewayRuleProperties sourceSubnet(String sourceSubnet) {
     
     this.sourceSubnet = sourceSubnet;
@@ -164,25 +163,26 @@ public class NatGatewayRuleProperties {
 
 
 
-  public NatGatewayRuleProperties publicIp(String publicIp) {
+  public NatGatewayRuleProperties targetPortRange(TargetPortRange targetPortRange) {
     
-    this.publicIp = publicIp;
+    this.targetPortRange = targetPortRange;
     return this;
   }
 
    /**
-   * Public IP address of the NAT Gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT Gateway resource
-   * @return publicIp
+   * Get targetPortRange
+   * @return targetPortRange
   **/
-  @ApiModelProperty(example = "192.18.7.17", required = true, value = "Public IP address of the NAT Gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT Gateway resource")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
-  public String getPublicIp() {
-    return publicIp;
+  public TargetPortRange getTargetPortRange() {
+    return targetPortRange;
   }
 
 
-  public void setPublicIp(String publicIp) {
-    this.publicIp = publicIp;
+  public void setTargetPortRange(TargetPortRange targetPortRange) {
+    this.targetPortRange = targetPortRange;
   }
 
 
@@ -211,26 +211,26 @@ public class NatGatewayRuleProperties {
 
 
 
-  public NatGatewayRuleProperties targetPortRange(TargetPortRange targetPortRange) {
+  public NatGatewayRuleProperties type(NatGatewayRuleType type) {
     
-    this.targetPortRange = targetPortRange;
+    this.type = type;
     return this;
   }
 
    /**
-   * Get targetPortRange
-   * @return targetPortRange
+   * Type of the NAT Gateway rule.
+   * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "\"SNAT\"", value = "Type of the NAT Gateway rule.")
 
-  public TargetPortRange getTargetPortRange() {
-    return targetPortRange;
+  public NatGatewayRuleType getType() {
+    return type;
   }
 
 
-  public void setTargetPortRange(TargetPortRange targetPortRange) {
-    this.targetPortRange = targetPortRange;
+  public void setType(NatGatewayRuleType type) {
+    this.type = type;
   }
 
 
@@ -243,7 +243,7 @@ public class NatGatewayRuleProperties {
       return false;
     }
     NatGatewayRuleProperties natGatewayRuleProperties = (NatGatewayRuleProperties) o;
-    return Objects.equals(this.name, natGatewayRuleProperties.name) && Objects.equals(this.type, natGatewayRuleProperties.type) && Objects.equals(this.protocol, natGatewayRuleProperties.protocol) && Objects.equals(this.sourceSubnet, natGatewayRuleProperties.sourceSubnet) && Objects.equals(this.publicIp, natGatewayRuleProperties.publicIp) && Objects.equals(this.targetSubnet, natGatewayRuleProperties.targetSubnet) && Objects.equals(this.targetPortRange, natGatewayRuleProperties.targetPortRange);
+    return Objects.equals(this.name, natGatewayRuleProperties.name) && Objects.equals(this.protocol, natGatewayRuleProperties.protocol) && Objects.equals(this.publicIp, natGatewayRuleProperties.publicIp) && Objects.equals(this.sourceSubnet, natGatewayRuleProperties.sourceSubnet) && Objects.equals(this.targetPortRange, natGatewayRuleProperties.targetPortRange) && Objects.equals(this.targetSubnet, natGatewayRuleProperties.targetSubnet) && Objects.equals(this.type, natGatewayRuleProperties.type);
   }
 
 
@@ -256,17 +256,17 @@ public class NatGatewayRuleProperties {
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
 
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
-
-    sb.append("    sourceSubnet: ").append(toIndentedString(sourceSubnet)).append("\n");
 
     sb.append("    publicIp: ").append(toIndentedString(publicIp)).append("\n");
 
-    sb.append("    targetSubnet: ").append(toIndentedString(targetSubnet)).append("\n");
+    sb.append("    sourceSubnet: ").append(toIndentedString(sourceSubnet)).append("\n");
 
     sb.append("    targetPortRange: ").append(toIndentedString(targetPortRange)).append("\n");
+
+    sb.append("    targetSubnet: ").append(toIndentedString(targetSubnet)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -282,5 +282,19 @@ public class NatGatewayRuleProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// NatGatewayRuleProperties instantiates a new NatGatewayRuleProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public NatGatewayRuleProperties(String Name, String PublicIp, String SourceSubnet) {
+
+	this.name = Name;
+	this.publicIp = PublicIp;
+	this.sourceSubnet = SourceSubnet;
 }
 
+public NatGatewayRuleProperties() {
+}
+
+}

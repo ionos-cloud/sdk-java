@@ -146,8 +146,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Delete Application Load Balancers
-     * Remove the specified Application Load Balancer from the data center..
+     * Delete an Application Load Balancer by ID
+     * Removes the specified Application Load Balancer from the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -166,8 +166,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Delete Application Load Balancers
-     * Remove the specified Application Load Balancer from the data center..
+     * Delete an Application Load Balancer by ID
+     * Removes the specified Application Load Balancer from the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -189,8 +189,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Delete Application Load Balancers (asynchronously)
-     * Remove the specified Application Load Balancer from the data center..
+     * Delete an Application Load Balancer by ID (asynchronously)
+     * Removes the specified Application Load Balancer from the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -319,8 +319,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Delete Application Load Balancers
-     * Remove the specified Application Load Balancer from the data center..
+     * Delete an Application Load Balancer by ID
+     * Removes the specified Application Load Balancer from the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @return APIdatacentersApplicationloadbalancersDeleteRequest
@@ -414,8 +414,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Retrieve Application Load Balancers
-     * Retrieve the properties of the specified Application Load Balancer within the data center.
+     * Get an Application Load Balancer by ID
+     * Retrieves the properties of the specified Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -437,8 +437,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Retrieve Application Load Balancers
-     * Retrieve the properties of the specified Application Load Balancer within the data center.
+     * Get an Application Load Balancer by ID
+     * Retrieves the properties of the specified Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -461,8 +461,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Retrieve Application Load Balancers (asynchronously)
-     * Retrieve the properties of the specified Application Load Balancer within the data center.
+     * Get an Application Load Balancer by ID (asynchronously)
+     * Retrieves the properties of the specified Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -594,8 +594,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Retrieve Application Load Balancers
-     * Retrieve the properties of the specified Application Load Balancer within the data center.
+     * Get an Application Load Balancer by ID
+     * Retrieves the properties of the specified Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @return APIdatacentersApplicationloadbalancersFindByApplicationLoadBalancerIdRequest
@@ -613,7 +613,7 @@ public class ApplicationLoadBalancersApi {
      * Build call for datacentersApplicationloadbalancersFlowlogsDelete
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -696,11 +696,11 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Delete ALB Flow Logs
-     * Delete the specified Application Load Balancer Flow Log.
+     * Delete an ALB Flow Log by ID
+     * Deletes the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -717,11 +717,11 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Delete ALB Flow Logs
-     * Delete the specified Application Load Balancer Flow Log.
+     * Delete an ALB Flow Log by ID
+     * Deletes the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -741,11 +741,11 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Delete ALB Flow Logs (asynchronously)
-     * Delete the specified Application Load Balancer Flow Log.
+     * Delete an ALB Flow Log by ID (asynchronously)
+     * Deletes the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -874,11 +874,11 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Delete ALB Flow Logs
-     * Delete the specified Application Load Balancer Flow Log.
+     * Delete an ALB Flow Log by ID
+     * Deletes the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
      * @return APIdatacentersApplicationloadbalancersFlowlogsDeleteRequest
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -894,7 +894,7 @@ public class ApplicationLoadBalancersApi {
      * Build call for datacentersApplicationloadbalancersFlowlogsFindByFlowLogId
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -977,11 +977,11 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Retrieve ALB Flow Logs
-     * Retrieve the specified Application Load Balancer Flow Log.
+     * Get an ALB Flow Log by ID
+     * Retrieves the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1001,11 +1001,11 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Retrieve ALB Flow Logs
-     * Retrieve the specified Application Load Balancer Flow Log.
+     * Get an ALB Flow Log by ID
+     * Retrieves the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1026,11 +1026,11 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Retrieve ALB Flow Logs (asynchronously)
-     * Retrieve the specified Application Load Balancer Flow Log.
+     * Get an ALB Flow Log by ID (asynchronously)
+     * Retrieves the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1162,11 +1162,11 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Retrieve ALB Flow Logs
-     * Retrieve the specified Application Load Balancer Flow Log.
+     * Get an ALB Flow Log by ID
+     * Retrieves the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
      * @return APIdatacentersApplicationloadbalancersFlowlogsFindByFlowLogIdRequest
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1269,8 +1269,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * List ALB Flow Logs
-     * List the Flow Logs for the specified Application Load Balancer.
+     * Get ALB Flow Logs
+     * Retrieves the flow logs for the specified Application Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1294,8 +1294,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * List ALB Flow Logs
-     * List the Flow Logs for the specified Application Load Balancer.
+     * Get ALB Flow Logs
+     * Retrieves the flow logs for the specified Application Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1320,8 +1320,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * List ALB Flow Logs (asynchronously)
-     * List the Flow Logs for the specified Application Load Balancer.
+     * Get ALB Flow Logs (asynchronously)
+     * Retrieves the flow logs for the specified Application Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1487,8 +1487,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * List ALB Flow Logs
-     * List the Flow Logs for the specified Application Load Balancer.
+     * Get ALB Flow Logs
+     * Retrieves the flow logs for the specified Application Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @return APIdatacentersApplicationloadbalancersFlowlogsGetRequest
@@ -1506,8 +1506,8 @@ public class ApplicationLoadBalancersApi {
      * Build call for datacentersApplicationloadbalancersFlowlogsPatch
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
-     * @param applicationLoadBalancerFlowLogProperties The properties of the ALB Flow Log to be updated. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
+     * @param applicationLoadBalancerFlowLogProperties The properties of the ALB flow log to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1595,12 +1595,12 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Partially modify ALB Flow Logs
-     * Update the properties of the specified Application Load Balancer Flow Log.
+     * Partially Modify an ALB Flow Log by ID
+     * Updates the properties of the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
-     * @param applicationLoadBalancerFlowLogProperties The properties of the ALB Flow Log to be updated. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
+     * @param applicationLoadBalancerFlowLogProperties The properties of the ALB flow log to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1620,12 +1620,12 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Partially modify ALB Flow Logs
-     * Update the properties of the specified Application Load Balancer Flow Log.
+     * Partially Modify an ALB Flow Log by ID
+     * Updates the properties of the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
-     * @param applicationLoadBalancerFlowLogProperties The properties of the ALB Flow Log to be updated. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
+     * @param applicationLoadBalancerFlowLogProperties The properties of the ALB flow log to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1646,12 +1646,12 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Partially modify ALB Flow Logs (asynchronously)
-     * Update the properties of the specified Application Load Balancer Flow Log.
+     * Partially Modify an ALB Flow Log by ID (asynchronously)
+     * Updates the properties of the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
-     * @param applicationLoadBalancerFlowLogProperties The properties of the ALB Flow Log to be updated. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
+     * @param applicationLoadBalancerFlowLogProperties The properties of the ALB flow log to be updated. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1785,12 +1785,12 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Partially modify ALB Flow Logs
-     * Update the properties of the specified Application Load Balancer Flow Log.
+     * Partially Modify an ALB Flow Log by ID
+     * Updates the properties of the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
-     * @param applicationLoadBalancerFlowLogProperties The properties of the ALB Flow Log to be updated. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
+     * @param applicationLoadBalancerFlowLogProperties The properties of the ALB flow log to be updated. (required)
      * @return APIdatacentersApplicationloadbalancersFlowlogsPatchRequest
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -1806,7 +1806,7 @@ public class ApplicationLoadBalancersApi {
      * Build call for datacentersApplicationloadbalancersFlowlogsPost
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param applicationLoadBalancerFlowLog The Flow Log to create. (required)
+     * @param applicationLoadBalancerFlowLog The flow log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1888,11 +1888,11 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Create ALB Flow Logs
-     * Add a new Flow Log for the Application Load Balancer.
+     * Create an ALB Flow Log
+     * Creates a flow log for the Application Load Balancer specified by ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param applicationLoadBalancerFlowLog The Flow Log to create. (required)
+     * @param applicationLoadBalancerFlowLog The flow log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1912,11 +1912,11 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Create ALB Flow Logs
-     * Add a new Flow Log for the Application Load Balancer.
+     * Create an ALB Flow Log
+     * Creates a flow log for the Application Load Balancer specified by ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param applicationLoadBalancerFlowLog The Flow Log to create. (required)
+     * @param applicationLoadBalancerFlowLog The flow log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1937,11 +1937,11 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Create ALB Flow Logs (asynchronously)
-     * Add a new Flow Log for the Application Load Balancer.
+     * Create an ALB Flow Log (asynchronously)
+     * Creates a flow log for the Application Load Balancer specified by ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param applicationLoadBalancerFlowLog The Flow Log to create. (required)
+     * @param applicationLoadBalancerFlowLog The flow log to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -2073,11 +2073,11 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Create ALB Flow Logs
-     * Add a new Flow Log for the Application Load Balancer.
+     * Create an ALB Flow Log
+     * Creates a flow log for the Application Load Balancer specified by ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param applicationLoadBalancerFlowLog The Flow Log to create. (required)
+     * @param applicationLoadBalancerFlowLog The flow log to create. (required)
      * @return APIdatacentersApplicationloadbalancersFlowlogsPostRequest
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2093,8 +2093,8 @@ public class ApplicationLoadBalancersApi {
      * Build call for datacentersApplicationloadbalancersFlowlogsPut
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
-     * @param applicationLoadBalancerFlowLog The modified ALB Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
+     * @param applicationLoadBalancerFlowLog The modified ALB flow log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -2182,12 +2182,12 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Modify ALB Flow Logs
-     * Modify the specified Application Load Balancer Flow Log.
+     * Modify an ALB Flow Log by ID
+     * Modifies the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
-     * @param applicationLoadBalancerFlowLog The modified ALB Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
+     * @param applicationLoadBalancerFlowLog The modified ALB flow log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -2207,12 +2207,12 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Modify ALB Flow Logs
-     * Modify the specified Application Load Balancer Flow Log.
+     * Modify an ALB Flow Log by ID
+     * Modifies the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
-     * @param applicationLoadBalancerFlowLog The modified ALB Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
+     * @param applicationLoadBalancerFlowLog The modified ALB flow log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -2233,12 +2233,12 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Modify ALB Flow Logs (asynchronously)
-     * Modify the specified Application Load Balancer Flow Log.
+     * Modify an ALB Flow Log by ID (asynchronously)
+     * Modifies the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
-     * @param applicationLoadBalancerFlowLog The modified ALB Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
+     * @param applicationLoadBalancerFlowLog The modified ALB flow log. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -2372,12 +2372,12 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Modify ALB Flow Logs
-     * Modify the specified Application Load Balancer Flow Log.
+     * Modify an ALB Flow Log by ID
+     * Modifies the Application Load Balancer flow log specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
-     * @param flowLogId The unique ID of the Flow Log. (required)
-     * @param applicationLoadBalancerFlowLog The modified ALB Flow Log. (required)
+     * @param flowLogId The unique ID of the flow log. (required)
+     * @param applicationLoadBalancerFlowLog The modified ALB flow log. (required)
      * @return APIdatacentersApplicationloadbalancersFlowlogsPutRequest
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -2476,8 +2476,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Delete ALB forwarding rules
-     * Delete the specified Application Load Balancer forwarding rule.
+     * Delete an ALB Forwarding Rule by ID
+     * Deletes the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -2497,8 +2497,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Delete ALB forwarding rules
-     * Delete the specified Application Load Balancer forwarding rule.
+     * Delete an ALB Forwarding Rule by ID
+     * Deletes the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -2521,8 +2521,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Delete ALB forwarding rules (asynchronously)
-     * Delete the specified Application Load Balancer forwarding rule.
+     * Delete an ALB Forwarding Rule by ID (asynchronously)
+     * Deletes the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -2654,8 +2654,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Delete ALB forwarding rules
-     * Delete the specified Application Load Balancer forwarding rule.
+     * Delete an ALB Forwarding Rule by ID
+     * Deletes the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -2757,8 +2757,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Retrieve ALB forwarding rules
-     * Retrieve the specified Application Load Balancer forwarding rule.
+     * Get an ALB Forwarding Rule by ID
+     * Retrieves the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -2781,8 +2781,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Retrieve ALB forwarding rules
-     * Retrieve the specified Application Load Balancer forwarding rule.
+     * Get an ALB Forwarding Rule by ID
+     * Retrieves the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -2806,8 +2806,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Retrieve ALB forwarding rules (asynchronously)
-     * Retrieve the specified Application Load Balancer forwarding rule.
+     * Get an ALB Forwarding Rule by ID (asynchronously)
+     * Retrieves the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -2942,8 +2942,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Retrieve ALB forwarding rules
-     * Retrieve the specified Application Load Balancer forwarding rule.
+     * Get an ALB Forwarding Rule by ID
+     * Retrieves the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -3049,8 +3049,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * List ALB forwarding rules
-     * List the forwarding rules for the specified Application Load Balancer.
+     * Get ALB Forwarding Rules
+     * Lists the forwarding rules of the specified Application Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3074,8 +3074,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * List ALB forwarding rules
-     * List the forwarding rules for the specified Application Load Balancer.
+     * Get ALB Forwarding Rules
+     * Lists the forwarding rules of the specified Application Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3100,8 +3100,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * List ALB forwarding rules (asynchronously)
-     * List the forwarding rules for the specified Application Load Balancer.
+     * Get ALB Forwarding Rules (asynchronously)
+     * Lists the forwarding rules of the specified Application Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3267,8 +3267,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * List ALB forwarding rules
-     * List the forwarding rules for the specified Application Load Balancer.
+     * Get ALB Forwarding Rules
+     * Lists the forwarding rules of the specified Application Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @return APIdatacentersApplicationloadbalancersForwardingrulesGetRequest
@@ -3375,8 +3375,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Partially modify ALB forwarding rules
-     * Update the properties of the specified Application Load Balancer forwarding rule.
+     * Partially modify an ALB Forwarding Rule by ID
+     * Updates the properties of the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -3400,8 +3400,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Partially modify ALB forwarding rules
-     * Update the properties of the specified Application Load Balancer forwarding rule.
+     * Partially modify an ALB Forwarding Rule by ID
+     * Updates the properties of the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -3426,8 +3426,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Partially modify ALB forwarding rules (asynchronously)
-     * Update the properties of the specified Application Load Balancer forwarding rule.
+     * Partially modify an ALB Forwarding Rule by ID (asynchronously)
+     * Updates the properties of the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -3565,8 +3565,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Partially modify ALB forwarding rules
-     * Update the properties of the specified Application Load Balancer forwarding rule.
+     * Partially modify an ALB Forwarding Rule by ID
+     * Updates the properties of the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -3668,8 +3668,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Create ALB forwarding rules
-     * Create a forwarding rule for the Application Load Balancer.
+     * Create an ALB Forwarding Rule
+     * Creates a forwarding rule for the specified Application Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param applicationLoadBalancerForwardingRule The forwarding rule to create. (required)
@@ -3692,8 +3692,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Create ALB forwarding rules
-     * Create a forwarding rule for the Application Load Balancer.
+     * Create an ALB Forwarding Rule
+     * Creates a forwarding rule for the specified Application Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param applicationLoadBalancerForwardingRule The forwarding rule to create. (required)
@@ -3717,8 +3717,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Create ALB forwarding rules (asynchronously)
-     * Create a forwarding rule for the Application Load Balancer.
+     * Create an ALB Forwarding Rule (asynchronously)
+     * Creates a forwarding rule for the specified Application Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param applicationLoadBalancerForwardingRule The forwarding rule to create. (required)
@@ -3853,8 +3853,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Create ALB forwarding rules
-     * Create a forwarding rule for the Application Load Balancer.
+     * Create an ALB Forwarding Rule
+     * Creates a forwarding rule for the specified Application Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param applicationLoadBalancerForwardingRule The forwarding rule to create. (required)
@@ -3962,8 +3962,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Modify ALB forwarding rules
-     * Modify the specified Application Load Balancer forwarding rule.
+     * Modify an ALB Forwarding Rule by ID
+     * Modifies the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -3987,8 +3987,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Modify ALB forwarding rules
-     * Modify the specified Application Load Balancer forwarding rule.
+     * Modify an ALB Forwarding Rule by ID
+     * Modifies the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -4013,8 +4013,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Modify ALB forwarding rules (asynchronously)
-     * Modify the specified Application Load Balancer forwarding rule.
+     * Modify an ALB Forwarding Rule by ID (asynchronously)
+     * Modifies the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -4152,8 +4152,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Modify ALB forwarding rules
-     * Modify the specified Application Load Balancer forwarding rule.
+     * Modify an ALB Forwarding Rule by ID
+     * Modifies the Application Load Balancer forwarding rule specified by its ID.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param forwardingRuleId The unique ID of the forwarding rule. (required)
@@ -4261,8 +4261,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * List Application Load Balancers
-     * List all Application Load Balancers within the data center.
+     * Get Application Load Balancers
+     * Lists all Application Load Balancers within a data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -4287,8 +4287,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * List Application Load Balancers
-     * List all Application Load Balancers within the data center.
+     * Get Application Load Balancers
+     * Lists all Application Load Balancers within a data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -4314,8 +4314,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * List Application Load Balancers (asynchronously)
-     * List all Application Load Balancers within the data center.
+     * Get Application Load Balancers (asynchronously)
+     * Lists all Application Load Balancers within a data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -4502,8 +4502,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * List Application Load Balancers
-     * List all Application Load Balancers within the data center.
+     * Get Application Load Balancers
+     * Lists all Application Load Balancers within a data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @return APIdatacentersApplicationloadbalancersGetRequest
      * @http.response.details
@@ -4602,8 +4602,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Partially modify Application Load Balancers
-     * Update the properties of the specified Application Load Balancer within the data center.
+     * Partially Modify an Application Load Balancer by ID
+     * Updates the properties of the specified Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param applicationLoadBalancerProperties The Application Load Balancer properties to be updated. (required)
@@ -4626,8 +4626,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Partially modify Application Load Balancers
-     * Update the properties of the specified Application Load Balancer within the data center.
+     * Partially Modify an Application Load Balancer by ID
+     * Updates the properties of the specified Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param applicationLoadBalancerProperties The Application Load Balancer properties to be updated. (required)
@@ -4651,8 +4651,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Partially modify Application Load Balancers (asynchronously)
-     * Update the properties of the specified Application Load Balancer within the data center.
+     * Partially Modify an Application Load Balancer by ID (asynchronously)
+     * Updates the properties of the specified Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param applicationLoadBalancerProperties The Application Load Balancer properties to be updated. (required)
@@ -4787,8 +4787,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Partially modify Application Load Balancers
-     * Update the properties of the specified Application Load Balancer within the data center.
+     * Partially Modify an Application Load Balancer by ID
+     * Updates the properties of the specified Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param applicationLoadBalancerProperties The Application Load Balancer properties to be updated. (required)
@@ -4882,8 +4882,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Create Application Load Balancers
-     * Create an Application Load Balancer within the datacenter.
+     * Create an Application Load Balancer
+     * Creates an Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancer The Application Load Balancer to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4905,8 +4905,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Create Application Load Balancers
-     * Create an Application Load Balancer within the datacenter.
+     * Create an Application Load Balancer
+     * Creates an Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancer The Application Load Balancer to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -4929,8 +4929,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Create Application Load Balancers (asynchronously)
-     * Create an Application Load Balancer within the datacenter.
+     * Create an Application Load Balancer (asynchronously)
+     * Creates an Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancer The Application Load Balancer to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -5062,8 +5062,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Create Application Load Balancers
-     * Create an Application Load Balancer within the datacenter.
+     * Create an Application Load Balancer
+     * Creates an Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancer The Application Load Balancer to create. (required)
      * @return APIdatacentersApplicationloadbalancersPostRequest
@@ -5163,8 +5163,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Modify Application Load Balancers
-     * Modify the properties of the specified Application Load Balancer within the data center.
+     * Modify an Application Load Balancer by ID
+     * Modifies the properties of the specified Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param applicationLoadBalancer The modified Application Load Balancer. (required)
@@ -5187,8 +5187,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Modify Application Load Balancers
-     * Modify the properties of the specified Application Load Balancer within the data center.
+     * Modify an Application Load Balancer by ID
+     * Modifies the properties of the specified Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param applicationLoadBalancer The modified Application Load Balancer. (required)
@@ -5212,8 +5212,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Modify Application Load Balancers (asynchronously)
-     * Modify the properties of the specified Application Load Balancer within the data center.
+     * Modify an Application Load Balancer by ID (asynchronously)
+     * Modifies the properties of the specified Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param applicationLoadBalancer The modified Application Load Balancer. (required)
@@ -5348,8 +5348,8 @@ public class ApplicationLoadBalancersApi {
     }
 
     /**
-     * Modify Application Load Balancers
-     * Modify the properties of the specified Application Load Balancer within the data center.
+     * Modify an Application Load Balancer by ID
+     * Modifies the properties of the specified Application Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param applicationLoadBalancerId The unique ID of the Application Load Balancer. (required)
      * @param applicationLoadBalancer The modified Application Load Balancer. (required)

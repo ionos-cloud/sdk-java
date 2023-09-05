@@ -10,18 +10,18 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersNatgatewaysFlowlogsFindByFlowLogId**](NatGatewaysApi.md#datacentersnatgatewaysflowlogsfindbyflowlogid) | **GET** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Retrieve NAT Gateway Flow Logs |
 | [**datacentersNatgatewaysFlowlogsGet**](NatGatewaysApi.md#datacentersnatgatewaysflowlogsget) | **GET** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs | List NAT Gateway Flow Logs |
 | [**datacentersNatgatewaysFlowlogsPatch**](NatGatewaysApi.md#datacentersnatgatewaysflowlogspatch) | **PATCH** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Partially modify NAT Gateway Flow Logs |
-| [**datacentersNatgatewaysFlowlogsPost**](NatGatewaysApi.md#datacentersnatgatewaysflowlogspost) | **POST** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs | Create NAT Gateway Flow Logs |
+| [**datacentersNatgatewaysFlowlogsPost**](NatGatewaysApi.md#datacentersnatgatewaysflowlogspost) | **POST** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs | Create a NAT Gateway Flow Log |
 | [**datacentersNatgatewaysFlowlogsPut**](NatGatewaysApi.md#datacentersnatgatewaysflowlogsput) | **PUT** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Modify NAT Gateway Flow Logs |
 | [**datacentersNatgatewaysGet**](NatGatewaysApi.md#datacentersnatgatewaysget) | **GET** /datacenters/{datacenterId}/natgateways | List NAT Gateways |
 | [**datacentersNatgatewaysPatch**](NatGatewaysApi.md#datacentersnatgatewayspatch) | **PATCH** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Partially modify NAT Gateways |
-| [**datacentersNatgatewaysPost**](NatGatewaysApi.md#datacentersnatgatewayspost) | **POST** /datacenters/{datacenterId}/natgateways | Create NAT Gateways |
+| [**datacentersNatgatewaysPost**](NatGatewaysApi.md#datacentersnatgatewayspost) | **POST** /datacenters/{datacenterId}/natgateways | Create a NAT Gateway |
 | [**datacentersNatgatewaysPut**](NatGatewaysApi.md#datacentersnatgatewaysput) | **PUT** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Modify NAT Gateways |
 | [**datacentersNatgatewaysRulesDelete**](NatGatewaysApi.md#datacentersnatgatewaysrulesdelete) | **DELETE** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Delete NAT Gateway rules |
 | [**datacentersNatgatewaysRulesFindByNatGatewayRuleId**](NatGatewaysApi.md#datacentersnatgatewaysrulesfindbynatgatewayruleid) | **GET** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Retrieve NAT Gateway rules |
 | [**datacentersNatgatewaysRulesGet**](NatGatewaysApi.md#datacentersnatgatewaysrulesget) | **GET** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules | List NAT Gateway rules |
-| [**datacentersNatgatewaysRulesPatch**](NatGatewaysApi.md#datacentersnatgatewaysrulespatch) | **PATCH** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Partially modify NAT Gateway rules |
-| [**datacentersNatgatewaysRulesPost**](NatGatewaysApi.md#datacentersnatgatewaysrulespost) | **POST** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules | Create NAT Gateway rules |
-| [**datacentersNatgatewaysRulesPut**](NatGatewaysApi.md#datacentersnatgatewaysrulesput) | **PUT** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Modify NAT Gateway rules |
+| [**datacentersNatgatewaysRulesPatch**](NatGatewaysApi.md#datacentersnatgatewaysrulespatch) | **PATCH** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Partially Modify a NAT Gateway Rule by ID |
+| [**datacentersNatgatewaysRulesPost**](NatGatewaysApi.md#datacentersnatgatewaysrulespost) | **POST** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules | Create a NAT Gateway Rule |
+| [**datacentersNatgatewaysRulesPut**](NatGatewaysApi.md#datacentersnatgatewaysrulesput) | **PUT** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Modify a NAT Gateway Rule by ID |
 
 
 <a name="datacentersNatgatewaysDelete"></a>
@@ -51,11 +51,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -70,6 +73,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -78,8 +83,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.datacentersNatgatewaysDelete(datacenterId, natGatewayId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.datacentersNatgatewaysDeleteWithHttpInfo(datacenterId, natGatewayId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysDelete");
       System.err.println("Status code: " + e.getCode());
@@ -138,11 +142,14 @@ Retrieve the properties of the specified NAT Gateway within the data center.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysFindByNatGatewayIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysFindByNatGatewayId instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -157,6 +164,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -165,8 +174,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      NatGateway result = apiInstance.datacentersNatgatewaysFindByNatGatewayId(datacenterId, natGatewayId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<NatGateway> result = apiInstance.datacentersNatgatewaysFindByNatGatewayIdWithHttpInfo(datacenterId, natGatewayId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysFindByNatGatewayId");
       System.err.println("Status code: " + e.getCode());
@@ -225,11 +236,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysFlowlogsDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysFlowlogsDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -244,6 +258,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -252,8 +268,7 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     try {
-      apiInstance.datacentersNatgatewaysFlowlogsDelete(datacenterId, natGatewayId, flowLogId, pretty, depth);
-      System.out.println(result);
+      apiInstance.datacentersNatgatewaysFlowlogsDeleteWithHttpInfo(datacenterId, natGatewayId, flowLogId, pretty, depth);
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysFlowlogsDelete");
       System.err.println("Status code: " + e.getCode());
@@ -311,11 +326,14 @@ Retrieve the specified NAT Gateway Flow Log.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysFlowlogsFindByFlowLogIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysFlowlogsFindByFlowLogId instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -330,6 +348,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -338,8 +358,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     try {
-      FlowLog result = apiInstance.datacentersNatgatewaysFlowlogsFindByFlowLogId(datacenterId, natGatewayId, flowLogId, pretty, depth);
-      System.out.println(result);
+      ApiResponse<FlowLog> result = apiInstance.datacentersNatgatewaysFlowlogsFindByFlowLogIdWithHttpInfo(datacenterId, natGatewayId, flowLogId, pretty, depth);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysFlowlogsFindByFlowLogId");
       System.err.println("Status code: " + e.getCode());
@@ -401,11 +423,14 @@ List all the Flow Logs for the specified NAT Gateway.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysFlowlogsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysFlowlogsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -420,6 +445,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -428,12 +455,14 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      FlowLogs result = apiInstance.datacentersNatgatewaysFlowlogsGet(datacenterId, natGatewayId, pretty, depth, offset, limit, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<FlowLogs> result = apiInstance.datacentersNatgatewaysFlowlogsGetWithHttpInfo(datacenterId, natGatewayId, pretty, depth, offset, limit, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysFlowlogsGet");
       System.err.println("Status code: " + e.getCode());
@@ -497,11 +526,14 @@ Update the properties of the specified NAT Gateway Flow Log.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysFlowlogsPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysFlowlogsPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -516,17 +548,25 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String natGatewayId = "natGatewayId_example"; // String | The unique ID of the NAT Gateway.
     String flowLogId = "flowLogId_example"; // String | The unique ID of the Flow Log.
-    FlowLogProperties natGatewayFlowLogProperties = new FlowLogProperties(); // FlowLogProperties | The properties of the Flow Log to be updated.
+    action = new String(); // String | Specifies the traffic action pattern.
+    bucket = new String(); // String | The S3 bucket name of an existing IONOS Cloud S3 bucket.
+    direction = new String(); // String | Specifies the traffic direction pattern.
+    name = new String(); // String | The resource name.
+    natGatewayFlowLogProperties = new FlowLogProperties(String, String, String, String); // FlowLogProperties | The properties of the Flow Log to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     try {
-      FlowLog result = apiInstance.datacentersNatgatewaysFlowlogsPatch(datacenterId, natGatewayId, flowLogId, natGatewayFlowLogProperties, pretty, depth);
-      System.out.println(result);
+      ApiResponse<FlowLog> result = apiInstance.datacentersNatgatewaysFlowlogsPatchWithHttpInfo(datacenterId, natGatewayId, flowLogId, natGatewayFlowLogProperties, pretty, depth);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysFlowlogsPatch");
       System.err.println("Status code: " + e.getCode());
@@ -561,9 +601,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersNatgatewaysFlowlogsPost**
 > FlowLog datacentersNatgatewaysFlowlogsPost(datacenterId, natGatewayId, natGatewayFlowLog, pretty, depth)
 
-Create NAT Gateway Flow Logs
+Create a NAT Gateway Flow Log
 
-Add a new Flow Log for the specified NAT Gateway.
+Adds a new Flow Log to the specified NAT Gateway.
 
 ### Parameters
 
@@ -584,11 +624,14 @@ Add a new Flow Log for the specified NAT Gateway.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysFlowlogsPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysFlowlogsPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -603,16 +646,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String natGatewayId = "natGatewayId_example"; // String | The unique ID of the NAT Gateway.
-    FlowLog natGatewayFlowLog = new FlowLog(); // FlowLog | The Flow Log to create.
+    properties = new FlowLogProperties(); // FlowLogProperties | 
+    natGatewayFlowLog = new FlowLog(FlowLogProperties); // FlowLog | The Flow Log to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     try {
-      FlowLog result = apiInstance.datacentersNatgatewaysFlowlogsPost(datacenterId, natGatewayId, natGatewayFlowLog, pretty, depth);
-      System.out.println(result);
+      ApiResponse<FlowLog> result = apiInstance.datacentersNatgatewaysFlowlogsPostWithHttpInfo(datacenterId, natGatewayId, natGatewayFlowLog, pretty, depth);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysFlowlogsPost");
       System.err.println("Status code: " + e.getCode());
@@ -671,11 +719,14 @@ Modify the specified NAT Gateway Flow Log.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysFlowlogsPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysFlowlogsPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -690,17 +741,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String natGatewayId = "natGatewayId_example"; // String | The unique ID of the NAT Gateway.
     String flowLogId = "flowLogId_example"; // String | The unique ID of the Flow Log.
-    FlowLogPut natGatewayFlowLog = new FlowLogPut(); // FlowLogPut | The modified NAT Gateway Flow Log.
+    properties = new FlowLogProperties(); // FlowLogProperties | 
+    natGatewayFlowLog = new FlowLogPut(FlowLogProperties); // FlowLogPut | The modified NAT Gateway Flow Log.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     try {
-      FlowLog result = apiInstance.datacentersNatgatewaysFlowlogsPut(datacenterId, natGatewayId, flowLogId, natGatewayFlowLog, pretty, depth);
-      System.out.println(result);
+      ApiResponse<FlowLog> result = apiInstance.datacentersNatgatewaysFlowlogsPutWithHttpInfo(datacenterId, natGatewayId, flowLogId, natGatewayFlowLog, pretty, depth);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysFlowlogsPut");
       System.err.println("Status code: " + e.getCode());
@@ -760,11 +816,14 @@ List all NAT Gateways within the data center.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -779,18 +838,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      NatGateways result = apiInstance.datacentersNatgatewaysGet(datacenterId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<NatGateways> result = apiInstance.datacentersNatgatewaysGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysGet");
       System.err.println("Status code: " + e.getCode());
@@ -853,11 +916,14 @@ Update the properties of the specified NAT Gateway within the data center.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -872,17 +938,23 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String natGatewayId = "natGatewayId_example"; // String | The unique ID of the NAT Gateway.
-    NatGatewayProperties natGatewayProperties = new NatGatewayProperties(); // NatGatewayProperties | The properties of the NAT Gateway to be updated.
+    name = new String(); // String | Name of the NAT Gateway.
+    publicIps = new List<String>(); // List<String> | Collection of public IP addresses of the NAT Gateway. Should be customer reserved IP addresses in that location.
+    natGatewayProperties = new NatGatewayProperties(String, List&lt;String&gt;); // NatGatewayProperties | The properties of the NAT Gateway to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      NatGateway result = apiInstance.datacentersNatgatewaysPatch(datacenterId, natGatewayId, natGatewayProperties, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<NatGateway> result = apiInstance.datacentersNatgatewaysPatchWithHttpInfo(datacenterId, natGatewayId, natGatewayProperties, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysPatch");
       System.err.println("Status code: " + e.getCode());
@@ -918,9 +990,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersNatgatewaysPost**
 > NatGateway datacentersNatgatewaysPost(datacenterId, natGateway, pretty, depth, xContractNumber)
 
-Create NAT Gateways
+Create a NAT Gateway
 
-Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with &#39;createInternetAccess&#39; privileges.
+Creates a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with &#39;createInternetAccess&#39; privileges.
 
 ### Parameters
 
@@ -941,11 +1013,14 @@ Create a NAT Gateway within the data center.  This operation is restricted to co
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -960,16 +1035,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
-    NatGateway natGateway = new NatGateway(); // NatGateway | The NAT Gateway to create.
+    properties = new NatGatewayProperties(); // NatGatewayProperties | 
+    natGateway = new NatGateway(NatGatewayProperties); // NatGateway | The NAT Gateway to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      NatGateway result = apiInstance.datacentersNatgatewaysPost(datacenterId, natGateway, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<NatGateway> result = apiInstance.datacentersNatgatewaysPostWithHttpInfo(datacenterId, natGateway, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysPost");
       System.err.println("Status code: " + e.getCode());
@@ -1029,11 +1109,14 @@ Modify the properties of the specified NAT Gateway within the data center.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1048,17 +1131,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String natGatewayId = "natGatewayId_example"; // String | The unique ID of the NAT Gateway.
-    NatGatewayPut natGateway = new NatGatewayPut(); // NatGatewayPut | The modified NAT Gateway.
+    properties = new NatGatewayProperties(); // NatGatewayProperties | 
+    natGateway = new NatGatewayPut(NatGatewayProperties); // NatGatewayPut | The modified NAT Gateway.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      NatGateway result = apiInstance.datacentersNatgatewaysPut(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<NatGateway> result = apiInstance.datacentersNatgatewaysPutWithHttpInfo(datacenterId, natGatewayId, natGateway, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysPut");
       System.err.println("Status code: " + e.getCode());
@@ -1118,11 +1206,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysRulesDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysRulesDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1137,6 +1228,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -1146,8 +1239,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.datacentersNatgatewaysRulesDelete(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.datacentersNatgatewaysRulesDeleteWithHttpInfo(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysRulesDelete");
       System.err.println("Status code: " + e.getCode());
@@ -1207,11 +1299,14 @@ Retrieve the properties of the specified NAT Gateway rule.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysRulesFindByNatGatewayRuleIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysRulesFindByNatGatewayRuleId instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1226,6 +1321,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -1235,8 +1332,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      NatGatewayRule result = apiInstance.datacentersNatgatewaysRulesFindByNatGatewayRuleId(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<NatGatewayRule> result = apiInstance.datacentersNatgatewaysRulesFindByNatGatewayRuleIdWithHttpInfo(datacenterId, natGatewayId, natGatewayRuleId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysRulesFindByNatGatewayRuleId");
       System.err.println("Status code: " + e.getCode());
@@ -1298,11 +1397,14 @@ List all rules for the specified NAT Gateway.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysRulesGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysRulesGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1317,6 +1419,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -1324,12 +1428,14 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      NatGatewayRules result = apiInstance.datacentersNatgatewaysRulesGet(datacenterId, natGatewayId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<NatGatewayRules> result = apiInstance.datacentersNatgatewaysRulesGetWithHttpInfo(datacenterId, natGatewayId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysRulesGet");
       System.err.println("Status code: " + e.getCode());
@@ -1368,9 +1474,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersNatgatewaysRulesPatch**
 > NatGatewayRule datacentersNatgatewaysRulesPatch(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRuleProperties, pretty, depth, xContractNumber)
 
-Partially modify NAT Gateway rules
+Partially Modify a NAT Gateway Rule by ID
 
-Update the properties of the specified NAT Gateway rule.
+Updates the properties of the specified NAT Gateway rule.
 
 ### Parameters
 
@@ -1393,11 +1499,14 @@ Update the properties of the specified NAT Gateway rule.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysRulesPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysRulesPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1412,18 +1521,25 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String natGatewayId = "natGatewayId_example"; // String | The unique ID of the NAT Gateway.
     String natGatewayRuleId = "natGatewayRuleId_example"; // String | The unique ID of the NAT Gateway rule.
-    NatGatewayRuleProperties natGatewayRuleProperties = new NatGatewayRuleProperties(); // NatGatewayRuleProperties | The properties of the NAT Gateway rule to be updated.
+    name = new String(); // String | The name of the NAT Gateway rule.
+    publicIp = new String(); // String | Public IP address of the NAT Gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT Gateway resource
+    sourceSubnet = new String(); // String | Source subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address.
+    natGatewayRuleProperties = new NatGatewayRuleProperties(String, String, String); // NatGatewayRuleProperties | The properties of the NAT Gateway rule to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      NatGatewayRule result = apiInstance.datacentersNatgatewaysRulesPatch(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRuleProperties, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<NatGatewayRule> result = apiInstance.datacentersNatgatewaysRulesPatchWithHttpInfo(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRuleProperties, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysRulesPatch");
       System.err.println("Status code: " + e.getCode());
@@ -1459,9 +1575,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersNatgatewaysRulesPost**
 > NatGatewayRule datacentersNatgatewaysRulesPost(datacenterId, natGatewayId, natGatewayRule, pretty, depth, xContractNumber)
 
-Create NAT Gateway rules
+Create a NAT Gateway Rule
 
-Create a rule for the specified NAT Gateway.
+Creates a rule for the specified NAT Gateway.
 
 ### Parameters
 
@@ -1483,11 +1599,14 @@ Create a rule for the specified NAT Gateway.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysRulesPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysRulesPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1502,17 +1621,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String natGatewayId = "natGatewayId_example"; // String | The unique ID of the NAT Gateway.
-    NatGatewayRule natGatewayRule = new NatGatewayRule(); // NatGatewayRule | The NAT Gateway rule to create.
+    properties = new NatGatewayRuleProperties(); // NatGatewayRuleProperties | 
+    natGatewayRule = new NatGatewayRule(NatGatewayRuleProperties); // NatGatewayRule | The NAT Gateway rule to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      NatGatewayRule result = apiInstance.datacentersNatgatewaysRulesPost(datacenterId, natGatewayId, natGatewayRule, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<NatGatewayRule> result = apiInstance.datacentersNatgatewaysRulesPostWithHttpInfo(datacenterId, natGatewayId, natGatewayRule, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysRulesPost");
       System.err.println("Status code: " + e.getCode());
@@ -1548,7 +1672,7 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersNatgatewaysRulesPut**
 > NatGatewayRule datacentersNatgatewaysRulesPut(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRule, pretty, depth, xContractNumber)
 
-Modify NAT Gateway rules
+Modify a NAT Gateway Rule by ID
 
 Modify the specified NAT Gateway rule.
 
@@ -1573,11 +1697,14 @@ Modify the specified NAT Gateway rule.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersNatgatewaysRulesPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersNatgatewaysRulesPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1592,18 +1719,23 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NatGatewaysApi apiInstance = new NatGatewaysApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String natGatewayId = "natGatewayId_example"; // String | The unique ID of the NAT Gateway.
     String natGatewayRuleId = "natGatewayRuleId_example"; // String | The unique ID of the NAT Gateway rule.
-    NatGatewayRulePut natGatewayRule = new NatGatewayRulePut(); // NatGatewayRulePut | The modified NAT Gateway rule.
+    properties = new NatGatewayRuleProperties(); // NatGatewayRuleProperties | 
+    natGatewayRule = new NatGatewayRulePut(NatGatewayRuleProperties); // NatGatewayRulePut | The modified NAT Gateway rule.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      NatGatewayRule result = apiInstance.datacentersNatgatewaysRulesPut(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRule, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<NatGatewayRule> result = apiInstance.datacentersNatgatewaysRulesPutWithHttpInfo(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRule, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NatGatewaysApi#datacentersNatgatewaysRulesPut");
       System.err.println("Status code: " + e.getCode());

@@ -42,11 +42,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLansDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLansDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -61,6 +64,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LansApi apiInstance = new LansApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -69,8 +74,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.datacentersLansDelete(datacenterId, lanId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.datacentersLansDeleteWithHttpInfo(datacenterId, lanId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling LansApi#datacentersLansDelete");
       System.err.println("Status code: " + e.getCode());
@@ -129,11 +133,14 @@ Retrieve the properties of the specified LAN within the data center.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLansFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLansFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -148,6 +155,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LansApi apiInstance = new LansApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -156,8 +165,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Lan result = apiInstance.datacentersLansFindById(datacenterId, lanId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Lan> result = apiInstance.datacentersLansFindByIdWithHttpInfo(datacenterId, lanId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LansApi#datacentersLansFindById");
       System.err.println("Status code: " + e.getCode());
@@ -220,11 +231,14 @@ List all LANs within the data center.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLansGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLansGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -239,6 +253,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LansApi apiInstance = new LansApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -247,12 +263,14 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Lans result = apiInstance.datacentersLansGet(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<Lans> result = apiInstance.datacentersLansGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LansApi#datacentersLansGet");
       System.err.println("Status code: " + e.getCode());
@@ -317,11 +335,14 @@ Retrieve the properties of the NIC, attached to the specified LAN.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLansNicsFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLansNicsFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -336,6 +357,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LansApi apiInstance = new LansApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -345,8 +368,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Nic result = apiInstance.datacentersLansNicsFindById(datacenterId, lanId, nicId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Nic> result = apiInstance.datacentersLansNicsFindByIdWithHttpInfo(datacenterId, lanId, nicId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LansApi#datacentersLansNicsFindById");
       System.err.println("Status code: " + e.getCode());
@@ -410,11 +435,14 @@ List all NICs, attached to the specified LAN.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLansNicsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLansNicsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -429,6 +457,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LansApi apiInstance = new LansApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -438,12 +468,14 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      LanNics result = apiInstance.datacentersLansNicsGet(datacenterId, lanId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<LanNics> result = apiInstance.datacentersLansNicsGetWithHttpInfo(datacenterId, lanId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LansApi#datacentersLansNicsGet");
       System.err.println("Status code: " + e.getCode());
@@ -508,11 +540,14 @@ Attach an existing NIC to the specified LAN.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLansNicsPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLansNicsPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -527,17 +562,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LansApi apiInstance = new LansApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String lanId = "lanId_example"; // String | The unique ID of the LAN.
-    Nic nic = new Nic(); // Nic | The NIC to be attached.
+    properties = new NicProperties(); // NicProperties | 
+    nic = new Nic(NicProperties); // Nic | The NIC to be attached.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Nic result = apiInstance.datacentersLansNicsPost(datacenterId, lanId, nic, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Nic> result = apiInstance.datacentersLansNicsPostWithHttpInfo(datacenterId, lanId, nic, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LansApi#datacentersLansNicsPost");
       System.err.println("Status code: " + e.getCode());
@@ -597,11 +637,14 @@ Update the properties of the specified LAN within the data center.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLansPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLansPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -616,6 +659,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LansApi apiInstance = new LansApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -625,8 +670,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Lan result = apiInstance.datacentersLansPatch(datacenterId, lanId, lan, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Lan> result = apiInstance.datacentersLansPatchWithHttpInfo(datacenterId, lanId, lan, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LansApi#datacentersLansPatch");
       System.err.println("Status code: " + e.getCode());
@@ -664,7 +711,7 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 
 Create LANs
 
-Create a LAN within the data center.
+Creates a LAN within the data center.
 
 ### Parameters
 
@@ -685,11 +732,14 @@ Create a LAN within the data center.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLansPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLansPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -704,16 +754,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LansApi apiInstance = new LansApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
-    LanPost lan = new LanPost(); // LanPost | The LAN to create.
+    properties = new LanPropertiesPost(); // LanPropertiesPost | 
+    lan = new LanPost(LanPropertiesPost); // LanPost | The LAN to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      LanPost result = apiInstance.datacentersLansPost(datacenterId, lan, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<LanPost> result = apiInstance.datacentersLansPostWithHttpInfo(datacenterId, lan, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LansApi#datacentersLansPost");
       System.err.println("Status code: " + e.getCode());
@@ -773,11 +828,14 @@ Modify the properties of the specified LAN within the data center.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLansPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLansPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -792,17 +850,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LansApi apiInstance = new LansApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String lanId = "lanId_example"; // String | The unique ID of the LAN.
-    Lan lan = new Lan(); // Lan | The modified LAN
+    properties = new LanProperties(); // LanProperties | 
+    lan = new Lan(LanProperties); // Lan | The modified LAN
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Lan result = apiInstance.datacentersLansPut(datacenterId, lanId, lan, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Lan> result = apiInstance.datacentersLansPutWithHttpInfo(datacenterId, lanId, lan, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LansApi#datacentersLansPut");
       System.err.println("Status code: " + e.getCode());

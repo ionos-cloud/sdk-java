@@ -1039,7 +1039,7 @@ public class LoadBalancersApi {
 
     /**
      * Attach balanced NICs
-     * Attach an existing NIC to the specified Load Balancer.
+     * Attachs an existing NIC to the specified Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param loadbalancerId The unique ID of the Load Balancer. (required)
      * @param nic The NIC to be attached. (required)
@@ -1063,7 +1063,7 @@ public class LoadBalancersApi {
 
     /**
      * Attach balanced NICs
-     * Attach an existing NIC to the specified Load Balancer.
+     * Attachs an existing NIC to the specified Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param loadbalancerId The unique ID of the Load Balancer. (required)
      * @param nic The NIC to be attached. (required)
@@ -1088,7 +1088,7 @@ public class LoadBalancersApi {
 
     /**
      * Attach balanced NICs (asynchronously)
-     * Attach an existing NIC to the specified Load Balancer.
+     * Attachs an existing NIC to the specified Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param loadbalancerId The unique ID of the Load Balancer. (required)
      * @param nic The NIC to be attached. (required)
@@ -1224,7 +1224,7 @@ public class LoadBalancersApi {
 
     /**
      * Attach balanced NICs
-     * Attach an existing NIC to the specified Load Balancer.
+     * Attachs an existing NIC to the specified Load Balancer.
      * @param datacenterId The unique ID of the data center. (required)
      * @param loadbalancerId The unique ID of the Load Balancer. (required)
      * @param nic The NIC to be attached. (required)
@@ -2495,8 +2495,8 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Create Load Balancers
-     * Create a Load Balancer within the data center.
+     * Create a Load Balancer
+     * Creates a Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param loadbalancer The Load Balancer to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -2518,8 +2518,8 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Create Load Balancers
-     * Create a Load Balancer within the data center.
+     * Create a Load Balancer
+     * Creates a Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param loadbalancer The Load Balancer to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -2542,8 +2542,8 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Create Load Balancers (asynchronously)
-     * Create a Load Balancer within the data center.
+     * Create a Load Balancer (asynchronously)
+     * Creates a Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param loadbalancer The Load Balancer to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -2675,8 +2675,8 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Create Load Balancers
-     * Create a Load Balancer within the data center.
+     * Create a Load Balancer
+     * Creates a Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param loadbalancer The Load Balancer to create. (required)
      * @return APIdatacentersLoadbalancersPostRequest
@@ -2776,8 +2776,8 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Modify Load Balancers
-     * Modify the properties of the specified Load Balancer within the data center.
+     * Modify a Load Balancer by ID
+     * Modifies the properties of the specified Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param loadbalancerId The unique ID of the Load Balancer. (required)
      * @param loadbalancer The modified Load Balancer. (required)
@@ -2800,8 +2800,8 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Modify Load Balancers
-     * Modify the properties of the specified Load Balancer within the data center.
+     * Modify a Load Balancer by ID
+     * Modifies the properties of the specified Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param loadbalancerId The unique ID of the Load Balancer. (required)
      * @param loadbalancer The modified Load Balancer. (required)
@@ -2825,8 +2825,8 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Modify Load Balancers (asynchronously)
-     * Modify the properties of the specified Load Balancer within the data center.
+     * Modify a Load Balancer by ID (asynchronously)
+     * Modifies the properties of the specified Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param loadbalancerId The unique ID of the Load Balancer. (required)
      * @param loadbalancer The modified Load Balancer. (required)
@@ -2961,8 +2961,8 @@ public class LoadBalancersApi {
     }
 
     /**
-     * Modify Load Balancers
-     * Modify the properties of the specified Load Balancer within the data center.
+     * Modify a Load Balancer by ID
+     * Modifies the properties of the specified Load Balancer within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param loadbalancerId The unique ID of the Load Balancer. (required)
      * @param loadbalancer The modified Load Balancer. (required)

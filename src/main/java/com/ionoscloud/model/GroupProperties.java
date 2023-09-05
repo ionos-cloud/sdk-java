@@ -27,13 +27,33 @@ import java.io.IOException;
 /**
  * GroupProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class GroupProperties {
   
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  public static final String SERIALIZED_NAME_ACCESS_ACTIVITY_LOG = "accessActivityLog";
+  @SerializedName(SERIALIZED_NAME_ACCESS_ACTIVITY_LOG)
+  private Boolean accessActivityLog;
+
+
+  public static final String SERIALIZED_NAME_ACCESS_AND_MANAGE_CERTIFICATES = "accessAndManageCertificates";
+  @SerializedName(SERIALIZED_NAME_ACCESS_AND_MANAGE_CERTIFICATES)
+  private Boolean accessAndManageCertificates;
+
+
+  public static final String SERIALIZED_NAME_ACCESS_AND_MANAGE_DNS = "accessAndManageDns";
+  @SerializedName(SERIALIZED_NAME_ACCESS_AND_MANAGE_DNS)
+  private Boolean accessAndManageDns;
+
+
+  public static final String SERIALIZED_NAME_ACCESS_AND_MANAGE_MONITORING = "accessAndManageMonitoring";
+  @SerializedName(SERIALIZED_NAME_ACCESS_AND_MANAGE_MONITORING)
+  private Boolean accessAndManageMonitoring;
+
+
+  public static final String SERIALIZED_NAME_CREATE_BACKUP_UNIT = "createBackupUnit";
+  @SerializedName(SERIALIZED_NAME_CREATE_BACKUP_UNIT)
+  private Boolean createBackupUnit;
 
 
   public static final String SERIALIZED_NAME_CREATE_DATA_CENTER = "createDataCenter";
@@ -41,34 +61,9 @@ public class GroupProperties {
   private Boolean createDataCenter;
 
 
-  public static final String SERIALIZED_NAME_CREATE_SNAPSHOT = "createSnapshot";
-  @SerializedName(SERIALIZED_NAME_CREATE_SNAPSHOT)
-  private Boolean createSnapshot;
-
-
-  public static final String SERIALIZED_NAME_RESERVE_IP = "reserveIp";
-  @SerializedName(SERIALIZED_NAME_RESERVE_IP)
-  private Boolean reserveIp;
-
-
-  public static final String SERIALIZED_NAME_ACCESS_ACTIVITY_LOG = "accessActivityLog";
-  @SerializedName(SERIALIZED_NAME_ACCESS_ACTIVITY_LOG)
-  private Boolean accessActivityLog;
-
-
-  public static final String SERIALIZED_NAME_CREATE_PCC = "createPcc";
-  @SerializedName(SERIALIZED_NAME_CREATE_PCC)
-  private Boolean createPcc;
-
-
-  public static final String SERIALIZED_NAME_S3_PRIVILEGE = "s3Privilege";
-  @SerializedName(SERIALIZED_NAME_S3_PRIVILEGE)
-  private Boolean s3Privilege;
-
-
-  public static final String SERIALIZED_NAME_CREATE_BACKUP_UNIT = "createBackupUnit";
-  @SerializedName(SERIALIZED_NAME_CREATE_BACKUP_UNIT)
-  private Boolean createBackupUnit;
+  public static final String SERIALIZED_NAME_CREATE_FLOW_LOG = "createFlowLog";
+  @SerializedName(SERIALIZED_NAME_CREATE_FLOW_LOG)
+  private Boolean createFlowLog;
 
 
   public static final String SERIALIZED_NAME_CREATE_INTERNET_ACCESS = "createInternetAccess";
@@ -81,47 +76,163 @@ public class GroupProperties {
   private Boolean createK8sCluster;
 
 
-  public static final String SERIALIZED_NAME_CREATE_FLOW_LOG = "createFlowLog";
-  @SerializedName(SERIALIZED_NAME_CREATE_FLOW_LOG)
-  private Boolean createFlowLog;
+  public static final String SERIALIZED_NAME_CREATE_PCC = "createPcc";
+  @SerializedName(SERIALIZED_NAME_CREATE_PCC)
+  private Boolean createPcc;
 
 
-  public static final String SERIALIZED_NAME_ACCESS_AND_MANAGE_MONITORING = "accessAndManageMonitoring";
-  @SerializedName(SERIALIZED_NAME_ACCESS_AND_MANAGE_MONITORING)
-  private Boolean accessAndManageMonitoring;
-
-
-  public static final String SERIALIZED_NAME_ACCESS_AND_MANAGE_CERTIFICATES = "accessAndManageCertificates";
-  @SerializedName(SERIALIZED_NAME_ACCESS_AND_MANAGE_CERTIFICATES)
-  private Boolean accessAndManageCertificates;
+  public static final String SERIALIZED_NAME_CREATE_SNAPSHOT = "createSnapshot";
+  @SerializedName(SERIALIZED_NAME_CREATE_SNAPSHOT)
+  private Boolean createSnapshot;
 
 
   public static final String SERIALIZED_NAME_MANAGE_D_BAA_S = "manageDBaaS";
   @SerializedName(SERIALIZED_NAME_MANAGE_D_BAA_S)
   private Boolean manageDBaaS;
 
+
+  public static final String SERIALIZED_NAME_MANAGE_DATAPLATFORM = "manageDataplatform";
+  @SerializedName(SERIALIZED_NAME_MANAGE_DATAPLATFORM)
+  private Boolean manageDataplatform;
+
+
+  public static final String SERIALIZED_NAME_MANAGE_REGISTRY = "manageRegistry";
+  @SerializedName(SERIALIZED_NAME_MANAGE_REGISTRY)
+  private Boolean manageRegistry;
+
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
+
+
+  public static final String SERIALIZED_NAME_RESERVE_IP = "reserveIp";
+  @SerializedName(SERIALIZED_NAME_RESERVE_IP)
+  private Boolean reserveIp;
+
+
+  public static final String SERIALIZED_NAME_S3_PRIVILEGE = "s3Privilege";
+  @SerializedName(SERIALIZED_NAME_S3_PRIVILEGE)
+  private Boolean s3Privilege;
+
   
 
-  public GroupProperties name(String name) {
+  public GroupProperties accessActivityLog(Boolean accessActivityLog) {
     
-    this.name = name;
+    this.accessActivityLog = accessActivityLog;
     return this;
   }
 
    /**
-   * The name of the  resource.
-   * @return name
+   * Activity log access privilege.
+   * @return accessActivityLog
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
+  @ApiModelProperty(value = "Activity log access privilege.")
 
-  public String getName() {
-    return name;
+  public Boolean getAccessActivityLog() {
+    return accessActivityLog;
   }
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setAccessActivityLog(Boolean accessActivityLog) {
+    this.accessActivityLog = accessActivityLog;
+  }
+
+
+
+  public GroupProperties accessAndManageCertificates(Boolean accessAndManageCertificates) {
+    
+    this.accessAndManageCertificates = accessAndManageCertificates;
+    return this;
+  }
+
+   /**
+   * Privilege for a group to access and manage certificates.
+   * @return accessAndManageCertificates
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Privilege for a group to access and manage certificates.")
+
+  public Boolean getAccessAndManageCertificates() {
+    return accessAndManageCertificates;
+  }
+
+
+  public void setAccessAndManageCertificates(Boolean accessAndManageCertificates) {
+    this.accessAndManageCertificates = accessAndManageCertificates;
+  }
+
+
+
+  public GroupProperties accessAndManageDns(Boolean accessAndManageDns) {
+    
+    this.accessAndManageDns = accessAndManageDns;
+    return this;
+  }
+
+   /**
+   * Privilege for a group to access and manage dns records.
+   * @return accessAndManageDns
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Privilege for a group to access and manage dns records.")
+
+  public Boolean getAccessAndManageDns() {
+    return accessAndManageDns;
+  }
+
+
+  public void setAccessAndManageDns(Boolean accessAndManageDns) {
+    this.accessAndManageDns = accessAndManageDns;
+  }
+
+
+
+  public GroupProperties accessAndManageMonitoring(Boolean accessAndManageMonitoring) {
+    
+    this.accessAndManageMonitoring = accessAndManageMonitoring;
+    return this;
+  }
+
+   /**
+   * Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS).
+   * @return accessAndManageMonitoring
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS).")
+
+  public Boolean getAccessAndManageMonitoring() {
+    return accessAndManageMonitoring;
+  }
+
+
+  public void setAccessAndManageMonitoring(Boolean accessAndManageMonitoring) {
+    this.accessAndManageMonitoring = accessAndManageMonitoring;
+  }
+
+
+
+  public GroupProperties createBackupUnit(Boolean createBackupUnit) {
+    
+    this.createBackupUnit = createBackupUnit;
+    return this;
+  }
+
+   /**
+   * Create backup unit privilege.
+   * @return createBackupUnit
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Create backup unit privilege.")
+
+  public Boolean getCreateBackupUnit() {
+    return createBackupUnit;
+  }
+
+
+  public void setCreateBackupUnit(Boolean createBackupUnit) {
+    this.createBackupUnit = createBackupUnit;
   }
 
 
@@ -150,146 +261,26 @@ public class GroupProperties {
 
 
 
-  public GroupProperties createSnapshot(Boolean createSnapshot) {
+  public GroupProperties createFlowLog(Boolean createFlowLog) {
     
-    this.createSnapshot = createSnapshot;
+    this.createFlowLog = createFlowLog;
     return this;
   }
 
    /**
-   * Create snapshot privilege.
-   * @return createSnapshot
+   * Create Flow Logs privilege.
+   * @return createFlowLog
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Create snapshot privilege.")
+  @ApiModelProperty(value = "Create Flow Logs privilege.")
 
-  public Boolean getCreateSnapshot() {
-    return createSnapshot;
+  public Boolean getCreateFlowLog() {
+    return createFlowLog;
   }
 
 
-  public void setCreateSnapshot(Boolean createSnapshot) {
-    this.createSnapshot = createSnapshot;
-  }
-
-
-
-  public GroupProperties reserveIp(Boolean reserveIp) {
-    
-    this.reserveIp = reserveIp;
-    return this;
-  }
-
-   /**
-   * Reserve IP block privilege.
-   * @return reserveIp
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Reserve IP block privilege.")
-
-  public Boolean getReserveIp() {
-    return reserveIp;
-  }
-
-
-  public void setReserveIp(Boolean reserveIp) {
-    this.reserveIp = reserveIp;
-  }
-
-
-
-  public GroupProperties accessActivityLog(Boolean accessActivityLog) {
-    
-    this.accessActivityLog = accessActivityLog;
-    return this;
-  }
-
-   /**
-   * Activity log access privilege.
-   * @return accessActivityLog
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Activity log access privilege.")
-
-  public Boolean getAccessActivityLog() {
-    return accessActivityLog;
-  }
-
-
-  public void setAccessActivityLog(Boolean accessActivityLog) {
-    this.accessActivityLog = accessActivityLog;
-  }
-
-
-
-  public GroupProperties createPcc(Boolean createPcc) {
-    
-    this.createPcc = createPcc;
-    return this;
-  }
-
-   /**
-   * Create pcc privilege.
-   * @return createPcc
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Create pcc privilege.")
-
-  public Boolean getCreatePcc() {
-    return createPcc;
-  }
-
-
-  public void setCreatePcc(Boolean createPcc) {
-    this.createPcc = createPcc;
-  }
-
-
-
-  public GroupProperties s3Privilege(Boolean s3Privilege) {
-    
-    this.s3Privilege = s3Privilege;
-    return this;
-  }
-
-   /**
-   * S3 privilege.
-   * @return s3Privilege
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "S3 privilege.")
-
-  public Boolean getS3Privilege() {
-    return s3Privilege;
-  }
-
-
-  public void setS3Privilege(Boolean s3Privilege) {
-    this.s3Privilege = s3Privilege;
-  }
-
-
-
-  public GroupProperties createBackupUnit(Boolean createBackupUnit) {
-    
-    this.createBackupUnit = createBackupUnit;
-    return this;
-  }
-
-   /**
-   * Create backup unit privilege.
-   * @return createBackupUnit
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Create backup unit privilege.")
-
-  public Boolean getCreateBackupUnit() {
-    return createBackupUnit;
-  }
-
-
-  public void setCreateBackupUnit(Boolean createBackupUnit) {
-    this.createBackupUnit = createBackupUnit;
+  public void setCreateFlowLog(Boolean createFlowLog) {
+    this.createFlowLog = createFlowLog;
   }
 
 
@@ -342,74 +333,50 @@ public class GroupProperties {
 
 
 
-  public GroupProperties createFlowLog(Boolean createFlowLog) {
+  public GroupProperties createPcc(Boolean createPcc) {
     
-    this.createFlowLog = createFlowLog;
+    this.createPcc = createPcc;
     return this;
   }
 
    /**
-   * Create Flow Logs privilege.
-   * @return createFlowLog
+   * Create pcc privilege.
+   * @return createPcc
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Create Flow Logs privilege.")
+  @ApiModelProperty(value = "Create pcc privilege.")
 
-  public Boolean getCreateFlowLog() {
-    return createFlowLog;
+  public Boolean getCreatePcc() {
+    return createPcc;
   }
 
 
-  public void setCreateFlowLog(Boolean createFlowLog) {
-    this.createFlowLog = createFlowLog;
+  public void setCreatePcc(Boolean createPcc) {
+    this.createPcc = createPcc;
   }
 
 
 
-  public GroupProperties accessAndManageMonitoring(Boolean accessAndManageMonitoring) {
+  public GroupProperties createSnapshot(Boolean createSnapshot) {
     
-    this.accessAndManageMonitoring = accessAndManageMonitoring;
+    this.createSnapshot = createSnapshot;
     return this;
   }
 
    /**
-   * Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS).
-   * @return accessAndManageMonitoring
+   * Create snapshot privilege.
+   * @return createSnapshot
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS).")
+  @ApiModelProperty(value = "Create snapshot privilege.")
 
-  public Boolean getAccessAndManageMonitoring() {
-    return accessAndManageMonitoring;
+  public Boolean getCreateSnapshot() {
+    return createSnapshot;
   }
 
 
-  public void setAccessAndManageMonitoring(Boolean accessAndManageMonitoring) {
-    this.accessAndManageMonitoring = accessAndManageMonitoring;
-  }
-
-
-
-  public GroupProperties accessAndManageCertificates(Boolean accessAndManageCertificates) {
-    
-    this.accessAndManageCertificates = accessAndManageCertificates;
-    return this;
-  }
-
-   /**
-   * Privilege for a group to access and manage certificates.
-   * @return accessAndManageCertificates
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Privilege for a group to access and manage certificates.")
-
-  public Boolean getAccessAndManageCertificates() {
-    return accessAndManageCertificates;
-  }
-
-
-  public void setAccessAndManageCertificates(Boolean accessAndManageCertificates) {
-    this.accessAndManageCertificates = accessAndManageCertificates;
+  public void setCreateSnapshot(Boolean createSnapshot) {
+    this.createSnapshot = createSnapshot;
   }
 
 
@@ -437,6 +404,126 @@ public class GroupProperties {
   }
 
 
+
+  public GroupProperties manageDataplatform(Boolean manageDataplatform) {
+    
+    this.manageDataplatform = manageDataplatform;
+    return this;
+  }
+
+   /**
+   * Privilege for a group to access and manage the Data Platform.
+   * @return manageDataplatform
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Privilege for a group to access and manage the Data Platform.")
+
+  public Boolean getManageDataplatform() {
+    return manageDataplatform;
+  }
+
+
+  public void setManageDataplatform(Boolean manageDataplatform) {
+    this.manageDataplatform = manageDataplatform;
+  }
+
+
+
+  public GroupProperties manageRegistry(Boolean manageRegistry) {
+    
+    this.manageRegistry = manageRegistry;
+    return this;
+  }
+
+   /**
+   * Privilege for group accessing container registry related functionality.
+   * @return manageRegistry
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Privilege for group accessing container registry related functionality.")
+
+  public Boolean getManageRegistry() {
+    return manageRegistry;
+  }
+
+
+  public void setManageRegistry(Boolean manageRegistry) {
+    this.manageRegistry = manageRegistry;
+  }
+
+
+
+  public GroupProperties name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * The name of the resource.
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "My resource", value = "The name of the resource.")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+
+  public GroupProperties reserveIp(Boolean reserveIp) {
+    
+    this.reserveIp = reserveIp;
+    return this;
+  }
+
+   /**
+   * Reserve IP block privilege.
+   * @return reserveIp
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Reserve IP block privilege.")
+
+  public Boolean getReserveIp() {
+    return reserveIp;
+  }
+
+
+  public void setReserveIp(Boolean reserveIp) {
+    this.reserveIp = reserveIp;
+  }
+
+
+
+  public GroupProperties s3Privilege(Boolean s3Privilege) {
+    
+    this.s3Privilege = s3Privilege;
+    return this;
+  }
+
+   /**
+   * S3 privilege.
+   * @return s3Privilege
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "S3 privilege.")
+
+  public Boolean getS3Privilege() {
+    return s3Privilege;
+  }
+
+
+  public void setS3Privilege(Boolean s3Privilege) {
+    this.s3Privilege = s3Privilege;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -446,7 +533,7 @@ public class GroupProperties {
       return false;
     }
     GroupProperties groupProperties = (GroupProperties) o;
-    return Objects.equals(this.name, groupProperties.name) && Objects.equals(this.createDataCenter, groupProperties.createDataCenter) && Objects.equals(this.createSnapshot, groupProperties.createSnapshot) && Objects.equals(this.reserveIp, groupProperties.reserveIp) && Objects.equals(this.accessActivityLog, groupProperties.accessActivityLog) && Objects.equals(this.createPcc, groupProperties.createPcc) && Objects.equals(this.s3Privilege, groupProperties.s3Privilege) && Objects.equals(this.createBackupUnit, groupProperties.createBackupUnit) && Objects.equals(this.createInternetAccess, groupProperties.createInternetAccess) && Objects.equals(this.createK8sCluster, groupProperties.createK8sCluster) && Objects.equals(this.createFlowLog, groupProperties.createFlowLog) && Objects.equals(this.accessAndManageMonitoring, groupProperties.accessAndManageMonitoring) && Objects.equals(this.accessAndManageCertificates, groupProperties.accessAndManageCertificates) && Objects.equals(this.manageDBaaS, groupProperties.manageDBaaS);
+    return Objects.equals(this.accessActivityLog, groupProperties.accessActivityLog) && Objects.equals(this.accessAndManageCertificates, groupProperties.accessAndManageCertificates) && Objects.equals(this.accessAndManageDns, groupProperties.accessAndManageDns) && Objects.equals(this.accessAndManageMonitoring, groupProperties.accessAndManageMonitoring) && Objects.equals(this.createBackupUnit, groupProperties.createBackupUnit) && Objects.equals(this.createDataCenter, groupProperties.createDataCenter) && Objects.equals(this.createFlowLog, groupProperties.createFlowLog) && Objects.equals(this.createInternetAccess, groupProperties.createInternetAccess) && Objects.equals(this.createK8sCluster, groupProperties.createK8sCluster) && Objects.equals(this.createPcc, groupProperties.createPcc) && Objects.equals(this.createSnapshot, groupProperties.createSnapshot) && Objects.equals(this.manageDBaaS, groupProperties.manageDBaaS) && Objects.equals(this.manageDataplatform, groupProperties.manageDataplatform) && Objects.equals(this.manageRegistry, groupProperties.manageRegistry) && Objects.equals(this.name, groupProperties.name) && Objects.equals(this.reserveIp, groupProperties.reserveIp) && Objects.equals(this.s3Privilege, groupProperties.s3Privilege);
   }
 
 
@@ -457,33 +544,39 @@ public class GroupProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class GroupProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    accessActivityLog: ").append(toIndentedString(accessActivityLog)).append("\n");
+
+    sb.append("    accessAndManageCertificates: ").append(toIndentedString(accessAndManageCertificates)).append("\n");
+
+    sb.append("    accessAndManageDns: ").append(toIndentedString(accessAndManageDns)).append("\n");
+
+    sb.append("    accessAndManageMonitoring: ").append(toIndentedString(accessAndManageMonitoring)).append("\n");
+
+    sb.append("    createBackupUnit: ").append(toIndentedString(createBackupUnit)).append("\n");
 
     sb.append("    createDataCenter: ").append(toIndentedString(createDataCenter)).append("\n");
 
-    sb.append("    createSnapshot: ").append(toIndentedString(createSnapshot)).append("\n");
-
-    sb.append("    reserveIp: ").append(toIndentedString(reserveIp)).append("\n");
-
-    sb.append("    accessActivityLog: ").append(toIndentedString(accessActivityLog)).append("\n");
-
-    sb.append("    createPcc: ").append(toIndentedString(createPcc)).append("\n");
-
-    sb.append("    s3Privilege: ").append(toIndentedString(s3Privilege)).append("\n");
-
-    sb.append("    createBackupUnit: ").append(toIndentedString(createBackupUnit)).append("\n");
+    sb.append("    createFlowLog: ").append(toIndentedString(createFlowLog)).append("\n");
 
     sb.append("    createInternetAccess: ").append(toIndentedString(createInternetAccess)).append("\n");
 
     sb.append("    createK8sCluster: ").append(toIndentedString(createK8sCluster)).append("\n");
 
-    sb.append("    createFlowLog: ").append(toIndentedString(createFlowLog)).append("\n");
+    sb.append("    createPcc: ").append(toIndentedString(createPcc)).append("\n");
 
-    sb.append("    accessAndManageMonitoring: ").append(toIndentedString(accessAndManageMonitoring)).append("\n");
-
-    sb.append("    accessAndManageCertificates: ").append(toIndentedString(accessAndManageCertificates)).append("\n");
+    sb.append("    createSnapshot: ").append(toIndentedString(createSnapshot)).append("\n");
 
     sb.append("    manageDBaaS: ").append(toIndentedString(manageDBaaS)).append("\n");
+
+    sb.append("    manageDataplatform: ").append(toIndentedString(manageDataplatform)).append("\n");
+
+    sb.append("    manageRegistry: ").append(toIndentedString(manageRegistry)).append("\n");
+
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
+    sb.append("    reserveIp: ").append(toIndentedString(reserveIp)).append("\n");
+
+    sb.append("    s3Privilege: ").append(toIndentedString(s3Privilege)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -499,5 +592,14 @@ public class GroupProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// GroupProperties instantiates a new GroupProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public GroupProperties() {
+
 }
 
+
+}

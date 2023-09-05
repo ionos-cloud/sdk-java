@@ -30,13 +30,28 @@ import java.net.URI;
 /**
  * LabelResource
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class LabelResource {
   
+  public static final String SERIALIZED_NAME_HREF = "href";
+  @SerializedName(SERIALIZED_NAME_HREF)
+  private URI href;
+
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
+
+
+  public static final String SERIALIZED_NAME_METADATA = "metadata";
+  @SerializedName(SERIALIZED_NAME_METADATA)
+  private NoStateMetaData metadata;
+
+
+  public static final String SERIALIZED_NAME_PROPERTIES = "properties";
+  @SerializedName(SERIALIZED_NAME_PROPERTIES)
+  private LabelResourceProperties properties;
 
 
   /**
@@ -89,58 +104,7 @@ public class LabelResource {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private TypeEnum type;
 
-
-  public static final String SERIALIZED_NAME_HREF = "href";
-  @SerializedName(SERIALIZED_NAME_HREF)
-  private URI href;
-
-
-  public static final String SERIALIZED_NAME_METADATA = "metadata";
-  @SerializedName(SERIALIZED_NAME_METADATA)
-  private NoStateMetaData metadata;
-
-
-  public static final String SERIALIZED_NAME_PROPERTIES = "properties";
-  @SerializedName(SERIALIZED_NAME_PROPERTIES)
-  private LabelResourceProperties properties;
-
   
-
-   /**
-   * Label on a resource is identified using label key.
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "environment", value = "Label on a resource is identified using label key.")
-
-  public String getId() {
-    return id;
-  }
-
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-
-   /**
-   * The type of object that has been created.
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The type of object that has been created.")
-
-  public TypeEnum getType() {
-    return type;
-  }
-
-
-  public void setType(TypeEnum type) {
-    this.type = type;
-  }
-
-
 
    /**
    * URL to the object representation (absolute path).
@@ -156,6 +120,24 @@ public class LabelResource {
 
   public void setHref(URI href) {
     this.href = href;
+  }
+
+
+
+   /**
+   * Label on a resource is identified using label key.
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "environment", value = "Label on a resource is identified using label key.")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
   }
 
 
@@ -206,6 +188,24 @@ public class LabelResource {
   }
 
 
+
+   /**
+   * The type of object that has been created.
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The type of object that has been created.")
+
+  public TypeEnum getType() {
+    return type;
+  }
+
+
+  public void setType(TypeEnum type) {
+    this.type = type;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -215,7 +215,7 @@ public class LabelResource {
       return false;
     }
     LabelResource labelResource = (LabelResource) o;
-    return Objects.equals(this.id, labelResource.id) && Objects.equals(this.type, labelResource.type) && Objects.equals(this.href, labelResource.href) && Objects.equals(this.metadata, labelResource.metadata) && Objects.equals(this.properties, labelResource.properties);
+    return Objects.equals(this.href, labelResource.href) && Objects.equals(this.id, labelResource.id) && Objects.equals(this.metadata, labelResource.metadata) && Objects.equals(this.properties, labelResource.properties) && Objects.equals(this.type, labelResource.type);
   }
 
 
@@ -226,15 +226,15 @@ public class LabelResource {
     StringBuilder sb = new StringBuilder();
     sb.append("class LabelResource {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
 
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
 
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -250,5 +250,17 @@ public class LabelResource {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// LabelResource instantiates a new LabelResource object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public LabelResource(LabelResourceProperties Properties) {
+
+	this.properties = Properties;
 }
 
+public LabelResource() {
+}
+
+}

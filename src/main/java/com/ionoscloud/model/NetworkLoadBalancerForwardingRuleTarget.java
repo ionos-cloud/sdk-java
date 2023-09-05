@@ -28,10 +28,15 @@ import java.io.IOException;
 /**
  * NetworkLoadBalancerForwardingRuleTarget
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRuleTarget {
   
+  public static final String SERIALIZED_NAME_HEALTH_CHECK = "healthCheck";
+  @SerializedName(SERIALIZED_NAME_HEALTH_CHECK)
+  private NetworkLoadBalancerForwardingRuleTargetHealthCheck healthCheck;
+
+
   public static final String SERIALIZED_NAME_IP = "ip";
   @SerializedName(SERIALIZED_NAME_IP)
   private String ip;
@@ -46,12 +51,31 @@ public class NetworkLoadBalancerForwardingRuleTarget {
   @SerializedName(SERIALIZED_NAME_WEIGHT)
   private Integer weight;
 
-
-  public static final String SERIALIZED_NAME_HEALTH_CHECK = "healthCheck";
-  @SerializedName(SERIALIZED_NAME_HEALTH_CHECK)
-  private NetworkLoadBalancerForwardingRuleTargetHealthCheck healthCheck;
-
   
+
+  public NetworkLoadBalancerForwardingRuleTarget healthCheck(NetworkLoadBalancerForwardingRuleTargetHealthCheck healthCheck) {
+    
+    this.healthCheck = healthCheck;
+    return this;
+  }
+
+   /**
+   * Get healthCheck
+   * @return healthCheck
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NetworkLoadBalancerForwardingRuleTargetHealthCheck getHealthCheck() {
+    return healthCheck;
+  }
+
+
+  public void setHealthCheck(NetworkLoadBalancerForwardingRuleTargetHealthCheck healthCheck) {
+    this.healthCheck = healthCheck;
+  }
+
+
 
   public NetworkLoadBalancerForwardingRuleTarget ip(String ip) {
     
@@ -121,30 +145,6 @@ public class NetworkLoadBalancerForwardingRuleTarget {
   }
 
 
-
-  public NetworkLoadBalancerForwardingRuleTarget healthCheck(NetworkLoadBalancerForwardingRuleTargetHealthCheck healthCheck) {
-    
-    this.healthCheck = healthCheck;
-    return this;
-  }
-
-   /**
-   * Get healthCheck
-   * @return healthCheck
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public NetworkLoadBalancerForwardingRuleTargetHealthCheck getHealthCheck() {
-    return healthCheck;
-  }
-
-
-  public void setHealthCheck(NetworkLoadBalancerForwardingRuleTargetHealthCheck healthCheck) {
-    this.healthCheck = healthCheck;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -154,7 +154,7 @@ public class NetworkLoadBalancerForwardingRuleTarget {
       return false;
     }
     NetworkLoadBalancerForwardingRuleTarget networkLoadBalancerForwardingRuleTarget = (NetworkLoadBalancerForwardingRuleTarget) o;
-    return Objects.equals(this.ip, networkLoadBalancerForwardingRuleTarget.ip) && Objects.equals(this.port, networkLoadBalancerForwardingRuleTarget.port) && Objects.equals(this.weight, networkLoadBalancerForwardingRuleTarget.weight) && Objects.equals(this.healthCheck, networkLoadBalancerForwardingRuleTarget.healthCheck);
+    return Objects.equals(this.healthCheck, networkLoadBalancerForwardingRuleTarget.healthCheck) && Objects.equals(this.ip, networkLoadBalancerForwardingRuleTarget.ip) && Objects.equals(this.port, networkLoadBalancerForwardingRuleTarget.port) && Objects.equals(this.weight, networkLoadBalancerForwardingRuleTarget.weight);
   }
 
 
@@ -165,13 +165,13 @@ public class NetworkLoadBalancerForwardingRuleTarget {
     StringBuilder sb = new StringBuilder();
     sb.append("class NetworkLoadBalancerForwardingRuleTarget {\n");
     
+    sb.append("    healthCheck: ").append(toIndentedString(healthCheck)).append("\n");
+
     sb.append("    ip: ").append(toIndentedString(ip)).append("\n");
 
     sb.append("    port: ").append(toIndentedString(port)).append("\n");
 
     sb.append("    weight: ").append(toIndentedString(weight)).append("\n");
-
-    sb.append("    healthCheck: ").append(toIndentedString(healthCheck)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -187,5 +187,19 @@ public class NetworkLoadBalancerForwardingRuleTarget {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// NetworkLoadBalancerForwardingRuleTarget instantiates a new NetworkLoadBalancerForwardingRuleTarget object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public NetworkLoadBalancerForwardingRuleTarget(String Ip, Integer Port, Integer Weight) {
+
+	this.ip = Ip;
+	this.port = Port;
+	this.weight = Weight;
 }
 
+public NetworkLoadBalancerForwardingRuleTarget() {
+}
+
+}

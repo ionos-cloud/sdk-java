@@ -27,18 +27,18 @@ import java.io.IOException;
 /**
  * KubernetesNodeProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class KubernetesNodeProperties {
   
+  public static final String SERIALIZED_NAME_K8S_VERSION = "k8sVersion";
+  @SerializedName(SERIALIZED_NAME_K8S_VERSION)
+  private String k8sVersion;
+
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
-
-
-  public static final String SERIALIZED_NAME_PUBLIC_I_P = "publicIP";
-  @SerializedName(SERIALIZED_NAME_PUBLIC_I_P)
-  private String publicIP;
 
 
   public static final String SERIALIZED_NAME_PRIVATE_I_P = "privateIP";
@@ -46,11 +46,34 @@ public class KubernetesNodeProperties {
   private String privateIP;
 
 
-  public static final String SERIALIZED_NAME_K8S_VERSION = "k8sVersion";
-  @SerializedName(SERIALIZED_NAME_K8S_VERSION)
-  private String k8sVersion;
+  public static final String SERIALIZED_NAME_PUBLIC_I_P = "publicIP";
+  @SerializedName(SERIALIZED_NAME_PUBLIC_I_P)
+  private String publicIP;
 
   
+
+  public KubernetesNodeProperties k8sVersion(String k8sVersion) {
+    
+    this.k8sVersion = k8sVersion;
+    return this;
+  }
+
+   /**
+   * The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.
+   * @return k8sVersion
+  **/
+  @ApiModelProperty(example = "1.15.4", required = true, value = "The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.")
+
+  public String getK8sVersion() {
+    return k8sVersion;
+  }
+
+
+  public void setK8sVersion(String k8sVersion) {
+    this.k8sVersion = k8sVersion;
+  }
+
+
 
   public KubernetesNodeProperties name(String name) {
     
@@ -59,10 +82,10 @@ public class KubernetesNodeProperties {
   }
 
    /**
-   * A Kubernetes node name.
+   * The Kubernetes node name.
    * @return name
   **/
-  @ApiModelProperty(example = "k8s-node", required = true, value = "A Kubernetes node name.")
+  @ApiModelProperty(example = "K8s-node", required = true, value = "The Kubernetes node name.")
 
   public String getName() {
     return name;
@@ -75,30 +98,6 @@ public class KubernetesNodeProperties {
 
 
 
-  public KubernetesNodeProperties publicIP(String publicIP) {
-    
-    this.publicIP = publicIP;
-    return this;
-  }
-
-   /**
-   * A valid public IP.
-   * @return publicIP
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "192.168.23.2", value = "A valid public IP.")
-
-  public String getPublicIP() {
-    return publicIP;
-  }
-
-
-  public void setPublicIP(String publicIP) {
-    this.publicIP = publicIP;
-  }
-
-
-
   public KubernetesNodeProperties privateIP(String privateIP) {
     
     this.privateIP = privateIP;
@@ -106,11 +105,11 @@ public class KubernetesNodeProperties {
   }
 
    /**
-   * A valid private IP.
+   * The private IP associated with the node.
    * @return privateIP
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "192.168.23.2", value = "A valid private IP.")
+  @ApiModelProperty(example = "192.168.23.2", value = "The private IP associated with the node.")
 
   public String getPrivateIP() {
     return privateIP;
@@ -123,25 +122,26 @@ public class KubernetesNodeProperties {
 
 
 
-  public KubernetesNodeProperties k8sVersion(String k8sVersion) {
+  public KubernetesNodeProperties publicIP(String publicIP) {
     
-    this.k8sVersion = k8sVersion;
+    this.publicIP = publicIP;
     return this;
   }
 
    /**
-   * The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.
-   * @return k8sVersion
+   * The public IP associated with the node.
+   * @return publicIP
   **/
-  @ApiModelProperty(example = "1.15.4", required = true, value = "The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster's nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "192.168.23.2", value = "The public IP associated with the node.")
 
-  public String getK8sVersion() {
-    return k8sVersion;
+  public String getPublicIP() {
+    return publicIP;
   }
 
 
-  public void setK8sVersion(String k8sVersion) {
-    this.k8sVersion = k8sVersion;
+  public void setPublicIP(String publicIP) {
+    this.publicIP = publicIP;
   }
 
 
@@ -154,7 +154,7 @@ public class KubernetesNodeProperties {
       return false;
     }
     KubernetesNodeProperties kubernetesNodeProperties = (KubernetesNodeProperties) o;
-    return Objects.equals(this.name, kubernetesNodeProperties.name) && Objects.equals(this.publicIP, kubernetesNodeProperties.publicIP) && Objects.equals(this.privateIP, kubernetesNodeProperties.privateIP) && Objects.equals(this.k8sVersion, kubernetesNodeProperties.k8sVersion);
+    return Objects.equals(this.k8sVersion, kubernetesNodeProperties.k8sVersion) && Objects.equals(this.name, kubernetesNodeProperties.name) && Objects.equals(this.privateIP, kubernetesNodeProperties.privateIP) && Objects.equals(this.publicIP, kubernetesNodeProperties.publicIP);
   }
 
 
@@ -165,13 +165,13 @@ public class KubernetesNodeProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodeProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    k8sVersion: ").append(toIndentedString(k8sVersion)).append("\n");
 
-    sb.append("    publicIP: ").append(toIndentedString(publicIP)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
 
     sb.append("    privateIP: ").append(toIndentedString(privateIP)).append("\n");
 
-    sb.append("    k8sVersion: ").append(toIndentedString(k8sVersion)).append("\n");
+    sb.append("    publicIP: ").append(toIndentedString(publicIP)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -187,5 +187,18 @@ public class KubernetesNodeProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// KubernetesNodeProperties instantiates a new KubernetesNodeProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public KubernetesNodeProperties(String K8sVersion, String Name) {
+
+	this.k8sVersion = K8sVersion;
+	this.name = Name;
 }
 
+public KubernetesNodeProperties() {
+}
+
+}

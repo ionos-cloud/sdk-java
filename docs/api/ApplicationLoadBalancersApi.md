@@ -4,33 +4,33 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**datacentersApplicationloadbalancersDelete**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersdelete) | **DELETE** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Delete Application Load Balancers |
-| [**datacentersApplicationloadbalancersFindByApplicationLoadBalancerId**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersfindbyapplicationloadbalancerid) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Retrieve Application Load Balancers |
-| [**datacentersApplicationloadbalancersFlowlogsDelete**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsdelete) | **DELETE** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Delete ALB Flow Logs |
-| [**datacentersApplicationloadbalancersFlowlogsFindByFlowLogId**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsfindbyflowlogid) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Retrieve ALB Flow Logs |
-| [**datacentersApplicationloadbalancersFlowlogsGet**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsget) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs | List ALB Flow Logs |
-| [**datacentersApplicationloadbalancersFlowlogsPatch**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogspatch) | **PATCH** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Partially modify ALB Flow Logs |
-| [**datacentersApplicationloadbalancersFlowlogsPost**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogspost) | **POST** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs | Create ALB Flow Logs |
-| [**datacentersApplicationloadbalancersFlowlogsPut**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsput) | **PUT** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Modify ALB Flow Logs |
-| [**datacentersApplicationloadbalancersForwardingrulesDelete**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesdelete) | **DELETE** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Delete ALB forwarding rules |
-| [**datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesfindbyforwardingruleid) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Retrieve ALB forwarding rules |
-| [**datacentersApplicationloadbalancersForwardingrulesGet**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesget) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules | List ALB forwarding rules |
-| [**datacentersApplicationloadbalancersForwardingrulesPatch**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulespatch) | **PATCH** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Partially modify ALB forwarding rules |
-| [**datacentersApplicationloadbalancersForwardingrulesPost**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulespost) | **POST** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules | Create ALB forwarding rules |
-| [**datacentersApplicationloadbalancersForwardingrulesPut**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesput) | **PUT** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Modify ALB forwarding rules |
-| [**datacentersApplicationloadbalancersGet**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersget) | **GET** /datacenters/{datacenterId}/applicationloadbalancers | List Application Load Balancers |
-| [**datacentersApplicationloadbalancersPatch**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancerspatch) | **PATCH** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Partially modify Application Load Balancers |
-| [**datacentersApplicationloadbalancersPost**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancerspost) | **POST** /datacenters/{datacenterId}/applicationloadbalancers | Create Application Load Balancers |
-| [**datacentersApplicationloadbalancersPut**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersput) | **PUT** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Modify Application Load Balancers |
+| [**datacentersApplicationloadbalancersDelete**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersdelete) | **DELETE** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Delete an Application Load Balancer by ID |
+| [**datacentersApplicationloadbalancersFindByApplicationLoadBalancerId**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersfindbyapplicationloadbalancerid) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Get an Application Load Balancer by ID |
+| [**datacentersApplicationloadbalancersFlowlogsDelete**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsdelete) | **DELETE** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Delete an ALB Flow Log by ID |
+| [**datacentersApplicationloadbalancersFlowlogsFindByFlowLogId**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsfindbyflowlogid) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Get an ALB Flow Log by ID |
+| [**datacentersApplicationloadbalancersFlowlogsGet**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsget) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs | Get ALB Flow Logs |
+| [**datacentersApplicationloadbalancersFlowlogsPatch**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogspatch) | **PATCH** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Partially Modify an ALB Flow Log by ID |
+| [**datacentersApplicationloadbalancersFlowlogsPost**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogspost) | **POST** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs | Create an ALB Flow Log |
+| [**datacentersApplicationloadbalancersFlowlogsPut**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsput) | **PUT** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Modify an ALB Flow Log by ID |
+| [**datacentersApplicationloadbalancersForwardingrulesDelete**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesdelete) | **DELETE** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Delete an ALB Forwarding Rule by ID |
+| [**datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesfindbyforwardingruleid) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Get an ALB Forwarding Rule by ID |
+| [**datacentersApplicationloadbalancersForwardingrulesGet**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesget) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules | Get ALB Forwarding Rules |
+| [**datacentersApplicationloadbalancersForwardingrulesPatch**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulespatch) | **PATCH** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Partially modify an ALB Forwarding Rule by ID |
+| [**datacentersApplicationloadbalancersForwardingrulesPost**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulespost) | **POST** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules | Create an ALB Forwarding Rule |
+| [**datacentersApplicationloadbalancersForwardingrulesPut**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesput) | **PUT** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Modify an ALB Forwarding Rule by ID |
+| [**datacentersApplicationloadbalancersGet**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersget) | **GET** /datacenters/{datacenterId}/applicationloadbalancers | Get Application Load Balancers |
+| [**datacentersApplicationloadbalancersPatch**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancerspatch) | **PATCH** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Partially Modify an Application Load Balancer by ID |
+| [**datacentersApplicationloadbalancersPost**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancerspost) | **POST** /datacenters/{datacenterId}/applicationloadbalancers | Create an Application Load Balancer |
+| [**datacentersApplicationloadbalancersPut**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersput) | **PUT** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Modify an Application Load Balancer by ID |
 
 
 <a name="datacentersApplicationloadbalancersDelete"></a>
 # **datacentersApplicationloadbalancersDelete**
 > datacentersApplicationloadbalancersDelete(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber)
 
-Delete Application Load Balancers
+Delete an Application Load Balancer by ID
 
-Remove the specified Application Load Balancer from the data center..
+Removes the specified Application Load Balancer from the data center.
 
 ### Parameters
 
@@ -51,11 +51,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -70,6 +73,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -78,8 +83,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.datacentersApplicationloadbalancersDelete(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.datacentersApplicationloadbalancersDeleteWithHttpInfo(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersDelete");
       System.err.println("Status code: " + e.getCode());
@@ -115,9 +119,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersFindByApplicationLoadBalancerId**
 > ApplicationLoadBalancer datacentersApplicationloadbalancersFindByApplicationLoadBalancerId(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber)
 
-Retrieve Application Load Balancers
+Get an Application Load Balancer by ID
 
-Retrieve the properties of the specified Application Load Balancer within the data center.
+Retrieves the properties of the specified Application Load Balancer within the data center.
 
 ### Parameters
 
@@ -138,11 +142,14 @@ Retrieve the properties of the specified Application Load Balancer within the da
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersFindByApplicationLoadBalancerIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersFindByApplicationLoadBalancerId instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -157,6 +164,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -165,8 +174,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      ApplicationLoadBalancer result = apiInstance.datacentersApplicationloadbalancersFindByApplicationLoadBalancerId(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<ApplicationLoadBalancer> result = apiInstance.datacentersApplicationloadbalancersFindByApplicationLoadBalancerIdWithHttpInfo(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersFindByApplicationLoadBalancerId");
       System.err.println("Status code: " + e.getCode());
@@ -202,9 +213,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersFlowlogsDelete**
 > datacentersApplicationloadbalancersFlowlogsDelete(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber)
 
-Delete ALB Flow Logs
+Delete an ALB Flow Log by ID
 
-Delete the specified Application Load Balancer Flow Log.
+Deletes the Application Load Balancer flow log specified by its ID.
 
 ### Parameters
 
@@ -212,7 +223,7 @@ Delete the specified Application Load Balancer Flow Log.
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the data center. ||
 | **applicationLoadBalancerId** | **String**| The unique ID of the Application Load Balancer. ||
-| **flowLogId** | **String**| The unique ID of the Flow Log. ||
+| **flowLogId** | **String**| The unique ID of the flow log. ||
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
 | **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
@@ -226,11 +237,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersFlowlogsDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersFlowlogsDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -245,17 +259,18 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String applicationLoadBalancerId = "applicationLoadBalancerId_example"; // String | The unique ID of the Application Load Balancer.
-    String flowLogId = "flowLogId_example"; // String | The unique ID of the Flow Log.
+    String flowLogId = "flowLogId_example"; // String | The unique ID of the flow log.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.datacentersApplicationloadbalancersFlowlogsDelete(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.datacentersApplicationloadbalancersFlowlogsDeleteWithHttpInfo(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersFlowlogsDelete");
       System.err.println("Status code: " + e.getCode());
@@ -291,9 +306,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersFlowlogsFindByFlowLogId**
 > FlowLog datacentersApplicationloadbalancersFlowlogsFindByFlowLogId(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber)
 
-Retrieve ALB Flow Logs
+Get an ALB Flow Log by ID
 
-Retrieve the specified Application Load Balancer Flow Log.
+Retrieves the Application Load Balancer flow log specified by its ID.
 
 ### Parameters
 
@@ -301,7 +316,7 @@ Retrieve the specified Application Load Balancer Flow Log.
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the data center. ||
 | **applicationLoadBalancerId** | **String**| The unique ID of the Application Load Balancer. ||
-| **flowLogId** | **String**| The unique ID of the Flow Log. ||
+| **flowLogId** | **String**| The unique ID of the flow log. ||
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
 | **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
@@ -315,11 +330,14 @@ Retrieve the specified Application Load Balancer Flow Log.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersFlowlogsFindByFlowLogIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersFlowlogsFindByFlowLogId instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -334,17 +352,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String applicationLoadBalancerId = "applicationLoadBalancerId_example"; // String | The unique ID of the Application Load Balancer.
-    String flowLogId = "flowLogId_example"; // String | The unique ID of the Flow Log.
+    String flowLogId = "flowLogId_example"; // String | The unique ID of the flow log.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      FlowLog result = apiInstance.datacentersApplicationloadbalancersFlowlogsFindByFlowLogId(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<FlowLog> result = apiInstance.datacentersApplicationloadbalancersFlowlogsFindByFlowLogIdWithHttpInfo(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersFlowlogsFindByFlowLogId");
       System.err.println("Status code: " + e.getCode());
@@ -380,9 +402,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersFlowlogsGet**
 > FlowLogs datacentersApplicationloadbalancersFlowlogsGet(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber)
 
-List ALB Flow Logs
+Get ALB Flow Logs
 
-List the Flow Logs for the specified Application Load Balancer.
+Retrieves the flow logs for the specified Application Load Balancer.
 
 ### Parameters
 
@@ -406,11 +428,14 @@ List the Flow Logs for the specified Application Load Balancer.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersFlowlogsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersFlowlogsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -425,6 +450,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -432,12 +459,14 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      FlowLogs result = apiInstance.datacentersApplicationloadbalancersFlowlogsGet(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<FlowLogs> result = apiInstance.datacentersApplicationloadbalancersFlowlogsGetWithHttpInfo(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersFlowlogsGet");
       System.err.println("Status code: " + e.getCode());
@@ -476,9 +505,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersFlowlogsPatch**
 > FlowLog datacentersApplicationloadbalancersFlowlogsPatch(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLogProperties, pretty, depth, xContractNumber)
 
-Partially modify ALB Flow Logs
+Partially Modify an ALB Flow Log by ID
 
-Update the properties of the specified Application Load Balancer Flow Log.
+Updates the properties of the Application Load Balancer flow log specified by its ID.
 
 ### Parameters
 
@@ -486,8 +515,8 @@ Update the properties of the specified Application Load Balancer Flow Log.
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the data center. ||
 | **applicationLoadBalancerId** | **String**| The unique ID of the Application Load Balancer. ||
-| **flowLogId** | **String**| The unique ID of the Flow Log. ||
-| **applicationLoadBalancerFlowLogProperties** |  [**FlowLogProperties**](../models/FlowLogProperties.md)| The properties of the ALB Flow Log to be updated. ||
+| **flowLogId** | **String**| The unique ID of the flow log. ||
+| **applicationLoadBalancerFlowLogProperties** |  [**FlowLogProperties**](../models/FlowLogProperties.md)| The properties of the ALB flow log to be updated. ||
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
 | **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
@@ -501,11 +530,14 @@ Update the properties of the specified Application Load Balancer Flow Log.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersFlowlogsPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersFlowlogsPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -520,18 +552,26 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String applicationLoadBalancerId = "applicationLoadBalancerId_example"; // String | The unique ID of the Application Load Balancer.
-    String flowLogId = "flowLogId_example"; // String | The unique ID of the Flow Log.
-    FlowLogProperties applicationLoadBalancerFlowLogProperties = new FlowLogProperties(); // FlowLogProperties | The properties of the ALB Flow Log to be updated.
+    String flowLogId = "flowLogId_example"; // String | The unique ID of the flow log.
+    action = new String(); // String | Specifies the traffic action pattern.
+    bucket = new String(); // String | The S3 bucket name of an existing IONOS Cloud S3 bucket.
+    direction = new String(); // String | Specifies the traffic direction pattern.
+    name = new String(); // String | The resource name.
+    applicationLoadBalancerFlowLogProperties = new FlowLogProperties(String, String, String, String); // FlowLogProperties | The properties of the ALB flow log to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      FlowLog result = apiInstance.datacentersApplicationloadbalancersFlowlogsPatch(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLogProperties, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<FlowLog> result = apiInstance.datacentersApplicationloadbalancersFlowlogsPatchWithHttpInfo(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLogProperties, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersFlowlogsPatch");
       System.err.println("Status code: " + e.getCode());
@@ -567,9 +607,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersFlowlogsPost**
 > FlowLog datacentersApplicationloadbalancersFlowlogsPost(datacenterId, applicationLoadBalancerId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber)
 
-Create ALB Flow Logs
+Create an ALB Flow Log
 
-Add a new Flow Log for the Application Load Balancer.
+Creates a flow log for the Application Load Balancer specified by ID.
 
 ### Parameters
 
@@ -577,7 +617,7 @@ Add a new Flow Log for the Application Load Balancer.
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the data center. ||
 | **applicationLoadBalancerId** | **String**| The unique ID of the Application Load Balancer. ||
-| **applicationLoadBalancerFlowLog** |  [**FlowLog**](../models/FlowLog.md)| The Flow Log to create. ||
+| **applicationLoadBalancerFlowLog** |  [**FlowLog**](../models/FlowLog.md)| The flow log to create. ||
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
 | **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
@@ -591,11 +631,14 @@ Add a new Flow Log for the Application Load Balancer.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersFlowlogsPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersFlowlogsPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -610,17 +653,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String applicationLoadBalancerId = "applicationLoadBalancerId_example"; // String | The unique ID of the Application Load Balancer.
-    FlowLog applicationLoadBalancerFlowLog = new FlowLog(); // FlowLog | The Flow Log to create.
+    properties = new FlowLogProperties(); // FlowLogProperties | 
+    applicationLoadBalancerFlowLog = new FlowLog(FlowLogProperties); // FlowLog | The flow log to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      FlowLog result = apiInstance.datacentersApplicationloadbalancersFlowlogsPost(datacenterId, applicationLoadBalancerId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<FlowLog> result = apiInstance.datacentersApplicationloadbalancersFlowlogsPostWithHttpInfo(datacenterId, applicationLoadBalancerId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersFlowlogsPost");
       System.err.println("Status code: " + e.getCode());
@@ -656,9 +704,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersFlowlogsPut**
 > FlowLog datacentersApplicationloadbalancersFlowlogsPut(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber)
 
-Modify ALB Flow Logs
+Modify an ALB Flow Log by ID
 
-Modify the specified Application Load Balancer Flow Log.
+Modifies the Application Load Balancer flow log specified by its ID.
 
 ### Parameters
 
@@ -666,8 +714,8 @@ Modify the specified Application Load Balancer Flow Log.
 | ------------- | ------------- | ------------- | ------------- |
 | **datacenterId** | **String**| The unique ID of the data center. ||
 | **applicationLoadBalancerId** | **String**| The unique ID of the Application Load Balancer. ||
-| **flowLogId** | **String**| The unique ID of the Flow Log. ||
-| **applicationLoadBalancerFlowLog** |  [**FlowLogPut**](../models/FlowLogPut.md)| The modified ALB Flow Log. ||
+| **flowLogId** | **String**| The unique ID of the flow log. ||
+| **applicationLoadBalancerFlowLog** |  [**FlowLogPut**](../models/FlowLogPut.md)| The modified ALB flow log. ||
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
 | **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
@@ -681,11 +729,14 @@ Modify the specified Application Load Balancer Flow Log.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersFlowlogsPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersFlowlogsPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -700,18 +751,23 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String applicationLoadBalancerId = "applicationLoadBalancerId_example"; // String | The unique ID of the Application Load Balancer.
-    String flowLogId = "flowLogId_example"; // String | The unique ID of the Flow Log.
-    FlowLogPut applicationLoadBalancerFlowLog = new FlowLogPut(); // FlowLogPut | The modified ALB Flow Log.
+    String flowLogId = "flowLogId_example"; // String | The unique ID of the flow log.
+    properties = new FlowLogProperties(); // FlowLogProperties | 
+    applicationLoadBalancerFlowLog = new FlowLogPut(FlowLogProperties); // FlowLogPut | The modified ALB flow log.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      FlowLog result = apiInstance.datacentersApplicationloadbalancersFlowlogsPut(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<FlowLog> result = apiInstance.datacentersApplicationloadbalancersFlowlogsPutWithHttpInfo(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersFlowlogsPut");
       System.err.println("Status code: " + e.getCode());
@@ -747,9 +803,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersForwardingrulesDelete**
 > datacentersApplicationloadbalancersForwardingrulesDelete(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber)
 
-Delete ALB forwarding rules
+Delete an ALB Forwarding Rule by ID
 
-Delete the specified Application Load Balancer forwarding rule.
+Deletes the Application Load Balancer forwarding rule specified by its ID.
 
 ### Parameters
 
@@ -771,11 +827,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersForwardingrulesDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersForwardingrulesDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -790,6 +849,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -799,8 +860,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.datacentersApplicationloadbalancersForwardingrulesDelete(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.datacentersApplicationloadbalancersForwardingrulesDeleteWithHttpInfo(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersForwardingrulesDelete");
       System.err.println("Status code: " + e.getCode());
@@ -836,9 +896,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId**
 > ApplicationLoadBalancerForwardingRule datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber)
 
-Retrieve ALB forwarding rules
+Get an ALB Forwarding Rule by ID
 
-Retrieve the specified Application Load Balancer forwarding rule.
+Retrieves the Application Load Balancer forwarding rule specified by its ID.
 
 ### Parameters
 
@@ -860,11 +920,14 @@ Retrieve the specified Application Load Balancer forwarding rule.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -879,6 +942,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -888,8 +953,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      ApplicationLoadBalancerForwardingRule result = apiInstance.datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<ApplicationLoadBalancerForwardingRule> result = apiInstance.datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdWithHttpInfo(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId");
       System.err.println("Status code: " + e.getCode());
@@ -925,9 +992,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersForwardingrulesGet**
 > ApplicationLoadBalancerForwardingRules datacentersApplicationloadbalancersForwardingrulesGet(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber)
 
-List ALB forwarding rules
+Get ALB Forwarding Rules
 
-List the forwarding rules for the specified Application Load Balancer.
+Lists the forwarding rules of the specified Application Load Balancer.
 
 ### Parameters
 
@@ -951,11 +1018,14 @@ List the forwarding rules for the specified Application Load Balancer.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersForwardingrulesGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersForwardingrulesGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -970,6 +1040,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -977,12 +1049,14 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      ApplicationLoadBalancerForwardingRules result = apiInstance.datacentersApplicationloadbalancersForwardingrulesGet(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<ApplicationLoadBalancerForwardingRules> result = apiInstance.datacentersApplicationloadbalancersForwardingrulesGetWithHttpInfo(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersForwardingrulesGet");
       System.err.println("Status code: " + e.getCode());
@@ -1021,9 +1095,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersForwardingrulesPatch**
 > ApplicationLoadBalancerForwardingRule datacentersApplicationloadbalancersForwardingrulesPatch(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRuleProperties, pretty, depth, xContractNumber)
 
-Partially modify ALB forwarding rules
+Partially modify an ALB Forwarding Rule by ID
 
-Update the properties of the specified Application Load Balancer forwarding rule.
+Updates the properties of the Application Load Balancer forwarding rule specified by its ID.
 
 ### Parameters
 
@@ -1046,11 +1120,14 @@ Update the properties of the specified Application Load Balancer forwarding rule
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersForwardingrulesPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersForwardingrulesPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1065,18 +1142,26 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String applicationLoadBalancerId = "applicationLoadBalancerId_example"; // String | The unique ID of the Application Load Balancer.
     String forwardingRuleId = "forwardingRuleId_example"; // String | The unique ID of the forwarding rule.
-    ApplicationLoadBalancerForwardingRuleProperties applicationLoadBalancerForwardingRuleProperties = new ApplicationLoadBalancerForwardingRuleProperties(); // ApplicationLoadBalancerForwardingRuleProperties | The properties of the forwarding rule to be updated.
+    listenerIp = new String(); // String | The listening (inbound) IP.
+    listenerPort = new Integer(); // Integer | The listening (inbound) port number; the valid range is 1 to 65535.
+    name = new String(); // String | The name of the Application Load Balancer forwarding rule.
+    protocol = new String(); // String | The balancing protocol.
+    applicationLoadBalancerForwardingRuleProperties = new ApplicationLoadBalancerForwardingRuleProperties(String, Integer, String, String); // ApplicationLoadBalancerForwardingRuleProperties | The properties of the forwarding rule to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      ApplicationLoadBalancerForwardingRule result = apiInstance.datacentersApplicationloadbalancersForwardingrulesPatch(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRuleProperties, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<ApplicationLoadBalancerForwardingRule> result = apiInstance.datacentersApplicationloadbalancersForwardingrulesPatchWithHttpInfo(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRuleProperties, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersForwardingrulesPatch");
       System.err.println("Status code: " + e.getCode());
@@ -1112,9 +1197,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersForwardingrulesPost**
 > ApplicationLoadBalancerForwardingRule datacentersApplicationloadbalancersForwardingrulesPost(datacenterId, applicationLoadBalancerId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber)
 
-Create ALB forwarding rules
+Create an ALB Forwarding Rule
 
-Create a forwarding rule for the Application Load Balancer.
+Creates a forwarding rule for the specified Application Load Balancer.
 
 ### Parameters
 
@@ -1136,11 +1221,14 @@ Create a forwarding rule for the Application Load Balancer.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersForwardingrulesPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersForwardingrulesPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1155,17 +1243,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String applicationLoadBalancerId = "applicationLoadBalancerId_example"; // String | The unique ID of the Application Load Balancer.
-    ApplicationLoadBalancerForwardingRule applicationLoadBalancerForwardingRule = new ApplicationLoadBalancerForwardingRule(); // ApplicationLoadBalancerForwardingRule | The forwarding rule to create.
+    properties = new ApplicationLoadBalancerForwardingRuleProperties(); // ApplicationLoadBalancerForwardingRuleProperties | 
+    applicationLoadBalancerForwardingRule = new ApplicationLoadBalancerForwardingRule(ApplicationLoadBalancerForwardingRuleProperties); // ApplicationLoadBalancerForwardingRule | The forwarding rule to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      ApplicationLoadBalancerForwardingRule result = apiInstance.datacentersApplicationloadbalancersForwardingrulesPost(datacenterId, applicationLoadBalancerId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<ApplicationLoadBalancerForwardingRule> result = apiInstance.datacentersApplicationloadbalancersForwardingrulesPostWithHttpInfo(datacenterId, applicationLoadBalancerId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersForwardingrulesPost");
       System.err.println("Status code: " + e.getCode());
@@ -1201,9 +1294,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersForwardingrulesPut**
 > ApplicationLoadBalancerForwardingRule datacentersApplicationloadbalancersForwardingrulesPut(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber)
 
-Modify ALB forwarding rules
+Modify an ALB Forwarding Rule by ID
 
-Modify the specified Application Load Balancer forwarding rule.
+Modifies the Application Load Balancer forwarding rule specified by its ID.
 
 ### Parameters
 
@@ -1226,11 +1319,14 @@ Modify the specified Application Load Balancer forwarding rule.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersForwardingrulesPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersForwardingrulesPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1245,18 +1341,23 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String applicationLoadBalancerId = "applicationLoadBalancerId_example"; // String | The unique ID of the Application Load Balancer.
     String forwardingRuleId = "forwardingRuleId_example"; // String | The unique ID of the forwarding rule.
-    ApplicationLoadBalancerForwardingRulePut applicationLoadBalancerForwardingRule = new ApplicationLoadBalancerForwardingRulePut(); // ApplicationLoadBalancerForwardingRulePut | The modified ALB forwarding rule.
+    properties = new ApplicationLoadBalancerForwardingRuleProperties(); // ApplicationLoadBalancerForwardingRuleProperties | 
+    applicationLoadBalancerForwardingRule = new ApplicationLoadBalancerForwardingRulePut(ApplicationLoadBalancerForwardingRuleProperties); // ApplicationLoadBalancerForwardingRulePut | The modified ALB forwarding rule.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      ApplicationLoadBalancerForwardingRule result = apiInstance.datacentersApplicationloadbalancersForwardingrulesPut(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<ApplicationLoadBalancerForwardingRule> result = apiInstance.datacentersApplicationloadbalancersForwardingrulesPutWithHttpInfo(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersForwardingrulesPut");
       System.err.println("Status code: " + e.getCode());
@@ -1292,9 +1393,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersGet**
 > ApplicationLoadBalancers datacentersApplicationloadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit)
 
-List Application Load Balancers
+Get Application Load Balancers
 
-List all Application Load Balancers within the data center.
+Lists all Application Load Balancers within a data center.
 
 ### Parameters
 
@@ -1319,11 +1420,14 @@ List all Application Load Balancers within the data center.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1338,6 +1442,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -1346,12 +1452,14 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      ApplicationLoadBalancers result = apiInstance.datacentersApplicationloadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<ApplicationLoadBalancers> result = apiInstance.datacentersApplicationloadbalancersGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersGet");
       System.err.println("Status code: " + e.getCode());
@@ -1392,9 +1500,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersPatch**
 > ApplicationLoadBalancer datacentersApplicationloadbalancersPatch(datacenterId, applicationLoadBalancerId, applicationLoadBalancerProperties, pretty, depth, xContractNumber)
 
-Partially modify Application Load Balancers
+Partially Modify an Application Load Balancer by ID
 
-Update the properties of the specified Application Load Balancer within the data center.
+Updates the properties of the specified Application Load Balancer within the data center.
 
 ### Parameters
 
@@ -1416,11 +1524,14 @@ Update the properties of the specified Application Load Balancer within the data
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1435,17 +1546,24 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String applicationLoadBalancerId = "applicationLoadBalancerId_example"; // String | The unique ID of the Application Load Balancer.
-    ApplicationLoadBalancerProperties applicationLoadBalancerProperties = new ApplicationLoadBalancerProperties(); // ApplicationLoadBalancerProperties | The Application Load Balancer properties to be updated.
+    listenerLan = new Integer(); // Integer | The ID of the listening (inbound) LAN.
+    name = new String(); // String | The Application Load Balancer name.
+    targetLan = new Integer(); // Integer | The ID of the balanced private target LAN (outbound).
+    applicationLoadBalancerProperties = new ApplicationLoadBalancerProperties(Integer, String, Integer); // ApplicationLoadBalancerProperties | The Application Load Balancer properties to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      ApplicationLoadBalancer result = apiInstance.datacentersApplicationloadbalancersPatch(datacenterId, applicationLoadBalancerId, applicationLoadBalancerProperties, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<ApplicationLoadBalancer> result = apiInstance.datacentersApplicationloadbalancersPatchWithHttpInfo(datacenterId, applicationLoadBalancerId, applicationLoadBalancerProperties, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersPatch");
       System.err.println("Status code: " + e.getCode());
@@ -1481,9 +1599,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersPost**
 > ApplicationLoadBalancer datacentersApplicationloadbalancersPost(datacenterId, applicationLoadBalancer, pretty, depth, xContractNumber)
 
-Create Application Load Balancers
+Create an Application Load Balancer
 
-Create an Application Load Balancer within the datacenter.
+Creates an Application Load Balancer within the data center.
 
 ### Parameters
 
@@ -1504,11 +1622,14 @@ Create an Application Load Balancer within the datacenter.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1523,16 +1644,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
-    ApplicationLoadBalancer applicationLoadBalancer = new ApplicationLoadBalancer(); // ApplicationLoadBalancer | The Application Load Balancer to create.
+    properties = new ApplicationLoadBalancerProperties(); // ApplicationLoadBalancerProperties | 
+    applicationLoadBalancer = new ApplicationLoadBalancer(ApplicationLoadBalancerProperties); // ApplicationLoadBalancer | The Application Load Balancer to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      ApplicationLoadBalancer result = apiInstance.datacentersApplicationloadbalancersPost(datacenterId, applicationLoadBalancer, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<ApplicationLoadBalancer> result = apiInstance.datacentersApplicationloadbalancersPostWithHttpInfo(datacenterId, applicationLoadBalancer, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersPost");
       System.err.println("Status code: " + e.getCode());
@@ -1568,9 +1694,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersApplicationloadbalancersPut**
 > ApplicationLoadBalancer datacentersApplicationloadbalancersPut(datacenterId, applicationLoadBalancerId, applicationLoadBalancer, pretty, depth, xContractNumber)
 
-Modify Application Load Balancers
+Modify an Application Load Balancer by ID
 
-Modify the properties of the specified Application Load Balancer within the data center.
+Modifies the properties of the specified Application Load Balancer within the data center.
 
 ### Parameters
 
@@ -1592,11 +1718,14 @@ Modify the properties of the specified Application Load Balancer within the data
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersApplicationloadbalancersPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersApplicationloadbalancersPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1611,17 +1740,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     ApplicationLoadBalancersApi apiInstance = new ApplicationLoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String applicationLoadBalancerId = "applicationLoadBalancerId_example"; // String | The unique ID of the Application Load Balancer.
-    ApplicationLoadBalancerPut applicationLoadBalancer = new ApplicationLoadBalancerPut(); // ApplicationLoadBalancerPut | The modified Application Load Balancer.
+    properties = new ApplicationLoadBalancerProperties(); // ApplicationLoadBalancerProperties | 
+    applicationLoadBalancer = new ApplicationLoadBalancerPut(ApplicationLoadBalancerProperties); // ApplicationLoadBalancerPut | The modified Application Load Balancer.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      ApplicationLoadBalancer result = apiInstance.datacentersApplicationloadbalancersPut(datacenterId, applicationLoadBalancerId, applicationLoadBalancer, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<ApplicationLoadBalancer> result = apiInstance.datacentersApplicationloadbalancersPutWithHttpInfo(datacenterId, applicationLoadBalancerId, applicationLoadBalancer, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling ApplicationLoadBalancersApi#datacentersApplicationloadbalancersPut");
       System.err.println("Status code: " + e.getCode());

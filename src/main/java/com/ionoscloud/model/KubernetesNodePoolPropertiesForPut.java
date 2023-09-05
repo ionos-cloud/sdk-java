@@ -34,10 +34,40 @@ import java.util.Map;
 /**
  * KubernetesNodePoolPropertiesForPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class KubernetesNodePoolPropertiesForPut {
   
+  public static final String SERIALIZED_NAME_ANNOTATIONS = "annotations";
+  @SerializedName(SERIALIZED_NAME_ANNOTATIONS)
+  private Map<String, String> annotations = null;
+
+
+  public static final String SERIALIZED_NAME_AUTO_SCALING = "autoScaling";
+  @SerializedName(SERIALIZED_NAME_AUTO_SCALING)
+  private KubernetesAutoScaling autoScaling;
+
+
+  public static final String SERIALIZED_NAME_K8S_VERSION = "k8sVersion";
+  @SerializedName(SERIALIZED_NAME_K8S_VERSION)
+  private String k8sVersion;
+
+
+  public static final String SERIALIZED_NAME_LABELS = "labels";
+  @SerializedName(SERIALIZED_NAME_LABELS)
+  private Map<String, String> labels = null;
+
+
+  public static final String SERIALIZED_NAME_LANS = "lans";
+  @SerializedName(SERIALIZED_NAME_LANS)
+  private List<KubernetesNodePoolLan> lans = null;
+
+
+  public static final String SERIALIZED_NAME_MAINTENANCE_WINDOW = "maintenanceWindow";
+  @SerializedName(SERIALIZED_NAME_MAINTENANCE_WINDOW)
+  private KubernetesMaintenanceWindow maintenanceWindow;
+
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
@@ -48,41 +78,179 @@ public class KubernetesNodePoolPropertiesForPut {
   private Integer nodeCount;
 
 
-  public static final String SERIALIZED_NAME_K8S_VERSION = "k8sVersion";
-  @SerializedName(SERIALIZED_NAME_K8S_VERSION)
-  private String k8sVersion;
-
-
-  public static final String SERIALIZED_NAME_MAINTENANCE_WINDOW = "maintenanceWindow";
-  @SerializedName(SERIALIZED_NAME_MAINTENANCE_WINDOW)
-  private KubernetesMaintenanceWindow maintenanceWindow;
-
-
-  public static final String SERIALIZED_NAME_AUTO_SCALING = "autoScaling";
-  @SerializedName(SERIALIZED_NAME_AUTO_SCALING)
-  private KubernetesAutoScaling autoScaling;
-
-
-  public static final String SERIALIZED_NAME_LANS = "lans";
-  @SerializedName(SERIALIZED_NAME_LANS)
-  private List<KubernetesNodePoolLan> lans = null;
-
-
-  public static final String SERIALIZED_NAME_LABELS = "labels";
-  @SerializedName(SERIALIZED_NAME_LABELS)
-  private Map<String, String> labels = null;
-
-
-  public static final String SERIALIZED_NAME_ANNOTATIONS = "annotations";
-  @SerializedName(SERIALIZED_NAME_ANNOTATIONS)
-  private Map<String, String> annotations = null;
-
-
   public static final String SERIALIZED_NAME_PUBLIC_IPS = "publicIps";
   @SerializedName(SERIALIZED_NAME_PUBLIC_IPS)
   private List<String> publicIps = null;
 
   
+
+  public KubernetesNodePoolPropertiesForPut annotations(Map<String, String> annotations) {
+    
+    this.annotations = annotations;
+    return this;
+  }
+
+  public KubernetesNodePoolPropertiesForPut putAnnotationsItem(String key, String annotationsItem) {
+    if (this.annotations == null) {
+      this.annotations = new HashMap<String, String>();
+    }
+    this.annotations.put(key, annotationsItem);
+    return this;
+  }
+
+   /**
+   * The annotations attached to the node pool.
+   * @return annotations
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The annotations attached to the node pool.")
+
+  public Map<String, String> getAnnotations() {
+    return annotations;
+  }
+
+
+  public void setAnnotations(Map<String, String> annotations) {
+    this.annotations = annotations;
+  }
+
+
+
+  public KubernetesNodePoolPropertiesForPut autoScaling(KubernetesAutoScaling autoScaling) {
+    
+    this.autoScaling = autoScaling;
+    return this;
+  }
+
+   /**
+   * Get autoScaling
+   * @return autoScaling
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public KubernetesAutoScaling getAutoScaling() {
+    return autoScaling;
+  }
+
+
+  public void setAutoScaling(KubernetesAutoScaling autoScaling) {
+    this.autoScaling = autoScaling;
+  }
+
+
+
+  public KubernetesNodePoolPropertiesForPut k8sVersion(String k8sVersion) {
+    
+    this.k8sVersion = k8sVersion;
+    return this;
+  }
+
+   /**
+   * The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.
+   * @return k8sVersion
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "1.15.4", value = "The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.")
+
+  public String getK8sVersion() {
+    return k8sVersion;
+  }
+
+
+  public void setK8sVersion(String k8sVersion) {
+    this.k8sVersion = k8sVersion;
+  }
+
+
+
+  public KubernetesNodePoolPropertiesForPut labels(Map<String, String> labels) {
+    
+    this.labels = labels;
+    return this;
+  }
+
+  public KubernetesNodePoolPropertiesForPut putLabelsItem(String key, String labelsItem) {
+    if (this.labels == null) {
+      this.labels = new HashMap<String, String>();
+    }
+    this.labels.put(key, labelsItem);
+    return this;
+  }
+
+   /**
+   * The labels attached to the node pool.
+   * @return labels
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The labels attached to the node pool.")
+
+  public Map<String, String> getLabels() {
+    return labels;
+  }
+
+
+  public void setLabels(Map<String, String> labels) {
+    this.labels = labels;
+  }
+
+
+
+  public KubernetesNodePoolPropertiesForPut lans(List<KubernetesNodePoolLan> lans) {
+    
+    this.lans = lans;
+    return this;
+  }
+
+  public KubernetesNodePoolPropertiesForPut addLansItem(KubernetesNodePoolLan lansItem) {
+    if (this.lans == null) {
+      this.lans = new ArrayList<KubernetesNodePoolLan>();
+    }
+    this.lans.add(lansItem);
+    return this;
+  }
+
+   /**
+   * The array of existing private LANs to attach to worker nodes.
+   * @return lans
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The array of existing private LANs to attach to worker nodes.")
+
+  public List<KubernetesNodePoolLan> getLans() {
+    return lans;
+  }
+
+
+  public void setLans(List<KubernetesNodePoolLan> lans) {
+    this.lans = lans;
+  }
+
+
+
+  public KubernetesNodePoolPropertiesForPut maintenanceWindow(KubernetesMaintenanceWindow maintenanceWindow) {
+    
+    this.maintenanceWindow = maintenanceWindow;
+    return this;
+  }
+
+   /**
+   * Get maintenanceWindow
+   * @return maintenanceWindow
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public KubernetesMaintenanceWindow getMaintenanceWindow() {
+    return maintenanceWindow;
+  }
+
+
+  public void setMaintenanceWindow(KubernetesMaintenanceWindow maintenanceWindow) {
+    this.maintenanceWindow = maintenanceWindow;
+  }
+
+
 
   public KubernetesNodePoolPropertiesForPut name(String name) {
     
@@ -115,10 +283,10 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
    /**
-   * The number of nodes that make up the node pool.
+   * The number of worker nodes of the node pool.
    * @return nodeCount
   **/
-  @ApiModelProperty(example = "2", required = true, value = "The number of nodes that make up the node pool.")
+  @ApiModelProperty(example = "2", required = true, value = "The number of worker nodes of the node pool.")
 
   public Integer getNodeCount() {
     return nodeCount;
@@ -127,174 +295,6 @@ public class KubernetesNodePoolPropertiesForPut {
 
   public void setNodeCount(Integer nodeCount) {
     this.nodeCount = nodeCount;
-  }
-
-
-
-  public KubernetesNodePoolPropertiesForPut k8sVersion(String k8sVersion) {
-    
-    this.k8sVersion = k8sVersion;
-    return this;
-  }
-
-   /**
-   * The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.
-   * @return k8sVersion
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "1.15.4", value = "The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster's nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.")
-
-  public String getK8sVersion() {
-    return k8sVersion;
-  }
-
-
-  public void setK8sVersion(String k8sVersion) {
-    this.k8sVersion = k8sVersion;
-  }
-
-
-
-  public KubernetesNodePoolPropertiesForPut maintenanceWindow(KubernetesMaintenanceWindow maintenanceWindow) {
-    
-    this.maintenanceWindow = maintenanceWindow;
-    return this;
-  }
-
-   /**
-   * Get maintenanceWindow
-   * @return maintenanceWindow
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public KubernetesMaintenanceWindow getMaintenanceWindow() {
-    return maintenanceWindow;
-  }
-
-
-  public void setMaintenanceWindow(KubernetesMaintenanceWindow maintenanceWindow) {
-    this.maintenanceWindow = maintenanceWindow;
-  }
-
-
-
-  public KubernetesNodePoolPropertiesForPut autoScaling(KubernetesAutoScaling autoScaling) {
-    
-    this.autoScaling = autoScaling;
-    return this;
-  }
-
-   /**
-   * Get autoScaling
-   * @return autoScaling
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public KubernetesAutoScaling getAutoScaling() {
-    return autoScaling;
-  }
-
-
-  public void setAutoScaling(KubernetesAutoScaling autoScaling) {
-    this.autoScaling = autoScaling;
-  }
-
-
-
-  public KubernetesNodePoolPropertiesForPut lans(List<KubernetesNodePoolLan> lans) {
-    
-    this.lans = lans;
-    return this;
-  }
-
-  public KubernetesNodePoolPropertiesForPut addLansItem(KubernetesNodePoolLan lansItem) {
-    if (this.lans == null) {
-      this.lans = new ArrayList<KubernetesNodePoolLan>();
-    }
-    this.lans.add(lansItem);
-    return this;
-  }
-
-   /**
-   * array of additional LANs attached to worker nodes
-   * @return lans
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "array of additional LANs attached to worker nodes")
-
-  public List<KubernetesNodePoolLan> getLans() {
-    return lans;
-  }
-
-
-  public void setLans(List<KubernetesNodePoolLan> lans) {
-    this.lans = lans;
-  }
-
-
-
-  public KubernetesNodePoolPropertiesForPut labels(Map<String, String> labels) {
-    
-    this.labels = labels;
-    return this;
-  }
-
-  public KubernetesNodePoolPropertiesForPut putLabelsItem(String key, String labelsItem) {
-    if (this.labels == null) {
-      this.labels = new HashMap<String, String>();
-    }
-    this.labels.put(key, labelsItem);
-    return this;
-  }
-
-   /**
-   * map of labels attached to node pool.
-   * @return labels
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "map of labels attached to node pool.")
-
-  public Map<String, String> getLabels() {
-    return labels;
-  }
-
-
-  public void setLabels(Map<String, String> labels) {
-    this.labels = labels;
-  }
-
-
-
-  public KubernetesNodePoolPropertiesForPut annotations(Map<String, String> annotations) {
-    
-    this.annotations = annotations;
-    return this;
-  }
-
-  public KubernetesNodePoolPropertiesForPut putAnnotationsItem(String key, String annotationsItem) {
-    if (this.annotations == null) {
-      this.annotations = new HashMap<String, String>();
-    }
-    this.annotations.put(key, annotationsItem);
-    return this;
-  }
-
-   /**
-   * map of annotations attached to node pool.
-   * @return annotations
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "map of annotations attached to node pool.")
-
-  public Map<String, String> getAnnotations() {
-    return annotations;
-  }
-
-
-  public void setAnnotations(Map<String, String> annotations) {
-    this.annotations = annotations;
   }
 
 
@@ -314,11 +314,11 @@ public class KubernetesNodePoolPropertiesForPut {
   }
 
    /**
-   * Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1 when auto scaling is used). The extra IP is used when the nodes are rebuilt.
+   * Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool&#39;s data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt.
    * @return publicIps
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[81.173.1.2, 82.231.2.5, 92.221.2.4]", value = "Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1 when auto scaling is used). The extra IP is used when the nodes are rebuilt.")
+  @ApiModelProperty(example = "[81.173.1.2, 82.231.2.5, 92.221.2.4]", value = "Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool's data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt.")
 
   public List<String> getPublicIps() {
     return publicIps;
@@ -339,7 +339,7 @@ public class KubernetesNodePoolPropertiesForPut {
       return false;
     }
     KubernetesNodePoolPropertiesForPut kubernetesNodePoolPropertiesForPut = (KubernetesNodePoolPropertiesForPut) o;
-    return Objects.equals(this.name, kubernetesNodePoolPropertiesForPut.name) && Objects.equals(this.nodeCount, kubernetesNodePoolPropertiesForPut.nodeCount) && Objects.equals(this.k8sVersion, kubernetesNodePoolPropertiesForPut.k8sVersion) && Objects.equals(this.maintenanceWindow, kubernetesNodePoolPropertiesForPut.maintenanceWindow) && Objects.equals(this.autoScaling, kubernetesNodePoolPropertiesForPut.autoScaling) && Objects.equals(this.lans, kubernetesNodePoolPropertiesForPut.lans) && Objects.equals(this.labels, kubernetesNodePoolPropertiesForPut.labels) && Objects.equals(this.annotations, kubernetesNodePoolPropertiesForPut.annotations) && Objects.equals(this.publicIps, kubernetesNodePoolPropertiesForPut.publicIps);
+    return Objects.equals(this.annotations, kubernetesNodePoolPropertiesForPut.annotations) && Objects.equals(this.autoScaling, kubernetesNodePoolPropertiesForPut.autoScaling) && Objects.equals(this.k8sVersion, kubernetesNodePoolPropertiesForPut.k8sVersion) && Objects.equals(this.labels, kubernetesNodePoolPropertiesForPut.labels) && Objects.equals(this.lans, kubernetesNodePoolPropertiesForPut.lans) && Objects.equals(this.maintenanceWindow, kubernetesNodePoolPropertiesForPut.maintenanceWindow) && Objects.equals(this.name, kubernetesNodePoolPropertiesForPut.name) && Objects.equals(this.nodeCount, kubernetesNodePoolPropertiesForPut.nodeCount) && Objects.equals(this.publicIps, kubernetesNodePoolPropertiesForPut.publicIps);
   }
 
 
@@ -350,21 +350,21 @@ public class KubernetesNodePoolPropertiesForPut {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodePoolPropertiesForPut {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-
-    sb.append("    nodeCount: ").append(toIndentedString(nodeCount)).append("\n");
-
-    sb.append("    k8sVersion: ").append(toIndentedString(k8sVersion)).append("\n");
-
-    sb.append("    maintenanceWindow: ").append(toIndentedString(maintenanceWindow)).append("\n");
+    sb.append("    annotations: ").append(toIndentedString(annotations)).append("\n");
 
     sb.append("    autoScaling: ").append(toIndentedString(autoScaling)).append("\n");
 
-    sb.append("    lans: ").append(toIndentedString(lans)).append("\n");
+    sb.append("    k8sVersion: ").append(toIndentedString(k8sVersion)).append("\n");
 
     sb.append("    labels: ").append(toIndentedString(labels)).append("\n");
 
-    sb.append("    annotations: ").append(toIndentedString(annotations)).append("\n");
+    sb.append("    lans: ").append(toIndentedString(lans)).append("\n");
+
+    sb.append("    maintenanceWindow: ").append(toIndentedString(maintenanceWindow)).append("\n");
+
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
+    sb.append("    nodeCount: ").append(toIndentedString(nodeCount)).append("\n");
 
     sb.append("    publicIps: ").append(toIndentedString(publicIps)).append("\n");
     sb.append("}");
@@ -382,5 +382,17 @@ public class KubernetesNodePoolPropertiesForPut {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// KubernetesNodePoolPropertiesForPut instantiates a new KubernetesNodePoolPropertiesForPut object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public KubernetesNodePoolPropertiesForPut(Integer NodeCount) {
+
+	this.nodeCount = NodeCount;
 }
 
+public KubernetesNodePoolPropertiesForPut() {
+}
+
+}

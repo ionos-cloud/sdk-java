@@ -27,23 +27,13 @@ import java.io.IOException;
 /**
  * UserPropertiesPost
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class UserPropertiesPost {
   
-  public static final String SERIALIZED_NAME_FIRSTNAME = "firstname";
-  @SerializedName(SERIALIZED_NAME_FIRSTNAME)
-  private String firstname;
-
-
-  public static final String SERIALIZED_NAME_LASTNAME = "lastname";
-  @SerializedName(SERIALIZED_NAME_LASTNAME)
-  private String lastname;
-
-
-  public static final String SERIALIZED_NAME_EMAIL = "email";
-  @SerializedName(SERIALIZED_NAME_EMAIL)
-  private String email;
+  public static final String SERIALIZED_NAME_ACTIVE = "active";
+  @SerializedName(SERIALIZED_NAME_ACTIVE)
+  private Boolean active;
 
 
   public static final String SERIALIZED_NAME_ADMINISTRATOR = "administrator";
@@ -51,14 +41,24 @@ public class UserPropertiesPost {
   private Boolean administrator;
 
 
+  public static final String SERIALIZED_NAME_EMAIL = "email";
+  @SerializedName(SERIALIZED_NAME_EMAIL)
+  private String email;
+
+
+  public static final String SERIALIZED_NAME_FIRSTNAME = "firstname";
+  @SerializedName(SERIALIZED_NAME_FIRSTNAME)
+  private String firstname;
+
+
   public static final String SERIALIZED_NAME_FORCE_SEC_AUTH = "forceSecAuth";
   @SerializedName(SERIALIZED_NAME_FORCE_SEC_AUTH)
   private Boolean forceSecAuth;
 
 
-  public static final String SERIALIZED_NAME_SEC_AUTH_ACTIVE = "secAuthActive";
-  @SerializedName(SERIALIZED_NAME_SEC_AUTH_ACTIVE)
-  private Boolean secAuthActive;
+  public static final String SERIALIZED_NAME_LASTNAME = "lastname";
+  @SerializedName(SERIALIZED_NAME_LASTNAME)
+  private String lastname;
 
 
   public static final String SERIALIZED_NAME_PASSWORD = "password";
@@ -66,80 +66,32 @@ public class UserPropertiesPost {
   private String password;
 
 
-  public static final String SERIALIZED_NAME_ACTIVE = "active";
-  @SerializedName(SERIALIZED_NAME_ACTIVE)
-  private Boolean active;
+  public static final String SERIALIZED_NAME_SEC_AUTH_ACTIVE = "secAuthActive";
+  @SerializedName(SERIALIZED_NAME_SEC_AUTH_ACTIVE)
+  private Boolean secAuthActive;
 
   
 
-  public UserPropertiesPost firstname(String firstname) {
+  public UserPropertiesPost active(Boolean active) {
     
-    this.firstname = firstname;
+    this.active = active;
     return this;
   }
 
    /**
-   * The first name of the user.
-   * @return firstname
+   * Indicates if the user is active.
+   * @return active
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The first name of the user.")
+  @ApiModelProperty(value = "Indicates if the user is active.")
 
-  public String getFirstname() {
-    return firstname;
+  public Boolean getActive() {
+    return active;
   }
 
 
-  public void setFirstname(String firstname) {
-    this.firstname = firstname;
-  }
-
-
-
-  public UserPropertiesPost lastname(String lastname) {
-    
-    this.lastname = lastname;
-    return this;
-  }
-
-   /**
-   * The last name of the user.
-   * @return lastname
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The last name of the user.")
-
-  public String getLastname() {
-    return lastname;
-  }
-
-
-  public void setLastname(String lastname) {
-    this.lastname = lastname;
-  }
-
-
-
-  public UserPropertiesPost email(String email) {
-    
-    this.email = email;
-    return this;
-  }
-
-   /**
-   * The email address of the user.
-   * @return email
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "The email address of the user.")
-
-  public String getEmail() {
-    return email;
-  }
-
-
-  public void setEmail(String email) {
-    this.email = email;
+  public void setActive(Boolean active) {
+    this.active = active;
   }
 
 
@@ -168,6 +120,54 @@ public class UserPropertiesPost {
 
 
 
+  public UserPropertiesPost email(String email) {
+    
+    this.email = email;
+    return this;
+  }
+
+   /**
+   * The email address of the user.
+   * @return email
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The email address of the user.")
+
+  public String getEmail() {
+    return email;
+  }
+
+
+  public void setEmail(String email) {
+    this.email = email;
+  }
+
+
+
+  public UserPropertiesPost firstname(String firstname) {
+    
+    this.firstname = firstname;
+    return this;
+  }
+
+   /**
+   * The first name of the user.
+   * @return firstname
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The first name of the user.")
+
+  public String getFirstname() {
+    return firstname;
+  }
+
+
+  public void setFirstname(String firstname) {
+    this.firstname = firstname;
+  }
+
+
+
   public UserPropertiesPost forceSecAuth(Boolean forceSecAuth) {
     
     this.forceSecAuth = forceSecAuth;
@@ -192,26 +192,26 @@ public class UserPropertiesPost {
 
 
 
-  public UserPropertiesPost secAuthActive(Boolean secAuthActive) {
+  public UserPropertiesPost lastname(String lastname) {
     
-    this.secAuthActive = secAuthActive;
+    this.lastname = lastname;
     return this;
   }
 
    /**
-   * Indicates if secure authentication is active for the user.
-   * @return secAuthActive
+   * The last name of the user.
+   * @return lastname
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Indicates if secure authentication is active for the user.")
+  @ApiModelProperty(value = "The last name of the user.")
 
-  public Boolean getSecAuthActive() {
-    return secAuthActive;
+  public String getLastname() {
+    return lastname;
   }
 
 
-  public void setSecAuthActive(Boolean secAuthActive) {
-    this.secAuthActive = secAuthActive;
+  public void setLastname(String lastname) {
+    this.lastname = lastname;
   }
 
 
@@ -240,26 +240,26 @@ public class UserPropertiesPost {
 
 
 
-  public UserPropertiesPost active(Boolean active) {
+  public UserPropertiesPost secAuthActive(Boolean secAuthActive) {
     
-    this.active = active;
+    this.secAuthActive = secAuthActive;
     return this;
   }
 
    /**
-   * Indicates if the user is active.
-   * @return active
+   * Indicates if secure authentication is active for the user.
+   * @return secAuthActive
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Indicates if the user is active.")
+  @ApiModelProperty(value = "Indicates if secure authentication is active for the user.")
 
-  public Boolean getActive() {
-    return active;
+  public Boolean getSecAuthActive() {
+    return secAuthActive;
   }
 
 
-  public void setActive(Boolean active) {
-    this.active = active;
+  public void setSecAuthActive(Boolean secAuthActive) {
+    this.secAuthActive = secAuthActive;
   }
 
 
@@ -272,7 +272,7 @@ public class UserPropertiesPost {
       return false;
     }
     UserPropertiesPost userPropertiesPost = (UserPropertiesPost) o;
-    return Objects.equals(this.firstname, userPropertiesPost.firstname) && Objects.equals(this.lastname, userPropertiesPost.lastname) && Objects.equals(this.email, userPropertiesPost.email) && Objects.equals(this.administrator, userPropertiesPost.administrator) && Objects.equals(this.forceSecAuth, userPropertiesPost.forceSecAuth) && Objects.equals(this.secAuthActive, userPropertiesPost.secAuthActive) && Objects.equals(this.password, userPropertiesPost.password) && Objects.equals(this.active, userPropertiesPost.active);
+    return Objects.equals(this.active, userPropertiesPost.active) && Objects.equals(this.administrator, userPropertiesPost.administrator) && Objects.equals(this.email, userPropertiesPost.email) && Objects.equals(this.firstname, userPropertiesPost.firstname) && Objects.equals(this.forceSecAuth, userPropertiesPost.forceSecAuth) && Objects.equals(this.lastname, userPropertiesPost.lastname) && Objects.equals(this.password, userPropertiesPost.password) && Objects.equals(this.secAuthActive, userPropertiesPost.secAuthActive);
   }
 
 
@@ -283,21 +283,21 @@ public class UserPropertiesPost {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserPropertiesPost {\n");
     
-    sb.append("    firstname: ").append(toIndentedString(firstname)).append("\n");
-
-    sb.append("    lastname: ").append(toIndentedString(lastname)).append("\n");
-
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    active: ").append(toIndentedString(active)).append("\n");
 
     sb.append("    administrator: ").append(toIndentedString(administrator)).append("\n");
 
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+
+    sb.append("    firstname: ").append(toIndentedString(firstname)).append("\n");
+
     sb.append("    forceSecAuth: ").append(toIndentedString(forceSecAuth)).append("\n");
 
-    sb.append("    secAuthActive: ").append(toIndentedString(secAuthActive)).append("\n");
+    sb.append("    lastname: ").append(toIndentedString(lastname)).append("\n");
 
     sb.append("    password: ").append(toIndentedString(password)).append("\n");
 
-    sb.append("    active: ").append(toIndentedString(active)).append("\n");
+    sb.append("    secAuthActive: ").append(toIndentedString(secAuthActive)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -313,5 +313,14 @@ public class UserPropertiesPost {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// UserPropertiesPost instantiates a new UserPropertiesPost object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public UserPropertiesPost() {
+
 }
 
+
+}

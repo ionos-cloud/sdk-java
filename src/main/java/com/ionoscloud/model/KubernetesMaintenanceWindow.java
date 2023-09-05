@@ -27,12 +27,12 @@ import java.io.IOException;
 /**
  * KubernetesMaintenanceWindow
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class KubernetesMaintenanceWindow {
   
   /**
-   * The day of the week for a maintenance window.
+   * The weekday for a maintenance window.
    */
   @JsonAdapter(DayOfTheWeekEnum.Adapter.class)
   public enum DayOfTheWeekEnum {
@@ -107,10 +107,10 @@ public class KubernetesMaintenanceWindow {
   }
 
    /**
-   * The day of the week for a maintenance window.
+   * The weekday for a maintenance window.
    * @return dayOfTheWeek
   **/
-  @ApiModelProperty(example = "Monday", required = true, value = "The day of the week for a maintenance window.")
+  @ApiModelProperty(example = "Monday", required = true, value = "The weekday for a maintenance window.")
 
   public DayOfTheWeekEnum getDayOfTheWeek() {
     return dayOfTheWeek;
@@ -130,10 +130,10 @@ public class KubernetesMaintenanceWindow {
   }
 
    /**
-   * The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\&quot;Z\&quot;; HH:mm:ssZ. This time may varies by 15 minutes.
+   * The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\&quot;Z\&quot;; HH:mm:ssZ. This time may vary by 15 minutes.
    * @return time
   **/
-  @ApiModelProperty(example = "13:00:00", required = true, value = "The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\"Z\"; HH:mm:ssZ. This time may varies by 15 minutes.")
+  @ApiModelProperty(example = "13:00:00", required = true, value = "The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\"Z\"; HH:mm:ssZ. This time may vary by 15 minutes.")
 
   public String getTime() {
     return time;
@@ -183,5 +183,18 @@ public class KubernetesMaintenanceWindow {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// KubernetesMaintenanceWindow instantiates a new KubernetesMaintenanceWindow object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public KubernetesMaintenanceWindow(DayOfTheWeekEnum DayOfTheWeek, String Time) {
+
+	this.dayOfTheWeek = DayOfTheWeek;
+	this.time = Time;
 }
 
+public KubernetesMaintenanceWindow() {
+}
+
+}

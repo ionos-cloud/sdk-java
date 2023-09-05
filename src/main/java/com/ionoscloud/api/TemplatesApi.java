@@ -58,7 +58,7 @@ public class TemplatesApi {
 
     /**
      * Build call for templatesFindById
-     * @param templateId The unique Template ID. (required)
+     * @param templateId The unique template ID. (required)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param callback Callback for upload/download progress
      * @return Call to execute
@@ -120,9 +120,9 @@ public class TemplatesApi {
     }
 
     /**
-     * Retrieve Cubes Templates
-     * Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.
-     * @param templateId The unique Template ID. (required)
+     * Get Cubes Template by ID
+     * Retrieves the properties of the Cubes template specified by its ID.
+     * @param templateId The unique template ID. (required)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * 
      * @return Template
@@ -140,9 +140,9 @@ public class TemplatesApi {
     }
 
     /**
-     * Retrieve Cubes Templates
-     * Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.
-     * @param templateId The unique Template ID. (required)
+     * Get Cubes Template by ID
+     * Retrieves the properties of the Cubes template specified by its ID.
+     * @param templateId The unique template ID. (required)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * 
      * @return ApiResponse&lt;Template&gt;
@@ -161,9 +161,9 @@ public class TemplatesApi {
     }
 
     /**
-     * Retrieve Cubes Templates (asynchronously)
-     * Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.
-     * @param templateId The unique Template ID. (required)
+     * Get Cubes Template by ID (asynchronously)
+     * Retrieves the properties of the Cubes template specified by its ID.
+     * @param templateId The unique template ID. (required)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -267,9 +267,9 @@ public class TemplatesApi {
     }
 
     /**
-     * Retrieve Cubes Templates
-     * Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.
-     * @param templateId The unique Template ID. (required)
+     * Get Cubes Template by ID
+     * Retrieves the properties of the Cubes template specified by its ID.
+     * @param templateId The unique template ID. (required)
      * @return APItemplatesFindByIdRequest
      * @http.response.details
      <table summary="Response Details" border="1">
@@ -349,8 +349,8 @@ public class TemplatesApi {
     }
 
     /**
-     * List Cubes Templates
-     * List all of the available Cubes Templates.  This operation is only supported for the Cubes.
+     * Get Cubes Templates
+     * Retrieves all available templates.  Templates provide a pre-defined configuration for Cube servers.    &gt;Templates are read-only and cannot be created, modified, or deleted by users.
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
      * @param maxResults - Limits the number of results returned.
@@ -370,8 +370,8 @@ public class TemplatesApi {
     }
 
     /**
-     * List Cubes Templates
-     * List all of the available Cubes Templates.  This operation is only supported for the Cubes.
+     * Get Cubes Templates
+     * Retrieves all available templates.  Templates provide a pre-defined configuration for Cube servers.    &gt;Templates are read-only and cannot be created, modified, or deleted by users.
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param orderBy - Sorts the results alphanumerically in ascending order based on the specified property.
      * @param maxResults - Limits the number of results returned.
@@ -392,8 +392,8 @@ public class TemplatesApi {
     }
 
     /**
-     * List Cubes Templates (asynchronously)
-     * List all of the available Cubes Templates.  This operation is only supported for the Cubes.
+     * Get Cubes Templates (asynchronously)
+     * Retrieves all available templates.  Templates provide a pre-defined configuration for Cube servers.    &gt;Templates are read-only and cannot be created, modified, or deleted by users.
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
@@ -529,8 +529,8 @@ public class TemplatesApi {
     }
 
     /**
-     * List Cubes Templates
-     * List all of the available Cubes Templates.  This operation is only supported for the Cubes.
+     * Get Cubes Templates
+     * Retrieves all available templates.  Templates provide a pre-defined configuration for Cube servers.    &gt;Templates are read-only and cannot be created, modified, or deleted by users.
      * @return APItemplatesGetRequest
      * @http.response.details
      <table summary="Response Details" border="1">

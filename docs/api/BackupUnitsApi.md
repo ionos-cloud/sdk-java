@@ -39,11 +39,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the backupunitsDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use backupunitsDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -58,6 +61,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     BackupUnitsApi apiInstance = new BackupUnitsApi(defaultClient);
     String backupunitId = "backupunitId_example"; // String | The unique ID of the backup unit.
@@ -65,8 +70,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.backupunitsDelete(backupunitId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.backupunitsDeleteWithHttpInfo(backupunitId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitsApi#backupunitsDelete");
       System.err.println("Status code: " + e.getCode());
@@ -124,11 +128,14 @@ Retrieve the properties of the specified backup unit.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the backupunitsFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use backupunitsFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -143,6 +150,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     BackupUnitsApi apiInstance = new BackupUnitsApi(defaultClient);
     String backupunitId = "backupunitId_example"; // String | The unique ID of the backup unit.
@@ -150,8 +159,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      BackupUnit result = apiInstance.backupunitsFindById(backupunitId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<BackupUnit> result = apiInstance.backupunitsFindByIdWithHttpInfo(backupunitId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitsApi#backupunitsFindById");
       System.err.println("Status code: " + e.getCode());
@@ -211,11 +222,14 @@ List all available backup units.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the backupunitsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use backupunitsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -230,17 +244,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     BackupUnitsApi apiInstance = new BackupUnitsApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      BackupUnits result = apiInstance.backupunitsGet(pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<BackupUnits> result = apiInstance.backupunitsGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitsApi#backupunitsGet");
       System.err.println("Status code: " + e.getCode());
@@ -302,11 +320,14 @@ Update the properties of the specified backup unit.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the backupunitsPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use backupunitsPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -321,16 +342,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     BackupUnitsApi apiInstance = new BackupUnitsApi(defaultClient);
     String backupunitId = "backupunitId_example"; // String | The unique ID of the backup unit.
-    BackupUnitProperties backupUnit = new BackupUnitProperties(); // BackupUnitProperties | The properties of the backup unit to be updated.
+    name = new String(); // String | The name of the  resource (alphanumeric characters only).
+    backupUnit = new BackupUnitProperties(String); // BackupUnitProperties | The properties of the backup unit to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      BackupUnit result = apiInstance.backupunitsPatch(backupunitId, backupUnit, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<BackupUnit> result = apiInstance.backupunitsPatchWithHttpInfo(backupunitId, backupUnit, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitsApi#backupunitsPatch");
       System.err.println("Status code: " + e.getCode());
@@ -388,11 +414,14 @@ Create a backup unit. Backup units are resources, same as storage volumes or sna
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the backupunitsPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use backupunitsPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -407,15 +436,20 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     BackupUnitsApi apiInstance = new BackupUnitsApi(defaultClient);
-    BackupUnit backupUnit = new BackupUnit(); // BackupUnit | The backup unit to create.
+    properties = new BackupUnitProperties(); // BackupUnitProperties | 
+    backupUnit = new BackupUnit(BackupUnitProperties); // BackupUnit | The backup unit to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      BackupUnit result = apiInstance.backupunitsPost(backupUnit, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<BackupUnit> result = apiInstance.backupunitsPostWithHttpInfo(backupUnit, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitsApi#backupunitsPost");
       System.err.println("Status code: " + e.getCode());
@@ -474,11 +508,14 @@ Modify the properties of the specified backup unit.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the backupunitsPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use backupunitsPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -493,16 +530,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     BackupUnitsApi apiInstance = new BackupUnitsApi(defaultClient);
     String backupunitId = "backupunitId_example"; // String | The unique ID of the backup unit.
-    BackupUnit backupUnit = new BackupUnit(); // BackupUnit | The modified backup unit.
+    properties = new BackupUnitProperties(); // BackupUnitProperties | 
+    backupUnit = new BackupUnit(BackupUnitProperties); // BackupUnit | The modified backup unit.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      BackupUnit result = apiInstance.backupunitsPut(backupunitId, backupUnit, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<BackupUnit> result = apiInstance.backupunitsPutWithHttpInfo(backupunitId, backupUnit, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitsApi#backupunitsPut");
       System.err.println("Status code: " + e.getCode());
@@ -562,11 +604,14 @@ Retrieve a single sign-on URL for the specified backup unit.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the backupunitsSsourlGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use backupunitsSsourlGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -581,17 +626,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     BackupUnitsApi apiInstance = new BackupUnitsApi(defaultClient);
     String backupunitId = "backupunitId_example"; // String | The unique ID of the backup unit.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      BackupUnitSSO result = apiInstance.backupunitsSsourlGet(backupunitId, pretty, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<BackupUnitSSO> result = apiInstance.backupunitsSsourlGetWithHttpInfo(backupunitId, pretty, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling BackupUnitsApi#backupunitsSsourlGet");
       System.err.println("Status code: " + e.getCode());

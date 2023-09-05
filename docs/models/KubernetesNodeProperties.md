@@ -6,9 +6,9 @@
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **name** | **String** | A Kubernetes node name. |  |
-| **publicIP** | **String** | A valid public IP. |  [optional] |
-| **privateIP** | **String** | A valid private IP. |  [optional] |
-| **k8sVersion** | **String** | The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions. |  |
+| **k8sVersion** | **String** | The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions. |  |
+| **name** | **String** | The Kubernetes node name. |  |
+| **privateIP** | **String** | The private IP associated with the node. |  [optional] |
+| **publicIP** | **String** | The public IP associated with the node. |  [optional] |
 
 

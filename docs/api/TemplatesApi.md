@@ -4,23 +4,23 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**templatesFindById**](TemplatesApi.md#templatesfindbyid) | **GET** /templates/{templateId} | Retrieve Cubes Templates |
-| [**templatesGet**](TemplatesApi.md#templatesget) | **GET** /templates | List Cubes Templates |
+| [**templatesFindById**](TemplatesApi.md#templatesfindbyid) | **GET** /templates/{templateId} | Get Cubes Template by ID |
+| [**templatesGet**](TemplatesApi.md#templatesget) | **GET** /templates | Get Cubes Templates |
 
 
 <a name="templatesFindById"></a>
 # **templatesFindById**
 > Template templatesFindById(templateId, depth)
 
-Retrieve Cubes Templates
+Get Cubes Template by ID
 
-Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.
+Retrieves the properties of the Cubes template specified by its ID.
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **templateId** | **String**| The unique Template ID. ||
+| **templateId** | **String**| The unique template ID. ||
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
 
 ### Return type
@@ -32,11 +32,14 @@ Retrieve the properties of the specified Cubes Template.  This operation is only
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the templatesFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use templatesFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -51,13 +54,17 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     TemplatesApi apiInstance = new TemplatesApi(defaultClient);
-    String templateId = "templateId_example"; // String | The unique Template ID.
+    String templateId = "templateId_example"; // String | The unique template ID.
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     try {
-      Template result = apiInstance.templatesFindById(templateId, depth);
-      System.out.println(result);
+      ApiResponse<Template> result = apiInstance.templatesFindByIdWithHttpInfo(templateId, depth);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling TemplatesApi#templatesFindById");
       System.err.println("Status code: " + e.getCode());
@@ -91,9 +98,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **templatesGet**
 > Templates templatesGet(depth)
 
-List Cubes Templates
+Get Cubes Templates
 
-List all of the available Cubes Templates.  This operation is only supported for the Cubes.
+Retrieves all available templates.  Templates provide a pre-defined configuration for Cube servers.    &gt;Templates are read-only and cannot be created, modified, or deleted by users.
 
 ### Parameters
 
@@ -113,11 +120,14 @@ List all of the available Cubes Templates.  This operation is only supported for
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the templatesGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use templatesGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -132,15 +142,19 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     TemplatesApi apiInstance = new TemplatesApi(defaultClient);
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Templates result = apiInstance.templatesGet(depth, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<Templates> result = apiInstance.templatesGetWithHttpInfo(depth, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling TemplatesApi#templatesGet");
       System.err.println("Status code: " + e.getCode());

@@ -6,8 +6,8 @@
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **href** | [**URI**](URI.md) | API entry point |  [optional] [readonly] |
-| **name** | **String** | Name of the API |  [optional] [readonly] |
-| **version** | **String** | Version of the API |  [optional] [readonly] |
+| **href** | [**URI**](URI.md) | The API entry point. |  [optional] [readonly] |
+| **name** | **String** | The API name. |  [optional] [readonly] |
+| **version** | **String** | The API version. |  [optional] [readonly] |
 
 

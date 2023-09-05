@@ -7,9 +7,9 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersDelete**](DataCentersApi.md#datacentersdelete) | **DELETE** /datacenters/{datacenterId} | Delete data centers |
 | [**datacentersFindById**](DataCentersApi.md#datacentersfindbyid) | **GET** /datacenters/{datacenterId} | Retrieve data centers |
 | [**datacentersGet**](DataCentersApi.md#datacentersget) | **GET** /datacenters | List your data centers |
-| [**datacentersPatch**](DataCentersApi.md#datacenterspatch) | **PATCH** /datacenters/{datacenterId} | Partially modify data centers |
-| [**datacentersPost**](DataCentersApi.md#datacenterspost) | **POST** /datacenters | Create data centers |
-| [**datacentersPut**](DataCentersApi.md#datacentersput) | **PUT** /datacenters/{datacenterId} | Modify data centers |
+| [**datacentersPatch**](DataCentersApi.md#datacenterspatch) | **PATCH** /datacenters/{datacenterId} | Partially modify a Data Center by ID |
+| [**datacentersPost**](DataCentersApi.md#datacenterspost) | **POST** /datacenters | Create a Data Center |
+| [**datacentersPut**](DataCentersApi.md#datacentersput) | **PUT** /datacenters/{datacenterId} | Modify a Data Center by ID |
 
 
 <a name="datacentersDelete"></a>
@@ -38,11 +38,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -57,6 +60,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     DataCentersApi apiInstance = new DataCentersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -64,8 +69,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.datacentersDelete(datacenterId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.datacentersDeleteWithHttpInfo(datacenterId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling DataCentersApi#datacentersDelete");
       System.err.println("Status code: " + e.getCode());
@@ -123,11 +127,14 @@ Retrieve data centers by resource ID. This value is in the response body when th
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -142,6 +149,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     DataCentersApi apiInstance = new DataCentersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -149,8 +158,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Datacenter result = apiInstance.datacentersFindById(datacenterId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Datacenter> result = apiInstance.datacentersFindByIdWithHttpInfo(datacenterId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling DataCentersApi#datacentersFindById");
       System.err.println("Status code: " + e.getCode());
@@ -212,11 +223,14 @@ List the data centers for your account. Default limit is the first 100 items; us
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -231,6 +245,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     DataCentersApi apiInstance = new DataCentersApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
@@ -238,12 +254,14 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Datacenters result = apiInstance.datacentersGet(pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<Datacenters> result = apiInstance.datacentersGetWithHttpInfo(pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling DataCentersApi#datacentersGet");
       System.err.println("Status code: " + e.getCode());
@@ -284,9 +302,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersPatch**
 > Datacenter datacentersPatch(datacenterId, datacenter, pretty, depth, xContractNumber)
 
-Partially modify data centers
+Partially modify a Data Center by ID
 
-Update the properties of the specified data center, rename it, or change the description.
+Updates the properties of the specified data center, rename it, or change the description.
 
 ### Parameters
 
@@ -307,11 +325,14 @@ Update the properties of the specified data center, rename it, or change the des
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -326,16 +347,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     DataCentersApi apiInstance = new DataCentersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
-    DatacenterProperties datacenter = new DatacenterProperties(); // DatacenterProperties | The properties of the data center to be updated.
+    location = new String(); // String | The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests).
+    datacenter = new DatacenterProperties(String); // DatacenterProperties | The properties of the data center to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Datacenter result = apiInstance.datacentersPatch(datacenterId, datacenter, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Datacenter> result = apiInstance.datacentersPatchWithHttpInfo(datacenterId, datacenter, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling DataCentersApi#datacentersPatch");
       System.err.println("Status code: " + e.getCode());
@@ -371,9 +397,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersPost**
 > Datacenter datacentersPost(datacenter, pretty, depth, xContractNumber)
 
-Create data centers
+Create a Data Center
 
-Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
+Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
 
 ### Parameters
 
@@ -393,11 +419,14 @@ Create new data centers, and data centers that already contain elements, such as
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -412,15 +441,20 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     DataCentersApi apiInstance = new DataCentersApi(defaultClient);
-    Datacenter datacenter = new Datacenter(); // Datacenter | The data center to create.
+    properties = new DatacenterProperties(); // DatacenterProperties | 
+    datacenter = new Datacenter(DatacenterProperties); // Datacenter | The data center to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Datacenter result = apiInstance.datacentersPost(datacenter, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Datacenter> result = apiInstance.datacentersPostWithHttpInfo(datacenter, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling DataCentersApi#datacentersPost");
       System.err.println("Status code: " + e.getCode());
@@ -456,9 +490,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersPut**
 > Datacenter datacentersPut(datacenterId, datacenter, pretty, depth, xContractNumber)
 
-Modify data centers
+Modify a Data Center by ID
 
-Modify the properties of the specified data center, rename it, or change the description.
+Modifies the properties of the specified data center, rename it, or change the description.
 
 ### Parameters
 
@@ -479,11 +513,14 @@ Modify the properties of the specified data center, rename it, or change the des
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -498,16 +535,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     DataCentersApi apiInstance = new DataCentersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
-    Datacenter datacenter = new Datacenter(); // Datacenter | The modified data center.
+    properties = new DatacenterProperties(); // DatacenterProperties | 
+    datacenter = new Datacenter(DatacenterProperties); // Datacenter | The modified data center.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Datacenter result = apiInstance.datacentersPut(datacenterId, datacenter, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Datacenter> result = apiInstance.datacentersPutWithHttpInfo(datacenterId, datacenter, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling DataCentersApi#datacentersPut");
       System.err.println("Status code: " + e.getCode());

@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersServersNicsFlowlogsFindById**](FlowLogsApi.md#datacentersserversnicsflowlogsfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Retrieve Flow Logs |
 | [**datacentersServersNicsFlowlogsGet**](FlowLogsApi.md#datacentersserversnicsflowlogsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | List Flow Logs |
 | [**datacentersServersNicsFlowlogsPatch**](FlowLogsApi.md#datacentersserversnicsflowlogspatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Partially modify Flow Logs |
-| [**datacentersServersNicsFlowlogsPost**](FlowLogsApi.md#datacentersserversnicsflowlogspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | Create Flow Logs |
+| [**datacentersServersNicsFlowlogsPost**](FlowLogsApi.md#datacentersserversnicsflowlogspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | Create a Flow Log |
 | [**datacentersServersNicsFlowlogsPut**](FlowLogsApi.md#datacentersserversnicsflowlogsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Modify Flow Logs |
 
 
@@ -40,11 +40,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsFlowlogsDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsFlowlogsDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -59,6 +62,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     FlowLogsApi apiInstance = new FlowLogsApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -68,8 +73,7 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     try {
-      apiInstance.datacentersServersNicsFlowlogsDelete(datacenterId, serverId, nicId, flowlogId, pretty, depth);
-      System.out.println(result);
+      apiInstance.datacentersServersNicsFlowlogsDeleteWithHttpInfo(datacenterId, serverId, nicId, flowlogId, pretty, depth);
     } catch (ApiException e) {
       System.err.println("Exception when calling FlowLogsApi#datacentersServersNicsFlowlogsDelete");
       System.err.println("Status code: " + e.getCode());
@@ -128,11 +132,14 @@ Retrieve the properties of the specified Flow Log.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsFlowlogsFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsFlowlogsFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -147,6 +154,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     FlowLogsApi apiInstance = new FlowLogsApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -156,8 +165,10 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     try {
-      FlowLog result = apiInstance.datacentersServersNicsFlowlogsFindById(datacenterId, serverId, nicId, flowlogId, pretty, depth);
-      System.out.println(result);
+      ApiResponse<FlowLog> result = apiInstance.datacentersServersNicsFlowlogsFindByIdWithHttpInfo(datacenterId, serverId, nicId, flowlogId, pretty, depth);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling FlowLogsApi#datacentersServersNicsFlowlogsFindById");
       System.err.println("Status code: " + e.getCode());
@@ -220,11 +231,14 @@ List all the Flow Logs for the specified NIC.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsFlowlogsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsFlowlogsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -239,6 +253,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     FlowLogsApi apiInstance = new FlowLogsApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -248,12 +264,14 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      FlowLogs result = apiInstance.datacentersServersNicsFlowlogsGet(datacenterId, serverId, nicId, pretty, depth, offset, limit, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<FlowLogs> result = apiInstance.datacentersServersNicsFlowlogsGetWithHttpInfo(datacenterId, serverId, nicId, pretty, depth, offset, limit, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling FlowLogsApi#datacentersServersNicsFlowlogsGet");
       System.err.println("Status code: " + e.getCode());
@@ -318,11 +336,14 @@ Update the specified Flow Log record.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsFlowlogsPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsFlowlogsPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -337,18 +358,26 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     FlowLogsApi apiInstance = new FlowLogsApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String serverId = "serverId_example"; // String | The unique ID of the server.
     String nicId = "nicId_example"; // String | The unique ID of the NIC.
     String flowlogId = "flowlogId_example"; // String | The unique ID of the Flow Log.
-    FlowLogProperties flowlog = new FlowLogProperties(); // FlowLogProperties | The Flow Log record to be updated.
+    action = new String(); // String | Specifies the traffic action pattern.
+    bucket = new String(); // String | The S3 bucket name of an existing IONOS Cloud S3 bucket.
+    direction = new String(); // String | Specifies the traffic direction pattern.
+    name = new String(); // String | The resource name.
+    flowlog = new FlowLogProperties(String, String, String, String); // FlowLogProperties | The Flow Log record to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     try {
-      FlowLog result = apiInstance.datacentersServersNicsFlowlogsPatch(datacenterId, serverId, nicId, flowlogId, flowlog, pretty, depth);
-      System.out.println(result);
+      ApiResponse<FlowLog> result = apiInstance.datacentersServersNicsFlowlogsPatchWithHttpInfo(datacenterId, serverId, nicId, flowlogId, flowlog, pretty, depth);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling FlowLogsApi#datacentersServersNicsFlowlogsPatch");
       System.err.println("Status code: " + e.getCode());
@@ -383,9 +412,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersServersNicsFlowlogsPost**
 > FlowLog datacentersServersNicsFlowlogsPost(datacenterId, serverId, nicId, flowlog, pretty, depth)
 
-Create Flow Logs
+Create a Flow Log
 
-Add a new Flow Log for the specified NIC.
+Adds a new Flow Log for the specified NIC.
 
 ### Parameters
 
@@ -407,11 +436,14 @@ Add a new Flow Log for the specified NIC.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsFlowlogsPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsFlowlogsPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -426,17 +458,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     FlowLogsApi apiInstance = new FlowLogsApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String serverId = "serverId_example"; // String | The unique ID of the server.
     String nicId = "nicId_example"; // String | The unique ID of the NIC.
-    FlowLog flowlog = new FlowLog(); // FlowLog | The Flow Log to create.
+    properties = new FlowLogProperties(); // FlowLogProperties | 
+    flowlog = new FlowLog(FlowLogProperties); // FlowLog | The Flow Log to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     try {
-      FlowLog result = apiInstance.datacentersServersNicsFlowlogsPost(datacenterId, serverId, nicId, flowlog, pretty, depth);
-      System.out.println(result);
+      ApiResponse<FlowLog> result = apiInstance.datacentersServersNicsFlowlogsPostWithHttpInfo(datacenterId, serverId, nicId, flowlog, pretty, depth);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling FlowLogsApi#datacentersServersNicsFlowlogsPost");
       System.err.println("Status code: " + e.getCode());
@@ -496,11 +533,14 @@ Modify the specified Flow Log record.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsFlowlogsPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsFlowlogsPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -515,18 +555,23 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     FlowLogsApi apiInstance = new FlowLogsApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String serverId = "serverId_example"; // String | The unique ID of the server.
     String nicId = "nicId_example"; // String | The unique ID of the NIC.
     String flowlogId = "flowlogId_example"; // String | The unique ID of the Flow Log.
-    FlowLogPut flowlog = new FlowLogPut(); // FlowLogPut | The modified Flow Log.
+    properties = new FlowLogProperties(); // FlowLogProperties | 
+    flowlog = new FlowLogPut(FlowLogProperties); // FlowLogPut | The modified Flow Log.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     try {
-      FlowLog result = apiInstance.datacentersServersNicsFlowlogsPut(datacenterId, serverId, nicId, flowlogId, flowlog, pretty, depth);
-      System.out.println(result);
+      ApiResponse<FlowLog> result = apiInstance.datacentersServersNicsFlowlogsPutWithHttpInfo(datacenterId, serverId, nicId, flowlogId, flowlog, pretty, depth);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling FlowLogsApi#datacentersServersNicsFlowlogsPut");
       System.err.println("Status code: " + e.getCode());

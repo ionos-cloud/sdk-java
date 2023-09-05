@@ -29,13 +29,18 @@ import java.util.List;
 /**
  * NetworkLoadBalancerProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class NetworkLoadBalancerProperties {
   
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  public static final String SERIALIZED_NAME_IPS = "ips";
+  @SerializedName(SERIALIZED_NAME_IPS)
+  private List<String> ips = null;
+
+
+  public static final String SERIALIZED_NAME_LB_PRIVATE_IPS = "lbPrivateIps";
+  @SerializedName(SERIALIZED_NAME_LB_PRIVATE_IPS)
+  private List<String> lbPrivateIps = null;
 
 
   public static final String SERIALIZED_NAME_LISTENER_LAN = "listenerLan";
@@ -43,67 +48,16 @@ public class NetworkLoadBalancerProperties {
   private Integer listenerLan;
 
 
-  public static final String SERIALIZED_NAME_IPS = "ips";
-  @SerializedName(SERIALIZED_NAME_IPS)
-  private List<String> ips = null;
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
 
   public static final String SERIALIZED_NAME_TARGET_LAN = "targetLan";
   @SerializedName(SERIALIZED_NAME_TARGET_LAN)
   private Integer targetLan;
 
-
-  public static final String SERIALIZED_NAME_LB_PRIVATE_IPS = "lbPrivateIps";
-  @SerializedName(SERIALIZED_NAME_LB_PRIVATE_IPS)
-  private List<String> lbPrivateIps = null;
-
   
-
-  public NetworkLoadBalancerProperties name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * The name of the Network Load Balancer.
-   * @return name
-  **/
-  @ApiModelProperty(example = "My Network Load Balancer", required = true, value = "The name of the Network Load Balancer.")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-
-  public NetworkLoadBalancerProperties listenerLan(Integer listenerLan) {
-    
-    this.listenerLan = listenerLan;
-    return this;
-  }
-
-   /**
-   * ID of the listening LAN (inbound).
-   * @return listenerLan
-  **/
-  @ApiModelProperty(example = "1", required = true, value = "ID of the listening LAN (inbound).")
-
-  public Integer getListenerLan() {
-    return listenerLan;
-  }
-
-
-  public void setListenerLan(Integer listenerLan) {
-    this.listenerLan = listenerLan;
-  }
-
-
 
   public NetworkLoadBalancerProperties ips(List<String> ips) {
     
@@ -133,29 +87,6 @@ public class NetworkLoadBalancerProperties {
 
   public void setIps(List<String> ips) {
     this.ips = ips;
-  }
-
-
-
-  public NetworkLoadBalancerProperties targetLan(Integer targetLan) {
-    
-    this.targetLan = targetLan;
-    return this;
-  }
-
-   /**
-   * ID of the balanced private target LAN (outbound).
-   * @return targetLan
-  **/
-  @ApiModelProperty(example = "2", required = true, value = "ID of the balanced private target LAN (outbound).")
-
-  public Integer getTargetLan() {
-    return targetLan;
-  }
-
-
-  public void setTargetLan(Integer targetLan) {
-    this.targetLan = targetLan;
   }
 
 
@@ -191,6 +122,75 @@ public class NetworkLoadBalancerProperties {
   }
 
 
+
+  public NetworkLoadBalancerProperties listenerLan(Integer listenerLan) {
+    
+    this.listenerLan = listenerLan;
+    return this;
+  }
+
+   /**
+   * ID of the listening LAN (inbound).
+   * @return listenerLan
+  **/
+  @ApiModelProperty(example = "1", required = true, value = "ID of the listening LAN (inbound).")
+
+  public Integer getListenerLan() {
+    return listenerLan;
+  }
+
+
+  public void setListenerLan(Integer listenerLan) {
+    this.listenerLan = listenerLan;
+  }
+
+
+
+  public NetworkLoadBalancerProperties name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * The name of the Network Load Balancer.
+   * @return name
+  **/
+  @ApiModelProperty(example = "My Network Load Balancer", required = true, value = "The name of the Network Load Balancer.")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+
+  public NetworkLoadBalancerProperties targetLan(Integer targetLan) {
+    
+    this.targetLan = targetLan;
+    return this;
+  }
+
+   /**
+   * ID of the balanced private target LAN (outbound).
+   * @return targetLan
+  **/
+  @ApiModelProperty(example = "2", required = true, value = "ID of the balanced private target LAN (outbound).")
+
+  public Integer getTargetLan() {
+    return targetLan;
+  }
+
+
+  public void setTargetLan(Integer targetLan) {
+    this.targetLan = targetLan;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -200,7 +200,7 @@ public class NetworkLoadBalancerProperties {
       return false;
     }
     NetworkLoadBalancerProperties networkLoadBalancerProperties = (NetworkLoadBalancerProperties) o;
-    return Objects.equals(this.name, networkLoadBalancerProperties.name) && Objects.equals(this.listenerLan, networkLoadBalancerProperties.listenerLan) && Objects.equals(this.ips, networkLoadBalancerProperties.ips) && Objects.equals(this.targetLan, networkLoadBalancerProperties.targetLan) && Objects.equals(this.lbPrivateIps, networkLoadBalancerProperties.lbPrivateIps);
+    return Objects.equals(this.ips, networkLoadBalancerProperties.ips) && Objects.equals(this.lbPrivateIps, networkLoadBalancerProperties.lbPrivateIps) && Objects.equals(this.listenerLan, networkLoadBalancerProperties.listenerLan) && Objects.equals(this.name, networkLoadBalancerProperties.name) && Objects.equals(this.targetLan, networkLoadBalancerProperties.targetLan);
   }
 
 
@@ -211,15 +211,15 @@ public class NetworkLoadBalancerProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class NetworkLoadBalancerProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    ips: ").append(toIndentedString(ips)).append("\n");
+
+    sb.append("    lbPrivateIps: ").append(toIndentedString(lbPrivateIps)).append("\n");
 
     sb.append("    listenerLan: ").append(toIndentedString(listenerLan)).append("\n");
 
-    sb.append("    ips: ").append(toIndentedString(ips)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
 
     sb.append("    targetLan: ").append(toIndentedString(targetLan)).append("\n");
-
-    sb.append("    lbPrivateIps: ").append(toIndentedString(lbPrivateIps)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -235,5 +235,19 @@ public class NetworkLoadBalancerProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// NetworkLoadBalancerProperties instantiates a new NetworkLoadBalancerProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public NetworkLoadBalancerProperties(Integer ListenerLan, String Name, Integer TargetLan) {
+
+	this.listenerLan = ListenerLan;
+	this.name = Name;
+	this.targetLan = TargetLan;
 }
 
+public NetworkLoadBalancerProperties() {
+}
+
+}

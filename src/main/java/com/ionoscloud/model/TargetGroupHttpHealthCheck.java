@@ -27,17 +27,65 @@ import java.io.IOException;
 /**
  * TargetGroupHttpHealthCheck
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class TargetGroupHttpHealthCheck {
   
-  public static final String SERIALIZED_NAME_PATH = "path";
-  @SerializedName(SERIALIZED_NAME_PATH)
-  private String path;
+  /**
+   * Specify the target&#39;s response type to match ALB&#39;s request.
+   */
+  @JsonAdapter(MatchTypeEnum.Adapter.class)
+  public enum MatchTypeEnum {
+    STATUS_CODE("STATUS_CODE"),
+    
+    RESPONSE_BODY("RESPONSE_BODY");
+
+    private String value;
+
+    MatchTypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static MatchTypeEnum fromValue(String value) {
+
+      for (MatchTypeEnum b : MatchTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<MatchTypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final MatchTypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public MatchTypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return MatchTypeEnum.fromValue(value);
+      }
+    }
+  }
+
+  public static final String SERIALIZED_NAME_MATCH_TYPE = "matchType";
+  @SerializedName(SERIALIZED_NAME_MATCH_TYPE)
+  private MatchTypeEnum matchType;
 
 
   /**
-   * The method for the HTTP health check.
+   * The method used for the health check request.
    */
   @JsonAdapter(MethodEnum.Adapter.class)
   public enum MethodEnum {
@@ -99,62 +147,14 @@ public class TargetGroupHttpHealthCheck {
   private MethodEnum method;
 
 
-  /**
-   * 
-   */
-  @JsonAdapter(MatchTypeEnum.Adapter.class)
-  public enum MatchTypeEnum {
-    STATUS_CODE("STATUS_CODE"),
-    
-    RESPONSE_BODY("RESPONSE_BODY");
-
-    private String value;
-
-    MatchTypeEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static MatchTypeEnum fromValue(String value) {
-
-      for (MatchTypeEnum b : MatchTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-
-    public static class Adapter extends TypeAdapter<MatchTypeEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final MatchTypeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public MatchTypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return MatchTypeEnum.fromValue(value);
-      }
-    }
-  }
-
-  public static final String SERIALIZED_NAME_MATCH_TYPE = "matchType";
-  @SerializedName(SERIALIZED_NAME_MATCH_TYPE)
-  private MatchTypeEnum matchType;
+  public static final String SERIALIZED_NAME_NEGATE = "negate";
+  @SerializedName(SERIALIZED_NAME_NEGATE)
+  private Boolean negate;
 
 
-  public static final String SERIALIZED_NAME_RESPONSE = "response";
-  @SerializedName(SERIALIZED_NAME_RESPONSE)
-  private String response;
+  public static final String SERIALIZED_NAME_PATH = "path";
+  @SerializedName(SERIALIZED_NAME_PATH)
+  private String path;
 
 
   public static final String SERIALIZED_NAME_REGEX = "regex";
@@ -162,59 +162,11 @@ public class TargetGroupHttpHealthCheck {
   private Boolean regex;
 
 
-  public static final String SERIALIZED_NAME_NEGATE = "negate";
-  @SerializedName(SERIALIZED_NAME_NEGATE)
-  private Boolean negate;
+  public static final String SERIALIZED_NAME_RESPONSE = "response";
+  @SerializedName(SERIALIZED_NAME_RESPONSE)
+  private String response;
 
   
-
-  public TargetGroupHttpHealthCheck path(String path) {
-    
-    this.path = path;
-    return this;
-  }
-
-   /**
-   * The path (destination URL) for the HTTP health check request; the default is /.
-   * @return path
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "/monitoring", value = "The path (destination URL) for the HTTP health check request; the default is /.")
-
-  public String getPath() {
-    return path;
-  }
-
-
-  public void setPath(String path) {
-    this.path = path;
-  }
-
-
-
-  public TargetGroupHttpHealthCheck method(MethodEnum method) {
-    
-    this.method = method;
-    return this;
-  }
-
-   /**
-   * The method for the HTTP health check.
-   * @return method
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "GET", value = "The method for the HTTP health check.")
-
-  public MethodEnum getMethod() {
-    return method;
-  }
-
-
-  public void setMethod(MethodEnum method) {
-    this.method = method;
-  }
-
-
 
   public TargetGroupHttpHealthCheck matchType(MatchTypeEnum matchType) {
     
@@ -223,10 +175,10 @@ public class TargetGroupHttpHealthCheck {
   }
 
    /**
-   * 
+   * Specify the target&#39;s response type to match ALB&#39;s request.
    * @return matchType
   **/
-  @ApiModelProperty(example = "STATUS_CODE", required = true, value = "")
+  @ApiModelProperty(example = "STATUS_CODE", required = true, value = "Specify the target's response type to match ALB's request.")
 
   public MatchTypeEnum getMatchType() {
     return matchType;
@@ -239,25 +191,74 @@ public class TargetGroupHttpHealthCheck {
 
 
 
-  public TargetGroupHttpHealthCheck response(String response) {
+  public TargetGroupHttpHealthCheck method(MethodEnum method) {
     
-    this.response = response;
+    this.method = method;
     return this;
   }
 
    /**
-   * The response returned by the request, depending on the match type.
-   * @return response
+   * The method used for the health check request.
+   * @return method
   **/
-  @ApiModelProperty(example = "200", required = true, value = "The response returned by the request, depending on the match type.")
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "GET", value = "The method used for the health check request.")
 
-  public String getResponse() {
-    return response;
+  public MethodEnum getMethod() {
+    return method;
   }
 
 
-  public void setResponse(String response) {
-    this.response = response;
+  public void setMethod(MethodEnum method) {
+    this.method = method;
+  }
+
+
+
+  public TargetGroupHttpHealthCheck negate(Boolean negate) {
+    
+    this.negate = negate;
+    return this;
+  }
+
+   /**
+   * Specifies whether to negate an individual entry; the default value is &#39;FALSE&#39;.
+   * @return negate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "false", value = "Specifies whether to negate an individual entry; the default value is 'FALSE'.")
+
+  public Boolean getNegate() {
+    return negate;
+  }
+
+
+  public void setNegate(Boolean negate) {
+    this.negate = negate;
+  }
+
+
+
+  public TargetGroupHttpHealthCheck path(String path) {
+    
+    this.path = path;
+    return this;
+  }
+
+   /**
+   * The destination URL for HTTP the health check; the default is &#39;/&#39;.
+   * @return path
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "/monitoring", value = "The destination URL for HTTP the health check; the default is '/'.")
+
+  public String getPath() {
+    return path;
+  }
+
+
+  public void setPath(String path) {
+    this.path = path;
   }
 
 
@@ -269,11 +270,11 @@ public class TargetGroupHttpHealthCheck {
   }
 
    /**
-   * 
+   * Specifies whether to use a regular expression to parse the response body; the default value is &#39;FALSE&#39;.  By using regular expressions, you can flexibly customize the expected response from a healthy server.
    * @return regex
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "false", value = "")
+  @ApiModelProperty(example = "false", value = "Specifies whether to use a regular expression to parse the response body; the default value is 'FALSE'.  By using regular expressions, you can flexibly customize the expected response from a healthy server.")
 
   public Boolean getRegex() {
     return regex;
@@ -286,26 +287,25 @@ public class TargetGroupHttpHealthCheck {
 
 
 
-  public TargetGroupHttpHealthCheck negate(Boolean negate) {
+  public TargetGroupHttpHealthCheck response(String response) {
     
-    this.negate = negate;
+    this.response = response;
     return this;
   }
 
    /**
-   * 
-   * @return negate
+   * The response returned by the request. It can be a status code or a response body depending on the definition of &#39;matchType&#39;.
+   * @return response
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "false", value = "")
+  @ApiModelProperty(example = "200", required = true, value = "The response returned by the request. It can be a status code or a response body depending on the definition of 'matchType'.")
 
-  public Boolean getNegate() {
-    return negate;
+  public String getResponse() {
+    return response;
   }
 
 
-  public void setNegate(Boolean negate) {
-    this.negate = negate;
+  public void setResponse(String response) {
+    this.response = response;
   }
 
 
@@ -318,7 +318,7 @@ public class TargetGroupHttpHealthCheck {
       return false;
     }
     TargetGroupHttpHealthCheck targetGroupHttpHealthCheck = (TargetGroupHttpHealthCheck) o;
-    return Objects.equals(this.path, targetGroupHttpHealthCheck.path) && Objects.equals(this.method, targetGroupHttpHealthCheck.method) && Objects.equals(this.matchType, targetGroupHttpHealthCheck.matchType) && Objects.equals(this.response, targetGroupHttpHealthCheck.response) && Objects.equals(this.regex, targetGroupHttpHealthCheck.regex) && Objects.equals(this.negate, targetGroupHttpHealthCheck.negate);
+    return Objects.equals(this.matchType, targetGroupHttpHealthCheck.matchType) && Objects.equals(this.method, targetGroupHttpHealthCheck.method) && Objects.equals(this.negate, targetGroupHttpHealthCheck.negate) && Objects.equals(this.path, targetGroupHttpHealthCheck.path) && Objects.equals(this.regex, targetGroupHttpHealthCheck.regex) && Objects.equals(this.response, targetGroupHttpHealthCheck.response);
   }
 
 
@@ -329,17 +329,17 @@ public class TargetGroupHttpHealthCheck {
     StringBuilder sb = new StringBuilder();
     sb.append("class TargetGroupHttpHealthCheck {\n");
     
-    sb.append("    path: ").append(toIndentedString(path)).append("\n");
+    sb.append("    matchType: ").append(toIndentedString(matchType)).append("\n");
 
     sb.append("    method: ").append(toIndentedString(method)).append("\n");
 
-    sb.append("    matchType: ").append(toIndentedString(matchType)).append("\n");
+    sb.append("    negate: ").append(toIndentedString(negate)).append("\n");
 
-    sb.append("    response: ").append(toIndentedString(response)).append("\n");
+    sb.append("    path: ").append(toIndentedString(path)).append("\n");
 
     sb.append("    regex: ").append(toIndentedString(regex)).append("\n");
 
-    sb.append("    negate: ").append(toIndentedString(negate)).append("\n");
+    sb.append("    response: ").append(toIndentedString(response)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -355,5 +355,18 @@ public class TargetGroupHttpHealthCheck {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// TargetGroupHttpHealthCheck instantiates a new TargetGroupHttpHealthCheck object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public TargetGroupHttpHealthCheck(MatchTypeEnum MatchType, String Response) {
+
+	this.matchType = MatchType;
+	this.response = Response;
 }
 
+public TargetGroupHttpHealthCheck() {
+}
+
+}

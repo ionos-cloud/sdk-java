@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * ConnectableDatacenter
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class ConnectableDatacenter {
   
@@ -36,14 +36,14 @@ public class ConnectableDatacenter {
   private String id;
 
 
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
-
-
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
   private String location;
+
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
   
 
@@ -71,30 +71,6 @@ public class ConnectableDatacenter {
 
 
 
-  public ConnectableDatacenter name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-
   public ConnectableDatacenter location(String location) {
     
     this.location = location;
@@ -118,6 +94,30 @@ public class ConnectableDatacenter {
   }
 
 
+
+  public ConnectableDatacenter name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -127,7 +127,7 @@ public class ConnectableDatacenter {
       return false;
     }
     ConnectableDatacenter connectableDatacenter = (ConnectableDatacenter) o;
-    return Objects.equals(this.id, connectableDatacenter.id) && Objects.equals(this.name, connectableDatacenter.name) && Objects.equals(this.location, connectableDatacenter.location);
+    return Objects.equals(this.id, connectableDatacenter.id) && Objects.equals(this.location, connectableDatacenter.location) && Objects.equals(this.name, connectableDatacenter.name);
   }
 
 
@@ -140,9 +140,9 @@ public class ConnectableDatacenter {
     
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
 
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
+
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -158,5 +158,14 @@ public class ConnectableDatacenter {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// ConnectableDatacenter instantiates a new ConnectableDatacenter object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public ConnectableDatacenter() {
+
 }
 
+
+}

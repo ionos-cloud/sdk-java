@@ -29,10 +29,15 @@ import java.net.URI;
 /**
  * ResourceReference
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class ResourceReference {
   
+  public static final String SERIALIZED_NAME_HREF = "href";
+  @SerializedName(SERIALIZED_NAME_HREF)
+  private URI href;
+
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
@@ -42,12 +47,25 @@ public class ResourceReference {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private Type type;
 
-
-  public static final String SERIALIZED_NAME_HREF = "href";
-  @SerializedName(SERIALIZED_NAME_HREF)
-  private URI href;
-
   
+
+   /**
+   * URL to the object representation (absolute path).
+   * @return href
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path).")
+
+  public URI getHref() {
+    return href;
+  }
+
+
+  public void setHref(URI href) {
+    this.href = href;
+  }
+
+
 
   public ResourceReference id(String id) {
     
@@ -95,24 +113,6 @@ public class ResourceReference {
   }
 
 
-
-   /**
-   * URL to the object representation (absolute path).
-   * @return href
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the object representation (absolute path).")
-
-  public URI getHref() {
-    return href;
-  }
-
-
-  public void setHref(URI href) {
-    this.href = href;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -122,7 +122,7 @@ public class ResourceReference {
       return false;
     }
     ResourceReference resourceReference = (ResourceReference) o;
-    return Objects.equals(this.id, resourceReference.id) && Objects.equals(this.type, resourceReference.type) && Objects.equals(this.href, resourceReference.href);
+    return Objects.equals(this.href, resourceReference.href) && Objects.equals(this.id, resourceReference.id) && Objects.equals(this.type, resourceReference.type);
   }
 
 
@@ -133,11 +133,11 @@ public class ResourceReference {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResourceReference {\n");
     
+    sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
 
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
-    sb.append("    href: ").append(toIndentedString(href)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -153,5 +153,17 @@ public class ResourceReference {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// ResourceReference instantiates a new ResourceReference object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public ResourceReference(String Id) {
+
+	this.id = Id;
 }
 
+public ResourceReference() {
+}
+
+}

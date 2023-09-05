@@ -33,30 +33,48 @@ import java.util.List;
  * Resources owned by a user.
  */
 @ApiModel(description = "Resources owned by a user.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class ResourcesUsers {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
-
-
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
 
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
   private List<Resource> items = null;
 
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
+
   
+
+   /**
+   * URL to the object representation (absolute path).
+   * @return href
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "https://<API_HOST>/cloudapi/v6/um/users/9b1b4c62-1466-11e7-87d3-d7bb7dac0087/owns", value = "URL to the object representation (absolute path).")
+
+  public URI getHref() {
+    return href;
+  }
+
+
+  public void setHref(URI href) {
+    this.href = href;
+  }
+
+
 
    /**
    * The resource&#39;s unique identifier.
@@ -72,6 +90,24 @@ public class ResourcesUsers {
 
   public void setId(String id) {
     this.id = id;
+  }
+
+
+
+   /**
+   * Array of items in the collection.
+   * @return items
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Array of items in the collection.")
+
+  public List<Resource> getItems() {
+    return items;
+  }
+
+
+  public void setItems(List<Resource> items) {
+    this.items = items;
   }
 
 
@@ -99,42 +135,6 @@ public class ResourcesUsers {
   }
 
 
-
-   /**
-   * URL to the object representation (absolute path).
-   * @return href
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "https://<API_HOST>/cloudapi/v6/um/users/9b1b4c62-1466-11e7-87d3-d7bb7dac0087/owns", value = "URL to the object representation (absolute path).")
-
-  public URI getHref() {
-    return href;
-  }
-
-
-  public void setHref(URI href) {
-    this.href = href;
-  }
-
-
-
-   /**
-   * Array of items in the collection.
-   * @return items
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of items in the collection.")
-
-  public List<Resource> getItems() {
-    return items;
-  }
-
-
-  public void setItems(List<Resource> items) {
-    this.items = items;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -144,7 +144,7 @@ public class ResourcesUsers {
       return false;
     }
     ResourcesUsers resourcesUsers = (ResourcesUsers) o;
-    return Objects.equals(this.id, resourcesUsers.id) && Objects.equals(this.type, resourcesUsers.type) && Objects.equals(this.href, resourcesUsers.href) && Objects.equals(this.items, resourcesUsers.items);
+    return Objects.equals(this.href, resourcesUsers.href) && Objects.equals(this.id, resourcesUsers.id) && Objects.equals(this.items, resourcesUsers.items) && Objects.equals(this.type, resourcesUsers.type);
   }
 
 
@@ -155,13 +155,13 @@ public class ResourcesUsers {
     StringBuilder sb = new StringBuilder();
     sb.append("class ResourcesUsers {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -177,5 +177,14 @@ public class ResourcesUsers {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// ResourcesUsers instantiates a new ResourcesUsers object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public ResourcesUsers() {
+
 }
 
+
+}

@@ -31,23 +31,18 @@ import java.net.URI;
 /**
  * S3Key
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class S3Key {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
-
-
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
@@ -59,49 +54,12 @@ public class S3Key {
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private S3KeyProperties properties;
 
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
+
   
-
-   /**
-   * The resource&#39;s unique identifier.
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The resource's unique identifier.")
-
-  public String getId() {
-    return id;
-  }
-
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-
-  public S3Key type(Type type) {
-    
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * The type of the resource.
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"group\"", value = "The type of the resource.")
-
-  public Type getType() {
-    return type;
-  }
-
-
-  public void setType(Type type) {
-    this.type = type;
-  }
-
-
 
    /**
    * URL to the object representation (absolute path).
@@ -117,6 +75,24 @@ public class S3Key {
 
   public void setHref(URI href) {
     this.href = href;
+  }
+
+
+
+   /**
+   * The resource&#39;s unique identifier.
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The resource's unique identifier.")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
   }
 
 
@@ -167,6 +143,30 @@ public class S3Key {
   }
 
 
+
+  public S3Key type(Type type) {
+    
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * The type of the resource.
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "\"group\"", value = "The type of the resource.")
+
+  public Type getType() {
+    return type;
+  }
+
+
+  public void setType(Type type) {
+    this.type = type;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -176,7 +176,7 @@ public class S3Key {
       return false;
     }
     S3Key s3Key = (S3Key) o;
-    return Objects.equals(this.id, s3Key.id) && Objects.equals(this.type, s3Key.type) && Objects.equals(this.href, s3Key.href) && Objects.equals(this.metadata, s3Key.metadata) && Objects.equals(this.properties, s3Key.properties);
+    return Objects.equals(this.href, s3Key.href) && Objects.equals(this.id, s3Key.id) && Objects.equals(this.metadata, s3Key.metadata) && Objects.equals(this.properties, s3Key.properties) && Objects.equals(this.type, s3Key.type);
   }
 
 
@@ -187,15 +187,15 @@ public class S3Key {
     StringBuilder sb = new StringBuilder();
     sb.append("class S3Key {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
 
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
 
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -211,5 +211,17 @@ public class S3Key {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// S3Key instantiates a new S3Key object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public S3Key(S3KeyProperties Properties) {
+
+	this.properties = Properties;
 }
 
+public S3Key() {
+}
+
+}

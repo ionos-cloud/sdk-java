@@ -28,10 +28,15 @@ import java.net.URI;
 /**
  * PaginationLinks
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class PaginationLinks {
   
+  public static final String SERIALIZED_NAME_NEXT = "next";
+  @SerializedName(SERIALIZED_NAME_NEXT)
+  private URI next;
+
+
   public static final String SERIALIZED_NAME_PREV = "prev";
   @SerializedName(SERIALIZED_NAME_PREV)
   private URI prev;
@@ -41,12 +46,25 @@ public class PaginationLinks {
   @SerializedName(SERIALIZED_NAME_SELF)
   private URI self;
 
-
-  public static final String SERIALIZED_NAME_NEXT = "next";
-  @SerializedName(SERIALIZED_NAME_NEXT)
-  private URI next;
-
   
+
+   /**
+   * URL (with offset and limit parameters) of the next page; only present if offset + limit is less than the total number of elements.
+   * @return next
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "<NEXT-PAGE-URI>", value = "URL (with offset and limit parameters) of the next page; only present if offset + limit is less than the total number of elements.")
+
+  public URI getNext() {
+    return next;
+  }
+
+
+  public void setNext(URI next) {
+    this.next = next;
+  }
+
+
 
    /**
    * URL (with offset and limit parameters) of the previous page; only present if offset is greater than 0.
@@ -83,24 +101,6 @@ public class PaginationLinks {
   }
 
 
-
-   /**
-   * URL (with offset and limit parameters) of the next page; only present if offset + limit is less than the total number of elements.
-   * @return next
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "<NEXT-PAGE-URI>", value = "URL (with offset and limit parameters) of the next page; only present if offset + limit is less than the total number of elements.")
-
-  public URI getNext() {
-    return next;
-  }
-
-
-  public void setNext(URI next) {
-    this.next = next;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -110,7 +110,7 @@ public class PaginationLinks {
       return false;
     }
     PaginationLinks paginationLinks = (PaginationLinks) o;
-    return Objects.equals(this.prev, paginationLinks.prev) && Objects.equals(this.self, paginationLinks.self) && Objects.equals(this.next, paginationLinks.next);
+    return Objects.equals(this.next, paginationLinks.next) && Objects.equals(this.prev, paginationLinks.prev) && Objects.equals(this.self, paginationLinks.self);
   }
 
 
@@ -121,11 +121,11 @@ public class PaginationLinks {
     StringBuilder sb = new StringBuilder();
     sb.append("class PaginationLinks {\n");
     
+    sb.append("    next: ").append(toIndentedString(next)).append("\n");
+
     sb.append("    prev: ").append(toIndentedString(prev)).append("\n");
 
     sb.append("    self: ").append(toIndentedString(self)).append("\n");
-
-    sb.append("    next: ").append(toIndentedString(next)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -141,5 +141,14 @@ public class PaginationLinks {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// PaginationLinks instantiates a new PaginationLinks object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public PaginationLinks() {
+
 }
 
+
+}

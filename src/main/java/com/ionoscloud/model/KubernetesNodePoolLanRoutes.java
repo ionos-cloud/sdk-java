@@ -27,44 +27,20 @@ import java.io.IOException;
 /**
  * KubernetesNodePoolLanRoutes
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class KubernetesNodePoolLanRoutes {
   
-  public static final String SERIALIZED_NAME_NETWORK = "network";
-  @SerializedName(SERIALIZED_NAME_NETWORK)
-  private String network;
-
-
   public static final String SERIALIZED_NAME_GATEWAY_IP = "gatewayIp";
   @SerializedName(SERIALIZED_NAME_GATEWAY_IP)
   private String gatewayIp;
 
+
+  public static final String SERIALIZED_NAME_NETWORK = "network";
+  @SerializedName(SERIALIZED_NAME_NETWORK)
+  private String network;
+
   
-
-  public KubernetesNodePoolLanRoutes network(String network) {
-    
-    this.network = network;
-    return this;
-  }
-
-   /**
-   * IPv4 or IPv6 CIDR to be routed via the interface.
-   * @return network
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "1.2.3.4/24", value = "IPv4 or IPv6 CIDR to be routed via the interface.")
-
-  public String getNetwork() {
-    return network;
-  }
-
-
-  public void setNetwork(String network) {
-    this.network = network;
-  }
-
-
 
   public KubernetesNodePoolLanRoutes gatewayIp(String gatewayIp) {
     
@@ -89,6 +65,30 @@ public class KubernetesNodePoolLanRoutes {
   }
 
 
+
+  public KubernetesNodePoolLanRoutes network(String network) {
+    
+    this.network = network;
+    return this;
+  }
+
+   /**
+   * IPv4 or IPv6 CIDR to be routed via the interface.
+   * @return network
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "1.2.3.4/24", value = "IPv4 or IPv6 CIDR to be routed via the interface.")
+
+  public String getNetwork() {
+    return network;
+  }
+
+
+  public void setNetwork(String network) {
+    this.network = network;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -98,7 +98,7 @@ public class KubernetesNodePoolLanRoutes {
       return false;
     }
     KubernetesNodePoolLanRoutes kubernetesNodePoolLanRoutes = (KubernetesNodePoolLanRoutes) o;
-    return Objects.equals(this.network, kubernetesNodePoolLanRoutes.network) && Objects.equals(this.gatewayIp, kubernetesNodePoolLanRoutes.gatewayIp);
+    return Objects.equals(this.gatewayIp, kubernetesNodePoolLanRoutes.gatewayIp) && Objects.equals(this.network, kubernetesNodePoolLanRoutes.network);
   }
 
 
@@ -109,9 +109,9 @@ public class KubernetesNodePoolLanRoutes {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodePoolLanRoutes {\n");
     
-    sb.append("    network: ").append(toIndentedString(network)).append("\n");
-
     sb.append("    gatewayIp: ").append(toIndentedString(gatewayIp)).append("\n");
+
+    sb.append("    network: ").append(toIndentedString(network)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -127,5 +127,14 @@ public class KubernetesNodePoolLanRoutes {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// KubernetesNodePoolLanRoutes instantiates a new KubernetesNodePoolLanRoutes object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public KubernetesNodePoolLanRoutes() {
+
 }
 
+
+}

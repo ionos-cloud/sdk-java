@@ -27,20 +27,10 @@ import java.io.IOException;
 /**
  * Peer
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class Peer {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
-
-
   public static final String SERIALIZED_NAME_DATACENTER_ID = "datacenterId";
   @SerializedName(SERIALIZED_NAME_DATACENTER_ID)
   private String datacenterId;
@@ -51,59 +41,21 @@ public class Peer {
   private String datacenterName;
 
 
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
+
+
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
   private String location;
 
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
+
   
-
-  public Peer id(String id) {
-    
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Get id
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getId() {
-    return id;
-  }
-
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-
-  public Peer name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * Get name
-   * @return name
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
 
   public Peer datacenterId(String datacenterId) {
     
@@ -153,6 +105,30 @@ public class Peer {
 
 
 
+  public Peer id(String id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+
+
   public Peer location(String location) {
     
     this.location = location;
@@ -176,6 +152,30 @@ public class Peer {
   }
 
 
+
+  public Peer name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * Get name
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -185,7 +185,7 @@ public class Peer {
       return false;
     }
     Peer peer = (Peer) o;
-    return Objects.equals(this.id, peer.id) && Objects.equals(this.name, peer.name) && Objects.equals(this.datacenterId, peer.datacenterId) && Objects.equals(this.datacenterName, peer.datacenterName) && Objects.equals(this.location, peer.location);
+    return Objects.equals(this.datacenterId, peer.datacenterId) && Objects.equals(this.datacenterName, peer.datacenterName) && Objects.equals(this.id, peer.id) && Objects.equals(this.location, peer.location) && Objects.equals(this.name, peer.name);
   }
 
 
@@ -196,15 +196,15 @@ public class Peer {
     StringBuilder sb = new StringBuilder();
     sb.append("class Peer {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-
     sb.append("    datacenterId: ").append(toIndentedString(datacenterId)).append("\n");
 
     sb.append("    datacenterName: ").append(toIndentedString(datacenterName)).append("\n");
 
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
+
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -220,5 +220,14 @@ public class Peer {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// Peer instantiates a new Peer object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public Peer() {
+
 }
 
+
+}

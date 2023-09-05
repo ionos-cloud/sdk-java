@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**umUsersS3keysFindByKeyId**](UserS3KeysApi.md#umuserss3keysfindbykeyid) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve user S3 keys by key ID |
 | [**umUsersS3keysGet**](UserS3KeysApi.md#umuserss3keysget) | **GET** /um/users/{userId}/s3keys | List user S3 keys |
 | [**umUsersS3keysPost**](UserS3KeysApi.md#umuserss3keyspost) | **POST** /um/users/{userId}/s3keys | Create user S3 keys |
-| [**umUsersS3keysPut**](UserS3KeysApi.md#umuserss3keysput) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify S3 keys by key ID |
+| [**umUsersS3keysPut**](UserS3KeysApi.md#umuserss3keysput) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 Key by Key ID |
 | [**umUsersS3ssourlGet**](UserS3KeysApi.md#umuserss3ssourlget) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 single sign-on URLs |
 
 
@@ -39,11 +39,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umUsersS3keysDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umUsersS3keysDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -58,6 +61,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserS3KeysApi apiInstance = new UserS3KeysApi(defaultClient);
     String userId = "userId_example"; // String | The unique ID of the user.
@@ -66,8 +71,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.umUsersS3keysDelete(userId, keyId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.umUsersS3keysDeleteWithHttpInfo(userId, keyId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserS3KeysApi#umUsersS3keysDelete");
       System.err.println("Status code: " + e.getCode());
@@ -126,11 +130,14 @@ Retrieve the specified user S3 key. The user ID is in the response body when the
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umUsersS3keysFindByKeyIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umUsersS3keysFindByKeyId instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -145,6 +152,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserS3KeysApi apiInstance = new UserS3KeysApi(defaultClient);
     String userId = "userId_example"; // String | The unique ID of the user.
@@ -153,8 +162,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      S3Key result = apiInstance.umUsersS3keysFindByKeyId(userId, keyId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<S3Key> result = apiInstance.umUsersS3keysFindByKeyIdWithHttpInfo(userId, keyId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserS3KeysApi#umUsersS3keysFindByKeyId");
       System.err.println("Status code: " + e.getCode());
@@ -215,11 +226,14 @@ List S3 keys by user ID. The user ID is in the response body when the user is cr
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umUsersS3keysGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umUsersS3keysGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -234,18 +248,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserS3KeysApi apiInstance = new UserS3KeysApi(defaultClient);
     String userId = "userId_example"; // String | The unique ID of the user.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      S3Keys result = apiInstance.umUsersS3keysGet(userId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<S3Keys> result = apiInstance.umUsersS3keysGetWithHttpInfo(userId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserS3KeysApi#umUsersS3keysGet");
       System.err.println("Status code: " + e.getCode());
@@ -306,11 +324,14 @@ Create an S3 key for the specified user. The user ID is in the response body whe
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umUsersS3keysPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umUsersS3keysPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -325,6 +346,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserS3KeysApi apiInstance = new UserS3KeysApi(defaultClient);
     String userId = "userId_example"; // String | The unique ID of the user.
@@ -332,8 +355,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      S3Key result = apiInstance.umUsersS3keysPost(userId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<S3Key> result = apiInstance.umUsersS3keysPostWithHttpInfo(userId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserS3KeysApi#umUsersS3keysPost");
       System.err.println("Status code: " + e.getCode());
@@ -369,9 +394,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **umUsersS3keysPut**
 > S3Key umUsersS3keysPut(userId, keyId, s3Key, pretty, depth, xContractNumber)
 
-Modify S3 keys by key ID
+Modify a S3 Key by Key ID
 
-Enable or disable the specified user S3 key.
+Enables or disables the specified user S3 key.
 
 ### Parameters
 
@@ -393,11 +418,14 @@ Enable or disable the specified user S3 key.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umUsersS3keysPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umUsersS3keysPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -412,17 +440,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserS3KeysApi apiInstance = new UserS3KeysApi(defaultClient);
     String userId = "userId_example"; // String | The unique ID of the user.
     String keyId = "keyId_example"; // String | The unique ID of the S3 key.
-    S3Key s3Key = new S3Key(); // S3Key | The modified S3 key.
+    properties = new S3KeyProperties(); // S3KeyProperties | 
+    s3Key = new S3Key(S3KeyProperties); // S3Key | The modified S3 key.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      S3Key result = apiInstance.umUsersS3keysPut(userId, keyId, s3Key, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<S3Key> result = apiInstance.umUsersS3keysPutWithHttpInfo(userId, keyId, s3Key, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserS3KeysApi#umUsersS3keysPut");
       System.err.println("Status code: " + e.getCode());
@@ -482,11 +515,14 @@ Retrieve S3 Object Storage single sign-on URLs for the the specified user. The u
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umUsersS3ssourlGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umUsersS3ssourlGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -501,17 +537,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserS3KeysApi apiInstance = new UserS3KeysApi(defaultClient);
     String userId = "userId_example"; // String | The unique ID of the user.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      S3ObjectStorageSSO result = apiInstance.umUsersS3ssourlGet(userId, pretty, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<S3ObjectStorageSSO> result = apiInstance.umUsersS3ssourlGetWithHttpInfo(userId, pretty, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserS3KeysApi#umUsersS3ssourlGet");
       System.err.println("Status code: " + e.getCode());

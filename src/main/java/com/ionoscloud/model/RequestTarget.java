@@ -28,15 +28,10 @@ import java.io.IOException;
 /**
  * RequestTarget
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class RequestTarget {
   
-  public static final String SERIALIZED_NAME_TARGET = "target";
-  @SerializedName(SERIALIZED_NAME_TARGET)
-  private ResourceReference target;
-
-
   /**
    * Gets or Sets status
    */
@@ -93,31 +88,12 @@ public class RequestTarget {
   @SerializedName(SERIALIZED_NAME_STATUS)
   private StatusEnum status;
 
+
+  public static final String SERIALIZED_NAME_TARGET = "target";
+  @SerializedName(SERIALIZED_NAME_TARGET)
+  private ResourceReference target;
+
   
-
-  public RequestTarget target(ResourceReference target) {
-    
-    this.target = target;
-    return this;
-  }
-
-   /**
-   * Get target
-   * @return target
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public ResourceReference getTarget() {
-    return target;
-  }
-
-
-  public void setTarget(ResourceReference target) {
-    this.target = target;
-  }
-
-
 
   public RequestTarget status(StatusEnum status) {
     
@@ -142,6 +118,30 @@ public class RequestTarget {
   }
 
 
+
+  public RequestTarget target(ResourceReference target) {
+    
+    this.target = target;
+    return this;
+  }
+
+   /**
+   * Get target
+   * @return target
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ResourceReference getTarget() {
+    return target;
+  }
+
+
+  public void setTarget(ResourceReference target) {
+    this.target = target;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -151,7 +151,7 @@ public class RequestTarget {
       return false;
     }
     RequestTarget requestTarget = (RequestTarget) o;
-    return Objects.equals(this.target, requestTarget.target) && Objects.equals(this.status, requestTarget.status);
+    return Objects.equals(this.status, requestTarget.status) && Objects.equals(this.target, requestTarget.target);
   }
 
 
@@ -162,9 +162,9 @@ public class RequestTarget {
     StringBuilder sb = new StringBuilder();
     sb.append("class RequestTarget {\n");
     
-    sb.append("    target: ").append(toIndentedString(target)).append("\n");
-
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
+
+    sb.append("    target: ").append(toIndentedString(target)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -180,5 +180,14 @@ public class RequestTarget {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// RequestTarget instantiates a new RequestTarget object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public RequestTarget() {
+
 }
 
+
+}

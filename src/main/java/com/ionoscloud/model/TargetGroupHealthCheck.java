@@ -27,18 +27,18 @@ import java.io.IOException;
 /**
  * TargetGroupHealthCheck
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class TargetGroupHealthCheck {
   
-  public static final String SERIALIZED_NAME_CHECK_TIMEOUT = "checkTimeout";
-  @SerializedName(SERIALIZED_NAME_CHECK_TIMEOUT)
-  private Integer checkTimeout;
-
-
   public static final String SERIALIZED_NAME_CHECK_INTERVAL = "checkInterval";
   @SerializedName(SERIALIZED_NAME_CHECK_INTERVAL)
   private Integer checkInterval;
+
+
+  public static final String SERIALIZED_NAME_CHECK_TIMEOUT = "checkTimeout";
+  @SerializedName(SERIALIZED_NAME_CHECK_TIMEOUT)
+  private Integer checkTimeout;
 
 
   public static final String SERIALIZED_NAME_RETRIES = "retries";
@@ -47,30 +47,6 @@ public class TargetGroupHealthCheck {
 
   
 
-  public TargetGroupHealthCheck checkTimeout(Integer checkTimeout) {
-    
-    this.checkTimeout = checkTimeout;
-    return this;
-  }
-
-   /**
-   * The maximum time in milliseconds to wait for a target to respond to a check. For target VMs with &#39;Check Interval&#39; set, the lesser of the two  values is used once the TCP connection is established.
-   * @return checkTimeout
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "2000", value = "The maximum time in milliseconds to wait for a target to respond to a check. For target VMs with 'Check Interval' set, the lesser of the two  values is used once the TCP connection is established.")
-
-  public Integer getCheckTimeout() {
-    return checkTimeout;
-  }
-
-
-  public void setCheckTimeout(Integer checkTimeout) {
-    this.checkTimeout = checkTimeout;
-  }
-
-
-
   public TargetGroupHealthCheck checkInterval(Integer checkInterval) {
     
     this.checkInterval = checkInterval;
@@ -78,11 +54,11 @@ public class TargetGroupHealthCheck {
   }
 
    /**
-   * The interval in milliseconds between consecutive health checks; default is 2000.
+   * The interval in milliseconds between consecutive health checks; the default value is &#39;2000&#39;.
    * @return checkInterval
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2000", value = "The interval in milliseconds between consecutive health checks; default is 2000.")
+  @ApiModelProperty(example = "2000", value = "The interval in milliseconds between consecutive health checks; the default value is '2000'.")
 
   public Integer getCheckInterval() {
     return checkInterval;
@@ -95,6 +71,30 @@ public class TargetGroupHealthCheck {
 
 
 
+  public TargetGroupHealthCheck checkTimeout(Integer checkTimeout) {
+    
+    this.checkTimeout = checkTimeout;
+    return this;
+  }
+
+   /**
+   * The maximum time in milliseconds is to wait for a target to respond to a check. For target VMs with a &#39;Check Interval&#39; set, the smaller of the two values is used once the TCP connection is established.
+   * @return checkTimeout
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "2000", value = "The maximum time in milliseconds is to wait for a target to respond to a check. For target VMs with a 'Check Interval' set, the smaller of the two values is used once the TCP connection is established.")
+
+  public Integer getCheckTimeout() {
+    return checkTimeout;
+  }
+
+
+  public void setCheckTimeout(Integer checkTimeout) {
+    this.checkTimeout = checkTimeout;
+  }
+
+
+
   public TargetGroupHealthCheck retries(Integer retries) {
     
     this.retries = retries;
@@ -102,11 +102,11 @@ public class TargetGroupHealthCheck {
   }
 
    /**
-   * The maximum number of attempts to reconnect to a target after a connection failure. Valid range is 0 to 65535, and default is three reconnection attempts.
+   * The maximum number of attempts to reconnect to a target after a connection failure. The valid range is &#39;0 to 65535&#39;; the default value is &#39;3&#39;.
    * @return retries
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "3", value = "The maximum number of attempts to reconnect to a target after a connection failure. Valid range is 0 to 65535, and default is three reconnection attempts.")
+  @ApiModelProperty(example = "3", value = "The maximum number of attempts to reconnect to a target after a connection failure. The valid range is '0 to 65535'; the default value is '3'.")
 
   public Integer getRetries() {
     return retries;
@@ -127,7 +127,7 @@ public class TargetGroupHealthCheck {
       return false;
     }
     TargetGroupHealthCheck targetGroupHealthCheck = (TargetGroupHealthCheck) o;
-    return Objects.equals(this.checkTimeout, targetGroupHealthCheck.checkTimeout) && Objects.equals(this.checkInterval, targetGroupHealthCheck.checkInterval) && Objects.equals(this.retries, targetGroupHealthCheck.retries);
+    return Objects.equals(this.checkInterval, targetGroupHealthCheck.checkInterval) && Objects.equals(this.checkTimeout, targetGroupHealthCheck.checkTimeout) && Objects.equals(this.retries, targetGroupHealthCheck.retries);
   }
 
 
@@ -138,9 +138,9 @@ public class TargetGroupHealthCheck {
     StringBuilder sb = new StringBuilder();
     sb.append("class TargetGroupHealthCheck {\n");
     
-    sb.append("    checkTimeout: ").append(toIndentedString(checkTimeout)).append("\n");
-
     sb.append("    checkInterval: ").append(toIndentedString(checkInterval)).append("\n");
+
+    sb.append("    checkTimeout: ").append(toIndentedString(checkTimeout)).append("\n");
 
     sb.append("    retries: ").append(toIndentedString(retries)).append("\n");
     sb.append("}");
@@ -158,5 +158,14 @@ public class TargetGroupHealthCheck {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// TargetGroupHealthCheck instantiates a new TargetGroupHealthCheck object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public TargetGroupHealthCheck() {
+
 }
 
+
+}

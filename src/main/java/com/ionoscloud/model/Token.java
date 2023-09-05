@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * Token
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class Token {
   
@@ -90,5 +90,14 @@ public class Token {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// Token instantiates a new Token object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public Token() {
+
 }
 
+
+}

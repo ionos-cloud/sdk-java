@@ -6,11 +6,11 @@
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **etag** | **String** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  |  [optional] [readonly] |
-| **createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource was created. |  [optional] [readonly] |
-| **lastModifiedDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the resource was modified. |  [optional] [readonly] |
-| **state** | [**StateEnum**](#StateEnum) | State of the resource. |  [optional] [readonly] |
-| **lastSoftwareUpdatedDate** | [**OffsetDateTime**](OffsetDateTime.md) | The last time the software was updated on the node. |  [optional] [readonly] |
+| **createdDate** | [**OffsetDateTime**](OffsetDateTime.md) | The date the resource was created. |  [optional] [readonly] |
+| **etag** | **String** | The resource entity tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity tags are also added as &#39;ETag&#39; response headers to requests that do not use the &#39;depth&#39; parameter. |  [optional] [readonly] |
+| **lastModifiedDate** | [**OffsetDateTime**](OffsetDateTime.md) | The date the resource was last modified. |  [optional] [readonly] |
+| **lastSoftwareUpdatedDate** | [**OffsetDateTime**](OffsetDateTime.md) | The date when the software on the node was last updated. |  [optional] [readonly] |
+| **state** | [**StateEnum**](#StateEnum) | The resource state. |  [optional] [readonly] |
 
 
 

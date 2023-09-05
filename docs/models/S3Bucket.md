@@ -6,6 +6,6 @@
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **name** | **String** | Name of the S3 bucket |  |
+| **name** | **String** | The name of the S3 bucket. |  |
 
 

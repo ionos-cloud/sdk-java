@@ -29,44 +29,20 @@ import java.io.IOException;
 /**
  * NatGatewayEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class NatGatewayEntities {
   
-  public static final String SERIALIZED_NAME_RULES = "rules";
-  @SerializedName(SERIALIZED_NAME_RULES)
-  private NatGatewayRules rules;
-
-
   public static final String SERIALIZED_NAME_FLOWLOGS = "flowlogs";
   @SerializedName(SERIALIZED_NAME_FLOWLOGS)
   private FlowLogs flowlogs;
 
+
+  public static final String SERIALIZED_NAME_RULES = "rules";
+  @SerializedName(SERIALIZED_NAME_RULES)
+  private NatGatewayRules rules;
+
   
-
-  public NatGatewayEntities rules(NatGatewayRules rules) {
-    
-    this.rules = rules;
-    return this;
-  }
-
-   /**
-   * Get rules
-   * @return rules
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public NatGatewayRules getRules() {
-    return rules;
-  }
-
-
-  public void setRules(NatGatewayRules rules) {
-    this.rules = rules;
-  }
-
-
 
   public NatGatewayEntities flowlogs(FlowLogs flowlogs) {
     
@@ -91,6 +67,30 @@ public class NatGatewayEntities {
   }
 
 
+
+  public NatGatewayEntities rules(NatGatewayRules rules) {
+    
+    this.rules = rules;
+    return this;
+  }
+
+   /**
+   * Get rules
+   * @return rules
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public NatGatewayRules getRules() {
+    return rules;
+  }
+
+
+  public void setRules(NatGatewayRules rules) {
+    this.rules = rules;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -100,7 +100,7 @@ public class NatGatewayEntities {
       return false;
     }
     NatGatewayEntities natGatewayEntities = (NatGatewayEntities) o;
-    return Objects.equals(this.rules, natGatewayEntities.rules) && Objects.equals(this.flowlogs, natGatewayEntities.flowlogs);
+    return Objects.equals(this.flowlogs, natGatewayEntities.flowlogs) && Objects.equals(this.rules, natGatewayEntities.rules);
   }
 
 
@@ -111,9 +111,9 @@ public class NatGatewayEntities {
     StringBuilder sb = new StringBuilder();
     sb.append("class NatGatewayEntities {\n");
     
-    sb.append("    rules: ").append(toIndentedString(rules)).append("\n");
-
     sb.append("    flowlogs: ").append(toIndentedString(flowlogs)).append("\n");
+
+    sb.append("    rules: ").append(toIndentedString(rules)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -129,5 +129,14 @@ public class NatGatewayEntities {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// NatGatewayEntities instantiates a new NatGatewayEntities object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public NatGatewayEntities() {
+
 }
 
+
+}

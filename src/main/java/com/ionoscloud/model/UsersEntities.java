@@ -29,44 +29,20 @@ import java.io.IOException;
 /**
  * UsersEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class UsersEntities {
   
-  public static final String SERIALIZED_NAME_OWNS = "owns";
-  @SerializedName(SERIALIZED_NAME_OWNS)
-  private ResourcesUsers owns;
-
-
   public static final String SERIALIZED_NAME_GROUPS = "groups";
   @SerializedName(SERIALIZED_NAME_GROUPS)
   private GroupUsers groups;
 
+
+  public static final String SERIALIZED_NAME_OWNS = "owns";
+  @SerializedName(SERIALIZED_NAME_OWNS)
+  private ResourcesUsers owns;
+
   
-
-  public UsersEntities owns(ResourcesUsers owns) {
-    
-    this.owns = owns;
-    return this;
-  }
-
-   /**
-   * Get owns
-   * @return owns
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public ResourcesUsers getOwns() {
-    return owns;
-  }
-
-
-  public void setOwns(ResourcesUsers owns) {
-    this.owns = owns;
-  }
-
-
 
   public UsersEntities groups(GroupUsers groups) {
     
@@ -91,6 +67,30 @@ public class UsersEntities {
   }
 
 
+
+  public UsersEntities owns(ResourcesUsers owns) {
+    
+    this.owns = owns;
+    return this;
+  }
+
+   /**
+   * Get owns
+   * @return owns
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public ResourcesUsers getOwns() {
+    return owns;
+  }
+
+
+  public void setOwns(ResourcesUsers owns) {
+    this.owns = owns;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -100,7 +100,7 @@ public class UsersEntities {
       return false;
     }
     UsersEntities usersEntities = (UsersEntities) o;
-    return Objects.equals(this.owns, usersEntities.owns) && Objects.equals(this.groups, usersEntities.groups);
+    return Objects.equals(this.groups, usersEntities.groups) && Objects.equals(this.owns, usersEntities.owns);
   }
 
 
@@ -111,9 +111,9 @@ public class UsersEntities {
     StringBuilder sb = new StringBuilder();
     sb.append("class UsersEntities {\n");
     
-    sb.append("    owns: ").append(toIndentedString(owns)).append("\n");
-
     sb.append("    groups: ").append(toIndentedString(groups)).append("\n");
+
+    sb.append("    owns: ").append(toIndentedString(owns)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -129,5 +129,14 @@ public class UsersEntities {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// UsersEntities instantiates a new UsersEntities object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public UsersEntities() {
+
 }
 
+
+}

@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**pccsFindById**](PrivateCrossConnectsApi.md#pccsfindbyid) | **GET** /pccs/{pccId} | Retrieve private Cross-Connects |
 | [**pccsGet**](PrivateCrossConnectsApi.md#pccsget) | **GET** /pccs | List private Cross-Connects |
 | [**pccsPatch**](PrivateCrossConnectsApi.md#pccspatch) | **PATCH** /pccs/{pccId} | Partially modify private Cross-Connects |
-| [**pccsPost**](PrivateCrossConnectsApi.md#pccspost) | **POST** /pccs | Create private Cross-Connects |
+| [**pccsPost**](PrivateCrossConnectsApi.md#pccspost) | **POST** /pccs | Create a Private Cross-Connect |
 
 
 <a name="pccsDelete"></a>
@@ -37,11 +37,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the pccsDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use pccsDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -56,6 +59,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     PrivateCrossConnectsApi apiInstance = new PrivateCrossConnectsApi(defaultClient);
     String pccId = "pccId_example"; // String | The unique ID of the private Cross-Connect.
@@ -63,8 +68,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.pccsDelete(pccId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.pccsDeleteWithHttpInfo(pccId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling PrivateCrossConnectsApi#pccsDelete");
       System.err.println("Status code: " + e.getCode());
@@ -122,11 +126,14 @@ Retrieve a private Cross-Connect by the resource ID. Cross-Connect ID is in the 
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the pccsFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use pccsFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -141,6 +148,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     PrivateCrossConnectsApi apiInstance = new PrivateCrossConnectsApi(defaultClient);
     String pccId = "pccId_example"; // String | The unique ID of the private Cross-Connect.
@@ -148,8 +157,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      PrivateCrossConnect result = apiInstance.pccsFindById(pccId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<PrivateCrossConnect> result = apiInstance.pccsFindByIdWithHttpInfo(pccId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling PrivateCrossConnectsApi#pccsFindById");
       System.err.println("Status code: " + e.getCode());
@@ -209,11 +220,14 @@ List all private Cross-Connects for your account.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the pccsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use pccsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -228,17 +242,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     PrivateCrossConnectsApi apiInstance = new PrivateCrossConnectsApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      PrivateCrossConnects result = apiInstance.pccsGet(pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<PrivateCrossConnects> result = apiInstance.pccsGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling PrivateCrossConnectsApi#pccsGet");
       System.err.println("Status code: " + e.getCode());
@@ -300,11 +318,14 @@ Update the properties of the specified private Cross-Connect.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the pccsPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use pccsPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -319,6 +340,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     PrivateCrossConnectsApi apiInstance = new PrivateCrossConnectsApi(defaultClient);
     String pccId = "pccId_example"; // String | The unique ID of the private Cross-Connect.
@@ -327,8 +350,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      PrivateCrossConnect result = apiInstance.pccsPatch(pccId, pcc, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<PrivateCrossConnect> result = apiInstance.pccsPatchWithHttpInfo(pccId, pcc, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling PrivateCrossConnectsApi#pccsPatch");
       System.err.println("Status code: " + e.getCode());
@@ -364,9 +389,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **pccsPost**
 > PrivateCrossConnect pccsPost(pcc, pretty, depth, xContractNumber)
 
-Create private Cross-Connects
+Create a Private Cross-Connect
 
-Create a private Cross-Connect.
+Creates a private Cross-Connect.
 
 ### Parameters
 
@@ -386,11 +411,14 @@ Create a private Cross-Connect.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the pccsPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use pccsPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -405,15 +433,20 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     PrivateCrossConnectsApi apiInstance = new PrivateCrossConnectsApi(defaultClient);
-    PrivateCrossConnect pcc = new PrivateCrossConnect(); // PrivateCrossConnect | The private Cross-Connect to create.
+    properties = new PrivateCrossConnectProperties(); // PrivateCrossConnectProperties | 
+    pcc = new PrivateCrossConnect(PrivateCrossConnectProperties); // PrivateCrossConnect | The private Cross-Connect to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      PrivateCrossConnect result = apiInstance.pccsPost(pcc, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<PrivateCrossConnect> result = apiInstance.pccsPostWithHttpInfo(pcc, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling PrivateCrossConnectsApi#pccsPost");
       System.err.println("Status code: " + e.getCode());

@@ -30,10 +30,15 @@ import java.util.List;
 /**
  * NatGatewayProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class NatGatewayProperties {
   
+  public static final String SERIALIZED_NAME_LANS = "lans";
+  @SerializedName(SERIALIZED_NAME_LANS)
+  private List<NatGatewayLanProperties> lans = null;
+
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
@@ -43,12 +48,39 @@ public class NatGatewayProperties {
   @SerializedName(SERIALIZED_NAME_PUBLIC_IPS)
   private List<String> publicIps = new ArrayList<String>();
 
-
-  public static final String SERIALIZED_NAME_LANS = "lans";
-  @SerializedName(SERIALIZED_NAME_LANS)
-  private List<NatGatewayLanProperties> lans = null;
-
   
+
+  public NatGatewayProperties lans(List<NatGatewayLanProperties> lans) {
+    
+    this.lans = lans;
+    return this;
+  }
+
+  public NatGatewayProperties addLansItem(NatGatewayLanProperties lansItem) {
+    if (this.lans == null) {
+      this.lans = new ArrayList<NatGatewayLanProperties>();
+    }
+    this.lans.add(lansItem);
+    return this;
+  }
+
+   /**
+   * Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.
+   * @return lans
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.")
+
+  public List<NatGatewayLanProperties> getLans() {
+    return lans;
+  }
+
+
+  public void setLans(List<NatGatewayLanProperties> lans) {
+    this.lans = lans;
+  }
+
+
 
   public NatGatewayProperties name(String name) {
     
@@ -100,38 +132,6 @@ public class NatGatewayProperties {
   }
 
 
-
-  public NatGatewayProperties lans(List<NatGatewayLanProperties> lans) {
-    
-    this.lans = lans;
-    return this;
-  }
-
-  public NatGatewayProperties addLansItem(NatGatewayLanProperties lansItem) {
-    if (this.lans == null) {
-      this.lans = new ArrayList<NatGatewayLanProperties>();
-    }
-    this.lans.add(lansItem);
-    return this;
-  }
-
-   /**
-   * Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.
-   * @return lans
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.")
-
-  public List<NatGatewayLanProperties> getLans() {
-    return lans;
-  }
-
-
-  public void setLans(List<NatGatewayLanProperties> lans) {
-    this.lans = lans;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -141,7 +141,7 @@ public class NatGatewayProperties {
       return false;
     }
     NatGatewayProperties natGatewayProperties = (NatGatewayProperties) o;
-    return Objects.equals(this.name, natGatewayProperties.name) && Objects.equals(this.publicIps, natGatewayProperties.publicIps) && Objects.equals(this.lans, natGatewayProperties.lans);
+    return Objects.equals(this.lans, natGatewayProperties.lans) && Objects.equals(this.name, natGatewayProperties.name) && Objects.equals(this.publicIps, natGatewayProperties.publicIps);
   }
 
 
@@ -152,11 +152,11 @@ public class NatGatewayProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class NatGatewayProperties {\n");
     
+    sb.append("    lans: ").append(toIndentedString(lans)).append("\n");
+
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
 
     sb.append("    publicIps: ").append(toIndentedString(publicIps)).append("\n");
-
-    sb.append("    lans: ").append(toIndentedString(lans)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -172,5 +172,18 @@ public class NatGatewayProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// NatGatewayProperties instantiates a new NatGatewayProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public NatGatewayProperties(String Name, List<String> PublicIps) {
+
+	this.name = Name;
+	this.publicIps = PublicIps;
 }
 
+public NatGatewayProperties() {
+}
+
+}

@@ -28,20 +28,10 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * DatacenterElementMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class DatacenterElementMetadata {
   
-  public static final String SERIALIZED_NAME_ETAG = "etag";
-  @SerializedName(SERIALIZED_NAME_ETAG)
-  private String etag;
-
-
-  public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
-  @SerializedName(SERIALIZED_NAME_CREATED_DATE)
-  private OffsetDateTime createdDate;
-
-
   public static final String SERIALIZED_NAME_CREATED_BY = "createdBy";
   @SerializedName(SERIALIZED_NAME_CREATED_BY)
   private String createdBy;
@@ -52,9 +42,14 @@ public class DatacenterElementMetadata {
   private String createdByUserId;
 
 
-  public static final String SERIALIZED_NAME_LAST_MODIFIED_DATE = "lastModifiedDate";
-  @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_DATE)
-  private OffsetDateTime lastModifiedDate;
+  public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
+  @SerializedName(SERIALIZED_NAME_CREATED_DATE)
+  private OffsetDateTime createdDate;
+
+
+  public static final String SERIALIZED_NAME_ETAG = "etag";
+  @SerializedName(SERIALIZED_NAME_ETAG)
+  private String etag;
 
 
   public static final String SERIALIZED_NAME_LAST_MODIFIED_BY = "lastModifiedBy";
@@ -67,8 +62,13 @@ public class DatacenterElementMetadata {
   private String lastModifiedByUserId;
 
 
+  public static final String SERIALIZED_NAME_LAST_MODIFIED_DATE = "lastModifiedDate";
+  @SerializedName(SERIALIZED_NAME_LAST_MODIFIED_DATE)
+  private OffsetDateTime lastModifiedDate;
+
+
   /**
-   * State of the resource. *AVAILABLE* There are no pending modification requests for this item; *BUSY* There is at least one modification request pending and all following requests will be queued; *INACTIVE* Resource has been de-provisioned; *DEPLOYING* Resource state DEPLOYING - relevant for Kubernetes cluster/nodepool; *ACTIVE* Resource state ACTIVE - relevant for Kubernetes cluster/nodepool; *FAILED* Resource state FAILED - relevant for Kubernetes cluster/nodepool; *SUSPENDED* Resource state SUSPENDED - relevant for Kubernetes cluster/nodepool; *FAILED_SUSPENDED* Resource state FAILED_SUSPENDED - relevant for Kubernetes cluster; *UPDATING* Resource state UPDATING - relevant for Kubernetes cluster/nodepool; *FAILED_UPDATING* Resource state FAILED_UPDATING - relevant for Kubernetes cluster/nodepool; *DESTROYING* Resource state DESTROYING - relevant for Kubernetes cluster; *FAILED_DESTROYING* Resource state FAILED_DESTROYING - relevant for Kubernetes cluster/nodepool; *TERMINATED* Resource state TERMINATED - relevant for Kubernetes cluster/nodepool.
+   * State of the resource. *AVAILABLE* There are no pending modification requests for this item; *BUSY* There is at least one modification request pending and all following requests will be queued; *INACTIVE* Resource has been de-provisioned; *DEPLOYING* Resource state DEPLOYING - relevant for Kubernetes cluster/nodepool; *ACTIVE* Resource state ACTIVE - relevant for Kubernetes cluster/nodepool; *FAILED* Resource state FAILED - relevant for Kubernetes cluster/nodepool; *SUSPENDED* Resource state SUSPENDED - relevant for Kubernetes cluster/nodepool; *FAILED_SUSPENDED* Resource state FAILED_SUSPENDED - relevant for Kubernetes cluster; *UPDATING* Resource state UPDATING - relevant for Kubernetes cluster/nodepool; *FAILED_UPDATING* Resource state FAILED_UPDATING - relevant for Kubernetes cluster/nodepool; *DESTROYING* Resource state DESTROYING - relevant for Kubernetes cluster; *FAILED_DESTROYING* Resource state FAILED_DESTROYING - relevant for Kubernetes cluster/nodepool; *TERMINATED* Resource state TERMINATED - relevant for Kubernetes cluster/nodepool; *HIBERNATING* Resource state HIBERNATING - relevant for Kubernetes cluster/nodepool; *FAILED_HIBERNATING* Resource state FAILED_HIBERNATING - relevant for Kubernetes cluster/nodepool; *MAINTENANCE* Resource state MAINTENANCE - relevant for Kubernetes cluster/nodepool; *FAILED_HIBERNATING* Resource state FAILED_HIBERNATING - relevant for Kubernetes cluster/nodepool.
    */
   @JsonAdapter(StateEnum.Adapter.class)
   public enum StateEnum {
@@ -96,7 +96,17 @@ public class DatacenterElementMetadata {
     
     FAILED_DESTROYING("FAILED_DESTROYING"),
     
-    TERMINATED("TERMINATED");
+    TERMINATED("TERMINATED"),
+    
+    HIBERNATING("HIBERNATING"),
+    
+    FAILED_HIBERNATING("FAILED_HIBERNATING"),
+    
+    MAINTENANCE("MAINTENANCE"),
+    
+    FAILED_MAINTENANCE("FAILED_MAINTENANCE"),
+    
+    UNKNOWN("UNKNOWN");
 
     private String value;
 
@@ -144,42 +154,6 @@ public class DatacenterElementMetadata {
   
 
    /**
-   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
-   * @return etag
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
-
-  public String getEtag() {
-    return etag;
-  }
-
-
-  public void setEtag(String etag) {
-    this.etag = etag;
-  }
-
-
-
-   /**
-   * The last time the resource was created.
-   * @return createdDate
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource was created.")
-
-  public OffsetDateTime getCreatedDate() {
-    return createdDate;
-  }
-
-
-  public void setCreatedDate(OffsetDateTime createdDate) {
-    this.createdDate = createdDate;
-  }
-
-
-
-   /**
    * The user who created the resource.
    * @return createdBy
   **/
@@ -216,19 +190,37 @@ public class DatacenterElementMetadata {
 
 
    /**
-   * The last time the resource was modified.
-   * @return lastModifiedDate
+   * The last time the resource was created.
+   * @return createdDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource was modified.")
+  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource was created.")
 
-  public OffsetDateTime getLastModifiedDate() {
-    return lastModifiedDate;
+  public OffsetDateTime getCreatedDate() {
+    return createdDate;
   }
 
 
-  public void setLastModifiedDate(OffsetDateTime lastModifiedDate) {
-    this.lastModifiedDate = lastModifiedDate;
+  public void setCreatedDate(OffsetDateTime createdDate) {
+    this.createdDate = createdDate;
+  }
+
+
+
+   /**
+   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
+   * @return etag
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
+
+  public String getEtag() {
+    return etag;
+  }
+
+
+  public void setEtag(String etag) {
+    this.etag = etag;
   }
 
 
@@ -270,11 +262,29 @@ public class DatacenterElementMetadata {
 
 
    /**
-   * State of the resource. *AVAILABLE* There are no pending modification requests for this item; *BUSY* There is at least one modification request pending and all following requests will be queued; *INACTIVE* Resource has been de-provisioned; *DEPLOYING* Resource state DEPLOYING - relevant for Kubernetes cluster/nodepool; *ACTIVE* Resource state ACTIVE - relevant for Kubernetes cluster/nodepool; *FAILED* Resource state FAILED - relevant for Kubernetes cluster/nodepool; *SUSPENDED* Resource state SUSPENDED - relevant for Kubernetes cluster/nodepool; *FAILED_SUSPENDED* Resource state FAILED_SUSPENDED - relevant for Kubernetes cluster; *UPDATING* Resource state UPDATING - relevant for Kubernetes cluster/nodepool; *FAILED_UPDATING* Resource state FAILED_UPDATING - relevant for Kubernetes cluster/nodepool; *DESTROYING* Resource state DESTROYING - relevant for Kubernetes cluster; *FAILED_DESTROYING* Resource state FAILED_DESTROYING - relevant for Kubernetes cluster/nodepool; *TERMINATED* Resource state TERMINATED - relevant for Kubernetes cluster/nodepool.
+   * The last time the resource was modified.
+   * @return lastModifiedDate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource was modified.")
+
+  public OffsetDateTime getLastModifiedDate() {
+    return lastModifiedDate;
+  }
+
+
+  public void setLastModifiedDate(OffsetDateTime lastModifiedDate) {
+    this.lastModifiedDate = lastModifiedDate;
+  }
+
+
+
+   /**
+   * State of the resource. *AVAILABLE* There are no pending modification requests for this item; *BUSY* There is at least one modification request pending and all following requests will be queued; *INACTIVE* Resource has been de-provisioned; *DEPLOYING* Resource state DEPLOYING - relevant for Kubernetes cluster/nodepool; *ACTIVE* Resource state ACTIVE - relevant for Kubernetes cluster/nodepool; *FAILED* Resource state FAILED - relevant for Kubernetes cluster/nodepool; *SUSPENDED* Resource state SUSPENDED - relevant for Kubernetes cluster/nodepool; *FAILED_SUSPENDED* Resource state FAILED_SUSPENDED - relevant for Kubernetes cluster; *UPDATING* Resource state UPDATING - relevant for Kubernetes cluster/nodepool; *FAILED_UPDATING* Resource state FAILED_UPDATING - relevant for Kubernetes cluster/nodepool; *DESTROYING* Resource state DESTROYING - relevant for Kubernetes cluster; *FAILED_DESTROYING* Resource state FAILED_DESTROYING - relevant for Kubernetes cluster/nodepool; *TERMINATED* Resource state TERMINATED - relevant for Kubernetes cluster/nodepool; *HIBERNATING* Resource state HIBERNATING - relevant for Kubernetes cluster/nodepool; *FAILED_HIBERNATING* Resource state FAILED_HIBERNATING - relevant for Kubernetes cluster/nodepool; *MAINTENANCE* Resource state MAINTENANCE - relevant for Kubernetes cluster/nodepool; *FAILED_HIBERNATING* Resource state FAILED_HIBERNATING - relevant for Kubernetes cluster/nodepool.
    * @return state
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "AVAILABLE", value = "State of the resource. *AVAILABLE* There are no pending modification requests for this item; *BUSY* There is at least one modification request pending and all following requests will be queued; *INACTIVE* Resource has been de-provisioned; *DEPLOYING* Resource state DEPLOYING - relevant for Kubernetes cluster/nodepool; *ACTIVE* Resource state ACTIVE - relevant for Kubernetes cluster/nodepool; *FAILED* Resource state FAILED - relevant for Kubernetes cluster/nodepool; *SUSPENDED* Resource state SUSPENDED - relevant for Kubernetes cluster/nodepool; *FAILED_SUSPENDED* Resource state FAILED_SUSPENDED - relevant for Kubernetes cluster; *UPDATING* Resource state UPDATING - relevant for Kubernetes cluster/nodepool; *FAILED_UPDATING* Resource state FAILED_UPDATING - relevant for Kubernetes cluster/nodepool; *DESTROYING* Resource state DESTROYING - relevant for Kubernetes cluster; *FAILED_DESTROYING* Resource state FAILED_DESTROYING - relevant for Kubernetes cluster/nodepool; *TERMINATED* Resource state TERMINATED - relevant for Kubernetes cluster/nodepool.")
+  @ApiModelProperty(example = "AVAILABLE", value = "State of the resource. *AVAILABLE* There are no pending modification requests for this item; *BUSY* There is at least one modification request pending and all following requests will be queued; *INACTIVE* Resource has been de-provisioned; *DEPLOYING* Resource state DEPLOYING - relevant for Kubernetes cluster/nodepool; *ACTIVE* Resource state ACTIVE - relevant for Kubernetes cluster/nodepool; *FAILED* Resource state FAILED - relevant for Kubernetes cluster/nodepool; *SUSPENDED* Resource state SUSPENDED - relevant for Kubernetes cluster/nodepool; *FAILED_SUSPENDED* Resource state FAILED_SUSPENDED - relevant for Kubernetes cluster; *UPDATING* Resource state UPDATING - relevant for Kubernetes cluster/nodepool; *FAILED_UPDATING* Resource state FAILED_UPDATING - relevant for Kubernetes cluster/nodepool; *DESTROYING* Resource state DESTROYING - relevant for Kubernetes cluster; *FAILED_DESTROYING* Resource state FAILED_DESTROYING - relevant for Kubernetes cluster/nodepool; *TERMINATED* Resource state TERMINATED - relevant for Kubernetes cluster/nodepool; *HIBERNATING* Resource state HIBERNATING - relevant for Kubernetes cluster/nodepool; *FAILED_HIBERNATING* Resource state FAILED_HIBERNATING - relevant for Kubernetes cluster/nodepool; *MAINTENANCE* Resource state MAINTENANCE - relevant for Kubernetes cluster/nodepool; *FAILED_HIBERNATING* Resource state FAILED_HIBERNATING - relevant for Kubernetes cluster/nodepool.")
 
   public StateEnum getState() {
     return state;
@@ -295,7 +305,7 @@ public class DatacenterElementMetadata {
       return false;
     }
     DatacenterElementMetadata datacenterElementMetadata = (DatacenterElementMetadata) o;
-    return Objects.equals(this.etag, datacenterElementMetadata.etag) && Objects.equals(this.createdDate, datacenterElementMetadata.createdDate) && Objects.equals(this.createdBy, datacenterElementMetadata.createdBy) && Objects.equals(this.createdByUserId, datacenterElementMetadata.createdByUserId) && Objects.equals(this.lastModifiedDate, datacenterElementMetadata.lastModifiedDate) && Objects.equals(this.lastModifiedBy, datacenterElementMetadata.lastModifiedBy) && Objects.equals(this.lastModifiedByUserId, datacenterElementMetadata.lastModifiedByUserId) && Objects.equals(this.state, datacenterElementMetadata.state);
+    return Objects.equals(this.createdBy, datacenterElementMetadata.createdBy) && Objects.equals(this.createdByUserId, datacenterElementMetadata.createdByUserId) && Objects.equals(this.createdDate, datacenterElementMetadata.createdDate) && Objects.equals(this.etag, datacenterElementMetadata.etag) && Objects.equals(this.lastModifiedBy, datacenterElementMetadata.lastModifiedBy) && Objects.equals(this.lastModifiedByUserId, datacenterElementMetadata.lastModifiedByUserId) && Objects.equals(this.lastModifiedDate, datacenterElementMetadata.lastModifiedDate) && Objects.equals(this.state, datacenterElementMetadata.state);
   }
 
 
@@ -306,19 +316,19 @@ public class DatacenterElementMetadata {
     StringBuilder sb = new StringBuilder();
     sb.append("class DatacenterElementMetadata {\n");
     
-    sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
-
-    sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
-
     sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
 
     sb.append("    createdByUserId: ").append(toIndentedString(createdByUserId)).append("\n");
 
-    sb.append("    lastModifiedDate: ").append(toIndentedString(lastModifiedDate)).append("\n");
+    sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
+
+    sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
 
     sb.append("    lastModifiedBy: ").append(toIndentedString(lastModifiedBy)).append("\n");
 
     sb.append("    lastModifiedByUserId: ").append(toIndentedString(lastModifiedByUserId)).append("\n");
+
+    sb.append("    lastModifiedDate: ").append(toIndentedString(lastModifiedDate)).append("\n");
 
     sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("}");
@@ -336,5 +346,14 @@ public class DatacenterElementMetadata {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// DatacenterElementMetadata instantiates a new DatacenterElementMetadata object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public DatacenterElementMetadata() {
+
 }
 
+
+}

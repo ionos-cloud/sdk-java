@@ -26,22 +26,28 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * LanPropertiesPost
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class LanPropertiesPost {
   
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
-
-
   public static final String SERIALIZED_NAME_IP_FAILOVER = "ipFailover";
   @SerializedName(SERIALIZED_NAME_IP_FAILOVER)
   private List<IPFailover> ipFailover = null;
+
+
+  public static final String SERIALIZED_NAME_IPV6_CIDR_BLOCK = "ipv6CidrBlock";
+  @SerializedName(SERIALIZED_NAME_IPV6_CIDR_BLOCK)
+  private String ipv6CidrBlock;
+
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
 
   public static final String SERIALIZED_NAME_PCC = "pcc";
@@ -54,30 +60,6 @@ public class LanPropertiesPost {
   private Boolean _public;
 
   
-
-  public LanPropertiesPost name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * The name of the  resource.
-   * @return name
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
 
   public LanPropertiesPost ipFailover(List<IPFailover> ipFailover) {
     
@@ -107,6 +89,54 @@ public class LanPropertiesPost {
 
   public void setIpFailover(List<IPFailover> ipFailover) {
     this.ipFailover = ipFailover;
+  }
+
+
+
+  public LanPropertiesPost ipv6CidrBlock(String ipv6CidrBlock) {
+    
+    this.ipv6CidrBlock = ipv6CidrBlock;
+    return this;
+  }
+
+   /**
+   * [The IPv6 feature is in beta phase and not ready for production usage.] For a GET request, this value is either &#39;null&#39; or contains the LAN&#39;s /64 IPv6 CIDR block if this LAN is IPv6-enabled. For POST/PUT/PATCH requests, &#39;AUTO&#39; will result in enabling this LAN for IPv6 and automatically assign a /64 IPv6 CIDR block to this LAN. If you choose the IPv6 CIDR block on your own, then you must provide a /64 block, which is inside the IPv6 CIDR block of the virtual datacenter and unique inside all LANs from this virtual datacenter. If you enable IPv6 on a LAN with NICs, those NICs will get a /80 IPv6 CIDR block and one IPv6 address assigned to each automatically, unless you specify them explicitly on the NICs. A virtual data center is limited to a maximum of 256 IPv6-enabled LANs.
+   * @return ipv6CidrBlock
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "2001:db8:b06d:8f5a::/64", value = "[The IPv6 feature is in beta phase and not ready for production usage.] For a GET request, this value is either 'null' or contains the LAN's /64 IPv6 CIDR block if this LAN is IPv6-enabled. For POST/PUT/PATCH requests, 'AUTO' will result in enabling this LAN for IPv6 and automatically assign a /64 IPv6 CIDR block to this LAN. If you choose the IPv6 CIDR block on your own, then you must provide a /64 block, which is inside the IPv6 CIDR block of the virtual datacenter and unique inside all LANs from this virtual datacenter. If you enable IPv6 on a LAN with NICs, those NICs will get a /80 IPv6 CIDR block and one IPv6 address assigned to each automatically, unless you specify them explicitly on the NICs. A virtual data center is limited to a maximum of 256 IPv6-enabled LANs.")
+
+  public String getIpv6CidrBlock() {
+    return ipv6CidrBlock;
+  }
+
+
+  public void setIpv6CidrBlock(String ipv6CidrBlock) {
+    this.ipv6CidrBlock = ipv6CidrBlock;
+  }
+
+
+
+  public LanPropertiesPost name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * The name of the  resource.
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -167,7 +197,7 @@ public class LanPropertiesPost {
       return false;
     }
     LanPropertiesPost lanPropertiesPost = (LanPropertiesPost) o;
-    return Objects.equals(this.name, lanPropertiesPost.name) && Objects.equals(this.ipFailover, lanPropertiesPost.ipFailover) && Objects.equals(this.pcc, lanPropertiesPost.pcc) && Objects.equals(this._public, lanPropertiesPost._public);
+    return Objects.equals(this.ipFailover, lanPropertiesPost.ipFailover) && Objects.equals(this.ipv6CidrBlock, lanPropertiesPost.ipv6CidrBlock) && Objects.equals(this.name, lanPropertiesPost.name) && Objects.equals(this.pcc, lanPropertiesPost.pcc) && Objects.equals(this._public, lanPropertiesPost._public);
   }
 
 
@@ -178,9 +208,11 @@ public class LanPropertiesPost {
     StringBuilder sb = new StringBuilder();
     sb.append("class LanPropertiesPost {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-
     sb.append("    ipFailover: ").append(toIndentedString(ipFailover)).append("\n");
+
+    sb.append("    ipv6CidrBlock: ").append(toIndentedString(ipv6CidrBlock)).append("\n");
+
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
 
     sb.append("    pcc: ").append(toIndentedString(pcc)).append("\n");
 
@@ -200,5 +232,14 @@ public class LanPropertiesPost {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// LanPropertiesPost instantiates a new LanPropertiesPost object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public LanPropertiesPost() {
+
 }
 
+
+}

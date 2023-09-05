@@ -31,17 +31,27 @@ import java.util.List;
 /**
  * KubernetesNodePools
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class KubernetesNodePools {
   
+  public static final String SERIALIZED_NAME_HREF = "href";
+  @SerializedName(SERIALIZED_NAME_HREF)
+  private URI href;
+
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
 
 
+  public static final String SERIALIZED_NAME_ITEMS = "items";
+  @SerializedName(SERIALIZED_NAME_ITEMS)
+  private List<KubernetesNodePool> items = null;
+
+
   /**
-   * The type of resource within a collection.
+   * The resource type within a collection.
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
@@ -90,17 +100,25 @@ public class KubernetesNodePools {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private TypeEnum type;
 
-
-  public static final String SERIALIZED_NAME_HREF = "href";
-  @SerializedName(SERIALIZED_NAME_HREF)
-  private URI href;
-
-
-  public static final String SERIALIZED_NAME_ITEMS = "items";
-  @SerializedName(SERIALIZED_NAME_ITEMS)
-  private List<KubernetesNodePool> items = null;
-
   
+
+   /**
+   * The URL to the collection representation (absolute path).
+   * @return href
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "https://api.ionos.com/cloudapi/v6/k8s/30f8a4f6-6515-4c34-b49d-dea807453b90/nodepools", value = "The URL to the collection representation (absolute path).")
+
+  public URI getHref() {
+    return href;
+  }
+
+
+  public void setHref(URI href) {
+    this.href = href;
+  }
+
+
 
    /**
    * A unique representation of the Kubernetes node pool as a resource collection.
@@ -116,42 +134,6 @@ public class KubernetesNodePools {
 
   public void setId(String id) {
     this.id = id;
-  }
-
-
-
-   /**
-   * The type of resource within a collection.
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "collection", value = "The type of resource within a collection.")
-
-  public TypeEnum getType() {
-    return type;
-  }
-
-
-  public void setType(TypeEnum type) {
-    this.type = type;
-  }
-
-
-
-   /**
-   * URL to the collection representation (absolute path).
-   * @return href
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the collection representation (absolute path).")
-
-  public URI getHref() {
-    return href;
-  }
-
-
-  public void setHref(URI href) {
-    this.href = href;
   }
 
 
@@ -173,6 +155,24 @@ public class KubernetesNodePools {
   }
 
 
+
+   /**
+   * The resource type within a collection.
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "collection", value = "The resource type within a collection.")
+
+  public TypeEnum getType() {
+    return type;
+  }
+
+
+  public void setType(TypeEnum type) {
+    this.type = type;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -182,7 +182,7 @@ public class KubernetesNodePools {
       return false;
     }
     KubernetesNodePools kubernetesNodePools = (KubernetesNodePools) o;
-    return Objects.equals(this.id, kubernetesNodePools.id) && Objects.equals(this.type, kubernetesNodePools.type) && Objects.equals(this.href, kubernetesNodePools.href) && Objects.equals(this.items, kubernetesNodePools.items);
+    return Objects.equals(this.href, kubernetesNodePools.href) && Objects.equals(this.id, kubernetesNodePools.id) && Objects.equals(this.items, kubernetesNodePools.items) && Objects.equals(this.type, kubernetesNodePools.type);
   }
 
 
@@ -193,13 +193,13 @@ public class KubernetesNodePools {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodePools {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -215,5 +215,14 @@ public class KubernetesNodePools {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// KubernetesNodePools instantiates a new KubernetesNodePools object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public KubernetesNodePools() {
+
 }
 
+
+}

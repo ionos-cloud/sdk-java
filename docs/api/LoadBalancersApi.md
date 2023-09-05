@@ -12,8 +12,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersLoadbalancersFindById**](LoadBalancersApi.md#datacentersloadbalancersfindbyid) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve Load Balancers |
 | [**datacentersLoadbalancersGet**](LoadBalancersApi.md#datacentersloadbalancersget) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers |
 | [**datacentersLoadbalancersPatch**](LoadBalancersApi.md#datacentersloadbalancerspatch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify Load Balancers |
-| [**datacentersLoadbalancersPost**](LoadBalancersApi.md#datacentersloadbalancerspost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create Load Balancers |
-| [**datacentersLoadbalancersPut**](LoadBalancersApi.md#datacentersloadbalancersput) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify Load Balancers |
+| [**datacentersLoadbalancersPost**](LoadBalancersApi.md#datacentersloadbalancerspost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer |
+| [**datacentersLoadbalancersPut**](LoadBalancersApi.md#datacentersloadbalancersput) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer by ID |
 
 
 <a name="datacentersLoadbalancersBalancednicsDelete"></a>
@@ -44,11 +44,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLoadbalancersBalancednicsDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLoadbalancersBalancednicsDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -63,6 +66,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LoadBalancersApi apiInstance = new LoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -72,8 +77,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.datacentersLoadbalancersBalancednicsDeleteWithHttpInfo(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancersApi#datacentersLoadbalancersBalancednicsDelete");
       System.err.println("Status code: " + e.getCode());
@@ -133,11 +137,14 @@ Retrieve the properties of the specified NIC, attached to the Load Balancer.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLoadbalancersBalancednicsFindByNicIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLoadbalancersBalancednicsFindByNicId instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -152,6 +159,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LoadBalancersApi apiInstance = new LoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -161,8 +170,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Nic result = apiInstance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Nic> result = apiInstance.datacentersLoadbalancersBalancednicsFindByNicIdWithHttpInfo(datacenterId, loadbalancerId, nicId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancersApi#datacentersLoadbalancersBalancednicsFindByNicId");
       System.err.println("Status code: " + e.getCode());
@@ -224,11 +235,14 @@ List all NICs, attached to the specified Load Balancer.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLoadbalancersBalancednicsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLoadbalancersBalancednicsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -243,6 +257,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LoadBalancersApi apiInstance = new LoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -250,12 +266,14 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      BalancedNics result = apiInstance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<BalancedNics> result = apiInstance.datacentersLoadbalancersBalancednicsGetWithHttpInfo(datacenterId, loadbalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancersApi#datacentersLoadbalancersBalancednicsGet");
       System.err.println("Status code: " + e.getCode());
@@ -296,7 +314,7 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 
 Attach balanced NICs
 
-Attach an existing NIC to the specified Load Balancer.
+Attachs an existing NIC to the specified Load Balancer.
 
 ### Parameters
 
@@ -318,11 +336,14 @@ Attach an existing NIC to the specified Load Balancer.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLoadbalancersBalancednicsPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLoadbalancersBalancednicsPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -337,17 +358,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LoadBalancersApi apiInstance = new LoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String loadbalancerId = "loadbalancerId_example"; // String | The unique ID of the Load Balancer.
-    Nic nic = new Nic(); // Nic | The NIC to be attached.
+    properties = new NicProperties(); // NicProperties | 
+    nic = new Nic(NicProperties); // Nic | The NIC to be attached.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Nic result = apiInstance.datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancerId, nic, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Nic> result = apiInstance.datacentersLoadbalancersBalancednicsPostWithHttpInfo(datacenterId, loadbalancerId, nic, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancersApi#datacentersLoadbalancersBalancednicsPost");
       System.err.println("Status code: " + e.getCode());
@@ -406,11 +432,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLoadbalancersDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLoadbalancersDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -425,6 +454,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LoadBalancersApi apiInstance = new LoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -433,8 +464,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.datacentersLoadbalancersDelete(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.datacentersLoadbalancersDeleteWithHttpInfo(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancersApi#datacentersLoadbalancersDelete");
       System.err.println("Status code: " + e.getCode());
@@ -493,11 +523,14 @@ Retrieve the properties of the specified Load Balancer within the data center.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLoadbalancersFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLoadbalancersFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -512,6 +545,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LoadBalancersApi apiInstance = new LoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -520,8 +555,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Loadbalancer result = apiInstance.datacentersLoadbalancersFindById(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Loadbalancer> result = apiInstance.datacentersLoadbalancersFindByIdWithHttpInfo(datacenterId, loadbalancerId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancersApi#datacentersLoadbalancersFindById");
       System.err.println("Status code: " + e.getCode());
@@ -584,11 +621,14 @@ List all the Load Balancers within the data center.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLoadbalancersGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLoadbalancersGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -603,6 +643,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LoadBalancersApi apiInstance = new LoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -611,12 +653,14 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Loadbalancers result = apiInstance.datacentersLoadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<Loadbalancers> result = apiInstance.datacentersLoadbalancersGetWithHttpInfo(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancersApi#datacentersLoadbalancersGet");
       System.err.println("Status code: " + e.getCode());
@@ -681,11 +725,14 @@ Update the properties of the specified Load Balancer within the data center.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLoadbalancersPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLoadbalancersPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -700,6 +747,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LoadBalancersApi apiInstance = new LoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -709,8 +758,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Loadbalancer result = apiInstance.datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Loadbalancer> result = apiInstance.datacentersLoadbalancersPatchWithHttpInfo(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancersApi#datacentersLoadbalancersPatch");
       System.err.println("Status code: " + e.getCode());
@@ -746,9 +797,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersLoadbalancersPost**
 > Loadbalancer datacentersLoadbalancersPost(datacenterId, loadbalancer, pretty, depth, xContractNumber)
 
-Create Load Balancers
+Create a Load Balancer
 
-Create a Load Balancer within the data center.
+Creates a Load Balancer within the data center.
 
 ### Parameters
 
@@ -769,11 +820,14 @@ Create a Load Balancer within the data center.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLoadbalancersPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLoadbalancersPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -788,16 +842,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LoadBalancersApi apiInstance = new LoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
-    Loadbalancer loadbalancer = new Loadbalancer(); // Loadbalancer | The Load Balancer to create.
+    properties = new LoadbalancerProperties(); // LoadbalancerProperties | 
+    loadbalancer = new Loadbalancer(LoadbalancerProperties); // Loadbalancer | The Load Balancer to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Loadbalancer result = apiInstance.datacentersLoadbalancersPost(datacenterId, loadbalancer, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Loadbalancer> result = apiInstance.datacentersLoadbalancersPostWithHttpInfo(datacenterId, loadbalancer, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancersApi#datacentersLoadbalancersPost");
       System.err.println("Status code: " + e.getCode());
@@ -833,9 +892,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersLoadbalancersPut**
 > Loadbalancer datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber)
 
-Modify Load Balancers
+Modify a Load Balancer by ID
 
-Modify the properties of the specified Load Balancer within the data center.
+Modifies the properties of the specified Load Balancer within the data center.
 
 ### Parameters
 
@@ -857,11 +916,14 @@ Modify the properties of the specified Load Balancer within the data center.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersLoadbalancersPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersLoadbalancersPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -876,17 +938,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     LoadBalancersApi apiInstance = new LoadBalancersApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String loadbalancerId = "loadbalancerId_example"; // String | The unique ID of the Load Balancer.
-    Loadbalancer loadbalancer = new Loadbalancer(); // Loadbalancer | The modified Load Balancer.
+    properties = new LoadbalancerProperties(); // LoadbalancerProperties | 
+    loadbalancer = new Loadbalancer(LoadbalancerProperties); // Loadbalancer | The modified Load Balancer.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Loadbalancer result = apiInstance.datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Loadbalancer> result = apiInstance.datacentersLoadbalancersPutWithHttpInfo(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling LoadBalancersApi#datacentersLoadbalancersPut");
       System.err.println("Status code: " + e.getCode());

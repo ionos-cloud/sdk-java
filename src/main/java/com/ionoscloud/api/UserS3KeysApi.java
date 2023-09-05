@@ -1259,8 +1259,8 @@ public class UserS3KeysApi {
     }
 
     /**
-     * Modify S3 keys by key ID
-     * Enable or disable the specified user S3 key.
+     * Modify a S3 Key by Key ID
+     * Enables or disables the specified user S3 key.
      * @param userId The unique ID of the user. (required)
      * @param keyId The unique ID of the S3 key. (required)
      * @param s3Key The modified S3 key. (required)
@@ -1283,8 +1283,8 @@ public class UserS3KeysApi {
     }
 
     /**
-     * Modify S3 keys by key ID
-     * Enable or disable the specified user S3 key.
+     * Modify a S3 Key by Key ID
+     * Enables or disables the specified user S3 key.
      * @param userId The unique ID of the user. (required)
      * @param keyId The unique ID of the S3 key. (required)
      * @param s3Key The modified S3 key. (required)
@@ -1308,8 +1308,8 @@ public class UserS3KeysApi {
     }
 
     /**
-     * Modify S3 keys by key ID (asynchronously)
-     * Enable or disable the specified user S3 key.
+     * Modify a S3 Key by Key ID (asynchronously)
+     * Enables or disables the specified user S3 key.
      * @param userId The unique ID of the user. (required)
      * @param keyId The unique ID of the S3 key. (required)
      * @param s3Key The modified S3 key. (required)
@@ -1444,8 +1444,8 @@ public class UserS3KeysApi {
     }
 
     /**
-     * Modify S3 keys by key ID
-     * Enable or disable the specified user S3 key.
+     * Modify a S3 Key by Key ID
+     * Enables or disables the specified user S3 key.
      * @param userId The unique ID of the user. (required)
      * @param keyId The unique ID of the S3 key. (required)
      * @param s3Key The modified S3 key. (required)

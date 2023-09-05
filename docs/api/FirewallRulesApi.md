@@ -8,8 +8,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersServersNicsFirewallrulesFindById**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve firewall rules |
 | [**datacentersServersNicsFirewallrulesGet**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List firewall rules |
 | [**datacentersServersNicsFirewallrulesPatch**](FirewallRulesApi.md#datacentersserversnicsfirewallrulespatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify firewall rules |
-| [**datacentersServersNicsFirewallrulesPost**](FirewallRulesApi.md#datacentersserversnicsfirewallrulespost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create firewall rules |
-| [**datacentersServersNicsFirewallrulesPut**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify firewall rules |
+| [**datacentersServersNicsFirewallrulesPost**](FirewallRulesApi.md#datacentersserversnicsfirewallrulespost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule |
+| [**datacentersServersNicsFirewallrulesPut**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule |
 
 
 <a name="datacentersServersNicsFirewallrulesDelete"></a>
@@ -41,11 +41,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsFirewallrulesDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsFirewallrulesDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -60,6 +63,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     FirewallRulesApi apiInstance = new FirewallRulesApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -70,8 +75,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.datacentersServersNicsFirewallrulesDeleteWithHttpInfo(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling FirewallRulesApi#datacentersServersNicsFirewallrulesDelete");
       System.err.println("Status code: " + e.getCode());
@@ -132,11 +136,14 @@ Retrieve the properties of the specified firewall rule.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsFirewallrulesFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsFirewallrulesFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -151,6 +158,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     FirewallRulesApi apiInstance = new FirewallRulesApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -161,8 +170,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesFindById(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<FirewallRule> result = apiInstance.datacentersServersNicsFirewallrulesFindByIdWithHttpInfo(datacenterId, serverId, nicId, firewallruleId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling FirewallRulesApi#datacentersServersNicsFirewallrulesFindById");
       System.err.println("Status code: " + e.getCode());
@@ -227,11 +238,14 @@ List all firewall rules for the specified NIC.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsFirewallrulesGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsFirewallrulesGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -246,6 +260,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     FirewallRulesApi apiInstance = new FirewallRulesApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -256,12 +272,14 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      FirewallRules result = apiInstance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<FirewallRules> result = apiInstance.datacentersServersNicsFirewallrulesGetWithHttpInfo(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling FirewallRulesApi#datacentersServersNicsFirewallrulesGet");
       System.err.println("Status code: " + e.getCode());
@@ -328,11 +346,14 @@ Update the properties of the specified firewall rule.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsFirewallrulesPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsFirewallrulesPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -347,19 +368,24 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     FirewallRulesApi apiInstance = new FirewallRulesApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String serverId = "serverId_example"; // String | The unique ID of the server.
     String nicId = "nicId_example"; // String | The unique ID of the NIC.
     String firewallruleId = "firewallruleId_example"; // String | The unique ID of the firewall rule.
-    FirewallruleProperties firewallrule = new FirewallruleProperties(); // FirewallruleProperties | The properties of the firewall rule to be updated.
+    protocol = new String(); // String | The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests).
+    firewallrule = new FirewallruleProperties(String); // FirewallruleProperties | The properties of the firewall rule to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<FirewallRule> result = apiInstance.datacentersServersNicsFirewallrulesPatchWithHttpInfo(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling FirewallRulesApi#datacentersServersNicsFirewallrulesPatch");
       System.err.println("Status code: " + e.getCode());
@@ -395,9 +421,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersServersNicsFirewallrulesPost**
 > FirewallRule datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber)
 
-Create firewall rules
+Create a Firewall Rule
 
-Create a firewall rule for the specified NIC.
+Creates a firewall rule for the specified NIC.
 
 ### Parameters
 
@@ -420,11 +446,14 @@ Create a firewall rule for the specified NIC.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsFirewallrulesPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsFirewallrulesPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -439,18 +468,23 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     FirewallRulesApi apiInstance = new FirewallRulesApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String serverId = "serverId_example"; // String | The unique ID of the server.
     String nicId = "nicId_example"; // String | The unique ID of the NIC.
-    FirewallRule firewallrule = new FirewallRule(); // FirewallRule | The firewall rule to create.
+    properties = new FirewallruleProperties(); // FirewallruleProperties | 
+    firewallrule = new FirewallRule(FirewallruleProperties); // FirewallRule | The firewall rule to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<FirewallRule> result = apiInstance.datacentersServersNicsFirewallrulesPostWithHttpInfo(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling FirewallRulesApi#datacentersServersNicsFirewallrulesPost");
       System.err.println("Status code: " + e.getCode());
@@ -486,9 +520,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersServersNicsFirewallrulesPut**
 > FirewallRule datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber)
 
-Modify firewall rules
+Modify a Firewall Rule
 
-Modify the properties of the specified firewall rule.
+Modifies the properties of the specified firewall rule.
 
 ### Parameters
 
@@ -512,11 +546,14 @@ Modify the properties of the specified firewall rule.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsFirewallrulesPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsFirewallrulesPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -531,19 +568,24 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     FirewallRulesApi apiInstance = new FirewallRulesApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String serverId = "serverId_example"; // String | The unique ID of the server.
     String nicId = "nicId_example"; // String | The unique ID of the NIC.
     String firewallruleId = "firewallruleId_example"; // String | The unique ID of the firewall rule.
-    FirewallRule firewallrule = new FirewallRule(); // FirewallRule | The modified firewall rule.
+    properties = new FirewallruleProperties(); // FirewallruleProperties | 
+    firewallrule = new FirewallRule(FirewallruleProperties); // FirewallRule | The modified firewall rule.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      FirewallRule result = apiInstance.datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<FirewallRule> result = apiInstance.datacentersServersNicsFirewallrulesPutWithHttpInfo(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling FirewallRulesApi#datacentersServersNicsFirewallrulesPut");
       System.err.println("Status code: " + e.getCode());

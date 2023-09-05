@@ -28,18 +28,18 @@ import java.math.BigDecimal;
 /**
  * TemplateProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class TemplateProperties {
   
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
-
-
   public static final String SERIALIZED_NAME_CORES = "cores";
   @SerializedName(SERIALIZED_NAME_CORES)
   private BigDecimal cores;
+
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
 
   public static final String SERIALIZED_NAME_RAM = "ram";
@@ -52,29 +52,6 @@ public class TemplateProperties {
   private BigDecimal storageSize;
 
   
-
-  public TemplateProperties name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * The name of the  resource.
-   * @return name
-  **/
-  @ApiModelProperty(example = "My resource", required = true, value = "The name of the  resource.")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
 
   public TemplateProperties cores(BigDecimal cores) {
     
@@ -95,6 +72,29 @@ public class TemplateProperties {
 
   public void setCores(BigDecimal cores) {
     this.cores = cores;
+  }
+
+
+
+  public TemplateProperties name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * The resource name.
+   * @return name
+  **/
+  @ApiModelProperty(example = "My resource", required = true, value = "The resource name.")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -153,7 +153,7 @@ public class TemplateProperties {
       return false;
     }
     TemplateProperties templateProperties = (TemplateProperties) o;
-    return Objects.equals(this.name, templateProperties.name) && Objects.equals(this.cores, templateProperties.cores) && Objects.equals(this.ram, templateProperties.ram) && Objects.equals(this.storageSize, templateProperties.storageSize);
+    return Objects.equals(this.cores, templateProperties.cores) && Objects.equals(this.name, templateProperties.name) && Objects.equals(this.ram, templateProperties.ram) && Objects.equals(this.storageSize, templateProperties.storageSize);
   }
 
 
@@ -164,9 +164,9 @@ public class TemplateProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class TemplateProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-
     sb.append("    cores: ").append(toIndentedString(cores)).append("\n");
+
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
 
     sb.append("    ram: ").append(toIndentedString(ram)).append("\n");
 
@@ -186,5 +186,20 @@ public class TemplateProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// TemplateProperties instantiates a new TemplateProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public TemplateProperties(BigDecimal Cores, String Name, BigDecimal Ram, BigDecimal StorageSize) {
+
+	this.cores = Cores;
+	this.name = Name;
+	this.ram = Ram;
+	this.storageSize = StorageSize;
 }
 
+public TemplateProperties() {
+}
+
+}

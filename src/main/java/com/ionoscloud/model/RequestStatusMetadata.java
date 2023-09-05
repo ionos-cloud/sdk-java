@@ -30,10 +30,20 @@ import java.util.List;
 /**
  * RequestStatusMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class RequestStatusMetadata {
   
+  public static final String SERIALIZED_NAME_ETAG = "etag";
+  @SerializedName(SERIALIZED_NAME_ETAG)
+  private String etag;
+
+
+  public static final String SERIALIZED_NAME_MESSAGE = "message";
+  @SerializedName(SERIALIZED_NAME_MESSAGE)
+  private String message;
+
+
   /**
    * Gets or Sets status
    */
@@ -91,42 +101,26 @@ public class RequestStatusMetadata {
   private StatusEnum status;
 
 
-  public static final String SERIALIZED_NAME_MESSAGE = "message";
-  @SerializedName(SERIALIZED_NAME_MESSAGE)
-  private String message;
-
-
-  public static final String SERIALIZED_NAME_ETAG = "etag";
-  @SerializedName(SERIALIZED_NAME_ETAG)
-  private String etag;
-
-
   public static final String SERIALIZED_NAME_TARGETS = "targets";
   @SerializedName(SERIALIZED_NAME_TARGETS)
   private List<RequestTarget> targets = null;
 
   
 
-  public RequestStatusMetadata status(StatusEnum status) {
-    
-    this.status = status;
-    return this;
-  }
-
    /**
-   * Get status
-   * @return status
+   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
+   * @return etag
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
 
-  public StatusEnum getStatus() {
-    return status;
+  public String getEtag() {
+    return etag;
   }
 
 
-  public void setStatus(StatusEnum status) {
-    this.status = status;
+  public void setEtag(String etag) {
+    this.etag = etag;
   }
 
 
@@ -155,20 +149,26 @@ public class RequestStatusMetadata {
 
 
 
+  public RequestStatusMetadata status(StatusEnum status) {
+    
+    this.status = status;
+    return this;
+  }
+
    /**
-   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
-   * @return etag
+   * Get status
+   * @return status
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
+  @ApiModelProperty(value = "")
 
-  public String getEtag() {
-    return etag;
+  public StatusEnum getStatus() {
+    return status;
   }
 
 
-  public void setEtag(String etag) {
-    this.etag = etag;
+  public void setStatus(StatusEnum status) {
+    this.status = status;
   }
 
 
@@ -213,7 +213,7 @@ public class RequestStatusMetadata {
       return false;
     }
     RequestStatusMetadata requestStatusMetadata = (RequestStatusMetadata) o;
-    return Objects.equals(this.status, requestStatusMetadata.status) && Objects.equals(this.message, requestStatusMetadata.message) && Objects.equals(this.etag, requestStatusMetadata.etag) && Objects.equals(this.targets, requestStatusMetadata.targets);
+    return Objects.equals(this.etag, requestStatusMetadata.etag) && Objects.equals(this.message, requestStatusMetadata.message) && Objects.equals(this.status, requestStatusMetadata.status) && Objects.equals(this.targets, requestStatusMetadata.targets);
   }
 
 
@@ -224,11 +224,11 @@ public class RequestStatusMetadata {
     StringBuilder sb = new StringBuilder();
     sb.append("class RequestStatusMetadata {\n");
     
-    sb.append("    status: ").append(toIndentedString(status)).append("\n");
+    sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
 
     sb.append("    message: ").append(toIndentedString(message)).append("\n");
 
-    sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
+    sb.append("    status: ").append(toIndentedString(status)).append("\n");
 
     sb.append("    targets: ").append(toIndentedString(targets)).append("\n");
     sb.append("}");
@@ -246,5 +246,14 @@ public class RequestStatusMetadata {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// RequestStatusMetadata instantiates a new RequestStatusMetadata object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public RequestStatusMetadata() {
+
 }
 
+
+}

@@ -129,8 +129,8 @@ public class LocationsApi {
     }
 
     /**
-     * List locations within regions
-     * List locations by the region ID.
+     * Get Locations within a Region
+     * Retrieves the available locations in a region specified by its ID. The &#39;regionId&#39; consists of the two character identifier of the region (country), e.g., &#39;de&#39;.
      * @param regionId The unique ID of the region. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -151,8 +151,8 @@ public class LocationsApi {
     }
 
     /**
-     * List locations within regions
-     * List locations by the region ID.
+     * Get Locations within a Region
+     * Retrieves the available locations in a region specified by its ID. The &#39;regionId&#39; consists of the two character identifier of the region (country), e.g., &#39;de&#39;.
      * @param regionId The unique ID of the region. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -174,8 +174,8 @@ public class LocationsApi {
     }
 
     /**
-     * List locations within regions (asynchronously)
-     * List locations by the region ID.
+     * Get Locations within a Region (asynchronously)
+     * Retrieves the available locations in a region specified by its ID. The &#39;regionId&#39; consists of the two character identifier of the region (country), e.g., &#39;de&#39;.
      * @param regionId The unique ID of the region. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
@@ -304,8 +304,8 @@ public class LocationsApi {
     }
 
     /**
-     * List locations within regions
-     * List locations by the region ID.
+     * Get Locations within a Region
+     * Retrieves the available locations in a region specified by its ID. The &#39;regionId&#39; consists of the two character identifier of the region (country), e.g., &#39;de&#39;.
      * @param regionId The unique ID of the region. (required)
      * @return APIlocationsFindByRegionIdRequest
      * @http.response.details
@@ -398,8 +398,8 @@ public class LocationsApi {
     }
 
     /**
-     * Retrieve specified locations
-     * Retrieve the properties of the specified location
+     * Get Location by ID
+     * Retrieves the information about the location specified by its ID. The &#39;locationId&#39; consists of the three-digit identifier of the city according to the IATA code.
      * @param regionId The unique ID of the region. (required)
      * @param locationId The unique ID of the location. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -421,8 +421,8 @@ public class LocationsApi {
     }
 
     /**
-     * Retrieve specified locations
-     * Retrieve the properties of the specified location
+     * Get Location by ID
+     * Retrieves the information about the location specified by its ID. The &#39;locationId&#39; consists of the three-digit identifier of the city according to the IATA code.
      * @param regionId The unique ID of the region. (required)
      * @param locationId The unique ID of the location. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -445,8 +445,8 @@ public class LocationsApi {
     }
 
     /**
-     * Retrieve specified locations (asynchronously)
-     * Retrieve the properties of the specified location
+     * Get Location by ID (asynchronously)
+     * Retrieves the information about the location specified by its ID. The &#39;locationId&#39; consists of the three-digit identifier of the city according to the IATA code.
      * @param regionId The unique ID of the region. (required)
      * @param locationId The unique ID of the location. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -578,8 +578,8 @@ public class LocationsApi {
     }
 
     /**
-     * Retrieve specified locations
-     * Retrieve the properties of the specified location
+     * Get Location by ID
+     * Retrieves the information about the location specified by its ID. The &#39;locationId&#39; consists of the three-digit identifier of the city according to the IATA code.
      * @param regionId The unique ID of the region. (required)
      * @param locationId The unique ID of the location. (required)
      * @return APIlocationsFindByRegionIdAndIdRequest
@@ -670,8 +670,8 @@ public class LocationsApi {
     }
 
     /**
-     * List locations
-     * List the available locations for provisioning your virtual data centers.
+     * Get Locations
+     * Retrieves the available physical locations where you can deploy cloud resources in a VDC.    A location is identified by a combination of the following characters:    * a two-character **regionId**, which represents a country (example: &#39;de&#39;)    * a three-character **locationId**, which represents a city. The &#39;locationId&#39; is typically based on the IATA code of the city&#39;s airport (example: &#39;txl&#39;).    &gt;Note that &#39;locations&#39; are read-only and cannot be changed.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -693,8 +693,8 @@ public class LocationsApi {
     }
 
     /**
-     * List locations
-     * List the available locations for provisioning your virtual data centers.
+     * Get Locations
+     * Retrieves the available physical locations where you can deploy cloud resources in a VDC.    A location is identified by a combination of the following characters:    * a two-character **regionId**, which represents a country (example: &#39;de&#39;)    * a three-character **locationId**, which represents a city. The &#39;locationId&#39; is typically based on the IATA code of the city&#39;s airport (example: &#39;txl&#39;).    &gt;Note that &#39;locations&#39; are read-only and cannot be changed.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -717,8 +717,8 @@ public class LocationsApi {
     }
 
     /**
-     * List locations (asynchronously)
-     * List the available locations for provisioning your virtual data centers.
+     * Get Locations (asynchronously)
+     * Retrieves the available physical locations where you can deploy cloud resources in a VDC.    A location is identified by a combination of the following characters:    * a two-character **regionId**, which represents a country (example: &#39;de&#39;)    * a three-character **locationId**, which represents a city. The &#39;locationId&#39; is typically based on the IATA code of the city&#39;s airport (example: &#39;txl&#39;).    &gt;Note that &#39;locations&#39; are read-only and cannot be changed.
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
      * @param depth Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on (optional, default to 0)
      * @param xContractNumber Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -878,8 +878,8 @@ public class LocationsApi {
     }
 
     /**
-     * List locations
-     * List the available locations for provisioning your virtual data centers.
+     * Get Locations
+     * Retrieves the available physical locations where you can deploy cloud resources in a VDC.    A location is identified by a combination of the following characters:    * a two-character **regionId**, which represents a country (example: &#39;de&#39;)    * a three-character **locationId**, which represents a city. The &#39;locationId&#39; is typically based on the IATA code of the city&#39;s airport (example: &#39;txl&#39;).    &gt;Note that &#39;locations&#39; are read-only and cannot be changed.
      * @return APIlocationsGetRequest
      * @http.response.details
      <table summary="Response Details" border="1">

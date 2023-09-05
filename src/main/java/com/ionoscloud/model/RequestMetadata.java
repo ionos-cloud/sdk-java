@@ -29,18 +29,18 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * RequestMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class RequestMetadata {
   
-  public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
-  @SerializedName(SERIALIZED_NAME_CREATED_DATE)
-  private OffsetDateTime createdDate;
-
-
   public static final String SERIALIZED_NAME_CREATED_BY = "createdBy";
   @SerializedName(SERIALIZED_NAME_CREATED_BY)
   private String createdBy;
+
+
+  public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
+  @SerializedName(SERIALIZED_NAME_CREATED_DATE)
+  private OffsetDateTime createdDate;
 
 
   public static final String SERIALIZED_NAME_ETAG = "etag";
@@ -53,24 +53,6 @@ public class RequestMetadata {
   private RequestStatus requestStatus;
 
   
-
-   /**
-   * The last time the resource was created.
-   * @return createdDate
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource was created.")
-
-  public OffsetDateTime getCreatedDate() {
-    return createdDate;
-  }
-
-
-  public void setCreatedDate(OffsetDateTime createdDate) {
-    this.createdDate = createdDate;
-  }
-
-
 
    /**
    * The user who created the resource.
@@ -86,6 +68,24 @@ public class RequestMetadata {
 
   public void setCreatedBy(String createdBy) {
     this.createdBy = createdBy;
+  }
+
+
+
+   /**
+   * The last time the resource was created.
+   * @return createdDate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource was created.")
+
+  public OffsetDateTime getCreatedDate() {
+    return createdDate;
+  }
+
+
+  public void setCreatedDate(OffsetDateTime createdDate) {
+    this.createdDate = createdDate;
   }
 
 
@@ -140,7 +140,7 @@ public class RequestMetadata {
       return false;
     }
     RequestMetadata requestMetadata = (RequestMetadata) o;
-    return Objects.equals(this.createdDate, requestMetadata.createdDate) && Objects.equals(this.createdBy, requestMetadata.createdBy) && Objects.equals(this.etag, requestMetadata.etag) && Objects.equals(this.requestStatus, requestMetadata.requestStatus);
+    return Objects.equals(this.createdBy, requestMetadata.createdBy) && Objects.equals(this.createdDate, requestMetadata.createdDate) && Objects.equals(this.etag, requestMetadata.etag) && Objects.equals(this.requestStatus, requestMetadata.requestStatus);
   }
 
 
@@ -151,9 +151,9 @@ public class RequestMetadata {
     StringBuilder sb = new StringBuilder();
     sb.append("class RequestMetadata {\n");
     
-    sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
-
     sb.append("    createdBy: ").append(toIndentedString(createdBy)).append("\n");
+
+    sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
 
     sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
 
@@ -173,5 +173,14 @@ public class RequestMetadata {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// RequestMetadata instantiates a new RequestMetadata object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public RequestMetadata() {
+
 }
 
+
+}

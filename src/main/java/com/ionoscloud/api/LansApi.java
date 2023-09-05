@@ -2252,7 +2252,7 @@ public class LansApi {
 
     /**
      * Create LANs
-     * Create a LAN within the data center.
+     * Creates a LAN within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param lan The LAN to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -2275,7 +2275,7 @@ public class LansApi {
 
     /**
      * Create LANs
-     * Create a LAN within the data center.
+     * Creates a LAN within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param lan The LAN to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -2299,7 +2299,7 @@ public class LansApi {
 
     /**
      * Create LANs (asynchronously)
-     * Create a LAN within the data center.
+     * Creates a LAN within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param lan The LAN to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -2432,7 +2432,7 @@ public class LansApi {
 
     /**
      * Create LANs
-     * Create a LAN within the data center.
+     * Creates a LAN within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param lan The LAN to create. (required)
      * @return APIdatacentersLansPostRequest

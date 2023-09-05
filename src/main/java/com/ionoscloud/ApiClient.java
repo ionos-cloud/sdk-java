@@ -140,7 +140,7 @@ public class ApiClient {
         json = new JSON();
 
         // Set default User-Agent.
-        setUserAgent("ionos-cloud-sdk-java/v6.1.5");
+        setUserAgent("ionos-cloud-sdk-java/v6.1.6");
 
         authentications = new HashMap<String, Authentication>();
     }
@@ -383,6 +383,22 @@ public class ApiClient {
         for (Authentication auth : authentications.values()) {
             if (auth instanceof ApiKeyAuth) {
                 ((ApiKeyAuth) auth).setApiKey(apiKey);
+                return;
+            }
+        }
+        throw new RuntimeException("No API key authentication configured!");
+    }
+
+    /**
+     * Helper method to set API key value and the Bearer prefix for the first API key authentication.
+     *
+     * @param apiKey API key
+     */
+    public void setApiKeyBearer(String apiKey) {
+        for (Authentication auth : authentications.values()) {
+            if (auth instanceof ApiKeyAuth) {
+                ((ApiKeyAuth) auth).setApiKey(apiKey);
+                ((ApiKeyAuth) auth).setApiKeyPrefix("Bearer");
                 return;
             }
         }

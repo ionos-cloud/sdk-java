@@ -26,17 +26,323 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * VolumeProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class VolumeProperties {
   
+  /**
+   * The availability zone in which the volume should be provisioned. The storage volume will be provisioned on as few physical storage devices as possible, but this cannot be guaranteed upfront. This is uavailable for DAS (Direct Attached Storage), and subject to availability for SSD.
+   */
+  @JsonAdapter(AvailabilityZoneEnum.Adapter.class)
+  public enum AvailabilityZoneEnum {
+    AUTO("AUTO"),
+    
+    ZONE_1("ZONE_1"),
+    
+    ZONE_2("ZONE_2"),
+    
+    ZONE_3("ZONE_3");
+
+    private String value;
+
+    AvailabilityZoneEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static AvailabilityZoneEnum fromValue(String value) {
+
+      for (AvailabilityZoneEnum b : AvailabilityZoneEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<AvailabilityZoneEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final AvailabilityZoneEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public AvailabilityZoneEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return AvailabilityZoneEnum.fromValue(value);
+      }
+    }
+  }
+
+  public static final String SERIALIZED_NAME_AVAILABILITY_ZONE = "availabilityZone";
+  @SerializedName(SERIALIZED_NAME_AVAILABILITY_ZONE)
+  private AvailabilityZoneEnum availabilityZone;
+
+
+  public static final String SERIALIZED_NAME_BACKUPUNIT_ID = "backupunitId";
+  @SerializedName(SERIALIZED_NAME_BACKUPUNIT_ID)
+  private String backupunitId;
+
+
+  /**
+   * Determines whether the volume will be used as a boot volume. Set to &#x60;NONE&#x60;, the volume will not be used as boot volume. Set to &#x60;PRIMARY&#x60;, the volume will be used as boot volume and all other volumes must be set to &#x60;NONE&#x60;. Set to &#x60;AUTO&#x60; or &#x60;null&#x60; requires all volumes to be set to &#x60;AUTO&#x60; or &#x60;null&#x60;; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.
+   */
+  @JsonAdapter(BootOrderEnum.Adapter.class)
+  public enum BootOrderEnum {
+    AUTO("AUTO"),
+    
+    NONE("NONE"),
+    
+    PRIMARY("PRIMARY");
+
+    private String value;
+
+    BootOrderEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static BootOrderEnum fromValue(String value) {
+
+      for (BootOrderEnum b : BootOrderEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<BootOrderEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final BootOrderEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public BootOrderEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return BootOrderEnum.fromValue(value);
+      }
+    }
+  }
+
+  public static final String SERIALIZED_NAME_BOOT_ORDER = "bootOrder";
+  @SerializedName(SERIALIZED_NAME_BOOT_ORDER)
+  private BootOrderEnum bootOrder = BootOrderEnum.AUTO;
+
+
+  public static final String SERIALIZED_NAME_BOOT_SERVER = "bootServer";
+  @SerializedName(SERIALIZED_NAME_BOOT_SERVER)
+  private String bootServer;
+
+
+  /**
+   * The bus type for this volume; default is VIRTIO.
+   */
+  @JsonAdapter(BusEnum.Adapter.class)
+  public enum BusEnum {
+    VIRTIO("VIRTIO"),
+    
+    IDE("IDE"),
+    
+    UNKNOWN("UNKNOWN");
+
+    private String value;
+
+    BusEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static BusEnum fromValue(String value) {
+
+      for (BusEnum b : BusEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<BusEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final BusEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public BusEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return BusEnum.fromValue(value);
+      }
+    }
+  }
+
+  public static final String SERIALIZED_NAME_BUS = "bus";
+  @SerializedName(SERIALIZED_NAME_BUS)
+  private BusEnum bus;
+
+
+  public static final String SERIALIZED_NAME_CPU_HOT_PLUG = "cpuHotPlug";
+  @SerializedName(SERIALIZED_NAME_CPU_HOT_PLUG)
+  private Boolean cpuHotPlug;
+
+
+  public static final String SERIALIZED_NAME_DEVICE_NUMBER = "deviceNumber";
+  @SerializedName(SERIALIZED_NAME_DEVICE_NUMBER)
+  private Long deviceNumber;
+
+
+  public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG = "discVirtioHotPlug";
+  @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG)
+  private Boolean discVirtioHotPlug;
+
+
+  public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG = "discVirtioHotUnplug";
+  @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG)
+  private Boolean discVirtioHotUnplug;
+
+
+  public static final String SERIALIZED_NAME_IMAGE = "image";
+  @SerializedName(SERIALIZED_NAME_IMAGE)
+  private String image;
+
+
+  public static final String SERIALIZED_NAME_IMAGE_ALIAS = "imageAlias";
+  @SerializedName(SERIALIZED_NAME_IMAGE_ALIAS)
+  private String imageAlias;
+
+
+  public static final String SERIALIZED_NAME_IMAGE_PASSWORD = "imagePassword";
+  @SerializedName(SERIALIZED_NAME_IMAGE_PASSWORD)
+  private String imagePassword;
+
+
+  /**
+   * OS type for this volume.
+   */
+  @JsonAdapter(LicenceTypeEnum.Adapter.class)
+  public enum LicenceTypeEnum {
+    UNKNOWN("UNKNOWN"),
+    
+    WINDOWS("WINDOWS"),
+    
+    WINDOWS2016("WINDOWS2016"),
+    
+    WINDOWS2022("WINDOWS2022"),
+    
+    RHEL("RHEL"),
+    
+    LINUX("LINUX"),
+    
+    OTHER("OTHER");
+
+    private String value;
+
+    LicenceTypeEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static LicenceTypeEnum fromValue(String value) {
+
+      for (LicenceTypeEnum b : LicenceTypeEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<LicenceTypeEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final LicenceTypeEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public LicenceTypeEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return LicenceTypeEnum.fromValue(value);
+      }
+    }
+  }
+
+  public static final String SERIALIZED_NAME_LICENCE_TYPE = "licenceType";
+  @SerializedName(SERIALIZED_NAME_LICENCE_TYPE)
+  private LicenceTypeEnum licenceType;
+
+
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
+
+  public static final String SERIALIZED_NAME_NIC_HOT_PLUG = "nicHotPlug";
+  @SerializedName(SERIALIZED_NAME_NIC_HOT_PLUG)
+  private Boolean nicHotPlug;
+
+
+  public static final String SERIALIZED_NAME_NIC_HOT_UNPLUG = "nicHotUnplug";
+  @SerializedName(SERIALIZED_NAME_NIC_HOT_UNPLUG)
+  private Boolean nicHotUnplug;
+
+
+  public static final String SERIALIZED_NAME_PCI_SLOT = "pciSlot";
+  @SerializedName(SERIALIZED_NAME_PCI_SLOT)
+  private Integer pciSlot;
+
+
+  public static final String SERIALIZED_NAME_RAM_HOT_PLUG = "ramHotPlug";
+  @SerializedName(SERIALIZED_NAME_RAM_HOT_PLUG)
+  private Boolean ramHotPlug;
+
+
+  public static final String SERIALIZED_NAME_SIZE = "size";
+  @SerializedName(SERIALIZED_NAME_SIZE)
+  private BigDecimal size;
+
+
+  public static final String SERIALIZED_NAME_SSH_KEYS = "sshKeys";
+  @SerializedName(SERIALIZED_NAME_SSH_KEYS)
+  private List<String> sshKeys = null;
 
 
   /**
@@ -100,385 +406,11 @@ public class VolumeProperties {
   private TypeEnum type;
 
 
-  public static final String SERIALIZED_NAME_SIZE = "size";
-  @SerializedName(SERIALIZED_NAME_SIZE)
-  private BigDecimal size;
-
-
-  /**
-   * The availability zone in which the volume should be provisioned. The storage volume will be provisioned on as few physical storage devices as possible, but this cannot be guaranteed upfront. This is uavailable for DAS (Direct Attached Storage), and subject to availability for SSD.
-   */
-  @JsonAdapter(AvailabilityZoneEnum.Adapter.class)
-  public enum AvailabilityZoneEnum {
-    AUTO("AUTO"),
-    
-    ZONE_1("ZONE_1"),
-    
-    ZONE_2("ZONE_2"),
-    
-    ZONE_3("ZONE_3");
-
-    private String value;
-
-    AvailabilityZoneEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static AvailabilityZoneEnum fromValue(String value) {
-
-      for (AvailabilityZoneEnum b : AvailabilityZoneEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-
-    public static class Adapter extends TypeAdapter<AvailabilityZoneEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final AvailabilityZoneEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public AvailabilityZoneEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return AvailabilityZoneEnum.fromValue(value);
-      }
-    }
-  }
-
-  public static final String SERIALIZED_NAME_AVAILABILITY_ZONE = "availabilityZone";
-  @SerializedName(SERIALIZED_NAME_AVAILABILITY_ZONE)
-  private AvailabilityZoneEnum availabilityZone;
-
-
-  public static final String SERIALIZED_NAME_IMAGE = "image";
-  @SerializedName(SERIALIZED_NAME_IMAGE)
-  private String image;
-
-
-  public static final String SERIALIZED_NAME_IMAGE_PASSWORD = "imagePassword";
-  @SerializedName(SERIALIZED_NAME_IMAGE_PASSWORD)
-  private String imagePassword;
-
-
-  public static final String SERIALIZED_NAME_IMAGE_ALIAS = "imageAlias";
-  @SerializedName(SERIALIZED_NAME_IMAGE_ALIAS)
-  private String imageAlias;
-
-
-  public static final String SERIALIZED_NAME_SSH_KEYS = "sshKeys";
-  @SerializedName(SERIALIZED_NAME_SSH_KEYS)
-  private List<String> sshKeys = null;
-
-
-  /**
-   * The bus type for this volume; default is VIRTIO.
-   */
-  @JsonAdapter(BusEnum.Adapter.class)
-  public enum BusEnum {
-    VIRTIO("VIRTIO"),
-    
-    IDE("IDE"),
-    
-    UNKNOWN("UNKNOWN");
-
-    private String value;
-
-    BusEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static BusEnum fromValue(String value) {
-
-      for (BusEnum b : BusEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-
-    public static class Adapter extends TypeAdapter<BusEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final BusEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public BusEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return BusEnum.fromValue(value);
-      }
-    }
-  }
-
-  public static final String SERIALIZED_NAME_BUS = "bus";
-  @SerializedName(SERIALIZED_NAME_BUS)
-  private BusEnum bus;
-
-
-  /**
-   * OS type for this volume.
-   */
-  @JsonAdapter(LicenceTypeEnum.Adapter.class)
-  public enum LicenceTypeEnum {
-    UNKNOWN("UNKNOWN"),
-    
-    WINDOWS("WINDOWS"),
-    
-    WINDOWS2016("WINDOWS2016"),
-    
-    WINDOWS2022("WINDOWS2022"),
-    
-    LINUX("LINUX"),
-    
-    OTHER("OTHER");
-
-    private String value;
-
-    LicenceTypeEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static LicenceTypeEnum fromValue(String value) {
-
-      for (LicenceTypeEnum b : LicenceTypeEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-
-    public static class Adapter extends TypeAdapter<LicenceTypeEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final LicenceTypeEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public LicenceTypeEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return LicenceTypeEnum.fromValue(value);
-      }
-    }
-  }
-
-  public static final String SERIALIZED_NAME_LICENCE_TYPE = "licenceType";
-  @SerializedName(SERIALIZED_NAME_LICENCE_TYPE)
-  private LicenceTypeEnum licenceType;
-
-
-  public static final String SERIALIZED_NAME_CPU_HOT_PLUG = "cpuHotPlug";
-  @SerializedName(SERIALIZED_NAME_CPU_HOT_PLUG)
-  private Boolean cpuHotPlug;
-
-
-  public static final String SERIALIZED_NAME_RAM_HOT_PLUG = "ramHotPlug";
-  @SerializedName(SERIALIZED_NAME_RAM_HOT_PLUG)
-  private Boolean ramHotPlug;
-
-
-  public static final String SERIALIZED_NAME_NIC_HOT_PLUG = "nicHotPlug";
-  @SerializedName(SERIALIZED_NAME_NIC_HOT_PLUG)
-  private Boolean nicHotPlug;
-
-
-  public static final String SERIALIZED_NAME_NIC_HOT_UNPLUG = "nicHotUnplug";
-  @SerializedName(SERIALIZED_NAME_NIC_HOT_UNPLUG)
-  private Boolean nicHotUnplug;
-
-
-  public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG = "discVirtioHotPlug";
-  @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_PLUG)
-  private Boolean discVirtioHotPlug;
-
-
-  public static final String SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG = "discVirtioHotUnplug";
-  @SerializedName(SERIALIZED_NAME_DISC_VIRTIO_HOT_UNPLUG)
-  private Boolean discVirtioHotUnplug;
-
-
-  public static final String SERIALIZED_NAME_DEVICE_NUMBER = "deviceNumber";
-  @SerializedName(SERIALIZED_NAME_DEVICE_NUMBER)
-  private Long deviceNumber;
-
-
-  public static final String SERIALIZED_NAME_PCI_SLOT = "pciSlot";
-  @SerializedName(SERIALIZED_NAME_PCI_SLOT)
-  private Integer pciSlot;
-
-
-  public static final String SERIALIZED_NAME_BACKUPUNIT_ID = "backupunitId";
-  @SerializedName(SERIALIZED_NAME_BACKUPUNIT_ID)
-  private String backupunitId;
-
-
   public static final String SERIALIZED_NAME_USER_DATA = "userData";
   @SerializedName(SERIALIZED_NAME_USER_DATA)
   private String userData;
 
-
-  public static final String SERIALIZED_NAME_BOOT_SERVER = "bootServer";
-  @SerializedName(SERIALIZED_NAME_BOOT_SERVER)
-  private String bootServer;
-
-
-  /**
-   * Determines whether the volume will be used as a boot volume. Set to &#x60;NONE&#x60;, the volume will not be used as boot volume. Set to &#x60;PRIMARY&#x60;, the volume will be used as boot volume and all other volumes must be set to &#x60;NONE&#x60;. Set to &#x60;AUTO&#x60; or &#x60;null&#x60; requires all volumes to be set to &#x60;AUTO&#x60; or &#x60;null&#x60;; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.
-   */
-  @JsonAdapter(BootOrderEnum.Adapter.class)
-  public enum BootOrderEnum {
-    AUTO("AUTO"),
-    
-    NONE("NONE"),
-    
-    PRIMARY("PRIMARY");
-
-    private String value;
-
-    BootOrderEnum(String value) {
-      this.value = value;
-    }
-
-    public String getValue() {
-      return value;
-    }
-
-    @Override
-    public String toString() {
-      return String.valueOf(value);
-    }
-
-    public static BootOrderEnum fromValue(String value) {
-
-      for (BootOrderEnum b : BootOrderEnum.values()) {
-        if (b.value.equals(value)) {
-          return b;
-        }
-      }
-      return null;
-    }
-
-    public static class Adapter extends TypeAdapter<BootOrderEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final BootOrderEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public BootOrderEnum read(final JsonReader jsonReader) throws IOException {
-        String value =  jsonReader.nextString();
-        return BootOrderEnum.fromValue(value);
-      }
-    }
-  }
-
-  public static final String SERIALIZED_NAME_BOOT_ORDER = "bootOrder";
-  @SerializedName(SERIALIZED_NAME_BOOT_ORDER)
-  private BootOrderEnum bootOrder = BootOrderEnum.AUTO;
-
   
-
-  public VolumeProperties name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * The name of the  resource.
-   * @return name
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
-
-  public VolumeProperties type(TypeEnum type) {
-    
-    this.type = type;
-    return this;
-  }
-
-   /**
-   * Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server.
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "HDD", value = "Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server.")
-
-  public TypeEnum getType() {
-    return type;
-  }
-
-
-  public void setType(TypeEnum type) {
-    this.type = type;
-  }
-
-
-
-  public VolumeProperties size(BigDecimal size) {
-    
-    this.size = size;
-    return this;
-  }
-
-   /**
-   * The size of the volume in GB.
-   * @return size
-  **/
-  @ApiModelProperty(example = "100.0", required = true, value = "The size of the volume in GB.")
-
-  public BigDecimal getSize() {
-    return size;
-  }
-
-
-  public void setSize(BigDecimal size) {
-    this.size = size;
-  }
-
-
 
   public VolumeProperties availabilityZone(AvailabilityZoneEnum availabilityZone) {
     
@@ -504,106 +436,68 @@ public class VolumeProperties {
 
 
 
-  public VolumeProperties image(String image) {
+  public VolumeProperties backupunitId(String backupunitId) {
     
-    this.image = image;
+    this.backupunitId = backupunitId;
     return this;
   }
 
    /**
-   * Image or snapshot ID to be used as template for this volume.
-   * @return image
+   * The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; in conjunction with this property.
+   * @return backupunitId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "d6ad1576-fde9-4696-aa41-1ebd75bdaf49", value = "Image or snapshot ID to be used as template for this volume.")
+  @ApiModelProperty(example = "25f67991-0f51-4efc-a8ad-ef1fb31a481c", value = "The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either 'public image' or 'imageAlias' in conjunction with this property.")
 
-  public String getImage() {
-    return image;
+  public String getBackupunitId() {
+    return backupunitId;
   }
 
 
-  public void setImage(String image) {
-    this.image = image;
+  public void setBackupunitId(String backupunitId) {
+    this.backupunitId = backupunitId;
   }
 
 
 
-  public VolumeProperties imagePassword(String imagePassword) {
+  public VolumeProperties bootOrder(BootOrderEnum bootOrder) {
     
-    this.imagePassword = imagePassword;
+    this.bootOrder = bootOrder;
     return this;
   }
 
    /**
-   * Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9.
-   * @return imagePassword
+   * Determines whether the volume will be used as a boot volume. Set to &#x60;NONE&#x60;, the volume will not be used as boot volume. Set to &#x60;PRIMARY&#x60;, the volume will be used as boot volume and all other volumes must be set to &#x60;NONE&#x60;. Set to &#x60;AUTO&#x60; or &#x60;null&#x60; requires all volumes to be set to &#x60;AUTO&#x60; or &#x60;null&#x60;; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.
+   * @return bootOrder
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "mypass123", value = "Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9.")
+  @ApiModelProperty(example = "AUTO", value = "Determines whether the volume will be used as a boot volume. Set to `NONE`, the volume will not be used as boot volume. Set to `PRIMARY`, the volume will be used as boot volume and all other volumes must be set to `NONE`. Set to `AUTO` or `null` requires all volumes to be set to `AUTO` or `null`; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.")
 
-  public String getImagePassword() {
-    return imagePassword;
+  public BootOrderEnum getBootOrder() {
+    return bootOrder;
   }
 
 
-  public void setImagePassword(String imagePassword) {
-    this.imagePassword = imagePassword;
+  public void setBootOrder(BootOrderEnum bootOrder) {
+    this.bootOrder = bootOrder;
   }
 
 
-
-  public VolumeProperties imageAlias(String imageAlias) {
-    
-    this.imageAlias = imageAlias;
-    return this;
-  }
 
    /**
-   * Get imageAlias
-   * @return imageAlias
+   * The UUID of the attached server.
+   * @return bootServer
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "25f67991-0f51-4efc-a8ad-ef1fb31a481c", value = "The UUID of the attached server.")
 
-  public String getImageAlias() {
-    return imageAlias;
+  public String getBootServer() {
+    return bootServer;
   }
 
 
-  public void setImageAlias(String imageAlias) {
-    this.imageAlias = imageAlias;
-  }
-
-
-
-  public VolumeProperties sshKeys(List<String> sshKeys) {
-    
-    this.sshKeys = sshKeys;
-    return this;
-  }
-
-  public VolumeProperties addSshKeysItem(String sshKeysItem) {
-    if (this.sshKeys == null) {
-      this.sshKeys = new ArrayList<String>();
-    }
-    this.sshKeys.add(sshKeysItem);
-    return this;
-  }
-
-   /**
-   * Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation.
-   * @return sshKeys
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "[ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345, ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43]", value = "Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation.")
-
-  public List<String> getSshKeys() {
-    return sshKeys;
-  }
-
-
-  public void setSshKeys(List<String> sshKeys) {
-    this.sshKeys = sshKeys;
+  public void setBootServer(String bootServer) {
+    this.bootServer = bootServer;
   }
 
 
@@ -632,24 +526,6 @@ public class VolumeProperties {
 
 
 
-   /**
-   * OS type for this volume.
-   * @return licenceType
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "LINUX", value = "OS type for this volume.")
-
-  public LicenceTypeEnum getLicenceType() {
-    return licenceType;
-  }
-
-
-  public void setLicenceType(LicenceTypeEnum licenceType) {
-    this.licenceType = licenceType;
-  }
-
-
-
   public VolumeProperties cpuHotPlug(Boolean cpuHotPlug) {
     
     this.cpuHotPlug = cpuHotPlug;
@@ -674,74 +550,20 @@ public class VolumeProperties {
 
 
 
-  public VolumeProperties ramHotPlug(Boolean ramHotPlug) {
-    
-    this.ramHotPlug = ramHotPlug;
-    return this;
-  }
-
    /**
-   * Hot-plug capable RAM (no reboot required).
-   * @return ramHotPlug
+   * The Logical Unit Number of the storage volume. Null for volumes, not mounted to a VM.
+   * @return deviceNumber
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Hot-plug capable RAM (no reboot required).")
+  @ApiModelProperty(example = "3", value = "The Logical Unit Number of the storage volume. Null for volumes, not mounted to a VM.")
 
-  public Boolean getRamHotPlug() {
-    return ramHotPlug;
+  public Long getDeviceNumber() {
+    return deviceNumber;
   }
 
 
-  public void setRamHotPlug(Boolean ramHotPlug) {
-    this.ramHotPlug = ramHotPlug;
-  }
-
-
-
-  public VolumeProperties nicHotPlug(Boolean nicHotPlug) {
-    
-    this.nicHotPlug = nicHotPlug;
-    return this;
-  }
-
-   /**
-   * Hot-plug capable NIC (no reboot required).
-   * @return nicHotPlug
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Hot-plug capable NIC (no reboot required).")
-
-  public Boolean getNicHotPlug() {
-    return nicHotPlug;
-  }
-
-
-  public void setNicHotPlug(Boolean nicHotPlug) {
-    this.nicHotPlug = nicHotPlug;
-  }
-
-
-
-  public VolumeProperties nicHotUnplug(Boolean nicHotUnplug) {
-    
-    this.nicHotUnplug = nicHotUnplug;
-    return this;
-  }
-
-   /**
-   * Hot-unplug capable NIC (no reboot required).
-   * @return nicHotUnplug
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "Hot-unplug capable NIC (no reboot required).")
-
-  public Boolean getNicHotUnplug() {
-    return nicHotUnplug;
-  }
-
-
-  public void setNicHotUnplug(Boolean nicHotUnplug) {
-    this.nicHotUnplug = nicHotUnplug;
+  public void setDeviceNumber(Long deviceNumber) {
+    this.deviceNumber = deviceNumber;
   }
 
 
@@ -794,20 +616,170 @@ public class VolumeProperties {
 
 
 
+  public VolumeProperties image(String image) {
+    
+    this.image = image;
+    return this;
+  }
+
    /**
-   * The Logical Unit Number of the storage volume. Null for volumes, not mounted to a VM.
-   * @return deviceNumber
+   * Image or snapshot ID to be used as template for this volume.
+   * @return image
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "3", value = "The Logical Unit Number of the storage volume. Null for volumes, not mounted to a VM.")
+  @ApiModelProperty(example = "d6ad1576-fde9-4696-aa41-1ebd75bdaf49", value = "Image or snapshot ID to be used as template for this volume.")
 
-  public Long getDeviceNumber() {
-    return deviceNumber;
+  public String getImage() {
+    return image;
   }
 
 
-  public void setDeviceNumber(Long deviceNumber) {
-    this.deviceNumber = deviceNumber;
+  public void setImage(String image) {
+    this.image = image;
+  }
+
+
+
+  public VolumeProperties imageAlias(String imageAlias) {
+    
+    this.imageAlias = imageAlias;
+    return this;
+  }
+
+   /**
+   * Get imageAlias
+   * @return imageAlias
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getImageAlias() {
+    return imageAlias;
+  }
+
+
+  public void setImageAlias(String imageAlias) {
+    this.imageAlias = imageAlias;
+  }
+
+
+
+  public VolumeProperties imagePassword(String imagePassword) {
+    
+    this.imagePassword = imagePassword;
+    return this;
+  }
+
+   /**
+   * Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9.
+   * @return imagePassword
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "mypass123", value = "Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9.")
+
+  public String getImagePassword() {
+    return imagePassword;
+  }
+
+
+  public void setImagePassword(String imagePassword) {
+    this.imagePassword = imagePassword;
+  }
+
+
+
+  public VolumeProperties licenceType(LicenceTypeEnum licenceType) {
+    
+    this.licenceType = licenceType;
+    return this;
+  }
+
+   /**
+   * OS type for this volume.
+   * @return licenceType
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "LINUX", value = "OS type for this volume.")
+
+  public LicenceTypeEnum getLicenceType() {
+    return licenceType;
+  }
+
+
+  public void setLicenceType(LicenceTypeEnum licenceType) {
+    this.licenceType = licenceType;
+  }
+
+
+
+  public VolumeProperties name(String name) {
+    
+    this.name = name;
+    return this;
+  }
+
+   /**
+   * The name of the  resource.
+   * @return name
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
+
+  public String getName() {
+    return name;
+  }
+
+
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+
+  public VolumeProperties nicHotPlug(Boolean nicHotPlug) {
+    
+    this.nicHotPlug = nicHotPlug;
+    return this;
+  }
+
+   /**
+   * Hot-plug capable NIC (no reboot required).
+   * @return nicHotPlug
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "true", value = "Hot-plug capable NIC (no reboot required).")
+
+  public Boolean getNicHotPlug() {
+    return nicHotPlug;
+  }
+
+
+  public void setNicHotPlug(Boolean nicHotPlug) {
+    this.nicHotPlug = nicHotPlug;
+  }
+
+
+
+  public VolumeProperties nicHotUnplug(Boolean nicHotUnplug) {
+    
+    this.nicHotUnplug = nicHotUnplug;
+    return this;
+  }
+
+   /**
+   * Hot-unplug capable NIC (no reboot required).
+   * @return nicHotUnplug
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "true", value = "Hot-unplug capable NIC (no reboot required).")
+
+  public Boolean getNicHotUnplug() {
+    return nicHotUnplug;
+  }
+
+
+  public void setNicHotUnplug(Boolean nicHotUnplug) {
+    this.nicHotUnplug = nicHotUnplug;
   }
 
 
@@ -830,26 +802,105 @@ public class VolumeProperties {
 
 
 
-  public VolumeProperties backupunitId(String backupunitId) {
+  public VolumeProperties ramHotPlug(Boolean ramHotPlug) {
     
-    this.backupunitId = backupunitId;
+    this.ramHotPlug = ramHotPlug;
     return this;
   }
 
    /**
-   * The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; in conjunction with this property.
-   * @return backupunitId
+   * Hot-plug capable RAM (no reboot required).
+   * @return ramHotPlug
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "25f67991-0f51-4efc-a8ad-ef1fb31a481c", value = "The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either 'public image' or 'imageAlias' in conjunction with this property.")
+  @ApiModelProperty(example = "true", value = "Hot-plug capable RAM (no reboot required).")
 
-  public String getBackupunitId() {
-    return backupunitId;
+  public Boolean getRamHotPlug() {
+    return ramHotPlug;
   }
 
 
-  public void setBackupunitId(String backupunitId) {
-    this.backupunitId = backupunitId;
+  public void setRamHotPlug(Boolean ramHotPlug) {
+    this.ramHotPlug = ramHotPlug;
+  }
+
+
+
+  public VolumeProperties size(BigDecimal size) {
+    
+    this.size = size;
+    return this;
+  }
+
+   /**
+   * The size of the volume in GB.
+   * @return size
+  **/
+  @ApiModelProperty(example = "100.0", required = true, value = "The size of the volume in GB.")
+
+  public BigDecimal getSize() {
+    return size;
+  }
+
+
+  public void setSize(BigDecimal size) {
+    this.size = size;
+  }
+
+
+
+  public VolumeProperties sshKeys(List<String> sshKeys) {
+    
+    this.sshKeys = sshKeys;
+    return this;
+  }
+
+  public VolumeProperties addSshKeysItem(String sshKeysItem) {
+    if (this.sshKeys == null) {
+      this.sshKeys = new ArrayList<String>();
+    }
+    this.sshKeys.add(sshKeysItem);
+    return this;
+  }
+
+   /**
+   * Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation.
+   * @return sshKeys
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "[ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345, ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43]", value = "Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation.")
+
+  public List<String> getSshKeys() {
+    return sshKeys;
+  }
+
+
+  public void setSshKeys(List<String> sshKeys) {
+    this.sshKeys = sshKeys;
+  }
+
+
+
+  public VolumeProperties type(TypeEnum type) {
+    
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server.
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "HDD", value = "Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server.")
+
+  public TypeEnum getType() {
+    return type;
+  }
+
+
+  public void setType(TypeEnum type) {
+    this.type = type;
   }
 
 
@@ -877,48 +928,6 @@ public class VolumeProperties {
   }
 
 
-
-   /**
-   * The UUID of the attached server.
-   * @return bootServer
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "25f67991-0f51-4efc-a8ad-ef1fb31a481c", value = "The UUID of the attached server.")
-
-  public String getBootServer() {
-    return bootServer;
-  }
-
-
-  public void setBootServer(String bootServer) {
-    this.bootServer = bootServer;
-  }
-
-
-
-  public VolumeProperties bootOrder(BootOrderEnum bootOrder) {
-    
-    this.bootOrder = bootOrder;
-    return this;
-  }
-
-   /**
-   * Determines whether the volume will be used as a boot volume. Set to &#x60;NONE&#x60;, the volume will not be used as boot volume. Set to &#x60;PRIMARY&#x60;, the volume will be used as boot volume and all other volumes must be set to &#x60;NONE&#x60;. Set to &#x60;AUTO&#x60; or &#x60;null&#x60; requires all volumes to be set to &#x60;AUTO&#x60; or &#x60;null&#x60;; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.
-   * @return bootOrder
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "AUTO", value = "Determines whether the volume will be used as a boot volume. Set to `NONE`, the volume will not be used as boot volume. Set to `PRIMARY`, the volume will be used as boot volume and all other volumes must be set to `NONE`. Set to `AUTO` or `null` requires all volumes to be set to `AUTO` or `null`; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices.")
-
-  public BootOrderEnum getBootOrder() {
-    return bootOrder;
-  }
-
-
-  public void setBootOrder(BootOrderEnum bootOrder) {
-    this.bootOrder = bootOrder;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -928,7 +937,7 @@ public class VolumeProperties {
       return false;
     }
     VolumeProperties volumeProperties = (VolumeProperties) o;
-    return Objects.equals(this.name, volumeProperties.name) && Objects.equals(this.type, volumeProperties.type) && Objects.equals(this.size, volumeProperties.size) && Objects.equals(this.availabilityZone, volumeProperties.availabilityZone) && Objects.equals(this.image, volumeProperties.image) && Objects.equals(this.imagePassword, volumeProperties.imagePassword) && Objects.equals(this.imageAlias, volumeProperties.imageAlias) && Objects.equals(this.sshKeys, volumeProperties.sshKeys) && Objects.equals(this.bus, volumeProperties.bus) && Objects.equals(this.licenceType, volumeProperties.licenceType) && Objects.equals(this.cpuHotPlug, volumeProperties.cpuHotPlug) && Objects.equals(this.ramHotPlug, volumeProperties.ramHotPlug) && Objects.equals(this.nicHotPlug, volumeProperties.nicHotPlug) && Objects.equals(this.nicHotUnplug, volumeProperties.nicHotUnplug) && Objects.equals(this.discVirtioHotPlug, volumeProperties.discVirtioHotPlug) && Objects.equals(this.discVirtioHotUnplug, volumeProperties.discVirtioHotUnplug) && Objects.equals(this.deviceNumber, volumeProperties.deviceNumber) && Objects.equals(this.pciSlot, volumeProperties.pciSlot) && Objects.equals(this.backupunitId, volumeProperties.backupunitId) && Objects.equals(this.userData, volumeProperties.userData) && Objects.equals(this.bootServer, volumeProperties.bootServer) && Objects.equals(this.bootOrder, volumeProperties.bootOrder);
+    return Objects.equals(this.availabilityZone, volumeProperties.availabilityZone) && Objects.equals(this.backupunitId, volumeProperties.backupunitId) && Objects.equals(this.bootOrder, volumeProperties.bootOrder) && Objects.equals(this.bootServer, volumeProperties.bootServer) && Objects.equals(this.bus, volumeProperties.bus) && Objects.equals(this.cpuHotPlug, volumeProperties.cpuHotPlug) && Objects.equals(this.deviceNumber, volumeProperties.deviceNumber) && Objects.equals(this.discVirtioHotPlug, volumeProperties.discVirtioHotPlug) && Objects.equals(this.discVirtioHotUnplug, volumeProperties.discVirtioHotUnplug) && Objects.equals(this.image, volumeProperties.image) && Objects.equals(this.imageAlias, volumeProperties.imageAlias) && Objects.equals(this.imagePassword, volumeProperties.imagePassword) && Objects.equals(this.licenceType, volumeProperties.licenceType) && Objects.equals(this.name, volumeProperties.name) && Objects.equals(this.nicHotPlug, volumeProperties.nicHotPlug) && Objects.equals(this.nicHotUnplug, volumeProperties.nicHotUnplug) && Objects.equals(this.pciSlot, volumeProperties.pciSlot) && Objects.equals(this.ramHotPlug, volumeProperties.ramHotPlug) && Objects.equals(this.size, volumeProperties.size) && Objects.equals(this.sshKeys, volumeProperties.sshKeys) && Objects.equals(this.type, volumeProperties.type) && Objects.equals(this.userData, volumeProperties.userData);
   }
 
 
@@ -939,49 +948,49 @@ public class VolumeProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class VolumeProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
-    sb.append("    size: ").append(toIndentedString(size)).append("\n");
-
     sb.append("    availabilityZone: ").append(toIndentedString(availabilityZone)).append("\n");
 
-    sb.append("    image: ").append(toIndentedString(image)).append("\n");
+    sb.append("    backupunitId: ").append(toIndentedString(backupunitId)).append("\n");
 
-    sb.append("    imagePassword: ").append(toIndentedString(imagePassword)).append("\n");
+    sb.append("    bootOrder: ").append(toIndentedString(bootOrder)).append("\n");
 
-    sb.append("    imageAlias: ").append(toIndentedString(imageAlias)).append("\n");
-
-    sb.append("    sshKeys: ").append(toIndentedString(sshKeys)).append("\n");
+    sb.append("    bootServer: ").append(toIndentedString(bootServer)).append("\n");
 
     sb.append("    bus: ").append(toIndentedString(bus)).append("\n");
 
-    sb.append("    licenceType: ").append(toIndentedString(licenceType)).append("\n");
-
     sb.append("    cpuHotPlug: ").append(toIndentedString(cpuHotPlug)).append("\n");
 
-    sb.append("    ramHotPlug: ").append(toIndentedString(ramHotPlug)).append("\n");
-
-    sb.append("    nicHotPlug: ").append(toIndentedString(nicHotPlug)).append("\n");
-
-    sb.append("    nicHotUnplug: ").append(toIndentedString(nicHotUnplug)).append("\n");
+    sb.append("    deviceNumber: ").append(toIndentedString(deviceNumber)).append("\n");
 
     sb.append("    discVirtioHotPlug: ").append(toIndentedString(discVirtioHotPlug)).append("\n");
 
     sb.append("    discVirtioHotUnplug: ").append(toIndentedString(discVirtioHotUnplug)).append("\n");
 
-    sb.append("    deviceNumber: ").append(toIndentedString(deviceNumber)).append("\n");
+    sb.append("    image: ").append(toIndentedString(image)).append("\n");
+
+    sb.append("    imageAlias: ").append(toIndentedString(imageAlias)).append("\n");
+
+    sb.append("    imagePassword: ").append(toIndentedString(imagePassword)).append("\n");
+
+    sb.append("    licenceType: ").append(toIndentedString(licenceType)).append("\n");
+
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
+    sb.append("    nicHotPlug: ").append(toIndentedString(nicHotPlug)).append("\n");
+
+    sb.append("    nicHotUnplug: ").append(toIndentedString(nicHotUnplug)).append("\n");
 
     sb.append("    pciSlot: ").append(toIndentedString(pciSlot)).append("\n");
 
-    sb.append("    backupunitId: ").append(toIndentedString(backupunitId)).append("\n");
+    sb.append("    ramHotPlug: ").append(toIndentedString(ramHotPlug)).append("\n");
+
+    sb.append("    size: ").append(toIndentedString(size)).append("\n");
+
+    sb.append("    sshKeys: ").append(toIndentedString(sshKeys)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
 
     sb.append("    userData: ").append(toIndentedString(userData)).append("\n");
-
-    sb.append("    bootServer: ").append(toIndentedString(bootServer)).append("\n");
-
-    sb.append("    bootOrder: ").append(toIndentedString(bootOrder)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -997,5 +1006,17 @@ public class VolumeProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// VolumeProperties instantiates a new VolumeProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public VolumeProperties(BigDecimal Size) {
+
+	this.size = Size;
 }
 
+public VolumeProperties() {
+}
+
+}

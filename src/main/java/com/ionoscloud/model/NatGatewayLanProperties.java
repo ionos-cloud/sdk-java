@@ -29,43 +29,20 @@ import java.util.List;
 /**
  * NatGatewayLanProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class NatGatewayLanProperties {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private Integer id;
-
-
   public static final String SERIALIZED_NAME_GATEWAY_IPS = "gatewayIps";
   @SerializedName(SERIALIZED_NAME_GATEWAY_IPS)
   private List<String> gatewayIps = null;
 
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private Integer id;
+
   
-
-  public NatGatewayLanProperties id(Integer id) {
-    
-    this.id = id;
-    return this;
-  }
-
-   /**
-   * Id for the LAN connected to the NAT Gateway
-   * @return id
-  **/
-  @ApiModelProperty(example = "3", required = true, value = "Id for the LAN connected to the NAT Gateway")
-
-  public Integer getId() {
-    return id;
-  }
-
-
-  public void setId(Integer id) {
-    this.id = id;
-  }
-
-
 
   public NatGatewayLanProperties gatewayIps(List<String> gatewayIps) {
     
@@ -98,6 +75,29 @@ public class NatGatewayLanProperties {
   }
 
 
+
+  public NatGatewayLanProperties id(Integer id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Id for the LAN connected to the NAT Gateway
+   * @return id
+  **/
+  @ApiModelProperty(example = "3", required = true, value = "Id for the LAN connected to the NAT Gateway")
+
+  public Integer getId() {
+    return id;
+  }
+
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -107,7 +107,7 @@ public class NatGatewayLanProperties {
       return false;
     }
     NatGatewayLanProperties natGatewayLanProperties = (NatGatewayLanProperties) o;
-    return Objects.equals(this.id, natGatewayLanProperties.id) && Objects.equals(this.gatewayIps, natGatewayLanProperties.gatewayIps);
+    return Objects.equals(this.gatewayIps, natGatewayLanProperties.gatewayIps) && Objects.equals(this.id, natGatewayLanProperties.id);
   }
 
 
@@ -118,9 +118,9 @@ public class NatGatewayLanProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class NatGatewayLanProperties {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
     sb.append("    gatewayIps: ").append(toIndentedString(gatewayIps)).append("\n");
+
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -136,5 +136,17 @@ public class NatGatewayLanProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// NatGatewayLanProperties instantiates a new NatGatewayLanProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public NatGatewayLanProperties(Integer Id) {
+
+	this.id = Id;
 }
 
+public NatGatewayLanProperties() {
+}
+
+}

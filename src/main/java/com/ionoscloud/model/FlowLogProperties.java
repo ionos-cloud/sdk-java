@@ -27,15 +27,10 @@ import java.io.IOException;
 /**
  * FlowLogProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class FlowLogProperties {
   
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
-
-
   /**
    * Specifies the traffic action pattern.
    */
@@ -89,6 +84,11 @@ public class FlowLogProperties {
   public static final String SERIALIZED_NAME_ACTION = "action";
   @SerializedName(SERIALIZED_NAME_ACTION)
   private ActionEnum action;
+
+
+  public static final String SERIALIZED_NAME_BUCKET = "bucket";
+  @SerializedName(SERIALIZED_NAME_BUCKET)
+  private String bucket;
 
 
   /**
@@ -146,34 +146,11 @@ public class FlowLogProperties {
   private DirectionEnum direction;
 
 
-  public static final String SERIALIZED_NAME_BUCKET = "bucket";
-  @SerializedName(SERIALIZED_NAME_BUCKET)
-  private String bucket;
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
   
-
-  public FlowLogProperties name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * The name of the  resource.
-   * @return name
-  **/
-  @ApiModelProperty(example = "My resource", required = true, value = "The name of the  resource.")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
 
   public FlowLogProperties action(ActionEnum action) {
     
@@ -194,6 +171,29 @@ public class FlowLogProperties {
 
   public void setAction(ActionEnum action) {
     this.action = action;
+  }
+
+
+
+  public FlowLogProperties bucket(String bucket) {
+    
+    this.bucket = bucket;
+    return this;
+  }
+
+   /**
+   * The S3 bucket name of an existing IONOS Cloud S3 bucket.
+   * @return bucket
+  **/
+  @ApiModelProperty(example = "bucketName/key", required = true, value = "The S3 bucket name of an existing IONOS Cloud S3 bucket.")
+
+  public String getBucket() {
+    return bucket;
+  }
+
+
+  public void setBucket(String bucket) {
+    this.bucket = bucket;
   }
 
 
@@ -221,25 +221,25 @@ public class FlowLogProperties {
 
 
 
-  public FlowLogProperties bucket(String bucket) {
+  public FlowLogProperties name(String name) {
     
-    this.bucket = bucket;
+    this.name = name;
     return this;
   }
 
    /**
-   * S3 bucket name of an existing IONOS Cloud S3 bucket.
-   * @return bucket
+   * The resource name.
+   * @return name
   **/
-  @ApiModelProperty(example = "bucketName/key", required = true, value = "S3 bucket name of an existing IONOS Cloud S3 bucket.")
+  @ApiModelProperty(example = "My resource", required = true, value = "The resource name.")
 
-  public String getBucket() {
-    return bucket;
+  public String getName() {
+    return name;
   }
 
 
-  public void setBucket(String bucket) {
-    this.bucket = bucket;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -252,7 +252,7 @@ public class FlowLogProperties {
       return false;
     }
     FlowLogProperties flowLogProperties = (FlowLogProperties) o;
-    return Objects.equals(this.name, flowLogProperties.name) && Objects.equals(this.action, flowLogProperties.action) && Objects.equals(this.direction, flowLogProperties.direction) && Objects.equals(this.bucket, flowLogProperties.bucket);
+    return Objects.equals(this.action, flowLogProperties.action) && Objects.equals(this.bucket, flowLogProperties.bucket) && Objects.equals(this.direction, flowLogProperties.direction) && Objects.equals(this.name, flowLogProperties.name);
   }
 
 
@@ -263,13 +263,13 @@ public class FlowLogProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class FlowLogProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
+
+    sb.append("    bucket: ").append(toIndentedString(bucket)).append("\n");
 
     sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
 
-    sb.append("    bucket: ").append(toIndentedString(bucket)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -285,5 +285,20 @@ public class FlowLogProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// FlowLogProperties instantiates a new FlowLogProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public FlowLogProperties(ActionEnum Action, String Bucket, DirectionEnum Direction, String Name) {
+
+	this.action = Action;
+	this.bucket = Bucket;
+	this.direction = Direction;
+	this.name = Name;
 }
 
+public FlowLogProperties() {
+}
+
+}

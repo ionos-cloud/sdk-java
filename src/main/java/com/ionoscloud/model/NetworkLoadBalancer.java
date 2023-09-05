@@ -32,23 +32,23 @@ import java.net.URI;
 /**
  * NetworkLoadBalancer
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class NetworkLoadBalancer {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
+  public static final String SERIALIZED_NAME_ENTITIES = "entities";
+  @SerializedName(SERIALIZED_NAME_ENTITIES)
+  private NetworkLoadBalancerEntities entities;
 
 
   public static final String SERIALIZED_NAME_HREF = "href";
   @SerializedName(SERIALIZED_NAME_HREF)
   private URI href;
+
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
 
 
   public static final String SERIALIZED_NAME_METADATA = "metadata";
@@ -61,50 +61,32 @@ public class NetworkLoadBalancer {
   private NetworkLoadBalancerProperties properties;
 
 
-  public static final String SERIALIZED_NAME_ENTITIES = "entities";
-  @SerializedName(SERIALIZED_NAME_ENTITIES)
-  private NetworkLoadBalancerEntities entities;
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
 
   
 
-   /**
-   * The resource&#39;s unique identifier.
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The resource's unique identifier.")
-
-  public String getId() {
-    return id;
-  }
-
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-
-  public NetworkLoadBalancer type(Type type) {
+  public NetworkLoadBalancer entities(NetworkLoadBalancerEntities entities) {
     
-    this.type = type;
+    this.entities = entities;
     return this;
   }
 
    /**
-   * The type of object that has been created.
-   * @return type
+   * Get entities
+   * @return entities
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"networkloadbalancer\"", value = "The type of object that has been created.")
+  @ApiModelProperty(value = "")
 
-  public Type getType() {
-    return type;
+  public NetworkLoadBalancerEntities getEntities() {
+    return entities;
   }
 
 
-  public void setType(Type type) {
-    this.type = type;
+  public void setEntities(NetworkLoadBalancerEntities entities) {
+    this.entities = entities;
   }
 
 
@@ -123,6 +105,24 @@ public class NetworkLoadBalancer {
 
   public void setHref(URI href) {
     this.href = href;
+  }
+
+
+
+   /**
+   * The resource&#39;s unique identifier.
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The resource's unique identifier.")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
   }
 
 
@@ -174,26 +174,26 @@ public class NetworkLoadBalancer {
 
 
 
-  public NetworkLoadBalancer entities(NetworkLoadBalancerEntities entities) {
+  public NetworkLoadBalancer type(Type type) {
     
-    this.entities = entities;
+    this.type = type;
     return this;
   }
 
    /**
-   * Get entities
-   * @return entities
+   * The type of object that has been created.
+   * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "\"networkloadbalancer\"", value = "The type of object that has been created.")
 
-  public NetworkLoadBalancerEntities getEntities() {
-    return entities;
+  public Type getType() {
+    return type;
   }
 
 
-  public void setEntities(NetworkLoadBalancerEntities entities) {
-    this.entities = entities;
+  public void setType(Type type) {
+    this.type = type;
   }
 
 
@@ -206,7 +206,7 @@ public class NetworkLoadBalancer {
       return false;
     }
     NetworkLoadBalancer networkLoadBalancer = (NetworkLoadBalancer) o;
-    return Objects.equals(this.id, networkLoadBalancer.id) && Objects.equals(this.type, networkLoadBalancer.type) && Objects.equals(this.href, networkLoadBalancer.href) && Objects.equals(this.metadata, networkLoadBalancer.metadata) && Objects.equals(this.properties, networkLoadBalancer.properties) && Objects.equals(this.entities, networkLoadBalancer.entities);
+    return Objects.equals(this.entities, networkLoadBalancer.entities) && Objects.equals(this.href, networkLoadBalancer.href) && Objects.equals(this.id, networkLoadBalancer.id) && Objects.equals(this.metadata, networkLoadBalancer.metadata) && Objects.equals(this.properties, networkLoadBalancer.properties) && Objects.equals(this.type, networkLoadBalancer.type);
   }
 
 
@@ -217,17 +217,17 @@ public class NetworkLoadBalancer {
     StringBuilder sb = new StringBuilder();
     sb.append("class NetworkLoadBalancer {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    entities: ").append(toIndentedString(entities)).append("\n");
 
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
+
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
 
     sb.append("    metadata: ").append(toIndentedString(metadata)).append("\n");
 
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
 
-    sb.append("    entities: ").append(toIndentedString(entities)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -243,5 +243,17 @@ public class NetworkLoadBalancer {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// NetworkLoadBalancer instantiates a new NetworkLoadBalancer object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public NetworkLoadBalancer(NetworkLoadBalancerProperties Properties) {
+
+	this.properties = Properties;
 }
 
+public NetworkLoadBalancer() {
+}
+
+}

@@ -30,13 +30,13 @@ import java.util.Map;
 /**
  * RequestProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class RequestProperties {
   
-  public static final String SERIALIZED_NAME_METHOD = "method";
-  @SerializedName(SERIALIZED_NAME_METHOD)
-  private String method;
+  public static final String SERIALIZED_NAME_BODY = "body";
+  @SerializedName(SERIALIZED_NAME_BODY)
+  private String body;
 
 
   public static final String SERIALIZED_NAME_HEADERS = "headers";
@@ -44,9 +44,9 @@ public class RequestProperties {
   private Map<String, String> headers = null;
 
 
-  public static final String SERIALIZED_NAME_BODY = "body";
-  @SerializedName(SERIALIZED_NAME_BODY)
-  private String body;
+  public static final String SERIALIZED_NAME_METHOD = "method";
+  @SerializedName(SERIALIZED_NAME_METHOD)
+  private String method;
 
 
   public static final String SERIALIZED_NAME_URL = "url";
@@ -55,26 +55,26 @@ public class RequestProperties {
 
   
 
-  public RequestProperties method(String method) {
+  public RequestProperties body(String body) {
     
-    this.method = method;
+    this.body = body;
     return this;
   }
 
    /**
-   * Get method
-   * @return method
+   * Get body
+   * @return body
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getMethod() {
-    return method;
+  public String getBody() {
+    return body;
   }
 
 
-  public void setMethod(String method) {
-    this.method = method;
+  public void setBody(String body) {
+    this.body = body;
   }
 
 
@@ -111,26 +111,26 @@ public class RequestProperties {
 
 
 
-  public RequestProperties body(String body) {
+  public RequestProperties method(String method) {
     
-    this.body = body;
+    this.method = method;
     return this;
   }
 
    /**
-   * Get body
-   * @return body
+   * Get method
+   * @return method
   **/
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public String getBody() {
-    return body;
+  public String getMethod() {
+    return method;
   }
 
 
-  public void setBody(String body) {
-    this.body = body;
+  public void setMethod(String method) {
+    this.method = method;
   }
 
 
@@ -167,7 +167,7 @@ public class RequestProperties {
       return false;
     }
     RequestProperties requestProperties = (RequestProperties) o;
-    return Objects.equals(this.method, requestProperties.method) && Objects.equals(this.headers, requestProperties.headers) && Objects.equals(this.body, requestProperties.body) && Objects.equals(this.url, requestProperties.url);
+    return Objects.equals(this.body, requestProperties.body) && Objects.equals(this.headers, requestProperties.headers) && Objects.equals(this.method, requestProperties.method) && Objects.equals(this.url, requestProperties.url);
   }
 
 
@@ -178,11 +178,11 @@ public class RequestProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class RequestProperties {\n");
     
-    sb.append("    method: ").append(toIndentedString(method)).append("\n");
+    sb.append("    body: ").append(toIndentedString(body)).append("\n");
 
     sb.append("    headers: ").append(toIndentedString(headers)).append("\n");
 
-    sb.append("    body: ").append(toIndentedString(body)).append("\n");
+    sb.append("    method: ").append(toIndentedString(method)).append("\n");
 
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");
@@ -200,5 +200,14 @@ public class RequestProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// RequestProperties instantiates a new RequestProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public RequestProperties() {
+
 }
 
+
+}

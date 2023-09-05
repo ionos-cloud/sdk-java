@@ -27,13 +27,33 @@ import java.io.IOException;
 /**
  * IpConsumer
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class IpConsumer {
   
+  public static final String SERIALIZED_NAME_DATACENTER_ID = "datacenterId";
+  @SerializedName(SERIALIZED_NAME_DATACENTER_ID)
+  private String datacenterId;
+
+
+  public static final String SERIALIZED_NAME_DATACENTER_NAME = "datacenterName";
+  @SerializedName(SERIALIZED_NAME_DATACENTER_NAME)
+  private String datacenterName;
+
+
   public static final String SERIALIZED_NAME_IP = "ip";
   @SerializedName(SERIALIZED_NAME_IP)
   private String ip;
+
+
+  public static final String SERIALIZED_NAME_K8S_CLUSTER_UUID = "k8sClusterUuid";
+  @SerializedName(SERIALIZED_NAME_K8S_CLUSTER_UUID)
+  private String k8sClusterUuid;
+
+
+  public static final String SERIALIZED_NAME_K8S_NODE_POOL_UUID = "k8sNodePoolUuid";
+  @SerializedName(SERIALIZED_NAME_K8S_NODE_POOL_UUID)
+  private String k8sNodePoolUuid;
 
 
   public static final String SERIALIZED_NAME_MAC = "mac";
@@ -55,27 +75,55 @@ public class IpConsumer {
   @SerializedName(SERIALIZED_NAME_SERVER_NAME)
   private String serverName;
 
-
-  public static final String SERIALIZED_NAME_DATACENTER_ID = "datacenterId";
-  @SerializedName(SERIALIZED_NAME_DATACENTER_ID)
-  private String datacenterId;
-
-
-  public static final String SERIALIZED_NAME_DATACENTER_NAME = "datacenterName";
-  @SerializedName(SERIALIZED_NAME_DATACENTER_NAME)
-  private String datacenterName;
-
-
-  public static final String SERIALIZED_NAME_K8S_NODE_POOL_UUID = "k8sNodePoolUuid";
-  @SerializedName(SERIALIZED_NAME_K8S_NODE_POOL_UUID)
-  private String k8sNodePoolUuid;
-
-
-  public static final String SERIALIZED_NAME_K8S_CLUSTER_UUID = "k8sClusterUuid";
-  @SerializedName(SERIALIZED_NAME_K8S_CLUSTER_UUID)
-  private String k8sClusterUuid;
-
   
+
+  public IpConsumer datacenterId(String datacenterId) {
+    
+    this.datacenterId = datacenterId;
+    return this;
+  }
+
+   /**
+   * Get datacenterId
+   * @return datacenterId
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDatacenterId() {
+    return datacenterId;
+  }
+
+
+  public void setDatacenterId(String datacenterId) {
+    this.datacenterId = datacenterId;
+  }
+
+
+
+  public IpConsumer datacenterName(String datacenterName) {
+    
+    this.datacenterName = datacenterName;
+    return this;
+  }
+
+   /**
+   * Get datacenterName
+   * @return datacenterName
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getDatacenterName() {
+    return datacenterName;
+  }
+
+
+  public void setDatacenterName(String datacenterName) {
+    this.datacenterName = datacenterName;
+  }
+
+
 
   public IpConsumer ip(String ip) {
     
@@ -97,6 +145,54 @@ public class IpConsumer {
 
   public void setIp(String ip) {
     this.ip = ip;
+  }
+
+
+
+  public IpConsumer k8sClusterUuid(String k8sClusterUuid) {
+    
+    this.k8sClusterUuid = k8sClusterUuid;
+    return this;
+  }
+
+   /**
+   * Get k8sClusterUuid
+   * @return k8sClusterUuid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getK8sClusterUuid() {
+    return k8sClusterUuid;
+  }
+
+
+  public void setK8sClusterUuid(String k8sClusterUuid) {
+    this.k8sClusterUuid = k8sClusterUuid;
+  }
+
+
+
+  public IpConsumer k8sNodePoolUuid(String k8sNodePoolUuid) {
+    
+    this.k8sNodePoolUuid = k8sNodePoolUuid;
+    return this;
+  }
+
+   /**
+   * Get k8sNodePoolUuid
+   * @return k8sNodePoolUuid
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getK8sNodePoolUuid() {
+    return k8sNodePoolUuid;
+  }
+
+
+  public void setK8sNodePoolUuid(String k8sNodePoolUuid) {
+    this.k8sNodePoolUuid = k8sNodePoolUuid;
   }
 
 
@@ -196,102 +292,6 @@ public class IpConsumer {
   }
 
 
-
-  public IpConsumer datacenterId(String datacenterId) {
-    
-    this.datacenterId = datacenterId;
-    return this;
-  }
-
-   /**
-   * Get datacenterId
-   * @return datacenterId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getDatacenterId() {
-    return datacenterId;
-  }
-
-
-  public void setDatacenterId(String datacenterId) {
-    this.datacenterId = datacenterId;
-  }
-
-
-
-  public IpConsumer datacenterName(String datacenterName) {
-    
-    this.datacenterName = datacenterName;
-    return this;
-  }
-
-   /**
-   * Get datacenterName
-   * @return datacenterName
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getDatacenterName() {
-    return datacenterName;
-  }
-
-
-  public void setDatacenterName(String datacenterName) {
-    this.datacenterName = datacenterName;
-  }
-
-
-
-  public IpConsumer k8sNodePoolUuid(String k8sNodePoolUuid) {
-    
-    this.k8sNodePoolUuid = k8sNodePoolUuid;
-    return this;
-  }
-
-   /**
-   * Get k8sNodePoolUuid
-   * @return k8sNodePoolUuid
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getK8sNodePoolUuid() {
-    return k8sNodePoolUuid;
-  }
-
-
-  public void setK8sNodePoolUuid(String k8sNodePoolUuid) {
-    this.k8sNodePoolUuid = k8sNodePoolUuid;
-  }
-
-
-
-  public IpConsumer k8sClusterUuid(String k8sClusterUuid) {
-    
-    this.k8sClusterUuid = k8sClusterUuid;
-    return this;
-  }
-
-   /**
-   * Get k8sClusterUuid
-   * @return k8sClusterUuid
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getK8sClusterUuid() {
-    return k8sClusterUuid;
-  }
-
-
-  public void setK8sClusterUuid(String k8sClusterUuid) {
-    this.k8sClusterUuid = k8sClusterUuid;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -301,7 +301,7 @@ public class IpConsumer {
       return false;
     }
     IpConsumer ipConsumer = (IpConsumer) o;
-    return Objects.equals(this.ip, ipConsumer.ip) && Objects.equals(this.mac, ipConsumer.mac) && Objects.equals(this.nicId, ipConsumer.nicId) && Objects.equals(this.serverId, ipConsumer.serverId) && Objects.equals(this.serverName, ipConsumer.serverName) && Objects.equals(this.datacenterId, ipConsumer.datacenterId) && Objects.equals(this.datacenterName, ipConsumer.datacenterName) && Objects.equals(this.k8sNodePoolUuid, ipConsumer.k8sNodePoolUuid) && Objects.equals(this.k8sClusterUuid, ipConsumer.k8sClusterUuid);
+    return Objects.equals(this.datacenterId, ipConsumer.datacenterId) && Objects.equals(this.datacenterName, ipConsumer.datacenterName) && Objects.equals(this.ip, ipConsumer.ip) && Objects.equals(this.k8sClusterUuid, ipConsumer.k8sClusterUuid) && Objects.equals(this.k8sNodePoolUuid, ipConsumer.k8sNodePoolUuid) && Objects.equals(this.mac, ipConsumer.mac) && Objects.equals(this.nicId, ipConsumer.nicId) && Objects.equals(this.serverId, ipConsumer.serverId) && Objects.equals(this.serverName, ipConsumer.serverName);
   }
 
 
@@ -312,7 +312,15 @@ public class IpConsumer {
     StringBuilder sb = new StringBuilder();
     sb.append("class IpConsumer {\n");
     
+    sb.append("    datacenterId: ").append(toIndentedString(datacenterId)).append("\n");
+
+    sb.append("    datacenterName: ").append(toIndentedString(datacenterName)).append("\n");
+
     sb.append("    ip: ").append(toIndentedString(ip)).append("\n");
+
+    sb.append("    k8sClusterUuid: ").append(toIndentedString(k8sClusterUuid)).append("\n");
+
+    sb.append("    k8sNodePoolUuid: ").append(toIndentedString(k8sNodePoolUuid)).append("\n");
 
     sb.append("    mac: ").append(toIndentedString(mac)).append("\n");
 
@@ -321,14 +329,6 @@ public class IpConsumer {
     sb.append("    serverId: ").append(toIndentedString(serverId)).append("\n");
 
     sb.append("    serverName: ").append(toIndentedString(serverName)).append("\n");
-
-    sb.append("    datacenterId: ").append(toIndentedString(datacenterId)).append("\n");
-
-    sb.append("    datacenterName: ").append(toIndentedString(datacenterName)).append("\n");
-
-    sb.append("    k8sNodePoolUuid: ").append(toIndentedString(k8sNodePoolUuid)).append("\n");
-
-    sb.append("    k8sClusterUuid: ").append(toIndentedString(k8sClusterUuid)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -344,5 +344,14 @@ public class IpConsumer {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// IpConsumer instantiates a new IpConsumer object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public IpConsumer() {
+
 }
 
+
+}

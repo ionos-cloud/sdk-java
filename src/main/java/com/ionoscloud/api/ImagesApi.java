@@ -1225,8 +1225,8 @@ public class ImagesApi {
     }
 
     /**
-     * Modify images
-     * Modify the properties of the specified image.
+     * Modify an Image by ID
+     * Modifies the properties of the specified image.
      * @param imageId The unique ID of the image. (required)
      * @param image The modified image (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1248,8 +1248,8 @@ public class ImagesApi {
     }
 
     /**
-     * Modify images
-     * Modify the properties of the specified image.
+     * Modify an Image by ID
+     * Modifies the properties of the specified image.
      * @param imageId The unique ID of the image. (required)
      * @param image The modified image (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1272,8 +1272,8 @@ public class ImagesApi {
     }
 
     /**
-     * Modify images (asynchronously)
-     * Modify the properties of the specified image.
+     * Modify an Image by ID (asynchronously)
+     * Modifies the properties of the specified image.
      * @param imageId The unique ID of the image. (required)
      * @param image The modified image (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1405,8 +1405,8 @@ public class ImagesApi {
     }
 
     /**
-     * Modify images
-     * Modify the properties of the specified image.
+     * Modify an Image by ID
+     * Modifies the properties of the specified image.
      * @param imageId The unique ID of the image. (required)
      * @param image The modified image (required)
      * @return APIimagesPutRequest

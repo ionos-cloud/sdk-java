@@ -28,18 +28,18 @@ import org.threeten.bp.OffsetDateTime;
 /**
  * KubernetesNodeMetadata
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class KubernetesNodeMetadata {
   
-  public static final String SERIALIZED_NAME_ETAG = "etag";
-  @SerializedName(SERIALIZED_NAME_ETAG)
-  private String etag;
-
-
   public static final String SERIALIZED_NAME_CREATED_DATE = "createdDate";
   @SerializedName(SERIALIZED_NAME_CREATED_DATE)
   private OffsetDateTime createdDate;
+
+
+  public static final String SERIALIZED_NAME_ETAG = "etag";
+  @SerializedName(SERIALIZED_NAME_ETAG)
+  private String etag;
 
 
   public static final String SERIALIZED_NAME_LAST_MODIFIED_DATE = "lastModifiedDate";
@@ -47,8 +47,13 @@ public class KubernetesNodeMetadata {
   private OffsetDateTime lastModifiedDate;
 
 
+  public static final String SERIALIZED_NAME_LAST_SOFTWARE_UPDATED_DATE = "lastSoftwareUpdatedDate";
+  @SerializedName(SERIALIZED_NAME_LAST_SOFTWARE_UPDATED_DATE)
+  private OffsetDateTime lastSoftwareUpdatedDate;
+
+
   /**
-   * State of the resource.
+   * The resource state.
    */
   @JsonAdapter(StateEnum.Adapter.class)
   public enum StateEnum {
@@ -107,37 +112,14 @@ public class KubernetesNodeMetadata {
   @SerializedName(SERIALIZED_NAME_STATE)
   private StateEnum state;
 
-
-  public static final String SERIALIZED_NAME_LAST_SOFTWARE_UPDATED_DATE = "lastSoftwareUpdatedDate";
-  @SerializedName(SERIALIZED_NAME_LAST_SOFTWARE_UPDATED_DATE)
-  private OffsetDateTime lastSoftwareUpdatedDate;
-
   
 
    /**
-   * Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. 
-   * @return etag
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. ")
-
-  public String getEtag() {
-    return etag;
-  }
-
-
-  public void setEtag(String etag) {
-    this.etag = etag;
-  }
-
-
-
-   /**
-   * The last time the resource was created.
+   * The date the resource was created.
    * @return createdDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource was created.")
+  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The date the resource was created.")
 
   public OffsetDateTime getCreatedDate() {
     return createdDate;
@@ -151,11 +133,29 @@ public class KubernetesNodeMetadata {
 
 
    /**
-   * The last time the resource was modified.
+   * The resource entity tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity tags are also added as &#39;ETag&#39; response headers to requests that do not use the &#39;depth&#39; parameter.
+   * @return etag
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "45480eb3fbfc31f1d916c1eaa4abdcc3", value = "The resource entity tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity tags are also added as 'ETag' response headers to requests that do not use the 'depth' parameter.")
+
+  public String getEtag() {
+    return etag;
+  }
+
+
+  public void setEtag(String etag) {
+    this.etag = etag;
+  }
+
+
+
+   /**
+   * The date the resource was last modified.
    * @return lastModifiedDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the resource was modified.")
+  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The date the resource was last modified.")
 
   public OffsetDateTime getLastModifiedDate() {
     return lastModifiedDate;
@@ -169,29 +169,11 @@ public class KubernetesNodeMetadata {
 
 
    /**
-   * State of the resource.
-   * @return state
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "AVAILABLE", value = "State of the resource.")
-
-  public StateEnum getState() {
-    return state;
-  }
-
-
-  public void setState(StateEnum state) {
-    this.state = state;
-  }
-
-
-
-   /**
-   * The last time the software was updated on the node.
+   * The date when the software on the node was last updated.
    * @return lastSoftwareUpdatedDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The last time the software was updated on the node.")
+  @ApiModelProperty(example = "2015-12-04T14:34:09.809Z", value = "The date when the software on the node was last updated.")
 
   public OffsetDateTime getLastSoftwareUpdatedDate() {
     return lastSoftwareUpdatedDate;
@@ -200,6 +182,24 @@ public class KubernetesNodeMetadata {
 
   public void setLastSoftwareUpdatedDate(OffsetDateTime lastSoftwareUpdatedDate) {
     this.lastSoftwareUpdatedDate = lastSoftwareUpdatedDate;
+  }
+
+
+
+   /**
+   * The resource state.
+   * @return state
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "AVAILABLE", value = "The resource state.")
+
+  public StateEnum getState() {
+    return state;
+  }
+
+
+  public void setState(StateEnum state) {
+    this.state = state;
   }
 
 
@@ -212,7 +212,7 @@ public class KubernetesNodeMetadata {
       return false;
     }
     KubernetesNodeMetadata kubernetesNodeMetadata = (KubernetesNodeMetadata) o;
-    return Objects.equals(this.etag, kubernetesNodeMetadata.etag) && Objects.equals(this.createdDate, kubernetesNodeMetadata.createdDate) && Objects.equals(this.lastModifiedDate, kubernetesNodeMetadata.lastModifiedDate) && Objects.equals(this.state, kubernetesNodeMetadata.state) && Objects.equals(this.lastSoftwareUpdatedDate, kubernetesNodeMetadata.lastSoftwareUpdatedDate);
+    return Objects.equals(this.createdDate, kubernetesNodeMetadata.createdDate) && Objects.equals(this.etag, kubernetesNodeMetadata.etag) && Objects.equals(this.lastModifiedDate, kubernetesNodeMetadata.lastModifiedDate) && Objects.equals(this.lastSoftwareUpdatedDate, kubernetesNodeMetadata.lastSoftwareUpdatedDate) && Objects.equals(this.state, kubernetesNodeMetadata.state);
   }
 
 
@@ -223,15 +223,15 @@ public class KubernetesNodeMetadata {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesNodeMetadata {\n");
     
-    sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
-
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
+
+    sb.append("    etag: ").append(toIndentedString(etag)).append("\n");
 
     sb.append("    lastModifiedDate: ").append(toIndentedString(lastModifiedDate)).append("\n");
 
-    sb.append("    state: ").append(toIndentedString(state)).append("\n");
-
     sb.append("    lastSoftwareUpdatedDate: ").append(toIndentedString(lastSoftwareUpdatedDate)).append("\n");
+
+    sb.append("    state: ").append(toIndentedString(state)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -247,5 +247,14 @@ public class KubernetesNodeMetadata {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// KubernetesNodeMetadata instantiates a new KubernetesNodeMetadata object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public KubernetesNodeMetadata() {
+
 }
 
+
+}

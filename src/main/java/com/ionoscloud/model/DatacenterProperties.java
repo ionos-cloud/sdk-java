@@ -26,17 +26,18 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
 
 /**
  * DatacenterProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class DatacenterProperties {
   
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
+  public static final String SERIALIZED_NAME_CPU_ARCHITECTURE = "cpuArchitecture";
+  @SerializedName(SERIALIZED_NAME_CPU_ARCHITECTURE)
+  private List<CpuArchitectureProperties> cpuArchitecture = null;
 
 
   public static final String SERIALIZED_NAME_DESCRIPTION = "description";
@@ -44,19 +45,24 @@ public class DatacenterProperties {
   private String description;
 
 
+  public static final String SERIALIZED_NAME_FEATURES = "features";
+  @SerializedName(SERIALIZED_NAME_FEATURES)
+  private List<String> features = null;
+
+
+  public static final String SERIALIZED_NAME_IPV6_CIDR_BLOCK = "ipv6CidrBlock";
+  @SerializedName(SERIALIZED_NAME_IPV6_CIDR_BLOCK)
+  private String ipv6CidrBlock;
+
+
   public static final String SERIALIZED_NAME_LOCATION = "location";
   @SerializedName(SERIALIZED_NAME_LOCATION)
   private String location;
 
 
-  public static final String SERIALIZED_NAME_VERSION = "version";
-  @SerializedName(SERIALIZED_NAME_VERSION)
-  private Integer version;
-
-
-  public static final String SERIALIZED_NAME_FEATURES = "features";
-  @SerializedName(SERIALIZED_NAME_FEATURES)
-  private List<String> features = null;
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
 
 
   public static final String SERIALIZED_NAME_SEC_AUTH_PROTECTION = "secAuthProtection";
@@ -64,32 +70,26 @@ public class DatacenterProperties {
   private Boolean secAuthProtection;
 
 
-  public static final String SERIALIZED_NAME_CPU_ARCHITECTURE = "cpuArchitecture";
-  @SerializedName(SERIALIZED_NAME_CPU_ARCHITECTURE)
-  private List<CpuArchitectureProperties> cpuArchitecture = null;
+  public static final String SERIALIZED_NAME_VERSION = "version";
+  @SerializedName(SERIALIZED_NAME_VERSION)
+  private Integer version;
 
   
 
-  public DatacenterProperties name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
    /**
-   * The name of the  resource.
-   * @return name
+   * Array of features and CPU families available in a location
+   * @return cpuArchitecture
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
+  @ApiModelProperty(value = "Array of features and CPU families available in a location")
 
-  public String getName() {
-    return name;
+  public List<CpuArchitectureProperties> getCpuArchitecture() {
+    return cpuArchitecture;
   }
 
 
-  public void setName(String name) {
-    this.name = name;
+  public void setCpuArchitecture(List<CpuArchitectureProperties> cpuArchitecture) {
+    this.cpuArchitecture = cpuArchitecture;
   }
 
 
@@ -118,6 +118,42 @@ public class DatacenterProperties {
 
 
 
+   /**
+   * List of features supported by the location where this data center is provisioned.
+   * @return features
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "[SSD]", value = "List of features supported by the location where this data center is provisioned.")
+
+  public List<String> getFeatures() {
+    return features;
+  }
+
+
+  public void setFeatures(List<String> features) {
+    this.features = features;
+  }
+
+
+
+   /**
+   * [The IPv6 feature is in beta phase and not ready for production usage.] This value is either &#39;null&#39; or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.
+   * @return ipv6CidrBlock
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "2001:db8:b06d:8f00::/56", value = "[The IPv6 feature is in beta phase and not ready for production usage.] This value is either 'null' or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.")
+
+  public String getIpv6CidrBlock() {
+    return ipv6CidrBlock;
+  }
+
+
+  public void setIpv6CidrBlock(String ipv6CidrBlock) {
+    this.ipv6CidrBlock = ipv6CidrBlock;
+  }
+
+
+
   public DatacenterProperties location(String location) {
     
     this.location = location;
@@ -141,38 +177,26 @@ public class DatacenterProperties {
 
 
 
-   /**
-   * The version of the data center; incremented with every change.
-   * @return version
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "8", value = "The version of the data center; incremented with every change.")
-
-  public Integer getVersion() {
-    return version;
+  public DatacenterProperties name(String name) {
+    
+    this.name = name;
+    return this;
   }
-
-
-  public void setVersion(Integer version) {
-    this.version = version;
-  }
-
-
 
    /**
-   * List of features supported by the location where this data center is provisioned.
-   * @return features
+   * The name of the  resource.
+   * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[SSD]", value = "List of features supported by the location where this data center is provisioned.")
+  @ApiModelProperty(example = "My resource", value = "The name of the  resource.")
 
-  public List<String> getFeatures() {
-    return features;
+  public String getName() {
+    return name;
   }
 
 
-  public void setFeatures(List<String> features) {
-    this.features = features;
+  public void setName(String name) {
+    this.name = name;
   }
 
 
@@ -202,19 +226,19 @@ public class DatacenterProperties {
 
 
    /**
-   * Array of features and CPU families available in a location
-   * @return cpuArchitecture
+   * The version of the data center; incremented with every change.
+   * @return version
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of features and CPU families available in a location")
+  @ApiModelProperty(example = "8", value = "The version of the data center; incremented with every change.")
 
-  public List<CpuArchitectureProperties> getCpuArchitecture() {
-    return cpuArchitecture;
+  public Integer getVersion() {
+    return version;
   }
 
 
-  public void setCpuArchitecture(List<CpuArchitectureProperties> cpuArchitecture) {
-    this.cpuArchitecture = cpuArchitecture;
+  public void setVersion(Integer version) {
+    this.version = version;
   }
 
 
@@ -227,7 +251,7 @@ public class DatacenterProperties {
       return false;
     }
     DatacenterProperties datacenterProperties = (DatacenterProperties) o;
-    return Objects.equals(this.name, datacenterProperties.name) && Objects.equals(this.description, datacenterProperties.description) && Objects.equals(this.location, datacenterProperties.location) && Objects.equals(this.version, datacenterProperties.version) && Objects.equals(this.features, datacenterProperties.features) && Objects.equals(this.secAuthProtection, datacenterProperties.secAuthProtection) && Objects.equals(this.cpuArchitecture, datacenterProperties.cpuArchitecture);
+    return Objects.equals(this.cpuArchitecture, datacenterProperties.cpuArchitecture) && Objects.equals(this.description, datacenterProperties.description) && Objects.equals(this.features, datacenterProperties.features) && Objects.equals(this.ipv6CidrBlock, datacenterProperties.ipv6CidrBlock) && Objects.equals(this.location, datacenterProperties.location) && Objects.equals(this.name, datacenterProperties.name) && Objects.equals(this.secAuthProtection, datacenterProperties.secAuthProtection) && Objects.equals(this.version, datacenterProperties.version);
   }
 
 
@@ -238,19 +262,21 @@ public class DatacenterProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class DatacenterProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    cpuArchitecture: ").append(toIndentedString(cpuArchitecture)).append("\n");
 
     sb.append("    description: ").append(toIndentedString(description)).append("\n");
 
+    sb.append("    features: ").append(toIndentedString(features)).append("\n");
+
+    sb.append("    ipv6CidrBlock: ").append(toIndentedString(ipv6CidrBlock)).append("\n");
+
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
 
-    sb.append("    version: ").append(toIndentedString(version)).append("\n");
-
-    sb.append("    features: ").append(toIndentedString(features)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
 
     sb.append("    secAuthProtection: ").append(toIndentedString(secAuthProtection)).append("\n");
 
-    sb.append("    cpuArchitecture: ").append(toIndentedString(cpuArchitecture)).append("\n");
+    sb.append("    version: ").append(toIndentedString(version)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -266,5 +292,17 @@ public class DatacenterProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// DatacenterProperties instantiates a new DatacenterProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public DatacenterProperties(String Location) {
+
+	this.location = Location;
 }
 
+public DatacenterProperties() {
+}
+
+}

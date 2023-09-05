@@ -17,7 +17,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**umGroupsSharesPut**](UserManagementApi.md#umgroupssharesput) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify group share privileges |
 | [**umGroupsUsersDelete**](UserManagementApi.md#umgroupsusersdelete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove users from groups |
 | [**umGroupsUsersGet**](UserManagementApi.md#umgroupsusersget) | **GET** /um/groups/{groupId}/users | List group members |
-| [**umGroupsUsersPost**](UserManagementApi.md#umgroupsuserspost) | **POST** /um/groups/{groupId}/users | Add group members |
+| [**umGroupsUsersPost**](UserManagementApi.md#umgroupsuserspost) | **POST** /um/groups/{groupId}/users | Add a Group Member |
 | [**umResourcesFindByType**](UserManagementApi.md#umresourcesfindbytype) | **GET** /um/resources/{resourceType} | List resources by type |
 | [**umResourcesFindByTypeAndId**](UserManagementApi.md#umresourcesfindbytypeandid) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve resources by type |
 | [**umResourcesGet**](UserManagementApi.md#umresourcesget) | **GET** /um/resources | List all resources |
@@ -56,11 +56,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -75,6 +78,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String groupId = "groupId_example"; // String | The unique ID of the group.
@@ -82,8 +87,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.umGroupsDelete(groupId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.umGroupsDeleteWithHttpInfo(groupId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsDelete");
       System.err.println("Status code: " + e.getCode());
@@ -141,11 +145,14 @@ Retrieve a group by the group ID. This value is in the response body when the gr
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -160,6 +167,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String groupId = "groupId_example"; // String | The unique ID of the group.
@@ -167,8 +176,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Group result = apiInstance.umGroupsFindById(groupId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Group> result = apiInstance.umGroupsFindByIdWithHttpInfo(groupId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsFindById");
       System.err.println("Status code: " + e.getCode());
@@ -228,11 +239,14 @@ List all the available user groups.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -247,17 +261,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Groups result = apiInstance.umGroupsGet(pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<Groups> result = apiInstance.umGroupsGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsGet");
       System.err.println("Status code: " + e.getCode());
@@ -318,11 +336,14 @@ Create a group.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -337,15 +358,20 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
-    Group group = new Group(); // Group | The group to create.
+    properties = new GroupProperties(); // GroupProperties | 
+    group = new Group(GroupProperties); // Group | The group to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Group result = apiInstance.umGroupsPost(group, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Group> result = apiInstance.umGroupsPostWithHttpInfo(group, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsPost");
       System.err.println("Status code: " + e.getCode());
@@ -404,11 +430,14 @@ Modify the properties of the specified group.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -423,16 +452,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String groupId = "groupId_example"; // String | The unique ID of the group.
-    Group group = new Group(); // Group | The modified group.
+    properties = new GroupProperties(); // GroupProperties | 
+    group = new Group(GroupProperties); // Group | The modified group.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Group result = apiInstance.umGroupsPut(groupId, group, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Group> result = apiInstance.umGroupsPutWithHttpInfo(groupId, group, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsPut");
       System.err.println("Status code: " + e.getCode());
@@ -493,11 +527,14 @@ List the resources assigned to the group, by group ID.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsResourcesGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsResourcesGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -512,18 +549,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String groupId = "groupId_example"; // String | The unique ID of the group.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      ResourceGroups result = apiInstance.umGroupsResourcesGet(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<ResourceGroups> result = apiInstance.umGroupsResourcesGetWithHttpInfo(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsResourcesGet");
       System.err.println("Status code: " + e.getCode());
@@ -585,11 +626,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsSharesDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsSharesDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -604,6 +648,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String groupId = "groupId_example"; // String | The unique ID of the group.
@@ -612,8 +658,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.umGroupsSharesDelete(groupId, resourceId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.umGroupsSharesDeleteWithHttpInfo(groupId, resourceId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsSharesDelete");
       System.err.println("Status code: " + e.getCode());
@@ -672,11 +717,14 @@ Retrieve the properties of the specified group share.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsSharesFindByResourceIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsSharesFindByResourceId instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -691,6 +739,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String groupId = "groupId_example"; // String | The unique ID of the group.
@@ -699,8 +749,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      GroupShare result = apiInstance.umGroupsSharesFindByResourceId(groupId, resourceId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<GroupShare> result = apiInstance.umGroupsSharesFindByResourceIdWithHttpInfo(groupId, resourceId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsSharesFindByResourceId");
       System.err.println("Status code: " + e.getCode());
@@ -761,11 +813,14 @@ List all shares and share privileges for the specified group.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsSharesGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsSharesGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -780,18 +835,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String groupId = "groupId_example"; // String | The unique ID of the group.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      GroupShares result = apiInstance.umGroupsSharesGet(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<GroupShares> result = apiInstance.umGroupsSharesGetWithHttpInfo(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsSharesGet");
       System.err.println("Status code: " + e.getCode());
@@ -854,11 +913,14 @@ Add the specified share to the group.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsSharesPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsSharesPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -873,17 +935,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String groupId = "groupId_example"; // String | The unique ID of the group.
     String resourceId = "resourceId_example"; // String | The unique ID of the resource.
-    GroupShare resource = new GroupShare(); // GroupShare | The resource to add.
+    properties = new GroupShareProperties(); // GroupShareProperties | 
+    resource = new GroupShare(GroupShareProperties); // GroupShare | The resource to add.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      GroupShare result = apiInstance.umGroupsSharesPost(groupId, resourceId, resource, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<GroupShare> result = apiInstance.umGroupsSharesPostWithHttpInfo(groupId, resourceId, resource, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsSharesPost");
       System.err.println("Status code: " + e.getCode());
@@ -943,11 +1010,14 @@ Modify share permissions for the specified group. With an empty body, no updates
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsSharesPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsSharesPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -962,17 +1032,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String groupId = "groupId_example"; // String | The unique ID of the group.
     String resourceId = "resourceId_example"; // String | The unique ID of the resource.
-    GroupShare resource = new GroupShare(); // GroupShare | The modified resource
+    properties = new GroupShareProperties(); // GroupShareProperties | 
+    resource = new GroupShare(GroupShareProperties); // GroupShare | The modified resource
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      GroupShare result = apiInstance.umGroupsSharesPut(groupId, resourceId, resource, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<GroupShare> result = apiInstance.umGroupsSharesPutWithHttpInfo(groupId, resourceId, resource, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsSharesPut");
       System.err.println("Status code: " + e.getCode());
@@ -1031,11 +1106,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsUsersDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsUsersDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1050,6 +1128,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String groupId = "groupId_example"; // String | The unique ID of the group.
@@ -1058,8 +1138,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.umGroupsUsersDelete(groupId, userId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.umGroupsUsersDeleteWithHttpInfo(groupId, userId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsUsersDelete");
       System.err.println("Status code: " + e.getCode());
@@ -1120,11 +1199,14 @@ List all members of the specified user group.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsUsersGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsUsersGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1139,18 +1221,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String groupId = "groupId_example"; // String | The unique ID of the group.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      GroupMembers result = apiInstance.umGroupsUsersGet(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<GroupMembers> result = apiInstance.umGroupsUsersGetWithHttpInfo(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsUsersGet");
       System.err.println("Status code: " + e.getCode());
@@ -1189,9 +1275,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **umGroupsUsersPost**
 > User umGroupsUsersPost(groupId, user, pretty, depth, xContractNumber)
 
-Add group members
+Add a Group Member
 
-Add an existing user to the specified group. 
+Adds an existing user to the specified group. 
 
 ### Parameters
 
@@ -1212,11 +1298,14 @@ Add an existing user to the specified group.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umGroupsUsersPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umGroupsUsersPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1231,16 +1320,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String groupId = "groupId_example"; // String | The unique ID of the group.
-    User user = new User(); // User | The user to add.
+    properties = new UserProperties(); // UserProperties | 
+    user = new User(UserProperties); // User | The user to add.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      User result = apiInstance.umGroupsUsersPost(groupId, user, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<User> result = apiInstance.umGroupsUsersPostWithHttpInfo(groupId, user, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umGroupsUsersPost");
       System.err.println("Status code: " + e.getCode());
@@ -1298,11 +1392,14 @@ List all resources of the specified type.  Resource types are: {datacenter, snap
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umResourcesFindByTypeWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umResourcesFindByType instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1317,6 +1414,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String resourceType = "resourceType_example"; // String | The resource type
@@ -1324,8 +1423,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Resources result = apiInstance.umResourcesFindByType(resourceType, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Resources> result = apiInstance.umResourcesFindByTypeWithHttpInfo(resourceType, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umResourcesFindByType");
       System.err.println("Status code: " + e.getCode());
@@ -1384,11 +1485,14 @@ Retrieve a resource by the resource type and resource ID.  Resource types are: {
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umResourcesFindByTypeAndIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umResourcesFindByTypeAndId instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1403,6 +1507,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String resourceType = "resourceType_example"; // String | The resource type
@@ -1411,8 +1517,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Resource result = apiInstance.umResourcesFindByTypeAndId(resourceType, resourceId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Resource> result = apiInstance.umResourcesFindByTypeAndIdWithHttpInfo(resourceType, resourceId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umResourcesFindByTypeAndId");
       System.err.println("Status code: " + e.getCode());
@@ -1472,11 +1580,14 @@ List all the available resources.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umResourcesGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umResourcesGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1491,17 +1602,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Resources result = apiInstance.umResourcesGet(pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<Resources> result = apiInstance.umResourcesGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umResourcesGet");
       System.err.println("Status code: " + e.getCode());
@@ -1562,11 +1677,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umUsersDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umUsersDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1581,6 +1699,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String userId = "userId_example"; // String | The unique ID of the user.
@@ -1588,8 +1708,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.umUsersDelete(userId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.umUsersDeleteWithHttpInfo(userId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersDelete");
       System.err.println("Status code: " + e.getCode());
@@ -1647,11 +1766,14 @@ Retrieve user properties by user ID. The user ID is in the response body when th
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umUsersFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umUsersFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1666,6 +1788,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String userId = "userId_example"; // String | The unique ID of the user.
@@ -1673,8 +1797,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      User result = apiInstance.umUsersFindById(userId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<User> result = apiInstance.umUsersFindByIdWithHttpInfo(userId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersFindById");
       System.err.println("Status code: " + e.getCode());
@@ -1736,11 +1862,14 @@ List all the users in your account.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umUsersGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umUsersGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1755,6 +1884,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1762,12 +1893,14 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 100; // Integer | The maximum number of elements to return (use together with <code>offset</code> for pagination).
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Users result = apiInstance.umUsersGet(pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<Users> result = apiInstance.umUsersGetWithHttpInfo(pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersGet");
       System.err.println("Status code: " + e.getCode());
@@ -1833,11 +1966,14 @@ Retrieve group resources of the user by user ID. The user ID is in the response 
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umUsersGroupsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umUsersGroupsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1852,18 +1988,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String userId = "userId_example"; // String | The unique ID of the user.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      ResourceGroups result = apiInstance.umUsersGroupsGet(userId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<ResourceGroups> result = apiInstance.umUsersGroupsGetWithHttpInfo(userId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersGroupsGet");
       System.err.println("Status code: " + e.getCode());
@@ -1927,11 +2067,14 @@ Retrieve own resources of the user by user ID. The user ID is in the response bo
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umUsersOwnsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umUsersOwnsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1946,18 +2089,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String userId = "userId_example"; // String | The unique ID of the user.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      ResourcesUsers result = apiInstance.umUsersOwnsGet(userId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<ResourcesUsers> result = apiInstance.umUsersOwnsGetWithHttpInfo(userId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersOwnsGet");
       System.err.println("Status code: " + e.getCode());
@@ -2018,11 +2165,14 @@ Create a user.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umUsersPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umUsersPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -2037,15 +2187,20 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
-    UserPost user = new UserPost(); // UserPost | The user to create.
+    properties = new UserPropertiesPost(); // UserPropertiesPost | 
+    user = new UserPost(UserPropertiesPost); // UserPost | The user to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      User result = apiInstance.umUsersPost(user, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<User> result = apiInstance.umUsersPostWithHttpInfo(user, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersPost");
       System.err.println("Status code: " + e.getCode());
@@ -2104,11 +2259,14 @@ Modify the properties of the specified user.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the umUsersPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use umUsersPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -2123,16 +2281,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     UserManagementApi apiInstance = new UserManagementApi(defaultClient);
     String userId = "userId_example"; // String | The unique ID of the user.
-    UserPut user = new UserPut(); // UserPut | The modified user
+    properties = new UserPropertiesPut(); // UserPropertiesPut | 
+    user = new UserPut(UserPropertiesPut); // UserPut | The modified user
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      User result = apiInstance.umUsersPut(userId, user, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<User> result = apiInstance.umUsersPutWithHttpInfo(userId, user, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling UserManagementApi#umUsersPut");
       System.err.println("Status code: " + e.getCode());

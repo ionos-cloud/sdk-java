@@ -1351,8 +1351,8 @@ public class FlowLogsApi {
     }
 
     /**
-     * Create Flow Logs
-     * Add a new Flow Log for the specified NIC.
+     * Create a Flow Log
+     * Adds a new Flow Log for the specified NIC.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nicId The unique ID of the NIC. (required)
@@ -1375,8 +1375,8 @@ public class FlowLogsApi {
     }
 
     /**
-     * Create Flow Logs
-     * Add a new Flow Log for the specified NIC.
+     * Create a Flow Log
+     * Adds a new Flow Log for the specified NIC.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nicId The unique ID of the NIC. (required)
@@ -1400,8 +1400,8 @@ public class FlowLogsApi {
     }
 
     /**
-     * Create Flow Logs (asynchronously)
-     * Add a new Flow Log for the specified NIC.
+     * Create a Flow Log (asynchronously)
+     * Adds a new Flow Log for the specified NIC.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nicId The unique ID of the NIC. (required)
@@ -1527,8 +1527,8 @@ public class FlowLogsApi {
     }
 
     /**
-     * Create Flow Logs
-     * Add a new Flow Log for the specified NIC.
+     * Create a Flow Log
+     * Adds a new Flow Log for the specified NIC.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param nicId The unique ID of the NIC. (required)

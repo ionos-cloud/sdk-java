@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersServersNicsFindById**](NetworkInterfacesApi.md#datacentersserversnicsfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve NICs |
 | [**datacentersServersNicsGet**](NetworkInterfacesApi.md#datacentersserversnicsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics | List NICs |
 | [**datacentersServersNicsPatch**](NetworkInterfacesApi.md#datacentersserversnicspatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify NICs |
-| [**datacentersServersNicsPost**](NetworkInterfacesApi.md#datacentersserversnicspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create NICs |
+| [**datacentersServersNicsPost**](NetworkInterfacesApi.md#datacentersserversnicspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a NIC |
 | [**datacentersServersNicsPut**](NetworkInterfacesApi.md#datacentersserversnicsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify NICs |
 
 
@@ -40,11 +40,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -59,6 +62,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NetworkInterfacesApi apiInstance = new NetworkInterfacesApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -68,8 +73,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.datacentersServersNicsDelete(datacenterId, serverId, nicId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.datacentersServersNicsDeleteWithHttpInfo(datacenterId, serverId, nicId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling NetworkInterfacesApi#datacentersServersNicsDelete");
       System.err.println("Status code: " + e.getCode());
@@ -129,11 +133,14 @@ Retrieve the properties of the specified NIC.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -148,6 +155,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NetworkInterfacesApi apiInstance = new NetworkInterfacesApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -157,8 +166,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Nic result = apiInstance.datacentersServersNicsFindById(datacenterId, serverId, nicId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Nic> result = apiInstance.datacentersServersNicsFindByIdWithHttpInfo(datacenterId, serverId, nicId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NetworkInterfacesApi#datacentersServersNicsFindById");
       System.err.println("Status code: " + e.getCode());
@@ -222,11 +233,14 @@ List all NICs, attached to the specified server.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -241,6 +255,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NetworkInterfacesApi apiInstance = new NetworkInterfacesApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
@@ -250,12 +266,14 @@ public class Example {
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     Integer offset = 0; // Integer | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination).
     Integer limit = 1000; // Integer | The maximum number of elements to return (use together with offset for pagination).
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      Nics result = apiInstance.datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<Nics> result = apiInstance.datacentersServersNicsGetWithHttpInfo(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NetworkInterfacesApi#datacentersServersNicsGet");
       System.err.println("Status code: " + e.getCode());
@@ -321,11 +339,14 @@ Update the properties of the specified NIC.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsPatchWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsPatch instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -340,18 +361,23 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NetworkInterfacesApi apiInstance = new NetworkInterfacesApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String serverId = "serverId_example"; // String | The unique ID of the server.
     String nicId = "nicId_example"; // String | The unique ID of the NIC.
-    NicProperties nic = new NicProperties(); // NicProperties | The properties of the NIC to be updated.
+    lan = new Integer(); // Integer | The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created.
+    nic = new NicProperties(Integer); // NicProperties | The properties of the NIC to be updated.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Nic result = apiInstance.datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Nic> result = apiInstance.datacentersServersNicsPatchWithHttpInfo(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NetworkInterfacesApi#datacentersServersNicsPatch");
       System.err.println("Status code: " + e.getCode());
@@ -387,9 +413,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **datacentersServersNicsPost**
 > Nic datacentersServersNicsPost(datacenterId, serverId, nic, pretty, depth, xContractNumber)
 
-Create NICs
+Create a NIC
 
-Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
+Adds a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
 
 ### Parameters
 
@@ -411,11 +437,14 @@ Add a NIC to the specified server. The combined total of NICs and attached volum
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -430,17 +459,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NetworkInterfacesApi apiInstance = new NetworkInterfacesApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String serverId = "serverId_example"; // String | The unique ID of the server.
-    Nic nic = new Nic(); // Nic | The NIC to create.
+    properties = new NicProperties(); // NicProperties | 
+    nic = new Nic(NicProperties); // Nic | The NIC to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Nic result = apiInstance.datacentersServersNicsPost(datacenterId, serverId, nic, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Nic> result = apiInstance.datacentersServersNicsPostWithHttpInfo(datacenterId, serverId, nic, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NetworkInterfacesApi#datacentersServersNicsPost");
       System.err.println("Status code: " + e.getCode());
@@ -501,11 +535,14 @@ Modify the properties of the specified NIC.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the datacentersServersNicsPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use datacentersServersNicsPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -520,18 +557,23 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     NetworkInterfacesApi apiInstance = new NetworkInterfacesApi(defaultClient);
     String datacenterId = "datacenterId_example"; // String | The unique ID of the data center.
     String serverId = "serverId_example"; // String | The unique ID of the server.
     String nicId = "nicId_example"; // String | The unique ID of the NIC.
-    NicPut nic = new NicPut(); // NicPut | The modified NIC
+    properties = new NicProperties(); // NicProperties | 
+    nic = new NicPut(NicProperties); // NicPut | The modified NIC
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      Nic result = apiInstance.datacentersServersNicsPut(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<Nic> result = apiInstance.datacentersServersNicsPutWithHttpInfo(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling NetworkInterfacesApi#datacentersServersNicsPut");
       System.err.println("Status code: " + e.getCode());

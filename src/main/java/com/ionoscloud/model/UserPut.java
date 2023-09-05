@@ -28,7 +28,7 @@ import java.io.IOException;
 /**
  * UserPut
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class UserPut {
   
@@ -127,5 +127,17 @@ public class UserPut {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// UserPut instantiates a new UserPut object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public UserPut(UserPropertiesPut Properties) {
+
+	this.properties = Properties;
 }
 
+public UserPut() {
+}
+
+}

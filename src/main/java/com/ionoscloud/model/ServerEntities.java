@@ -30,7 +30,7 @@ import java.io.IOException;
 /**
  * ServerEntities
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class ServerEntities {
   
@@ -39,14 +39,14 @@ public class ServerEntities {
   private Cdroms cdroms;
 
 
-  public static final String SERIALIZED_NAME_VOLUMES = "volumes";
-  @SerializedName(SERIALIZED_NAME_VOLUMES)
-  private AttachedVolumes volumes;
-
-
   public static final String SERIALIZED_NAME_NICS = "nics";
   @SerializedName(SERIALIZED_NAME_NICS)
   private Nics nics;
+
+
+  public static final String SERIALIZED_NAME_VOLUMES = "volumes";
+  @SerializedName(SERIALIZED_NAME_VOLUMES)
+  private AttachedVolumes volumes;
 
   
 
@@ -74,30 +74,6 @@ public class ServerEntities {
 
 
 
-  public ServerEntities volumes(AttachedVolumes volumes) {
-    
-    this.volumes = volumes;
-    return this;
-  }
-
-   /**
-   * Get volumes
-   * @return volumes
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public AttachedVolumes getVolumes() {
-    return volumes;
-  }
-
-
-  public void setVolumes(AttachedVolumes volumes) {
-    this.volumes = volumes;
-  }
-
-
-
   public ServerEntities nics(Nics nics) {
     
     this.nics = nics;
@@ -121,6 +97,30 @@ public class ServerEntities {
   }
 
 
+
+  public ServerEntities volumes(AttachedVolumes volumes) {
+    
+    this.volumes = volumes;
+    return this;
+  }
+
+   /**
+   * Get volumes
+   * @return volumes
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public AttachedVolumes getVolumes() {
+    return volumes;
+  }
+
+
+  public void setVolumes(AttachedVolumes volumes) {
+    this.volumes = volumes;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -130,7 +130,7 @@ public class ServerEntities {
       return false;
     }
     ServerEntities serverEntities = (ServerEntities) o;
-    return Objects.equals(this.cdroms, serverEntities.cdroms) && Objects.equals(this.volumes, serverEntities.volumes) && Objects.equals(this.nics, serverEntities.nics);
+    return Objects.equals(this.cdroms, serverEntities.cdroms) && Objects.equals(this.nics, serverEntities.nics) && Objects.equals(this.volumes, serverEntities.volumes);
   }
 
 
@@ -143,9 +143,9 @@ public class ServerEntities {
     
     sb.append("    cdroms: ").append(toIndentedString(cdroms)).append("\n");
 
-    sb.append("    volumes: ").append(toIndentedString(volumes)).append("\n");
-
     sb.append("    nics: ").append(toIndentedString(nics)).append("\n");
+
+    sb.append("    volumes: ").append(toIndentedString(volumes)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -161,5 +161,14 @@ public class ServerEntities {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// ServerEntities instantiates a new ServerEntities object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public ServerEntities() {
+
 }
 
+
+}

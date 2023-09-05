@@ -31,17 +31,27 @@ import java.util.List;
 /**
  * KubernetesClusters
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class KubernetesClusters {
   
+  public static final String SERIALIZED_NAME_HREF = "href";
+  @SerializedName(SERIALIZED_NAME_HREF)
+  private URI href;
+
+
   public static final String SERIALIZED_NAME_ID = "id";
   @SerializedName(SERIALIZED_NAME_ID)
   private String id;
 
 
+  public static final String SERIALIZED_NAME_ITEMS = "items";
+  @SerializedName(SERIALIZED_NAME_ITEMS)
+  private List<KubernetesCluster> items = null;
+
+
   /**
-   * The type of resource within a collection.
+   * The resource type within a collection.
    */
   @JsonAdapter(TypeEnum.Adapter.class)
   public enum TypeEnum {
@@ -90,60 +100,14 @@ public class KubernetesClusters {
   @SerializedName(SERIALIZED_NAME_TYPE)
   private TypeEnum type;
 
-
-  public static final String SERIALIZED_NAME_HREF = "href";
-  @SerializedName(SERIALIZED_NAME_HREF)
-  private URI href;
-
-
-  public static final String SERIALIZED_NAME_ITEMS = "items";
-  @SerializedName(SERIALIZED_NAME_ITEMS)
-  private List<KubernetesCluster> items = null;
-
   
 
    /**
-   * A unique representation of the Kubernetes cluster as a resource collection.
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "k8s", value = "A unique representation of the Kubernetes cluster as a resource collection.")
-
-  public String getId() {
-    return id;
-  }
-
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-
-   /**
-   * The type of resource within a collection.
-   * @return type
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "collection", value = "The type of resource within a collection.")
-
-  public TypeEnum getType() {
-    return type;
-  }
-
-
-  public void setType(TypeEnum type) {
-    this.type = type;
-  }
-
-
-
-   /**
-   * URL to the collection representation (absolute path).
+   * The URL to the collection representation (absolute path).
    * @return href
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "<RESOURCE-URI>", value = "URL to the collection representation (absolute path).")
+  @ApiModelProperty(example = "https://api.ionos.com/cloudapi/v6/k8s", value = "The URL to the collection representation (absolute path).")
 
   public URI getHref() {
     return href;
@@ -157,11 +121,29 @@ public class KubernetesClusters {
 
 
    /**
-   * Array of items in the collection.
+   * The unique representation of the K8s cluster as a resource collection.
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "k8s", value = "The unique representation of the K8s cluster as a resource collection.")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+
+
+   /**
+   * Array of K8s clusters in the collection.
    * @return items
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "Array of items in the collection.")
+  @ApiModelProperty(value = "Array of K8s clusters in the collection.")
 
   public List<KubernetesCluster> getItems() {
     return items;
@@ -170,6 +152,24 @@ public class KubernetesClusters {
 
   public void setItems(List<KubernetesCluster> items) {
     this.items = items;
+  }
+
+
+
+   /**
+   * The resource type within a collection.
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "collection", value = "The resource type within a collection.")
+
+  public TypeEnum getType() {
+    return type;
+  }
+
+
+  public void setType(TypeEnum type) {
+    this.type = type;
   }
 
 
@@ -182,7 +182,7 @@ public class KubernetesClusters {
       return false;
     }
     KubernetesClusters kubernetesClusters = (KubernetesClusters) o;
-    return Objects.equals(this.id, kubernetesClusters.id) && Objects.equals(this.type, kubernetesClusters.type) && Objects.equals(this.href, kubernetesClusters.href) && Objects.equals(this.items, kubernetesClusters.items);
+    return Objects.equals(this.href, kubernetesClusters.href) && Objects.equals(this.id, kubernetesClusters.id) && Objects.equals(this.items, kubernetesClusters.items) && Objects.equals(this.type, kubernetesClusters.type);
   }
 
 
@@ -193,13 +193,13 @@ public class KubernetesClusters {
     StringBuilder sb = new StringBuilder();
     sb.append("class KubernetesClusters {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
-
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    items: ").append(toIndentedString(items)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -215,5 +215,14 @@ public class KubernetesClusters {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// KubernetesClusters instantiates a new KubernetesClusters object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public KubernetesClusters() {
+
 }
 
+
+}

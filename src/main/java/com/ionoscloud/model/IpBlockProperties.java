@@ -30,10 +30,15 @@ import java.util.List;
 /**
  * IpBlockProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class IpBlockProperties {
   
+  public static final String SERIALIZED_NAME_IP_CONSUMERS = "ipConsumers";
+  @SerializedName(SERIALIZED_NAME_IP_CONSUMERS)
+  private List<IpConsumer> ipConsumers = null;
+
+
   public static final String SERIALIZED_NAME_IPS = "ips";
   @SerializedName(SERIALIZED_NAME_IPS)
   private List<String> ips = null;
@@ -44,21 +49,34 @@ public class IpBlockProperties {
   private String location;
 
 
-  public static final String SERIALIZED_NAME_SIZE = "size";
-  @SerializedName(SERIALIZED_NAME_SIZE)
-  private Integer size;
-
-
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
 
 
-  public static final String SERIALIZED_NAME_IP_CONSUMERS = "ipConsumers";
-  @SerializedName(SERIALIZED_NAME_IP_CONSUMERS)
-  private List<IpConsumer> ipConsumers = null;
+  public static final String SERIALIZED_NAME_SIZE = "size";
+  @SerializedName(SERIALIZED_NAME_SIZE)
+  private Integer size;
 
   
+
+   /**
+   * Read-Only attribute. Lists consumption detail for an individual IP
+   * @return ipConsumers
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "{ \"ipConsumers\": [ { \"ip\" : \"192.18.2.11\", \"mac\" : \"02:01:3f:52:6e:57\", \"nicId\" : \"0e8ee463-1174-46f2-87ba-a5c79c14d8e5\", \"serverId\" : \"e6a3466f-8d6e-4cb6-8001-f4e245f222b7\", \"serverName\" : \"Unnamed Server\", \"datacenterId\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fccfc\", \"datacenterName\" : \"IpConsumerDC\", \"k8sNodePoolUuid\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fcc12\", \"k8sClusterUuid\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fcc23\"} ] }", value = "Read-Only attribute. Lists consumption detail for an individual IP")
+
+  public List<IpConsumer> getIpConsumers() {
+    return ipConsumers;
+  }
+
+
+  public void setIpConsumers(List<IpConsumer> ipConsumers) {
+    this.ipConsumers = ipConsumers;
+  }
+
+
 
    /**
    * Collection of IPs, associated with the IP Block.
@@ -101,29 +119,6 @@ public class IpBlockProperties {
 
 
 
-  public IpBlockProperties size(Integer size) {
-    
-    this.size = size;
-    return this;
-  }
-
-   /**
-   * The size of the IP block.
-   * @return size
-  **/
-  @ApiModelProperty(example = "5", required = true, value = "The size of the IP block.")
-
-  public Integer getSize() {
-    return size;
-  }
-
-
-  public void setSize(Integer size) {
-    this.size = size;
-  }
-
-
-
   public IpBlockProperties name(String name) {
     
     this.name = name;
@@ -148,20 +143,25 @@ public class IpBlockProperties {
 
 
 
-   /**
-   * Read-Only attribute. Lists consumption detail for an individual IP
-   * @return ipConsumers
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "{ \"ipConsumers\": [ { \"ip\" : \"192.18.2.11\", \"mac\" : \"02:01:3f:52:6e:57\", \"nicId\" : \"0e8ee463-1174-46f2-87ba-a5c79c14d8e5\", \"serverId\" : \"e6a3466f-8d6e-4cb6-8001-f4e245f222b7\", \"serverName\" : \"Unnamed Server\", \"datacenterId\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fccfc\", \"datacenterName\" : \"IpConsumerDC\", \"k8sNodePoolUuid\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fcc12\", \"k8sClusterUuid\" : \"6e54a9ec-aace-4176-8ee4-1c3a704fcc23\"} ] }", value = "Read-Only attribute. Lists consumption detail for an individual IP")
+  public IpBlockProperties size(Integer size) {
+    
+    this.size = size;
+    return this;
+  }
 
-  public List<IpConsumer> getIpConsumers() {
-    return ipConsumers;
+   /**
+   * The size of the IP block.
+   * @return size
+  **/
+  @ApiModelProperty(example = "5", required = true, value = "The size of the IP block.")
+
+  public Integer getSize() {
+    return size;
   }
 
 
-  public void setIpConsumers(List<IpConsumer> ipConsumers) {
-    this.ipConsumers = ipConsumers;
+  public void setSize(Integer size) {
+    this.size = size;
   }
 
 
@@ -174,7 +174,7 @@ public class IpBlockProperties {
       return false;
     }
     IpBlockProperties ipBlockProperties = (IpBlockProperties) o;
-    return Objects.equals(this.ips, ipBlockProperties.ips) && Objects.equals(this.location, ipBlockProperties.location) && Objects.equals(this.size, ipBlockProperties.size) && Objects.equals(this.name, ipBlockProperties.name) && Objects.equals(this.ipConsumers, ipBlockProperties.ipConsumers);
+    return Objects.equals(this.ipConsumers, ipBlockProperties.ipConsumers) && Objects.equals(this.ips, ipBlockProperties.ips) && Objects.equals(this.location, ipBlockProperties.location) && Objects.equals(this.name, ipBlockProperties.name) && Objects.equals(this.size, ipBlockProperties.size);
   }
 
 
@@ -185,15 +185,15 @@ public class IpBlockProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class IpBlockProperties {\n");
     
+    sb.append("    ipConsumers: ").append(toIndentedString(ipConsumers)).append("\n");
+
     sb.append("    ips: ").append(toIndentedString(ips)).append("\n");
 
     sb.append("    location: ").append(toIndentedString(location)).append("\n");
 
-    sb.append("    size: ").append(toIndentedString(size)).append("\n");
-
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
 
-    sb.append("    ipConsumers: ").append(toIndentedString(ipConsumers)).append("\n");
+    sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -209,5 +209,18 @@ public class IpBlockProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// IpBlockProperties instantiates a new IpBlockProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public IpBlockProperties(String Location, Integer Size) {
+
+	this.location = Location;
+	this.size = Size;
 }
 
+public IpBlockProperties() {
+}
+
+}

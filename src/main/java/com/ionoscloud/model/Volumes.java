@@ -34,18 +34,13 @@ import java.util.List;
 /**
  * Volumes
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class Volumes {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
+  public static final String SERIALIZED_NAME_LINKS = "_links";
+  @SerializedName(SERIALIZED_NAME_LINKS)
+  private PaginationLinks links;
 
 
   public static final String SERIALIZED_NAME_HREF = "href";
@@ -53,14 +48,14 @@ public class Volumes {
   private URI href;
 
 
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
+
+
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
   private List<Volume> items = null;
-
-
-  public static final String SERIALIZED_NAME_OFFSET = "offset";
-  @SerializedName(SERIALIZED_NAME_OFFSET)
-  private BigDecimal offset;
 
 
   public static final String SERIALIZED_NAME_LIMIT = "limit";
@@ -68,50 +63,37 @@ public class Volumes {
   private BigDecimal limit;
 
 
-  public static final String SERIALIZED_NAME_LINKS = "_links";
-  @SerializedName(SERIALIZED_NAME_LINKS)
-  private PaginationLinks links;
+  public static final String SERIALIZED_NAME_OFFSET = "offset";
+  @SerializedName(SERIALIZED_NAME_OFFSET)
+  private BigDecimal offset;
+
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
 
   
 
-   /**
-   * The resource&#39;s unique identifier.
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The resource's unique identifier.")
-
-  public String getId() {
-    return id;
-  }
-
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-
-  public Volumes type(Type type) {
+  public Volumes links(PaginationLinks links) {
     
-    this.type = type;
+    this.links = links;
     return this;
   }
 
    /**
-   * The type of object that has been created.
-   * @return type
+   * Get links
+   * @return links
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"collection\"", value = "The type of object that has been created.")
+  @ApiModelProperty(value = "")
 
-  public Type getType() {
-    return type;
+  public PaginationLinks getLinks() {
+    return links;
   }
 
 
-  public void setType(Type type) {
-    this.type = type;
+  public void setLinks(PaginationLinks links) {
+    this.links = links;
   }
 
 
@@ -135,6 +117,24 @@ public class Volumes {
 
 
    /**
+   * The resource&#39;s unique identifier.
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The resource's unique identifier.")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+
+
+   /**
    * Array of items in the collection.
    * @return items
   **/
@@ -148,30 +148,6 @@ public class Volumes {
 
   public void setItems(List<Volume> items) {
     this.items = items;
-  }
-
-
-
-  public Volumes offset(BigDecimal offset) {
-    
-    this.offset = offset;
-    return this;
-  }
-
-   /**
-   * The offset (if specified in the request).
-   * @return offset
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "0", value = "The offset (if specified in the request).")
-
-  public BigDecimal getOffset() {
-    return offset;
-  }
-
-
-  public void setOffset(BigDecimal offset) {
-    this.offset = offset;
   }
 
 
@@ -200,26 +176,50 @@ public class Volumes {
 
 
 
-  public Volumes links(PaginationLinks links) {
+  public Volumes offset(BigDecimal offset) {
     
-    this.links = links;
+    this.offset = offset;
     return this;
   }
 
    /**
-   * Get links
-   * @return links
+   * The offset (if specified in the request).
+   * @return offset
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "0", value = "The offset (if specified in the request).")
 
-  public PaginationLinks getLinks() {
-    return links;
+  public BigDecimal getOffset() {
+    return offset;
   }
 
 
-  public void setLinks(PaginationLinks links) {
-    this.links = links;
+  public void setOffset(BigDecimal offset) {
+    this.offset = offset;
+  }
+
+
+
+  public Volumes type(Type type) {
+    
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * The type of object that has been created.
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "\"collection\"", value = "The type of object that has been created.")
+
+  public Type getType() {
+    return type;
+  }
+
+
+  public void setType(Type type) {
+    this.type = type;
   }
 
 
@@ -232,7 +232,7 @@ public class Volumes {
       return false;
     }
     Volumes volumes = (Volumes) o;
-    return Objects.equals(this.id, volumes.id) && Objects.equals(this.type, volumes.type) && Objects.equals(this.href, volumes.href) && Objects.equals(this.items, volumes.items) && Objects.equals(this.offset, volumes.offset) && Objects.equals(this.limit, volumes.limit) && Objects.equals(this.links, volumes.links);
+    return Objects.equals(this.links, volumes.links) && Objects.equals(this.href, volumes.href) && Objects.equals(this.id, volumes.id) && Objects.equals(this.items, volumes.items) && Objects.equals(this.limit, volumes.limit) && Objects.equals(this.offset, volumes.offset) && Objects.equals(this.type, volumes.type);
   }
 
 
@@ -243,19 +243,19 @@ public class Volumes {
     StringBuilder sb = new StringBuilder();
     sb.append("class Volumes {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    links: ").append(toIndentedString(links)).append("\n");
 
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
 
-    sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+    sb.append("    items: ").append(toIndentedString(items)).append("\n");
 
     sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
 
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
+    sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -271,5 +271,14 @@ public class Volumes {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// Volumes instantiates a new Volumes object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public Volumes() {
+
 }
 
+
+}

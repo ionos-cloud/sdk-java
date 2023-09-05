@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * NetworkLoadBalancerForwardingRuleHealthCheck
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRuleHealthCheck {
   
@@ -41,14 +41,14 @@ public class NetworkLoadBalancerForwardingRuleHealthCheck {
   private Integer connectTimeout;
 
 
-  public static final String SERIALIZED_NAME_TARGET_TIMEOUT = "targetTimeout";
-  @SerializedName(SERIALIZED_NAME_TARGET_TIMEOUT)
-  private Integer targetTimeout;
-
-
   public static final String SERIALIZED_NAME_RETRIES = "retries";
   @SerializedName(SERIALIZED_NAME_RETRIES)
   private Integer retries;
+
+
+  public static final String SERIALIZED_NAME_TARGET_TIMEOUT = "targetTimeout";
+  @SerializedName(SERIALIZED_NAME_TARGET_TIMEOUT)
+  private Integer targetTimeout;
 
   
 
@@ -100,30 +100,6 @@ public class NetworkLoadBalancerForwardingRuleHealthCheck {
 
 
 
-  public NetworkLoadBalancerForwardingRuleHealthCheck targetTimeout(Integer targetTimeout) {
-    
-    this.targetTimeout = targetTimeout;
-    return this;
-  }
-
-   /**
-   * The maximum time in milliseconds that a target can remain inactive; default is 50,000 (50 seconds).
-   * @return targetTimeout
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "50000", value = "The maximum time in milliseconds that a target can remain inactive; default is 50,000 (50 seconds).")
-
-  public Integer getTargetTimeout() {
-    return targetTimeout;
-  }
-
-
-  public void setTargetTimeout(Integer targetTimeout) {
-    this.targetTimeout = targetTimeout;
-  }
-
-
-
   public NetworkLoadBalancerForwardingRuleHealthCheck retries(Integer retries) {
     
     this.retries = retries;
@@ -147,6 +123,30 @@ public class NetworkLoadBalancerForwardingRuleHealthCheck {
   }
 
 
+
+  public NetworkLoadBalancerForwardingRuleHealthCheck targetTimeout(Integer targetTimeout) {
+    
+    this.targetTimeout = targetTimeout;
+    return this;
+  }
+
+   /**
+   * The maximum time in milliseconds that a target can remain inactive; default is 50,000 (50 seconds).
+   * @return targetTimeout
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "50000", value = "The maximum time in milliseconds that a target can remain inactive; default is 50,000 (50 seconds).")
+
+  public Integer getTargetTimeout() {
+    return targetTimeout;
+  }
+
+
+  public void setTargetTimeout(Integer targetTimeout) {
+    this.targetTimeout = targetTimeout;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -156,7 +156,7 @@ public class NetworkLoadBalancerForwardingRuleHealthCheck {
       return false;
     }
     NetworkLoadBalancerForwardingRuleHealthCheck networkLoadBalancerForwardingRuleHealthCheck = (NetworkLoadBalancerForwardingRuleHealthCheck) o;
-    return Objects.equals(this.clientTimeout, networkLoadBalancerForwardingRuleHealthCheck.clientTimeout) && Objects.equals(this.connectTimeout, networkLoadBalancerForwardingRuleHealthCheck.connectTimeout) && Objects.equals(this.targetTimeout, networkLoadBalancerForwardingRuleHealthCheck.targetTimeout) && Objects.equals(this.retries, networkLoadBalancerForwardingRuleHealthCheck.retries);
+    return Objects.equals(this.clientTimeout, networkLoadBalancerForwardingRuleHealthCheck.clientTimeout) && Objects.equals(this.connectTimeout, networkLoadBalancerForwardingRuleHealthCheck.connectTimeout) && Objects.equals(this.retries, networkLoadBalancerForwardingRuleHealthCheck.retries) && Objects.equals(this.targetTimeout, networkLoadBalancerForwardingRuleHealthCheck.targetTimeout);
   }
 
 
@@ -171,9 +171,9 @@ public class NetworkLoadBalancerForwardingRuleHealthCheck {
 
     sb.append("    connectTimeout: ").append(toIndentedString(connectTimeout)).append("\n");
 
-    sb.append("    targetTimeout: ").append(toIndentedString(targetTimeout)).append("\n");
-
     sb.append("    retries: ").append(toIndentedString(retries)).append("\n");
+
+    sb.append("    targetTimeout: ").append(toIndentedString(targetTimeout)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -189,5 +189,14 @@ public class NetworkLoadBalancerForwardingRuleHealthCheck {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// NetworkLoadBalancerForwardingRuleHealthCheck instantiates a new NetworkLoadBalancerForwardingRuleHealthCheck object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public NetworkLoadBalancerForwardingRuleHealthCheck() {
+
 }
 
+
+}

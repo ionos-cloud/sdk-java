@@ -3814,8 +3814,8 @@ public class UserManagementApi {
     }
 
     /**
-     * Add group members
-     * Add an existing user to the specified group. 
+     * Add a Group Member
+     * Adds an existing user to the specified group. 
      * @param groupId The unique ID of the group. (required)
      * @param user The user to add. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3837,8 +3837,8 @@ public class UserManagementApi {
     }
 
     /**
-     * Add group members
-     * Add an existing user to the specified group. 
+     * Add a Group Member
+     * Adds an existing user to the specified group. 
      * @param groupId The unique ID of the group. (required)
      * @param user The user to add. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3861,8 +3861,8 @@ public class UserManagementApi {
     }
 
     /**
-     * Add group members (asynchronously)
-     * Add an existing user to the specified group. 
+     * Add a Group Member (asynchronously)
+     * Adds an existing user to the specified group. 
      * @param groupId The unique ID of the group. (required)
      * @param user The user to add. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -3994,8 +3994,8 @@ public class UserManagementApi {
     }
 
     /**
-     * Add group members
-     * Add an existing user to the specified group. 
+     * Add a Group Member
+     * Adds an existing user to the specified group. 
      * @param groupId The unique ID of the group. (required)
      * @param user The user to add. (required)
      * @return APIumGroupsUsersPostRequest

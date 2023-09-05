@@ -27,13 +27,23 @@ import java.io.IOException;
 /**
  * TargetGroupTarget
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class TargetGroupTarget {
   
+  public static final String SERIALIZED_NAME_HEALTH_CHECK_ENABLED = "healthCheckEnabled";
+  @SerializedName(SERIALIZED_NAME_HEALTH_CHECK_ENABLED)
+  private Boolean healthCheckEnabled;
+
+
   public static final String SERIALIZED_NAME_IP = "ip";
   @SerializedName(SERIALIZED_NAME_IP)
   private String ip;
+
+
+  public static final String SERIALIZED_NAME_MAINTENANCE_ENABLED = "maintenanceEnabled";
+  @SerializedName(SERIALIZED_NAME_MAINTENANCE_ENABLED)
+  private Boolean maintenanceEnabled;
 
 
   public static final String SERIALIZED_NAME_PORT = "port";
@@ -45,86 +55,7 @@ public class TargetGroupTarget {
   @SerializedName(SERIALIZED_NAME_WEIGHT)
   private Integer weight;
 
-
-  public static final String SERIALIZED_NAME_HEALTH_CHECK_ENABLED = "healthCheckEnabled";
-  @SerializedName(SERIALIZED_NAME_HEALTH_CHECK_ENABLED)
-  private Boolean healthCheckEnabled;
-
-
-  public static final String SERIALIZED_NAME_MAINTENANCE_ENABLED = "maintenanceEnabled";
-  @SerializedName(SERIALIZED_NAME_MAINTENANCE_ENABLED)
-  private Boolean maintenanceEnabled;
-
   
-
-  public TargetGroupTarget ip(String ip) {
-    
-    this.ip = ip;
-    return this;
-  }
-
-   /**
-   * The IP of the balanced target VM.
-   * @return ip
-  **/
-  @ApiModelProperty(example = "22.231.2.2", required = true, value = "The IP of the balanced target VM.")
-
-  public String getIp() {
-    return ip;
-  }
-
-
-  public void setIp(String ip) {
-    this.ip = ip;
-  }
-
-
-
-  public TargetGroupTarget port(Integer port) {
-    
-    this.port = port;
-    return this;
-  }
-
-   /**
-   * The port of the balanced target service; valid range is 1 to 65535.
-   * @return port
-  **/
-  @ApiModelProperty(example = "8080", required = true, value = "The port of the balanced target service; valid range is 1 to 65535.")
-
-  public Integer getPort() {
-    return port;
-  }
-
-
-  public void setPort(Integer port) {
-    this.port = port;
-  }
-
-
-
-  public TargetGroupTarget weight(Integer weight) {
-    
-    this.weight = weight;
-    return this;
-  }
-
-   /**
-   * Traffic is distributed in proportion to target weight, relative to the combined weight of all targets. A target with higher weight receives a greater share of traffic. Valid range is 0 to 256 and default is 1; targets with weight of 0 do not participate in load balancing but still accept persistent connections. It is best use values in the middle of the range to leave room for later adjustments.
-   * @return weight
-  **/
-  @ApiModelProperty(example = "123", required = true, value = "Traffic is distributed in proportion to target weight, relative to the combined weight of all targets. A target with higher weight receives a greater share of traffic. Valid range is 0 to 256 and default is 1; targets with weight of 0 do not participate in load balancing but still accept persistent connections. It is best use values in the middle of the range to leave room for later adjustments.")
-
-  public Integer getWeight() {
-    return weight;
-  }
-
-
-  public void setWeight(Integer weight) {
-    this.weight = weight;
-  }
-
-
 
   public TargetGroupTarget healthCheckEnabled(Boolean healthCheckEnabled) {
     
@@ -146,6 +77,29 @@ public class TargetGroupTarget {
 
   public void setHealthCheckEnabled(Boolean healthCheckEnabled) {
     this.healthCheckEnabled = healthCheckEnabled;
+  }
+
+
+
+  public TargetGroupTarget ip(String ip) {
+    
+    this.ip = ip;
+    return this;
+  }
+
+   /**
+   * The IP address of the balanced target.
+   * @return ip
+  **/
+  @ApiModelProperty(example = "22.231.2.2", required = true, value = "The IP address of the balanced target.")
+
+  public String getIp() {
+    return ip;
+  }
+
+
+  public void setIp(String ip) {
+    this.ip = ip;
   }
 
 
@@ -173,6 +127,52 @@ public class TargetGroupTarget {
   }
 
 
+
+  public TargetGroupTarget port(Integer port) {
+    
+    this.port = port;
+    return this;
+  }
+
+   /**
+   * The port of the balanced target service; the valid range is 1 to 65535.
+   * @return port
+  **/
+  @ApiModelProperty(example = "8080", required = true, value = "The port of the balanced target service; the valid range is 1 to 65535.")
+
+  public Integer getPort() {
+    return port;
+  }
+
+
+  public void setPort(Integer port) {
+    this.port = port;
+  }
+
+
+
+  public TargetGroupTarget weight(Integer weight) {
+    
+    this.weight = weight;
+    return this;
+  }
+
+   /**
+   * The traffic is distributed proportionally to target weight, which is the ratio of the total weight of all targets. A target with higher weight receives a larger share of traffic. The valid range is from 0 to 256; the default value is &#39;1&#39;. Targets with a weight of &#39;0&#39; do not participate in load balancing but still accept persistent connections. We recommend using values in the middle range to leave room for later adjustments.
+   * @return weight
+  **/
+  @ApiModelProperty(example = "123", required = true, value = "The traffic is distributed proportionally to target weight, which is the ratio of the total weight of all targets. A target with higher weight receives a larger share of traffic. The valid range is from 0 to 256; the default value is '1'. Targets with a weight of '0' do not participate in load balancing but still accept persistent connections. We recommend using values in the middle range to leave room for later adjustments.")
+
+  public Integer getWeight() {
+    return weight;
+  }
+
+
+  public void setWeight(Integer weight) {
+    this.weight = weight;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -182,7 +182,7 @@ public class TargetGroupTarget {
       return false;
     }
     TargetGroupTarget targetGroupTarget = (TargetGroupTarget) o;
-    return Objects.equals(this.ip, targetGroupTarget.ip) && Objects.equals(this.port, targetGroupTarget.port) && Objects.equals(this.weight, targetGroupTarget.weight) && Objects.equals(this.healthCheckEnabled, targetGroupTarget.healthCheckEnabled) && Objects.equals(this.maintenanceEnabled, targetGroupTarget.maintenanceEnabled);
+    return Objects.equals(this.healthCheckEnabled, targetGroupTarget.healthCheckEnabled) && Objects.equals(this.ip, targetGroupTarget.ip) && Objects.equals(this.maintenanceEnabled, targetGroupTarget.maintenanceEnabled) && Objects.equals(this.port, targetGroupTarget.port) && Objects.equals(this.weight, targetGroupTarget.weight);
   }
 
 
@@ -193,15 +193,15 @@ public class TargetGroupTarget {
     StringBuilder sb = new StringBuilder();
     sb.append("class TargetGroupTarget {\n");
     
+    sb.append("    healthCheckEnabled: ").append(toIndentedString(healthCheckEnabled)).append("\n");
+
     sb.append("    ip: ").append(toIndentedString(ip)).append("\n");
+
+    sb.append("    maintenanceEnabled: ").append(toIndentedString(maintenanceEnabled)).append("\n");
 
     sb.append("    port: ").append(toIndentedString(port)).append("\n");
 
     sb.append("    weight: ").append(toIndentedString(weight)).append("\n");
-
-    sb.append("    healthCheckEnabled: ").append(toIndentedString(healthCheckEnabled)).append("\n");
-
-    sb.append("    maintenanceEnabled: ").append(toIndentedString(maintenanceEnabled)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -217,5 +217,19 @@ public class TargetGroupTarget {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// TargetGroupTarget instantiates a new TargetGroupTarget object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public TargetGroupTarget(String Ip, Integer Port, Integer Weight) {
+
+	this.ip = Ip;
+	this.port = Port;
+	this.weight = Weight;
 }
 
+public TargetGroupTarget() {
+}
+
+}

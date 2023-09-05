@@ -31,15 +31,10 @@ import java.util.List;
 /**
  * NetworkLoadBalancerForwardingRuleProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class NetworkLoadBalancerForwardingRuleProperties {
   
-  public static final String SERIALIZED_NAME_NAME = "name";
-  @SerializedName(SERIALIZED_NAME_NAME)
-  private String name;
-
-
   /**
    * Balancing algorithm
    */
@@ -97,6 +92,26 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   private AlgorithmEnum algorithm;
 
 
+  public static final String SERIALIZED_NAME_HEALTH_CHECK = "healthCheck";
+  @SerializedName(SERIALIZED_NAME_HEALTH_CHECK)
+  private NetworkLoadBalancerForwardingRuleHealthCheck healthCheck;
+
+
+  public static final String SERIALIZED_NAME_LISTENER_IP = "listenerIp";
+  @SerializedName(SERIALIZED_NAME_LISTENER_IP)
+  private String listenerIp;
+
+
+  public static final String SERIALIZED_NAME_LISTENER_PORT = "listenerPort";
+  @SerializedName(SERIALIZED_NAME_LISTENER_PORT)
+  private Integer listenerPort;
+
+
+  public static final String SERIALIZED_NAME_NAME = "name";
+  @SerializedName(SERIALIZED_NAME_NAME)
+  private String name;
+
+
   /**
    * Balancing protocol
    */
@@ -150,49 +165,11 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   private ProtocolEnum protocol;
 
 
-  public static final String SERIALIZED_NAME_LISTENER_IP = "listenerIp";
-  @SerializedName(SERIALIZED_NAME_LISTENER_IP)
-  private String listenerIp;
-
-
-  public static final String SERIALIZED_NAME_LISTENER_PORT = "listenerPort";
-  @SerializedName(SERIALIZED_NAME_LISTENER_PORT)
-  private Integer listenerPort;
-
-
-  public static final String SERIALIZED_NAME_HEALTH_CHECK = "healthCheck";
-  @SerializedName(SERIALIZED_NAME_HEALTH_CHECK)
-  private NetworkLoadBalancerForwardingRuleHealthCheck healthCheck;
-
-
   public static final String SERIALIZED_NAME_TARGETS = "targets";
   @SerializedName(SERIALIZED_NAME_TARGETS)
   private List<NetworkLoadBalancerForwardingRuleTarget> targets = new ArrayList<NetworkLoadBalancerForwardingRuleTarget>();
 
   
-
-  public NetworkLoadBalancerForwardingRuleProperties name(String name) {
-    
-    this.name = name;
-    return this;
-  }
-
-   /**
-   * The name of the Network Load Balancer forwarding rule.
-   * @return name
-  **/
-  @ApiModelProperty(example = "My Network Load Balancer forwarding rule", required = true, value = "The name of the Network Load Balancer forwarding rule.")
-
-  public String getName() {
-    return name;
-  }
-
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-
 
   public NetworkLoadBalancerForwardingRuleProperties algorithm(AlgorithmEnum algorithm) {
     
@@ -217,25 +194,26 @@ public class NetworkLoadBalancerForwardingRuleProperties {
 
 
 
-  public NetworkLoadBalancerForwardingRuleProperties protocol(ProtocolEnum protocol) {
+  public NetworkLoadBalancerForwardingRuleProperties healthCheck(NetworkLoadBalancerForwardingRuleHealthCheck healthCheck) {
     
-    this.protocol = protocol;
+    this.healthCheck = healthCheck;
     return this;
   }
 
    /**
-   * Balancing protocol
-   * @return protocol
+   * Get healthCheck
+   * @return healthCheck
   **/
-  @ApiModelProperty(example = "HTTP", required = true, value = "Balancing protocol")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
-  public ProtocolEnum getProtocol() {
-    return protocol;
+  public NetworkLoadBalancerForwardingRuleHealthCheck getHealthCheck() {
+    return healthCheck;
   }
 
 
-  public void setProtocol(ProtocolEnum protocol) {
-    this.protocol = protocol;
+  public void setHealthCheck(NetworkLoadBalancerForwardingRuleHealthCheck healthCheck) {
+    this.healthCheck = healthCheck;
   }
 
 
@@ -247,10 +225,10 @@ public class NetworkLoadBalancerForwardingRuleProperties {
   }
 
    /**
-   * Listening (inbound) IP
+   * Listening (inbound) IP.
    * @return listenerIp
   **/
-  @ApiModelProperty(example = "81.173.1.2", required = true, value = "Listening (inbound) IP")
+  @ApiModelProperty(example = "81.173.1.2", required = true, value = "Listening (inbound) IP.")
 
   public String getListenerIp() {
     return listenerIp;
@@ -286,26 +264,48 @@ public class NetworkLoadBalancerForwardingRuleProperties {
 
 
 
-  public NetworkLoadBalancerForwardingRuleProperties healthCheck(NetworkLoadBalancerForwardingRuleHealthCheck healthCheck) {
+  public NetworkLoadBalancerForwardingRuleProperties name(String name) {
     
-    this.healthCheck = healthCheck;
+    this.name = name;
     return this;
   }
 
    /**
-   * Get healthCheck
-   * @return healthCheck
+   * The name of the Network Load Balancer forwarding rule.
+   * @return name
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "My Network Load Balancer forwarding rule", required = true, value = "The name of the Network Load Balancer forwarding rule.")
 
-  public NetworkLoadBalancerForwardingRuleHealthCheck getHealthCheck() {
-    return healthCheck;
+  public String getName() {
+    return name;
   }
 
 
-  public void setHealthCheck(NetworkLoadBalancerForwardingRuleHealthCheck healthCheck) {
-    this.healthCheck = healthCheck;
+  public void setName(String name) {
+    this.name = name;
+  }
+
+
+
+  public NetworkLoadBalancerForwardingRuleProperties protocol(ProtocolEnum protocol) {
+    
+    this.protocol = protocol;
+    return this;
+  }
+
+   /**
+   * Balancing protocol
+   * @return protocol
+  **/
+  @ApiModelProperty(example = "HTTP", required = true, value = "Balancing protocol")
+
+  public ProtocolEnum getProtocol() {
+    return protocol;
+  }
+
+
+  public void setProtocol(ProtocolEnum protocol) {
+    this.protocol = protocol;
   }
 
 
@@ -346,7 +346,7 @@ public class NetworkLoadBalancerForwardingRuleProperties {
       return false;
     }
     NetworkLoadBalancerForwardingRuleProperties networkLoadBalancerForwardingRuleProperties = (NetworkLoadBalancerForwardingRuleProperties) o;
-    return Objects.equals(this.name, networkLoadBalancerForwardingRuleProperties.name) && Objects.equals(this.algorithm, networkLoadBalancerForwardingRuleProperties.algorithm) && Objects.equals(this.protocol, networkLoadBalancerForwardingRuleProperties.protocol) && Objects.equals(this.listenerIp, networkLoadBalancerForwardingRuleProperties.listenerIp) && Objects.equals(this.listenerPort, networkLoadBalancerForwardingRuleProperties.listenerPort) && Objects.equals(this.healthCheck, networkLoadBalancerForwardingRuleProperties.healthCheck) && Objects.equals(this.targets, networkLoadBalancerForwardingRuleProperties.targets);
+    return Objects.equals(this.algorithm, networkLoadBalancerForwardingRuleProperties.algorithm) && Objects.equals(this.healthCheck, networkLoadBalancerForwardingRuleProperties.healthCheck) && Objects.equals(this.listenerIp, networkLoadBalancerForwardingRuleProperties.listenerIp) && Objects.equals(this.listenerPort, networkLoadBalancerForwardingRuleProperties.listenerPort) && Objects.equals(this.name, networkLoadBalancerForwardingRuleProperties.name) && Objects.equals(this.protocol, networkLoadBalancerForwardingRuleProperties.protocol) && Objects.equals(this.targets, networkLoadBalancerForwardingRuleProperties.targets);
   }
 
 
@@ -357,17 +357,17 @@ public class NetworkLoadBalancerForwardingRuleProperties {
     StringBuilder sb = new StringBuilder();
     sb.append("class NetworkLoadBalancerForwardingRuleProperties {\n");
     
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
-
     sb.append("    algorithm: ").append(toIndentedString(algorithm)).append("\n");
 
-    sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
+    sb.append("    healthCheck: ").append(toIndentedString(healthCheck)).append("\n");
 
     sb.append("    listenerIp: ").append(toIndentedString(listenerIp)).append("\n");
 
     sb.append("    listenerPort: ").append(toIndentedString(listenerPort)).append("\n");
 
-    sb.append("    healthCheck: ").append(toIndentedString(healthCheck)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
+    sb.append("    protocol: ").append(toIndentedString(protocol)).append("\n");
 
     sb.append("    targets: ").append(toIndentedString(targets)).append("\n");
     sb.append("}");
@@ -385,5 +385,22 @@ public class NetworkLoadBalancerForwardingRuleProperties {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// NetworkLoadBalancerForwardingRuleProperties instantiates a new NetworkLoadBalancerForwardingRuleProperties object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public NetworkLoadBalancerForwardingRuleProperties(AlgorithmEnum Algorithm, String ListenerIp, Integer ListenerPort, String Name, ProtocolEnum Protocol, List<NetworkLoadBalancerForwardingRuleTarget> Targets) {
+
+	this.algorithm = Algorithm;
+	this.listenerIp = ListenerIp;
+	this.listenerPort = ListenerPort;
+	this.name = Name;
+	this.protocol = Protocol;
+	this.targets = Targets;
 }
 
+public NetworkLoadBalancerForwardingRuleProperties() {
+}
+
+}

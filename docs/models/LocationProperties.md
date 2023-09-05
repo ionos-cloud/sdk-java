@@ -6,9 +6,9 @@
 
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **name** | **String** | The name of the  resource. |  [optional] |
-| **features** | **List&lt;String&gt;** | List of features supported by the location |  [optional] [readonly] |
-| **imageAliases** | **List&lt;String&gt;** | List of image aliases available for the location |  [optional] [readonly] |
-| **cpuArchitecture** | [**List&lt;CpuArchitectureProperties&gt;**](CpuArchitectureProperties.md) | Array of features and CPU families available in a location |  [optional] [readonly] |
+| **cpuArchitecture** | [**List&lt;CpuArchitectureProperties&gt;**](CpuArchitectureProperties.md) | A list of available CPU types and related resources available in the location. |  [optional] [readonly] |
+| **features** | **List&lt;String&gt;** | A list of available features in the location. |  [optional] [readonly] |
+| **imageAliases** | **List&lt;String&gt;** | A list of image aliases available in the location. |  [optional] [readonly] |
+| **name** | **String** | The location name. |  [optional] |
 
 

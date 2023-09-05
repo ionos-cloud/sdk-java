@@ -4,32 +4,32 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**k8sDelete**](KubernetesApi.md#k8sdelete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes clusters |
-| [**k8sFindByClusterId**](KubernetesApi.md#k8sfindbyclusterid) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes clusters |
-| [**k8sGet**](KubernetesApi.md#k8sget) | **GET** /k8s | List Kubernetes clusters |
-| [**k8sKubeconfigGet**](KubernetesApi.md#k8skubeconfigget) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes configuration files |
-| [**k8sNodepoolsDelete**](KubernetesApi.md#k8snodepoolsdelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes node pools |
-| [**k8sNodepoolsFindById**](KubernetesApi.md#k8snodepoolsfindbyid) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes node pools |
-| [**k8sNodepoolsGet**](KubernetesApi.md#k8snodepoolsget) | **GET** /k8s/{k8sClusterId}/nodepools | List Kubernetes node pools |
-| [**k8sNodepoolsNodesDelete**](KubernetesApi.md#k8snodepoolsnodesdelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes nodes |
-| [**k8sNodepoolsNodesFindById**](KubernetesApi.md#k8snodepoolsnodesfindbyid) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes nodes |
-| [**k8sNodepoolsNodesGet**](KubernetesApi.md#k8snodepoolsnodesget) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | List Kubernetes nodes |
-| [**k8sNodepoolsNodesReplacePost**](KubernetesApi.md#k8snodepoolsnodesreplacepost) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate Kubernetes nodes |
-| [**k8sNodepoolsPost**](KubernetesApi.md#k8snodepoolspost) | **POST** /k8s/{k8sClusterId}/nodepools | Create Kubernetes node pools |
-| [**k8sNodepoolsPut**](KubernetesApi.md#k8snodepoolsput) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes node pools |
-| [**k8sPost**](KubernetesApi.md#k8spost) | **POST** /k8s | Create Kubernetes clusters |
-| [**k8sPut**](KubernetesApi.md#k8sput) | **PUT** /k8s/{k8sClusterId} | Modify Kubernetes clusters |
-| [**k8sVersionsDefaultGet**](KubernetesApi.md#k8sversionsdefaultget) | **GET** /k8s/versions/default | Retrieve current default Kubernetes version |
-| [**k8sVersionsGet**](KubernetesApi.md#k8sversionsget) | **GET** /k8s/versions | List Kubernetes versions |
+| [**k8sDelete**](KubernetesApi.md#k8sdelete) | **DELETE** /k8s/{k8sClusterId} | Delete a Kubernetes Cluster by ID |
+| [**k8sFindByClusterId**](KubernetesApi.md#k8sfindbyclusterid) | **GET** /k8s/{k8sClusterId} | Get a Kubernetes Cluster by ID |
+| [**k8sGet**](KubernetesApi.md#k8sget) | **GET** /k8s | Get Kubernetes Clusters |
+| [**k8sKubeconfigGet**](KubernetesApi.md#k8skubeconfigget) | **GET** /k8s/{k8sClusterId}/kubeconfig | Get Kubernetes Configuration File |
+| [**k8sNodepoolsDelete**](KubernetesApi.md#k8snodepoolsdelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete a Kubernetes Node Pool by ID |
+| [**k8sNodepoolsFindById**](KubernetesApi.md#k8snodepoolsfindbyid) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Get a Kubernetes Node Pool by ID |
+| [**k8sNodepoolsGet**](KubernetesApi.md#k8snodepoolsget) | **GET** /k8s/{k8sClusterId}/nodepools | Get Kubernetes Node Pools |
+| [**k8sNodepoolsNodesDelete**](KubernetesApi.md#k8snodepoolsnodesdelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete a Kubernetes Node by ID |
+| [**k8sNodepoolsNodesFindById**](KubernetesApi.md#k8snodepoolsnodesfindbyid) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Get Kubernetes Node by ID |
+| [**k8sNodepoolsNodesGet**](KubernetesApi.md#k8snodepoolsnodesget) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Get Kubernetes Nodes |
+| [**k8sNodepoolsNodesReplacePost**](KubernetesApi.md#k8snodepoolsnodesreplacepost) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate a Kubernetes Node by ID |
+| [**k8sNodepoolsPost**](KubernetesApi.md#k8snodepoolspost) | **POST** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool |
+| [**k8sNodepoolsPut**](KubernetesApi.md#k8snodepoolsput) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify a Kubernetes Node Pool by ID |
+| [**k8sPost**](KubernetesApi.md#k8spost) | **POST** /k8s | Create a Kubernetes Cluster |
+| [**k8sPut**](KubernetesApi.md#k8sput) | **PUT** /k8s/{k8sClusterId} | Modify a Kubernetes Cluster by ID |
+| [**k8sVersionsDefaultGet**](KubernetesApi.md#k8sversionsdefaultget) | **GET** /k8s/versions/default | Get Default Kubernetes Version |
+| [**k8sVersionsGet**](KubernetesApi.md#k8sversionsget) | **GET** /k8s/versions | Get Kubernetes Versions |
 
 
 <a name="k8sDelete"></a>
 # **k8sDelete**
 > k8sDelete(k8sClusterId, pretty, depth, xContractNumber)
 
-Delete Kubernetes clusters
+Delete a Kubernetes Cluster by ID
 
-Delete the specified Kubernetes cluster.
+Deletes the K8s cluster specified  by its ID.
 
 ### Parameters
 
@@ -49,11 +49,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -68,6 +71,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes cluster.
@@ -75,8 +80,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.k8sDelete(k8sClusterId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.k8sDeleteWithHttpInfo(k8sClusterId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sDelete");
       System.err.println("Status code: " + e.getCode());
@@ -112,15 +116,15 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sFindByClusterId**
 > KubernetesCluster k8sFindByClusterId(k8sClusterId, pretty, depth, xContractNumber)
 
-Retrieve Kubernetes clusters
+Get a Kubernetes Cluster by ID
 
-Retrieve the specified Kubernetes cluster.
+Retrieves the K8s cluster specified by its ID.
 
 ### Parameters
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **k8sClusterId** | **String**| The unique ID of the Kubernetes cluster. ||
+| **k8sClusterId** | **String**| The unique ID of the K8s cluster to be retrieved. ||
 | **pretty** | **Boolean**| Controls whether the response is pretty-printed (with indentations and new lines). | [optional] [default to true]|
 | **depth** | **Integer**| Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [optional] [default to 0]|
 | **xContractNumber** | **Integer**| Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional]|
@@ -134,11 +138,14 @@ Retrieve the specified Kubernetes cluster.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sFindByClusterIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sFindByClusterId instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -153,15 +160,19 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
-    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes cluster.
+    String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the K8s cluster to be retrieved.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      KubernetesCluster result = apiInstance.k8sFindByClusterId(k8sClusterId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<KubernetesCluster> result = apiInstance.k8sFindByClusterIdWithHttpInfo(k8sClusterId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sFindByClusterId");
       System.err.println("Status code: " + e.getCode());
@@ -197,9 +208,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sGet**
 > KubernetesClusters k8sGet(pretty, depth, xContractNumber)
 
-List Kubernetes clusters
+Get Kubernetes Clusters
 
-List all available Kubernetes clusters.
+Retrieves a list of all K8s clusters provisioned under your account.
 
 ### Parameters
 
@@ -221,11 +232,14 @@ List all available Kubernetes clusters.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -240,17 +254,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      KubernetesClusters result = apiInstance.k8sGet(pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<KubernetesClusters> result = apiInstance.k8sGetWithHttpInfo(pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sGet");
       System.err.println("Status code: " + e.getCode());
@@ -289,9 +307,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sKubeconfigGet**
 > String k8sKubeconfigGet(k8sClusterId, pretty, depth, xContractNumber)
 
-Retrieve Kubernetes configuration files
+Get Kubernetes Configuration File
 
-Retrieve a configuration file for the specified Kubernetes cluster, in YAML or JSON format as defined in the Accept header; the default Accept header is application/yaml.
+Retrieves the configuration file for the specified K8s cluster. You can define the format (YAML or JSON) of the returned file in the Accept header. By default, &#39;application/yaml&#39; is specified.
 
 ### Parameters
 
@@ -314,11 +332,14 @@ Retrieve a configuration file for the specified Kubernetes cluster, in YAML or J
 - **Content-Type**: Not defined
 - **Accept**: application/yaml, application/x-yaml, application/json
 
+⚠️ **Note**: the example bellow uses the k8sKubeconfigGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sKubeconfigGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -333,18 +354,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes cluster.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      String result = apiInstance.k8sKubeconfigGet(k8sClusterId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<String> result = apiInstance.k8sKubeconfigGetWithHttpInfo(k8sClusterId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sKubeconfigGet");
       System.err.println("Status code: " + e.getCode());
@@ -383,9 +408,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sNodepoolsDelete**
 > k8sNodepoolsDelete(k8sClusterId, nodepoolId, pretty, depth, xContractNumber)
 
-Delete Kubernetes node pools
+Delete a Kubernetes Node Pool by ID
 
-Delete the specified Kubernetes node pool.
+Deletes the K8s node pool specified by its ID.
 
 ### Parameters
 
@@ -406,11 +431,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sNodepoolsDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sNodepoolsDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -425,6 +453,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes cluster.
@@ -433,8 +463,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.k8sNodepoolsDelete(k8sClusterId, nodepoolId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.k8sNodepoolsDeleteWithHttpInfo(k8sClusterId, nodepoolId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsDelete");
       System.err.println("Status code: " + e.getCode());
@@ -470,9 +499,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sNodepoolsFindById**
 > KubernetesNodePool k8sNodepoolsFindById(k8sClusterId, nodepoolId, pretty, depth, xContractNumber)
 
-Retrieve Kubernetes node pools
+Get a Kubernetes Node Pool by ID
 
-Retrieve the specified Kubernetes node pool.
+Retrieves the K8s node pool specified by its ID.
 
 ### Parameters
 
@@ -493,11 +522,14 @@ Retrieve the specified Kubernetes node pool.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sNodepoolsFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sNodepoolsFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -512,6 +544,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes cluster.
@@ -520,8 +554,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      KubernetesNodePool result = apiInstance.k8sNodepoolsFindById(k8sClusterId, nodepoolId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<KubernetesNodePool> result = apiInstance.k8sNodepoolsFindByIdWithHttpInfo(k8sClusterId, nodepoolId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsFindById");
       System.err.println("Status code: " + e.getCode());
@@ -557,9 +593,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sNodepoolsGet**
 > KubernetesNodePools k8sNodepoolsGet(k8sClusterId, pretty, depth, xContractNumber)
 
-List Kubernetes node pools
+Get Kubernetes Node Pools
 
-List all Kubernetes node pools, included the specified Kubernetes cluster.
+Retrieves a list of K8s node pools of a cluster specified by its ID.
 
 ### Parameters
 
@@ -582,11 +618,14 @@ List all Kubernetes node pools, included the specified Kubernetes cluster.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sNodepoolsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sNodepoolsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -601,18 +640,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes cluster.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      KubernetesNodePools result = apiInstance.k8sNodepoolsGet(k8sClusterId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<KubernetesNodePools> result = apiInstance.k8sNodepoolsGetWithHttpInfo(k8sClusterId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsGet");
       System.err.println("Status code: " + e.getCode());
@@ -651,9 +694,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sNodepoolsNodesDelete**
 > k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber)
 
-Delete Kubernetes nodes
+Delete a Kubernetes Node by ID
 
-Delete the specified Kubernetes node.
+Deletes the K8s node specified by its ID.
 
 ### Parameters
 
@@ -675,11 +718,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sNodepoolsNodesDeleteWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sNodepoolsNodesDelete instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -694,6 +740,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes cluster.
@@ -703,8 +751,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.k8sNodepoolsNodesDeleteWithHttpInfo(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsNodesDelete");
       System.err.println("Status code: " + e.getCode());
@@ -740,9 +787,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sNodepoolsNodesFindById**
 > KubernetesNode k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber)
 
-Retrieve Kubernetes nodes
+Get Kubernetes Node by ID
 
-Retrieve the specified Kubernetes node.
+Retrieves the K8s node specified by its ID.
 
 ### Parameters
 
@@ -764,11 +811,14 @@ Retrieve the specified Kubernetes node.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sNodepoolsNodesFindByIdWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sNodepoolsNodesFindById instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -783,6 +833,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes cluster.
@@ -792,8 +844,10 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      KubernetesNode result = apiInstance.k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<KubernetesNode> result = apiInstance.k8sNodepoolsNodesFindByIdWithHttpInfo(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsNodesFindById");
       System.err.println("Status code: " + e.getCode());
@@ -829,9 +883,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sNodepoolsNodesGet**
 > KubernetesNodes k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, pretty, depth, xContractNumber)
 
-List Kubernetes nodes
+Get Kubernetes Nodes
 
-List all the nodes, included in the specified Kubernetes node pool.
+Retrieves the list of all K8s nodes of the specified node pool.
 
 ### Parameters
 
@@ -855,11 +909,14 @@ List all the nodes, included in the specified Kubernetes node pool.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sNodepoolsNodesGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sNodepoolsNodesGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -874,6 +931,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes cluster.
@@ -881,12 +940,14 @@ public class Example {
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      KubernetesNodes result = apiInstance.k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<KubernetesNodes> result = apiInstance.k8sNodepoolsNodesGetWithHttpInfo(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsNodesGet");
       System.err.println("Status code: " + e.getCode());
@@ -925,9 +986,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sNodepoolsNodesReplacePost**
 > k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber)
 
-Recreate Kubernetes nodes
+Recreate a Kubernetes Node by ID
 
-Recreate the specified Kubernetes node.  A new node is created and configured by Managed Kubernetes, based on the node pool template. Once the status is  \&quot;Active\&quot;, all the pods are migrated from the faulty node, which is then deleted once empty. During this operation, the node pool will have an additional billable  \&quot;Active\&quot; node.
+Recreates the K8s node specified by its ID.  If a node becomes unusable, Managed Kubernetes allows you to recreate it with a configuration based on the node pool template. Once the status is &#39;Active,&#39; all the pods from the failed node will be migrated to the new node. The node pool has an additional billable &#39;active&#39; node during this process.
 
 ### Parameters
 
@@ -949,11 +1010,14 @@ null (empty response body)
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sNodepoolsNodesReplacePostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sNodepoolsNodesReplacePost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -968,6 +1032,8 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes cluster.
@@ -977,8 +1043,7 @@ public class Example {
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      apiInstance.k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber);
-      System.out.println(result);
+      apiInstance.k8sNodepoolsNodesReplacePostWithHttpInfo(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber);
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsNodesReplacePost");
       System.err.println("Status code: " + e.getCode());
@@ -1014,9 +1079,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sNodepoolsPost**
 > KubernetesNodePool k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, pretty, depth, xContractNumber)
 
-Create Kubernetes node pools
+Create a Kubernetes Node Pool
 
-Create a Kubernetes node pool inside the specified Kubernetes cluster.
+Creates a node pool inside the specified K8s cluster.
 
 ### Parameters
 
@@ -1037,11 +1102,14 @@ Create a Kubernetes node pool inside the specified Kubernetes cluster.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sNodepoolsPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sNodepoolsPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1056,16 +1124,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes cluster.
-    KubernetesNodePoolForPost kubernetesNodePool = new KubernetesNodePoolForPost(); // KubernetesNodePoolForPost | The Kubernetes node pool to create.
+    properties = new KubernetesNodePoolPropertiesForPost(); // KubernetesNodePoolPropertiesForPost | 
+    kubernetesNodePool = new KubernetesNodePoolForPost(KubernetesNodePoolPropertiesForPost); // KubernetesNodePoolForPost | The Kubernetes node pool to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      KubernetesNodePool result = apiInstance.k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<KubernetesNodePool> result = apiInstance.k8sNodepoolsPostWithHttpInfo(k8sClusterId, kubernetesNodePool, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsPost");
       System.err.println("Status code: " + e.getCode());
@@ -1101,9 +1174,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sNodepoolsPut**
 > KubernetesNodePool k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber)
 
-Modify Kubernetes node pools
+Modify a Kubernetes Node Pool by ID
 
-Modify the specified Kubernetes node pool.
+Modifies the K8s node pool specified by its ID.
 
 ### Parameters
 
@@ -1125,11 +1198,14 @@ Modify the specified Kubernetes node pool.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sNodepoolsPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sNodepoolsPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1144,17 +1220,22 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes cluster.
     String nodepoolId = "nodepoolId_example"; // String | The unique ID of the Kubernetes node pool.
-    KubernetesNodePoolForPut kubernetesNodePool = new KubernetesNodePoolForPut(); // KubernetesNodePoolForPut | Details of the Kubernetes Node Pool
+    properties = new KubernetesNodePoolPropertiesForPut(); // KubernetesNodePoolPropertiesForPut | 
+    kubernetesNodePool = new KubernetesNodePoolForPut(KubernetesNodePoolPropertiesForPut); // KubernetesNodePoolForPut | Details of the Kubernetes Node Pool
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      KubernetesNodePool result = apiInstance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<KubernetesNodePool> result = apiInstance.k8sNodepoolsPutWithHttpInfo(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sNodepoolsPut");
       System.err.println("Status code: " + e.getCode());
@@ -1190,9 +1271,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sPost**
 > KubernetesCluster k8sPost(kubernetesCluster, pretty, depth, xContractNumber)
 
-Create Kubernetes clusters
+Create a Kubernetes Cluster
 
-Create a Kubernetes cluster.
+Creates a K8s cluster provisioned under your account.
 
 ### Parameters
 
@@ -1212,11 +1293,14 @@ Create a Kubernetes cluster.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sPostWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sPost instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1231,15 +1315,20 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
-    KubernetesClusterForPost kubernetesCluster = new KubernetesClusterForPost(); // KubernetesClusterForPost | The Kubernetes cluster to create.
+    properties = new KubernetesClusterPropertiesForPost(); // KubernetesClusterPropertiesForPost | 
+    kubernetesCluster = new KubernetesClusterForPost(KubernetesClusterPropertiesForPost); // KubernetesClusterForPost | The Kubernetes cluster to create.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      KubernetesCluster result = apiInstance.k8sPost(kubernetesCluster, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<KubernetesCluster> result = apiInstance.k8sPostWithHttpInfo(kubernetesCluster, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sPost");
       System.err.println("Status code: " + e.getCode());
@@ -1275,9 +1364,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sPut**
 > KubernetesCluster k8sPut(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber)
 
-Modify Kubernetes clusters
+Modify a Kubernetes Cluster by ID
 
-Modify the specified Kubernetes cluster.
+Modifies the K8s cluster specified by its ID.
 
 ### Parameters
 
@@ -1298,11 +1387,14 @@ Modify the specified Kubernetes cluster.
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sPutWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sPut instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1317,16 +1409,21 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
     String k8sClusterId = "k8sClusterId_example"; // String | The unique ID of the Kubernetes cluster.
-    KubernetesClusterForPut kubernetesCluster = new KubernetesClusterForPut(); // KubernetesClusterForPut | The modified Kubernetes cluster.
+    properties = new KubernetesClusterPropertiesForPut(); // KubernetesClusterPropertiesForPut | 
+    kubernetesCluster = new KubernetesClusterForPut(KubernetesClusterPropertiesForPut); // KubernetesClusterForPut | The modified Kubernetes cluster.
     Boolean pretty = true; // Boolean | Controls whether the response is pretty-printed (with indentations and new lines).
     Integer depth = 0; // Integer | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on
     Integer xContractNumber = 56; // Integer | Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
     try {
-      KubernetesCluster result = apiInstance.k8sPut(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber);
-      System.out.println(result);
+      ApiResponse<KubernetesCluster> result = apiInstance.k8sPutWithHttpInfo(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sPut");
       System.err.println("Status code: " + e.getCode());
@@ -1362,9 +1459,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sVersionsDefaultGet**
 > String k8sVersionsDefaultGet()
 
-Retrieve current default Kubernetes version
+Get Default Kubernetes Version
 
-Retrieve current default Kubernetes version for clusters and nodepools.
+Retrieves the current default K8s version to be used by the clusters and node pools.
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1381,11 +1478,14 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sVersionsDefaultGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sVersionsDefaultGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1400,14 +1500,18 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      String result = apiInstance.k8sVersionsDefaultGet(, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<String> result = apiInstance.k8sVersionsDefaultGetWithHttpInfo(orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sVersionsDefaultGet");
       System.err.println("Status code: " + e.getCode());
@@ -1443,9 +1547,9 @@ For convenience, you can alternatively use a builder, which allows to omit optio
 # **k8sVersionsGet**
 > List&lt;String&gt; k8sVersionsGet()
 
-List Kubernetes versions
+Get Kubernetes Versions
 
-List available Kubernetes versions.
+Lists available K8s versions.
 
 ### Parameters
 This endpoint does not need any parameter.
@@ -1462,11 +1566,14 @@ This endpoint does not need any parameter.
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+⚠️ **Note**: the example bellow uses the k8sVersionsGetWithHttpInfo which also returns the status code and the headers, if you don't
+need them you may use k8sVersionsGet instead
 ### Example
 ```java
 // Import classes:
 import com.ionoscloud.ApiClient;
 import com.ionoscloud.ApiException;
+import com.ionoscloud.ApiResponse;
 import com.ionoscloud.Configuration;
 import com.ionoscloud.auth.*;
 import com.ionoscloud.model.*;
@@ -1481,14 +1588,18 @@ public class Example {
     basicAuthentication.setUsername("YOUR USERNAME");
     basicAuthentication.setPassword("YOUR PASSWORD");
 
+    // Configure Api Key authorization: Token Authentication
+    defaultClient.setApiKeyWithBearerPrefix("YOUR TOKEN");
 
     KubernetesApi apiInstance = new KubernetesApi(defaultClient);
-        String orderBy = "orderBy_example"; // String | Order by field
-        Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
-        Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
+    String orderBy = "orderBy_example"; // String | Order by field
+    Integer maxResults = "maxResults_example"; // Integer | Maximum number of results to return
+    Map<String, String> filters = new HashMap<String, String>(); // Map<String, String> | Filter results by field
     try {
-      List<String> result = apiInstance.k8sVersionsGet(, orderBy, maxResults, filters);
-      System.out.println(result);
+      ApiResponse<List<String>> result = apiInstance.k8sVersionsGetWithHttpInfo(orderBy, maxResults, filters);
+      System.out.println("Response: " + result.getData());
+      System.out.println("Status Code: " + result.getStatusCode());
+      System.out.println("Headers: " + result.getHeaders());
     } catch (ApiException e) {
       System.err.println("Exception when calling KubernetesApi#k8sVersionsGet");
       System.err.println("Status code: " + e.getCode());

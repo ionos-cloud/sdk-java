@@ -28,7 +28,7 @@ import java.net.URI;
 /**
  * Info
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class Info {
   
@@ -49,11 +49,11 @@ public class Info {
   
 
    /**
-   * API entry point
+   * The API entry point.
    * @return href
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "API entry point")
+  @ApiModelProperty(example = "https://api.ionos.com/cloudapi/v6/", value = "The API entry point.")
 
   public URI getHref() {
     return href;
@@ -67,11 +67,11 @@ public class Info {
 
 
    /**
-   * Name of the API
+   * The API name.
    * @return name
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "CLOUD API", value = "Name of the API")
+  @ApiModelProperty(example = "CLOUD API", value = "The API name.")
 
   public String getName() {
     return name;
@@ -85,11 +85,11 @@ public class Info {
 
 
    /**
-   * Version of the API
+   * The API version.
    * @return version
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "1.0", value = "Version of the API")
+  @ApiModelProperty(example = "6.0", value = "The API version.")
 
   public String getVersion() {
     return version;
@@ -141,5 +141,14 @@ public class Info {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// Info instantiates a new Info object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public Info() {
+
 }
 
+
+}

@@ -991,8 +991,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create data center labels
-     * Add a new label to the specified data center.
+     * Create a Data Center Label
+     * Adds a new label to the specified data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param label The label to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1014,8 +1014,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create data center labels
-     * Add a new label to the specified data center.
+     * Create a Data Center Label
+     * Adds a new label to the specified data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param label The label to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1038,8 +1038,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create data center labels (asynchronously)
-     * Add a new label to the specified data center.
+     * Create a Data Center Label (asynchronously)
+     * Adds a new label to the specified data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param label The label to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1171,8 +1171,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create data center labels
-     * Add a new label to the specified data center.
+     * Create a Data Center Label
+     * Adds a new label to the specified data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param label The label to create. (required)
      * @return APIdatacentersLabelsPostRequest
@@ -1272,8 +1272,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify data center labels
-     * Modify the specified data center label.
+     * Modify a Data Center Label by Key
+     * Modifies the specified data center label.
      * @param datacenterId The unique ID of the data center. (required)
      * @param key The label key (required)
      * @param label The modified label (required)
@@ -1296,8 +1296,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify data center labels
-     * Modify the specified data center label.
+     * Modify a Data Center Label by Key
+     * Modifies the specified data center label.
      * @param datacenterId The unique ID of the data center. (required)
      * @param key The label key (required)
      * @param label The modified label (required)
@@ -1321,8 +1321,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify data center labels (asynchronously)
-     * Modify the specified data center label.
+     * Modify a Data Center Label by Key (asynchronously)
+     * Modifies the specified data center label.
      * @param datacenterId The unique ID of the data center. (required)
      * @param key The label key (required)
      * @param label The modified label (required)
@@ -1457,8 +1457,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify data center labels
-     * Modify the specified data center label.
+     * Modify a Data Center Label by Key
+     * Modifies the specified data center label.
      * @param datacenterId The unique ID of the data center. (required)
      * @param key The label key (required)
      * @param label The modified label (required)
@@ -2452,8 +2452,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create server labels
-     * Add a new label to the specified server.
+     * Create a Server Label
+     * Adds a new label to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param label The label to create. (required)
@@ -2476,8 +2476,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create server labels
-     * Add a new label to the specified server.
+     * Create a Server Label
+     * Adds a new label to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param label The label to create. (required)
@@ -2501,8 +2501,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create server labels (asynchronously)
-     * Add a new label to the specified server.
+     * Create a Server Label (asynchronously)
+     * Adds a new label to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param label The label to create. (required)
@@ -2637,8 +2637,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create server labels
-     * Add a new label to the specified server.
+     * Create a Server Label
+     * Adds a new label to the specified server.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param label The label to create. (required)
@@ -2746,8 +2746,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify server labels
-     * Modify the specified server label.
+     * Modify a Server Label
+     * Modifies the specified server label.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param key The label key (required)
@@ -2771,8 +2771,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify server labels
-     * Modify the specified server label.
+     * Modify a Server Label
+     * Modifies the specified server label.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param key The label key (required)
@@ -2797,8 +2797,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify server labels (asynchronously)
-     * Modify the specified server label.
+     * Modify a Server Label (asynchronously)
+     * Modifies the specified server label.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param key The label key (required)
@@ -2936,8 +2936,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify server labels
-     * Modify the specified server label.
+     * Modify a Server Label
+     * Modifies the specified server label.
      * @param datacenterId The unique ID of the data center. (required)
      * @param serverId The unique ID of the server. (required)
      * @param key The label key (required)
@@ -3932,8 +3932,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create volume labels
-     * Add a new label to the specified volume.
+     * Create a Volume Label
+     * Adds a new label to the specified volume.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volumeId The unique ID of the volume. (required)
      * @param label The label to create. (required)
@@ -3956,8 +3956,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create volume labels
-     * Add a new label to the specified volume.
+     * Create a Volume Label
+     * Adds a new label to the specified volume.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volumeId The unique ID of the volume. (required)
      * @param label The label to create. (required)
@@ -3981,8 +3981,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create volume labels (asynchronously)
-     * Add a new label to the specified volume.
+     * Create a Volume Label (asynchronously)
+     * Adds a new label to the specified volume.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volumeId The unique ID of the volume. (required)
      * @param label The label to create. (required)
@@ -4117,8 +4117,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create volume labels
-     * Add a new label to the specified volume.
+     * Create a Volume Label
+     * Adds a new label to the specified volume.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volumeId The unique ID of the volume. (required)
      * @param label The label to create. (required)
@@ -4226,8 +4226,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify volume labels
-     * Modify the specified volume label.
+     * Modify a Volume Label
+     * Modifies the specified volume label.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volumeId The unique ID of the volume. (required)
      * @param key The label key (required)
@@ -4251,8 +4251,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify volume labels
-     * Modify the specified volume label.
+     * Modify a Volume Label
+     * Modifies the specified volume label.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volumeId The unique ID of the volume. (required)
      * @param key The label key (required)
@@ -4277,8 +4277,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify volume labels (asynchronously)
-     * Modify the specified volume label.
+     * Modify a Volume Label (asynchronously)
+     * Modifies the specified volume label.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volumeId The unique ID of the volume. (required)
      * @param key The label key (required)
@@ -4416,8 +4416,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify volume labels
-     * Modify the specified volume label.
+     * Modify a Volume Label
+     * Modifies the specified volume label.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volumeId The unique ID of the volume. (required)
      * @param key The label key (required)
@@ -5647,8 +5647,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify IP block labels
-     * Modify the specified IP block label.
+     * Modify a IP Block Label by ID
+     * Modifies the specified IP block label.
      * @param ipblockId The unique ID of the IP block. (required)
      * @param key The label key (required)
      * @param label The modified label (required)
@@ -5671,8 +5671,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify IP block labels
-     * Modify the specified IP block label.
+     * Modify a IP Block Label by ID
+     * Modifies the specified IP block label.
      * @param ipblockId The unique ID of the IP block. (required)
      * @param key The label key (required)
      * @param label The modified label (required)
@@ -5696,8 +5696,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify IP block labels (asynchronously)
-     * Modify the specified IP block label.
+     * Modify a IP Block Label by ID (asynchronously)
+     * Modifies the specified IP block label.
      * @param ipblockId The unique ID of the IP block. (required)
      * @param key The label key (required)
      * @param label The modified label (required)
@@ -5832,8 +5832,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify IP block labels
-     * Modify the specified IP block label.
+     * Modify a IP Block Label by ID
+     * Modifies the specified IP block label.
      * @param ipblockId The unique ID of the IP block. (required)
      * @param key The label key (required)
      * @param label The modified label (required)
@@ -7341,8 +7341,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create snapshot labels
-     * Add a new label to the specified snapshot.
+     * Create a Snapshot Label
+     * Adds a new label to the specified snapshot.
      * @param snapshotId The unique ID of the snapshot. (required)
      * @param label The label to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -7364,8 +7364,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create snapshot labels
-     * Add a new label to the specified snapshot.
+     * Create a Snapshot Label
+     * Adds a new label to the specified snapshot.
      * @param snapshotId The unique ID of the snapshot. (required)
      * @param label The label to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -7388,8 +7388,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create snapshot labels (asynchronously)
-     * Add a new label to the specified snapshot.
+     * Create a Snapshot Label (asynchronously)
+     * Adds a new label to the specified snapshot.
      * @param snapshotId The unique ID of the snapshot. (required)
      * @param label The label to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -7521,8 +7521,8 @@ public class LabelsApi {
     }
 
     /**
-     * Create snapshot labels
-     * Add a new label to the specified snapshot.
+     * Create a Snapshot Label
+     * Adds a new label to the specified snapshot.
      * @param snapshotId The unique ID of the snapshot. (required)
      * @param label The label to create. (required)
      * @return APIsnapshotsLabelsPostRequest
@@ -7622,8 +7622,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify snapshot labels
-     * Modify the specified snapshot label.
+     * Modify a Snapshot Label by ID
+     * Modifies the specified snapshot label.
      * @param snapshotId The unique ID of the snapshot. (required)
      * @param key The label key (required)
      * @param label The modified label (required)
@@ -7646,8 +7646,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify snapshot labels
-     * Modify the specified snapshot label.
+     * Modify a Snapshot Label by ID
+     * Modifies the specified snapshot label.
      * @param snapshotId The unique ID of the snapshot. (required)
      * @param key The label key (required)
      * @param label The modified label (required)
@@ -7671,8 +7671,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify snapshot labels (asynchronously)
-     * Modify the specified snapshot label.
+     * Modify a Snapshot Label by ID (asynchronously)
+     * Modifies the specified snapshot label.
      * @param snapshotId The unique ID of the snapshot. (required)
      * @param key The label key (required)
      * @param label The modified label (required)
@@ -7807,8 +7807,8 @@ public class LabelsApi {
     }
 
     /**
-     * Modify snapshot labels
-     * Modify the specified snapshot label.
+     * Modify a Snapshot Label by ID
+     * Modifies the specified snapshot label.
      * @param snapshotId The unique ID of the snapshot. (required)
      * @param key The label key (required)
      * @param label The modified label (required)

@@ -34,18 +34,13 @@ import java.util.List;
 /**
  * Requests
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class Requests {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
+  public static final String SERIALIZED_NAME_LINKS = "_links";
+  @SerializedName(SERIALIZED_NAME_LINKS)
+  private PaginationLinks links;
 
 
   public static final String SERIALIZED_NAME_HREF = "href";
@@ -53,14 +48,14 @@ public class Requests {
   private URI href;
 
 
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
+
+
   public static final String SERIALIZED_NAME_ITEMS = "items";
   @SerializedName(SERIALIZED_NAME_ITEMS)
   private List<Request> items = null;
-
-
-  public static final String SERIALIZED_NAME_OFFSET = "offset";
-  @SerializedName(SERIALIZED_NAME_OFFSET)
-  private BigDecimal offset;
 
 
   public static final String SERIALIZED_NAME_LIMIT = "limit";
@@ -68,50 +63,36 @@ public class Requests {
   private BigDecimal limit;
 
 
-  public static final String SERIALIZED_NAME_LINKS = "_links";
-  @SerializedName(SERIALIZED_NAME_LINKS)
-  private PaginationLinks links;
+  public static final String SERIALIZED_NAME_OFFSET = "offset";
+  @SerializedName(SERIALIZED_NAME_OFFSET)
+  private BigDecimal offset;
+
+
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
 
   
 
-   /**
-   * The resource&#39;s unique identifier.
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "requests", value = "The resource's unique identifier.")
-
-  public String getId() {
-    return id;
-  }
-
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-
-  public Requests type(Type type) {
+  public Requests links(PaginationLinks links) {
     
-    this.type = type;
+    this.links = links;
     return this;
   }
 
    /**
-   * The type of object that has been created.
-   * @return type
+   * Get links
+   * @return links
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"collection\"", value = "The type of object that has been created.")
+  @ApiModelProperty(required = true, value = "")
 
-  public Type getType() {
-    return type;
+  public PaginationLinks getLinks() {
+    return links;
   }
 
 
-  public void setType(Type type) {
-    this.type = type;
+  public void setLinks(PaginationLinks links) {
+    this.links = links;
   }
 
 
@@ -135,6 +116,24 @@ public class Requests {
 
 
    /**
+   * The resource&#39;s unique identifier.
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "requests", value = "The resource's unique identifier.")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
+
+
+   /**
    * Array of items in the collection.
    * @return items
   **/
@@ -148,29 +147,6 @@ public class Requests {
 
   public void setItems(List<Request> items) {
     this.items = items;
-  }
-
-
-
-  public Requests offset(BigDecimal offset) {
-    
-    this.offset = offset;
-    return this;
-  }
-
-   /**
-   * The offset, specified in the request (if not is specified, 0 is used by default).
-   * @return offset
-  **/
-  @ApiModelProperty(example = "0", required = true, value = "The offset, specified in the request (if not is specified, 0 is used by default).")
-
-  public BigDecimal getOffset() {
-    return offset;
-  }
-
-
-  public void setOffset(BigDecimal offset) {
-    this.offset = offset;
   }
 
 
@@ -198,25 +174,49 @@ public class Requests {
 
 
 
-  public Requests links(PaginationLinks links) {
+  public Requests offset(BigDecimal offset) {
     
-    this.links = links;
+    this.offset = offset;
     return this;
   }
 
    /**
-   * Get links
-   * @return links
+   * The offset, specified in the request (if not is specified, 0 is used by default).
+   * @return offset
   **/
-  @ApiModelProperty(required = true, value = "")
+  @ApiModelProperty(example = "0", required = true, value = "The offset, specified in the request (if not is specified, 0 is used by default).")
 
-  public PaginationLinks getLinks() {
-    return links;
+  public BigDecimal getOffset() {
+    return offset;
   }
 
 
-  public void setLinks(PaginationLinks links) {
-    this.links = links;
+  public void setOffset(BigDecimal offset) {
+    this.offset = offset;
+  }
+
+
+
+  public Requests type(Type type) {
+    
+    this.type = type;
+    return this;
+  }
+
+   /**
+   * The type of object that has been created.
+   * @return type
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "\"collection\"", value = "The type of object that has been created.")
+
+  public Type getType() {
+    return type;
+  }
+
+
+  public void setType(Type type) {
+    this.type = type;
   }
 
 
@@ -229,7 +229,7 @@ public class Requests {
       return false;
     }
     Requests requests = (Requests) o;
-    return Objects.equals(this.id, requests.id) && Objects.equals(this.type, requests.type) && Objects.equals(this.href, requests.href) && Objects.equals(this.items, requests.items) && Objects.equals(this.offset, requests.offset) && Objects.equals(this.limit, requests.limit) && Objects.equals(this.links, requests.links);
+    return Objects.equals(this.links, requests.links) && Objects.equals(this.href, requests.href) && Objects.equals(this.id, requests.id) && Objects.equals(this.items, requests.items) && Objects.equals(this.limit, requests.limit) && Objects.equals(this.offset, requests.offset) && Objects.equals(this.type, requests.type);
   }
 
 
@@ -240,19 +240,19 @@ public class Requests {
     StringBuilder sb = new StringBuilder();
     sb.append("class Requests {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    links: ").append(toIndentedString(links)).append("\n");
 
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
-    sb.append("    items: ").append(toIndentedString(items)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
 
-    sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+    sb.append("    items: ").append(toIndentedString(items)).append("\n");
 
     sb.append("    limit: ").append(toIndentedString(limit)).append("\n");
 
-    sb.append("    links: ").append(toIndentedString(links)).append("\n");
+    sb.append("    offset: ").append(toIndentedString(offset)).append("\n");
+
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -268,5 +268,19 @@ public class Requests {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// Requests instantiates a new Requests object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public Requests(PaginationLinks Links, BigDecimal Limit, BigDecimal Offset) {
+
+	this.links = Links;
+	this.limit = Limit;
+	this.offset = Offset;
 }
 
+public Requests() {
+}
+
+}

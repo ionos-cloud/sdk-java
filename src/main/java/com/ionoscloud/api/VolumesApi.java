@@ -1665,8 +1665,8 @@ public class VolumesApi {
     }
 
     /**
-     * Create volumes
-     * Create a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
+     * Create a Volume
+     * Creates a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volume The volume to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1688,8 +1688,8 @@ public class VolumesApi {
     }
 
     /**
-     * Create volumes
-     * Create a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
+     * Create a Volume
+     * Creates a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volume The volume to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1712,8 +1712,8 @@ public class VolumesApi {
     }
 
     /**
-     * Create volumes (asynchronously)
-     * Create a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
+     * Create a Volume (asynchronously)
+     * Creates a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volume The volume to create. (required)
      * @param pretty Controls whether the response is pretty-printed (with indentations and new lines). (optional, default to true)
@@ -1845,8 +1845,8 @@ public class VolumesApi {
     }
 
     /**
-     * Create volumes
-     * Create a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
+     * Create a Volume
+     * Creates a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volume The volume to create. (required)
      * @return APIdatacentersVolumesPostRequest
@@ -1946,8 +1946,8 @@ public class VolumesApi {
     }
 
     /**
-     * Modify volumes
-     * Modify the properties of the specified volume within the data center.
+     * Modify a Volume by ID
+     * Modifies the properties of the specified volume within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volumeId The unique ID of the volume. (required)
      * @param volume The modified volume (required)
@@ -1970,8 +1970,8 @@ public class VolumesApi {
     }
 
     /**
-     * Modify volumes
-     * Modify the properties of the specified volume within the data center.
+     * Modify a Volume by ID
+     * Modifies the properties of the specified volume within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volumeId The unique ID of the volume. (required)
      * @param volume The modified volume (required)
@@ -1995,8 +1995,8 @@ public class VolumesApi {
     }
 
     /**
-     * Modify volumes (asynchronously)
-     * Modify the properties of the specified volume within the data center.
+     * Modify a Volume by ID (asynchronously)
+     * Modifies the properties of the specified volume within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volumeId The unique ID of the volume. (required)
      * @param volume The modified volume (required)
@@ -2131,8 +2131,8 @@ public class VolumesApi {
     }
 
     /**
-     * Modify volumes
-     * Modify the properties of the specified volume within the data center.
+     * Modify a Volume by ID
+     * Modifies the properties of the specified volume within the data center.
      * @param datacenterId The unique ID of the data center. (required)
      * @param volumeId The unique ID of the volume. (required)
      * @param volume The modified volume (required)

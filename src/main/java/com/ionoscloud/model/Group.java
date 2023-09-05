@@ -31,18 +31,13 @@ import java.net.URI;
 /**
  * Group
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-02-08T12:49:39.918Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
 
 public class Group {
   
-  public static final String SERIALIZED_NAME_ID = "id";
-  @SerializedName(SERIALIZED_NAME_ID)
-  private String id;
-
-
-  public static final String SERIALIZED_NAME_TYPE = "type";
-  @SerializedName(SERIALIZED_NAME_TYPE)
-  private Type type;
+  public static final String SERIALIZED_NAME_ENTITIES = "entities";
+  @SerializedName(SERIALIZED_NAME_ENTITIES)
+  private GroupEntities entities;
 
 
   public static final String SERIALIZED_NAME_HREF = "href";
@@ -50,55 +45,42 @@ public class Group {
   private URI href;
 
 
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
+
+
   public static final String SERIALIZED_NAME_PROPERTIES = "properties";
   @SerializedName(SERIALIZED_NAME_PROPERTIES)
   private GroupProperties properties;
 
 
-  public static final String SERIALIZED_NAME_ENTITIES = "entities";
-  @SerializedName(SERIALIZED_NAME_ENTITIES)
-  private GroupEntities entities;
+  public static final String SERIALIZED_NAME_TYPE = "type";
+  @SerializedName(SERIALIZED_NAME_TYPE)
+  private Type type;
 
   
 
-   /**
-   * The resource&#39;s unique identifier.
-   * @return id
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The resource's unique identifier.")
-
-  public String getId() {
-    return id;
-  }
-
-
-  public void setId(String id) {
-    this.id = id;
-  }
-
-
-
-  public Group type(Type type) {
+  public Group entities(GroupEntities entities) {
     
-    this.type = type;
+    this.entities = entities;
     return this;
   }
 
    /**
-   * The type of the resource.
-   * @return type
+   * Get entities
+   * @return entities
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "\"group\"", value = "The type of the resource.")
+  @ApiModelProperty(value = "")
 
-  public Type getType() {
-    return type;
+  public GroupEntities getEntities() {
+    return entities;
   }
 
 
-  public void setType(Type type) {
-    this.type = type;
+  public void setEntities(GroupEntities entities) {
+    this.entities = entities;
   }
 
 
@@ -117,6 +99,24 @@ public class Group {
 
   public void setHref(URI href) {
     this.href = href;
+  }
+
+
+
+   /**
+   * The resource&#39;s unique identifier.
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "15f67991-0f51-4efc-a8ad-ef1fb31a480c", value = "The resource's unique identifier.")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
   }
 
 
@@ -144,26 +144,26 @@ public class Group {
 
 
 
-  public Group entities(GroupEntities entities) {
+  public Group type(Type type) {
     
-    this.entities = entities;
+    this.type = type;
     return this;
   }
 
    /**
-   * Get entities
-   * @return entities
+   * The type of the resource.
+   * @return type
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(example = "\"group\"", value = "The type of the resource.")
 
-  public GroupEntities getEntities() {
-    return entities;
+  public Type getType() {
+    return type;
   }
 
 
-  public void setEntities(GroupEntities entities) {
-    this.entities = entities;
+  public void setType(Type type) {
+    this.type = type;
   }
 
 
@@ -176,7 +176,7 @@ public class Group {
       return false;
     }
     Group group = (Group) o;
-    return Objects.equals(this.id, group.id) && Objects.equals(this.type, group.type) && Objects.equals(this.href, group.href) && Objects.equals(this.properties, group.properties) && Objects.equals(this.entities, group.entities);
+    return Objects.equals(this.entities, group.entities) && Objects.equals(this.href, group.href) && Objects.equals(this.id, group.id) && Objects.equals(this.properties, group.properties) && Objects.equals(this.type, group.type);
   }
 
 
@@ -187,15 +187,15 @@ public class Group {
     StringBuilder sb = new StringBuilder();
     sb.append("class Group {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
-
-    sb.append("    type: ").append(toIndentedString(type)).append("\n");
+    sb.append("    entities: ").append(toIndentedString(entities)).append("\n");
 
     sb.append("    href: ").append(toIndentedString(href)).append("\n");
 
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+
     sb.append("    properties: ").append(toIndentedString(properties)).append("\n");
 
-    sb.append("    entities: ").append(toIndentedString(entities)).append("\n");
+    sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -211,5 +211,17 @@ public class Group {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+
+// Group instantiates a new Group object
+// This constructor makes sure properties required by API are set, but the set of arguments
+// will change when the set of required properties is changed
+public Group(GroupProperties Properties) {
+
+	this.properties = Properties;
 }
 
+public Group() {
+}
+
+}
