@@ -30,7 +30,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * NicProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-01T15:22:04.229Z[Etc/UTC]")
 
 public class NicProperties {
   
@@ -194,11 +194,11 @@ public class NicProperties {
   }
 
    /**
-   * [The IPv6 feature is in beta phase and not ready for production usage.] Indicates if the NIC will receive an IPv6 using DHCP. It can be set to &#39;true&#39; or &#39;false&#39; only if this NIC is connected to an IPv6 enabled LAN.
+   * Indicates if the NIC will receive an IPv6 using DHCP. It can be set to &#39;true&#39; or &#39;false&#39; only if this NIC is connected to an IPv6 enabled LAN.
    * @return dhcpv6
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "true", value = "[The IPv6 feature is in beta phase and not ready for production usage.] Indicates if the NIC will receive an IPv6 using DHCP. It can be set to 'true' or 'false' only if this NIC is connected to an IPv6 enabled LAN.")
+  @ApiModelProperty(example = "true", value = "Indicates if the NIC will receive an IPv6 using DHCP. It can be set to 'true' or 'false' only if this NIC is connected to an IPv6 enabled LAN.")
 
   public Boolean getDhcpv6() {
     return dhcpv6;
@@ -298,11 +298,11 @@ public class NicProperties {
   }
 
    /**
-   * [The IPv6 feature is in beta phase and not ready for production usage.] If this NIC is connected to an IPv6 enabled LAN then this property contains the /80 IPv6 CIDR block of the NIC. If you leave this property &#39;null&#39; when adding a NIC to an IPv6-enabled LAN, then an IPv6 CIDR block will automatically be assigned to the NIC, but you can also specify an /80 IPv6 CIDR block for the NIC on your own, which must be inside the /64 IPv6 CIDR block of the LAN and unique. This value can only be set, if the LAN already has an IPv6 CIDR block assigned. An IPv6-enabled LAN is limited to a maximum of 65,536 NICs.
+   * If this NIC is connected to an IPv6 enabled LAN then this property contains the /80 IPv6 CIDR block of the NIC. If you leave this property &#39;null&#39; when adding a NIC to an IPv6-enabled LAN, then an IPv6 CIDR block will automatically be assigned to the NIC, but you can also specify an /80 IPv6 CIDR block for the NIC on your own, which must be inside the /64 IPv6 CIDR block of the LAN and unique. This value can only be set, if the LAN already has an IPv6 CIDR block assigned. An IPv6-enabled LAN is limited to a maximum of 65,536 NICs.
    * @return ipv6CidrBlock
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2001:db8:b06d:8f5a:0609::/80", value = "[The IPv6 feature is in beta phase and not ready for production usage.] If this NIC is connected to an IPv6 enabled LAN then this property contains the /80 IPv6 CIDR block of the NIC. If you leave this property 'null' when adding a NIC to an IPv6-enabled LAN, then an IPv6 CIDR block will automatically be assigned to the NIC, but you can also specify an /80 IPv6 CIDR block for the NIC on your own, which must be inside the /64 IPv6 CIDR block of the LAN and unique. This value can only be set, if the LAN already has an IPv6 CIDR block assigned. An IPv6-enabled LAN is limited to a maximum of 65,536 NICs.")
+  @ApiModelProperty(example = "2001:db8:b06d:8f5a:0609::/80", value = "If this NIC is connected to an IPv6 enabled LAN then this property contains the /80 IPv6 CIDR block of the NIC. If you leave this property 'null' when adding a NIC to an IPv6-enabled LAN, then an IPv6 CIDR block will automatically be assigned to the NIC, but you can also specify an /80 IPv6 CIDR block for the NIC on your own, which must be inside the /64 IPv6 CIDR block of the LAN and unique. This value can only be set, if the LAN already has an IPv6 CIDR block assigned. An IPv6-enabled LAN is limited to a maximum of 65,536 NICs.")
 
   public String getIpv6CidrBlock() {
     return ipv6CidrBlock;
@@ -330,11 +330,11 @@ public class NicProperties {
   }
 
    /**
-   * [The IPv6 feature is in beta phase and not ready for production usage.] If this NIC is connected to an IPv6 enabled LAN then this property contains the IPv6 IP addresses of the NIC. The maximum number of IPv6 IP addresses per NIC is 50, if you need more, contact support. If you leave this property &#39;null&#39; when adding a NIC, when changing the NIC&#39;s IPv6 CIDR block, when changing the LAN&#39;s IPv6 CIDR block or when moving the NIC to a different IPv6 enabled LAN, then we will automatically assign the same number of IPv6 addresses which you had before from the NICs new CIDR block. If you leave this property &#39;null&#39; while not changing the CIDR block, the IPv6 IP addresses won&#39;t be changed either. You can also provide your own self choosen IPv6 addresses, which then must be inside the IPv6 CIDR block of this NIC.
+   * If this NIC is connected to an IPv6 enabled LAN then this property contains the IPv6 IP addresses of the NIC. The maximum number of IPv6 IP addresses per NIC is 50, if you need more, contact support. If you leave this property &#39;null&#39; when adding a NIC, when changing the NIC&#39;s IPv6 CIDR block, when changing the LAN&#39;s IPv6 CIDR block or when moving the NIC to a different IPv6 enabled LAN, then we will automatically assign the same number of IPv6 addresses which you had before from the NICs new CIDR block. If you leave this property &#39;null&#39; while not changing the CIDR block, the IPv6 IP addresses won&#39;t be changed either. You can also provide your own self choosen IPv6 addresses, which then must be inside the IPv6 CIDR block of this NIC.
    * @return ipv6Ips
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "[2001:db8:b06d:8f5a:0609::1]", value = "[The IPv6 feature is in beta phase and not ready for production usage.] If this NIC is connected to an IPv6 enabled LAN then this property contains the IPv6 IP addresses of the NIC. The maximum number of IPv6 IP addresses per NIC is 50, if you need more, contact support. If you leave this property 'null' when adding a NIC, when changing the NIC's IPv6 CIDR block, when changing the LAN's IPv6 CIDR block or when moving the NIC to a different IPv6 enabled LAN, then we will automatically assign the same number of IPv6 addresses which you had before from the NICs new CIDR block. If you leave this property 'null' while not changing the CIDR block, the IPv6 IP addresses won't be changed either. You can also provide your own self choosen IPv6 addresses, which then must be inside the IPv6 CIDR block of this NIC.")
+  @ApiModelProperty(example = "[2001:db8:b06d:8f5a:0609::1]", value = "If this NIC is connected to an IPv6 enabled LAN then this property contains the IPv6 IP addresses of the NIC. The maximum number of IPv6 IP addresses per NIC is 50, if you need more, contact support. If you leave this property 'null' when adding a NIC, when changing the NIC's IPv6 CIDR block, when changing the LAN's IPv6 CIDR block or when moving the NIC to a different IPv6 enabled LAN, then we will automatically assign the same number of IPv6 addresses which you had before from the NICs new CIDR block. If you leave this property 'null' while not changing the CIDR block, the IPv6 IP addresses won't be changed either. You can also provide your own self choosen IPv6 addresses, which then must be inside the IPv6 CIDR block of this NIC.")
 
   public List<String> getIpv6Ips() {
     return ipv6Ips;

@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * KubernetesClusterProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-01T15:22:04.229Z[Etc/UTC]")
 
 public class KubernetesClusterProperties {
   
@@ -50,6 +50,11 @@ public class KubernetesClusterProperties {
   private String k8sVersion;
 
 
+  public static final String SERIALIZED_NAME_LOCATION = "location";
+  @SerializedName(SERIALIZED_NAME_LOCATION)
+  private String location;
+
+
   public static final String SERIALIZED_NAME_MAINTENANCE_WINDOW = "maintenanceWindow";
   @SerializedName(SERIALIZED_NAME_MAINTENANCE_WINDOW)
   private KubernetesMaintenanceWindow maintenanceWindow;
@@ -58,6 +63,21 @@ public class KubernetesClusterProperties {
   public static final String SERIALIZED_NAME_NAME = "name";
   @SerializedName(SERIALIZED_NAME_NAME)
   private String name;
+
+
+  public static final String SERIALIZED_NAME_NAT_GATEWAY_IP = "natGatewayIp";
+  @SerializedName(SERIALIZED_NAME_NAT_GATEWAY_IP)
+  private String natGatewayIp;
+
+
+  public static final String SERIALIZED_NAME_NODE_SUBNET = "nodeSubnet";
+  @SerializedName(SERIALIZED_NAME_NODE_SUBNET)
+  private String nodeSubnet;
+
+
+  public static final String SERIALIZED_NAME_PUBLIC = "public";
+  @SerializedName(SERIALIZED_NAME_PUBLIC)
+  private Boolean _public = true;
 
 
   public static final String SERIALIZED_NAME_S3_BUCKETS = "s3Buckets";
@@ -159,6 +179,30 @@ public class KubernetesClusterProperties {
 
 
 
+  public KubernetesClusterProperties location(String location) {
+    
+    this.location = location;
+    return this;
+  }
+
+   /**
+   * The location of the cluster if the cluster is private. This property is immutable. The location must be enabled for your contract or you must have a Datacenter within that location. This attribute is mandatory if the cluster is private.
+   * @return location
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "de/fra", value = "The location of the cluster if the cluster is private. This property is immutable. The location must be enabled for your contract or you must have a Datacenter within that location. This attribute is mandatory if the cluster is private.")
+
+  public String getLocation() {
+    return location;
+  }
+
+
+  public void setLocation(String location) {
+    this.location = location;
+  }
+
+
+
   public KubernetesClusterProperties maintenanceWindow(KubernetesMaintenanceWindow maintenanceWindow) {
     
     this.maintenanceWindow = maintenanceWindow;
@@ -202,6 +246,78 @@ public class KubernetesClusterProperties {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+
+
+  public KubernetesClusterProperties natGatewayIp(String natGatewayIp) {
+    
+    this.natGatewayIp = natGatewayIp;
+    return this;
+  }
+
+   /**
+   * The nat gateway IP of the cluster if the cluster is private. This property is immutable. Must be a reserved IP in the same location as the cluster&#39;s location. This attribute is mandatory if the cluster is private.
+   * @return natGatewayIp
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "198.51.100.100", value = "The nat gateway IP of the cluster if the cluster is private. This property is immutable. Must be a reserved IP in the same location as the cluster's location. This attribute is mandatory if the cluster is private.")
+
+  public String getNatGatewayIp() {
+    return natGatewayIp;
+  }
+
+
+  public void setNatGatewayIp(String natGatewayIp) {
+    this.natGatewayIp = natGatewayIp;
+  }
+
+
+
+  public KubernetesClusterProperties nodeSubnet(String nodeSubnet) {
+    
+    this.nodeSubnet = nodeSubnet;
+    return this;
+  }
+
+   /**
+   * The node subnet of the cluster, if the cluster is private. This property is optional and immutable. Must be a valid CIDR notation for an IPv4 network prefix of 16 bits length.
+   * @return nodeSubnet
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(example = "192.168.0.0/16", value = "The node subnet of the cluster, if the cluster is private. This property is optional and immutable. Must be a valid CIDR notation for an IPv4 network prefix of 16 bits length.")
+
+  public String getNodeSubnet() {
+    return nodeSubnet;
+  }
+
+
+  public void setNodeSubnet(String nodeSubnet) {
+    this.nodeSubnet = nodeSubnet;
+  }
+
+
+
+  public KubernetesClusterProperties _public(Boolean _public) {
+    
+    this._public = _public;
+    return this;
+  }
+
+   /**
+   * The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.
+   * @return _public
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.")
+
+  public Boolean getPublic() {
+    return _public;
+  }
+
+
+  public void setPublic(Boolean _public) {
+    this._public = _public;
   }
 
 
@@ -278,7 +394,7 @@ public class KubernetesClusterProperties {
       return false;
     }
     KubernetesClusterProperties kubernetesClusterProperties = (KubernetesClusterProperties) o;
-    return Objects.equals(this.apiSubnetAllowList, kubernetesClusterProperties.apiSubnetAllowList) && Objects.equals(this.availableUpgradeVersions, kubernetesClusterProperties.availableUpgradeVersions) && Objects.equals(this.k8sVersion, kubernetesClusterProperties.k8sVersion) && true && Objects.equals(this.maintenanceWindow, kubernetesClusterProperties.maintenanceWindow) && Objects.equals(this.name, kubernetesClusterProperties.name) && true && true && true && Objects.equals(this.s3Buckets, kubernetesClusterProperties.s3Buckets) && Objects.equals(this.viableNodePoolVersions, kubernetesClusterProperties.viableNodePoolVersions);
+    return Objects.equals(this.apiSubnetAllowList, kubernetesClusterProperties.apiSubnetAllowList) && Objects.equals(this.availableUpgradeVersions, kubernetesClusterProperties.availableUpgradeVersions) && Objects.equals(this.k8sVersion, kubernetesClusterProperties.k8sVersion) && Objects.equals(this.location, kubernetesClusterProperties.location) && Objects.equals(this.maintenanceWindow, kubernetesClusterProperties.maintenanceWindow) && Objects.equals(this.name, kubernetesClusterProperties.name) && Objects.equals(this.natGatewayIp, kubernetesClusterProperties.natGatewayIp) && Objects.equals(this.nodeSubnet, kubernetesClusterProperties.nodeSubnet) && Objects.equals(this._public, kubernetesClusterProperties._public) && Objects.equals(this.s3Buckets, kubernetesClusterProperties.s3Buckets) && Objects.equals(this.viableNodePoolVersions, kubernetesClusterProperties.viableNodePoolVersions);
   }
 
 
@@ -295,9 +411,17 @@ public class KubernetesClusterProperties {
 
     sb.append("    k8sVersion: ").append(toIndentedString(k8sVersion)).append("\n");
 
+    sb.append("    location: ").append(toIndentedString(location)).append("\n");
+
     sb.append("    maintenanceWindow: ").append(toIndentedString(maintenanceWindow)).append("\n");
 
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+
+    sb.append("    natGatewayIp: ").append(toIndentedString(natGatewayIp)).append("\n");
+
+    sb.append("    nodeSubnet: ").append(toIndentedString(nodeSubnet)).append("\n");
+
+    sb.append("    _public: ").append(toIndentedString(_public)).append("\n");
 
     sb.append("    s3Buckets: ").append(toIndentedString(s3Buckets)).append("\n");
 

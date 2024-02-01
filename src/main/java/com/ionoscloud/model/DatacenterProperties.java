@@ -31,7 +31,7 @@ import org.openapitools.jackson.nullable.JsonNullable;
 /**
  * DatacenterProperties
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-01T15:22:04.229Z[Etc/UTC]")
 
 public class DatacenterProperties {
   
@@ -137,11 +137,11 @@ public class DatacenterProperties {
 
 
    /**
-   * [The IPv6 feature is in beta phase and not ready for production usage.] This value is either &#39;null&#39; or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.
+   * This value is either &#39;null&#39; or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.
    * @return ipv6CidrBlock
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(example = "2001:db8:b06d:8f00::/56", value = "[The IPv6 feature is in beta phase and not ready for production usage.] This value is either 'null' or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.")
+  @ApiModelProperty(example = "2001:db8:b06d:8f00::/56", value = "This value is either 'null' or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.")
 
   public String getIpv6CidrBlock() {
     return ipv6CidrBlock;

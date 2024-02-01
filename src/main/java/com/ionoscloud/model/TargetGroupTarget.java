@@ -27,7 +27,7 @@ import java.io.IOException;
 /**
  * TargetGroupTarget
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2023-09-05T12:38:36.990Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-02-01T15:22:04.229Z[Etc/UTC]")
 
 public class TargetGroupTarget {
   
@@ -54,6 +54,63 @@ public class TargetGroupTarget {
   public static final String SERIALIZED_NAME_WEIGHT = "weight";
   @SerializedName(SERIALIZED_NAME_WEIGHT)
   private Integer weight;
+
+
+  /**
+   * ProxyProtocol is used to set the proxy protocol version.
+   */
+  @JsonAdapter(ProxyProtocolEnum.Adapter.class)
+  public enum ProxyProtocolEnum {
+    NONE("none"),
+    
+    V1("v1"),
+    
+    V2("v2"),
+    
+    V2SSL("v2ssl");
+
+    private String value;
+
+    ProxyProtocolEnum(String value) {
+      this.value = value;
+    }
+
+    public String getValue() {
+      return value;
+    }
+
+    @Override
+    public String toString() {
+      return String.valueOf(value);
+    }
+
+    public static ProxyProtocolEnum fromValue(String value) {
+
+      for (ProxyProtocolEnum b : ProxyProtocolEnum.values()) {
+        if (b.value.equals(value)) {
+          return b;
+        }
+      }
+      return null;
+    }
+
+    public static class Adapter extends TypeAdapter<ProxyProtocolEnum> {
+      @Override
+      public void write(final JsonWriter jsonWriter, final ProxyProtocolEnum enumeration) throws IOException {
+        jsonWriter.value(enumeration.getValue());
+      }
+
+      @Override
+      public ProxyProtocolEnum read(final JsonReader jsonReader) throws IOException {
+        String value =  jsonReader.nextString();
+        return ProxyProtocolEnum.fromValue(value);
+      }
+    }
+  }
+
+  public static final String SERIALIZED_NAME_PROXY_PROTOCOL = "proxyProtocol";
+  @SerializedName(SERIALIZED_NAME_PROXY_PROTOCOL)
+  private ProxyProtocolEnum proxyProtocol = ProxyProtocolEnum.NONE;
 
   
 
@@ -173,6 +230,30 @@ public class TargetGroupTarget {
   }
 
 
+
+  public TargetGroupTarget proxyProtocol(ProxyProtocolEnum proxyProtocol) {
+    
+    this.proxyProtocol = proxyProtocol;
+    return this;
+  }
+
+   /**
+   * ProxyProtocol is used to set the proxy protocol version.
+   * @return proxyProtocol
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "ProxyProtocol is used to set the proxy protocol version.")
+
+  public ProxyProtocolEnum getProxyProtocol() {
+    return proxyProtocol;
+  }
+
+
+  public void setProxyProtocol(ProxyProtocolEnum proxyProtocol) {
+    this.proxyProtocol = proxyProtocol;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -182,7 +263,7 @@ public class TargetGroupTarget {
       return false;
     }
     TargetGroupTarget targetGroupTarget = (TargetGroupTarget) o;
-    return Objects.equals(this.healthCheckEnabled, targetGroupTarget.healthCheckEnabled) && Objects.equals(this.ip, targetGroupTarget.ip) && Objects.equals(this.maintenanceEnabled, targetGroupTarget.maintenanceEnabled) && Objects.equals(this.port, targetGroupTarget.port) && Objects.equals(this.weight, targetGroupTarget.weight);
+    return Objects.equals(this.healthCheckEnabled, targetGroupTarget.healthCheckEnabled) && Objects.equals(this.ip, targetGroupTarget.ip) && Objects.equals(this.maintenanceEnabled, targetGroupTarget.maintenanceEnabled) && Objects.equals(this.port, targetGroupTarget.port) && Objects.equals(this.weight, targetGroupTarget.weight) && Objects.equals(this.proxyProtocol, targetGroupTarget.proxyProtocol);
   }
 
 
@@ -202,6 +283,8 @@ public class TargetGroupTarget {
     sb.append("    port: ").append(toIndentedString(port)).append("\n");
 
     sb.append("    weight: ").append(toIndentedString(weight)).append("\n");
+
+    sb.append("    proxyProtocol: ").append(toIndentedString(proxyProtocol)).append("\n");
     sb.append("}");
     return sb.toString();
   }
